@@ -1,0 +1,88 @@
+features:
+  - feature_name: gender
+    prompt: >
+      Please identify the gender of the patient in the video. Please answer with "female" or "male". Do not include extra text in your output—only the answer.
+
+  - feature_name: occur_during_sleep
+    prompt: >
+      Please determine if this seizure event occurs while the patient is asleep. Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: head_turning
+    prompt: >
+      Does the patient forcibly or stiffly rotate their head to one side during the event? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: blank_stare
+    prompt: >
+      Does the patient exhibit a blank stare (vacant or unfocused gaze)? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: close_eyes
+    prompt: >
+      Do the patient's eyes remain consistently closed or mostly closed throughout the seizure? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: eye_blinking
+    prompt: >
+      Does the patient show repeated or rapid blinking of the eyes during the event? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: face_pulling
+    prompt: >
+      Does the patient's facial expression indicate grimacing or face-pulling movements? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: face_twitching
+    prompt: >
+      Are there small, involuntary twitches or jerks observed on the patient's face? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: tonic
+    prompt: >
+      Please observe whether the patient has sustained body stiffness (tonic phase). Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: clonic
+    prompt: >
+      Clonic Phase: Rhythmic, jerking muscle contractions involving the limbs, face, and trunk. During this phase, individuals may bite their tongue or froth at the mouth. The episode typically lasts 30–90 seconds, though it can persist longer. The jerking movements gradually slow before ceasing entirely. Clonic movements present as rhythmic, alternating contraction-relaxation cycles (e.g., limb jerking), whereas tremors are characterized by continuous sinusoidal oscillations (e.g., hand shaking). If it is a tremor, it is not clonic. Dose this patient show clonic? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: arm_flexion
+    prompt: >
+      Does the patient maintain a sustained flexion of the arms at the elbows (i.e., holding them in a flexed position for a noticeable duration) during the seizure? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: arm_straightening
+    prompt: >
+      Does the patient straighten or stiffen their arms (extended position)? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: figure4
+    prompt: >
+      Figure 4 refers to a specific posture or movement observed in a patient during a seizure, where one upper limb is extended (typically in a tonic stretch) while the other upper limb is flexed, forming a shape resembling the number "4". Please check if there is a 'figure 4' posture of the arms at any point. Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: oral_automatisms
+    prompt: >
+      Does the patient exhibit repetitive mouth or tongue movements such as chewing, lip-smacking, or swallowing? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: limb_automatisms
+    prompt: >
+      Are there repetitive, purposeless limb movements (e.g., fumbling, picking, patting, cycling) observed? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: pelvic_thrusting
+    prompt: >
+      Does the patient display any pelvic thrusting movements during the event? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: full_body_jerking
+    prompt: >
+      Does the patient in the video experience jerking of the entire body, including the arms, legs, and torso? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: tremor
+    prompt: >
+      Do you observe the patient lying in the bed shaking with variable intensity? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: intensity_pattern
+    prompt: >
+      Does the patient show a continuous, intense, non-evolving motor pattern? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer.
+
+  - feature_name: limb_movements_pattern
+    prompt: >
+      Analyze the patient's upper limb movements in this video. Which of the following best describes the movements?
+      1.Thrashing/Flailing: Significant thrashing and flailing, somewhat asynchronous and variable.
+      2.Rhythmic Jerking: Stereotyped, rhythmic clonic jerking, potentially following a tonic phase.
+      3.Neither: The movements do not fit descriptions 1 or 2.
+      Please answer with 1, 2, or 3. Do not include extra text in your output—only the answer.
+
+  - feature_name: hands_move_simultaneously
+    prompt: >
+      Do the patient's hands start moving simultaneously in the video? Answer with 'yes' or 'no'. Do not include extra text in your output

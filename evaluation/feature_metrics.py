@@ -1,8 +1,9 @@
 import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-experiment = 'internvl3_78_segment_all_new_features_add'
-# 读取CSV文件
+experiment = 'internvl3_78_segment'
+
+
 df_gt = pd.read_csv('/home/lina/gemini/FeatureAnnotation_V3.csv')
 df_pred = pd.read_csv('/home/lina/internvl3/merged_tonmoy_tremor_output_ineternvl2_sleep_newfeature_hands_eyes.csv')
 

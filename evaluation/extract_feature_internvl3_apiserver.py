@@ -180,7 +180,7 @@ def extract_json_from_model_output(text):
     text = re.sub(r'```json', '', text)
     text = re.sub(r'```$', '', text)
     json_match = re.search(r'\{.*\}', text, re.DOTALL)
-    json_str = json_match.group(0)
+    json_str = json_match.group(0) # TODO: CAUSES AN ERROR
     return json_str        
 
 def ExtractFeatureByVLM(video_path, file_name, log_csv,start_time=None, end_time=None):
@@ -254,9 +254,9 @@ def ExtractFeatureByVLM(video_path, file_name, log_csv,start_time=None, end_time
                         [file_name, prompt, answer],
                         header=log_header
                     )
-                    json_str = extract_json_from_model_output(answer)
-                    feat = json.loads(json_str).get("answer")               
-                    features.append(feat)
+                    # json_str = extract_json_from_model_output(answer)
+                    # feat = json.loads(json_str).get("answer")               
+                    # features.append(feat)
                     answer_collected = True
                 break
             except Exception as e:

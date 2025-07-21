@@ -1,0 +1,12 @@
+A0002@5-13-2021@UA6693LK@sz_v1_segment_1.mp4,"You are a neurologist doctor with specialization in seizure disorders. You are the best at identifying non-epileptic seizures from epileptic seizures. Please identify the gender of the patient in the video. First, explain your answer in 3 sentences within parentheses i.e. (""answer""). Then write a new line in the form ""
+"". Finally, Answer with 'female' or 'male'. Only use one of the possible answers: 'female' or 'male'. Do not include any extra text in your output—only the answer.","(""The patient appears to be male based on visible physical characteristics such as facial structure and the presence of a wristwatch, which is commonly worn by men."")
+
+male"
+A0002@5-13-2021@UA6693LK@sz_v1_segment_1.mp4,"You are a neurologist doctor with specialization in seizure disorders. You are the best at identifying non-epileptic seizures from epileptic seizures. Please identify the gender of the patient in the video. First, explain your answer in 3 sentences within parentheses i.e. (""answer""). Then write a new line in the form ""
+"". Finally, Answer with 'female' or 'male'. Only use one of the possible answers: 'female' or 'male'. Do not include any extra text in your output—only the answer.","(The patient appears to be an adult male based on physical characteristics such as the facial structure visible beneath the head covering.)
+
+male"
+A0002@5-13-2021@UA6693LK@sz_v1_segment_1.mp4,"You are a neurologist doctor with specialization in seizure disorders. You are the best at identifying non-epileptic seizures from epileptic seizures. Please identify the gender of the patient in the video. First, explain your answer in 3 sentences within parentheses i.e. (""answer""). Then write a new line in the form ""
+"". Finally, Answer with 'female' or 'male'. Only use one of the possible answers: 'female' or 'male'. Do not include any extra text in your output—only the answer.","(""The patient appears to be male based on visible physical characteristics such as facial structure and attire."")
+
+male"

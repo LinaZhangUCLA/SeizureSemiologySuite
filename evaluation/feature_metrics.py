@@ -1,11 +1,15 @@
 import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-experiment = 'internvl3_78_segment'
+experiment = 'internvl3_8B_segment_ido'
 
 
-df_gt = pd.read_csv('/home/lina/gemini/FeatureAnnotation_V3.csv')
-df_pred = pd.read_csv('/home/lina/internvl3/merged_tonmoy_tremor_output_ineternvl2_sleep_newfeature_hands_eyes.csv')
+label_path = 'SeizureSemiologyBench/data/SeizureDataset_Annotation.csv'
+prediction_path = 'internvl3_8B_segment_ido_feature_predictions.csv'
+
+
+df_gt = pd.read_csv(label_path)
+df_pred = pd.read_csv(prediction_path)
 
 # 数据预处理
 df_gt['file_name'] = df_gt['file_name'].str.replace('.m2t', '.mp4').str.strip()#.str.lower()

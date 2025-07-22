@@ -1,7 +1,8 @@
-import pandas as pd
 import os
 import csv
 import string
+import pandas as pd
+from itertools import zip_longest
 from collections import defaultdict
 
 # TODO - turn this into a YAML file
@@ -50,9 +51,10 @@ prompt_to_feature = {
 }
 
 
+
+##### Utils #####
 def csv_to_pandas(filename):
     
-
     if not os.path.exists(filename):
         raise FileNotFoundError(f"The file {filename} does not exist.")
 
@@ -83,10 +85,6 @@ def clean_answer(answer):
         
             answer = acceptable_answer
             return answer
-            
-        # else:
-        #     print(f"NOT IT --> Answer: {acceptable_answer}")
-        #     answer = "N/A"
 
     return answer
 
@@ -96,18 +94,12 @@ def get_answer_from_output(output):
     ## if \n separator in output, then split the output into segments
     if '\n' in output:
         split_output = output.split('\n')
-        answer = clean_answer(answer=split_output[-1])
-        print(f"Answer: {answer}")
-        
-    else:
-        print(f"*************** broken---Answer: {output[-10:]}")
-        
+        answer = clean_answer(answer=split_output[-1])        
+    else:        
         # remove punctuation and convert to lowercase
         answer = output[-10:].strip().lower()
         answer = clean_answer(answer)
-        
-        print("Modded answer:", answer)
-    
+            
     
     return answer
 
@@ -120,11 +112,11 @@ def get_answers_per_feature(video_segment_df):
     for _, row in video_segment_df.iterrows():
         prompt = row[1]
         output = row[2]
-        print("Prompt ::::::::", prompt)
-
+        
         
         # Get the corresponding feature name from the dictionary
         feature_name = prompt_to_feature.get(prompt, None)
+        
         
         if feature_name:
             # get the answer from the output
@@ -132,16 +124,9 @@ def get_answers_per_feature(video_segment_df):
             
             # Append the answer to the corresponding feature list
             if answer != "N/A":  # Only append valid answers
-                print(f"Appending answer: {answer} to feature: {feature_name}") 
                 feature_answers[feature_name].append(answer)
         else:
             raise ValueError(f"No feature mapping found for prompt: {prompt}")
-        
-    #***********************************************
-    # for feature, answers in feature_answers.items():
-    #     print(f"{feature}: {answers}")    
-    #***********************************************
-
         
     # now for each feature get the most common answer
     for feature, answers in feature_answers.items():
@@ -153,11 +138,6 @@ def get_answers_per_feature(video_segment_df):
         else:
             print("ANSWERS IS EMPTY", answers)
             feature_answers[feature] = "N/A"
-    
-    #***********************************************
-    # for feature, answers in feature_answers.items():
-    #     print(f"{feature}: {answers}")    
-    #***********************************************
 
 
     return feature_answers
@@ -168,47 +148,6 @@ def majority_vote(series):
     counts = series.value_counts()
     # Return the value with the highest count; if there's a tie, the first one is returned
     return counts.idxmax() if not counts.empty else None
-
-
-
-
-def get_final_answers(data):
-    # Get all feature keys from the first dictionary
-    feature_keys = data[0].keys()
-    collapsed_dict = {}
-    
-    # Process each feature
-    for feature in feature_keys:
-        values = []
-        
-        # Collect all values for this feature
-        for d in data:
-            if feature in d and d[feature] is not None:
-                values.append(d[feature])
-        
-        if not values:
-            collapsed_dict[feature] = None
-            continue
-        
-        # Rule 1: If any value is "yes", result is "yes"
-        if "yes" in values:
-            collapsed_dict[feature] = "yes"
-        else:
-            # Rule 2: Use majority voting
-            # Count occurrences of each value
-            value_counts = {}
-            for val in values:
-                value_counts[val] = value_counts.get(val, 0) + 1
-            
-            # Find the most common value
-            max_count = max(value_counts.values())
-            most_common = [val for val, count in value_counts.items() if count == max_count]
-            
-            # If there's a tie, take the first one alphabetically
-            collapsed_dict[feature] = min(most_common)
-    
-    return collapsed_dict
-
 
 
 def remove_segment_suffix(video_segment_id):
@@ -250,54 +189,62 @@ def get_all_segment_feature_answers(df):
         
         # Append the feature answers to the final answers dictionary
         final_answers_per_video[video_id].append(feature_answers)
+        
+    print("Final answers per video:", final_answers_per_video)
 
     
     return final_answers_per_video
 
 
 
-def get_full_video_feature_answers(final_answers_per_video):
-    """
-    returns a dictionary of features for each
-    """
-    for video in final_answers_per_video:
+def collapse_segment_answers_to_video(data):
+
+    
+    # Get all feature keys from the first dictionary
+    feature_keys = data[0].keys()
+
+    collapsed_dict = {}
+    
+    # Process each feature
+    for feature in feature_keys:
+        values = []
         
-        print(f"Final answers for video {video}:")
-        final_feature_answers = get_final_answers(final_answers_per_video[video])
+        # Collect all values for this feature
+        for d in data:
+            if feature in d and d[feature] is not None:
+                values.append(d[feature])
         
-        print(final_feature_answers)
+        if not values:
+            collapsed_dict[feature] = None
+            continue
+        
+        # Rule 1: If any value is "yes", result is "yes"
+        if "yes" in values:
+            collapsed_dict[feature] = "yes"
+        else:
+            # Rule 2: Use majority voting
+            # Count occurrences of each value
+            value_counts = {}
+            for val in values:
+                value_counts[val] = value_counts.get(val, 0) + 1
+            
+            # Find the most common value
+            max_count = max(value_counts.values())
+            most_common = [val for val, count in value_counts.items() if count == max_count]
+            
+            
+            # If there's a tie, take the first one alphabetically 
+            # For 1,2 or 3 -> 1 or 2 will be chosen
+            collapsed_dict[feature] = min(most_common)
+    
+    return collapsed_dict
 
-
-def dict_of_dict_to_csv(data, output_file_path=None):
-    """
-    Convert a dictionary of dictionaries to CSV format.
-    
-    Args:
-        data: Dictionary where each key maps to a dictionary
-        output_file_path: Optional file path to save CSV. If None, returns CSV as string
-    
-    Returns:
-        CSV string if output_file_path is None, otherwise writes to file
-    """
-    # Convert to DataFrame and transpose
-    df = pd.DataFrame(data).T
-    
-    print(df.head())
-    
-    # # Reset index to make the outer keys a column named 'key_name'
-    # df.reset_index(inplace=True)
-    # df.rename(columns={'index': 'key_name'}, inplace=True)
-    
-    # if output_file_path:
-    #     df.to_csv(output_file_path, index=False)
-    #     print(f"CSV saved to {output_file_path}")
-    # else:
-    #     return df.to_csv(index=False)
-
-
+   
+   
+   
 def main():
-    # Example usage
-    filename = 'SeizureSemiologyBench/sample.csv'
+
+    filename = 'SeizureSemiologyBench/internvl3_8B_segment_ido_log.csv'
     try:
         df = csv_to_pandas(filename)
         print("DataFrame loaded successfully:")
@@ -307,121 +254,31 @@ def main():
         
         
     
-
     
     # Get all segment feature answers i.e. {gender: "male", et}
-    final_answers_per_video = get_all_segment_feature_answers(df)
-
-    # Get final features
-    final_features_per_video = get_full_video_feature_answers(final_answers_per_video)
+    segment_answers_per_video = get_all_segment_feature_answers(df)
     
-    
-    # Output to a csv file
-    # dict_of_dict_to_csv(final_features_per_video, output_file_path='final_answers_per_video.csv')
-
-
-
-
-    # Transpose the dictionary values
-    print(final_features_per_video)
-    rows = zip(final_features_per_video.values())
-
+    # Open the output file once, outside the loop
     with open('output.csv', 'w', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(final_features_per_video.keys())  # First row: headers
-        writer.writerows(rows)        # Remaining rows: data
-    
-    
-    
+        header_written = False
         
-        
-        
-        # for output in df.iloc[:, 2].unique():
-        #     print(f"Output: {output}")
-        #     get_answer_from_output(output)
-        #     # print("cleaned output:", get_answer_from_output(output))
-
-
-
-               
-                    
-
-
-#         # Get the corresponding feature from the prompt_to_feature dictionary        
-        
-#         # filtered dataframe for a specific video_segment
-#         segment_data = get_segment_data(df, video_segment_id)
-        
-        
-#         feature_answers = get_answers_per_feature(segment_data)
-        
-        
-        
-        
-#         # # get prompt + answer -> create a set of answers for each video segment feature
-#         # prompts = segment_data.iloc[:, 1]
-#         # outputs = segment_data.iloc[:, 2]
-        
-        
-        
-        
-        
-        
-        
-#         # then get the different prompts of the filtered dataframe in the second column
-        
-#         # print("Filtered DataFrame for video segment ID:", video_segment_id)
-        
-        
-#         # print(filtered_df.head())
-#         # print("******************************")
-
-        
-#     # # for each unique prompt in the second column
-#     # for prompt in df.iloc[:, 1].unique():
-#     #     # Get the corresponding feature name from the dictionary
-#     #     feature_name = prompt_to_feature.get(prompt, None)
-#     #     if feature_name:
-#     #         print(f"Feature for prompt '{prompt}': {feature_name}")
-#     #     else:
-#     #         print(f"No feature mapping found for prompt: {prompt}")
+        # Process each video
+        for video_id, answers in segment_answers_per_video.items():
+            
+            # Get final features for this video
+            final_features_per_video = collapse_segment_answers_to_video(answers)
+            
+            # Write header only once (for the first video)
+            if not header_written:
+                writer.writerow(['file_name'] + list(final_features_per_video.keys()))
+                header_written = True
+            
+            # Write a single row for this video
+            # Each dictionary value should be a single cell value, not unpacked
+            writer.writerow([video_id] + list(final_features_per_video.values()))
             
             
-#     # # get clean answers 
-#     # # for each output in the third column
-#     # for output in df.iloc[:, 2].unique():
-        
-#     #     answer = get_answer_from_output(output)
-        
-#     #     # separate the text using a newline character and print out the full answer in segments
-#     #     if '\n' in answer:
-#     #         answer = answer.split('\n')
-#     #         answer = clean_answer(answer)
-#     #         print(f"Answer: {answer}")
-            
-            
-#     #     else:
-#     #         print(f"*************** broken---Answer: {answer[-10:]}")
-            
-#     #         # remove punctuation and convert to lowercase
-#     #         answer = answer[-10:].strip().lower()
-#     #         answer = clean_answer(answer)
-            
-#     #         print("Modded answer:", answer)
-            
-
-        
-    
-    
-    
-                    
-    # get_answer_from_output()
-            
-
-        
-        # print(f"Answer: {answer}")
-        
-        
-        
+   
 if __name__ == "__main__":
     main()

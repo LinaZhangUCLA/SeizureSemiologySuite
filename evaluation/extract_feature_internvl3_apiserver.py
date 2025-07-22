@@ -69,6 +69,47 @@ def load_video(video_path, bound=None, num_segments=32):
     return imgs      
 
 
+new_prompts = [
+    "Does the patient lose awareness of self or surroundings at any point? Answer \"yes\" or \"no\".",
+    "Does the patient appear dazed or confused during the event? Answer \"yes\" or \"no\".",
+    "Does the patient interact with the environment inappropriately (e.g., purposeless grabbing)? Answer \"yes\" or \"no\".",
+    "Is there forced eye opening or closure during the seizure? Answer \"yes\" or \"no\".",
+    "Do you observe rapid, repetitive eyelid jerks (eyelid myoclonia)? Answer \"yes\" or \"no\".",
+    "Are rhythmic horizontal or vertical eye oscillations (nystagmus) present? Answer \"yes\" or \"no\".",
+    "Does the patient show hypersalivation or frothing? Answer \"yes\" or \"no\".",
+    "Do brief, shock-like jerks of body parts occur? Answer \"yes\" or \"no\".",
+    "Does the patient suddenly lose muscle tone and drop? Answer \"yes\" or \"no\".",
+    "Does the patient exhibit violent, hypermotor movements soon after onset? Answer \"yes\" or \"no\".",
+    "Is a \"fencing\" posture (one arm extended, other flexed) seen? Answer \"yes\" or \"no\".",
+    "Does the patient exhibit backward arching of the trunk (opisthotonus)? Answer \"yes\" or \"no\".",
+    "Do brief (<2 s) flexor or extensor spasms of trunk/limbs occur? Answer \"yes\" or \"no\".",
+    "Do you observe autonomic changes (flushing, pallor, apnea)? Answer \"yes\" or \"no\".",
+    "Is there difficulty speaking or understanding language during or right after the seizure? Answer \"yes\" or \"no\".",
+    "Is the patient confused or excessively sleepy after the event? Answer \"yes\" or \"no\".",
+    "Does the patient develop temporary weakness or paralysis of a limb/body side after the seizure? Answer \"yes\" or \"no\"."
+]
+
+new_features = [
+    "impaired_awareness",
+    "dazed_state",
+    "inappropriate_interaction",
+    "forced_eye_open_or_close",
+    "eyelid_myoclonia",
+    "nystagmus",
+    "hypersalivation",
+    "myoclonic_jerk",
+    "atonic_drop",
+    "hypermotor_activity",
+    "fencing_posture",
+    "opisthotonus",
+    "epileptic_spasm",
+    "autonomic_change",
+    "language_disturbance",
+    "postictal_confusion",
+    "todds_paralysis"
+]
+
+
 feature_names = [
 "gender","occur_during_sleep","head_turning","blank_stare","close_eyes","eye_blinking","face_pulling","face_twitching",
 "tonic","clonic","arm_flexion","arm_straightening","figure4","oral_automatisms","limb_automatisms",
@@ -280,6 +321,7 @@ def main():
     output_header = ["file_name"] + feature_names #  + ["label"]  
     # List all files in the directory to check existence quickly
     dataset_files = os.listdir(directory)
+    
     dataset_files_set = set(dataset_files)
     dataset_files = sorted(dataset_files)
    

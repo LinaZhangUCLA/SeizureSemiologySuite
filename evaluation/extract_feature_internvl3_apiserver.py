@@ -22,7 +22,7 @@ import re
 # ================== Paths and file names ==================
 
 experiment = "internvl3_8B_segments_ido_new_features"
-directory = '/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset/'  # Directory containing the videos
+directory = '/mnt/SSD3/tengyou/seizure_videos/segments/all_segments/'  # Directory containing the videos
 feature_file = experiment + '_feature.csv'  # Output CSV (with extracted features)
 log_file = experiment + '_log.csv'  # Log file to record each prompt and answer
 
@@ -206,7 +206,8 @@ prompt_list = [
 ]
 
 prompt_list = [
-    """Looking at the patient's face, is the patient closing or squinting their eyes? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+    """Looking at the patient's face, are the patient's eyes fully closed and squinting? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+    # """Looking at the patient's face, are the patient's eyes opened wide? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
 ]
 
 new_prompts_tried = [
@@ -320,6 +321,7 @@ def ExtractFeatureByVLM(video_path, file_name, log_csv, start_time=None, end_tim
                         print("EYES ARE CLOSED")
                         followup_prompt = ""
                         followup_prompt = f"Does the patient close their eyes for a long time and with force? Answer 'yes' or 'no'. Do not include extra text in your output -— only the answer."
+                        # followup_prompt = f"Is the patient stiff and opens their eyes with force? Answer 'yes' or 'no'. Do not include extra text in your output -— only the answer."
                         content.extend([{'type': 'text', 'text': followup_prompt}])
                         messages = [dict(role='user', content=content)]
 
@@ -366,14 +368,42 @@ def main():
     #     "E0008@1-22-2015@TA7641A3@sz_v1_1_segment_3.mp4"
     # ]
     
+    # files_to_review = [
+    #     "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_0.mp4",
+    #     "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_1.mp4",
+    #     "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_2.mp4",
+    #     "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_3.mp4",
+    #     "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_4.mp4",
+    #     "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_5.mp4",
+    #     "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_6.mp4"
+    # ]
+    
+    # files_to_review = [
+    #     "B0001@9-15-2022@DA1322M1@sz_v1_1_segment_0.mp4",
+    #     "B0001@9-15-2022@DA1322M1@sz_v1_1_segment_1.mp4",
+    #     "B0001@9-15-2022@DA1322M1@sz_v1_1_segment_2.mp4",
+    #     "B0001@9-15-2022@DA1322M1@sz_v1_1_segment_3.mp4"
+    # ]
+   
+    # files_to_review = [
+    #     "A0003@10-20-2020@UA6692PZ@sz_v1_1_segment_0.mp4",
+    #     "A0003@10-20-2020@UA6692PZ@sz_v1_1_segment_1.mp4"
+    # ]
+    
+    # # forced_eye_open
+    # files_to_review = [
+    #     "L0002@10-16-2023@DA9601XX@sz_v2_1_segment_0.mp4",
+    #     "L0002@10-16-2023@DA9601XX@sz_v2_1_segment_1.mp4",
+    #     "L0002@10-16-2023@DA9601XX@sz_v2_1_segment_2.mp4",
+    #     "L0002@10-16-2023@DA9601XX@sz_v2_1_segment_3.mp4"
+    # ]
+    
     files_to_review = [
-        "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_0.mp4",
-        "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_1.mp4",
-        "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_2.mp4",
-        "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_3.mp4",
-        "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_4.mp4",
-        "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_5.mp4",
-        "L0001@5-31-2022@KA9601XM@sz_v1_1_segment_6.mp4"
+        "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_0.mp4",
+        "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_1.mp4",
+        "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_2.mp4",
+        "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_3.mp4",
+        "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_4.mp4"
     ]
    
     dataset_files = files_to_review

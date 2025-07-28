@@ -22,7 +22,7 @@ import re
 # ================== Paths and file names ==================
 
 experiment = "internvl3_8B_segments_ido_new_features"
-directory = '/mnt/SSD3/tengyou/seizure_videos/segments/all_segments/'  # Directory containing the videos
+directory = '/mnt/SSD3/tengyou/seizure_videos/datasets/all_segments/'  # Directory containing the videos
 feature_file = experiment + '_feature.csv'  # Output CSV (with extracted features)
 log_file = experiment + '_log.csv'  # Log file to record each prompt and answer
 
@@ -64,7 +64,7 @@ def load_video(video_path, bound=None, num_segments=32):
     fps = float(vr.get_avg_fps())
     print("FPS:", fps)
     pixel_values_list, num_patches_list = [], []
-    frame_indices = get_index(bound, fps, max_frame, first_idx=0, num_segments=num_segments)
+    frame_indices = get_index(bound, fps, max_frame, first_idx=0, num_segments=64) # changed from num_segments
     imgs = []
     for frame_index in frame_indices:
         img = Image.fromarray(vr[frame_index].asnumpy()).convert('RGB')
@@ -206,7 +206,22 @@ prompt_list = [
 ]
 
 prompt_list = [
-    """Looking at the patient's face, are the patient's eyes fully closed and squinting? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+    """Looking at the patient and their behavior, does the patient show a sudden change in behavior followed by confusion? Answer 'yes' or 'no'. Do not include extra text in your output -— only the answer."""
+
+    # """Looking at the patient, are they experiencing sudden shocks or spasms? Either flexing or extending their body parts? Answer 'yes' or 'no'. Do not include extra text in your output -— only the answer."""
+    # """Looking at the patient's body and behavior, is the patient doing any of the following actions: kicking, pelvic thrusting, or thrashing movements? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+    # """Looking at the patient, does any part of the patient's body experience sudden and rapid shocks, jittering, or shaking? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+    # """Looking at the patient's face, do the patient's eyes have rapid, sudden movements similar to blinking? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+    # """Looking at the patient, does the patient laugh or grab items or perform other actions considered socially inappropriate? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+    # """Looking at the patient's face, are the eyes of the patient have any rapid, sudden movements similar to blinking? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+    # """Observing the patient's face and behavior, does the patient appear confused at any point? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""",
+    # """Observing the patient's behavior, does the patient lose awareness of themselves or their surroundings at any point during the video? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+    # """Looking at the patient's arms, does the patient extend one or more of their arms with force? Answer "yes" or "no". Do not include extra text in your output -— only the answer.""",
+    # """Looking at the patient's body, does any part of the body suddenly become relaxed or limp? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+
+    # """Looking at the patient's face, is the patient closing or squinting their eyes? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+
+    # """Looking at the patient's face, are the patient's eyes fully closed and squinting? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
     # """Looking at the patient's face, are the patient's eyes opened wide? Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
 ]
 
@@ -302,6 +317,7 @@ def ExtractFeatureByVLM(video_path, file_name, log_csv, start_time=None, end_tim
 
                 for item in api_client.chat_completions_v1(model=model_name,
                                                          messages=messages, gen_config=dict_gen_config):
+                    # print(item['choices'][0]['message'])
                     answer = item['choices'][0]['message']['content']
                     output = "Q: " + prompt + "\n" + "A: " + answer + "\n"
 
@@ -317,10 +333,11 @@ def ExtractFeatureByVLM(video_path, file_name, log_csv, start_time=None, end_tim
                     # features.append(feat)
                     # For eye feature -> reprompt
                     ### TODO will need a flag here
-                    if "yes" in answer.lower(): # want to go around this so put random thigns instead of yes
+                    if "dfgdfg" in answer.lower(): # want to go around this so put random thigns instead of yes
                         print("EYES ARE CLOSED")
                         followup_prompt = ""
-                        followup_prompt = f"Does the patient close their eyes for a long time and with force? Answer 'yes' or 'no'. Do not include extra text in your output -— only the answer."
+                        followup_prompt = f"Does the patient show any immediate signs of confusion? Answer 'yes' or 'no'. Do not include extra text in your output -— only the answer."
+
                         # followup_prompt = f"Is the patient stiff and opens their eyes with force? Answer 'yes' or 'no'. Do not include extra text in your output -— only the answer."
                         content.extend([{'type': 'text', 'text': followup_prompt}])
                         messages = [dict(role='user', content=content)]
@@ -331,10 +348,22 @@ def ExtractFeatureByVLM(video_path, file_name, log_csv, start_time=None, end_tim
                             output = "Q: " + followup_prompt + "\n" + "A: " + answer + "\n"
                             print(output)
                             
+                            # # second follow-up prompt
+                            # second_followup_prompt = f"""Does the patient experience sudden and rapid shocks in their {answer}?  Answer "yes" or "no". Do not include extra text in your output -— only the answer."""
+                            # content.extend([{'type': 'text', 'text': second_followup_prompt}])
+                            # messages = [dict(role='user', content=content)]
+                            
+                            # for item in api_client.chat_completions_v1(model=model_name,
+                            #                                      messages=messages, gen_config=dict_gen_config):
+                                
+                            #     answer = item['choices'][0]['message']['content']
+                            #     output = "Q: " + followup_prompt + "\n" + "A: " + answer + "\n"
+                            #     print(output)
+                                
                             # Append this follow-up prompt/answer to log file
                             append_to_csv(
                                 log_csv,
-                                [file_name, followup_prompt, answer],
+                                [file_name, prompt + followup_prompt, answer],
                                 header=log_header
                             )
                     answer_collected = True
@@ -398,13 +427,181 @@ def main():
     #     "L0002@10-16-2023@DA9601XX@sz_v2_1_segment_3.mp4"
     # ]
     
+    # files_to_review = [
+    #     "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_0.mp4",
+    #     "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_1.mp4",
+    #     "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_2.mp4",
+    #     "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_3.mp4",
+    #     "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_4.mp4"
+    # ]
+    
+    # # foaming at the mouth
+    # files_to_review = [
+    #     "O0003@6-6-2020@DA0014P1@nes_v1_1_segment_10.mp4",
+    #     "O0003@6-6-2020@DA0014P1@nes_v1_1_segment_11.mp4"]
+    
+    # # laughing inappropriately / inappropriateness
+    # files_to_review = [
+    #     "Z0007@5-6-2014@VA7610WD@sz_v1_1_segment_0.mp4",
+    #     "Z0007@5-6-2014@VA7610WD@sz_v1_1_segment_1.mp4",
+    #     "Z0007@5-6-2014@VA7610WD@sz_v1_1_segment_2.mp4"
+    # ]
+    # files_to_review = [
+    #     "T0004@5-27-2015@TA7641Z2@sz_v2_1_segment_0.mp4",
+    #     "T0004@5-27-2015@TA7641Z2@sz_v2_1_segment_1.mp4",
+    #     "T0004@5-27-2015@TA7641Z2@sz_v2_1_segment_2.mp4"
+    # ]
+
+    
+    
+    # # hand automatisms
+    # files_to_review = [
+    #     "Y0003@1-23-2019@DA70225C@nes_v2_1_segment_0.mp4",
+    #     "Y0003@1-23-2019@DA70225C@nes_v2_1_segment_1.mp4",
+    #     "Y0003@1-23-2019@DA70225C@nes_v2_1_segment_2.mp4",
+    #     "Y0003@1-23-2019@DA70225C@nes_v2_1_segment_3.mp4"
+    # ]
+    
+    # # atonic head drop
+    # files_to_review = [
+    #     "I0002@5-9-2019@DA0012RL@nes_v1_1_segment_0.mp4",
+    #     "I0002@5-9-2019@DA0012RL@nes_v1_1_segment_1.mp4",
+    #     "I0002@5-9-2019@DA0012RL@nes_v1_1_segment_2.mp4",
+    #     "I0002@5-9-2019@DA0012RL@nes_v1_1_segment_3.mp4",
+    #     "I0002@5-9-2019@DA0012RL@nes_v1_1_segment_4.mp4",
+    #     "I0002@5-9-2019@DA0012RL@nes_v1_1_segment_5.mp4",
+    #     "I0002@5-9-2019@DA0012RL@nes_v1_1_segment_6.mp4",
+    #     "I0002@5-9-2019@DA0012RL@nes_v1_1_segment_7.mp4",
+    #     "I0002@5-9-2019@DA0012RL@nes_v1_1_segment_8.mp4",
+    #     "I0002@5-9-2019@DA0012RL@nes_v1_1_segment_9.mp4"
+    
+        # "I0002@5-9-2019@DA0012RS@nes_v4_1_segment_0.mp4",
+        # "I0002@5-9-2019@DA0012RS@nes_v4_1_segment_1.mp4",
+        # "I0002@5-9-2019@DA0012RS@nes_v4_1_segment_2.mp4",
+        # "I0002@5-9-2019@DA0012RS@nes_v4_1_segment_3.mp4",
+        # "I0002@5-9-2019@DA0012RS@nes_v4_1_segment_4.mp4"
+    # ]
+    
+    # # hard negative atonic -> patient becomes stiff can be misinterpreted as atonic
+    # files_to_review = [
+    #     "H0001@2-10-2015@VA7632CV@sz_v3_1_segment_0.mp4",
+    #     "H0001@2-10-2015@VA7632CV@sz_v3_1_segment_1.mp4",
+    #     "H0001@2-10-2015@VA7632CV@sz_v3_1_segment_2.mp4",
+    #     "H0001@2-10-2015@VA7632CV@sz_v3_1_segment_3.mp4",
+    #     "H0001@2-10-2015@VA7632CV@sz_v3_1_segment_4.mp4"
+    # ]
+    
+    
+    # # negative for atonic head drop
+    # files_to_review = [
+    #     "L0002@1-23-2018@DA00108B@sz_v3_1_segment_0.mp4",
+    #     "L0002@1-23-2018@DA00108B@sz_v3_1_segment_1.mp4",
+    #     "L0002@1-23-2018@DA00108B@sz_v3_1_segment_2.mp4",
+    #     "L0002@1-23-2018@DA00108B@sz_v3_1_segment_3.mp4",
+    #     "L0002@1-23-2018@DA00108B@sz_v3_1_segment_4.mp4"
+    # ]
+    
+    # tonic extension of arm -- TODO TODO TODO: A0007 failed for current prompt...
+    # files_to_review = [
+    #     "A0007@11-21-2017@DA3332LI@sz_v1_1_segment_0.mp4", 
+    #     "A0007@11-21-2017@DA3332LI@sz_v1_1_segment_1.mp4",
+    #     "A0007@11-21-2017@DA3332LI@sz_v1_1_segment_2.mp4",
+    #     "A0007@11-21-2017@DA3332LI@sz_v1_1_segment_3.mp4",
+    #     "A0007@11-21-2017@DA3332LI@sz_v1_1_segment_4.mp4",
+    #     "A0007@11-21-2017@DA3332LI@sz_v1_1_segment_5.mp4",
+    #     "A0007@11-21-2017@DA3332LI@sz_v1_1_segment_6.mp4",
+    #     "A0007@11-21-2017@DA3332LI@sz_v1_1_segment_7.mp4"
+    #     # "D0004@12-11-2017@DA00100C@sz_v1_1_segment_0.mp4",
+    #     # "D0004@12-11-2017@DA00100C@sz_v1_1_segment_1.mp4",
+    #     # "D0004@12-11-2017@DA00100C@sz_v1_1_segment_2.mp4",
+    #     # "D0004@12-11-2017@DA00100C@sz_v1_1_segment_3.mp4",
+    #     # "D0004@12-11-2017@DA00100C@sz_v1_1_segment_4.mp4",
+    #     # "D0004@12-11-2017@DA00100C@sz_v1_1_segment_5.mp4",
+    #     # "D0004@12-11-2017@DA00100C@sz_v1_1_segment_6.mp4",
+    #     # "D0004@12-11-2017@DA00100C@sz_v1_1_segment_7.mp4"
+    # ]
+    
+    # # no tonic extension of arm negative samples
+    # files_to_review = [
+    #     "D0002@5-29-2014@TA76406X@nes_v1_1_segment_0.mp4",
+    #     "D0002@5-29-2014@TA76406X@nes_v1_1_segment_1.mp4"
+    # ]
+    
+    
+    # impaired  awareness
+    # files_to_review = [
+    #     "Z0007@5-6-2014@VA7610WD@sz_v1_1_segment_0.mp4",
+    #     "Z0007@5-6-2014@VA7610WD@sz_v1_1_segment_1.mp4",
+    #     "Z0007@5-6-2014@VA7610WD@sz_v1_1_segment_2.mp4"
+    # ]
+    # files_to_review = [
+    #     "D0001@9-25-2018@DA0011NN@nes_v1_1_segment_0.mp4"
+    # ]
+    # files_to_review = [
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_0.mp4",
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_1.mp4",
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_2.mp4",
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_3.mp4",
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_4.mp4",
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_5.mp4",
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_6.mp4",
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_7.mp4",
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_8.mp4",
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_9.mp4",
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_10.mp4",
+    #     "F0001@9-28-2022@KA9602FL@sz_v1_1_segment_11.mp4",
+    # ]
+    # files_to_review = [
+    #     "G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_0.mp4",
+    #     "G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_1.mp4",
+    #     "G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_2.mp4"
+    # ]
+    
+    # eyelid myoclonia
+    # files_to_review = [
+    #     "A0003@10-20-2020@DA0015B9@sz_v1_1_segment_0.mp4",
+    #     "A0003@10-20-2020@DA0015B9@sz_v1_1_segment_1.mp4",
+    #     "A0003@10-20-2020@DA0015B9@sz_v2_1_segment_0.mp4",
+    #     "A0003@10-20-2020@DA0015B9@sz_v2_1_segment_1.mp4"
+    # ]
+    
+    # myoclonic jerks
+    # files_to_review = [
+    #     "A0006@11-19-2019@DA0013UT@sz_v3_1_segment_0.mp4",
+    #     "A0006@11-19-2019@DA0013UT@sz_v3_1_segment_1.mp4"
+    # ]
+    
+    # hypermotor_activity
+    # files_to_review = [
+    #     # "L0002@1-23-2018@DA00108B@sz_v1_1_segment_0.mp4",
+    #     # "L0002@1-23-2018@DA00108B@sz_v1_1_segment_1.mp4",
+    #     # "L0002@1-23-2018@DA00108B@sz_v1_1_segment_2.mp4",
+    #     # "L0002@1-23-2018@DA00108B@sz_v1_1_segment_3.mp4"
+    #     "L0002@1-23-2018@DA00108B@sz_v2_1_segment_0.mp4",
+    #     "L0002@1-23-2018@DA00108B@sz_v2_1_segment_1.mp4",
+    #     "L0002@1-23-2018@DA00108B@sz_v2_1_segment_2.mp4",
+    #     "L0002@1-23-2018@DA00108B@sz_v2_1_segment_3.mp4",
+    #     "L0002@1-23-2018@DA00108B@sz_v2_1_segment_4.mp4"
+    # ]
+
+
+    # # epileptic spasms
+    # files_to_review = [
+    #     "A0002@5-13-2021@UA6693LK@sz_v1_1_segment_0.mp4",
+    #     "A0002@5-13-2021@UA6693LK@sz_v1_1_segment_1.mp4",
+    #     "A0002@5-13-2021@UA6693LK@sz_v1_1_segment_2.mp4",
+    #     "A0002@5-13-2021@UA6693LK@sz_v1_1_segment_3.mp4",
+    #     "A0002@5-13-2021@UA6693LK@sz_v1_1_segment_4.mp4"
+    # ]
+    
+    # postical_confusion
     files_to_review = [
-        "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_0.mp4",
-        "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_1.mp4",
-        "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_2.mp4",
-        "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_3.mp4",
-        "L0001@5-31-2022@KA9601XW@sz_v1_1_segment_4.mp4"
+        "H0001@2-10-2015@TA7641DP@sz_v1_1_segment_0.mp4",
+        "H0001@2-10-2015@TA7641DP@sz_v1_1_segment_1.mp4"
     ]
+    
+
+
    
     dataset_files = files_to_review
     # dataset_files = sorted(dataset_files)

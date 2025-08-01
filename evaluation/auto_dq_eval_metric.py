@@ -83,6 +83,8 @@ all_keys = [[
 gemini_keys = all_keys[parallel_index]
 
 
+CONTEXT=f"You are a seizure semiology expert analyzing doctors seizure reports. Please follow the instructions precisely."
+
 
 class SeizureAnalyzer:
     def __init__(self, keys):
@@ -130,10 +132,26 @@ def run_gemini(prompt, model_name="gemini-2.5-pro", temperature=0.2, max_output_
                 analyzer.log_processing("Rotate_api_key, waiting 20s...")
         
         
-        
-def auto_dq_eval_metric(context, reference=None, candidate=None):
+# def get_events_from_behavioral_description(context=CONTEXT, reference=None, candidate=None):
     
-    prompt = f"{context}\n\n{reference}"
+#     prompt = f"{context}\n\n{reference}"
+    
+#     print(prompt)
+#     print("\n")
+    
+#     out = run_gemini(
+#         prompt=prompt,
+#         model_name="gemini-2.5-pro",
+#         temperature=0
+#     )
+    
+#     print(out)
+#     # return events
+        
+                
+def auto_dq_eval_metric(context=CONTEXT, doctor=None, VLM=None):
+    
+    prompt = f"{context}\n\n{doctor}"
     
     print(prompt)
     print("\n")
@@ -146,9 +164,39 @@ def auto_dq_eval_metric(context, reference=None, candidate=None):
     
     print(out)
     
+    return out
+    
         
-        
-        
+def prompt_structure(behavioral_description):
+    
+    full_prompt = f"""
+                    Below is a description of a seizure event. The following types of events that can occur in a seizure
+                    are the following:
+                    
+                    
+                    
+    
+                    {behavioral_description}
+                    
+                    Extract all key events from the above doctor description of a patient's seizure.
+                    Requirements:
+                    - An event must include a symptom
+                    - Every event is represented by a brief sentence with in 10 words, with a
+                    subject, a predicate and optionally an object, avoid unnecessary appearance
+                    descriptions.
+                    - Every event must be atomic, meaning that it cannot be further split into
+                    multiple events.
+                    - Substitute pronouns by the nouns they refer to.
+                    - Substitue acronyms for their full description
+
+                    Please generate the response in the form of a Python dictionary string with keys
+                    "events". The value of "events" is a List(str), of which each item is an event.
+                    DO NOT PROVIDE ANY OTHER OUTPUT TEXT OR EXPLANATION. Only provide the Python
+                    dictionary string. For example, your response should look like this: {{"events":
+                    [event1, event2, ...]}}. DO NOT INCLUDE ANY ADDITIONAL PUNCTUATION."""
+                    
+    return full_prompt
+     
         
 def main():
     
@@ -163,34 +211,13 @@ def main():
                                     down, hence exact semiology is obscured but clearly there are 
                                     hypermotoric movements."""
     
-    structure = f"""
-                    Below is a description of a seizure event:
-    
-                    {seizure_event_description}
-                    
-                    Extract all key events from the above doctor description of a patient's seizure.
-                    Requirements:
-                    - An event must include a symptom
-                    - Every event is represented by a brief sentence with in 10 words, with a
-                    subject, a predicate and optionally an object, avoid unnecessary appearance
-                    descriptions.
-                    - Every event must be atomic, meaning that it cannot be further split into
-                    multiple events.
-                    - Substitute pronouns by the nouns they refer to.
-
-                    Please generate the response in the form of a Python dictionary string with keys
-                    "events". The value of "events" is a List(str), of which each item is an event.
-                    DO NOT PROVIDE ANY OTHER OUTPUT TEXT OR EXPLANATION. Only provide the Python
-                    dictionary string. For example, your response should look like this: {{"events":
-                    [event1, event2, ...]}}"""
+    structure = prompt_structure(behavioral_description=seizure_event_description)
                     
     print(structure)
                     
-    context = f"You are a seizure semiology expert analyzing doctors seizure reports. Please follow the instructions precisely."
     
     auto_dq_eval_metric(
-        context=context,
-        reference=structure
+        doctor=structure
     )
     
     

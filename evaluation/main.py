@@ -1,5 +1,5 @@
 from data_loaders import doctor_data_to_df, behavioral_descriptions_from_df, behavioral_df_to_list
-from auto_dq_eval_metric import run_gemini, auto_dq_eval_metric, prompt_structure
+from auto_dq_eval_metric import run_gemini, auto_dq_eval_metric, event_prompt_structure
 
 
 
@@ -32,18 +32,20 @@ def main():
         
         # print("\nPROMPT STRUCTURE\n")
         
-        prompt = prompt_structure(behavioral_description=behavioral_description)
+        prompt = event_prompt_structure(behavioral_description=behavioral_description)
         
         # print(prompt)
         
         out = auto_dq_eval_metric(doctor=prompt)
-        raw = out.text.strip()
+        doctor_raw = out.text.strip()
         
-        print(raw)
+        print(doctor_raw)
+        
+        # Testing the 
 
         
         
-        # # as json
+        # # as jsongit stash
         # try:
             
         break

@@ -38,14 +38,13 @@ def task3_prompt_structure(behavioral_description=""):
 def main():
     # Load in the doctor data
     path_to_doctor_csv = 'data/Seizure-Data.xlsx'
-    
     doctor_df = doctor_data_to_df(data_path=path_to_doctor_csv)
+    
     # TODO: You might want to modify this function to index by file name instead of patient 
     # Current: A0002: "<behavioral_description>" -> A0002@5-13-2021@UA6693LK: "<behavioral_description>"
     behavioral_df = behavioral_descriptions_from_df(df=doctor_df)    
     
-    
-    # Connecting with the VLM to get "events"
+    # Connecting each behavioral description with Gemini 
     for patient, behavioral_description in behavioral_df.iterrows():
         
         # doctor description

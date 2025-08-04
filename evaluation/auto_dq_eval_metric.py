@@ -134,7 +134,8 @@ def run_gemini(prompt, model_name="gemini-2.5-pro", temperature=0.2, max_output_
                 analyzer.log_processing("Rotate_api_key, waiting 20s...")
         
 
-    
+
+
         
 def event_prompt_structure(behavioral_description):
     
@@ -152,6 +153,7 @@ def event_prompt_structure(behavioral_description):
                     descriptions.
                     - Every event must be atomic, meaning that it cannot be further split into
                     multiple events.
+                    - Order the events sequentially
                     - Substitute pronouns by the nouns they refer to.
                     - Substitue acronyms for their full description
 
@@ -199,7 +201,7 @@ def get_events_from_behavioral_description(behavioral_description=None):
     
     out = run_gemini(
         prompt=event_prompt,
-        model_name="gemini-2.5-pro",
+        model_name="gemini-2.5-pro", # change to LLM (search which gemini model this is)
         temperature=0
     )
     
@@ -264,8 +266,7 @@ def auto_dq_eval_metric(doctor_behavioral_description=None, VLM_behavioral_descr
     Dmodel_events_in_Dref_json_string = get_entailment_from_events(behavioral_description=doctor_behavioral_description, events=Dmodel_events) 
     Dmodel_events_in_Dref_json = json_string_to_json_obj(Dmodel_events_in_Dref_json_string)
 
-    
-    # Precision
+    # Precision and Recall
     precision = calculate_entailment_score(data=Dmodel_events_in_Dref_json)
     recall = calculate_entailment_score(data=Dref_events_in_Dmodel_json)
 
@@ -305,4 +306,5 @@ def main():
     
     
 if __name__ == "__main__":
-    main()
+    # main()
+    print(run_gemini(prompt="give me ideas for the best dinner to eat?"))

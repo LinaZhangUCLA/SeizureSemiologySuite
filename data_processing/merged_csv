@@ -1,0 +1,210 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+README — CSV Merge (FILES mode) with Sanity Checks — 08/27/2025
+
+What this script does
+- Merges multiple contributor CSVs by the **first column** (treated as `file_name`).
+- Keeps the first CSV as the left/right base (depending on JOIN_MODE), aligns others by exact `file_name`.
+- Produces a clean, ordered `merged.csv`.
+
+Validation & diagnostics
+- Warns about missing input files.
+- After merging, checks if row count == EXPECTED_ROWS (e.g., 439).
+  • If NOT matched, automatically exports `presence_matrix.csv`
+    to show which `file_name` exists in which source CSV.
+
+Minimal environment (lightweight)
+    python3 -m venv .venv
+    source .venv/bin/activate        # Windows: .venv\\Scripts\\activate
+    pip install --upgrade pip pandas
+
+How to configure
+1) Set INPUT_DIR to the folder containing all CSV files.
+2) List your CSV files in CSV_FILES (order matters):
+   - The **first** CSV acts as the merge base in 'right' mode, or left operand per-merge.
+3) Choose JOIN_MODE ∈ {"inner","right","outer"}:
+   - inner: keep only rows whose `file_name` appears in **all** CSVs
+   - right: keep **all rows from the first CSV** (recommended if you expect a fixed row count like 439)
+   - outer: keep the union of rows from **any** CSV
+4) Set EXPECTED_ROWS (optional but recommended) for sanity check.
+5) (Optional) Tweak DESIRED_ORDER to re-order output columns; missing columns are skipped; unlisted columns go last.
+
+How to run
+    python merged_csv.py
+
+Outputs (written to INPUT_DIR)
+- merged.csv                 → Final merged table with desired column order
+- presence_matrix.csv        → Only emitted when row count != EXPECTED_ROWS
+
+Notes / tips
+- Only the **first column** of each CSV is treated as `file_name` (exact match, case-sensitive).
+- Blank rows and exact string "Total Done" in `file_name` are removed.
+- Duplicate `file_name` inside a CSV: first occurrence wins.
+- No source files are modified.
+
+Changelog
+- 08/27/2025: README-structured version, preserved validations and presence matrix export.
+"""
+
+import os
+import re
+from pathlib import Path
+import pandas as pd
+
+# -------------------- CONFIG (edit these) --------------------
+
+# Folder containing all CSV files
+INPUT_DIR = "/Users/justinatian/Downloads/seizure_feature"
+
+# Output file
+OUTPUT_FILE = os.path.join(INPUT_DIR, "merged.csv")
+
+# Contributor CSVs (order matters)
+CSV_FILES = [
+    "seizure_feature_Detao_junnan - seizure_feature.csv",
+    "seizure_feature_hailey_jiarui - seizure_feature.csv",
+    "seizure_feature_jayhee_ido - seizure_feature_jayhee.csv",
+    "seizure_feature_Jiarui_xinyi - seizure_feature.csv",
+    "seizure_feature_jiaye - seizure_feature.csv",
+    "seizure_feature_Lingye_JunHua - Sheet1.csv",
+    "seizure_feature_spatial_chonghan - Copy of seizure_feature.csv",
+    "seizure_feature_Tengyou_xiangting - Sheet1.csv",
+]
+
+# Merge policy: "inner" (intersection), "right" (keep all rows from first CSV), "outer" (union)
+JOIN_MODE = "inner"
+
+# Expected row count (sanity check). Set to 0 to disable the check.
+EXPECTED_ROWS = 438
+
+# Preferred output column order (optional). Missing columns are skipped; others go last.
+DESIRED_ORDER = [
+    "file_name",
+    "occur_during_sleep", "justification_for_occur_during_sleep",
+    "head_turning", "justification_for_head_turning", "start_time_for_head_turning", "end_time_for_head_turning",
+    "blank_stare", "justification_for_blank_stare", "start_time_for_blank_stare", "end_time_for_blank_stare",
+    "close_eyes", "justification_for_close_eyes", "start_time_for_close_eyes", "end_time_for_close_eyes",
+    "eye_blinking", "justification_for_eye_blinking", "start_time_for_eye_blinking", "end_time_for_eye_blinking",
+    "face_pulling", "justification_for_face_pulling", "start_time_for_face_pulling", "end_time_for_face_pulling",
+    "face_twitching", "justification_for_face_twitching", "start_time_for_face_twitching", "end_time_for_face_twitching",
+    "tonic", "justification_for_tonic", "start_time_for_tonic", "end_time_for_tonic",
+    "clonic", "justification_for_clonic", "start_time_for_clonic", "end_time_for_clonic",
+    "arm_straightening", "justification_for_arm_straightening", "start_time_for_arm_straightening", "end_time_for_arm_straightening",
+    "arm_flexion", "justification_for_arm_flexion", "start_time_for_arm_flexion", "end_time_for_arm_flexion",
+    "figure4", "justification_for_figure4", "start_time_for_figure4", "end_time_for_figure4",
+    "oral_automatisms", "justification_for_oral_automatisms", "start_time_for_oral_automatisms", "end_time_for_oral_automatisms",
+    "limb_automatisms", "justification_for_limb_automatisms", "start_time_for_limb_automatisms", "end_time_for_limb_automatisms",
+    "tremor", "justification_for_tremor", "start_time_for_tremor", "end_time_for_tremor",
+    "pelvic_thrusting", "justification_for_pelvic_thrusting", "start_time_for_pelvic_thrusting", "end_time_for_pelvic_thrusting",
+    "full_body_jerking", "justification_for_full_body_jerking", "start_time_for_full_body_jerking", "end_time_for_full_body_jerking",
+    "arms_move_simultaneously", "justification_for_arms_move_simultaneously", "start_time_for_arms_move_simultaneously", "end_time_for_arms_move_simultaneously",
+    "intensity_evolution", "justification_for_intensity_evolution", "start_time_for_intensity_evolution", "end_time_for_intensity_evolution",
+    "verbal_responsiveness", "justification_for_verbal_responsiveness", "start_time_for_verbal_responsiveness", "end_time_for_verbal_responsiveness",
+    "ictal_vocalization", "justification_for_ictal_vocalization", "start_time_for_ictal_vocalization", "end_time_for_ictal_vocalization"
+]
+
+# -------------------------------------------------------------
+
+def normalize_key(s: str) -> str:
+    """
+    Normalize the first-column key:
+    - Keep original case & extension (exact-match semantics)
+    - Trim spaces
+    - Remove blanks and exact 'Total Done'
+    """
+    if s is None:
+        return ""
+    s = str(s).strip()
+    if s == "" or s == "Total Done":
+        return ""
+    return s
+
+def read_one(path: str) -> pd.DataFrame:
+    """
+    Read a contributor CSV defensively, normalize first column to `file_name`,
+    drop blanks/'Total Done', drop unnamed/empty columns, deduplicate on `file_name`.
+    """
+    df = pd.read_csv(
+        path,
+        dtype=str,
+        encoding="utf-8-sig",
+        engine="python",
+        sep=None,                  # auto-detect
+        keep_default_na=False,
+        na_filter=False
+    )
+
+    cols = [str(c).strip() for c in df.columns]
+    if not cols:
+        return pd.DataFrame(columns=["file_name"])
+    cols[0] = "file_name"
+    df.columns = cols
+
+    df["file_name"] = df["file_name"].fillna("").astype(str).map(normalize_key)
+    df = df[df["file_name"] != ""]
+
+    # Drop junk/empty columns
+    drop_cols = [c for c in df.columns if c.lower().startswith("unnamed:")]
+    if drop_cols:
+        df = df.drop(columns=drop_cols)
+    df = df.dropna(axis=1, how="all")
+
+    # Deduplicate by file_name (first occurrence wins)
+    df = df.drop_duplicates(subset=["file_name"], keep="first")
+    return df
+
+def export_presence_matrix(merged: pd.DataFrame):
+    """
+    Build a boolean matrix: rows = merged file_name, columns = each CSV,
+    value = whether that file_name appears in the CSV.
+    """
+    presence = pd.DataFrame({"file_name": merged["file_name"]})
+    for fname in CSV_FILES:
+        dfk = read_one(os.path.join(INPUT_DIR, fname))[["file_name"]]
+        col = os.path.splitext(os.path.basename(fname))[0]
+        presence[col] = presence["file_name"].isin(dfk["file_name"])
+    out_path = os.path.join(INPUT_DIR, "presence_matrix.csv")
+    presence.to_csv(out_path, index=False)
+    print(f"📄 Exported presence_matrix.csv → {out_path}")
+
+def main():
+    # Existence checks (warn only)
+    for fname in CSV_FILES:
+        p = Path(INPUT_DIR) / fname
+        if not p.exists():
+            print(f"Missing file: {p}")
+
+    # Merge step-by-step
+    merged = read_one(os.path.join(INPUT_DIR, CSV_FILES[0]))
+    for fname in CSV_FILES[1:]:
+        df = read_one(os.path.join(INPUT_DIR, fname))
+        # Only merge new columns to avoid overwriting existing ones
+        new_cols = [c for c in df.columns if c != "file_name" and c not in merged.columns]
+        df = df[["file_name"] + new_cols] if new_cols else df[["file_name"]]
+        merged = pd.merge(merged, df, on="file_name", how=JOIN_MODE)
+
+    # Sort by file_name for stable output
+    merged = merged.sort_values("file_name").reset_index(drop=True)
+
+    # Enforce desired column order
+    cols_in_data = list(merged.columns)
+    final_order = [c for c in DESIRED_ORDER if c in cols_in_data] + [c for c in cols_in_data if c not in DESIRED_ORDER]
+    merged = merged[final_order]
+
+    # Export
+    merged.to_csv(OUTPUT_FILE, index=False)
+    print(f"Exported merged CSV: {OUTPUT_FILE}")
+    print(f"Merged shape: {merged.shape[0]} rows × {merged.shape[1]} cols")
+
+    # Sanity check on row count
+    if EXPECTED_ROWS and EXPECTED_ROWS > 0:
+        if merged.shape[0] != EXPECTED_ROWS:
+            print(f"Row count {merged.shape[0]} ≠ expected {EXPECTED_ROWS}. Exporting presence_matrix.csv for diagnostics.")
+            export_presence_matrix(merged)
+        else:
+            print("Row count matches expected.")
+
+if __name__ == "__main__":
+    main()

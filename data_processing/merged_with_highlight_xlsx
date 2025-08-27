@@ -253,9 +253,9 @@ def main():
     for f in CSV_FILES + XLSX_FILES:
         p = Path(INPUT_DIR) / f
         if not p.exists():
-            print(f"⚠️ Missing file: {p}")
+            print(f"Missing file: {p}")
     if len(CSV_FILES) != len(XLSX_FILES):
-        print("⚠️ CSV_FILES and XLSX_FILES have different counts. Proceeding anyway, but some highlights may be missing.")
+        print("CSV_FILES and XLSX_FILES have different counts. Proceeding anyway, but some highlights may be missing.")
 
     # 1) Merge CSVs using join_key
     base_csv = os.path.join(INPUT_DIR, CSV_FILES[0])
@@ -323,14 +323,14 @@ def main():
     wb.save(OUTPUT_XLSX)
 
     # 6) Console report
-    print(f"🎉 Outputs:\n - {OUTPUT_XLSX} (with yellow highlights)\n - {OUTPUT_CSV} (data only)")
+    print(f"Outputs:\n - {OUTPUT_XLSX} (with yellow highlights)\n - {OUTPUT_CSV} (data only)")
     print(f"Merged shape: {merged.shape[0]} rows × {merged.shape[1]} cols")
     if JOIN_MODE in ("inner", "right") and EXPECTED_ROWS:
         if merged.shape[0] != EXPECTED_ROWS:
-            print(f"⚠️ Row count {merged.shape[0]} ≠ expected {EXPECTED_ROWS}. "
+            print(f"Row count {merged.shape[0]} ≠ expected {EXPECTED_ROWS}. "
                   f"To force {EXPECTED_ROWS} rows, set JOIN_MODE='right' and ensure the base CSV is CSV_FILES[0].")
         else:
-            print("✅ Row count matches expected.")
+            print("Row count matches expected.")
 
 if __name__ == "__main__":
     main()

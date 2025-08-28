@@ -458,12 +458,13 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
     return answer_dict
 
 def get_sequence_of_features(answer_dict, prompt_dict):
-    feature_df = pd.DataFrame(columns=['feature', 'start_time'])
+    feature_df = pd.DataFrame(columns=['feature', 'answer', 'start_time'])
     
     for feature in prompt_dict.keys():
         if feature in answer_dict:
+            answer = answer_dict[feature]['answer']
             start_time = format_time(answer_dict[feature]['start_time'])
-            feature_df.loc[len(feature_df)] = [feature, start_time]
+            feature_df.loc[len(feature_df)] = [feature, answer, start_time]
     
     # sort chronologically since format is strictly MM:SS
     feature_df = feature_df[feature_df['answer'] == 'yes'].sort_values(by='start_time')
@@ -531,14 +532,11 @@ def main():
                 
             except Exception as e:
                 print(f"Error processing video {file_name}: {str(e)}")
-                # Create fail entries for all features (3 columns each: feature, justification, start_time)
-                for _ in prompt_dict.keys():
-                    row_to_write.append("fail")
+                # Add empty sequence when there's an error
+                row_to_write.append([])
         else:
-            # If the file does not exist, write empty features
-            # Each feature needs 3 columns: feature, justification, start_time
-            for _ in prompt_dict.keys():
-                row_to_write.append("VideoNotExist")
+            # If the file does not exist, write empty sequence
+            row_to_write.append([])
         
         # Append to the output CSV (no header since it's already written)
         append_to_csv(inf_result_csv_fp, row_to_write)

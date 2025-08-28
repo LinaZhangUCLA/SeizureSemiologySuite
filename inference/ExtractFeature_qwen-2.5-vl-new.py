@@ -45,8 +45,6 @@ def parse_arguments():
                        help='Maximum retries for failed prompts (default: 10)')
     parser.add_argument('--max_new_tokens', type=int, default=2048,
                        help='Maximum new tokens for generation (default: 2048)')
-    parser.add_argument('--consolidate_logs', action='store_true',
-                       help='Consolidate all logs into a single file instead of individual files per video')
     
     return parser.parse_args()
 
@@ -89,7 +87,7 @@ format_prompt_time = "Respond with exactly one JSON object in the format { 'answ
 format_prompt_no_time = "Respond with exactly one JSON object in the format { 'answer': 'yes' or 'no', 'justification': 'brief explanation' } and do not include any extra text outside of the JSON."
 
 # CSV file to read
-inf_result_csv_fp = inference_dir + 'inference_result.csv' # Output CSV (with extracted features)
+inf_result_csv_fp = inference_dir + '/inference_result.csv' # Output CSV (with extracted features)
 # log_file = inference_result_dir + 'qwen_description_log.csv'      # Log file to record each prompt and answer
 
 
@@ -534,13 +532,6 @@ def main():
             writer.writerow(output_header)
     
     
-    # Create consolidated log file in the result folder
-    consolidated_log_file = os.path.join(inference_result_dir, 'all_videos_consolidated_log.csv')
-    log_header = ["file_name", "prompt", "answer", "justification"]
-    with open(consolidated_log_file, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        writer.writerow(log_header)
-    
     # Handle max_videos: -1 means all videos, otherwise limit to specified number
     if args.max_videos == -1:
         video_list = input_videos_files
@@ -548,8 +539,13 @@ def main():
         video_list = input_videos_files[:args.max_videos]
     for video_idx, file_name in enumerate(video_list):
         
-        # Use the consolidated log file for all videos
-        log_file = consolidated_log_file
+        log_file = inference_result_dir + f'/{file_name}---log.csv'
+        # Create log CSV with header if it doesn't exist
+        # log_header = ["file_name", "prompt", "answer", "justification", "start_time"]
+        log_header = ["file_name", "prompt", "answer", "justification"]
+        with open(log_file, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow(log_header)
             
         video_path = os.path.join(dataset_dir, file_name)
         row_to_write = [file_name]
@@ -606,7 +602,7 @@ def main():
         # Append to the output CSV (no header since it's already written)
         append_to_csv(inf_result_csv_fp, row_to_write)
 
-    print(f"Processing is complete. Results are in '{inf_result_csv_fp}', consolidated logs in '{consolidated_log_file}'.")
+    print(f"Processing is complete. Results are in '{inf_result_csv_fp}', logs in '{log_file}'.")
 
 if __name__ == "__main__":
     print(f"Starting seizure video feature extraction...")

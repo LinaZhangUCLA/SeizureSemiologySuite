@@ -80,9 +80,6 @@ all_features = ['occur_during_sleep','blank_stare','close_eyes','eye_blinking',
             'face_pulling','face_twitching','head_turning','asynchronous_movement','pelvic_thrusting',
             'arms_move_simultaneously','ictal_vocalization', 'verbal_responsiveness', 'full_body_shaking',]
 
-features_no_time = ['occur_during_sleep']
-# features_only_time = ['start_time', 'end_time']
-
 format_prompt_time = "Respond with exactly one JSON object in the format { 'answer': 'yes' or 'no', 'justification': 'brief explanation', 'start_time': 'MM:SS' or 'N/A'} and do not include any extra text outside of the JSON."
 format_prompt_no_time = "Respond with exactly one JSON object in the format { 'answer': 'yes' or 'no', 'justification': 'brief explanation' } and do not include any extra text outside of the JSON."
 
@@ -340,12 +337,12 @@ def get_prompts():
         # if feature == 'end_time':
         #     prompts[feature] = "At what time does the seizure end in the video? provide the timestamp in the format MM:SS (minutes and seconds). Do not include extra text in your output—only the timestamps."
         
-        if feature in features_no_time:
-            prompts[feature] = prompts[feature] + " " + format_prompt_no_time
-        # elif feature not in features_only_time:
-        #     prompts[feature] = prompts[feature] + " " + format_prompt_time
-        else:
-            prompts[feature] = prompts[feature] + format_prompt_no_time
+        # if feature in features_no_time:
+        #     prompts[feature] = prompts[feature] + " " + format_prompt_no_time
+        # # elif feature not in features_only_time:
+        # #     prompts[feature] = prompts[feature] + " " + format_prompt_time
+        # else:
+        prompts[feature] = prompts[feature] + " " + format_prompt_no_time
     assert len(feature_names) == len(prompts), f"feature_names length {len(feature_names)} and prompt_list lengths {len(prompts)} does not match."
     return prompts
     
@@ -394,12 +391,6 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
     Extract features from the video by the VLM for each prompt in prompt_list,
     Return a list of extracted features in the same order as prompt_list.
     """
-    # process video first
-    # frames = encode_video(video_file_path)
-    # print("frame:",frames)
-
-    #video_path = '/mnt/SSD1/linazhang/Dataset/A0003@10-20-2020@DA0015B9@sz_v2.mp4'
-    # imgs = load_video(video_path, num_segments=64)
 
     
     # extract feature for each prompt
@@ -415,48 +406,21 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                 video_path, frames, timestamps = get_video_frames(video_path, num_frames=MAX_FRAMES)
                 raw_answer = inference(video_path, prompt)
                 
-                # answer in json format: { 'answer': 'yes' or 'no', 'justification': 'brief explanation', 'start_time': 'MM:SS' or 'N/A'}
-                if feature in features_no_time:
-                    answer_json = json.loads(raw_answer)
-                    answer = answer_json['answer']
-                    justification = answer_json['justification']
-                    append_to_csv(
-                        log_csv,
-                        [file_name, prompt, answer, justification]
-                    )
-                    answer_dict[feature] = {
-                        'answer': answer,
-                        'justification': justification,
-                    }
-                    answer_collected = True
-                    break
-                # elif feature in features_only_time:
-                #     answer = format_time(raw_answer)
-                #     append_to_csv(
-                #         log_csv,
-                #         [file_name, prompt, answer]
-                #     )
-                #     answer_dict[feature] = {
-                #         'answer': answer,
-                #     }
-                else:
-                    answer_json = json.loads(raw_answer)
-                    answer = answer_json['answer']
-                    justification = answer_json['justification']
-                    # start_time = format_time(answer_json['start_time'])
-                    append_to_csv(
-                        log_csv,
-                        [file_name, prompt, answer, justification]
-                    )
+                answer_json = json.loads(raw_answer)
+                answer = answer_json['answer']
+                justification = answer_json['justification']
+                append_to_csv(
+                    log_csv,
+                    [file_name, prompt, answer, justification]
+                )
 
-                    # Store all three values: answer, justification, start_time
-                    answer_dict[feature] = {
-                        'answer': answer,
-                        'justification': justification,
-                        # 'start_time': "N/A"
-                    }
-                    answer_collected = True
-                    break
+                # Store all three values: answer, justification, start_time
+                answer_dict[feature] = {
+                    'answer': answer,
+                    'justification': justification,
+                }
+                answer_collected = True
+                break
             except Exception as e:
                 print(f"Error in prompt for feature: {feature}: {prompt}")
                 print(f"Raw VLM response: {raw_answer}")
@@ -465,33 +429,15 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                 #time.sleep(10 * (retry_count + 1))
         
         if not answer_collected:
-            if feature in features_no_time:
-                answer_dict[feature] = {
-                    'answer': "fail",
-                    'justification': "fail"
-                }
-                append_to_csv(
-                    log_csv,
-                    [file_name, prompt, "fail", "fail"]
-                )
-            # elif feature in features_only_time:
-            #     answer_dict[feature] = {
-            #         'answer': "fail",
-            #     }
-            #     append_to_csv(
-            #         log_csv,
-            #         [file_name, prompt, "fail"]
-            #     )
-            else:
-                answer_dict[feature] = {
-                    'answer': "fail",
-                    'justification': "fail",
-                    # 'start_time': "fail"
-                }
-                append_to_csv(
-                    log_csv,
-                    [file_name, prompt, "fail", "fail", "fail"]
-                )
+            answer_dict[feature] = {
+                'answer': "fail",
+                'justification': "fail",
+                # 'start_time': "fail"
+            }
+            append_to_csv(
+                log_csv,
+                [file_name, prompt, "fail", "fail"]
+            )
     return answer_dict
 # ================== Main function ==================
 
@@ -499,19 +445,10 @@ def main():
     prompt_dict = get_prompts()
     
     output_header = ['file_name']
-    for feature in prompt_dict.keys():
-        if feature in features_no_time:
-            output_header.append(feature)
-        #     output_header.append(f'justification_for_{feature}')
-        # elif feature in features_only_time:
-        #     output_header.append(feature)
-        else:
-            output_header.append(feature)
-            output_header.append(f'justification_for_{feature}')
-            # output_header.append(f'start_time_for_{feature}')
+    for feature in prompt_dict.keys():    
+        output_header.append(feature)
+        output_header.append(f'justification_for_{feature}')
     
-    # prompt_dict = get_prompts()  # Get the prompts for feature extraction
-    # output_header = ["file_name"] + list(prompt_dict.keys()) #  + ["label"]
 
     # List all files in the directory to check existence quickly
     input_videos_files = os.listdir(dataset_dir)
@@ -572,32 +509,20 @@ def main():
                         # if feature not in features_no_time:
                         #     row_to_write.append(feature_data['start_time'])
                     else:
-                        if feature in features_no_time:
-                            row_to_write.extend(["fail", "fail"])
-                        # elif feature in features_only_time:
-                        #     row_to_write.extend(["fail"])
-                        else:
-                            row_to_write.extend(["fail", "fail", "fail"])
+                        
+                        row_to_write.extend(["fail", "fail"])
             except Exception as e:
                 print(f"Error processing video {file_name}: {str(e)}")
                 # Create fail entries for all features (3 columns each: feature, justification, start_time)
                 for _ in prompt_dict.keys():
-                    if feature in features_no_time:
-                        row_to_write.extend(["fail", "fail"])
-                    # elif feature in features_only_time:
-                    #     row_to_write.extend(["fail"])
-                    else:
-                        row_to_write.extend(["fail", "fail", "fail"])
+                    
+                    row_to_write.extend(["fail", "fail"])
         else:
             # If the file does not exist, write empty features
             # Each feature needs 3 columns: feature, justification, start_time
             for _ in prompt_dict.keys():
-                if feature in features_no_time:
-                    row_to_write.extend(["VideoNotExist", "VideoNotExist"])
-                # elif feature in features_only_time:
-                #     row_to_write.extend(["VideoNotExist"])
-                else:
-                    row_to_write.extend(["VideoNotExist", "VideoNotExist", "VideoNotExist"])
+               
+                row_to_write.extend(["VideoNotExist", "VideoNotExist"])
         
         # Append to the output CSV (no header since it's already written)
         append_to_csv(inf_result_csv_fp, row_to_write)

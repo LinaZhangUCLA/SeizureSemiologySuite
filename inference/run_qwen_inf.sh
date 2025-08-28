@@ -15,11 +15,11 @@ echo "Running Qwen inference on GPU $GPU with $NUM_VIDEOS videos..."
 source .venv/bin/activate
 
 # Run the inference script
-python /mnt/SSD3/tengyou/SeizureVLM/evaluation/ExtractFeature_qwen-2.5-vl-new.py \
+python /mnt/SSD3/tengyou/SeizureSemiologyBench/inference/ExtractFeature_qwen-2.5-vl-new.py \
     --gpu $GPU \
     --max_videos $NUM_VIDEOS \
-    --max_frames 30 \
-    --fps 1 \
+    --max_frames 60 \
+    --fps 2 \
     --max_new_tokens 2048 \
     --max_retries 10 \
     --output_dir /mnt/SSD3/tengyou/inference\

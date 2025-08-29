@@ -88,8 +88,8 @@ all_features = ['occur_during_sleep','blank_stare','close_eyes','eye_blinking',
             # 'ictal_vocalization', 'verbal_responsiveness',
             ]
 
-format_prompt_time = "Also provide a justification for the answer. Respond with exactly one JSON object in the format {\"answer\": \"yes\" or \"no\", \"justification\": \"brief explanation\", \"start_time\": \"MM:SS\" or \"N/A\"} and do not include any extra text outside of the JSON."
-format_prompt_no_time = "Respond with exactly one JSON object in the format {\"answer\": \"yes\" or \"no\", \"justification\": \"brief explanation\"} and do not include any extra text outside of the JSON."
+format_prompt_time = " Answer with 'yes' or 'no' and provide a justification for the answer.  Respond with exactly one JSON object in the format {\"answer\": \"yes\" or \"no\", \"justification\": \"brief explanation\", \"start_time\": \"MM:SS\" or \"N/A\"} and do not include any extra text outside of the JSON."
+format_prompt_no_time = " Answer with 'yes' or 'no' and provide a justification for the answer. Respond with exactly one JSON object in the format {\"answer\": \"yes\" or \"no\", \"justification\": \"brief explanation\"} and do not include any extra text outside of the JSON."
 
 # Function to clean and fix malformed JSON responses
 def clean_json_response(raw_response):

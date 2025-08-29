@@ -15,3 +15,14 @@ pip install lmdeploy==0.9.2.post1 transformers==4.51.0 huggingface-hub==0.33.2 \
   decord==0.6.0 pillow==11.0.0 numpy==1.26.4 pandas==2.3.1 tqdm==4.67.1 requests==2.32.4 \
   PyYAML==6.0.2
 
+#login huggingface
+huggingface-cli login  # When prompted, paste your token (e.g., hf_xxx...) and press Enter to confirm.
+
+#to get huggingface token:
+#Sign in at huggingface.co → click your avatar → Settings → Access Tokens → New token.
+#Token type: choose Fine-grained (cannot be changed after creation).
+#Token name: enter internvl_infer.
+#User permissions → Repositories: check
+#“Read access to contents of all public gated repos you can access.”
+#Leave all other permissions unchecked (no Write, no Inference permissions needed).
+#Click Generate token, then copy and store it securely (you’ll only see it once).

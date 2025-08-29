@@ -321,74 +321,74 @@ def get_prompts():
     prompts = {}
     for feature in feature_names:
         if feature == 'blank_stare':
-            # prompts[feature] = "Does the patient exhibit a blank stare (vacant or unfocused gaze) at any time during the event? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Does the patient exhibit a blank stare? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Does the patient exhibit a blank stare (vacant or unfocused gaze) at any time during the event?  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Does the patient exhibit a blank stare? "
         if feature == 'arm_flexion':
-            # prompts[feature] = "Does the patient maintain a sustained flexion of the arms at the elbows (i.e., holding them in a flexed position for a noticeable duration) during the seizure? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Does the patient flex their arms or arm at the elbows for at least a few video frames? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Does the patient maintain a sustained flexion of the arms at the elbows (i.e., holding them in a flexed position for a noticeable duration) during the seizure?  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Does the patient flex their arms or arm at the elbows for at least a few video frames? "
         # if feature == 'limb_movement_pattern':
         #     prompts[feature] = "Analyze the patient's upper limb movements in this video. Which of the following best describes the movements? 1.Thrashing/Flailing: Significant thrashing and flailing, somewhat asynchronous and variable. 2.Rhythmic Jerking: Stereotyped, rhythmic clonic jerking, potentially following a tonic phase. 3.Neither: The movements do not fit descriptions 1 or 2. Please answer with 1, 2, or 3. Do not include extra text in your output—only the answer."
         if feature == 'arms_move_simultaneously':
-            # prompts[feature] = "Do the patient's hands start moving simultaneously? Answer with 'yes' or 'no'."
-            prompts[feature] = "Do the patient's arms start moving approximately at the same time? Answer 'yes' or 'no'."
+            # prompts[feature] = "Do the patient's hands start moving simultaneously? "
+            prompts[feature] = "Do the patient's arms start moving approximately at the same time? "
         # if feature == 'gender':
         #     prompts[feature] = "Please identify the gender of the patient in the video. Please answer with \"female\" or \"male\". Do not include extra text in your output—only the answer."
         if feature == 'occur_during_sleep':
-            # prompts[feature] = "Please determine if this seizure event occurs while the patient is asleep. Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Is the patient sleeping at the beginning of the video? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Please determine if this seizure event occurs while the patient is asleep.  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Is the patient sleeping at the beginning of the video? "
         if feature == 'ictal_vocalization':
-            # prompts[feature] = "Please check if the patient produces any vocalization (such as groaning, moaning, or screaming) during the event. Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Does the patient make any groaning, moaning, guttural sounds or do they utter stereotyped repetitive phrases? Answer 'yes' or 'no'."
+            # prompts[feature] = "Please check if the patient produces any vocalization (such as groaning, moaning, or screaming) during the event.  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Does the patient make any groaning, moaning, guttural sounds or do they utter stereotyped repetitive phrases? "
         if feature == 'close_eyes':
-            # prompts[feature] = "Do the patient's eyes remain consistently closed or mostly closed throughout the event? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Do the patient's eyes remain consistently closed or mostly closed throughout the video? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Do the patient's eyes remain consistently closed or mostly closed throughout the event?  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Do the patient's eyes remain consistently closed or mostly closed throughout the video? "
         if feature == 'eye_blinking':
-            # prompts[feature] = "Does the patient show repeated or rapid blinking of the eyes during the event? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Does the patient show rapid blinking of the eyes during the video? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Does the patient show repeated or rapid blinking of the eyes during the event?  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Does the patient show rapid blinking of the eyes during the video? "
         if feature == 'tonic':
-            # prompts[feature] = "Please observe whether the patient has a prolonged, sustained muscle contraction (tonic phase). Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "The tonic phase is marked by a sudden onset of sustained stiffness or rigidity, usually lasting 5–20 seconds. This stiffness may be generalized, with all limbs held in fixed extension or flexion posture and can include stiffening of the head and axial body. It may also be focal involving a subset of body parts or just one body part at a time. Does this patient show tonic? Give an answer with 'yes' or 'no'."
+            # prompts[feature] = "Please observe whether the patient has a prolonged, sustained muscle contraction (tonic phase).  Do not include extra text in your output—only the answer."
+            prompts[feature] = "The tonic phase is marked by a sudden onset of sustained stiffness or rigidity, usually lasting 5–20 seconds. This stiffness may be generalized, with all limbs held in fixed extension or flexion posture and can include stiffening of the head and axial body. It may also be focal involving a subset of body parts or just one body part at a time. Does this patient show tonic? "
         if feature == 'clonic':
-            # prompts[feature] = "Clonic movements typically involve repetitive, rhythmic jerking of muscles—marked by a contraction phase followed by relaxation, then repeating in a clear pattern. Please determine if the patient exhibits these repetitive, rhythmic jerking (clonic) movements, distinct from small or continuous trembling (tremor), at any point during the event. Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Clonic Phase: Rhythmic, jerking muscle contractions involving the limbs, face, and trunk. The jerking movements gradually slow before ceasing entirely. Clonic movements present as rhythmic, regular stereotyped contraction and relaxation of the affected body parts. Does this patient show clonic? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Clonic movements typically involve repetitive, rhythmic jerking of muscles—marked by a contraction phase followed by relaxation, then repeating in a clear pattern. Please determine if the patient exhibits these repetitive, rhythmic jerking (clonic) movements, distinct from small or continuous trembling (tremor), at any point during the event.  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Clonic Phase: Rhythmic, jerking muscle contractions involving the limbs, face, and trunk. The jerking movements gradually slow before ceasing entirely. Clonic movements present as rhythmic, regular stereotyped contraction and relaxation of the affected body parts. Does this patient show clonic? "
         if feature == 'arm_straightening':
-            # prompts[feature] = "Does the patient straighten or stiffen their arms (extended position)? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Does the patient straighten or extend their arms or arm at the elbow for at least a few video frames? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Does the patient straighten or stiffen their arms (extended position)?  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Does the patient straighten or extend their arms or arm at the elbow for at least a few video frames? "
         if feature == 'figure4':
-            # prompts[feature] = "Figure 4 refers to a specific posture or movement observed in a patient during a seizure, where one upper limb is extended (typically in a tonic stretch) while the other upper limb is flexed, forming a shape resembling the number 4. Please check if there is a 'figure 4' posture of the arms at any point. Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Figure 4 refers to a tonic sustained posture where one arm is flexed while the other is extended at the same time. Does the patient exhibit a Figure 4 posture? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Figure 4 refers to a specific posture or movement observed in a patient during a seizure, where one upper limb is extended (typically in a tonic stretch) while the other upper limb is flexed, forming a shape resembling the number 4. Please check if there is a 'figure 4' posture of the arms at any point.  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Figure 4 refers to a tonic sustained posture where one arm is flexed while the other is extended at the same time. Does the patient exhibit a Figure 4 posture? "
         if feature == 'oral_automatisms':
-            # prompts[feature] = "Does the patient exhibit repetitive mouth or tongue movements such as chewing, lip-smacking, or swallowing? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Does the patient exhibit repetitive,stereotyped mouth or tongue movements such as chewing, lip-smacking, or swallowing? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Does the patient exhibit repetitive mouth or tongue movements such as chewing, lip-smacking, or swallowing?  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Does the patient exhibit repetitive,stereotyped mouth or tongue movements such as chewing, lip-smacking, or swallowing? "
         if feature == 'limb_automatisms':
-            # prompts[feature] = "Are there repetitive, purposeless limb movements (e.g., fumbling, picking, patting, cycling) observed? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Does the patient exhibit repetitive,stereotyped limb movements such as fumbling, picking, rubbing or patting?  Answer with 'yes' or 'no'."
+            # prompts[feature] = "Are there repetitive, purposeless limb movements (e.g., fumbling, picking, patting, cycling) observed?  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Does the patient exhibit repetitive,stereotyped limb movements such as fumbling, picking, rubbing or patting?  "
         if feature == 'face_pulling':
-            # prompts[feature] = "Does the patient's facial expression indicate grimacing or face-pulling movements? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Does the patient exhibit unilateral sustained face-pulling movements? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Does the patient's facial expression indicate grimacing or face-pulling movements?  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Does the patient exhibit unilateral sustained face-pulling movements? "
         if feature == 'face_twitching':
-            # prompts[feature] = "Are there small, involuntary twitches or jerks observed on the patient's face? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Are there small muscle twitches observed on the patient's face? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Are there small, involuntary twitches or jerks observed on the patient's face?  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Are there small muscle twitches observed on the patient's face? "
         if feature == 'head_turning':
-            # prompts[feature] = "Does the patient forcibly or stiffly rotate their head to one side during the event?  Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Does the patient forcibly or stiffly rotate their head to one side in the video? Answer with 'yes' or 'no'."
+            # prompts[feature] = "Does the patient forcibly or stiffly rotate their head to one side during the event?   Do not include extra text in your output—only the answer."
+            prompts[feature] = "Does the patient forcibly or stiffly rotate their head to one side in the video? "
         # if feature == 'tremor':
-        #     # prompts[feature] = "Do you observe any rhythmic, trembling movement (tremor) in the patient's limbs or body? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-        #     prompts[feature] = "Do you observe any rhythmic, trembling movement (tremor) in the patient's limbs or body? Answer with 'yes' or 'no'."
+        #     # prompts[feature] = "Do you observe any rhythmic, trembling movement (tremor) in the patient's limbs or body?  Do not include extra text in your output—only the answer."
+        #     prompts[feature] = "Do you observe any rhythmic, trembling movement (tremor) in the patient's limbs or body? "
         if feature == 'asynchronous_movement':
-            prompts[feature] = "Do you observe the patient's limbs shake with variable frequency or amplitude with respect to one another? Answer with 'yes' or 'no'."
+            prompts[feature] = "Do you observe the patient's limbs shake with variable frequency or amplitude with respect to one another? "
         if feature == 'pelvic_thrusting':
-            # prompts[feature] = "Does the patient display any pelvic thrusting movements during the event? Answer with 'yes' or 'no'. Do not include extra text in your output—only the answer."
-            prompts[feature] = "Does the patient display repetitive, rhythmic, anteroposterior (forward-and-backward) movements of the hips? Answer 'yes' or 'no'."
+            # prompts[feature] = "Does the patient display any pelvic thrusting movements during the event?  Do not include extra text in your output—only the answer."
+            prompts[feature] = "Does the patient display repetitive, rhythmic, anteroposterior (forward-and-backward) movements of the hips? "
         if feature == 'verbal_responsiveness':
             # prompts[feature] = "Please determine if the patient is able to respond verbally or demonstrate any comprehension during the event. Answer with 'yes' or 'no', if no one asks the patient any questions, answer 'NA.' Do not include extra text in your output—only the answer."
             prompts[feature] = "If the patient is addressed verbally by a different person, did they respond verbally in a coherent manner? Answer 'yes' or 'no'. If the patient is not addressed verbally by a different person, then the answer should be 'NA'."
         if feature == 'intensity_evolution':
-            prompts[feature] = "Please determine if the intensity of the seizure changes over time. Answer with 'yes' or 'no'."
+            prompts[feature] = "Please determine if the intensity of the seizure changes over time. "
         # if feature == 'full_body_jerking':
-        #     prompts[feature] = "Please determine if the patient exhibits full-body jerking movements during the event. Answer with 'yes' or 'no'."
+        #     prompts[feature] = "Please determine if the patient exhibits full-body jerking movements during the event. "
         if feature == 'full_body_shaking':
-            prompts[feature] = "Does the patient experience shaking of the entire body including arms, legs, torso? Answer with 'yes' or 'no'."
+            prompts[feature] = "Does the patient experience shaking of the entire body including arms, legs, torso? "
         # if feature == 'start_time':
         #     prompts[feature] = "At what time does the seizure start in the video? provide the timestamp in the format MM:SS (minutes and seconds). Do not include extra text in your output—only the timestamps."
         # if feature == 'end_time':
@@ -461,6 +461,8 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
         for retry_count in range(max_retries):
             try:
                 video_path, frames, timestamps = get_video_frames(video_path, num_frames=MAX_FRAMES)
+                print(prompt)
+
                 raw_answer = inference(video_path, prompt)
                 
                 # Try direct JSON parsing first

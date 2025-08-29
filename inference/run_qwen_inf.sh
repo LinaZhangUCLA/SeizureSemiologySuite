@@ -24,6 +24,12 @@ fi
 echo "Conda environment qwenvl activated."
 
 
+# model_name options
+# Qwen/Qwen2.5-VL-7B-Instruct   1GPU  
+# Qwen/Qwen2.5-VL-32B-Instruct  2GPU
+# Qwen/Qwen2.5-VL-72B-Instruct  4GPU
+
+
 # Run the inference script
 python /home/hubing/SeizureSemiologyBench/inference/ExtractFeature_qwen-2.5-vl-new.py \
     --gpu $GPU \

@@ -10,12 +10,14 @@ from tqdm import tqdm
 
 import argparse
 
+default_model_cache_dir = os.path.join(os.path.dirname(__file__), 'model_cache')
+default_output_dir = os.path.join(os.path.dirname(__file__), 'output')
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Seizure Video Feature Extraction using Qwen2.5-VL')
     
     # GPU settings
-    parser.add_argument('--gpu', type=str, default='3', 
-                       help='GPU device ID(s) to use (default: 3)')
+    parser.add_argument('--gpu', type=str, default='0', 
+                       help='GPU device ID(s) to use (default: 3). Can be a single number or comma-separated numbers (e.g., 7 or 0,1,2)')
     
     # Model settings
     parser.add_argument('--model_name', type=str, default='Qwen/Qwen2.5-VL-7B-Instruct',
@@ -23,28 +25,19 @@ def parse_arguments():
     
     # Data settings
     parser.add_argument('--dataset_dir', type=str, 
-                       default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset/',
+                       default=None,
                        help='Directory containing seizure video files')
-    parser.add_argument('--max_frames', type=int, default=60,
-                       help='Maximum number of frames to extract from videos (default: 60)')
-    parser.add_argument('--fps', type=int, default=2,
-                       help='FPS for video processing (default: 2)')
+    # cache directory
+    parser.add_argument('--cache_dir', type=str, default=default_model_cache_dir,
+                       help='Directory for model cache (default: ' + default_model_cache_dir + ')')
     
-    # Output settings
-    parser.add_argument('--output_dir', type=str, default='/mnt/SSD3/tengyou/inference/',
-                       help='Output directory for results (default: /mnt/SSD3/tengyou/inference/)')
-    parser.add_argument('--max_videos', type=int, default=10,
-                       help='Maximum number of videos to process. Use -1 for all videos (default: 10)') 
+    # Output directory
+    parser.add_argument('--output_dir', type=str, default=default_output_dir,
+                       help='Directory for output (default: ' + default_output_dir + ')')
     
-    # Cache settings
-    parser.add_argument('--cache_dir', type=str, default='/mnt/SSD3/tengyou/model_cache',
-                       help='Directory for model cache (default: /mnt/SSD3/tengyou/model_cache)')
-    
-    # Processing settings
-    parser.add_argument('--max_retries', type=int, default=10,
-                       help='Maximum retries for failed prompts (default: 10)')
-    parser.add_argument('--max_new_tokens', type=int, default=2048,
-                       help='Maximum new tokens for generation (default: 2048)')
+    # Video range settings
+    parser.add_argument('--videos_range', type=str, default='0,1',
+                       help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')
     
     # Logging settings
     parser.add_argument('--disable_logs', type=lambda x: x.lower() in ('true', '1', 'yes'), default=True,
@@ -60,10 +53,8 @@ os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 
 # Set the directories/paths from arguments
 ################################################################################################
-root_dir = os.path.dirname(args.output_dir.rstrip('/')) + '/'
 model_name = args.model_name
 dataset_dir = args.dataset_dir
-
 
 # inference files
 inference_dir = args.output_dir
@@ -73,13 +64,6 @@ if not args.disable_logs:
     os.makedirs(inference_log_dir, exist_ok=True)
 
 # feature information
-
-# all_features = ['gender','occur_during_sleep','blank_stare','close_eyes','eye_blinking',
-#             'tonic','clonic','arm_flexion','arm_straightening','figure4','oral_automatisms','limb_automatisms',
-#             'face_pulling','face_twitching','head_turning','asynchronous_movement','pelvic_thrusting','limb_movement_pattern',
-#             'arms_move_simultaneously','ictal_vocalization', 'verbal_responsiveness', 
-#             'intensity_evolution', 'full_body_shaking',
-#             'start_time','end_time']
 
 all_features = ['occur_during_sleep','blank_stare','close_eyes','eye_blinking',
             'tonic','clonic','arm_flexion','arm_straightening','figure4','oral_automatisms','limb_automatisms',
@@ -159,7 +143,11 @@ inf_result_csv_fp = inference_dir + f'/Task1_{model_name.split("/")[-1]}.csv' # 
 # 360p:  (640, 360)
 # 240p:  (426, 240)
 ################################################################################################
-MAX_FRAMES = args.max_frames
+MAX_FRAMES = 60
+FPS = 2
+MAX_NEW_TOKENS = 2048
+MAX_RETRIES = 10
+
 import time
 import traceback
 import pandas as pd
@@ -172,11 +160,10 @@ import numpy as np
 # from lmdeploy.vl.utils import encode_image_base64
 # from PIL import Image
 
-# Set custom cache directory for model downloads
-model_cache_dir = args.cache_dir
-hf_cache_dir = os.path.join(model_cache_dir, 'huggingface')
-modelscope_cache_dir = os.path.join(model_cache_dir, 'modelscope')
-video_cache_dir = os.path.join(model_cache_dir, 'video_cache')
+# Generate model_cache folder at the current directory
+hf_cache_dir = os.path.join(args.cache_dir, 'huggingface')
+modelscope_cache_dir = os.path.join(args.cache_dir, 'modelscope')
+video_cache_dir = os.path.join(args.cache_dir, 'video_cache')
 os.makedirs(hf_cache_dir, exist_ok=True)
 os.makedirs(modelscope_cache_dir, exist_ok=True)
 os.makedirs(video_cache_dir, exist_ok=True)
@@ -279,7 +266,7 @@ def create_image_grid(images, num_columns=8):
 
 def inference(video_path, prompt, max_new_tokens=None, max_pixels=602112, min_pixels=16 * 28 * 28):
     if max_new_tokens is None:
-        max_new_tokens = args.max_new_tokens
+        max_new_tokens = MAX_NEW_TOKENS
     messages = [
         # {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": [
@@ -289,7 +276,7 @@ def inference(video_path, prompt, max_new_tokens=None, max_pixels=602112, min_pi
                 "max_pixels": max_pixels,
                 "min_pixels": min_pixels,
                 "total_pixels": max_pixels * MAX_FRAMES,
-                "fps": args.fps,
+                "fps": FPS,
             },
             {"type": "text", "text": prompt},
         ]}
@@ -455,10 +442,9 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
     for feature in tqdm(prompt_dict.keys(), desc=f"Inferencing on video[{video_idx_info[0]}/{video_idx_info[1]}]", total=len(prompt_dict.keys())):
         prompt = prompt_dict[feature]
         
-        max_retries = args.max_retries
         answer_collected = False
         
-        for retry_count in range(max_retries):
+        for retry_count in range(MAX_RETRIES):
             try:
                 video_path, frames, timestamps = get_video_frames(video_path, num_frames=MAX_FRAMES)
                 print(prompt)
@@ -493,7 +479,7 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
             except Exception as e:
                 print(f"Error in prompt for feature: {feature}: {prompt}")
                 print(f"Raw VLM response: {raw_answer}")
-                print(f"Exception: {str(e)}. Retrying ({retry_count + 1}/{max_retries})...")
+                print(f"Exception: {str(e)}. Retrying ({retry_count + 1}/{MAX_RETRIES})...")
                 
                 # Add more detailed error information for JSON parsing issues
                 if isinstance(e, (json.JSONDecodeError, ValueError)):
@@ -549,12 +535,23 @@ def main():
             writer = csv.writer(f)
             writer.writerow(output_header)
     
-    
-    # Handle max_videos: -1 means all videos, otherwise limit to specified number
-    if args.max_videos == -1:
-        video_list = input_videos_files
-    else:
-        video_list = input_videos_files[:args.max_videos]
+    # make sure videos_range is valid
+    videos_range = args.videos_range.split(',')
+    videos_range = [int(videos_range[0]), int(videos_range[1])]
+    if len(videos_range) != 2:
+        raise ValueError("videos_range must be a comma-separated string of two numbers")
+    if int(videos_range[0]) > int(videos_range[1]):
+        raise ValueError("videos_range[0] must be less than videos_range[1]")
+    if int(videos_range[0]) < 0:
+        videos_range[0] = 0
+        # add warning
+        print(f"Warning: videos_range[0] is less than 0, set to 0")
+    if int(videos_range[1]) > len(input_videos_files):
+        videos_range[1] = len(input_videos_files)
+        # add warning
+        print(f"Warning: videos_range[1] is greater than the number of videos, set to {len(input_videos_files)}")
+    video_list = input_videos_files[videos_range[0] : videos_range[1]]
+
     for video_idx, file_name in enumerate(video_list):
         
         log_file = None
@@ -620,10 +617,10 @@ if __name__ == "__main__":
     print(f"GPU: {args.gpu}")
     print(f"Model: {args.model_name}")
     print(f"Dataset: {args.dataset_dir}")
-    print(f"Output: {args.output_dir}")
-    print(f"Max videos: {args.max_videos}")
-    print(f"Max frames: {args.max_frames}")
-    print(f"FPS: {args.fps}")
+    print(f"Output: {inference_dir}")
+    print(f"Videos range: {args.videos_range}")
+    print(f"Max frames: {MAX_FRAMES}")
+    print(f"FPS: {FPS}")
     print(f"Log files: {'Disabled' if args.disable_logs else 'Enabled'}")
     print("-" * 50)
     

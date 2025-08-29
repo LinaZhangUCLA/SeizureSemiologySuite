@@ -6,9 +6,9 @@ python -m pip install -U pip
 pip install --extra-index-url https://download.pytorch.org/whl/cu118 \
   torch==2.7.1+cu118 torchvision==0.22.1+cu118 torchaudio==2.7.1+cu118
 
-#cuda 12.4
-pip install --index-url https://download.pytorch.org/whl/cu124 \
-  torch==2.7.1+cu124 torchvision==0.22.1+cu124 torchaudio==2.7.1+cu124
+#cuda 12.2
+pip install --index-url https://download.pytorch.org/whl/cu121 \
+  torch==2.7.1+cu121 torchvision==0.22.1+cu121 torchaudio==2.7.1+cu121
 
 pip install lmdeploy==0.9.2.post1 transformers==4.51.0 huggingface-hub==0.33.2 \
   accelerate==1.8.1 safetensors==0.5.3 tokenizers==0.21.2 timm==1.0.16 einops==0.8.1 \

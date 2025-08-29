@@ -38,7 +38,7 @@ python /home/hubing/SeizureSemiologyBench/inference/task1_Qwen-2.5-VL-7B-Instruc
     --fps 2 \
     --max_new_tokens 2048 \
     --max_retries 10 \
-    --output_dir /home/hubing/SeizureSemiologyBench/output\
+    --output_dir /home/hubing/SeizureSemiologyBench/output2\
     --model_name Qwen/Qwen2.5-VL-7B-Instruct \
     --dataset_dir /home/hubing/ucla/second_half_videos \
     --cache_dir /home/hubing/SeizureSemiologyBench/cache \

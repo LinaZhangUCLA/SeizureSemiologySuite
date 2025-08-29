@@ -1,6 +1,5 @@
 # ExtractFeature_internvl3_5.py
 # LMDeploy + InternVL3.5-8B (PyTorch backend; IMAGE_TOKEN + base64 data URL)
-# - CLI interface and path conventions follow the Qwen script style
 # - Output CSV: file_name + for each feature two columns [feature, justification_for_feature]
 # - Per-video logs optional (disabled by default)
 
@@ -30,8 +29,8 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description='Seizure Video Feature Extraction using InternVL3.5-8B via LMDeploy')
 
     # GPU settings
-    parser.add_argument('--gpu', type=str, default='2',
-                        help='GPU device ID(s) to use (default: 2)')
+    parser.add_argument('--gpu', type=str, default='0',
+                        help='GPU device ID(s) to use (default: 0)')
 
     # Tensor parallelism settings
     parser.add_argument('--tp', type=int, default=1, 
@@ -43,19 +42,20 @@ def parse_arguments():
 
     # Data settings
     parser.add_argument('--dataset_dir', type=str,
-                        default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset/',
+                        default=None,
                         help='Directory containing seizure video files')
+    
     parser.add_argument('--max_frames', type=int, default=60,
                         help='Maximum frames sampled per video (segment-center sampling)')
 
     # Output settings
-    parser.add_argument('--output_dir', type=str, default='/mnt/SSD3/tengyou/inference/',
+    parser.add_argument('--output_dir', type=str, default=None,
                         help='Output directory for results CSV and optional logs')
-    parser.add_argument('--max_videos', type=int, default=10,
+    parser.add_argument('--max_videos', type=int, default=-1,
                         help='Max number of videos to process; -1 for all')
 
     # Cache settings
-    parser.add_argument('--cache_dir', type=str, default='/mnt/SSD3/tengyou/model_cache',
+    parser.add_argument('--cache_dir', type=str, default='./model_cache/',
                         help='Directory for model caches')
 
     # Processing settings
@@ -75,10 +75,10 @@ args = parse_arguments()
 
 # --------------------------- Environment ---------------------------
 
-# GPU visibility (Qwen style)
+# GPU visibility
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 
-# Caches (Qwen style: consolidate under a single cache_dir)
+# Caches
 hf_cache_dir = os.path.join(args.cache_dir, 'huggingface')
 lmdeploy_cache_dir = os.path.join(args.cache_dir, 'lmdeploy')
 os.makedirs(hf_cache_dir, exist_ok=True)
@@ -89,7 +89,7 @@ os.environ['TRANSFORMERS_CACHE'] = hf_cache_dir
 os.environ['HF_HUB_CACHE'] = hf_cache_dir
 os.environ['LMDEPLOY_CACHE_DIR'] = lmdeploy_cache_dir
 
-# Paths (Qwen style)
+# Paths
 model_name = args.model_name
 dataset_dir = args.dataset_dir
 inference_dir = args.output_dir
@@ -557,24 +557,4 @@ if __name__ == "__main__":
     print("-" * 50)
     main()
 
-    # Usage examples (printed after run, Qwen-style)
-    print("\n" + "="*50)
-    print("USAGE EXAMPLES:")
-    print("="*50)
-    print("# Use default settings:")
-    print("python ExtractFeature_internvl3_5.py")
-    print()
-    print("# Use different GPU:")
-    print("python ExtractFeature_internvl3_5.py --gpu 0")
-    print()
-    print("# Process more videos:")
-    print("python ExtractFeature_internvl3_5.py --max_videos 20")
-    print()
-    print("# Use different dataset:")
-    print("python ExtractFeature_internvl3_5.py --dataset_dir /path/to/videos")
-    print()
-    print("# Use different model:")
-    print("python ExtractFeature_internvl3_5.py --model_name OpenGVLab/InternVL3_5-26B")
-    print()
-    print("# Enable per-video logs:")
-    print("python ExtractFeature_internvl3_5.py --disable_logs false")
+

@@ -84,7 +84,9 @@ if not args.disable_logs:
 all_features = ['occur_during_sleep','blank_stare','close_eyes','eye_blinking',
             'tonic','clonic','arm_flexion','arm_straightening','figure4','oral_automatisms','limb_automatisms',
             'face_pulling','face_twitching','head_turning','asynchronous_movement','pelvic_thrusting',
-            'arms_move_simultaneously','ictal_vocalization', 'verbal_responsiveness', 'full_body_shaking',]
+            'arms_move_simultaneously','full_body_shaking', 
+            # 'ictal_vocalization', 'verbal_responsiveness',
+            ]
 
 format_prompt_time = "Also provide a justification for the answer. Respond with exactly one JSON object in the format {\"answer\": \"yes\" or \"no\", \"justification\": \"brief explanation\", \"start_time\": \"MM:SS\" or \"N/A\"} and do not include any extra text outside of the JSON."
 format_prompt_no_time = "Respond with exactly one JSON object in the format {\"answer\": \"yes\" or \"no\", \"justification\": \"brief explanation\"} and do not include any extra text outside of the JSON."

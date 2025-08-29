@@ -41,6 +41,5 @@ python /home/hubing/SeizureSemiologyBench/inference/task1_Qwen-2.5-VL-7B-Instruc
     --output_dir /home/hubing/SeizureSemiologyBench/output \
     --model_name Qwen/Qwen2.5-VL-32B-Instruct \
     --dataset_dir /home/hubing/ucla/all_videos \
-    --cache_dir /home/hubing/SeizureSemiologyBench/cache 
-
+    --cache_dir /home/hubing/SeizureSemiologyBench/cache \
 echo "Done!"

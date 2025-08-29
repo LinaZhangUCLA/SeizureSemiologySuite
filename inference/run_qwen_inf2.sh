@@ -4,10 +4,10 @@
 # Usage: ./run_qwen_inf.sh [gpu_id] [num_videos]
 
 # Set GPU (default: 3)
-GPU=${1:-7}
+GPU=${1}
 
 # Set number of videos (default: 10)
-NUM_VIDEOS=${2:-10}
+NUM_VIDEOS=${-1}
 
 echo "Running Qwen inference on GPU $GPU with $NUM_VIDEOS videos..."
 
@@ -32,15 +32,15 @@ echo "Conda environment qwenvl activated."
 
 # Run the inference script
 python /home/hubing/SeizureSemiologyBench/inference/task1_Qwen-2.5-VL-7B-Instruct.py \
-    --gpu $GPU \
-    --max_videos $NUM_VIDEOS \
+    --gpu 1 \
+    --max_videos -1 \
     --max_frames 60 \
     --fps 2 \
     --max_new_tokens 2048 \
     --max_retries 10 \
     --output_dir /home/hubing/SeizureSemiologyBench/output\
     --model_name Qwen/Qwen2.5-VL-7B-Instruct \
-    --dataset_dir /home/hubing/ucla/first_10_segment \
+    --dataset_dir /home/hubing/ucla/second_half_videos \
     --cache_dir /home/hubing/SeizureSemiologyBench/cache \
 
 echo "Done!"

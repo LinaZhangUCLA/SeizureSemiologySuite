@@ -31,7 +31,7 @@ echo "Conda environment qwenvl activated."
 
 
 # Run the inference script
-python /home/hubing/SeizureSemiologyBench/inference/ExtractFeature_qwen-2.5-vl-new.py \
+python /home/hubing/SeizureSemiologyBench/inference/task1_Qwen-2.5-VL-7B-Instruct.py \
     --gpu $GPU \
     --max_videos $NUM_VIDEOS \
     --max_frames 60 \

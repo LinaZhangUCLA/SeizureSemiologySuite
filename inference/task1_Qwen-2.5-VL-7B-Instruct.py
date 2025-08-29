@@ -36,12 +36,12 @@ def parse_arguments():
                        help='Directory for output (default: ' + default_output_dir + ')')
     
     # Video range settings
-    parser.add_argument('--videos_range', type=str, default='0,1',
-                       help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')
+    # parser.add_argument('--videos_range', type=str, default='0,1',
+    #                    help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')
     
-    # Logging settings
-    parser.add_argument('--disable_logs', type=lambda x: x.lower() in ('true', '1', 'yes'), default=True,
-                       help='Disable individual log files for each video, keep only final result (default: True)')
+    # # Logging settings
+    # parser.add_argument('--disable_logs', type=lambda x: x.lower() in ('true', '1', 'yes'), default=True,
+    #                    help='Disable individual log files for each video, keep only final result (default: True)')
     
     return parser.parse_args()
 
@@ -59,9 +59,9 @@ dataset_dir = args.dataset_dir
 # inference files
 inference_dir = args.output_dir
 os.makedirs(inference_dir, exist_ok=True)
-if not args.disable_logs:
-    inference_log_dir = os.path.join(inference_dir, 'log')
-    os.makedirs(inference_log_dir, exist_ok=True)
+# if not args.disable_logs:
+#     inference_log_dir = os.path.join(inference_dir, 'log')
+#     os.makedirs(inference_log_dir, exist_ok=True)
 
 # feature information
 
@@ -463,11 +463,11 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                 
                 answer = answer_json['answer']
                 justification = answer_json['justification']
-                if not args.disable_logs:
-                    append_to_csv(
-                        log_csv,
-                        [file_name, prompt, answer, justification]
-                    )
+                # if not args.disable_logs:
+                #     append_to_csv(
+                #         log_csv,
+                #         [file_name, prompt, answer, justification]
+                #     )
 
                 # Store all three values: answer, justification, start_time
                 answer_dict[feature] = {
@@ -500,11 +500,11 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                 'justification': "fail",
                 # 'start_time': "fail"
             }
-            if not args.disable_logs:
-                append_to_csv(
-                    log_csv,
-                    [file_name, prompt, "fail", "fail"]
-                )
+            # if not args.disable_logs:
+            #     append_to_csv(
+            #         log_csv,
+            #         [file_name, prompt, "fail", "fail"]
+            #     )
     return answer_dict
 # ================== Main function ==================
 
@@ -555,14 +555,14 @@ def main():
     for video_idx, file_name in enumerate(video_list):
         
         log_file = None
-        if not args.disable_logs:
-            log_file = inference_log_dir + f'/{file_name}---log.csv'
-            # Create log CSV with header if it doesn't exist
-            # log_header = ["file_name", "prompt", "answer", "justification", "start_time"]
-            log_header = ["file_name", "prompt", "answer", "justification"]
-            with open(log_file, 'w', newline='', encoding='utf-8') as f:
-                writer = csv.writer(f)
-                writer.writerow(log_header)
+        # if not args.disable_logs:
+        #     log_file = inference_log_dir + f'/{file_name}---log.csv'
+        #     # Create log CSV with header if it doesn't exist
+        #     # log_header = ["file_name", "prompt", "answer", "justification", "start_time"]
+        #     log_header = ["file_name", "prompt", "answer", "justification"]
+        #     with open(log_file, 'w', newline='', encoding='utf-8') as f:
+        #         writer = csv.writer(f)
+        #         writer.writerow(log_header)
             
         video_path = os.path.join(dataset_dir, file_name)
         row_to_write = [file_name]
@@ -626,26 +626,26 @@ if __name__ == "__main__":
     
     main()
     
-    print("\n" + "="*50)
-    print("USAGE EXAMPLES:")
-    print("="*50)
-    print("# Use default settings:")
-    print("python ExtractFeature_qwen-2.5-vl-new.py")
-    print()
-    print("# Use different GPU:")
-    print("python ExtractFeature_qwen-2.5-vl-new.py --gpu 0")
-    print()
-    print("# Process more videos:")
-    print("python ExtractFeature_qwen-2.5-vl-new.py --max_videos 20")
-    print()
-    print("# Use different dataset:")
-    print("python ExtractFeature_qwen-2.5-vl-new.py --dataset_dir /path/to/videos")
-    print()
-    print("# Use different model:")
-    print("python ExtractFeature_qwen-2.5-vl-new.py --model_name Qwen/Qwen2.5-VL-14B-Instruct")
-    print()
-    print("# Enable individual log files for each video:")
-    print("python ExtractFeature_qwen-2.5-vl-new.py --disable_logs false")
-    print()
-    print("# See all options:")
-    print("python ExtractFeature_qwen-2.5-vl-new.py --help")
+    # print("\n" + "="*50)
+    # print("USAGE EXAMPLES:")
+    # print("="*50)
+    # print("# Use default settings:")
+    # print("python ExtractFeature_qwen-2.5-vl-new.py")
+    # print()
+    # print("# Use different GPU:")
+    # print("python ExtractFeature_qwen-2.5-vl-new.py --gpu 0")
+    # print()
+    # print("# Process more videos:")
+    # print("python ExtractFeature_qwen-2.5-vl-new.py --max_videos 20")
+    # print()
+    # print("# Use different dataset:")
+    # print("python ExtractFeature_qwen-2.5-vl-new.py --dataset_dir /path/to/videos")
+    # print()
+    # print("# Use different model:")
+    # print("python ExtractFeature_qwen-2.5-vl-new.py --model_name Qwen/Qwen2.5-VL-14B-Instruct")
+    # print()
+    # print("# Enable individual log files for each video:")
+    # print("python ExtractFeature_qwen-2.5-vl-new.py --disable_logs false")
+    # print()
+    # print("# See all options:")
+    # print("python ExtractFeature_qwen-2.5-vl-new.py --help")

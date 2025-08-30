@@ -36,8 +36,8 @@ def parse_arguments():
                        help='Directory for output (default: ' + default_output_dir + ')')
     
     # Video range settings
-    # parser.add_argument('--videos_range', type=str, default='0,1',
-    #                    help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')
+    parser.add_argument('--videos_range', type=str, default='1-2314',
+                       help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')
     
     # # Logging settings
     # parser.add_argument('--disable_logs', type=lambda x: x.lower() in ('true', '1', 'yes'), default=True,
@@ -55,6 +55,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 ################################################################################################
 model_name = args.model_name
 dataset_dir = args.dataset_dir
+videos_range = args.videos_range
 
 # inference files
 inference_dir = args.output_dir
@@ -132,7 +133,7 @@ def clean_json_response(raw_response):
             return None
 
 # CSV file to read
-inf_result_csv_fp = inference_dir + f'/Task1_{model_name.split("/")[-1]}.csv' # Output CSV (with extracted features)
+inf_result_csv_fp = inference_dir + f'/Task1_{model_name.split("/")[-1]}_{videos_range}.csv' # Output CSV (with extracted features)
 # log_file = inference_log_dir + 'qwen_description_log.csv'      # Log file to record each prompt and answer
 
 
@@ -536,21 +537,21 @@ def main():
             writer.writerow(output_header)
     
     # make sure videos_range is valid
-    videos_range = args.videos_range.split(',')
+    videos_range = args.videos_range.split('-')
     videos_range = [int(videos_range[0]), int(videos_range[1])]
     if len(videos_range) != 2:
         raise ValueError("videos_range must be a comma-separated string of two numbers")
     if int(videos_range[0]) > int(videos_range[1]):
         raise ValueError("videos_range[0] must be less than videos_range[1]")
     if int(videos_range[0]) < 0:
-        videos_range[0] = 0
+        videos_range[0] = 1
         # add warning
         print(f"Warning: videos_range[0] is less than 0, set to 0")
     if int(videos_range[1]) > len(input_videos_files):
         videos_range[1] = len(input_videos_files)
         # add warning
         print(f"Warning: videos_range[1] is greater than the number of videos, set to {len(input_videos_files)}")
-    video_list = input_videos_files[videos_range[0] : videos_range[1]]
+    video_list = input_videos_files[(videos_range[0]-1) : (videos_range[1]-1)]
 
     for video_idx, file_name in enumerate(video_list):
         
@@ -607,9 +608,7 @@ def main():
         # Append to the output CSV (no header since it's already written)
         append_to_csv(inf_result_csv_fp, row_to_write)
 
-    if args.disable_logs:
-        print(f"Processing is complete. Results are in '{inf_result_csv_fp}'. Log files are disabled.")
-    else:
+
         print(f"Processing is complete. Results are in '{inf_result_csv_fp}', logs in '{log_file}'.")
 
 if __name__ == "__main__":
@@ -621,7 +620,7 @@ if __name__ == "__main__":
     print(f"Videos range: {args.videos_range}")
     print(f"Max frames: {MAX_FRAMES}")
     print(f"FPS: {FPS}")
-    print(f"Log files: {'Disabled' if args.disable_logs else 'Enabled'}")
+    #print(f"Log files: {'Disabled' if args.disable_logs else 'Enabled'}")
     print("-" * 50)
     
     main()

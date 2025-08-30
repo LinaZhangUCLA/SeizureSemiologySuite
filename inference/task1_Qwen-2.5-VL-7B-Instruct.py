@@ -551,7 +551,7 @@ def main():
         videos_range[1] = len(input_videos_files)
         # add warning
         print(f"Warning: videos_range[1] is greater than the number of videos, set to {len(input_videos_files)}")
-    video_list = input_videos_files[(videos_range[0]-1) : (videos_range[1]-1)]
+    video_list = input_videos_files[(videos_range[0]-1) : (videos_range[1])]
 
     for video_idx, file_name in enumerate(video_list):
         

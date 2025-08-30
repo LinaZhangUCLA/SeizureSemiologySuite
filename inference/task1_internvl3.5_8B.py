@@ -51,8 +51,8 @@ def parse_arguments():
     # Output settings
     parser.add_argument('--output_dir', type=str, default=None,
                         help='Output directory for results CSV and optional logs')
-    parser.add_argument('--max_videos', type=int, default=-1,
-                        help='Max number of videos to process; -1 for all')
+    # parser.add_argument('--max_videos', type=int, default=-1,
+    #                     help='Max number of videos to process; -1 for all')
 
     # Cache settings
     parser.add_argument('--cache_dir', type=str, default='./model_cache/',
@@ -63,6 +63,11 @@ def parse_arguments():
                         help='Max retries for a feature prompt on errors')
     parser.add_argument('--max_new_tokens', type=int, default=2048,
                         help='Max new tokens for generation')
+
+    # Video range settings
+    parser.add_argument('--videos_range', type=str, default='1-2314',
+                       help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')
+                        
 
     # Logging settings
     parser.add_argument('--disable_logs', type=lambda x: x.lower() in ('true', '1', 'yes'), default=True,
@@ -77,6 +82,7 @@ args = parse_arguments()
 
 # GPU visibility
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+videos_range = args.videos_range
 
 # Caches
 hf_cache_dir = os.path.join(args.cache_dir, 'huggingface')
@@ -99,7 +105,7 @@ if not args.disable_logs:
     os.makedirs(inference_log_dir, exist_ok=True)
 
 # Output CSV path follows Qwen naming
-inf_result_csv_fp = os.path.join(inference_dir, f'Task1_{model_name.split("/")[-1]}.csv')
+inf_result_csv_fp = os.path.join(inference_dir, f'Task1_{model_name.split("/")[-1]}_{videos_range}.csv')
 
 # --------------------------- Features ---------------------------
 
@@ -488,10 +494,29 @@ def main():
 
     # List dataset videos
     input_videos_files = sorted(list(set(os.listdir(dataset_dir))))
-    if args.max_videos == -1:
-        video_list = input_videos_files
-    else:
-        video_list = input_videos_files[:args.max_videos]
+    # if args.max_videos == -1:
+    #     video_list = input_videos_files
+    # else:
+    #     video_list = input_videos_files[:args.max_videos]
+
+        # make sure videos_range is valid
+    videos_range = args.videos_range.split('-')
+    videos_range = [int(videos_range[0]), int(videos_range[1])]
+    if len(videos_range) != 2:
+        raise ValueError("videos_range must be a comma-separated string of two numbers")
+    if int(videos_range[0]) > int(videos_range[1]):
+        raise ValueError("videos_range[0] must be less than videos_range[1]")
+    if int(videos_range[0]) < 0:
+        videos_range[0] = 1
+        # add warning
+        print(f"Warning: videos_range[0] is less than 0, set to 0")
+    if int(videos_range[1]) > len(input_videos_files):
+        videos_range[1] = len(input_videos_files)
+        # add warning
+        print(f"Warning: videos_range[1] is greater than the number of videos, set to {len(input_videos_files)}")
+    video_list = input_videos_files[(videos_range[0]-1) : (videos_range[1])]    
+
+
 
     # Iterate videos
     for video_idx, file_name in enumerate(video_list, start=1):
@@ -547,13 +572,14 @@ def main():
 
 if __name__ == "__main__":
     print("Starting seizure video feature extraction with InternVL3.5-8B (LMDeploy)...")
-    print(f"GPU: {args.gpu}")
-    print(f"Model: {args.model_name}")
-    print(f"Dataset: {args.dataset_dir}")
-    print(f"Output: {args.output_dir}")
-    print(f"Max videos: {args.max_videos}")
-    print(f"Max frames: {args.max_frames}")
-    print(f"Log files: {'Disabled' if args.disable_logs else 'Enabled'}")
+    print(args)
+    # print(f"GPU: {args.gpu}")
+    # print(f"Model: {args.model_name}")
+    # print(f"Dataset: {args.dataset_dir}")
+    # print(f"Output: {args.output_dir}")
+    # #print(f"Max frames: {args.max_frames}")
+    # print(f"videos_range: {args.videos_range}")
+    # print(f"Log files: {'Disabled' if args.disable_logs else 'Enabled'}")
     print("-" * 50)
     main()
 

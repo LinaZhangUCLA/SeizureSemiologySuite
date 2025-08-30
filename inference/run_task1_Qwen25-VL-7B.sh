@@ -4,8 +4,8 @@
 
 # Activate virtual environment
 eval "$(conda shell.bash hook)"
-# conda activate qwenvl
-conda activate qwen25
+conda activate qwenvl
+# conda activate qwen25
 
 # Check if activation was successful
 if [ $? -ne 0 ]; then
@@ -29,10 +29,6 @@ python task1_Qwen-2.5-VL-7B-Instruct.py \
     --videos_range 1-300 \
     --output_dir /home/hubing/SeizureSemiologyBench/output \
     --model_name Qwen/Qwen2.5-VL-7B-Instruct \
-<<<<<<< HEAD
     --dataset_dir /home/hubing/SeizureSemiologyBench/ucla  \
-=======
-    --dataset_dir /home/hubing/SeizureSemiologyBench/ucla \
->>>>>>> 22687240f1728ba11a147cd8cef874a2912a93e2
     --cache_dir /home/hubing/SeizureSemiologyBench/cache 
 echo "Done!"

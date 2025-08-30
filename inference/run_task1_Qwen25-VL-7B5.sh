@@ -4,8 +4,8 @@
 
 # Activate virtual environment
 eval "$(conda shell.bash hook)"
-# conda activate qwenvl
-conda activate qwen25
+conda activate qwenvl
+# conda activate qwen25
 
 # Check if activation was successful
 if [ $? -ne 0 ]; then

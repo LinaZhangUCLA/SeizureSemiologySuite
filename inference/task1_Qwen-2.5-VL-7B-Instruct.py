@@ -183,9 +183,12 @@ model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     model_name, 
     torch_dtype=torch.bfloat16, 
     attn_implementation="flash_attention_2",
+    device_map="auto"
+    
 )
 # Move model to GPU
-model = model.to('cuda')
+# model = model.to('cuda')
+
 
 # Load processor from the base model name, not the checkpoint
 processor = AutoProcessor.from_pretrained(model_name, cache_dir=hf_cache_dir)
@@ -451,7 +454,7 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                 print(prompt)
 
                 raw_answer = inference(video_path, prompt)
-                
+                print(raw_answer)
                 # Try direct JSON parsing first
                 try:
                     answer_json = json.loads(raw_answer)

@@ -22,10 +22,10 @@ echo "Conda environment qwenvl activated."
 # video_range 1-2314  eg.1-1000, 1001-2000, 2001-2314
 # Run the inference script
 python task1_Qwen-2.5-VL-7B-Instruct.py \
-    --gpu 2,3 \
-    --videos_range 1-1000 \
+    --gpu 4,5 \
+    --videos_range 1201-1800 \
     --output_dir /home/hubing/SeizureSemiologyBench/output \
     --model_name Qwen/Qwen2.5-VL-32B-Instruct \
-    --dataset_dir /home/hubing/SeizureSemiologyBench/ucla \
+    --dataset_dir /home/hubing/SeizureSemiologyBench/ucla  \
     --cache_dir /home/hubing/SeizureSemiologyBench/cache 
 echo "Done!"

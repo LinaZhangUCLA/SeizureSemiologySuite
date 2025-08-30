@@ -77,60 +77,62 @@ format_prompt_time = " Answer with 'yes' or 'no' and provide a justification for
 format_prompt_no_time = " Answer with 'yes' or 'no' and provide a justification for the answer. Respond with exactly one JSON object in the format {\"answer\": \"yes\" or \"no\", \"justification\": \"brief explanation\"} and do not include any extra text outside of the JSON."
 
 # Function to clean and fix malformed JSON responses
-def clean_json_response(raw_response):
-    """
-    Clean malformed JSON responses from the VLM.
-    Handles common issues like single quotes, extra text, etc.
-    """
+def _strip_fence(s: str) -> str:
+    s = s.strip()
+    if "```" not in s:
+        return s
+    parts = s.split("```")
+    # 取第一个代码块内容；若带语言标注（json/JSON），去掉那一行
+    for i in range(1, len(parts), 2):
+        block = parts[i].lstrip()
+        lines = block.splitlines()
+        if lines and lines[0].lower().strip() in {"json", "javascript", "js"}:
+            block = "\n".join(lines[1:])
+        return block
+    return s
+
+def _extract_first_balanced_braces(s: str) -> str | None:
+    in_str = False
+    esc = False
+    depth = 0
+    start = None
+    for i, ch in enumerate(s):
+        if ch == '"' and not esc:
+            in_str = not in_str
+        esc = (ch == "\\") and not esc
+        if in_str:
+            continue
+        if ch == "{":
+            if depth == 0:
+                start = i
+            depth += 1
+        elif ch == "}":
+            if depth > 0:
+                depth -= 1
+                if depth == 0 and start is not None:
+                    return s[start:i+1]
+    return None
+
+def clean_json_response(raw_response: str):
     if not raw_response:
         return None
-    
-    # Remove any leading/trailing whitespace
-    raw_response = raw_response.strip()
-    
-    # Try to find JSON content within the response
-    # Look for content between { and }
-    start_idx = raw_response.find('{')
-    end_idx = raw_response.rfind('}')
-    
-    if start_idx == -1 or end_idx == -1:
-        print(f"No JSON brackets found in response: {raw_response}")
+    s = _strip_fence(raw_response)
+    candidate = _extract_first_balanced_braces(s)
+    if not candidate:
         return None
-    
-    # Extract the JSON part
-    json_part = raw_response[start_idx:end_idx + 1]
-    
-    # Replace single quotes with double quotes
-    json_part = json_part.replace("'", '"')
-    
-    # Fix common JSON formatting issues
-    # Handle the case where the model might output "yes" or "no" literally
-    json_part = json_part.replace('"yes" or "no"', '"yes" or "no"')
-    
-    # Remove any trailing commas before closing braces
-    json_part = re.sub(r',(\s*})', r'\1', json_part)
-    
-    # Try to parse the cleaned JSON
     try:
-        parsed = json.loads(json_part)
-        print(f"Successfully cleaned and parsed JSON: {json_part}")
-        return parsed
-    except json.JSONDecodeError as e:
-        print(f"JSON cleaning failed: {e}")
-        print(f"Cleaned JSON part: {json_part}")
-        
-        # Try one more aggressive cleaning approach
-        try:
-            # Remove any non-ASCII characters that might cause issues
-            json_part = ''.join(char for char in json_part if ord(char) < 128)
-            # Try to fix common issues with quotes
-            json_part = re.sub(r'([{,])\s*([^"]\w+)\s*:', r'\1 "\2":', json_part)
-            parsed = json.loads(json_part)
-            print(f"Successfully parsed after aggressive cleaning: {json_part}")
-            return parsed
-        except json.JSONDecodeError as e2:
-            print(f"Even aggressive cleaning failed: {e2}")
-            return None
+        return json.loads(candidate)
+    except json.JSONDecodeError:
+        # 兜底：从首个 { 起用 raw_decode 试一次
+        dec = json.JSONDecoder()
+        i = candidate.find("{")
+        if i != -1:
+            try:
+                obj, _ = dec.raw_decode(candidate, i)
+                return obj
+            except json.JSONDecodeError:
+                pass
+        return None
 
 # CSV file to read
 inf_result_csv_fp = inference_dir + f'/Task1_{model_name.split("/")[-1]}_{videos_range}.csv' # Output CSV (with extracted features)
@@ -451,16 +453,16 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
         for retry_count in range(MAX_RETRIES):
             try:
                 video_path, frames, timestamps = get_video_frames(video_path, num_frames=MAX_FRAMES)
-                print(prompt)
+                # print(prompt)
 
                 raw_answer = inference(video_path, prompt)
-                print(raw_answer)
+                # print(raw_answer)
                 # Try direct JSON parsing first
                 try:
                     answer_json = json.loads(raw_answer)
                 except json.JSONDecodeError:
                     # If direct parsing fails, try cleaning the response
-                    print(f"Direct JSON parsing failed, attempting to clean response...")
+                    # print(f"Direct JSON parsing failed, attempting to clean response...")
                     answer_json = clean_json_response(raw_answer)
                     if answer_json is None:
                         raise ValueError("Failed to parse JSON even after cleaning")

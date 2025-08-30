@@ -5,7 +5,7 @@
 # Activate virtual environment
 eval "$(conda shell.bash hook)"
 # conda activate qwenvl
-conda activate qwen25
+conda activate internvl3_5
 
 # Check if activation was successful
 if [ $? -ne 0 ]; then
@@ -13,7 +13,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "Conda environment qwenvl activated."
+echo "Conda environment internvl3_5 activated."
 
 
 # model_name options
@@ -24,12 +24,13 @@ echo "Conda environment qwenvl activated."
 # video_range 1-2314  eg.1-1000, 1001-2000, 2001-2314
 
 # Run the inference script
-python task1_Qwen-2.5-VL-7B-Instruct.py \
-    --gpu 0 \
-    --videos_range 1-300 \
+python task1_internvl3.5_8B.py \
+    --gpu 1 \
+    --tp 1 \
+    --videos_range 1-2314 \
     --output_dir /home/hubing/SeizureSemiologyBench/output \
-    --model_name Qwen/Qwen2.5-VL-7B-Instruct \
-    --dataset_dir /home/hubing/SeizureSemiologyBench/ucla  \
+    --model_name OpenGVLab/InternVL3_5-8B \
+    --dataset_dir /mnt/SSD3/tengyou/seizure_videos/segments/all_dataset \
     --cache_dir /home/hubing/SeizureSemiologyBench/cache 
 
 echo "Done!"

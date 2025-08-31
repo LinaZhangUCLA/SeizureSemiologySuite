@@ -21,7 +21,7 @@ echo "Conda environment qwenvl activated."
 
 # video_range 1-2314  eg.1-1000, 1001-2000, 2001-2314
 # Run the inference script
-python task1_Qwen-2.5-VL-32B-Instruct.py \
+python ../task1_Qwen-2.5-VL-32B-Instruct.py \
     --gpu 2,3 \
     --videos_range 601-1200 \
     --output_dir /home/hubing/SeizureSemiologyBench/output \

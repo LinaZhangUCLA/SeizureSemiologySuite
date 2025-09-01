@@ -67,7 +67,7 @@ all_features = ['occur_during_sleep','blank_stare','close_eyes','eye_blinking',
             ]
 
 # CSV file to read
-inf_result_csv_fp = inference_dir + f'/Task3_{model_name.split("/")[-1]}_{videos_range}.csv'
+inf_result_csv_fp = inference_dir + f'/Task5_{model_name.split("/")[-1]}_{videos_range}.csv'
 
 # Common video resolutions for target_size parameter:
 # 1080p: (1920, 1080)
@@ -210,11 +210,55 @@ def parse_json(vlm_output):
         features = []
     return features
 
-def inference(model, video_path, system_prompt, query_prompt, max_new_tokens=None, max_pixels=602112, min_pixels=16 * 28 * 28):
+def format_time(raw_output, offset):
+    """
+    Convert raw time string 'MM:SS' to 'MM:SS' after adding offset (in seconds).
+    If raw_output == "N/A" or parsing fails, return "N/A".
+    """
+    raw_output = raw_output.strip()
+    if raw_output.upper() == "N/A":
+        return "N/A"
+    try:
+        minutes, seconds = map(int, raw_output.split(":"))
+        total_seconds = minutes * 60 + seconds + int(offset)
+
+        if total_seconds < 0:  # don't allow negative times
+            return "00:00"
+
+        minutes, seconds = divmod(total_seconds, 60)
+        return f"{minutes:02}:{seconds:02}"
+    except (ValueError, AttributeError):
+        raise ValueError(f"Invalid time format: {raw_output}")
+
+def get_duration(start_time, end_time):
+    """
+    Compute duration in seconds given start and end times in 'MM:SS' or 'N/A'.
+    Returns None if either time is 'N/A' or invalid.
+    """
+    def to_seconds(ts):
+        if ts == "N/A":
+            return None
+        try:
+            m, s = map(int, ts.split(":"))
+            return m * 60 + s
+        except ValueError:
+            return None
+
+    start_sec = to_seconds(start_time)
+    end_sec = to_seconds(end_time)
+
+    if start_sec is None or end_sec is None:
+        return None
+    if end_sec < start_sec:
+        return None  # guard against inverted times
+
+    return end_sec - start_sec
+
+def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=602112, min_pixels=16 * 28 * 28):
     if max_new_tokens is None:
         max_new_tokens = MAX_NEW_TOKENS
     messages = [
-        {"role": "system", "content": system_prompt},
+        # {"role": "system", "content": system_prompt},
         {"role": "user", "content": [
             {
                 "type": "video",
@@ -240,58 +284,13 @@ def inference(model, video_path, system_prompt, query_prompt, max_new_tokens=Non
     generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]
     output_text = processor.batch_decode(generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True)
 
-    output_list = parse_json(output_text[0])
+    output_text = output_text[0]
 
-    return output_list
-
-# ================== Paths and file names ==================
-
-import pandas as pd 
-def get_system_prompt():
-    system_prompt = '''
-        You are an assistant for analyzing seizure videos. 
-
-        You must use ONLY the following canonical feature names, each with its definition:
-
-        blank_stare: Does the patient exhibit a blank stare? 
-        arm_flexion: Does the patient flex their arms or arm at the elbows for at least a few video frames? 
-        arms_move_simultaneously: Do the patient's arms start moving approximately at the same time? 
-        occur_during_sleep: Is the patient sleeping at the beginning of the video?
-        close_eyes: Do the patient's eyes remain consistently closed or mostly closed throughout the video?
-        eye_blinking: Does the patient show rapid blinking of the eyes during the video?
-        tonic: The tonic phase is marked by a sudden onset of sustained stiffness or rigidity, usually lasting 5-20 seconds. This stiffness may be generalized, with all limbs held in fixed extension or flexion posture and can include stiffening of the head and axial body. It may also be focal involving a subset of body parts or just one body part at a time. Does this patient show tonic?
-        clonic: Clonic Phase: Rhythmic, jerking muscle contractions involving the limbs, face, and trunk. The jerking movements gradually slow before ceasing entirely. Clonic movements present as rhythmic, regular stereotyped contraction and relaxation of the affected body parts. Does this patient show clonic?
-        arm_straightening: Does the patient straighten or extend their arms or arm at the elbow for at least a few video frames?
-        figure4: Figure 4 refers to a tonic sustained posture where one arm is flexed while the other is extended at the same time. Does the patient exhibit a Figure 4 posture?
-        oral_automatisms: Does the patient exhibit repetitive, stereotyped mouth or tongue movements such as chewing, lip-smacking, or swallowing?
-        limb_automatisms: Does the patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting?
-        face_pulling: Does the patient exhibit unilateral sustained face-pulling movements?
-        face_twitching: Are there small muscle twitches observed on the patient's face?
-        head_turning: Does the patient forcibly or stiffly rotate their head to one side in the video?
-        asynchronous_movement: Do you observe the patient's limbs shake with variable frequency or amplitude with respect to one another?
-        pelvic_thrusting: Does the patient display repetitive, rhythmic, anteroposterior (forward-and-backward) movements of the hips?
-        full_body_shaking: Does the patient experience shaking of the entire body including arms, legs, torso?
-    
-        Rules:
-        - Always use the canonical feature names exactly as written above.
-        - Never invent new features or paraphrase.
-        - If a feature is absent, omit it.
-        - If uncertain, omit it.
-        - The output format must be a JSON array of feature names in order of their first appearance.
-        - If no features are present, return [].
-        - Example: ["blank_stare", "tonic", "clonic"]
-    '''
-        
-    return system_prompt
-
-def get_query_prompt():
-    return '''
-    Analyze this video and output ONLY a JSON array of canonical feature names (strings) that are present in the video, in the order of their first appearance. 
-    '''
+    return output_text
 
 # ================== Utility functions ==================
 
-def AskEventSequence(video_fn, video_clip_dir, all_features):
+def AskEventTime(video_fn, video_clip_dir):
     video_fn = video_fn.split('/')[-1].split('.mp4')[0]
 
     # get all clips
@@ -300,24 +299,26 @@ def AskEventSequence(video_fn, video_clip_dir, all_features):
         if video_fn in file and file.endswith('.mp4'):
             video_fp = os.path.join(video_clip_dir, file)
             video_clips.append(video_fp)
-    
-    all_seq_lists = []
-    for clip_fp in tqdm(video_clips, desc=f"Processing clips of video {video_fn}"):
-        clip_seq_list = inference(model, clip_fp, get_system_prompt(), get_query_prompt())
-        all_seq_lists.append(clip_seq_list)
 
-    # combine seq lists
-    global_seq_list = []
-    for seq_list in all_seq_lists:
-        for feature in seq_list:
-            if feature not in all_features:
-                continue
-            if feature not in global_seq_list:
-                global_seq_list.append(feature)
+    all_start_times = []
+    all_end_times = []
+    start_time_prompt = "Does the event start in this clip? If yes, give me the start timestamp in MM:SS, else return N/A."
+    end_time_prompt = "Does the event end in this clip? If yes, give me the end timestamp in MM:SS, else return N/A."
+    for idx, clip_fp in tqdm(enumerate(video_clips), total=len(video_clips), desc=f"Processing clips of video {video_fn}"):
+        temp_start_time = inference(model, clip_fp, start_time_prompt)
+        temp_end_time = inference(model, clip_fp, end_time_prompt)
+
+        time_offset = idx * 25
+        start_time = format_time(temp_start_time, time_offset)
+        end_time = format_time(temp_end_time, time_offset)
+
+        all_start_times.append(start_time)
+        all_end_times.append(end_time)
 
     # convert to a string
-    global_seq_str = '\"' + ', '.join(global_seq_list) + '\"'
-    return global_seq_str
+    global_start_time = min([t for t in all_start_times if t != "N/A"], default="N/A")
+    global_end_time = min([t for t in all_end_times if t != "N/A"], default="N/A")
+    return global_start_time, global_end_time
 
 # ================== Main function ==================
 
@@ -334,10 +335,10 @@ def main():
 
     if not os.path.exists(inf_result_csv_fp):
         with open(inf_result_csv_fp, 'w') as f:
-            f.write("video_name,event_sequence\n")
+            f.write("video_name,duration,start_time,end_time\n")
 
-    for idx, video_name in enumerate(input_videos_files):
-        print(f"Processing video {idx + 1}/{len(input_videos_files)}: {video_name}")
+    for video_name_idx, video_name in enumerate(input_videos_files):
+        print(f"Processing video {video_name_idx + 1}/{len(input_videos_files)}: {video_name}")
         # skip if already in the CSV
         with open(inf_result_csv_fp, 'r') as f:
             if video_name in f.read():
@@ -345,9 +346,10 @@ def main():
                 continue
 
         video_clip_dir = os.path.join(inference_dir, video_name.split('.mp4')[0])
-        video_event_seq_list = AskEventSequence(video_name, video_clip_dir, all_features)
+        start_time, end_time = AskEventTime(video_name, video_clip_dir)
+        duration = get_duration(start_time, end_time)
         with open(inf_result_csv_fp, 'a') as f:
-            f.write(f"{video_name},{video_event_seq_list}\n")
+            f.write(f"{video_name},{duration},{start_time},{end_time}\n")
     print(f"Processing is complete. Results are in '{inf_result_csv_fp}'.")
 
 if __name__ == "__main__":

@@ -394,22 +394,23 @@ def main():
 
     for video_clip_fp in input_clip_fps[videos_range[0]-1 : videos_range[1]]:
         # skip if already in the CSV
+        video_name = video_clip_fp.split('/')[-1]
         with open(inf_result_csv_fp, 'r') as f:
-            if video_clip_fp in f.read():
-                print(f"Video {video_clip_fp} already processed. Skipping.")
+            if video_name in f.read():
+                print(f"Video {video_name} already processed. Skipping.")
                 continue
 
         try:
             start_time, end_time = AskEventTime(video_clip_fp)
             duration = get_duration(start_time, end_time)
             with open(inf_result_csv_fp, 'a') as f:
-                f.write(f"{video_clip_fp},{duration},{start_time},{end_time}\n")
-            print(f"Successfully processed {video_clip_fp}: start={start_time}, end={end_time}, duration={duration}")
+                f.write(f"{video_name},{duration},{start_time},{end_time}\n")
+            print(f"Successfully processed {video_name}: start={start_time}, end={end_time}, duration={duration}")
         except Exception as e:
-            print(f"Error processing video {video_clip_fp}: {e}")
+            print(f"Error processing video {video_name}: {e}")
             # Write error entry to CSV
             with open(inf_result_csv_fp, 'a') as f:
-                f.write(f"{video_clip_fp},N/A,N/A,N/A\n")
+                f.write(f"{video_name},N/A,N/A,N/A\n")
             continue
     print(f"Processing is complete. Results are in '{inf_result_csv_fp}'.")
 

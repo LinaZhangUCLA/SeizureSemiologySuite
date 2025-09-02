@@ -5,29 +5,31 @@
 
 import os
 import json
+from torch.utils.data import dataset
 from tqdm import tqdm
 
 import argparse
 
-default_model_cache_dir = os.path.join(os.path.dirname(__file__), 'model_cache')
-default_output_dir = os.path.join(os.path.dirname(__file__), 'output')
-# default_model_cache_dir = '/mnt/SSD3/tengyou/model_cache'
-# default_output_dir = '/mnt/SSD3/tengyou/output'
+LOG = False
+# default_model_cache_dir = os.path.join(os.path.dirname(__file__), 'model_cache')
+# default_output_dir = os.path.join(os.path.dirname(__file__), 'output')
+default_model_cache_dir = '/mnt/SSD3/tengyou/model_cache'
+default_output_dir = '/mnt/SSD3/tengyou/output'
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Seizure Video Feature Extraction using Qwen2.5-VL')
     
     # GPU settings
     parser.add_argument('--gpu', type=str, default='0', 
-                       help='GPU device ID(s) to use (default: 3). Can be a single number or comma-separated numbers (e.g., 7 or 0,1,2)')
-    
+                       help='GPU device ID(s) to use (default: 0). Can be a single number or comma-separated numbers (e.g., 7 or 0,1,2)')
+
     # Model settings
     parser.add_argument('--model_name', type=str, default='Qwen/Qwen2.5-VL-7B-Instruct',
                        help='Model name to use (default: Qwen/Qwen2.5-VL-7B-Instruct)')
     
     # Data settings
     parser.add_argument('--dataset_dir', type=str, 
-                       default=None,
+                       default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset',
                        help='Directory containing seizure video files')
     # cache directory
     parser.add_argument('--cache_dir', type=str, default=default_model_cache_dir,
@@ -38,8 +40,8 @@ def parse_arguments():
                        help='Directory for output (default: ' + default_output_dir + ')')
     
     # Video range settings
-    parser.add_argument('--videos_range', type=str, default='0-4',
-                       help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')
+    parser.add_argument('--videos_range', type=str, default='1-2316',
+                       help='Range of videos to process (e.g., "1-100" for first 100 videos)')
    
     return parser.parse_args()
 
@@ -200,21 +202,10 @@ def create_image_grid(images, num_columns=8):
 
     return grid_image
 
-def parse_json(vlm_output):
-    # Parse the JSON output from the VLM
-    try:
-        features = json.loads(vlm_output)
-        assert isinstance(features, list)
-    except (json.JSONDecodeError, AssertionError):
-        print(f"Failed to parse JSON: {vlm_output}")
-        features = []
-    return features
-
-def inference(model, video_path, system_prompt, query_prompt, max_new_tokens=None, max_pixels=602112, min_pixels=16 * 28 * 28):
+def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=602112, min_pixels=16 * 28 * 28):
     if max_new_tokens is None:
         max_new_tokens = MAX_NEW_TOKENS
     messages = [
-        {"role": "system", "content": system_prompt},
         {"role": "user", "content": [
             {
                 "type": "video",
@@ -238,116 +229,120 @@ def inference(model, video_path, system_prompt, query_prompt, max_new_tokens=Non
 
     output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
     generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]
-    output_text = processor.batch_decode(generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True)
-
-    output_list = parse_json(output_text[0])
-
-    return output_list
+    raw_output = processor.batch_decode(generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True)
+    # print("output_text:", output_text)
+    # output_list = parse_json(output_text[0])
+    output_list = raw_output[0]
+    # print("output_list:", output_list)
+    # output_text = '\"' + ', '.join(output_list) + '\"'
+    output_text = '\"' + output_list + '\"'
+    return output_text
 
 # ================== Paths and file names ==================
 
 import pandas as pd 
-def get_system_prompt():
-    system_prompt = '''
-        You are an assistant for analyzing seizure videos. 
+# def get_system_prompt():
+#     system_prompt = '''
+#         You are an assistant for analyzing seizure videos. 
 
-        You must use ONLY the following canonical feature names, each with its definition:
+#         You must use ONLY the following canonical feature names, each with its definition:
 
-        blank_stare: Does the patient exhibit a blank stare? 
-        arm_flexion: Does the patient flex their arms or arm at the elbows for at least a few video frames? 
-        arms_move_simultaneously: Do the patient's arms start moving approximately at the same time? 
-        occur_during_sleep: Is the patient sleeping at the beginning of the video?
-        close_eyes: Do the patient's eyes remain consistently closed or mostly closed throughout the video?
-        eye_blinking: Does the patient show rapid blinking of the eyes during the video?
-        tonic: The tonic phase is marked by a sudden onset of sustained stiffness or rigidity, usually lasting 5-20 seconds. This stiffness may be generalized, with all limbs held in fixed extension or flexion posture and can include stiffening of the head and axial body. It may also be focal involving a subset of body parts or just one body part at a time. Does this patient show tonic?
-        clonic: Clonic Phase: Rhythmic, jerking muscle contractions involving the limbs, face, and trunk. The jerking movements gradually slow before ceasing entirely. Clonic movements present as rhythmic, regular stereotyped contraction and relaxation of the affected body parts. Does this patient show clonic?
-        arm_straightening: Does the patient straighten or extend their arms or arm at the elbow for at least a few video frames?
-        figure4: Figure 4 refers to a tonic sustained posture where one arm is flexed while the other is extended at the same time. Does the patient exhibit a Figure 4 posture?
-        oral_automatisms: Does the patient exhibit repetitive, stereotyped mouth or tongue movements such as chewing, lip-smacking, or swallowing?
-        limb_automatisms: Does the patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting?
-        face_pulling: Does the patient exhibit unilateral sustained face-pulling movements?
-        face_twitching: Are there small muscle twitches observed on the patient's face?
-        head_turning: Does the patient forcibly or stiffly rotate their head to one side in the video?
-        asynchronous_movement: Do you observe the patient's limbs shake with variable frequency or amplitude with respect to one another?
-        pelvic_thrusting: Does the patient display repetitive, rhythmic, anteroposterior (forward-and-backward) movements of the hips?
-        full_body_shaking: Does the patient experience shaking of the entire body including arms, legs, torso?
+#         blank_stare: Does the patient exhibit a blank stare? 
+#         arm_flexion: Does the patient flex their arms or arm at the elbows for at least a few video frames? 
+#         arms_move_simultaneously: Do the patient's arms start moving approximately at the same time? 
+#         occur_during_sleep: Is the patient sleeping at the beginning of the video?
+#         close_eyes: Do the patient's eyes remain consistently closed or mostly closed throughout the video?
+#         eye_blinking: Does the patient show rapid blinking of the eyes during the video?
+#         tonic: The tonic phase is marked by a sudden onset of sustained stiffness or rigidity, usually lasting 5-20 seconds. This stiffness may be generalized, with all limbs held in fixed extension or flexion posture and can include stiffening of the head and axial body. It may also be focal involving a subset of body parts or just one body part at a time. Does this patient show tonic?
+#         clonic: Clonic Phase: Rhythmic, jerking muscle contractions involving the limbs, face, and trunk. The jerking movements gradually slow before ceasing entirely. Clonic movements present as rhythmic, regular stereotyped contraction and relaxation of the affected body parts. Does this patient show clonic?
+#         arm_straightening: Does the patient straighten or extend their arms or arm at the elbow for at least a few video frames?
+#         figure4: Figure 4 refers to a tonic sustained posture where one arm is flexed while the other is extended at the same time. Does the patient exhibit a Figure 4 posture?
+#         oral_automatisms: Does the patient exhibit repetitive, stereotyped mouth or tongue movements such as chewing, lip-smacking, or swallowing?
+#         limb_automatisms: Does the patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting?
+#         face_pulling: Does the patient exhibit unilateral sustained face-pulling movements?
+#         face_twitching: Are there small muscle twitches observed on the patient's face?
+#         head_turning: Does the patient forcibly or stiffly rotate their head to one side in the video?
+#         asynchronous_movement: Do you observe the patient's limbs shake with variable frequency or amplitude with respect to one another?
+#         pelvic_thrusting: Does the patient display repetitive, rhythmic, anteroposterior (forward-and-backward) movements of the hips?
+#         full_body_shaking: Does the patient experience shaking of the entire body including arms, legs, torso?
     
-        Rules:
-        - Always use the canonical feature names exactly as written above.
-        - Never invent new features or paraphrase.
-        - If a feature is absent, omit it.
-        - If uncertain, omit it.
-        - The output format must be a JSON array of feature names in order of their first appearance.
-        - If no features are present, return [].
-        - Example: ["blank_stare", "tonic", "clonic"]
-    '''
+#         Rules:
+#         - Always use the canonical feature names exactly as written above.
+#         - Never invent new features or paraphrase.
+#         - The output format must be a JSON array of feature names in order of their first appearance.
+#         - If no features are present, return [].
+#         - Example: ["blank_stare", "tonic", "clonic"]
+#     '''
         
-    return system_prompt
+#     return system_prompt
 
 def get_query_prompt():
     return '''
-    Analyze this video and output ONLY a JSON array of canonical feature names (strings) that are present in the video, in the order of their first appearance. 
+    Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order. 
+    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously. 
+    If a symptom is not present in the video, it should not be included in the output.
+    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.
+    Output only the seizure symptoms. Do not include any other text. 
     '''
 
 # ================== Utility functions ==================
 
-def AskEventSequence(video_fn, video_clip_dir, all_features):
-    video_fn = video_fn.split('/')[-1].split('.mp4')[0]
+def AskEventSequence(video_clip_fp, log_file_fp):
+    if LOG:
+        if not os.path.exists(log_file_fp):
+            with open(log_file_fp, 'w') as f:
+                f.write("video_fp,event_sequence\n")
 
-    # get all clips
-    video_clips = []
-    for file in os.listdir(video_clip_dir):
-        if video_fn in file and file.endswith('.mp4'):
-            video_fp = os.path.join(video_clip_dir, file)
-            video_clips.append(video_fp)
-    
-    all_seq_lists = []
-    for clip_fp in tqdm(video_clips, desc=f"Processing clips of video {video_fn}"):
-        clip_seq_list = inference(model, clip_fp, get_system_prompt(), get_query_prompt())
-        all_seq_lists.append(clip_seq_list)
+    clip_seq_text = inference(model, video_clip_fp, get_query_prompt())
 
-    # combine seq lists
-    global_seq_list = []
-    for seq_list in all_seq_lists:
-        for feature in seq_list:
-            if feature not in all_features:
-                continue
-            if feature not in global_seq_list:
-                global_seq_list.append(feature)
+    if LOG:
+        with open(log_file_fp, 'a') as f:
+            f.write(f"{video_clip_fp},{clip_seq_text}\n")
 
-    # convert to a string
-    global_seq_str = '\"' + ', '.join(global_seq_list) + '\"'
-    return global_seq_str
+    return clip_seq_text
 
 # ================== Main function ==================
 
 def main():
     # List all files in the directory to check existence quickly
     input_clip_files = os.listdir(dataset_dir)
-
-    input_video_files = []
-    for file in input_clip_files:
-        video_fn = file.split('.mp4')[0]
-        video_fn = '_'.join(video_fn.split('_')[:-1])+'.mp4'
-        input_video_files.append(video_fn)
-    input_videos_files = list(set(input_video_files))
+    
+    # make sure videos_range is valid
+    videos_range = args.videos_range.split('-')
+    videos_range = [int(videos_range[0]), int(videos_range[1])]
+    if len(videos_range) != 2:
+        raise ValueError("videos_range must be a comma-separated string of two numbers")
+    if int(videos_range[0]) > int(videos_range[1]):
+        raise ValueError("videos_range[0] must be less than videos_range[1]")
+    if int(videos_range[0]) < 1:
+        videos_range[0] = 1
+        # add warning
+        print(f"Warning: videos_range[0] is less than 1, set to 1")
+    if int(videos_range[1]) > len(input_clip_files):
+        videos_range[1] = len(input_clip_files)
+        # add warning
+        print(f"Warning: videos_range[1] is greater than the number of videos, set to {len(input_clip_files)}")
 
     if not os.path.exists(inf_result_csv_fp):
         with open(inf_result_csv_fp, 'w') as f:
             f.write("video_name,event_sequence\n")
 
-    for idx, video_name in enumerate(input_videos_files):
-        print(f"Processing video {idx + 1}/{len(input_videos_files)}: {video_name}")
+    for video_clip_name in tqdm(input_clip_files[videos_range[0]-1 : videos_range[1]]):
         # skip if already in the CSV
         with open(inf_result_csv_fp, 'r') as f:
-            if video_name in f.read():
-                print(f"Video {video_name} already processed. Skipping.")
+            if video_clip_name in f.read():
+                print(f"Video {video_clip_name} already processed. Skipping.")
                 continue
-
-        video_clip_dir = os.path.join(inference_dir, video_name.split('.mp4')[0])
-        video_event_seq_list = AskEventSequence(video_name, video_clip_dir, all_features)
+        if LOG:
+            log_dir = os.path.join(inference_dir, 'log')
+            os.makedirs(log_dir, exist_ok=True)
+            log_file_fp = os.path.join(log_dir, f"{video_clip_name}.csv")
+        else:
+            log_file_fp = None
+        video_clip_fp = os.path.join(dataset_dir, video_clip_name)
+        video_event_seq_list = AskEventSequence(video_clip_fp, log_file_fp)
         with open(inf_result_csv_fp, 'a') as f:
-            f.write(f"{video_name},{video_event_seq_list}\n")
+            f.write(f"{video_clip_name},{video_event_seq_list}\n")
     print(f"Processing is complete. Results are in '{inf_result_csv_fp}'.")
 
 if __name__ == "__main__":

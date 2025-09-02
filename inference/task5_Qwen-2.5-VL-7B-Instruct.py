@@ -6,13 +6,13 @@
 import os
 import json
 from tqdm import tqdm
-
+import re
 import argparse
 
-default_model_cache_dir = os.path.join(os.path.dirname(__file__), 'model_cache')
-default_output_dir = os.path.join(os.path.dirname(__file__), 'output')
-# default_model_cache_dir = '/mnt/SSD3/tengyou/model_cache'
-# default_output_dir = '/mnt/SSD3/tengyou/output'
+# default_model_cache_dir = os.path.join(os.path.dirname(__file__), 'model_cache')
+# default_output_dir = os.path.join(os.path.dirname(__file__), 'output')
+default_model_cache_dir = '/mnt/SSD3/tengyou/model_cache'
+default_output_dir = '/mnt/SSD3/tengyou/output'
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Seizure Video Feature Extraction using Qwen2.5-VL')
@@ -27,7 +27,7 @@ def parse_arguments():
     
     # Data settings
     parser.add_argument('--dataset_dir', type=str, 
-                       default=None,
+                       default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset-backup',
                        help='Directory containing seizure video files')
     # cache directory
     parser.add_argument('--cache_dir', type=str, default=default_model_cache_dir,
@@ -38,7 +38,7 @@ def parse_arguments():
                        help='Directory for output (default: ' + default_output_dir + ')')
     
     # Video range settings
-    parser.add_argument('--videos_range', type=str, default='0-4',
+    parser.add_argument('--videos_range', type=str, default='1-5',
                        help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')
    
     return parser.parse_args()
@@ -175,8 +175,8 @@ def get_video_frames(video_file_path, num_frames=128, cache_dir=video_cache_dir)
     # Convert to numpy array and ensure uint8 format
     frames = selected_frames.numpy().astype(np.uint8)
     
-    # Calculate timestamps for selected frames
-    timestamps = np.array([idx / fps for idx in indices])
+    # Calculate timestamps for selected frames and round to nearest second
+    timestamps = np.array([round(idx / fps) for idx in indices])
 
     np.save(frames_cache_file, frames)
     np.save(timestamps_cache_file, timestamps)
@@ -203,32 +203,83 @@ def create_image_grid(images, num_columns=8):
 def parse_json(vlm_output):
     # Parse the JSON output from the VLM
     try:
-        features = json.loads(vlm_output)
-        assert isinstance(features, list)
-    except (json.JSONDecodeError, AssertionError):
+        # First try to extract JSON from the output if it's wrapped in text
+        json_match = re.search(r'\{.*\}', vlm_output, re.DOTALL)
+        if json_match:
+            json_str = json_match.group(0)
+            parsed = json.loads(json_str)
+        else:
+            # Try to parse the entire output as JSON
+            parsed = json.loads(vlm_output)
+        
+        # Check if it has the expected structure
+        if isinstance(parsed, dict) and 'start_time' in parsed and 'end_time' in parsed:
+            return parsed
+        else:
+            print(f"JSON parsed but missing required fields. Got: {parsed}")
+            return {'start_time': 'N/A', 'end_time': 'N/A'}
+            
+    except (json.JSONDecodeError, KeyError) as e:
         print(f"Failed to parse JSON: {vlm_output}")
-        features = []
-    return features
+        print(f"Error: {e}")
+        # Return default values if parsing fails
+        return {'start_time': 'N/A', 'end_time': 'N/A'}
 
 def format_time(raw_output, offset):
     """
-    Convert raw time string 'MM:SS' to 'MM:SS' after adding offset (in seconds).
+    Convert raw time string to 'MM:SS' after adding offset (in seconds).
     If raw_output == "N/A" or parsing fails, return "N/A".
+    Handles various response formats from the model.
+    Strips decimal places from seconds to ensure clean MM:SS format.
     """
     raw_output = raw_output.strip()
+    
+    # Check for N/A first
     if raw_output.upper() == "N/A":
         return "N/A"
+    
+    # Try to extract timestamp from various formats
+    timestamp = None
+    
+    # Pattern 1: Look for [MM:SS] format
+    bracket_match = re.search(r'\[(.*?)\]', raw_output)
+    if bracket_match:
+        timestamp = bracket_match.group(1)
+    
+    # Pattern 2: Look for MM:SS format directly (including potential decimal seconds)
+    if not timestamp:
+        time_match = re.search(r'(\d{1,2}:\d{2}(?:\.\d+)?)', raw_output)
+        if time_match:
+            timestamp = time_match.group(1)
+    
+    # Pattern 3: Look for "at MM:SS" or "MM:SS" in natural language (including potential decimal seconds)
+    if not timestamp:
+        time_match = re.search(r'at\s+(\d{1,2}:\d{2}(?:\.\d+)?)', raw_output, re.IGNORECASE)
+        if time_match:
+            timestamp = time_match.group(1)
+    
+    # If no timestamp found, return N/A
+    if not timestamp:
+        return "N/A"
+    
     try:
-        minutes, seconds = map(int, raw_output.split(":"))
+        # Split timestamp and handle potential decimal seconds
+        time_parts = timestamp.split(":")
+        minutes = int(time_parts[0])
+        # Remove decimal part from seconds if present
+        seconds = int(float(time_parts[1]))
+        
         total_seconds = minutes * 60 + seconds + int(offset)
 
         if total_seconds < 0:  # don't allow negative times
             return "00:00"
 
+        # Round to nearest second to avoid decimal places
+        total_seconds = round(total_seconds)
         minutes, seconds = divmod(total_seconds, 60)
         return f"{minutes:02}:{seconds:02}"
     except (ValueError, AttributeError):
-        raise ValueError(f"Invalid time format: {raw_output}")
+        return "N/A"
 
 def get_duration(start_time, end_time):
     """
@@ -237,20 +288,21 @@ def get_duration(start_time, end_time):
     """
     def to_seconds(ts):
         if ts == "N/A":
-            return None
+            return "N/A"
         try:
             m, s = map(int, ts.split(":"))
             return m * 60 + s
         except ValueError:
-            return None
+            print(f"Invalid time format: {ts}")
+            return "N/A"
 
     start_sec = to_seconds(start_time)
     end_sec = to_seconds(end_time)
 
-    if start_sec is None or end_sec is None:
-        return None
+    if start_sec == "N/A" or end_sec == "N/A":
+        return "N/A"
     if end_sec < start_sec:
-        return None  # guard against inverted times
+        return "N/A"  # guard against inverted times
 
     return end_sec - start_sec
 
@@ -283,73 +335,82 @@ def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=6
     output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
     generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]
     output_text = processor.batch_decode(generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True)
-
     output_text = output_text[0]
+    # print("raw output_text:", output_text)
 
     return output_text
 
 # ================== Utility functions ==================
 
-def AskEventTime(video_fn, video_clip_dir):
-    video_fn = video_fn.split('/')[-1].split('.mp4')[0]
+def AskEventTime(video_clip_fp):
+    duration_prompt = "This is a seizure clip. Provide the start time and end time of the seizure event if it is present in this video clip. If the seizure has already started at the beginning of the video, use \"N/A\" for the start time. If the seizure has not ended by the end of the video, use \"N/A\" for the end time. Please return the result in the following JSON format: { start_time: MM:SS or N/A, end_time: MM:SS or N/A }"
+    
+    
+    time_resp = inference(model, video_clip_fp, duration_prompt)
+    time_resp = parse_json(time_resp)
+    temp_start_time = time_resp['start_time']
+    temp_end_time = time_resp['end_time']
+    
+    segment_idx = int(video_clip_fp.split('_segment_')[-1].split('.mp4')[0])
+    
+    time_offset = segment_idx * 25
+    start_time = format_time(temp_start_time, time_offset)
+    end_time = format_time(temp_end_time, time_offset)
 
-    # get all clips
-    video_clips = []
-    for file in os.listdir(video_clip_dir):
-        if video_fn in file and file.endswith('.mp4'):
-            video_fp = os.path.join(video_clip_dir, file)
-            video_clips.append(video_fp)
 
-    all_start_times = []
-    all_end_times = []
-    start_time_prompt = "Does the event start in this clip? If yes, give me the start timestamp in MM:SS, else return N/A."
-    end_time_prompt = "Does the event end in this clip? If yes, give me the end timestamp in MM:SS, else return N/A."
-    for idx, clip_fp in tqdm(enumerate(video_clips), total=len(video_clips), desc=f"Processing clips of video {video_fn}"):
-        temp_start_time = inference(model, clip_fp, start_time_prompt)
-        temp_end_time = inference(model, clip_fp, end_time_prompt)
-
-        time_offset = idx * 25
-        start_time = format_time(temp_start_time, time_offset)
-        end_time = format_time(temp_end_time, time_offset)
-
-        all_start_times.append(start_time)
-        all_end_times.append(end_time)
-
-    # convert to a string
-    global_start_time = min([t for t in all_start_times if t != "N/A"], default="N/A")
-    global_end_time = min([t for t in all_end_times if t != "N/A"], default="N/A")
-    return global_start_time, global_end_time
+   
+    return start_time, end_time
 
 # ================== Main function ==================
 
 def main():
     # List all files in the directory to check existence quickly
-    input_clip_files = os.listdir(dataset_dir)
+    
 
-    input_video_files = []
-    for file in input_clip_files:
-        video_fn = file.split('.mp4')[0]
-        video_fn = '_'.join(video_fn.split('_')[:-1])+'.mp4'
-        input_video_files.append(video_fn)
-    input_videos_files = list(set(input_video_files))
+    input_clip_fps = []
+    for file in os.listdir(dataset_dir):
+        if file.endswith('.mp4'):
+            input_clip_fps.append(os.path.join(dataset_dir, file))
 
+    # make sure videos_range is valid
+    videos_range = args.videos_range.split('-')
+    videos_range = [int(videos_range[0]), int(videos_range[1])]
+    if len(videos_range) != 2:
+        raise ValueError("videos_range must be a comma-separated string of two numbers")
+    if int(videos_range[0]) > int(videos_range[1]):
+        raise ValueError("videos_range[0] must be less than videos_range[1]")
+    if int(videos_range[0]) < 1:
+        videos_range[0] = 1
+        # add warning
+        print(f"Warning: videos_range[0] is less than 1, set to 1")
+    if int(videos_range[1]) > len(input_clip_fps):
+        videos_range[1] = len(input_clip_fps)
+        # add warning
+        print(f"Warning: videos_range[1] is greater than the number of videos, set to {len(input_clip_fps)}")
+    
     if not os.path.exists(inf_result_csv_fp):
         with open(inf_result_csv_fp, 'w') as f:
             f.write("video_name,duration,start_time,end_time\n")
 
-    for video_name_idx, video_name in enumerate(input_videos_files):
-        print(f"Processing video {video_name_idx + 1}/{len(input_videos_files)}: {video_name}")
+    for video_clip_fp in input_clip_fps[videos_range[0]-1 : videos_range[1]]:
         # skip if already in the CSV
         with open(inf_result_csv_fp, 'r') as f:
-            if video_name in f.read():
-                print(f"Video {video_name} already processed. Skipping.")
+            if video_clip_fp in f.read():
+                print(f"Video {video_clip_fp} already processed. Skipping.")
                 continue
 
-        video_clip_dir = os.path.join(inference_dir, video_name.split('.mp4')[0])
-        start_time, end_time = AskEventTime(video_name, video_clip_dir)
-        duration = get_duration(start_time, end_time)
-        with open(inf_result_csv_fp, 'a') as f:
-            f.write(f"{video_name},{duration},{start_time},{end_time}\n")
+        try:
+            start_time, end_time = AskEventTime(video_clip_fp)
+            duration = get_duration(start_time, end_time)
+            with open(inf_result_csv_fp, 'a') as f:
+                f.write(f"{video_clip_fp},{duration},{start_time},{end_time}\n")
+            print(f"Successfully processed {video_clip_fp}: start={start_time}, end={end_time}, duration={duration}")
+        except Exception as e:
+            print(f"Error processing video {video_clip_fp}: {e}")
+            # Write error entry to CSV
+            with open(inf_result_csv_fp, 'a') as f:
+                f.write(f"{video_clip_fp},N/A,N/A,N/A\n")
+            continue
     print(f"Processing is complete. Results are in '{inf_result_csv_fp}'.")
 
 if __name__ == "__main__":

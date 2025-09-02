@@ -29,7 +29,7 @@ def parse_arguments():
     
     # Data settings
     parser.add_argument('--dataset_dir', type=str, 
-                       default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset',
+                       default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset-backup',
                        help='Directory containing seizure video files')
     # cache directory
     parser.add_argument('--cache_dir', type=str, default=default_model_cache_dir,
@@ -40,7 +40,7 @@ def parse_arguments():
                        help='Directory for output (default: ' + default_output_dir + ')')
     
     # Video range settings
-    parser.add_argument('--videos_range', type=str, default='1-2316',
+    parser.add_argument('--videos_range', type=str, default='1-5',
                        help='Range of videos to process (e.g., "1-100" for first 100 videos)')
    
     return parser.parse_args()
@@ -69,7 +69,7 @@ all_features = ['occur_during_sleep','blank_stare','close_eyes','eye_blinking',
             ]
 
 # CSV file to read
-inf_result_csv_fp = inference_dir + f'/Task3_{model_name.split("/")[-1]}_{videos_range}.csv'
+inf_result_csv_fp = inference_dir + f'/Task3+6_{model_name.split("/")[-1]}_{videos_range}.csv'
 
 # Common video resolutions for target_size parameter:
 # 1080p: (1920, 1080)
@@ -276,7 +276,7 @@ import pandas as pd
         
 #     return system_prompt
 
-def get_query_prompt():
+def get_task3_prompt():
     return '''
     Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order. 
     The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously. 
@@ -284,22 +284,35 @@ def get_query_prompt():
     Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.
     Output only the seizure symptoms. Do not include any other text. 
     '''
+    
+def get_task6_prompt():
+    return'''
+    Generate a detailed semiological report for this seizure video, and the symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, verbal_responsiveness, ictal_vocalization.
+    For example: The patient is sleeping in bed. He lets out a loud groan and has versive head turn to the right. He has right upper extremity extension with left upper extremity flexion, followed by tonic-clonic activity. Later, the patient is unable to remember events preceding this seizure.
+    Output the report in several sentences, plain language. Do not include other content. 
+    '''
 
 # ================== Utility functions ==================
 
-def AskEventSequence(video_clip_fp, log_file_fp):
+def AskFreeText(video_clip_fp, log_file_fp):
+    # task3 + task6 query
     if LOG:
         if not os.path.exists(log_file_fp):
             with open(log_file_fp, 'w') as f:
                 f.write("video_fp,event_sequence\n")
 
-    clip_seq_text = inference(model, video_clip_fp, get_query_prompt())
+    clip_seq_text = inference(model, video_clip_fp, get_task3_prompt())
+
+    clip_report_text = inference(model, video_clip_fp, get_task6_prompt())
 
     if LOG:
+        if not os.path.exists(log_file_fp):
+            with open(log_file_fp, 'w') as f:
+                f.write("video_fp,event_sequence,report\n")
         with open(log_file_fp, 'a') as f:
-            f.write(f"{video_clip_fp},{clip_seq_text}\n")
+            f.write(f"{video_clip_fp},{clip_seq_text},{clip_report_text}\n")
 
-    return clip_seq_text
+    return clip_seq_text, clip_report_text
 
 # ================== Main function ==================
 
@@ -323,12 +336,12 @@ def main():
         # add warning
         print(f"Warning: videos_range[1] is greater than the number of videos, set to {len(input_clip_files)}")
 
-    if not os.path.exists(inf_result_csv_fp):
-        with open(inf_result_csv_fp, 'w') as f:
-            f.write("video_name,event_sequence\n")
-
     for video_clip_name in tqdm(input_clip_files[videos_range[0]-1 : videos_range[1]]):
         # skip if already in the CSV
+        if not os.path.exists(inf_result_csv_fp):
+            with open(inf_result_csv_fp, 'w') as f:
+                f.write("video_name,event_sequence,report\n")
+                
         with open(inf_result_csv_fp, 'r') as f:
             if video_clip_name in f.read():
                 print(f"Video {video_clip_name} already processed. Skipping.")
@@ -340,9 +353,10 @@ def main():
         else:
             log_file_fp = None
         video_clip_fp = os.path.join(dataset_dir, video_clip_name)
-        video_event_seq_list = AskEventSequence(video_clip_fp, log_file_fp)
+        video_event_seq_list, clip_report_text = AskFreeText(video_clip_fp, log_file_fp)
+        
         with open(inf_result_csv_fp, 'a') as f:
-            f.write(f"{video_clip_name},{video_event_seq_list}\n")
+            f.write(f"{video_clip_name},{video_event_seq_list},{clip_report_text}\n")
     print(f"Processing is complete. Results are in '{inf_result_csv_fp}'.")
 
 if __name__ == "__main__":

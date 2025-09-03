@@ -26,20 +26,11 @@ def parse_arguments():
     # Model settings
     parser.add_argument('--model_name', type=str, default='Qwen/Qwen2.5-VL-7B-Instruct',
                        help='Model name to use (default: Qwen/Qwen2.5-VL-7B-Instruct)')
-    
-    # Data settings
-    parser.add_argument('--task3_6_dataset_dir', type=str, 
-                       default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset',
-                       help='Directory containing seizure video files')
-    parser.add_argument('--task4_HT_dataset_dir', type=str, 
-                       default='/mnt/SSD3/xinyi/benchmark/video_segment/clips_head_turning',
-                       help='Directory containing seizure video files')
-    parser.add_argument('--task4_AM_dataset_dir', type=str, 
-                       default='/mnt/SSD3/xinyi/benchmark/video_segment/clips_arm_movement',
-                       help='Directory containing seizure video files')
-    parser.add_argument('--task5_dataset_dir', type=str, 
-                       default='/mnt/SSD3/tengyou/benchmark_tasks/task5/segments',
-                    # default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset',
+
+
+      # Data settings
+    parser.add_argument('--dataset_dir', type=str, 
+                       default=None,
                        help='Directory containing seizure video files')
     # cache directory
     parser.add_argument('--cache_dir', type=str, default=default_model_cache_dir,
@@ -50,14 +41,40 @@ def parse_arguments():
                        help='Directory for output (default: ' + default_output_dir + ')')
     
     # Video range settings
-    parser.add_argument('--task3_6_videos_range', type=str, default='1-5',
-                       help='Range of videos to process (e.g., "1-100" for first 100 videos)')
-    parser.add_argument('--task4_HT_videos_range', type=str, default='1-5',
-                       help='Range of videos to process (e.g., "1-100" for first 100 videos)')
-    parser.add_argument('--task4_AM_videos_range', type=str, default='1-5',
-                       help='Range of videos to process (e.g., "1-100" for first 100 videos)')
-    parser.add_argument('--task5_videos_range', type=str, default='1-5',
-                       help='Range of videos to process (e.g., "1-100" for first 100 videos)')
+    parser.add_argument('--videos_range', type=str, default='1-2314',
+                       help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')                   
+    
+    # # Data settings
+    # parser.add_argument('--task3_6_dataset_dir', type=str, 
+    #                    default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset',
+    #                    help='Directory containing seizure video files')
+    # parser.add_argument('--task4_HT_dataset_dir', type=str, 
+    #                    default='/mnt/SSD3/xinyi/benchmark/video_segment/clips_head_turning',
+    #                    help='Directory containing seizure video files')
+    # parser.add_argument('--task4_AM_dataset_dir', type=str, 
+    #                    default='/mnt/SSD3/xinyi/benchmark/video_segment/clips_arm_movement',
+    #                    help='Directory containing seizure video files')
+    # parser.add_argument('--task5_dataset_dir', type=str, 
+    #                    default='/mnt/SSD3/tengyou/benchmark_tasks/task5/segments',
+    #                 # default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset',
+    #                    help='Directory containing seizure video files')
+    # # cache directory
+    # parser.add_argument('--cache_dir', type=str, default=default_model_cache_dir,
+    #                    help='Directory for model cache (default: ' + default_model_cache_dir + ')')
+    
+    # # Output directory
+    # parser.add_argument('--output_dir', type=str, default=default_output_dir,
+    #                    help='Directory for output (default: ' + default_output_dir + ')')
+    
+    # # Video range settings
+    # parser.add_argument('--task3_6_videos_range', type=str, default='1-5',
+    #                    help='Range of videos to process (e.g., "1-100" for first 100 videos)')
+    # parser.add_argument('--task4_HT_videos_range', type=str, default='1-5',
+    #                    help='Range of videos to process (e.g., "1-100" for first 100 videos)')
+    # parser.add_argument('--task4_AM_videos_range', type=str, default='1-5',
+    #                    help='Range of videos to process (e.g., "1-100" for first 100 videos)')
+    # parser.add_argument('--task5_videos_range', type=str, default='1-5',
+    #                    help='Range of videos to process (e.g., "1-100" for first 100 videos)')
     return parser.parse_args()
 
 # Parse command line arguments
@@ -69,15 +86,18 @@ os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 # Set the directories/paths from arguments
 ################################################################################################
 model_name = args.model_name
-task3_6_dataset_dir = args.task3_6_dataset_dir
-task4_HT_dataset_dir = args.task4_HT_dataset_dir
-task4_AM_dataset_dir = args.task4_AM_dataset_dir
-task5_dataset_dir = args.task5_dataset_dir
+task3_6_dataset_dir = os.path.join(args.dataset_dir, "task1_segments") 
+task4_HT_dataset_dir = os.path.join(args.dataset_dir, "task4_head_turning")
+task4_AM_dataset_dir = os.path.join(args.dataset_dir, "task4_arm_movement")
+task5_dataset_dir = os.path.join(args.dataset_dir, "task5_segment")
 
-task3_6_videos_range = (args.task3_6_videos_range).split('-')
-task4_HT_videos_range = args.task4_HT_videos_range.split('-')
-task4_AM_videos_range = args.task4_AM_videos_range.split('-')
-task5_videos_range = args.task5_videos_range.split('-')
+
+
+videos_range = (args.videos_range).split('-')
+task3_6_videos_range = (args.videos_range).split('-')
+task4_HT_videos_range = '1-130'.split('-')
+task4_AM_videos_range = '1-113'.split('-')
+task5_videos_range = (args.videos_range).split('-')
 
 # inference files
 inference_dir = args.output_dir
@@ -296,16 +316,21 @@ def get_task4_AM_prompt():
 def get_task4_L_prompt():
     return '''
     Localize which body part shows the earliest visible seizure sign.
-    Answer only with one of the following options: head, eyes, mouth, face, left arm, left leg, right arm, right leg, arms, or legs.
+    Answer only with one of the following options: head, eyes, mouth, face, left arm, left leg, right arm, right leg, arms,legs,full body.
     '''
     
 def get_task6_prompt():
-    return'''
-    Generate a detailed report for this seizure video, and the symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, verbal_responsiveness, ictal_vocalization.
-    Only focus on the patient. Do not include any description for the medical staff.
+    # return'''
+    # Generate a detailed report for this seizure video, and the symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, verbal_responsiveness, ictal_vocalization.
+    # Only focus on the patient. Do not include any description for the medical staff.
+    # For example: The patient is sleeping in bed. He lets out a loud groan and has versive head turn to the right. He has right upper extremity extension with left upper extremity flexion, followed by tonic-clonic activity. Later, the patient is unable to remember events preceding this seizure.
+    # Output the report in several sentences, plain language. Do not include other content. 
+    # '''
+    return """
+    Generate a detailed report for this seizure video, describing the patient's observable actions, signs, and overall condition. The report must focus exclusively on the patient; do not include any descriptions of medical staff.
     For example: The patient is sleeping in bed. He lets out a loud groan and has versive head turn to the right. He has right upper extremity extension with left upper extremity flexion, followed by tonic-clonic activity. Later, the patient is unable to remember events preceding this seizure.
-    Output the report in several sentences, plain language. Do not include other content. 
-    '''
+    Output the report as a cohesive paragraph in plain language. Do not include other content.
+    """
 
 # ================== Utility functions ==================
 
@@ -503,6 +528,8 @@ def validate_videos_range(clip_files:List[str], videos_range:List):
         videos_range[0] = 1
         # add warning
         print(f"Warning: videos_range[0] is less than 1, set to 1")
+    if int(videos_range[1]) > 2300:
+        videos_range[1] = len(clip_files)    
     if int(videos_range[1]) > len(clip_files):
         videos_range[1] = len(clip_files)
         # add warning
@@ -511,12 +538,18 @@ def validate_videos_range(clip_files:List[str], videos_range:List):
 
 def get_fp_list(file_dir):
     fp_list = []
-    for file in os.listdir(file_dir):
+
+    input_videos_files = os.listdir(file_dir)
+    input_videos_files = set(input_videos_files)
+    input_videos_files = sorted(input_videos_files)
+
+    for file in input_videos_files:
         if file.endswith('.mp4'):
             fp_list.append(os.path.join(file_dir, file))
     return fp_list
 
 def main():
+    global videos_range
     global task3_6_videos_range, task4_HT_videos_range, task4_AM_videos_range, task5_videos_range
     global task3_6_dataset_dir, task4_HT_dataset_dir, task4_AM_dataset_dir, task5_dataset_dir
     global task3_6_result_csv_fp, task4_HT_result_csv_fp, task4_AM_result_csv_fp, task4L_5_result_csv_fp
@@ -557,52 +590,55 @@ def main():
     
     # =============================================== task4 =============================================================== #
     # task4 part1
-    task4_HT_videos_range = validate_videos_range(task4_HT_clip_fps, task4_HT_videos_range)
-    for video_clip_fp in tqdm(task4_HT_clip_fps[task4_HT_videos_range[0]-1 : task4_HT_videos_range[1]], desc="Processing Task 4 HT"):
-        video_name = video_clip_fp.split('/')[-1]
-        if not os.path.exists(task4_HT_result_csv_fp):
-            with open(task4_HT_result_csv_fp, 'w') as f:
-                f.write("video_name,head_turning_direction\n")
-        with open(task4_HT_result_csv_fp, 'r') as f:
-            if video_name in f.read():
-                print(f"Video {video_name} already processed. Skipping.")
+    if int(videos_range[1]) > 2300:
+        task4_HT_videos_range = validate_videos_range(task4_HT_clip_fps, task4_HT_videos_range)
+        for video_clip_fp in tqdm(task4_HT_clip_fps[:], desc="Processing Task 4 HT"):
+            video_name = video_clip_fp.split('/')[-1]
+            if not os.path.exists(task4_HT_result_csv_fp):
+                with open(task4_HT_result_csv_fp, 'w') as f:
+                    f.write("video_name,head_turning_direction\n")
+            with open(task4_HT_result_csv_fp, 'r') as f:
+                if video_name in f.read():
+                    print(f"Video {video_name} already processed. Skipping.")
+                    continue
+            
+            try:
+                raise ValueError("Age must be between 0 and 120.")
+                HT_ans = query_task4(video_clip_fp, get_task4_HT_prompt())
+                HT_ans = normalize_direction_task4(HT_ans)
+                with open(task4_HT_result_csv_fp, 'a') as f:
+                    f.write(f"{video_name},{HT_ans}\n")
+            except Exception as e:
+                print(f"Error processing video {video_name} in Task 4 HT: {e}")
+                # Write error entry to CSV
+                with open(task4_HT_result_csv_fp, 'a') as f:
+                    f.write(f"{video_name},N/A\n")
                 continue
-        
-        try:
-            HT_ans = query_task4(video_clip_fp, get_task4_HT_prompt())
-            HT_ans = normalize_direction_task4(HT_ans)
-            with open(task4_HT_result_csv_fp, 'a') as f:
-                f.write(f"{video_name},{HT_ans}\n")
-        except Exception as e:
-            print(f"Error processing video {video_name} in Task 4 HT: {e}")
-            # Write error entry to CSV
-            with open(task4_HT_result_csv_fp, 'a') as f:
-                f.write(f"{video_name},N/A\n")
-            continue
     
-    # task4 part2
-    task_4_AM_video_range = validate_videos_range(task4_AM_clip_fps, task4_AM_videos_range)
-    for video_clip_fp in tqdm(task4_AM_clip_fps[task_4_AM_video_range[0]-1 : task_4_AM_video_range[1]], desc="Processing Task 4 AM"):
-        video_name = video_clip_fp.split('/')[-1]
-        if not os.path.exists(task4_AM_result_csv_fp):
-            with open(task4_AM_result_csv_fp, 'w') as f:
-                f.write("video_name,arm_movement_direction\n")
-        with open(task4_AM_result_csv_fp, 'r') as f:
-            if video_name in f.read():
-                print(f"Video {video_name} already processed. Skipping.")
+        # task4 part2
+        task_4_AM_video_range = validate_videos_range(task4_AM_clip_fps, task4_AM_videos_range)
+        for video_clip_fp in tqdm(task4_AM_clip_fps[:], desc="Processing Task 4 AM"):
+            video_name = video_clip_fp.split('/')[-1]
+            if not os.path.exists(task4_AM_result_csv_fp):
+                with open(task4_AM_result_csv_fp, 'w') as f:
+                    f.write("video_name,arm_movement_direction\n")
+            with open(task4_AM_result_csv_fp, 'r') as f:
+                if video_name in f.read():
+                    print(f"Video {video_name} already processed. Skipping.")
+                    continue
+            
+            try:
+                raise ValueError("Age must be between 0 and 120.")
+                AM_ans = query_task4(video_clip_fp, get_task4_AM_prompt())
+                AM_ans = normalize_direction_task4(AM_ans)
+                with open(task4_AM_result_csv_fp, 'a') as f:
+                    f.write(f"{video_name},{AM_ans}\n")
+            except Exception as e:
+                print(f"Error processing video {video_name} in Task 4 AM: {e}")
+                # Write error entry to CSV
+                with open(task4_AM_result_csv_fp, 'a') as f:
+                    f.write(f"{video_name},N/A\n")
                 continue
-        
-        try:
-            AM_ans = query_task4(video_clip_fp, get_task4_AM_prompt())
-            AM_ans = normalize_direction_task4(AM_ans)
-            with open(task4_AM_result_csv_fp, 'a') as f:
-                f.write(f"{video_name},{AM_ans}\n")
-        except Exception as e:
-            print(f"Error processing video {video_name} in Task 4 AM: {e}")
-            # Write error entry to CSV
-            with open(task4_AM_result_csv_fp, 'a') as f:
-                f.write(f"{video_name},N/A\n")
-            continue
     
 
     # =============================================== task5 =============================================================== #
@@ -639,15 +675,15 @@ if __name__ == "__main__":
     print(f"Starting seizure video feature extraction...")
     print(f"GPU: {args.gpu}")
     print(f"Model: {args.model_name}")
-    print(f"Task 3+6 dataset: {args.task3_6_dataset_dir}")
-    print(f"Task 4 HT dataset: {args.task4_HT_dataset_dir}")
-    print(f"Task 4 AM dataset: {args.task4_AM_dataset_dir}")
-    print(f"Task 5 dataset: {args.task5_dataset_dir}")
+    # print(f"Task 3+6 dataset: {args.task3_6_dataset_dir}")
+    # print(f"Task 4 HT dataset: {args.task4_HT_dataset_dir}")
+    # print(f"Task 4 AM dataset: {args.task4_AM_dataset_dir}")
+    # print(f"Task 5 dataset: {args.task5_dataset_dir}")
     print(f"Output: {inference_dir}")
-    print(f"Task 3+6 videos range: {args.task3_6_videos_range}")
-    print(f"Task 4 HT videos range: {args.task4_HT_videos_range}")
-    print(f"Task 4 AM videos range: {args.task4_AM_videos_range}")
-    print(f"Task 4L+5 videos range: {args.task5_videos_range}")
+    # print(f"Task 3+6 videos range: {args.task3_6_videos_range}")
+    # print(f"Task 4 HT videos range: {args.task4_HT_videos_range}")
+    # print(f"Task 4 AM videos range: {args.task4_AM_videos_range}")
+    # print(f"Task 4L+5 videos range: {args.task5_videos_range}")
     print(f"Max frames: {MAX_FRAMES}")
     print(f"FPS: {FPS}")
     print("-" * 50)

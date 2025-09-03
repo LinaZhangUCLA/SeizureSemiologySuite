@@ -38,8 +38,8 @@ def parse_arguments():
                        default='/mnt/SSD3/xinyi/benchmark/video_segment/clips_arm_movement',
                        help='Directory containing seizure video files')
     parser.add_argument('--task5_dataset_dir', type=str, 
-                    #    default='/mnt/SSD3/tengyou/benchmark_tasks/task5/segments/all_dataset',
-                    default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset',
+                       default='/mnt/SSD3/tengyou/benchmark_tasks/task5/segments',
+                    # default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset',
                        help='Directory containing seizure video files')
     # cache directory
     parser.add_argument('--cache_dir', type=str, default=default_model_cache_dir,

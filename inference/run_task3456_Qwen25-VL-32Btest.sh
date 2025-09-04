@@ -25,7 +25,7 @@ python task3456_Qwen-25-VL-7B-Instruct.py \
     --gpu 0,3 \
     --videos_range 2315-2316 \
     --output_dir /home/lina/SeizureSemiologyBench/output \
-    --model_name Qwen/Qwen2.5-VL-7B-Instruct \
+    --model_name Qwen/Qwen2.5-VL-32B-Instruct \
     --dataset_dir /mnt/SSD3/lina/ucla2 \
     --cache_dir /mnt/SSD3/lina/SeizureSemiologyBench/cache 
 echo "Done!"

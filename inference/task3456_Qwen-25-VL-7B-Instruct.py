@@ -95,8 +95,8 @@ task5_dataset_dir = os.path.join(args.dataset_dir, "task5_segment")
 
 videos_range = (args.videos_range).split('-')
 task3_6_videos_range = (args.videos_range).split('-')
-task4_HT_videos_range = '1-130'.split('-')
-task4_AM_videos_range = '1-113'.split('-')
+task4_HT_videos_range = '1-129'.split('-')
+task4_AM_videos_range = '1-112'.split('-')
 task5_videos_range = (args.videos_range).split('-')
 
 # inference files
@@ -603,7 +603,7 @@ def main():
                     continue
             
             try:
-                raise ValueError("Age must be between 0 and 120.")
+                
                 HT_ans = query_task4(video_clip_fp, get_task4_HT_prompt())
                 HT_ans = normalize_direction_task4(HT_ans)
                 with open(task4_HT_result_csv_fp, 'a') as f:
@@ -628,7 +628,7 @@ def main():
                     continue
             
             try:
-                raise ValueError("Age must be between 0 and 120.")
+                
                 AM_ans = query_task4(video_clip_fp, get_task4_AM_prompt())
                 AM_ans = normalize_direction_task4(AM_ans)
                 with open(task4_AM_result_csv_fp, 'a') as f:

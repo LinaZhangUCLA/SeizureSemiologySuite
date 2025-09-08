@@ -1,0 +1,244 @@
+video_name,start_time,end_time,onset_body_part
+O0009@8-8-2022@DA1322BE@sz_v1_1_segment_0.mp4,00:00,00:15,left arm
+O0009@8-8-2022@DA1322BE@sz_v1_1_segment_1.mp4,00:00,00:15,mouth
+O0009@8-8-2022@DA1322BE@sz_v1_1_segment_2.mp4,00:00,00:15,right arm
+O0009@8-8-2022@DA1322BE@sz_v1_1_segment_3.mp4,00:00,00:15,mouth
+O0009@8-8-2022@DA1322BE@sz_v1_1_segment_4.mp4,00:00,00:10,right arm
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_0.mp4,00:12,00:27,arms
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_1.mp4,00:00,00:29,left arm
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_2.mp4,00:00,00:05,left arm
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_3.mp4,00:00,00:15,left arm
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_4.mp4,00:00,00:15,left arm
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_5.mp4,00:00,00:10,arms
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_0.mp4,00:08,00:25,head
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_1.mp4,00:00,00:15,left arm
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_2.mp4,00:00,00:29,left arm
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_3.mp4,00:00,00:29,left arm
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_4.mp4,00:00,00:15,mouth
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_5.mp4,00:00,00:15,mouth
+O0011@2-27-2019@DA7022D0@sz_v1_1_segment_0.mp4,00:06,00:12,left arm
+O0011@2-27-2019@DA7022D0@sz_v1_1_segment_1.mp4,00:00,00:15,mouth
+O0011@2-27-2019@DA7022D0@sz_v1_1_segment_2.mp4,00:00,00:05,mouth
+R0001@10-17-2023@DA1324JS@sz_v1_1_segment_0.mp4,00:00,00:15,right arm
+R0001@10-17-2023@DA1324JS@sz_v1_1_segment_1.mp4,00:00,00:15,mouth
+R0001@10-17-2023@DA1324JS@sz_v1_1_segment_2.mp4,00:00,00:23,mouth
+R0001@10-17-2023@DA1324JS@sz_v1_1_segment_3.mp4,00:00,00:15,left arm
+R0001@10-17-2023@DA1324JS@sz_v1_1_segment_4.mp4,00:00,00:15,left arm
+R0001@10-17-2023@DA1324JS@sz_v1_1_segment_5.mp4,00:00,00:15,left arm
+R0001@10-17-2023@DA1324L8@sz_v1_1_segment_0.mp4,00:00,00:29,arms
+R0001@10-17-2023@DA1324L8@sz_v1_1_segment_1.mp4,00:00,00:29,head
+R0001@10-17-2023@DA1324L8@sz_v1_1_segment_2.mp4,00:00,00:15,left arm
+R0001@10-17-2023@DA1324L8@sz_v1_1_segment_3.mp4,00:00,00:12,left arm
+R0002@6-17-2021@DA0016G9@sz_v1_1_segment_0.mp4,00:00,00:15,mouth
+R0002@6-17-2021@DA0016G9@sz_v1_1_segment_1.mp4,00:00,00:00,arms
+R0002@6-17-2021@UA6693TA@sz_v1_1_segment_0.mp4,00:00,00:21,head
+R0002@6-17-2021@UA6693TB@sz_v1_1_segment_0.mp4,00:06,00:12,eyes
+R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4,00:00,00:29,left arm
+R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4,00:00,00:15,left arm
+R0002@6-17-2021@UA6693TB@sz_v1_1_segment_3.mp4,00:00,00:15,left arm
+R0002@6-17-2021@UA6693TC@sz_v1_1_segment_0.mp4,00:00,00:15,mouth
+R0002@6-17-2021@UA6693TC@sz_v2_1_segment_0.mp4,00:07,00:17,eyes
+R0002@9-3-2023@AA16128K@sz_v1_1_segment_0.mp4,00:00,00:15,head
+R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4,00:00,00:12,head
+R0002@9-3-2023@DA9601MS@sz_v1_1_segment_0.mp4,00:00,00:15,head
+R0002@9-3-2023@DA9601MS@sz_v1_1_segment_1.mp4,00:00,00:10,head
+R0002@9-3-2023@DA9601MT@multiple_sz1_1_segment_0.mp4,00:00,00:15,eyes
+R0002@9-3-2023@DA9601MT@multiple_sz1_1_segment_1.mp4,00:00,00:15,right arm
+R0002@9-3-2023@DA9601MT@multiple_sz1_3_segment_0.mp4,00:00,00:15,head
+R0002@9-3-2023@DA9601MT@multiple_sz1_3_segment_1.mp4,00:00,00:15,arms
+R0002@9-3-2023@DA9601MT@multiple_sz1_3_segment_2.mp4,00:00,00:05,arms
+R0002@9-3-2023@DA9601MV@sz_v3_1_segment_0.mp4,00:00,00:15,eyes
+R0002@9-3-2023@DA9601MV@sz_v3_1_segment_1.mp4,00:00,00:00,head
+R0004@5-20-2021@DA0016B4@nes_v1_1_segment_0.mp4,00:00,00:15,mouth
+R0004@5-20-2021@DA0016B4@nes_v1_1_segment_1.mp4,00:00,00:15,mouth
+R0004@5-20-2021@DA0016B4@nes_v1_1_segment_2.mp4,00:00,00:15,left arm
+R0004@5-20-2021@DA0016B4@nes_v1_1_segment_3.mp4,00:00,00:05,left arm
+R0004@5-20-2021@DA0016BK@nes_v4_1_segment_0.mp4,00:12,00:24,head
+R0004@5-20-2021@DA0016BK@nes_v4_1_segment_1.mp4,00:00,00:10,head
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_0.mp4,00:00,00:15,mouth
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_1.mp4,N/A,N/A,mouth
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_10.mp4,00:00,00:00,mouth
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_2.mp4,00:00,00:15,mouth
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_3.mp4,00:00,00:15,mouth
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_4.mp4,00:12,00:27,eyes
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_5.mp4,00:00,00:15,mouth
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_6.mp4,00:00,00:15,mouth
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_7.mp4,00:00,00:15,mouth
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_8.mp4,00:00,00:15,mouth
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_9.mp4,00:00,00:15,mouth
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_0.mp4,00:00,00:15,mouth
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_1.mp4,00:00,00:15,eyes
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_10.mp4,00:00,00:15,mouth
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_11.mp4,00:00,00:15,mouth
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_12.mp4,00:00,00:15,mouth
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_13.mp4,00:00,00:15,eyes
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_14.mp4,00:00,00:23,eyes
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_15.mp4,00:00,00:15,mouth
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_16.mp4,00:00,00:00,eyes
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_17.mp4,00:00,00:15,eyes
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_18.mp4,00:00,00:15,eyes
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_19.mp4,00:00,00:29,face
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_2.mp4,00:00,00:29,face
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_20.mp4,00:00,00:15,eyes
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_21.mp4,00:00,00:15,mouth
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_3.mp4,00:06,00:12,head
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_4.mp4,00:00,00:15,right arm
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_5.mp4,00:00,00:15,left arm
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_6.mp4,00:00,00:15,arms
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_7.mp4,00:00,00:15,head
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_8.mp4,00:00,00:15,head
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_9.mp4,00:00,00:15,mouth
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_0.mp4,00:00,00:15,head
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_1.mp4,00:00,00:15,head
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_10.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_11.mp4,00:00,00:15,arms
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_12.mp4,00:00,00:15,right arm
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_13.mp4,00:00,00:15,mouth
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_14.mp4,00:00,00:15,right arm
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_15.mp4,00:00,00:15,arms
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_16.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_17.mp4,00:00,00:15,arms
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_18.mp4,00:00,00:15,arms
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_19.mp4,00:00,00:15,mouth
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_2.mp4,00:00,00:15,head
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_20.mp4,00:00,00:15,arms
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_21.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_22.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_23.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_24.mp4,00:00,00:15,eyes
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4,00:00,00:15,eyes
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4,00:00,00:15,eyes
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4,00:00,00:15,head
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_0.mp4,00:00,00:30,arms
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4,00:00,00:30,left arm
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_3.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_4.mp4,00:00,00:29,left arm
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_5.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_6.mp4,00:00,00:30,left arm
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_7.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_8.mp4,00:00,00:15,head
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_9.mp4,00:00,00:08,left arm
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_0.mp4,00:00,00:15,head
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_1.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_10.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_11.mp4,00:00,00:15,mouth
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_12.mp4,00:00,00:08,mouth
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_2.mp4,00:00,00:15,right arm
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_3.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_4.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_5.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_6.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_7.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_8.mp4,00:00,00:15,left arm
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_9.mp4,00:00,00:15,left arm
+R0009@8-12-2013@FA16402H@sz_v2_1_segment_0.mp4,00:06,00:21,left arm
+R0009@8-12-2013@FA16402H@sz_v2_1_segment_1.mp4,00:00,00:29,left arm
+R0009@8-12-2013@FA16402H@sz_v2_1_segment_2.mp4,00:00,00:29,mouth
+R0009@8-12-2013@FA16402H@sz_v2_1_segment_3.mp4,00:00,00:05,head
+R0009@8-12-2013@FA16402H@sz_v3_1_segment_0.mp4,00:05,00:20,left arm
+R0009@8-12-2013@FA16402H@sz_v3_1_segment_1.mp4,00:00,00:29,head
+R0009@8-12-2013@FA16402H@sz_v3_1_segment_2.mp4,00:00,00:05,head
+R0009@8-12-2013@FA16402M@sz_v3_1_segment_0.mp4,00:12,00:22,left arm
+R0009@8-12-2013@FA16402M@sz_v3_1_segment_1.mp4,00:00,00:10,left arm
+R0009@8-12-2013@FA16402M@sz_v4_1_segment_0.mp4,00:06,00:18,left arm
+R0009@8-12-2013@FA16402M@sz_v4_1_segment_1.mp4,00:00,00:15,left arm
+R0009@8-12-2013@FA16402M@sz_v4_1_segment_2.mp4,00:00,00:15,mouth
+R0009@8-12-2013@FA16402M@sz_v4_1_segment_3.mp4,00:00,00:00,left arm
+R0010@3-23-2015@VA7632JF@sz_v1_1_segment_0.mp4,00:00,00:15,mouth
+R0010@3-23-2015@VA7632JF@sz_v1_1_segment_1.mp4,00:00,00:29,mouth
+R0010@3-23-2015@VA7632JF@sz_v1_1_segment_2.mp4,00:00,00:10,head
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_0.mp4,00:00,00:15,head
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_1.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_10.mp4,00:00,00:15,face
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_11.mp4,00:00,00:15,face
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_12.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_13.mp4,00:00,00:15,right arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_14.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_15.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_16.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_17.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_18.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_19.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_2.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_20.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_21.mp4,00:00,00:15,face
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_22.mp4,00:00,00:15,head
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_23.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_24.mp4,00:00,00:08,head
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_3.mp4,00:00,00:15,head
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_4.mp4,00:00,00:15,right arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_5.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_6.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_7.mp4,00:00,00:15,face
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_8.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_9.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157U@nes_v2_1_segment_0.mp4,00:08,00:13,head
+R0011@9-22-2020@DA00157U@nes_v2_1_segment_1.mp4,00:15,00:30,left arm
+R0011@9-22-2020@DA00157U@nes_v2_1_segment_2.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA00157U@nes_v2_1_segment_3.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA00157U@nes_v2_1_segment_4.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_0.mp4,00:05,00:15,left arm
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_1.mp4,N/A,N/A,mouth
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_2.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_3.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_4.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_5.mp4,00:00,00:15,left arm
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_6.mp4,00:00,00:15,eyes
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_7.mp4,00:00,00:15,eyes
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_8.mp4,00:00,00:08,mouth
+R0011@9-22-2020@DA00157W@nes_v1_1_segment_0.mp4,N/A,N/A,mouth
+R0011@9-22-2020@DA00157W@nes_v1_1_segment_1.mp4,N/A,N/A,eyes
+R0011@9-22-2020@DA00157W@nes_v1_1_segment_2.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA00157W@nes_v1_1_segment_3.mp4,00:00,00:15,head
+R0011@9-22-2020@DA00157W@nes_v1_1_segment_4.mp4,00:00,00:15,face
+R0011@9-22-2020@DA001583@nes_v1_1_segment_0.mp4,00:00,00:29,left arm
+R0011@9-22-2020@DA001583@nes_v1_1_segment_1.mp4,00:00,00:29,left arm
+R0011@9-22-2020@DA001583@nes_v1_1_segment_2.mp4,00:00,00:15,face
+R0011@9-22-2020@DA001583@nes_v1_1_segment_3.mp4,00:00,00:08,face
+R0011@9-22-2020@DA001584@nes_v1_1_segment_0.mp4,00:00,00:20,mouth
+R0011@9-22-2020@DA001584@nes_v1_1_segment_1.mp4,00:00,00:15,eyes
+R0011@9-22-2020@DA001584@nes_v1_1_segment_2.mp4,00:00,00:05,head
+R0011@9-22-2020@DA001584@nes_v1_2_segment_0.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA001584@nes_v1_2_segment_1.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA001584@nes_v1_3_segment_0.mp4,00:00,00:15,eyes
+R0011@9-22-2020@DA001584@nes_v1_3_segment_1.mp4,00:00,00:15,face
+R0011@9-22-2020@DA001584@nes_v1_4_segment_0.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA001584@nes_v1_4_segment_1.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA001584@nes_v1_4_segment_2.mp4,00:00,00:05,mouth
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_0.mp4,00:12,00:27,arms
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_1.mp4,00:00,00:25,head
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_10.mp4,00:00,00:15,face
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_11.mp4,00:00,00:10,mouth
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_2.mp4,00:00,00:15,right arm
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_3.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_4.mp4,00:00,00:15,right arm
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_5.mp4,N/A,N/A,face
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_6.mp4,00:06,00:12,head
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_7.mp4,00:00,00:15,face
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_8.mp4,00:00,00:15,mouth
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_9.mp4,00:00,00:15,eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_0.mp4,N/A,N/A,eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_1.mp4,N/A,N/A,eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_10.mp4,00:00,00:15,mouth
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_11.mp4,00:00,00:15,eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_12.mp4,00:00,00:15,mouth
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_13.mp4,00:00,00:15,arms
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_14.mp4,00:00,00:15,left arm
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_15.mp4,00:00,00:15,arms
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_16.mp4,00:00,00:15,arms
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_17.mp4,00:00,00:00,arms
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_2.mp4,N/A,N/A,eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_3.mp4,N/A,N/A,eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_4.mp4,N/A,N/A,eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_5.mp4,N/A,N/A,eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_6.mp4,00:00,00:15,eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_7.mp4,N/A,N/A,eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_8.mp4,00:00,00:15,eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_9.mp4,N/A,N/A,face
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_0.mp4,00:00,00:15,mouth
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_1.mp4,00:00,00:15,mouth

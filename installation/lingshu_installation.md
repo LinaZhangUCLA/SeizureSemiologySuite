@@ -1,6 +1,15 @@
 ## Environment Installation (for Lingshu + Qwen2.5-VL)
 
 ```bash
+# If you already have the qwenvl conda environment, follow these steps to save time.
+conda create --name lingshu  --clone qwen25
+conda activate lingshu 
+conda install -c conda-forge ffmpeg -y 
+pip install ffmpeg-python
+```
+
+
+```bash
 # 1. Create new conda env
 conda create -n lingshu python=3.10 -y
 conda activate lingshu

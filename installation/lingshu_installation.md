@@ -12,7 +12,7 @@ pip install ffmpeg-python
 # 3. Install PyTorch + key dependencies
 # (try cu124 first; if not working on your server, switch cu124 → cu121)
 pip install torch torchvision torchaudio   transformers==4.51.3 accelerate qwen-vl-utils pandas peft tqdm numpy scipy   --extra-index-url https://download.pytorch.org/whl/cu124
-
+pip install -U peft
 # 4. Install FlashAttention (force rebuild, safest)
 pip install --upgrade setuptools wheel
 pip uninstall -y flash-attn || true

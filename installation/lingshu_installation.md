@@ -8,7 +8,6 @@ conda install -c conda-forge ffmpeg -y
 pip install ffmpeg-python
 ```
 
-
 ```bash
 # 1. Create new conda env
 conda create -n lingshu python=3.10 -y

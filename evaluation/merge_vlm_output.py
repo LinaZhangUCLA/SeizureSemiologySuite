@@ -117,18 +117,51 @@ def mergecsv(task_name: str, model: str,subtask:str=None):
 
 if __name__ == "__main__":
     
-    model = 'Qwen2.5-VL-7B-Instruct'
+    # model = 'Qwen2.5-VL-7B-Instruct'
+    # task_name = 'Task1'
+    # mergecsv(task_name, model)      
+    # task_name = 'Task3_6'
+    # subtask = 'Task3'
+    # mergecsv(task_name, model,subtask)
+    # subtask = 'Task6'
+    # mergecsv(task_name, model,subtask)
+    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv", BASE_DIR + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
+    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv", BASE_DIR + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
+    # task_name = 'Task4L_5'
+    # subtask = 'Task4L'
+    # mergecsv(task_name, model,subtask)
+    # subtask = 'Task5'
+    # mergecsv(task_name, model,subtask)
+
+    # model = 'InternVL3_5-8B'
+    # task_name = 'Task1'
+    # mergecsv(task_name, model)      
+    # task_name = 'Task3_6'
+    # subtask = 'Task3'
+    # mergecsv(task_name, model,subtask)
+    # subtask = 'Task6'
+    # mergecsv(task_name, model,subtask)
+    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv", BASE_DIR + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
+    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv", BASE_DIR + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
+    # task_name = 'Task4L_5'
+    # subtask = 'Task4L'
+    # mergecsv(task_name, model,subtask)
+    # subtask = 'Task5'
+    # mergecsv(task_name, model,subtask)
+
+
+    model = 'Qwen2.5-VL-32B-Instruct'
     task_name = 'Task1'
     mergecsv(task_name, model)      
-    task_name = 'Task3_6'
-    subtask = 'Task3'
-    mergecsv(task_name, model,subtask)
-    subtask = 'Task6'
-    mergecsv(task_name, model,subtask)
-    shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv", BASE_DIR + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
-    shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv", BASE_DIR + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
-    task_name = 'Task4L_5'
-    subtask = 'Task4L'
-    mergecsv(task_name, model,subtask)
-    subtask = 'Task5'
-    mergecsv(task_name, model,subtask)
+    # task_name = 'Task3_6'
+    # subtask = 'Task3'
+    # mergecsv(task_name, model,subtask)
+    # subtask = 'Task6'
+    # mergecsv(task_name, model,subtask)
+    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv", BASE_DIR + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
+    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv", BASE_DIR + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
+    # task_name = 'Task4L_5'
+    # subtask = 'Task4L'
+    # mergecsv(task_name, model,subtask)
+    # subtask = 'Task5'
+    # mergecsv(task_name, model,subtask)

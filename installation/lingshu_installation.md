@@ -2,7 +2,7 @@
 
 ```bash
 # If you already have the qwenvl conda environment, follow these steps to save time.
-conda create --name lingshu  --clone qwen25
+conda create --name lingshu  --clone qwenvl
 conda activate lingshu 
 conda install -c conda-forge ffmpeg -y 
 pip install ffmpeg-python

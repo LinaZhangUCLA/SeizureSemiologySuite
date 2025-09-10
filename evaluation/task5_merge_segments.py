@@ -51,6 +51,8 @@ def merge_segments(input_csv_path, output_csv_path):
         
         # Get start time from first segment (segment_0)
         start_time = segments[0]['start_time']
+        if pd.isna(start_time) or start_time == '':
+            start_time = '00:00'
         
         # Get the last segment number and its end time
         last_segment = segments[-1]

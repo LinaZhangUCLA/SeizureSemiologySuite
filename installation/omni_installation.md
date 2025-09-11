@@ -18,7 +18,6 @@ pip install decord==0.6.0 opencv-python ffmpeg-python pydub "librosa>=0.10,<0.11
 
 pip install -U pandas tqdm requests numpy
 
-pip install -U "accelerate>=0.34,<1"
 pip install -U qwen-omni-utils
 
 

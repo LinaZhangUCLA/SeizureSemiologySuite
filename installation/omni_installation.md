@@ -11,7 +11,6 @@ pip install --upgrade pip
 
 pip install --extra-index-url https://download.pytorch.org/whl/cu121 torch torchvision torchaudio
 
-pip install -U "transformers==4.43.3" "huggingface-hub>=0.23.0" safetensors Pillow
 
 
 pip install decord==0.6.0 opencv-python ffmpeg-python pydub "librosa>=0.10,<0.11"

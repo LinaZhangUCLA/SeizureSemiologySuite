@@ -23,8 +23,8 @@ pip install -U "accelerate>=0.34,<1"
 pip install -U qwen-omni-utils
 
 
-pip uninstall -y transformers
-pip install -U "git+https://github.com/huggingface/transformers@v4.51.3-Qwen2.5-Omni-preview"
+pip install -U "transformers>=4.50,<5" "accelerate>=0.34,<1" "huggingface-hub>=0.23" pillow
+pip install -U qwen-omni-utils
 pip install -U qwen-vl-utils peft
 ```
 

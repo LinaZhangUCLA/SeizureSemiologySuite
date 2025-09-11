@@ -26,7 +26,7 @@ default_model_cache_dir = '/mnt/SSD3/tengyou/model_cache'
 default_output_dir = '/mnt/SSD3/tengyou/output'
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description='Seizure Video Feature Extraction using Qwen2.5-VL')
+    parser = argparse.ArgumentParser(description='Seizure Video Feature Extraction using Lingshu-32B')
 
     # GPU settings
     parser.add_argument('--gpu', type=str, default='3',

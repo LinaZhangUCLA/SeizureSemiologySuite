@@ -493,10 +493,10 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
             raw_answer = ""  # 防止异常时未定义
             try:
                 video_path, frames, timestamps = get_video_frames(video_path, num_frames=MAX_FRAMES)
-                print(prompt)
+                #print(prompt)
 
                 raw_answer = inference(video_path, prompt)
-                print(raw_answer)
+                #print(raw_answer)
                 # Try direct JSON parsing first
                 try:
                     answer_json = json.loads(raw_answer)

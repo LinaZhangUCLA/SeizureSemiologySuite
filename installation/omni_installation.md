@@ -1,4 +1,5 @@
 # Environment setup
+```shell
 conda create -n omni python=3.10 -y
 conda activate omni
 
@@ -25,6 +26,7 @@ pip install -U qwen-omni-utils
 pip uninstall -y transformers
 pip install -U "git+https://github.com/huggingface/transformers@v4.51.3-Qwen2.5-Omni-preview"
 pip install -U qwen-vl-utils peft
+```
 
 # Quick import check (not necessary)
 python - <<'PY'

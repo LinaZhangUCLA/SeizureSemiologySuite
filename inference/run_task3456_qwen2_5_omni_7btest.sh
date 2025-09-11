@@ -26,7 +26,7 @@ echo "Conda environment omni activated."
 # Run the inference script
 python task3456_qwen2_5_omni_7b.py \
     --gpu 0 \
-    --videos_range 2412-2413 \
+    --videos_range 2312-2314 \
     --output_dir /home/lina/SeizureSemiologyBench/output \
     --model_name Qwen/Qwen2.5-Omni-7B \
     --dataset_dir /mnt/SSD3/lina/ucla2 \

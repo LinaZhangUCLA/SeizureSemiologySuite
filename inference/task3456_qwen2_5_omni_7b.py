@@ -83,7 +83,7 @@ all_features = ['occur_during_sleep','blank_stare','close_eyes','eye_blinking',
             'tonic','clonic','arm_flexion','arm_straightening','figure4','oral_automatisms','limb_automatisms',
             'face_pulling','face_twitching','head_turning','asynchronous_movement','pelvic_thrusting',
             'arms_move_simultaneously','full_body_shaking',
-            # 'ictal_vocalization', 'verbal_responsiveness',
+            'ictal_vocalization', 'verbal_responsiveness',
             ]
 
 # CSV file to read

@@ -22,7 +22,7 @@ import argparse
 default_model_cache_dir = os.path.join(os.path.dirname(__file__), 'model_cache')
 default_output_dir = os.path.join(os.path.dirname(__file__), 'output')
 def parse_arguments():
-    parser = argparse.ArgumentParser(description='Seizure Video Feature Extraction using Qwen2.5-VL')
+    parser = argparse.ArgumentParser(description='Seizure Video Feature Extraction using Lingshu-32B')
 
     # GPU settings
     parser.add_argument('--gpu', type=str, default='0',

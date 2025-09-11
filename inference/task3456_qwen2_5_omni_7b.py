@@ -214,7 +214,7 @@ def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=6
 def get_task3_prompt():
     return '''
     Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.
-    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.
+    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, ictal_vocalization, verbal_responsiveness.
     If a symptom is not present in the video, it should not be included in the output.
     Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.
     Output only the seizure symptoms. Do not include any other text.

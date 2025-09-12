@@ -28,7 +28,7 @@ def read_csv_file(input_file: str) -> pd.DataFrame:
     return df
 
 def mergecsv(task_name: str, model: str,subtask:str=None):
-    INPUT_DIR = BASE_DIR +"vlm/" + model
+    INPUT_DIR = BASE_DIR +"vlm_original/" + model
     # Match the target CSVs
     pattern = os.path.join(INPUT_DIR, f"{task_name}_{model}_*.csv")
     files = glob.glob(pattern)
@@ -108,7 +108,7 @@ def mergecsv(task_name: str, model: str,subtask:str=None):
     # Save
     if not subtask:
         subtask = task_name
-    OUTPUT_CSV = BASE_DIR + model + f"/{subtask}_{model}_all.csv"
+    OUTPUT_CSV = BASE_DIR + 'vlm_inference/'+ model + f"/{subtask}_{model}_all.csv"
     os.makedirs(os.path.dirname(OUTPUT_CSV), exist_ok=True)
     merged.to_csv(OUTPUT_CSV, index=False)
     print("Merge complete. Saved to:", OUTPUT_CSV)
@@ -116,22 +116,29 @@ def mergecsv(task_name: str, model: str,subtask:str=None):
 
 
 if __name__ == "__main__":
+
+    for model in ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni']:
     
-    # model = 'Qwen2.5-VL-7B-Instruct'
-    # task_name = 'Task1'
-    # mergecsv(task_name, model)      
-    # task_name = 'Task3_6'
-    # subtask = 'Task3'
-    # mergecsv(task_name, model,subtask)
-    # subtask = 'Task6'
-    # mergecsv(task_name, model,subtask)
-    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv", BASE_DIR + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
-    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv", BASE_DIR + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
-    # task_name = 'Task4L_5'
-    # subtask = 'Task4L'
-    # mergecsv(task_name, model,subtask)
-    # subtask = 'Task5'
-    # mergecsv(task_name, model,subtask)
+        #model = 'Qwen2.5-VL-7B-Instruct'
+        task_name = 'Task1'
+        mergecsv(task_name, model)      
+        task_name = 'Task3_6'
+        subtask = 'Task3'
+        mergecsv(task_name, model,subtask)
+        subtask = 'Task6'
+        mergecsv(task_name, model,subtask)
+        am_end =112
+        ht_end =129
+        if model in['InternVL3_5-8B','InternVL3_5-38B']:
+            am_end =113
+            ht_end =130
+        shutil.copy(BASE_DIR + "vlm_original/" + model + f"/Task4_AM_{model}_1-{am_end}.csv", BASE_DIR + 'vlm_inference/' + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
+        shutil.copy(BASE_DIR + "vlm_original/" + model + f"/Task4_HT_{model}_1-{ht_end}.csv", BASE_DIR +'vlm_inference/' + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
+        task_name = 'Task4L_5'
+        subtask = 'Task4L'
+        mergecsv(task_name, model,subtask)
+        subtask = 'Task5'
+        mergecsv(task_name, model,subtask)
 
     # model = 'InternVL3_5-8B'
     # task_name = 'Task1'
@@ -150,9 +157,9 @@ if __name__ == "__main__":
     # mergecsv(task_name, model,subtask)
 
 
-    model = 'Qwen2.5-VL-32B-Instruct'
-    task_name = 'Task1'
-    mergecsv(task_name, model)      
+    # model = 'Qwen2.5-VL-32B-Instruct'
+    # task_name = 'Task1'
+    # mergecsv(task_name, model)      
     # task_name = 'Task3_6'
     # subtask = 'Task3'
     # mergecsv(task_name, model,subtask)

@@ -1,0 +1,11 @@
+,,,,,,,,
+,occur_during_sleep,occur_during_sleep,occur_during_sleep,occur_during_sleep,eye_close,eye_close,eye_close,eye_close
+model,precision,recall,f1,accuracy,precision,recall,f1,accuracy
+Qwen2.5-VL-7B-Instruct,,,,,,,,
+InternVL3_5-8B,,,,,,,,
+Qwen2.5-VL-32B-Instruct,,,,,,,,
+InternVL3_5-38B,,,,,,,,
+wen2.5-VL-72B-Instruct,,,,,,,,
+Audio-Flamingo-3,,,,,,,,
+Qwen2.5-Omni,,,,,,,,
+Lingshu-32B,,,,,,,,

@@ -113,6 +113,32 @@ def mergecsv(task_name: str, model: str,subtask:str=None):
     merged.to_csv(OUTPUT_CSV, index=False)
     print("Merge complete. Saved to:", OUTPUT_CSV)
     print("Total rows:", len(merged))
+    
+    error_log = BASE_DIR + 'vlm_inference/row_error_file.log'
+    if not os.path.exists(error_log):
+        with open(error_log, 'w') as f:
+            f.write("Row count errors:\n")
+    print(error_log)
+    if subtask == 'Task1':
+       if len(merged) != 2314:
+           #write to row_error.log
+              with open(error_log, "a") as f:
+                  f.write(f"{OUTPUT_CSV} has {len(merged)} rows, expected 2314\n")
+                  print(f"!!!!!!!!!!!!{OUTPUT_CSV} has {len(merged)} rows, expected 2314\n")
+    if subtask == 'Task3' or subtask == 'Task6':
+       if len(merged) != 2316:
+           #write to row_error.log
+              with open(error_log, "a") as f:
+                  f.write(f"{OUTPUT_CSV} has {len(merged)} rows, expected 2316\n")
+                  print(f"!!!!!!!!!!!!{OUTPUT_CSV} has {len(merged)} rows, expected 2316\n")
+    if subtask == 'Task5' and subtask == 'Task4L':
+       if len(merged) != 2413:
+           #write to row_error.log
+              with open(error_log, "a") as f:
+                  f.write(f"{OUTPUT_CSV} has {len(merged)} rows, expected 2413\n")
+                  print(f"!!!!!!!!!!!!{OUTPUT_CSV} has {len(merged)} rows, expected 2413\n")    
+
+
 
 
 if __name__ == "__main__":
@@ -121,7 +147,8 @@ if __name__ == "__main__":
     
         #model = 'Qwen2.5-VL-7B-Instruct'
         task_name = 'Task1'
-        mergecsv(task_name, model)      
+        subtask = 'Task1'
+        mergecsv(task_name, model,subtask)      
         task_name = 'Task3_6'
         subtask = 'Task3'
         mergecsv(task_name, model,subtask)

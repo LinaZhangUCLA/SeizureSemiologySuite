@@ -574,6 +574,7 @@ def main():
         with open(task3_6_result_csv_fp, 'r') as f:
             if video_clip_name in f.read():
                 print(f"Video {video_clip_name} already processed. Skipping.")
+                raise NotImplementedError("find repeaete.")
                 continue
         if LOG:
             log_dir = os.path.join(inference_dir, 'log')
@@ -600,6 +601,7 @@ def main():
             with open(task4_HT_result_csv_fp, 'r') as f:
                 if video_name in f.read():
                     print(f"Video {video_name} already processed. Skipping.")
+                    raise NotImplementedError("find repeaete.")
                     continue
             
             try:
@@ -609,7 +611,7 @@ def main():
                 with open(task4_HT_result_csv_fp, 'a') as f:
                     f.write(f"{video_name},{HT_ans}\n")
             except Exception as e:
-                print(f"Error processing video {video_name} in Task 4 HT: {e}")
+                #print(f"Error processing video {video_name} in Task 4 HT: {e}")
                 # Write error entry to CSV
                 with open(task4_HT_result_csv_fp, 'a') as f:
                     f.write(f"{video_name},N/A\n")
@@ -625,6 +627,7 @@ def main():
             with open(task4_AM_result_csv_fp, 'r') as f:
                 if video_name in f.read():
                     print(f"Video {video_name} already processed. Skipping.")
+                    raise NotImplementedError("find repeaete.")
                     continue
             
             try:
@@ -634,7 +637,7 @@ def main():
                 with open(task4_AM_result_csv_fp, 'a') as f:
                     f.write(f"{video_name},{AM_ans}\n")
             except Exception as e:
-                print(f"Error processing video {video_name} in Task 4 AM: {e}")
+                #print(f"Error processing video {video_name} in Task 4 AM: {e}")
                 # Write error entry to CSV
                 with open(task4_AM_result_csv_fp, 'a') as f:
                     f.write(f"{video_name},N/A\n")
@@ -654,6 +657,7 @@ def main():
         with open(task4L_5_result_csv_fp, 'r') as f:
             if video_name in f.read():
                 print(f"Video {video_name} already processed. Skipping.")
+                raise NotImplementedError("find repeaete.")
                 continue
 
         try:
@@ -665,7 +669,7 @@ def main():
                 f.write(f"{video_name},{start_time},{end_time},{onset_body_part}\n")
             print(f"Successfully processed {video_name}: start={start_time}, end={end_time}, onset_body_part={onset_body_part}")
         except Exception as e:
-            print(f"Error processing video Task 4L & 5 {video_name}: {e}")
+            #print(f"Error processing video Task 4L & 5 {video_name}: {e}")
             # Write error entry to CSV
             with open(task4L_5_result_csv_fp, 'a') as f:
                 f.write(f"{video_name},N/A,N/A,N/A\n")

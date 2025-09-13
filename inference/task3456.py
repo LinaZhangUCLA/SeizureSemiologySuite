@@ -584,6 +584,7 @@ def main():
             log_file_fp = None
         video_clip_fp = os.path.join(task3_6_dataset_dir, video_clip_name)
         # video_event_seq_list, clip_report_text = query_task3_6(video_clip_fp, log_file_fp)
+        raise NotImplementedError("Task 3 & 6 inference is disabled temporarily.")
         video_event_seq_list, clip_report_text = '',''
         with open(task3_6_result_csv_fp, 'a') as f:
             f.write(f"{video_clip_name},{video_event_seq_list},{clip_report_text}\n")

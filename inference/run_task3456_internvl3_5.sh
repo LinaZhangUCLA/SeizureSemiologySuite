@@ -13,13 +13,14 @@ fi
 echo "Conda environment internvl3 activated."
 
 # Run the Python script with specified arguments
-python /mnt/SSD3/xinyi/benchmark/task3456_internvl3_5.py \
+#python /mnt/SSD3/xinyi/benchmark/task3456_internvl3_5.py \
+python /home/lina/ssb/SeizureSemiologyBench/inference/task3456_internvl3_5test.py \
   --gpu 0 \
   --model_name OpenGVLab/InternVL3_5-8B \
   --dataset_dir /mnt/SSD3/lina/ucla2 \
   --cache_dir /mnt/SSD3/xinyi/benchmark/model_cache \
-  --output_dir /mnt/SSD3/xinyi/benchmark/output \
-  --videos_range 2315-2316 \
+  --output_dir /home/lina/SeizureSemiologyBench\inten1147 \
+  --videos_range 1-2413 \
   --tp 1
 
 echo "Done!"

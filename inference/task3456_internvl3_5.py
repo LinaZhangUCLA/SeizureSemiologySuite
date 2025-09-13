@@ -337,6 +337,8 @@ def validate_videos_range(clip_files: List[str], videos_range: List[str]) -> Lis
     if rng[0] < 1:
         print('Warning: start index < 1; setting to 1')
         rng[0] = 1
+    if rng[1] > 2300:
+        rng[1] = len(clip_files)  
     if rng[1] > len(clip_files):
         print(f'Warning: end index > number of videos ({len(clip_files)}); setting to {len(clip_files)}')
         rng[1] = len(clip_files)

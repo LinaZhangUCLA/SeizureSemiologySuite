@@ -1,0 +1,192 @@
+import pandas as pd
+import numpy as np
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+def calculate_metrics(y_true, y_pred, feature_name=None):
+    """Calculate metrics for classification
+    Args:
+        y_true: Ground truth labels
+        y_pred: Predicted labels
+        feature_name: Name of the feature (for special handling)
+    Returns:
+        tuple: (accuracy, precision, recall, f1)
+    """
+    # Convert to lowercase and strip whitespace
+    y_true = y_true.str.strip().str.lower()
+    y_pred = y_pred.str.strip().str.lower()
+    
+    if feature_name == 'verbal_responsiveness':
+        # Multi-class classification metrics
+        accuracy = accuracy_score(y_true, y_pred)
+        precision = precision_score(y_true, y_pred, average='macro', zero_division=0)
+        recall = recall_score(y_true, y_pred, average='macro', zero_division=0)
+        f1 = f1_score(y_true, y_pred, average='macro', zero_division=0)
+    else:
+        # Binary classification metrics
+        accuracy = accuracy_score(y_true, y_pred)
+        precision = precision_score(y_true, y_pred, pos_label='yes', zero_division=0)
+        recall = recall_score(y_true, y_pred, pos_label='yes', zero_division=0)
+        f1 = f1_score(y_true, y_pred, pos_label='yes', zero_division=0)
+    
+    return accuracy, precision, recall, f1
+
+def get_model_metrics(model_name, features):
+    """Calculate metrics for a specific model
+    Args:
+        model_name (str): Name of the model to evaluate
+        features (list): List of features to evaluate
+    Returns:
+        dict: Dictionary containing metrics for each feature
+    """
+    # File paths
+    gt_path = 'result/ground_truth/task12_annotation.csv'
+    pred_path = f'result/vlm_inference/{model_name}/Task1_{model_name}_all_merged.csv'
+    
+    try:
+        # Read ground truth and prediction files
+        df_gt = pd.read_csv(gt_path, encoding='latin-1')
+        df_pred = pd.read_csv(pred_path, encoding='latin-1')
+        
+        # Merge ground truth and predictions
+        merged_df = pd.merge(df_gt, df_pred, on='file_name', how='inner', 
+                           suffixes=('', '_pred'))
+        
+        # Initialize results dictionary
+        results = {}
+        
+        # Calculate metrics for each feature
+        for feature in features:
+            try:
+                # Get ground truth and prediction columns
+                y_true = merged_df[feature]
+                y_pred = merged_df[f'{feature}_pred']
+                
+                # Special handling for close_eyes and eye_blinking
+                if feature in ['close_eyes', 'eye_blinking']:
+                    valid_indices = y_true != 'nan'  # Filter out NA samples
+                    y_true = y_true[valid_indices]
+                    y_pred = y_pred[valid_indices]
+                
+                # Calculate metrics
+                accuracy, precision, recall, f1 = calculate_metrics(y_true, y_pred, feature)
+                
+                # Store results
+                results[feature] = {
+                    'precision': precision,
+                    'recall': recall,
+                    'f1': f1,
+                    'accuracy': accuracy
+                }
+                
+                print(f"Processed feature: {feature}")
+                print(f"Metrics - Precision: {precision:.3f}, Recall: {recall:.3f}, F1: {f1:.3f}, Accuracy: {accuracy:.3f}")
+                
+            except KeyError as e:
+                print(f"Warning: Feature {feature} not found in data. Error: {e}")
+                results[feature] = {
+                    'precision': '',
+                    'recall': '',
+                    'f1': '',
+                    'accuracy': ''
+                }
+        
+        return results
+    
+    except Exception as e:
+        print(f"Error processing files for model {model_name}: {str(e)}")
+        return None
+
+def write_metrics_file(model_names, features, results_dict, output_path):
+    """Write metrics to CSV file
+    Args:
+        model_names (list): List of model names
+        features (list): List of features
+        results_dict (dict): Dictionary containing metrics for each model
+        output_path (str): Path to output file
+    """
+    try:
+        with open(output_path, 'w') as f:
+            # Write empty first row
+            f.write(',' * (len(features) * 4) + '\n')
+            
+            # Write feature names row
+            feature_row = [''] + [feat for feat in features for _ in range(4)]
+            f.write(','.join(feature_row) + '\n')
+            
+            # Write metric names row
+            metric_row = ['model'] + ['precision', 'recall', 'f1', 'accuracy'] * len(features)
+            f.write(','.join(metric_row) + '\n')
+            
+            # Write data rows
+            for model in model_names:
+                row = [model]
+                for feature in features:
+                    if model in results_dict and results_dict[model] and feature in results_dict[model]:
+                        metrics = results_dict[model][feature]
+                        row.extend([
+                            f"{metrics['precision']:.3f}" if metrics['precision'] != '' else '',
+                            f"{metrics['recall']:.3f}" if metrics['recall'] != '' else '',
+                            f"{metrics['f1']:.3f}" if metrics['f1'] != '' else '',
+                            f"{metrics['accuracy']:.3f}" if metrics['accuracy'] != '' else ''
+                        ])
+                    else:
+                        row.extend(['', '', '', ''])
+                f.write(','.join(row) + '\n')
+        
+        print(f"Metrics saved to {output_path}")
+    
+    except Exception as e:
+        print(f"Error writing metrics file: {str(e)}")
+        raise
+
+def main():
+    # List of features to evaluate
+    features = [
+        'occur_during_sleep',
+        'head_turning',
+        'blank_stare',
+        'close_eyes',
+        'eye_blinking',
+        'face_pulling',
+        'face_twitching',
+        'tonic',
+        'clonic',
+        'arm_straightening',
+        'arm_flexion',
+        'figure4',
+        'oral_automatisms',
+        'limb_automatisms',
+        'asynchronous_movement',
+        'pelvic_thrusting',
+        'full_body_shaking',
+        'arms_move_simultaneously',
+        'verbal_responsiveness',
+        'ictal_vocalization'
+    ]
+    
+    # Model names
+    model_names = [
+        'Qwen2.5-VL-7B-Instruct',
+        # 'InternVL3_5-8B',
+        # 'Qwen2.5-VL-32B-Instruct',
+        # 'InternVL3_5-38B',
+        # 'wen2.5-VL-72B-Instruct',
+        # 'Audio-Flamingo-3',
+        # 'Qwen2.5-Omni',
+        # 'Lingshu-32B'
+    ]
+    
+    
+    output_path = 'metrics/metrics_Task1_precision_recall_f1_accuracy.csv'
+    
+    # Calculate metrics for each model
+    results_dict = {}
+    for model in model_names:
+        print(f"\nProcessing model: {model}")
+        results_dict[model] = get_model_metrics(model, features)
+    
+    # Write results to file
+    write_metrics_file(model_names, features, results_dict, output_path)
+
+if __name__ == "__main__":
+    main()

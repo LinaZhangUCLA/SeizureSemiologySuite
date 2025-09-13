@@ -9,8 +9,9 @@ import shutil
 # === Set your input folder and output path ===
 BASE_DIR = "/mnt/SSD3/lina/ssb/"
 DEDUP_ON_COLUMN = 'file_name' 
-origin_dir = BASE_DIR + "vlm_original/"
-output_dir = BASE_DIR + "vlm_inference3/"
+#origin_dir = BASE_DIR + "vlm_original/"
+origin_dir = "/mnt/SSD3/lina/ssb/v3/output/"
+output_dir = BASE_DIR + "v3/vlm_inference/"
 # ============================================
 
 def read_csv_file(input_file: str) -> pd.DataFrame:
@@ -30,8 +31,9 @@ def read_csv_file(input_file: str) -> pd.DataFrame:
     return df
 
 def mergecsv(task_name: str, model: str,subtask:str=None):
-    INPUT_DIR = origin_dir + model
+    INPUT_DIR = origin_dir #+ model
     # Match the target CSVs
+    print(f"{task_name}_{model}_*.csv")
     pattern = os.path.join(INPUT_DIR, f"{task_name}_{model}_*.csv")
     files = glob.glob(pattern)
 
@@ -151,9 +153,9 @@ if __name__ == "__main__":
         os.makedirs(output_modle_dir, exist_ok=True)
 
         #model = 'Qwen2.5-VL-7B-Instruct'
-        task_name = 'Task1'
-        subtask = 'Task1'
-        mergecsv(task_name, model,subtask)      
+        # task_name = 'Task1'
+        # subtask = 'Task1'
+        # mergecsv(task_name, model,subtask)      
         task_name = 'Task3_6'
         subtask = 'Task3'
         mergecsv(task_name, model,subtask)
@@ -164,8 +166,12 @@ if __name__ == "__main__":
         if model in['InternVL3_5-8B','InternVL3_5-38B']:
             am_end =113
             ht_end =130
-        shutil.copy(origin_dir+ model + f"/Task4_AM_{model}_1-{am_end}.csv", output_dir + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
-        shutil.copy(origin_dir + model + f"/Task4_HT_{model}_1-{ht_end}.csv", output_dir + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
+        # shutil.copy(origin_dir+ model + f"/Task4_AM_{model}_1-{am_end}.csv", output_dir + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
+        # shutil.copy(origin_dir + model + f"/Task4_HT_{model}_1-{ht_end}.csv", output_dir + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
+        
+        shutil.copy(origin_dir + f"/Task4_AM_{model}_1-{am_end}.csv", output_dir + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
+        shutil.copy(origin_dir  + f"/Task4_HT_{model}_1-{ht_end}.csv", output_dir + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
+       
         task_name = 'Task4L_5'
         subtask = 'Task4L'
         mergecsv(task_name, model,subtask)

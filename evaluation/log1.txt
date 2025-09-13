@@ -1,0 +1,668 @@
+Merging in the following order:
+ - Task1_InternVL3_5-8B_1-300.csv
+ - Task1_InternVL3_5-8B_301-600.csv
+ - Task1_InternVL3_5-8B_601-900.csv
+ - Task1_InternVL3_5-8B_901-1200.csv
+ - Task1_InternVL3_5-8B_1201-1500.csv
+ - Task1_InternVL3_5-8B_1501-1800.csv
+ - Task1_InternVL3_5-8B_1801-2100.csv
+ - Task1_InternVL3_5-8B_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task1_InternVL3_5-8B_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task1_InternVL3_5-8B_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task1_InternVL3_5-8B_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task1_InternVL3_5-8B_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task1_InternVL3_5-8B_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task1_InternVL3_5-8B_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task1_InternVL3_5-8B_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task1_InternVL3_5-8B_2101-2314.csv
+Duplicate rows before dropping:
+                                            file_name  ...                justification_for_full_body_shaking
+300    I0002@5-9-2019@DA0012RL@nes_v1_1_segment_2.mp4  ...  The patient is only shown with her head tilted...
+301    I0002@5-9-2019@DA0012RL@nes_v1_1_segment_3.mp4  ...  The patient is only shown with her head tilted...
+302    I0002@5-9-2019@DA0012RL@nes_v1_1_segment_4.mp4  ...  The patient is only shown shaking her head, no...
+303    I0002@5-9-2019@DA0012RL@nes_v1_1_segment_5.mp4  ...  The patient is only experiencing shaking in th...
+304    I0002@5-9-2019@DA0012RL@nes_v1_1_segment_6.mp4  ...  The patient is only experiencing shaking of th...
+...                                               ...  ...                                                ...
+4323  Z0013@11-12-2020@UA6692V8@sz_v1_1_segment_3.mp4  ...  The patient only shakes their arms and legs, n...
+4324   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_0.mp4  ...  The patient only shakes their head and upper b...
+4325   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_1.mp4  ...  The patient is only seen shaking their head an...
+4326   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_2.mp4  ...  The patient is only seen shaking their head an...
+4327   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_3.mp4  ...  The patient is only shown shaking their head a...
+
+[4028 rows x 37 columns]
+De-duplicated on 'file_name': 4328 -> 2314
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-8B/Task1_InternVL3_5-8B_all.csv
+Total rows: 2314
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task3_6_InternVL3_5-8B_1-300.csv
+ - Task3_6_InternVL3_5-8B_301-600.csv
+ - Task3_6_InternVL3_5-8B_601-900.csv
+ - Task3_6_InternVL3_5-8B_901-1200.csv
+ - Task3_6_InternVL3_5-8B_1201-1500.csv
+ - Task3_6_InternVL3_5-8B_1501-1800.csv
+ - Task3_6_InternVL3_5-8B_1801-2100.csv
+ - Task3_6_InternVL3_5-8B_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_2101-2314.csv
+De-duplicated on 'file_name': 2314 -> 2314
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-8B/Task3_InternVL3_5-8B_all.csv
+Total rows: 2314
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-8B/Task3_InternVL3_5-8B_all.csv has 2314 rows, expected 2316
+
+Merging in the following order:
+ - Task3_6_InternVL3_5-8B_1-300.csv
+ - Task3_6_InternVL3_5-8B_301-600.csv
+ - Task3_6_InternVL3_5-8B_601-900.csv
+ - Task3_6_InternVL3_5-8B_901-1200.csv
+ - Task3_6_InternVL3_5-8B_1201-1500.csv
+ - Task3_6_InternVL3_5-8B_1501-1800.csv
+ - Task3_6_InternVL3_5-8B_1801-2100.csv
+ - Task3_6_InternVL3_5-8B_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task3_6_InternVL3_5-8B_2101-2314.csv
+De-duplicated on 'file_name': 2314 -> 2314
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-8B/Task6_InternVL3_5-8B_all.csv
+Total rows: 2314
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-8B/Task6_InternVL3_5-8B_all.csv has 2314 rows, expected 2316
+
+Merging in the following order:
+ - Task4L_5_InternVL3_5-8B_1-300.csv
+ - Task4L_5_InternVL3_5-8B_301-600.csv
+ - Task4L_5_InternVL3_5-8B_601-900.csv
+ - Task4L_5_InternVL3_5-8B_901-1200.csv
+ - Task4L_5_InternVL3_5-8B_1201-1500.csv
+ - Task4L_5_InternVL3_5-8B_1501-1800.csv
+ - Task4L_5_InternVL3_5-8B_1801-2100.csv
+ - Task4L_5_InternVL3_5-8B_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_2101-2314.csv
+De-duplicated on 'file_name': 1625 -> 1625
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-8B/Task4L_InternVL3_5-8B_all.csv
+Total rows: 1625
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-8B/Task4L_InternVL3_5-8B_all.csv has 1625 rows, expected 2413
+
+Merging in the following order:
+ - Task4L_5_InternVL3_5-8B_1-300.csv
+ - Task4L_5_InternVL3_5-8B_301-600.csv
+ - Task4L_5_InternVL3_5-8B_601-900.csv
+ - Task4L_5_InternVL3_5-8B_901-1200.csv
+ - Task4L_5_InternVL3_5-8B_1201-1500.csv
+ - Task4L_5_InternVL3_5-8B_1501-1800.csv
+ - Task4L_5_InternVL3_5-8B_1801-2100.csv
+ - Task4L_5_InternVL3_5-8B_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-8B/Task4L_5_InternVL3_5-8B_2101-2314.csv
+De-duplicated on 'file_name': 1625 -> 1625
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-8B/Task5_InternVL3_5-8B_all.csv
+Total rows: 1625
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-8B/Task5_InternVL3_5-8B_all.csv has 1625 rows, expected 2413
+
+Merging in the following order:
+ - Task1_InternVL3_5-38B_1-600.csv
+ - Task1_InternVL3_5-38B_601-1200.csv
+ - Task1_InternVL3_5-38B_1201-1800.csv
+ - Task1_InternVL3_5-38B_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task1_InternVL3_5-38B_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task1_InternVL3_5-38B_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task1_InternVL3_5-38B_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task1_InternVL3_5-38B_1801-2314.csv
+De-duplicated on 'file_name': 2314 -> 2314
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-38B/Task1_InternVL3_5-38B_all.csv
+Total rows: 2314
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task3_6_InternVL3_5-38B_1-600.csv
+ - Task3_6_InternVL3_5-38B_601-1200.csv
+ - Task3_6_InternVL3_5-38B_1201-1800.csv
+ - Task3_6_InternVL3_5-38B_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task3_6_InternVL3_5-38B_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task3_6_InternVL3_5-38B_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task3_6_InternVL3_5-38B_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task3_6_InternVL3_5-38B_1801-2314.csv
+De-duplicated on 'file_name': 2314 -> 2314
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-38B/Task3_InternVL3_5-38B_all.csv
+Total rows: 2314
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-38B/Task3_InternVL3_5-38B_all.csv has 2314 rows, expected 2316
+
+Merging in the following order:
+ - Task3_6_InternVL3_5-38B_1-600.csv
+ - Task3_6_InternVL3_5-38B_601-1200.csv
+ - Task3_6_InternVL3_5-38B_1201-1800.csv
+ - Task3_6_InternVL3_5-38B_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task3_6_InternVL3_5-38B_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task3_6_InternVL3_5-38B_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task3_6_InternVL3_5-38B_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task3_6_InternVL3_5-38B_1801-2314.csv
+De-duplicated on 'file_name': 2314 -> 2314
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-38B/Task6_InternVL3_5-38B_all.csv
+Total rows: 2314
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-38B/Task6_InternVL3_5-38B_all.csv has 2314 rows, expected 2316
+
+Merging in the following order:
+ - Task4L_5_InternVL3_5-38B_1-600.csv
+ - Task4L_5_InternVL3_5-38B_601-1200.csv
+ - Task4L_5_InternVL3_5-38B_1201-1800.csv
+ - Task4L_5_InternVL3_5-38B_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task4L_5_InternVL3_5-38B_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task4L_5_InternVL3_5-38B_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task4L_5_InternVL3_5-38B_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task4L_5_InternVL3_5-38B_1801-2314.csv
+De-duplicated on 'file_name': 2078 -> 2078
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-38B/Task4L_InternVL3_5-38B_all.csv
+Total rows: 2078
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-38B/Task4L_InternVL3_5-38B_all.csv has 2078 rows, expected 2413
+
+Merging in the following order:
+ - Task4L_5_InternVL3_5-38B_1-600.csv
+ - Task4L_5_InternVL3_5-38B_601-1200.csv
+ - Task4L_5_InternVL3_5-38B_1201-1800.csv
+ - Task4L_5_InternVL3_5-38B_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task4L_5_InternVL3_5-38B_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task4L_5_InternVL3_5-38B_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task4L_5_InternVL3_5-38B_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/InternVL3_5-38B/Task4L_5_InternVL3_5-38B_1801-2314.csv
+De-duplicated on 'file_name': 2078 -> 2078
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-38B/Task5_InternVL3_5-38B_all.csv
+Total rows: 2078
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/InternVL3_5-38B/Task5_InternVL3_5-38B_all.csv has 2078 rows, expected 2413
+
+Merging in the following order:
+ - Task1_Qwen2.5-VL-7B-Instruct_1-300.csv
+ - Task1_Qwen2.5-VL-7B-Instruct_301-600.csv
+ - Task1_Qwen2.5-VL-7B-Instruct_601-900.csv
+ - Task1_Qwen2.5-VL-7B-Instruct_901-1200.csv
+ - Task1_Qwen2.5-VL-7B-Instruct_1201-1500.csv
+ - Task1_Qwen2.5-VL-7B-Instruct_1501-1800.csv
+ - Task1_Qwen2.5-VL-7B-Instruct_1801-2100.csv
+ - Task1_Qwen2.5-VL-7B-Instruct_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task1_Qwen2.5-VL-7B-Instruct_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task1_Qwen2.5-VL-7B-Instruct_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task1_Qwen2.5-VL-7B-Instruct_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task1_Qwen2.5-VL-7B-Instruct_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task1_Qwen2.5-VL-7B-Instruct_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task1_Qwen2.5-VL-7B-Instruct_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task1_Qwen2.5-VL-7B-Instruct_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task1_Qwen2.5-VL-7B-Instruct_2101-2314.csv
+De-duplicated on 'file_name': 2314 -> 2314
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-7B-Instruct/Task1_Qwen2.5-VL-7B-Instruct_all.csv
+Total rows: 2314
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task3_6_Qwen2.5-VL-7B-Instruct_1-300.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_301-600.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_601-900.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_901-1200.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_1201-1500.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_1501-1800.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_1801-2100.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_2101-2314.csv
+De-duplicated on 'file_name': 2316 -> 2316
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-7B-Instruct/Task3_Qwen2.5-VL-7B-Instruct_all.csv
+Total rows: 2316
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task3_6_Qwen2.5-VL-7B-Instruct_1-300.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_301-600.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_601-900.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_901-1200.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_1201-1500.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_1501-1800.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_1801-2100.csv
+ - Task3_6_Qwen2.5-VL-7B-Instruct_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task3_6_Qwen2.5-VL-7B-Instruct_2101-2314.csv
+De-duplicated on 'file_name': 2316 -> 2316
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-7B-Instruct/Task6_Qwen2.5-VL-7B-Instruct_all.csv
+Total rows: 2316
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_1-300.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_301-600.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_601-900.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_901-1200.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_1201-1500.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_1501-1800.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_1801-2100.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_2101-2314.csv
+Duplicate rows before dropping:
+                                           file_name onset_body_part
+297  H0004@2-19-2020@DA00149V@sz_v1_1_segment_11.mp4        left arm
+298  H0004@2-19-2020@DA00149V@sz_v1_1_segment_11.mp4        left arm
+299  H0004@2-19-2020@DA00149V@sz_v1_1_segment_12.mp4        left arm
+300  H0004@2-19-2020@DA00149V@sz_v1_1_segment_12.mp4        left arm
+301  H0004@2-19-2020@DA00149V@sz_v1_1_segment_13.mp4        left arm
+302  H0004@2-19-2020@DA00149V@sz_v1_1_segment_13.mp4        left arm
+De-duplicated on 'file_name': 2178 -> 2175
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-7B-Instruct/Task4L_Qwen2.5-VL-7B-Instruct_all.csv
+Total rows: 2175
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-7B-Instruct/Task4L_Qwen2.5-VL-7B-Instruct_all.csv has 2175 rows, expected 2413
+
+Merging in the following order:
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_1-300.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_301-600.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_601-900.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_901-1200.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_1201-1500.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_1501-1800.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_1801-2100.csv
+ - Task4L_5_Qwen2.5-VL-7B-Instruct_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-7B-Instruct/Task4L_5_Qwen2.5-VL-7B-Instruct_2101-2314.csv
+Duplicate rows before dropping:
+                                           file_name start_time end_time
+297  H0004@2-19-2020@DA00149V@sz_v1_1_segment_11.mp4      00:00    00:15
+298  H0004@2-19-2020@DA00149V@sz_v1_1_segment_11.mp4      00:00    00:15
+299  H0004@2-19-2020@DA00149V@sz_v1_1_segment_12.mp4      00:00    00:21
+300  H0004@2-19-2020@DA00149V@sz_v1_1_segment_12.mp4      00:00    00:21
+301  H0004@2-19-2020@DA00149V@sz_v1_1_segment_13.mp4      00:00    00:23
+302  H0004@2-19-2020@DA00149V@sz_v1_1_segment_13.mp4      00:00    00:23
+De-duplicated on 'file_name': 2178 -> 2175
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-7B-Instruct/Task5_Qwen2.5-VL-7B-Instruct_all.csv
+Total rows: 2175
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-7B-Instruct/Task5_Qwen2.5-VL-7B-Instruct_all.csv has 2175 rows, expected 2413
+
+Merging in the following order:
+ - Task1_Qwen2.5-VL-32B-Instruct_1-58.csv
+ - Task1_Qwen2.5-VL-32B-Instruct_58-600.csv
+ - Task1_Qwen2.5-VL-32B-Instruct_601-653.csv
+ - Task1_Qwen2.5-VL-32B-Instruct_654-1200.csv
+ - Task1_Qwen2.5-VL-32B-Instruct_1201-1266.csv
+ - Task1_Qwen2.5-VL-32B-Instruct_1267-1800.csv
+ - Task1_Qwen2.5-VL-32B-Instruct_1801-1837.csv
+ - Task1_Qwen2.5-VL-32B-Instruct_1838-2341.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task1_Qwen2.5-VL-32B-Instruct_1-58.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task1_Qwen2.5-VL-32B-Instruct_58-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task1_Qwen2.5-VL-32B-Instruct_601-653.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task1_Qwen2.5-VL-32B-Instruct_654-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task1_Qwen2.5-VL-32B-Instruct_1201-1266.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task1_Qwen2.5-VL-32B-Instruct_1267-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task1_Qwen2.5-VL-32B-Instruct_1801-1837.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task1_Qwen2.5-VL-32B-Instruct_1838-2341.csv
+Duplicate rows before dropping:
+                                          file_name  ...                justification_for_full_body_shaking
+57  A0007@11-21-2017@DA3332M9@sz_v1_1_segment_2.mp4  ...  The video shows the patient lying still on the...
+58  A0007@11-21-2017@DA3332M9@sz_v1_1_segment_2.mp4  ...  The video shows the patient lying still on the...
+
+[2 rows x 37 columns]
+De-duplicated on 'file_name': 2315 -> 2314
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-32B-Instruct/Task1_Qwen2.5-VL-32B-Instruct_all.csv
+Total rows: 2314
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task3_6_Qwen2.5-VL-32B-Instruct_1-600.csv
+ - Task3_6_Qwen2.5-VL-32B-Instruct_601-1200.csv
+ - Task3_6_Qwen2.5-VL-32B-Instruct_1201-1800.csv
+ - Task3_6_Qwen2.5-VL-32B-Instruct_1801-2341.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task3_6_Qwen2.5-VL-32B-Instruct_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task3_6_Qwen2.5-VL-32B-Instruct_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task3_6_Qwen2.5-VL-32B-Instruct_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task3_6_Qwen2.5-VL-32B-Instruct_1801-2341.csv
+Duplicate rows before dropping:
+                      file_name                                     event_sequence
+52                         None                                               None
+54                         None                                               None
+55    As the seizure progresses   the patient's body continues to exhibit invol...
+56                         None                                               None
+57       Throughout the episode   the patient's condition appears to stabilize ...
+...                         ...                                                ...
+2391                  Initially      the patient's head turns slightly to the side
+2392                       None                                               None
+2393  As the episode progresses        the patient's body remains relatively still
+2394                       None                                               None
+2395                    Overall   the patient's condition suggests an ongoing s...
+
+[206 rows x 2 columns]
+De-duplicated on 'file_name': 2572 -> 2381
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-32B-Instruct/Task3_Qwen2.5-VL-32B-Instruct_all.csv
+Total rows: 2381
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-32B-Instruct/Task3_Qwen2.5-VL-32B-Instruct_all.csv has 2381 rows, expected 2316
+
+Merging in the following order:
+ - Task3_6_Qwen2.5-VL-32B-Instruct_1-600.csv
+ - Task3_6_Qwen2.5-VL-32B-Instruct_601-1200.csv
+ - Task3_6_Qwen2.5-VL-32B-Instruct_1201-1800.csv
+ - Task3_6_Qwen2.5-VL-32B-Instruct_1801-2341.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task3_6_Qwen2.5-VL-32B-Instruct_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task3_6_Qwen2.5-VL-32B-Instruct_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task3_6_Qwen2.5-VL-32B-Instruct_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task3_6_Qwen2.5-VL-32B-Instruct_1801-2341.csv
+Duplicate rows before dropping:
+                      file_name                                             report
+52                         None                                               None
+54                         None                                               None
+55    As the seizure progresses   including what appears to be tonic-clonic act...
+56                         None                                               None
+57       Throughout the episode   but the seizure activity persists intermitten...
+...                         ...                                                ...
+2391                  Initially   indicating a possible versive movement. This ...
+2392                       None                                               None
+2393  As the episode progresses   but there are continued minor convulsions or ...
+2394                       None                                               None
+2395                    Overall   characterized by a combination of subtle moto...
+
+[206 rows x 2 columns]
+De-duplicated on 'file_name': 2572 -> 2381
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-32B-Instruct/Task6_Qwen2.5-VL-32B-Instruct_all.csv
+Total rows: 2381
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-32B-Instruct/Task6_Qwen2.5-VL-32B-Instruct_all.csv has 2381 rows, expected 2316
+
+Merging in the following order:
+ - Task4L_5_Qwen2.5-VL-32B-Instruct_1-600.csv
+ - Task4L_5_Qwen2.5-VL-32B-Instruct_601-1200.csv
+ - Task4L_5_Qwen2.5-VL-32B-Instruct_1201-1800.csv
+ - Task4L_5_Qwen2.5-VL-32B-Instruct_1801-2341.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task4L_5_Qwen2.5-VL-32B-Instruct_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task4L_5_Qwen2.5-VL-32B-Instruct_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task4L_5_Qwen2.5-VL-32B-Instruct_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task4L_5_Qwen2.5-VL-32B-Instruct_1801-2341.csv
+De-duplicated on 'file_name': 2111 -> 2111
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-32B-Instruct/Task4L_Qwen2.5-VL-32B-Instruct_all.csv
+Total rows: 2111
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-32B-Instruct/Task4L_Qwen2.5-VL-32B-Instruct_all.csv has 2111 rows, expected 2413
+
+Merging in the following order:
+ - Task4L_5_Qwen2.5-VL-32B-Instruct_1-600.csv
+ - Task4L_5_Qwen2.5-VL-32B-Instruct_601-1200.csv
+ - Task4L_5_Qwen2.5-VL-32B-Instruct_1201-1800.csv
+ - Task4L_5_Qwen2.5-VL-32B-Instruct_1801-2341.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task4L_5_Qwen2.5-VL-32B-Instruct_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task4L_5_Qwen2.5-VL-32B-Instruct_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task4L_5_Qwen2.5-VL-32B-Instruct_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-32B-Instruct/Task4L_5_Qwen2.5-VL-32B-Instruct_1801-2341.csv
+De-duplicated on 'file_name': 2111 -> 2111
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-32B-Instruct/Task5_Qwen2.5-VL-32B-Instruct_all.csv
+Total rows: 2111
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-32B-Instruct/Task5_Qwen2.5-VL-32B-Instruct_all.csv has 2111 rows, expected 2413
+
+Merging in the following order:
+ - Task1_Qwen2.5-VL-72B-Instruct_1-107.csv
+ - Task1_Qwen2.5-VL-72B-Instruct_107-1200.csv
+ - Task1_Qwen2.5-VL-72B-Instruct_1201-1592.csv
+ - Task1_Qwen2.5-VL-72B-Instruct_1591-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task1_Qwen2.5-VL-72B-Instruct_1-107.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task1_Qwen2.5-VL-72B-Instruct_107-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task1_Qwen2.5-VL-72B-Instruct_1201-1592.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task1_Qwen2.5-VL-72B-Instruct_1591-2314.csv
+Duplicate rows before dropping:
+                                              file_name  ...                justification_for_full_body_shaking
+106     D0002@5-29-2014@VA76111G@nes_v1_1_segment_1.mp4  ...  The patient does not exhibit any visible shaki...
+107     D0002@5-29-2014@VA76111G@nes_v1_1_segment_1.mp4  ...  The patient does not exhibit any visible shaki...
+1591   S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_1.mp4  ...  The patient remains still throughout the video...
+1592  S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_10.mp4  ...  The patient remains still throughout the video...
+1593   S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_1.mp4  ...  The patient remains still throughout the video...
+1594  S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_10.mp4  ...  The patient remains still throughout the video...
+
+[6 rows x 37 columns]
+De-duplicated on 'file_name': 2317 -> 2314
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-72B-Instruct/Task1_Qwen2.5-VL-72B-Instruct_all.csv
+Total rows: 2314
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1-300.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_301-600.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_601-900.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_901-1200.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1201-1500.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1201-1800.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1501-1800.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1801-2100.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1801-2314.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_2101-2314.csv
+Duplicate rows before dropping:
+                                            file_name                                     event_sequence
+1200  R0001@10-17-2023@DA1324L8@sz_v1_1_segment_3.mp4  head_turning, clonic, limb_automatisms, asynch...
+1201  R0001@10-17-2023@DA1324L8@sz_v1_1_segment_4.mp4                  head_turning, arm_flexion, clonic
+1202  R0001@10-17-2023@DA1324L8@sz_v1_1_segment_5.mp4                          head_turning, arm_flexion
+1203   R0002@6-17-2021@DA0016G9@sz_v1_1_segment_0.mp4                                       head_turning
+1204   R0002@6-17-2021@DA0016G9@sz_v2_1_segment_0.mp4                                       head_turning
+...                                               ...                                                ...
+3427  Z0013@11-12-2020@UA6692V8@sz_v1_1_segment_3.mp4                                         close_eyes
+3428   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_0.mp4           head_turning, arm_flexion, tonic, clonic
+3429   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_1.mp4  head_turning, arm_straightening, arm_flexion, ...
+3430   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_2.mp4  head_turning, arm_straightening, arm_flexion, ...
+3431   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_3.mp4                  head_turning, arm_flexion, clonic
+
+[2232 rows x 2 columns]
+De-duplicated on 'file_name': 3432 -> 2316
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-72B-Instruct/Task3_Qwen2.5-VL-72B-Instruct_all.csv
+Total rows: 2316
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1-300.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_301-600.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_601-900.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_901-1200.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1201-1500.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1201-1800.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1501-1800.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1801-2100.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_1801-2314.csv
+ - Task3_6_Qwen2.5-VL-72B-Instruct_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task3_6_Qwen2.5-VL-72B-Instruct_2101-2314.csv
+Duplicate rows before dropping:
+                                            file_name                                             report
+1200  R0001@10-17-2023@DA1324L8@sz_v1_1_segment_3.mp4  The patient is lying in bed, initially covered...
+1201  R0001@10-17-2023@DA1324L8@sz_v1_1_segment_4.mp4  The patient is initially seen lying in bed, ap...
+1202  R0001@10-17-2023@DA1324L8@sz_v1_1_segment_5.mp4  The patient is lying in a hospital bed, covere...
+1203   R0002@6-17-2021@DA0016G9@sz_v1_1_segment_0.mp4  The patient is lying in a hospital bed, appear...
+1204   R0002@6-17-2021@DA0016G9@sz_v2_1_segment_0.mp4  The patient is lying in a hospital bed, wearin...
+...                                               ...                                                ...
+3427  Z0013@11-12-2020@UA6692V8@sz_v1_1_segment_3.mp4  The patient is lying in a hospital bed, appear...
+3428   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_0.mp4  The patient is seated in a hospital bed, weari...
+3429   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_1.mp4  The patient is lying in a hospital bed, appear...
+3430   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_2.mp4  The patient is lying in a hospital bed, visibl...
+3431   Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_3.mp4  The patient is lying in a hospital bed, wearin...
+
+[2232 rows x 2 columns]
+De-duplicated on 'file_name': 3432 -> 2316
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-72B-Instruct/Task6_Qwen2.5-VL-72B-Instruct_all.csv
+Total rows: 2316
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_1-300.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_301-600.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_601-900.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_901-1200.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_1201-1500.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_1501-1800.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_1801-2100.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_2101-2314.csv
+De-duplicated on 'file_name': 2248 -> 2248
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-72B-Instruct/Task4L_Qwen2.5-VL-72B-Instruct_all.csv
+Total rows: 2248
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-72B-Instruct/Task4L_Qwen2.5-VL-72B-Instruct_all.csv has 2248 rows, expected 2413
+
+Merging in the following order:
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_1-300.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_301-600.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_601-900.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_901-1200.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_1201-1500.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_1501-1800.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_1801-2100.csv
+ - Task4L_5_Qwen2.5-VL-72B-Instruct_2101-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_1-300.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_301-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_601-900.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_901-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_1201-1500.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_1501-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_1801-2100.csv
+/mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-VL-72B-Instruct/Task4L_5_Qwen2.5-VL-72B-Instruct_2101-2314.csv
+De-duplicated on 'file_name': 2248 -> 2248
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-72B-Instruct/Task5_Qwen2.5-VL-72B-Instruct_all.csv
+Total rows: 2248
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/Qwen2.5-VL-72B-Instruct/Task5_Qwen2.5-VL-72B-Instruct_all.csv has 2248 rows, expected 2413
+
+Merging in the following order:
+ - Task1_Lingshu-32B_1-600.csv
+ - Task1_Lingshu-32B_601-1200.csv
+ - Task1_Lingshu-32B_1201-1800.csv
+ - Task1_Lingshu-32B_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task1_Lingshu-32B_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task1_Lingshu-32B_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task1_Lingshu-32B_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task1_Lingshu-32B_1801-2314.csv
+De-duplicated on 'file_name': 2314 -> 2314
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Lingshu-32B/Task1_Lingshu-32B_all.csv
+Total rows: 2314
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task3_6_Lingshu-32B_1-600.csv
+ - Task3_6_Lingshu-32B_601-1200.csv
+ - Task3_6_Lingshu-32B_1201-1800.csv
+ - Task3_6_Lingshu-32B_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task3_6_Lingshu-32B_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task3_6_Lingshu-32B_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task3_6_Lingshu-32B_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task3_6_Lingshu-32B_1801-2314.csv
+De-duplicated on 'file_name': 2316 -> 2316
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Lingshu-32B/Task3_Lingshu-32B_all.csv
+Total rows: 2316
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task3_6_Lingshu-32B_1-600.csv
+ - Task3_6_Lingshu-32B_601-1200.csv
+ - Task3_6_Lingshu-32B_1201-1800.csv
+ - Task3_6_Lingshu-32B_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task3_6_Lingshu-32B_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task3_6_Lingshu-32B_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task3_6_Lingshu-32B_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task3_6_Lingshu-32B_1801-2314.csv
+De-duplicated on 'file_name': 2316 -> 2316
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Lingshu-32B/Task6_Lingshu-32B_all.csv
+Total rows: 2316
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+Merging in the following order:
+ - Task4L_5_Lingshu-32B_1-600.csv
+ - Task4L_5_Lingshu-32B_601-1200.csv
+ - Task4L_5_Lingshu-32B_1201-1800.csv
+ - Task4L_5_Lingshu-32B_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task4L_5_Lingshu-32B_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task4L_5_Lingshu-32B_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task4L_5_Lingshu-32B_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task4L_5_Lingshu-32B_1801-2314.csv
+De-duplicated on 'file_name': 2377 -> 2377
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Lingshu-32B/Task4L_Lingshu-32B_all.csv
+Total rows: 2377
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/Lingshu-32B/Task4L_Lingshu-32B_all.csv has 2377 rows, expected 2413
+
+Merging in the following order:
+ - Task4L_5_Lingshu-32B_1-600.csv
+ - Task4L_5_Lingshu-32B_601-1200.csv
+ - Task4L_5_Lingshu-32B_1201-1800.csv
+ - Task4L_5_Lingshu-32B_1801-2314.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task4L_5_Lingshu-32B_1-600.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task4L_5_Lingshu-32B_601-1200.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task4L_5_Lingshu-32B_1201-1800.csv
+/mnt/SSD3/lina/ssb/vlm_original/Lingshu-32B/Task4L_5_Lingshu-32B_1801-2314.csv
+De-duplicated on 'file_name': 2377 -> 2377
+Merge complete. Saved to: /mnt/SSD3/lina/ssb/vlm_inference3/Lingshu-32B/Task5_Lingshu-32B_all.csv
+Total rows: 2377
+/mnt/SSD3/lina/ssb/vlm_inference3/row_error_file_stat.log
+!!!!!!!!!!!!/mnt/SSD3/lina/ssb/vlm_inference3/Lingshu-32B/Task5_Lingshu-32B_all.csv has 2377 rows, expected 2413
+
+Traceback (most recent call last):
+  File "/home/lina/ssb/SeizureSemiologyBench/evaluation/merge_vlm_output.py", line 156, in <module>
+    mergecsv(task_name, model,subtask)      
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lina/ssb/SeizureSemiologyBench/evaluation/merge_vlm_output.py", line 39, in mergecsv
+    raise FileNotFoundError(f"No matching files found in: {INPUT_DIR}")
+FileNotFoundError: No matching files found in: /mnt/SSD3/lina/ssb/vlm_original/Qwen2.5-Omni

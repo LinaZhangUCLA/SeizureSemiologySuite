@@ -582,7 +582,12 @@ def main():
         else:
             log_file_fp = None
         video_clip_fp = os.path.join(task3_6_dataset_dir, video_clip_name)
-        video_event_seq_list, clip_report_text = query_task3_6(video_clip_fp, log_file_fp)
+        video_event_seq_list = "fail"
+        clip_report_text = "fail"
+        try:
+            video_event_seq_list, clip_report_text = query_task3_6(video_clip_fp, log_file_fp)
+        except Exception as e:
+            print(f"Error processing video {video_clip_fp} in Task 3-6: {e}")
         
         with open(task3_6_result_csv_fp, 'a') as f:
             f.write(f"{video_clip_name},{video_event_seq_list},{clip_report_text}\n")

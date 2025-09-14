@@ -1,73 +1,189 @@
 import pandas as pd
+import numpy as np
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-experiment = 'AF3_90_audio'
-# 读取CSV文件
-df_gt = pd.read_csv('/home/lina/gemini/FeatureAnnotation_V3.csv')
-df_pred = pd.read_csv('/home/lina/icassp2026/ICASSP2026/evaluation/AF3_90_audio_feature.csv')
-
-# 数据预处理
-df_gt['file_name'] = df_gt['file_name'].str.replace('.m2t', '.mp4').str.strip().str.lower()
-df_pred['file_name'] = df_pred['file_name'].str.strip().str.lower()
-
-# 对齐数据
-merged_df = pd.merge(df_gt, df_pred, on='file_name', suffixes=('_gt', '_pred'), how='inner')
-
-# 打印不匹配的file_name
-unmatched_gt = df_gt[~df_gt['file_name'].isin(merged_df['file_name'])]
-unmatched_pred = df_pred[~df_pred['file_name'].isin(merged_df['file_name'])]
-print("Unmatched file_name in ground truth:")
-print(unmatched_gt['file_name'])
-print("Unmatched file_name in predictions:")
-print(unmatched_pred['file_name'])
-
-# 定义计算指标的函数
-def calculate_metrics(y_true, y_pred, positive_label):
-    accuracy = accuracy_score(y_true, y_pred)
-    precision = precision_score(y_true, y_pred, pos_label=positive_label, zero_division=0)
-    recall = recall_score(y_true, y_pred, pos_label=positive_label, zero_division=0)
-    f1 = f1_score(y_true, y_pred, pos_label=positive_label, zero_division=0)
-    return accuracy, precision, recall, f1
-
-# 初始化结果字典
-results = {'Metric': ['Accuracy', 'Precision', 'Recall', 'F1 Score', 'Positive Num']}
-
-# 遍历每一列特征
-for col in df_pred.columns[1:]:
-    print(col)
-
-
-    if col in ['full_body_jerking' ,  'start_time','end_time','label','segment_num','tonic_clonic']:
-        continue
-    y_true = merged_df[col + '_gt'].astype(str).str.replace('.', '', regex=False).str.strip().str.lower()
-    y_pred = merged_df[col + '_pred'].astype(str).str.replace('.', '', regex=False).str.strip().str.lower()
+def calculate_metrics(y_true, y_pred, feature_name=None):
+    """Calculate metrics for classification
+    Args:
+        y_true: Ground truth labels
+        y_pred: Predicted labels
+        feature_name: Name of the feature (for special handling)
+    Returns:
+        tuple: (accuracy, precision, recall, f1)
+    """
+    # Convert to lowercase and strip whitespace
+    y_true = y_true.str.strip().str.lower()
+    y_pred = y_pred.str.strip().str.lower()
     
-    if col == 'verbal_responsiveness':
+    if feature_name == 'verbal_responsiveness':
+        # Multi-class classification metrics
         accuracy = accuracy_score(y_true, y_pred)
         precision = precision_score(y_true, y_pred, average='macro', zero_division=0)
         recall = recall_score(y_true, y_pred, average='macro', zero_division=0)
         f1 = f1_score(y_true, y_pred, average='macro', zero_division=0)
-        positive_num = dict(y_true.value_counts())
-    # 对close_eyes列特殊处理：去掉ground truth为NA的样本
-    if col == 'close_eyes' or col == 'eye_blinking':
-        valid_indices = y_true != 'nan'  # 过滤掉ground truth为NA的样本
-        y_true = y_true[valid_indices]
-        y_pred = y_pred[valid_indices]
+    else:
+        # Binary classification metrics
+        accuracy = accuracy_score(y_true, y_pred)
+        precision = precision_score(y_true, y_pred, pos_label='yes', zero_division=0)
+        recall = recall_score(y_true, y_pred, pos_label='yes', zero_division=0)
+        f1 = f1_score(y_true, y_pred, pos_label='yes', zero_division=0)
     
-    # 确定正样本标签
-    positive_label = 'female' if col == 'gender' else 'yes'
+    return accuracy, precision, recall, f1
+
+def get_model_metrics(model_name, features):
+    """Calculate metrics for a specific model
+    Args:
+        model_name (str): Name of the model to evaluate
+        features (list): List of features to evaluate
+    Returns:
+        dict: Dictionary containing metrics for each feature
+    """
+    # File paths
+    gt_path = 'result/ground_truth/task12_annotation.csv'
+    pred_path = f'result/vlm_inference/{model_name}/Task1_{model_name}_all_merged.csv'
     
-    # 计算指标
-    accuracy, precision, recall, f1 = calculate_metrics(y_true, y_pred, positive_label)
-
-    positive_num = (y_true == positive_label).sum()
+    try:
+        # Read ground truth and prediction files
+        df_gt = pd.read_csv(gt_path, encoding='latin-1')
+        df_pred = pd.read_csv(pred_path, encoding='latin-1')
+        
+        # Merge ground truth and predictions
+        merged_df = pd.merge(df_gt, df_pred, on='file_name', how='inner', 
+                           suffixes=('', '_pred'))
+        
+        # Initialize results dictionary
+        results = {}
+        
+        # Calculate metrics for each feature
+        for feature in features:
+            try:
+                # Get ground truth and prediction columns
+                y_true = merged_df[feature]
+                y_pred = merged_df[f'{feature}_pred']
+                
+                # Special handling for close_eyes and eye_blinking
+                if feature in ['close_eyes', 'eye_blinking']:
+                    valid_indices = y_true != 'nan'  # Filter out NA samples
+                    y_true = y_true[valid_indices]
+                    y_pred = y_pred[valid_indices]
+                
+                # Calculate metrics
+                accuracy, precision, recall, f1 = calculate_metrics(y_true, y_pred, feature)
+                
+                # Store results
+                results[feature] = {
+                    'precision': precision,
+                    'recall': recall,
+                    'f1': f1,
+                    'accuracy': accuracy
+                }
+                
+                print(f"Processed feature: {feature}")
+                print(f"Metrics - Precision: {precision:.3f}, Recall: {recall:.3f}, F1: {f1:.3f}, Accuracy: {accuracy:.3f}")
+                
+            except KeyError as e:
+                print(f"Warning: Feature {feature} not found in data. Error: {e}")
+                results[feature] = {
+                    'precision': '',
+                    'recall': '',
+                    'f1': '',
+                    'accuracy': ''
+                }
+        
+        return results
     
-    # 将结果添加到字典中
-    print([accuracy, precision, recall, f1, positive_num])
-    results[col] = [accuracy, precision, recall, f1, positive_num]
+    except Exception as e:
+        print(f"Error processing files for model {model_name}: {str(e)}")
+        return None
 
-# 将结果保存到CSV文件
-results_df = pd.DataFrame(results)
-results_df = results_df.round(2)
-results_df.to_csv(experiment + '_metrics.csv', index=False)
+def write_metrics_file(model_names, features, results_dict, output_path):
+    """Write metrics to CSV file
+    Args:
+        model_names (list): List of model names
+        features (list): List of features
+        results_dict (dict): Dictionary containing metrics for each model
+        output_path (str): Path to output file
+    """
+    try:
+        with open(output_path, 'w') as f:
+            # Create header row with feature_name_metric_name format
+            metric_names = ['precision', 'recall', 'f1', 'accuracy']
+            header = ['model']
+            for feature in features:
+                for metric in metric_names:
+                    header.append(f"{feature}_{metric}")
+            f.write(','.join(header) + '\n')
+            
+            # Write data rows
+            for model in model_names:
+                row = [model]
+                for feature in features:
+                    if model in results_dict and results_dict[model] and feature in results_dict[model]:
+                        metrics = results_dict[model][feature]
+                        row.extend([
+                            f"{metrics['precision']:.3f}" if metrics['precision'] != '' else '',
+                            f"{metrics['recall']:.3f}" if metrics['recall'] != '' else '',
+                            f"{metrics['f1']:.3f}" if metrics['f1'] != '' else '',
+                            f"{metrics['accuracy']:.3f}" if metrics['accuracy'] != '' else ''
+                        ])
+                    else:
+                        row.extend(['', '', '', ''])
+                f.write(','.join(row) + '\n')
+        
+        print(f"Metrics saved to {output_path}")
+    
+    except Exception as e:
+        print(f"Error writing metrics file: {str(e)}")
+        raise
 
+def main():
+    # List of features to evaluate
+    features = [
+        'occur_during_sleep',
+        'head_turning',
+        'blank_stare',
+        'close_eyes',
+        'eye_blinking',
+        'face_pulling',
+        'face_twitching',
+        'tonic',
+        'clonic',
+        'arm_straightening',
+        'arm_flexion',
+        'figure4',
+        'oral_automatisms',
+        'limb_automatisms',
+        'asynchronous_movement',
+        'pelvic_thrusting',
+        'full_body_shaking',
+        'arms_move_simultaneously',
+        'verbal_responsiveness',
+        'ictal_vocalization'
+    ]
+    
+    # Model names
+    model_names = [
+        'Qwen2.5-VL-7B-Instruct',
+        # 'InternVL3_5-8B',
+        # 'Qwen2.5-VL-32B-Instruct',
+        # 'InternVL3_5-38B',
+        # 'wen2.5-VL-72B-Instruct',
+        # 'Audio-Flamingo-3',
+        # 'Qwen2.5-Omni',
+        # 'Lingshu-32B'
+    ]
+    
+    
+    output_path = 'metrics/Task1_precision_recall_f1_accuracy.csv'
+    
+    # Calculate metrics for each model
+    results_dict = {}
+    for model in model_names:
+        print(f"\nProcessing model: {model}")
+        results_dict[model] = get_model_metrics(model, features)
+    
+    # Write results to file
+    write_metrics_file(model_names, features, results_dict, output_path)
+
+if __name__ == "__main__":
+    main()

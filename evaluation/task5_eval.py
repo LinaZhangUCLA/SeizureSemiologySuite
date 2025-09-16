@@ -16,32 +16,8 @@ import numpy as np
 from datetime import datetime, timedelta
 import argparse
 import sys
+import os
 from typing import Tuple, Dict, List
-
-
-def time_to_seconds(time_str: str) -> float:
-    """
-    Convert time string in MM:SS or HH:MM:SS format to seconds.
-    
-    Args:
-        time_str: Time string (e.g., "01:30" or "1:30:45")
-    
-    Returns:
-        Time in seconds as float
-    """
-    try:
-        # Handle MM:SS format
-        if time_str.count(':') == 1:
-            minutes, seconds = time_str.split(':')
-            return int(minutes) * 60 + int(seconds)
-        # Handle HH:MM:SS format
-        elif time_str.count(':') == 2:
-            hours, minutes, seconds = time_str.split(':')
-            return int(hours) * 3600 + int(minutes) * 60 + int(seconds)
-        else:
-            raise ValueError(f"Invalid time format: {time_str}")
-    except Exception as e:
-        raise ValueError(f"Error parsing time '{time_str}': {e}")
 
 
 def calculate_mse(pred_start: float, pred_end: float, gt_start: float, gt_end: float) -> float:
@@ -148,8 +124,10 @@ def evaluate_predictions(pred_df: pd.DataFrame, gt_df: pd.DataFrame) -> Dict:
     iou_scores = []
     
     # Evaluate matched files
+    count=0
     for file_name in gt_dict.keys():
         if file_name in pred_dict:
+            count+=1
             pred_row = pred_dict[file_name]
             gt_row = gt_dict[file_name]
             
@@ -167,6 +145,7 @@ def evaluate_predictions(pred_df: pd.DataFrame, gt_df: pd.DataFrame) -> Dict:
             iou_scores.append(iou)
     
     # Calculate and return mean metrics
+    print(f"Evaluated {count} files")
     return {
         'mean_mse': np.mean(mse_scores) if mse_scores else 0.0,
         'mean_iou': np.mean(iou_scores) if iou_scores else 0.0
@@ -203,6 +182,11 @@ def calculate_task5_metrics(pred_path: str, gt_path: str) -> Dict:
 
 def main():
     """Main function to evaluate all models and save results."""
+    # Change to SeizureSemiologyBench directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(script_dir)
+    os.chdir(project_root)
+    
     # Model names to evaluate
     model_names = [
         "InternVL3_5-8B",
@@ -214,12 +198,12 @@ def main():
         "Qwen2.5-VL-72B-Instruct"
     ]
     
-    ground_truth = "../result/ground_truth/task5_annotation.csv"
+    ground_truth = "result/ground_truth/task5_annotation.csv"
     results_data = []
     
     # Calculate metrics for each model
     for model_name in model_names:
-        model_prediction = f"../result/vlm_inference/{model_name}/Task5_{model_name}_all_merged.csv"
+        model_prediction = f"result/vlm_inference/{model_name}/Task5_{model_name}_all_merged.csv"
         print(f"Evaluating {model_name}...")
         
         results = calculate_task5_metrics(model_prediction, ground_truth)
@@ -237,7 +221,7 @@ def main():
     
     # Create results DataFrame and save
     results_df = pd.DataFrame(results_data)
-    output_path = "../metrics/Task5_duration_metrics.csv"
+    output_path = "metrics/Task5_duration_metrics.csv"
     results_df.to_csv(output_path, index=False)
     print(f"\nResults saved to: {output_path}")
     

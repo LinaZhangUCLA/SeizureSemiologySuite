@@ -15,6 +15,16 @@ def calculate_metrics(y_true, y_pred, feature_name=None):
     y_true = y_true.str.strip().str.lower()
     y_pred = y_pred.str.strip().str.lower()
     
+    # Filter out any non-standard values
+    valid_values = ['yes', 'no']  # All features use binary yes/no values
+    
+    valid_mask = y_true.isin(valid_values) & y_pred.isin(valid_values)
+    y_true = y_true[valid_mask]
+    y_pred = y_pred[valid_mask]
+    
+    if len(y_true) == 0 or len(y_pred) == 0:
+        return '', '', '', ''
+    
     if feature_name == 'verbal_responsiveness':
         # Multi-class classification metrics
         accuracy = accuracy_score(y_true, y_pred)
@@ -68,15 +78,24 @@ def get_model_metrics(model_name, features):
                     y_pred = y_pred[valid_indices]
                 
                 # Calculate metrics
-                accuracy, precision, recall, f1 = calculate_metrics(y_true, y_pred, feature)
-                
-                # Store results
-                results[feature] = {
-                    'precision': precision,
-                    'recall': recall,
-                    'f1': f1,
-                    'accuracy': accuracy
-                }
+                try:
+                    accuracy, precision, recall, f1 = calculate_metrics(y_true, y_pred, feature)
+                    
+                    # Store results
+                    results[feature] = {
+                        'precision': precision,
+                        'recall': recall,
+                        'f1': f1,
+                        'accuracy': accuracy
+                    }
+                except Exception as e:
+                    print(f"Error calculating metrics for feature {feature}: {str(e)}")
+                    results[feature] = {
+                        'precision': '',
+                        'recall': '',
+                        'f1': '',
+                        'accuracy': ''
+                    }
                 
                 print(f"Processed feature: {feature}")
                 print(f"Metrics - Precision: {precision:.3f}, Recall: {recall:.3f}, F1: {f1:.3f}, Accuracy: {accuracy:.3f}")
@@ -163,16 +182,14 @@ def main():
     
     # Model names
     model_names = [
+        'Qwen2.5-Omni-7B',
         'Qwen2.5-VL-7B-Instruct',
-        # 'InternVL3_5-8B',
-        # 'Qwen2.5-VL-32B-Instruct',
-        # 'InternVL3_5-38B',
-        # 'wen2.5-VL-72B-Instruct',
-        # 'Audio-Flamingo-3',
-        # 'Qwen2.5-Omni',
-        # 'Lingshu-32B'
+        'Qwen2.5-VL-32B-Instruct',
+        'Qwen2.5-VL-72B-Instruct',
+        'InternVL3_5-8B',
+        'InternVL3_5-38B',
+        'Lingshu-32B'
     ]
-    
     
     output_path = 'metrics/Task1_precision_recall_f1_accuracy.csv'
     

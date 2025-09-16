@@ -1,0 +1,261 @@
+import os
+import re
+import csv
+import time
+import asyncio
+import backoff
+import pandas as pd
+from typing import Dict, Any
+from openai import AsyncOpenAI
+import argparse
+
+# =========================
+# Conf
+# =========================
+def build_config(model_name: str) -> Dict[str, Any]:
+    # Resolve project root as the parent directory of this file's folder (evaluation/..)
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+    # Special case for ground truth
+    if model_name.lower() == "ground_truth":
+        gt_dir = os.path.join(project_root, "result", "ground_truth")
+        input_csv = os.path.join(gt_dir, "task12_annotation.csv")
+        output_csv = os.path.join(gt_dir, "Results_task12_annotation.csv")
+    else:
+        base_dir = os.path.join(project_root, "result", "vlm_inference", model_name)
+        input_csv = os.path.join(base_dir, f"Task1_{model_name}_all_merged_llmmerge.csv")
+        output_csv = os.path.join(base_dir, f"lili_Results_Task1_{model_name}_all_merged_llmmerge.csv")
+
+    return {
+        "INPUT_CSV": input_csv,
+        "OUTPUT_CSV": output_csv,
+        "MODEL": "qwen-plus",
+        "BASE_URL": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "API_KEY": os.getenv("DASHSCOPE_API_KEY") or "sk-5f701b88a80d4b78ba63990a98416421",
+        "TEMPERATURE": 0.0,
+        "DRY_RUN": False,
+        "COL_GT": "ground_truth",
+        "COL_PRED": "ai_text",
+        "CONCURRENCY": 20,  # max simultaneous requests
+    }
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Task2: Generate question list results")
+    parser.add_argument(
+        "--model_name",
+        type=str,
+        required=True,
+        help="Model name used to build input/output CSV paths, e.g., Qwen2.5-VL-7B-Instruct; use 'ground_truth' for GT CSVs",
+    )
+    return parser.parse_args()
+
+CONFIG: Dict[str, Any] = {}
+
+
+QUESTIONS = [
+    {"id": "head_turning_Q1", "text": "Does the head turn forcefully relative to the shoulders to one side for at least a few seconds?", "format": "yn", "tag": "head_turning"},
+    {"id": "head_turning_Q2", "text": "Does the head turn to the patient's left or to the patient's right?", "format": "lr", "tag": "head_turning"},
+    {"id": "blank_stare_Q1", "text": "Are the eyes open?", "format": "yn", "tag": "blank_stare"},
+    {"id": "blank_stare_Q2", "text": "Do the pupils of the eyes remain in a fixed position?", "format": "yn", "tag": "blank_stare"},
+    {"id": "close_eyes_Q1", "text": "Does the eyelid closure appear forceful, as if squeezed shut?", "format": "yn", "tag": "close_eyes"},
+    {"id": "eye_blinking_Q1", "text": "Is the blinking faster than 1Hz?", "format": "yn", "tag": "eye_blinking"},
+    {"id": "eye_blinking_Q2", "text": "Does the blinking happen for at least a few seconds?", "format": "yn", "tag": "eye_blinking"},
+    {"id": "face_pulling_Q1", "text": "Does the face pull to the patient’s left or to the patient’s right?", "format": "lr", "tag": "face_pulling"},
+    {"id": "face_pulling_Q2", "text": "Does the face pulling sustain for at least a few seconds?", "format": "yn", "tag": "face_pulling"},
+    {"id": "face_twitching_Q1", "text": "Are the twitches brief and repetitive?", "format": "yn", "tag": "face_twitching"},
+    {"id": "face_twitching_Q2", "text": "Does the face twitch to the patient’s left or to the patient’s right? (L/R)", "format": "lr", "tag": "face_twitching"},
+    {"id": "tonic_Q1", "text": "Does the patient exhibit sudden muscle stiffness or rigidity?", "format": "yn", "tag": "tonic"},
+    {"id": "tonic_Q2", "text": "Which body parts are affected? (list parts)", "format": "list", "tag": "tonic"},
+    {"id": "tonic_Q3", "text": "For each affected body part, specify which side of the patient is involved? (L/R)", "format": "map", "tag": "tonic"},
+    {"id": "clonic_Q1", "text": "Are the movements rhythmic, stereotyped and repetitive jerks", "format": "yn", "tag": "clonic"},
+    {"id": "clonic_Q2", "text": "Which body parts are affected? (list parts)", "format": "list", "tag": "clonic"},
+    {"id": "clonic_Q3", "text": "For each affected body part, specify which side of the patient is involved? (L/R)", "format": "map", "tag": "clonic"},
+    {"id": "arm_flexion_Q1", "text": "Are one or both arms held in a flexed posture? (N for one, Y for two)", "format": "yn", "tag": "arm_flexion"},
+    {"id": "arm_flexion_Q2", "text": "Is this posture sustained?", "format": "yn", "tag": "arm_flexion"},
+    {"id": "arm_flexion_Q3", "text": "For each affected arm, specify which side of the patient is involved? (L/R)", "format": "map", "tag": "arm_flexion"},
+    {"id": "arm_straightening_Q1", "text": "Are one or both arms held in an extended posture? (N for one, Y for two)", "format": "yn", "tag": "arm_straightening"},
+    {"id": "arm_straightening_Q2", "text": "Is this posture sustained?", "format": "yn", "tag": "arm_straightening"},
+    {"id": "arm_straightening_Q3", "text": "For each affected arm, specify which side of the patient is involved? (L/R)", "format": "map", "tag": "arm_straightening"},
+    {"id": "figure4_Q1", "text": "Is one arm extended while the other is flexed?", "format": "yn", "tag": "figure4"},
+    {"id": "figure4_Q2", "text": "Which arm of the patient is extended and which arm is flexed? (LR/RL)", "format": "pair", "tag": "figure4"},
+    {"id": "figure4_Q3", "text": "Is this posture sustained?", "format": "yn", "tag": "figure4"},
+    {"id": "oral_automatisms_Q1", "text": "Does the patient have repetitive, stereotypical mouth or lip movements?", "format": "yn", "tag": "oral_automatisms"},
+    {"id": "limb_automatisms_Q1", "text": "Does the patient have repetitive stereotyped movements with their hands or legs?", "format": "yn", "tag": "limb_automatisms"},
+    {"id": "limb_automatisms_Q2", "text": "For each involved limb, specify which side of the patient is involved? (L/R for each listed parts)", "format": "map", "tag": "limb_automatisms"},
+    {"id": "pelvic_thrusting_Q1", "text": "Are there repetitive anterior–posterior movements of the hips (hips move back and forth)?", "format": "yn", "tag": "pelvic_thrusting"},
+    {"id": "full_body_shaking_Q1", "text": "Does the patient experience shaking of the entire body, including arms, legs, and torso? Answer with 'yes' or 'no'.", "format": "yn", "tag": "full_body_shaking"},
+    {"id": "asynchronous_movement_Q1", "text": "Which limbs of the patient are shaking? (list parts)", "format": "list", "tag": "full_body_shaking"},
+    {"id": "asynchronous_movement_Q2", "text": "Are the limbs shaking at variable frequency, amplitude or both?", "format": "text", "tag": "full_body_shaking"},
+    {"id": "asynchronous_movement_Q3", "text": "Do the movements appear non-stereotyped?", "format": "yn", "tag": "full_body_shaking"},
+    {"id": "asynchronous_movement_Q4", "text": "Are the limb movements asynchronous with respect to one another?", "format": "yn", "tag": "asynchronous_movement"},
+    {"id": "arms_move_simultaneously_Q1", "text": "Do the patient's arms start moving approximately at the same time? Answer 'yes' or 'no'.", "format": "yn", "tag": "arms_move_simultaneously"},
+    {"id": "verbal_responsiveness_Q1", "text": "Did anyone address the patient verbally?", "format": "yn", "tag": "verbal_responsiveness"},
+    {"id": "verbal_responsiveness_Q2", "text": "If the patient was addressed verbally, did the patient provide a coherent answer?", "format": "yn", "tag": "verbal_responsiveness"},
+    {"id": "ictal_vocalization_Q1", "text": "Is the patient making groaning, moaning, or guttural sounds?", "format": "yn", "tag": "ictal_vocalization"},
+    {"id": "ictal_vocalization_Q2", "text": "Are the noises meaningless, stereotypical, and repetitive?", "format": "yn", "tag": "ictal_vocalization"},
+]
+
+# =========================
+# Regex + Format Helpers
+# =========================
+YESNO_RE = re.compile(r"\b(yes|no)\b", re.I)
+LR_RE = re.compile(r"\b(left|right|l|r)\b", re.I)
+PAIR_RE = re.compile(r"\b(LR|RL|left-right|right-left)\b", re.I)
+
+SYSTEM_PROMPT = (
+    "Given the evidence text, "
+    "answer the user's question in the STRICT format specified. "
+    "If not enough information, answer 'N/A' for yes/no questions, or 'unknown' for others. "
+    "Do NOT add explanations."
+)
+
+FORMAT_HINTS = {
+    "yn": "Output exactly one word: yes or no.",
+    "lr": "Output exactly one letter: L or R (L=left, R=right).",
+    "list": "Output a comma-separated list of body parts (e.g., 'left arm,right leg'); use 'none' if none.",
+    "map": "Output comma-separated pairs of part:side using L/R (e.g., 'left arm:L,right arm:R'); use 'none' if none.",
+    "pair": "Output exactly one of: LR or RL.",
+    "text": "Output a short phrase; use 'unknown' if unclear.",
+    "note": "If this is an instructional note, output 'note'.",
+}
+
+
+def _normalize(fmt: str, raw: str) -> str:
+    s = (raw or "").strip()
+    if fmt == "yn":
+        m = YESNO_RE.search(s)
+        return (m.group(1).lower() if m else "no")
+    if fmt == "lr":
+        m = LR_RE.search(s)
+        if not m:
+            return "unknown"
+        return "L" if m.group(1).lower().startswith("l") else "R"
+    if fmt == "pair":
+        m = PAIR_RE.search(s.replace(" ", ""))
+        if not m:
+            return "unknown"
+        return "LR" if m.group(0).upper().startswith("LR") else "RL"
+    if fmt in ("list", "map", "text"):
+        return s if s else "unknown"
+    if fmt == "note":
+        return "note"
+    return s
+
+
+def _dry_answer(fmt: str) -> str:
+    return {
+        "yn": "no",
+        "lr": "unknown",
+        "pair": "unknown",
+        "list": "none",
+        "map": "none",
+        "text": "unknown",
+        "note": "note",
+    }.get(fmt, "")
+
+
+# =========================
+# Async LLM Call
+# =========================
+@backoff.on_exception(backoff.expo, Exception, max_time=120)
+async def _ask_llm(client, model: str, q: Dict[str, Any], row) -> str:
+    fmt = q.get("format", "yn")
+    fmt_hint = FORMAT_HINTS.get(fmt, FORMAT_HINTS["text"])
+    tag = q.get("tag")
+    just_col = f"justification_for_{tag}"
+    justification = str(row.get(just_col, ""))
+
+    prompt = (
+        f"QUESTION:\n{q['text']}\n\n"
+        f"Evidence:\n{justification}\n\n"
+        f"STRICT ANSWER FORMAT: {fmt_hint}\n"
+        f"Your answer:"
+    )
+    print("prompt:", prompt)
+    resp = await client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt},
+        ],
+        temperature=CONFIG["TEMPERATURE"],
+    )
+    raw = resp.choices[0].message.content or ""
+    return _normalize(fmt, raw)
+
+
+# =========================
+# Process One Row (Async)
+# =========================
+async def process_row(row_idx, row, questions, client, sem, dry_run=False):
+    results = {}
+
+    async def ask_question(q):
+        async with sem:
+            try:
+                if dry_run:
+                    ans = _dry_answer(q.get("format", "yn"))
+                else:
+                    ans = await _ask_llm(client, CONFIG["MODEL"], q, row)
+                print(f"Row {row_idx+1} | Question {q['id']} | Answer: {ans}")
+                return q['id'], ans
+            except Exception as e:
+                print(f"Error Row {row_idx+1}, Question {q['id']}: {e}")
+                return q['id'], None
+
+    tasks = [asyncio.create_task(ask_question(q)) for q in questions]
+    for qid, ans in await asyncio.gather(*tasks):
+        results[qid] = ans
+    return results
+
+
+# =========================
+# Main
+# =========================
+async def main_async():
+    cfg = CONFIG.copy()
+    if not os.path.isfile(cfg["INPUT_CSV"]):
+        raise FileNotFoundError(f"INPUT_CSV does not exist: {cfg['INPUT_CSV']}")
+
+    client = None
+    if not cfg["DRY_RUN"]:
+        client = AsyncOpenAI(api_key=cfg["API_KEY"], base_url=cfg["BASE_URL"])
+
+    df = pd.read_csv(cfg["INPUT_CSV"], encoding="utf-8")
+    df = df[:2]
+    print("Loading CSV:", cfg["INPUT_CSV"])
+    print(f"Running with model={cfg['MODEL']} dry_run={cfg['DRY_RUN']}")
+    total_rows = len(df)
+
+    # Only ask the questions that exist in the input CSV columns
+    questions_existing = [q for q in QUESTIONS if q["tag"] in df.columns]
+
+    print(f"Found {len(questions_existing)} existing questions")
+
+    sem = asyncio.Semaphore(cfg["CONCURRENCY"])
+
+    for idx, row in df.iterrows():
+        start_time = time.time()
+        row_result = await process_row(idx, row, questions_existing, client, sem, dry_run=cfg["DRY_RUN"])
+        for col, ans in row_result.items():
+            df.at[idx, col] = ans
+        elapsed = time.time() - start_time
+        print(f"Finished Row {idx+1}/{total_rows} in {elapsed:.2f}s\n")
+
+    # Ensure output columns exist and fill with empty strings
+    for q in QUESTIONS:
+        if q["id"] not in df.columns:
+            df[q["id"]] = ""
+
+    # Save results
+    first_col_name = df.columns[0]  # keep first column
+    question_cols = [q["id"] for q in QUESTIONS]
+    df_out = df[[first_col_name] + question_cols]
+    df_out.to_csv(cfg["OUTPUT_CSV"], index=False, quoting=csv.QUOTE_MINIMAL)
+    print(f"Done. Saved: {cfg['OUTPUT_CSV']}")
+
+
+if __name__ == "__main__":
+    args = parse_args()
+    CONFIG = build_config(args.model_name)
+    asyncio.run(main_async())

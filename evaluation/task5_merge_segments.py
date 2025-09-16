@@ -2,6 +2,7 @@ import pandas as pd
 import re
 from collections import defaultdict
 import sys
+import os
 
 def time_to_seconds(time_str):
     """Convert MM:SS format to total seconds"""
@@ -68,6 +69,11 @@ def merge_segments(input_csv_path, output_csv_path):
     print(f"Processed {len(merged_results)} videos from {len(df)} segments")
     
 def main():
+    # Change to SeizureSemiologyBench directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(script_dir)
+    os.chdir(project_root)
+    
     # For each of these VLM inferences
     model_names = [
         "InternVL3_5-8B",
@@ -81,9 +87,9 @@ def main():
     
     # Merge the times for each model
     for model_name in model_names:
-        input_path = f"../result/vlm_inference/{model_name}/Task5_{model_name}_all.csv"
+        input_path = f"result/vlm_inference/{model_name}/Task5_{model_name}_all.csv"
         print(input_path)
-        output_path = f"../result/vlm_inference/{model_name}/Task5_{model_name}_all_merged.csv"
+        output_path = f"result/vlm_inference/{model_name}/Task5_{model_name}_all_merged.csv"
         merge_segments(input_path, output_path)
 
 if __name__ == "__main__":

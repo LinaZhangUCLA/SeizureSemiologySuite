@@ -42,7 +42,13 @@ def parse_arguments():
     
     # Video range settings
     parser.add_argument('--videos_range', type=str, default='1-2314',
-                       help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')                   
+                       help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')  
+
+    parser.add_argument('--missing4l_csv', type=str, default=None,
+                        help='CSV file listing missing Task4L video_name (first column or header video_name)')
+    parser.add_argument('--missing5_csv', type=str, default=None,
+                        help='CSV file listing missing Task5 video_name (first column or header video_name)')
+
     
     # # Data settings
     # parser.add_argument('--task3_6_dataset_dir', type=str, 
@@ -535,6 +541,42 @@ def validate_videos_range(clip_files:List[str], videos_range:List):
         # add warning
         print(f"Warning: videos_range[1] is greater than the number of videos, set to {len(clip_files)}")
     return videos_range
+def load_video_names_from_csv(path: str):
+
+    names = set()
+    if not path:
+        return names
+    import csv, os
+    with open(path, newline='', encoding='utf-8') as f:
+        r = csv.reader(f)
+        rows = list(r)
+    if not rows:
+        return names
+    # 检测第一行是否表头
+    start = 0
+    if rows and rows[0]:
+        h0 = rows[0][0].strip().strip('"').strip("'").lower()
+        if h0 == 'video_name':
+            start = 1
+    for row in rows[start:]:
+        if not row:
+            continue
+        name = row[0].strip().strip('"').strip("'")
+        if not name:
+            continue
+        # 如果带路径只取文件名
+        name = os.path.basename(name)
+        names.add(name)
+    return names
+
+
+def filter_by_names(fp_list, names_set):
+
+    if not names_set:
+        return fp_list
+    want = {n.lower() for n in names_set}
+    out = [fp for fp in fp_list if os.path.basename(fp).lower() in want]
+    return out
 
 def get_fp_list(file_dir):
     fp_list = []
@@ -558,6 +600,26 @@ def main():
     task4_HT_clip_fps = get_fp_list(task4_HT_dataset_dir)
     task4_AM_clip_fps = get_fp_list(task4_AM_dataset_dir)
     task5_clip_fps = get_fp_list(task5_dataset_dir)
+        
+    missing4l = load_video_names_from_csv(args.missing4l_csv) if args.missing4l_csv else set()
+    missing5  = load_video_names_from_csv(args.missing5_csv)  if args.missing5_csv  else set()
+    wanted_names = set().union(missing4l, missing5)
+
+    if wanted_names:
+        before_n = len(task5_clip_fps)
+        task5_clip_fps = filter_by_names(task5_clip_fps, wanted_names)
+        after_n = len(task5_clip_fps)
+        
+        have_names = {os.path.basename(p) for p in task5_clip_fps}
+        not_found = sorted(n for n in wanted_names if n not in have_names)
+        print(f"[Filter] Task5/4L missing-run: requested={len(wanted_names)}, matched={after_n}, not_found={len(not_found)}")
+        if not_found:
+            
+            miss_report = os.path.join(inference_dir, "missing_not_found_in_dataset.txt")
+            with open(miss_report, "w", encoding="utf-8") as f:
+                for n in not_found:
+                    f.write(n + "\n")
+            print(f"[Filter] Names not found saved to: {miss_report}")
 
 
     # =============================================== task3 + task6 =============================================================== #

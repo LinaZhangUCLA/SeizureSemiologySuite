@@ -87,8 +87,8 @@ os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 ################################################################################################
 model_name = args.model_name
 task3_6_dataset_dir = os.path.join(args.dataset_dir, "task1_segments") 
-task4_HT_dataset_dir = os.path.join(args.dataset_dir, "task4_head_turning")
-task4_AM_dataset_dir = os.path.join(args.dataset_dir, "task4_arm_movement")
+#task4_HT_dataset_dir = os.path.join(args.dataset_dir, "task4_head_turning")
+#task4_AM_dataset_dir = os.path.join(args.dataset_dir, "task4_arm_movement")
 task5_dataset_dir = os.path.join(args.dataset_dir, "task5_segment")
 
 

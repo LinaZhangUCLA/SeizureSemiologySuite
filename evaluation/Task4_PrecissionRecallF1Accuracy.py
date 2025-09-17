@@ -159,7 +159,7 @@ def get_model_metrics(model_name):
             valid_labels = [label.lower() for label in valid_labels]
             
             # Filter out invalid values from both ground truth and predictions
-            invalid_values = ['nan', 'NAN', 'filled', 'N/A', 'no']
+            invalid_values = ['nan', 'NAN', 'filled', 'N/A']
             valid_mask = (merged_df['body_region_onset'].isin(valid_labels)) & \
                         (merged_df['onset_body_part'].notna()) & \
                         (~merged_df['onset_body_part'].isin(invalid_values))
@@ -247,9 +247,6 @@ def write_metrics_file(model_names, results_dict, output_path):
 
 def main():
     # Model names
-    # model_names = [
-    #     'Qwen2.5-VL-7B-Instruct'
-    # ]
 
     model_names = [
         'Qwen2.5-Omni-7B',

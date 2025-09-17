@@ -20,7 +20,7 @@ python /home/lina/ssb/SeizureSemiologyBench/inference/task3456_internvl3_5test.p
   --dataset_dir /mnt/SSD3/lost_videos/InternVL3_5-8B \
   --cache_dir /mnt/SSD3/xinyi/benchmark/model_cache \
   --output_dir /home/lina/SeizureSemiologyBench\inten1147 \
-  --videos_range 1-2413 \
+  --videos_range 1-788 \
   --tp 1
 
 echo "Done!"

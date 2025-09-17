@@ -30,7 +30,7 @@ python ../task3456_internvl3_5.py \
     --videos_range 301-600 \
     --output_dir /home/hubing/SeizureSemiologyBench/output \
     --model_name OpenGVLab/InternVL3_5-8B \
-    --dataset_dir /home/hubing/SeizureSemiologyBench/ucla2  \
+    --dataset_dir /home/hubing/SeizureSemiologyBench/lost_videos/InternVL3_5-8B  \
     --cache_dir /home/hubing/SeizureSemiologyBench/cache 
 
 echo "Done!"

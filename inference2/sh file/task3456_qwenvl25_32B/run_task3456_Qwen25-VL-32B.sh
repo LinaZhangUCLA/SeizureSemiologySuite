@@ -27,6 +27,6 @@ python ../task3456_Qwen-25-VL-7B-Instruct.py \
     --videos_range 1-302 \
     --output_dir /home/hubing/SeizureSemiologyBench/output \
     --model_name Qwen/Qwen2.5-VL-32B-Instruct \
-    --dataset_dir /home/hubing/SeizureSemiologyBench/ucla2 \
+    --dataset_dir /home/hubing/SeizureSemiologyBench/lost_videos/Qwen2.5-VL-32B-Instruct \
     --cache_dir /home/hubing/SeizureSemiologyBench/cache 
 echo "Done!"

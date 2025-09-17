@@ -50,12 +50,21 @@ def get_model_metrics(model_name, features):
     """
     # File paths
     gt_path = 'result/ground_truth/task12_annotation.csv'
-    pred_path = f'result/vlm_inference/{model_name}/Task1_{model_name}_all_merged.csv'
+    # Special case for audio-flamingo-3
+    if model_name == 'audio-flamingo-3':
+        pred_path = f'result/vlm_inference/{model_name}/Task1_AF3_Full_Results.csv'
+    else:
+        pred_path = f'result/vlm_inference/{model_name}/Task1_{model_name}_all_merged.csv'
     
     try:
         # Read ground truth and prediction files
         df_gt = pd.read_csv(gt_path, encoding='latin-1')
         df_pred = pd.read_csv(pred_path, encoding='latin-1')
+        
+        # Handle file name differences for audio-flamingo-3
+        if model_name == 'audio-flamingo-3':
+            # Convert .mp4 to .wav in ground truth file names
+            df_gt['file_name'] = df_gt['file_name'].str.replace('.mp4', '.wav')
         
         # Merge ground truth and predictions
         merged_df = pd.merge(df_gt, df_pred, on='file_name', how='inner', 
@@ -182,6 +191,7 @@ def main():
     
     # Model names
     model_names = [
+        'audio-flamingo-3',
         'Qwen2.5-Omni-7B',
         'Qwen2.5-VL-7B-Instruct',
         'Qwen2.5-VL-32B-Instruct',

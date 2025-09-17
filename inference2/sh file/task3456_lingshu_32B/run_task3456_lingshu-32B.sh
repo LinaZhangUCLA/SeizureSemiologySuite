@@ -23,9 +23,9 @@ echo "Conda environment lingshu activated."
 # Run the inference script
 python ../task3456_lingshu_32b.py \
     --gpu 0,1 \
-    --videos_range 1-600 \
+    --videos_range 1-33 \
     --model_name lingshu-medical-mllm/Lingshu-32B \
     --output_dir /home/hubing/SeizureSemiologyBench/output \
-    --dataset_dir /home/hubing/SeizureSemiologyBench/ucla  \
+    --dataset_dir /home/hubing/SeizureSemiologyBench/lost_videos/Lingshu-32B  \
     --cache_dir /home/hubing/SeizureSemiologyBench/cache 
 echo "Done!"

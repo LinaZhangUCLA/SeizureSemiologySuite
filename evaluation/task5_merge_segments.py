@@ -2,6 +2,7 @@ import pandas as pd
 import re
 from collections import defaultdict
 import sys
+import os
 
 def time_to_seconds(time_str):
     """Convert MM:SS format to total seconds"""
@@ -9,12 +10,6 @@ def time_to_seconds(time_str):
         return 0
     minutes, seconds = map(int, str(time_str).split(':'))
     return minutes * 60 + seconds
-
-def seconds_to_time(total_seconds):
-    """Convert total seconds back to MM:SS format"""
-    minutes = total_seconds // 60
-    seconds = total_seconds % 60
-    return f"{minutes:02d}:{seconds:02d}"
 
 def extract_base_filename(filename):
     """Extract base filename by removing _segment_X suffix"""
@@ -49,10 +44,8 @@ def merge_segments(input_csv_path, output_csv_path):
         # Sort segments by segment number
         segments.sort(key=lambda x: int(re.search(r'_segment_(\d+)', x['file_name']).group(1)))
         
-        # Get start time from first segment (segment_0)
-        start_time = segments[0]['start_time']
-        if pd.isna(start_time) or start_time == '':
-            start_time = '00:00'
+        # Get start time from first segment (segment_0) in seconds
+        start_time_seconds = time_to_seconds(segments[0]['start_time'])
         
         # Get the last segment number and its end time
         last_segment = segments[-1]
@@ -61,15 +54,12 @@ def merge_segments(input_csv_path, output_csv_path):
         
         # Calculate merged end time: (last_segment_num * 25) + end_time_of_last_segment
         last_end_seconds = time_to_seconds(last_segment_end_time)
-        
-        # Formula: end_time = (last_segment_num * 25) + end_time_of_last_segment
         total_end_seconds = (last_segment_num * 25) + last_end_seconds
-        end_time = seconds_to_time(total_end_seconds)
         
         merged_results.append({
             'file_name': base_filename,
-            'start_time': start_time,
-            'end_time': end_time
+            'start_seconds': start_time_seconds,
+            'end_seconds': total_end_seconds
         })
     
     # Create output DataFrame and save
@@ -77,13 +67,53 @@ def merge_segments(input_csv_path, output_csv_path):
     output_df.to_csv(output_csv_path, index=False)
     print(f"Merged segments saved to: {output_csv_path}")
     print(f"Processed {len(merged_results)} videos from {len(df)} segments")
+    
+def main():
+    # Change to SeizureSemiologyBench directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(script_dir)
+    os.chdir(project_root)
+    
+    # For each of these VLM inferences
+    model_names = [
+        "InternVL3_5-8B",
+        "InternVL3_5-38B", 
+        "Lingshu-32B",
+        "Qwen2.5-Omni-7B",
+        "Qwen2.5-VL-7B-Instruct",
+        "Qwen2.5-VL-32B-Instruct",
+        "Qwen2.5-VL-72B-Instruct"
+    ]
+    
+    # Merge the times for each model
+    for model_name in model_names:
+        input_path = f"result/vlm_inference/{model_name}/Task5_{model_name}_all.csv"
+        print(input_path)
+        output_path = f"result/vlm_inference/{model_name}/Task5_{model_name}_all_merged.csv"
+        merge_segments(input_path, output_path)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python task5_merge_segments.py <input_csv_path> <output_csv_path>")
-        sys.exit(1)
-    
-    input_path = sys.argv[1]
-    output_path = sys.argv[2]
-    
-    merge_segments(input_path, output_path)
+    main()
+
+### Output: ###
+# ../result/vlm_inference/InternVL3_5-8B/Task5_InternVL3_5-8B_all.csv
+# Merged segments saved to: ../result/vlm_inference/InternVL3_5-8B/Task5_InternVL3_5-8B_all_merged.csv
+# Processed 294 videos from 1625 segments
+# ../result/vlm_inference/InternVL3_5-38B/Task5_InternVL3_5-38B_all.csv
+# Merged segments saved to: ../result/vlm_inference/InternVL3_5-38B/Task5_InternVL3_5-38B_all_merged.csv
+# Processed 371 videos from 2078 segments
+# ../result/vlm_inference/Lingshu-32B/Task5_Lingshu-32B_all.csv
+# Merged segments saved to: ../result/vlm_inference/Lingshu-32B/Task5_Lingshu-32B_all_merged.csv
+# Processed 417 videos from 2380 segments
+# ../result/vlm_inference/Qwen2.5-Omni-7B/Task5_Qwen2.5-Omni-7B_all.csv
+# Merged segments saved to: ../result/vlm_inference/Qwen2.5-Omni-7B/Task5_Qwen2.5-Omni-7B_all_merged.csv
+# Processed 372 videos from 2116 segments
+# ../result/vlm_inference/Qwen2.5-VL-7B-Instruct/Task5_Qwen2.5-VL-7B-Instruct_all.csv
+# Merged segments saved to: ../result/vlm_inference/Qwen2.5-VL-7B-Instruct/Task5_Qwen2.5-VL-7B-Instruct_all_merged.csv
+# Processed 386 videos from 2175 segments
+# ../result/vlm_inference/Qwen2.5-VL-32B-Instruct/Task5_Qwen2.5-VL-32B-Instruct_all.csv
+# Merged segments saved to: ../result/vlm_inference/Qwen2.5-VL-32B-Instruct/Task5_Qwen2.5-VL-32B-Instruct_all_merged.csv
+# Processed 388 videos from 2111 segments
+# ../result/vlm_inference/Qwen2.5-VL-72B-Instruct/Task5_Qwen2.5-VL-72B-Instruct_all.csv
+# Merged segments saved to: ../result/vlm_inference/Qwen2.5-VL-72B-Instruct/Task5_Qwen2.5-VL-72B-Instruct_all_merged.csv
+# Processed 424 videos from 2413 segments

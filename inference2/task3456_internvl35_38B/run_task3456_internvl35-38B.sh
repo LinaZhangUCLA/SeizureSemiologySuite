@@ -1,9 +1,11 @@
 #!/bin/bash
 
 
+
 # Activate virtual environment
 eval "$(conda shell.bash hook)"
-conda activate lingshu
+# conda activate qwenvl
+conda activate internvl3_5
 
 # Check if activation was successful
 if [ $? -ne 0 ]; then
@@ -11,7 +13,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "Conda environment lingshu activated."
+echo "Conda environment internvl3_5 activated."
 
 
 # model_name options
@@ -20,12 +22,15 @@ echo "Conda environment lingshu activated."
 # Qwen/Qwen2.5-VL-72B-Instruct  4GPU
 
 # video_range 1-2314  eg.1-1000, 1001-2000, 2001-2314
+
 # Run the inference script
-python ../task3456_lingshu_32b.py \
+python ../task3456_internvl3_5.py \
     --gpu 0,1 \
-    --videos_range 1-33 \
-    --model_name lingshu-medical-mllm/Lingshu-32B \
-    --output_dir /home/hubing/SeizureSemiologyBench/output \
-    --dataset_dir /home/hubing/SeizureSemiologyBench/lost_videos/Lingshu-32B  \
-    --cache_dir /home/hubing/SeizureSemiologyBench/cache 
+    --tp 2 \
+    --videos_range 1-90 \
+    --output_dir /home/lina/SeizureSemiologyBench/output \
+    --model_name OpenGVLab/InternVL3_5-38B \
+    --dataset_dir /mnt/SSD3/lost_videos/InternVL3_5-38B  \
+    --cache_dir /mnt/SSD3/lina/SeizureSemiologyBench/cache 
+
 echo "Done!"

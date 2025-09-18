@@ -527,6 +527,8 @@ def validate_videos_range(clip_files:List[str], videos_range:List):
         videos_range[0] = 1
         # add warning
         print(f"Warning: videos_range[0] is less than 1, set to 1")
+    if int(videos_range[0]) > len(clip_files):
+        videos_range[0] = len(clip_files)
     if int(videos_range[1]) > 2300:
         videos_range[1] = len(clip_files)    
     if int(videos_range[1]) > len(clip_files):

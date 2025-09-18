@@ -337,6 +337,9 @@ def validate_videos_range(clip_files: List[str], videos_range: List[str]) -> Lis
     if rng[0] < 1:
         print('Warning: start index < 1; setting to 1')
         rng[0] = 1
+    if rng[0] > len(clip_files):
+        print(f'Warning: start index > number of videos ({len(clip_files)}); setting to {len(clip_files)}')
+        rng[0] = len(clip_files)    
     if rng[1] > 2300:
         rng[1] = len(clip_files)  
     if rng[1] > len(clip_files):
@@ -386,8 +389,8 @@ def main():
 
     # Gather files
     task3_6_clip_fps = get_fp_list(task3_6_dataset_dir)
-    task4_HT_clip_fps = get_fp_list(task4_HT_dataset_dir)
-    task4_AM_clip_fps = get_fp_list(task4_AM_dataset_dir)
+    # task4_HT_clip_fps = get_fp_list(task4_HT_dataset_dir)
+    # task4_AM_clip_fps = get_fp_list(task4_AM_dataset_dir)
     task5_clip_fps = get_fp_list(task5_dataset_dir)
 
     # Task 3 + 6

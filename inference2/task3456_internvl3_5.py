@@ -358,8 +358,8 @@ def main():
 
     # Subfolders per task
     task3_6_dataset_dir = os.path.join(dataset_dir, 'task1_segments')
-    task4_HT_dataset_dir = os.path.join(dataset_dir, 'task4_head_turning')
-    task4_AM_dataset_dir = os.path.join(dataset_dir, 'task4_arm_movement')
+    #task4_HT_dataset_dir = os.path.join(dataset_dir, 'task4_head_turning')
+    #task4_AM_dataset_dir = os.path.join(dataset_dir, 'task4_arm_movement')
     task5_dataset_dir = os.path.join(dataset_dir, 'task5_segment')
 
     videos_range = args.videos_range.split('-')
@@ -376,8 +376,8 @@ def main():
     # CSVs
     model_tag = model_name.split('/')[-1]
     task3_6_result_csv_fp = os.path.join(args.output_dir, f'Task3_6_{model_tag}_{task3_6_videos_range[0]}-{task3_6_videos_range[1]}.csv')
-    task4_HT_result_csv_fp = os.path.join(args.output_dir, f'Task4_HT_{model_tag}_{task4_HT_videos_range[0]}-{task4_HT_videos_range[1]}.csv')
-    task4_AM_result_csv_fp = os.path.join(args.output_dir, f'Task4_AM_{model_tag}_{task4_AM_videos_range[0]}-{task4_AM_videos_range[1]}.csv')
+    #task4_HT_result_csv_fp = os.path.join(args.output_dir, f'Task4_HT_{model_tag}_{task4_HT_videos_range[0]}-{task4_HT_videos_range[1]}.csv')
+    #task4_AM_result_csv_fp = os.path.join(args.output_dir, f'Task4_AM_{model_tag}_{task4_AM_videos_range[0]}-{task4_AM_videos_range[1]}.csv')
     task4L_5_result_csv_fp = os.path.join(args.output_dir, f'Task4L_5_{model_tag}_{task5_videos_range[0]}-{task5_videos_range[1]}.csv')
 
     # Build pipeline
@@ -417,51 +417,51 @@ def main():
     print(f'Task 3+6 complete -> {task3_6_result_csv_fp}')
 
     # Task 4 (only if end > 2300)
-    try:
-        end_idx = int(videos_range[1])
-    except Exception:
-        end_idx = 0
+    #try:
+        #end_idx = int(videos_range[1])
+    #except Exception:
+        #end_idx = 0
 
-    if end_idx > 2300:
+    #if end_idx > 2300:
         # HT
-        ht_rng = validate_videos_range(task4_HT_clip_fps, task4_HT_videos_range)
-        for video_clip_fp in tqdm(task4_HT_clip_fps[ht_rng[0]-1: ht_rng[1]], desc='Processing Task 4 HT'):
-            video_name = os.path.basename(video_clip_fp)
-            if not os.path.exists(task4_HT_result_csv_fp):
-                with open(task4_HT_result_csv_fp, 'w', newline='', encoding='utf-8') as f:
-                    f.write('video_name,head_turning_direction\n')
-            with open(task4_HT_result_csv_fp, 'r', encoding='utf-8') as f:
-                if video_name in f.read():
-                    print(f'Skip (exists): {video_name}')
-                    continue
-            try:
-                ans = query_task4(pipe, video_clip_fp, get_task4_HT_prompt())
-                with open(task4_HT_result_csv_fp, 'a', newline='', encoding='utf-8') as f:
-                    f.write(f'{video_name},{ans}\n')
-            except Exception as e:
-                print(f'Error (Task4 HT) {video_name}: {e}')
-                with open(task4_HT_result_csv_fp, 'a', newline='', encoding='utf-8') as f:
-                    f.write(f'{video_name},N/A\n')
+        #ht_rng = validate_videos_range(task4_HT_clip_fps, task4_HT_videos_range)
+        #for video_clip_fp in tqdm(task4_HT_clip_fps[ht_rng[0]-1: ht_rng[1]], desc='Processing Task 4 HT'):
+            #video_name = os.path.basename(video_clip_fp)
+            #if not os.path.exists(task4_HT_result_csv_fp):
+                #with open(task4_HT_result_csv_fp, 'w', newline='', encoding='utf-8') as f:
+                    #f.write('video_name,head_turning_direction\n')
+            #with open(task4_HT_result_csv_fp, 'r', encoding='utf-8') as f:
+                #if video_name in f.read():
+                    #print(f'Skip (exists): {video_name}')
+                    #continue
+            #try:
+                #ans = query_task4(pipe, video_clip_fp, get_task4_HT_prompt())
+                #with open(task4_HT_result_csv_fp, 'a', newline='', encoding='utf-8') as f:
+                    #f.write(f'{video_name},{ans}\n')
+            #except Exception as e:
+                #print(f'Error (Task4 HT) {video_name}: {e}')
+                #with open(task4_HT_result_csv_fp, 'a', newline='', encoding='utf-8') as f:
+                    #f.write(f'{video_name},N/A\n')
 
         # AM
-        am_rng = validate_videos_range(task4_AM_clip_fps, task4_AM_videos_range)
-        for video_clip_fp in tqdm(task4_AM_clip_fps[am_rng[0]-1: am_rng[1]], desc='Processing Task 4 AM'):
-            video_name = os.path.basename(video_clip_fp)
-            if not os.path.exists(task4_AM_result_csv_fp):
-                with open(task4_AM_result_csv_fp, 'w', newline='', encoding='utf-8') as f:
-                    f.write('video_name,arm_movement_direction\n')
-            with open(task4_AM_result_csv_fp, 'r', encoding='utf-8') as f:
-                if video_name in f.read():
-                    print(f'Skip (exists): {video_name}')
-                    continue
-            try:
-                ans = query_task4(pipe, video_clip_fp, get_task4_AM_prompt())
-                with open(task4_AM_result_csv_fp, 'a', newline='', encoding='utf-8') as f:
-                    f.write(f'{video_name},{ans}\n')
-            except Exception as e:
-                print(f'Error (Task4 AM) {video_name}: {e}')
-                with open(task4_AM_result_csv_fp, 'a', newline='', encoding='utf-8') as f:
-                    f.write(f'{video_name},N/A\n')
+        #am_rng = validate_videos_range(task4_AM_clip_fps, task4_AM_videos_range)
+        #for video_clip_fp in tqdm(task4_AM_clip_fps[am_rng[0]-1: am_rng[1]], desc='Processing Task 4 AM'):
+           # video_name = os.path.basename(video_clip_fp)
+            #if not os.path.exists(task4_AM_result_csv_fp):
+                #with open(task4_AM_result_csv_fp, 'w', newline='', encoding='utf-8') as f:
+                    #f.write('video_name,arm_movement_direction\n')
+            #with open(task4_AM_result_csv_fp, 'r', encoding='utf-8') as f:
+                #if video_name in f.read():
+                    #print(f'Skip (exists): {video_name}')
+                   # continue
+            #try:
+                #ans = query_task4(pipe, video_clip_fp, get_task4_AM_prompt())
+               # with open(task4_AM_result_csv_fp, 'a', newline='', encoding='utf-8') as f:
+                    #f.write(f'{video_name},{ans}\n')
+           # except Exception as e:
+                #print(f'Error (Task4 AM) {video_name}: {e}')
+                #with open(task4_AM_result_csv_fp, 'a', newline='', encoding='utf-8') as f:
+                    #f.write(f'{video_name},N/A\n')
 
     # Task 4L + 5
     t5_rng = validate_videos_range(task5_clip_fps, task5_videos_range)

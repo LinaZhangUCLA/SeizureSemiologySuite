@@ -1,3 +1,0 @@
-  File "/home/lina/ssb/SeizureSemiologyBench/evaluation/merge_vlm_output.py", line 128
-    f.write(f"{OUTPUT_CSV} has {len(merged)} rows, expected 2314\n")
-IndentationError: unexpected indent

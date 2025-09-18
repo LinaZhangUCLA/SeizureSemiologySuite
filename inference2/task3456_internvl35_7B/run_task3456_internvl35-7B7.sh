@@ -25,9 +25,9 @@ echo "Conda environment internvl3_5 activated."
 
 # Run the inference script
 python ../task3456_internvl3_5.py \
-    --gpu 0 \
+    --gpu 6 \
     --tp 1 \
-    --videos_range 1-300 \
+    --videos_range 601-788 \
     --output_dir /home/hubing/SeizureSemiologyBench/output \
     --model_name OpenGVLab/InternVL3_5-8B \
     --dataset_dir /home/hubing/SeizureSemiologyBench/lost_videos/InternVL3_5-8B  \

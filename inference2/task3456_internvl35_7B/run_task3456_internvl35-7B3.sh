@@ -27,10 +27,10 @@ echo "Conda environment internvl3_5 activated."
 python ../task3456_internvl3_5.py \
     --gpu 2 \
     --tp 1 \
-    --videos_range 601-788 \
-    --output_dir /home/hubing/SeizureSemiologyBench/output \
+    --videos_range 1-150 \
+    --output_dir /home/lina/SeizureSemiologyBench/output \
     --model_name OpenGVLab/InternVL3_5-8B \
-    --dataset_dir /home/hubing/SeizureSemiologyBench/lost_videos/InternVL3_5-8B  \
-    --cache_dir /home/hubing/SeizureSemiologyBench/cache 
+    --dataset_dir /mnt/SSD3/lost_videos/InternVL3_5-8B  \
+    --cache_dir /mnt/SSD3/lina/SeizureSemiologyBench/cache 
 
 echo "Done!"

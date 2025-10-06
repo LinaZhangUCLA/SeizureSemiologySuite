@@ -104,11 +104,21 @@ def get_task4_L_prompt():
 def get_task5_prompt():
     return (
         """
-        This is a seizure clip. Provide the start time and end time of the seizure event if it is present in this video clip.
-        If the seizure has already started at the beginning of the video, use "N/A" for the start time.
-        If the seizure has not ended by the end of the video, use "N/A" for the end time.
-        Please return the result in the following JSON format: { start_time: MM:SS or N/A, end_time: MM:SS or N/A }.
-        Do not include any other text.
+        You are an expert clinician. Write a concise semiology description for this **seizure video**,
+        focusing ONLY on observable **patient signs**.
+        HARD RESTRICTIONS
+        - Do NOT mention staff, restraints, bed/blanket/pillow, room devices, cameras, EEG leads/overlays, or timestamps.
+        - Avoid vague words like “agitation”, “restlessness”, “discomfort”, or “adjusting position”.
+        - Do NOT use phase labels such as “onset/propagation/postictal” and do NOT write “Postictally,”.
+        - Do NOT use stock phrases like “After the movements cease” or “the patient appears drowsy”.
+        WHAT TO COVER (include an item ONLY if it is clearly visible in this video)
+        • Early signs: blank stare, lip smacking, right/left head version, unilateral arm flexion/extension, tonic stiffening, clonic jerks.
+        • Evolution & laterality: e.g., fencer posturing (left flexion with right extension), spread to bilateral tonic–clonic, automatisms, asynchronous shaking.
+        STYLE
+        - Write **1–3 short sentences**, specific and minimal.
+        - Examples (no labels): “Blank stare, then rightward head version with right arm extension; later bilateral tonic–clonic.”
+          “Left arm flexion with right extension (fencer); rhythmic jerks follow. Unresponsive at the end.”
+        Output ONLY the paragraph (no lists, no headers, no JSON).
         """
     )
 

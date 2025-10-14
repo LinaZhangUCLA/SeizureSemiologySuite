@@ -40,21 +40,26 @@ def calculate_metrics(y_true, y_pred, feature_name=None):
     
     return accuracy, precision, recall, f1
 
-def get_model_metrics(model_name, features):
+def get_model_metrics(model_name, features, model_path_mapping):
     """Calculate metrics for a specific model
     Args:
         model_name (str): Name of the model to evaluate
         features (list): List of features to evaluate
+        model_path_mapping (dict): Mapping from display model names to actual file path names
     Returns:
         dict: Dictionary containing metrics for each feature
     """
     # File paths
     gt_path = 'result/ground_truth/task12_annotation.csv'
+    
+    # Get actual path name from mapping, or use model_name if not in mapping
+    actual_model_name = model_path_mapping.get(model_name, model_name)
+    
     # Special case for audio-flamingo-3
-    if model_name == 'audio-flamingo-3':
-        pred_path = f'result/vlm_inference/{model_name}/Task1_AF3_Full_Results.csv'
+    if model_name.lower() == 'audio-flamingo-3':
+        pred_path = f'result/vlm_inference/{actual_model_name}/Task1_AF3_Full_Results.csv'
     else:
-        pred_path = f'result/vlm_inference/{model_name}/Task1_{model_name}_all_merged.csv'
+        pred_path = f'result/vlm_inference/{actual_model_name}/Task1_{actual_model_name}_all_merged.csv'
     
     try:
         # Read ground truth and prediction files
@@ -62,7 +67,7 @@ def get_model_metrics(model_name, features):
         df_pred = pd.read_csv(pred_path, encoding='latin-1')
         
         # Handle file name differences for audio-flamingo-3
-        if model_name == 'audio-flamingo-3':
+        if model_name.lower() == 'audio-flamingo-3':
             # Convert .mp4 to .wav in ground truth file names
             df_gt['file_name'] = df_gt['file_name'].str.replace('.mp4', '.wav')
         
@@ -107,7 +112,7 @@ def get_model_metrics(model_name, features):
                     }
                 
                 print(f"Processed feature: {feature}")
-                print(f"Metrics - Precision: {precision:.3f}, Recall: {recall:.3f}, F1: {f1:.3f}, Accuracy: {accuracy:.3f}")
+                print(f"Metrics - Precision: {float(precision):.2f}, Recall: {float(recall):.2f}, F1: {float(f1):.2f}, Accuracy: {float(accuracy):.2f}")
                 
             except KeyError as e:
                 print(f"Warning: Feature {feature} not found in data. Error: {e}")
@@ -149,10 +154,10 @@ def write_metrics_file(model_names, features, results_dict, output_path):
                     if model in results_dict and results_dict[model] and feature in results_dict[model]:
                         metrics = results_dict[model][feature]
                         row.extend([
-                            f"{metrics['precision']:.3f}" if metrics['precision'] != '' else '',
-                            f"{metrics['recall']:.3f}" if metrics['recall'] != '' else '',
-                            f"{metrics['f1']:.3f}" if metrics['f1'] != '' else '',
-                            f"{metrics['accuracy']:.3f}" if metrics['accuracy'] != '' else ''
+                            f"{float(metrics['precision']):.2f}" if metrics['precision'] != '' else '',
+                            f"{float(metrics['recall']):.2f}" if metrics['recall'] != '' else '',
+                            f"{float(metrics['f1']):.2f}" if metrics['f1'] != '' else '',
+                            f"{float(metrics['accuracy']):.2f}" if metrics['accuracy'] != '' else ''
                         ])
                     else:
                         row.extend(['', '', '', ''])
@@ -191,15 +196,25 @@ def main():
     
     # Model names
     model_names = [
-        'audio-flamingo-3',
+        'Qwen2.5-VL-7B',
+        'InternVL3.5-8B',
+        'Qwen2.5-VL-32B',
+        'InternVL3.5-38B',
+        'Qwen2.5-VL-72B',
+        'Audio-flamingo-3',
         'Qwen2.5-Omni-7B',
-        'Qwen2.5-VL-7B-Instruct',
-        'Qwen2.5-VL-32B-Instruct',
-        'Qwen2.5-VL-72B-Instruct',
-        'InternVL3_5-8B',
-        'InternVL3_5-38B',
         'Lingshu-32B'
     ]
+    
+    # Mapping from display model names to actual file path names
+    model_path_mapping = {
+        'Qwen2.5-VL-7B': 'Qwen2.5-VL-7B-Instruct',
+        'InternVL3.5-8B': 'InternVL3_5-8B',
+        'Qwen2.5-VL-32B': 'Qwen2.5-VL-32B-Instruct',
+        'InternVL3.5-38B': 'InternVL3_5-38B',
+        'Qwen2.5-VL-72B': 'Qwen2.5-VL-72B-Instruct',
+        'Audio-flamingo-3': 'audio-flamingo-3'
+    }
     
     output_path = 'metrics/Task1_precision_recall_f1_accuracy.csv'
     
@@ -207,7 +222,7 @@ def main():
     results_dict = {}
     for model in model_names:
         print(f"\nProcessing model: {model}")
-        results_dict[model] = get_model_metrics(model, features)
+        results_dict[model] = get_model_metrics(model, features, model_path_mapping)
     
     # Write results to file
     write_metrics_file(model_names, features, results_dict, output_path)

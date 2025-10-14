@@ -248,9 +248,21 @@ def get_task4_L_prompt():
 
 def get_task6_prompt():
     return """
-    Generate a detailed report for this seizure video, describing the patient's observable actions, signs, and overall condition. The report must focus exclusively on the patient; do not include any descriptions of medical staff.
-    For example: The patient is sleeping in bed. He lets out a loud groan and has versive head turn to the right. He has right upper extremity extension with left upper extremity flexion, followed by tonic-clonic activity. Later, the patient is unable to remember events preceding this seizure.
-    Output the report as a cohesive paragraph in plain language. Do not include other content.
+    You are an expert clinician. Write a concise semiology description for this **seizure video**,
+    focusing ONLY on observable **patient signs**.
+    HARD RESTRICTIONS
+    - Do NOT mention staff, restraints, bed/blanket/pillow, room devices, cameras, EEG leads/overlays, or timestamps.
+    - Avoid vague words like “agitation”, “restlessness”, “discomfort”, or “adjusting position”.
+    - Do NOT use phase labels such as “onset/propagation/postictal” and do NOT write “Postictally,”.
+    - Do NOT use stock phrases like “After the movements cease” or “the patient appears drowsy”.
+    WHAT TO COVER (include an item ONLY if it is clearly visible in this video)
+    • Early signs: blank stare, lip smacking, right/left head version, unilateral arm flexion/extension, tonic stiffening, clonic jerks.
+    • Evolution & laterality: e.g., fencer posturing (left flexion with right extension), spread to bilateral tonic–clonic, automatisms, asynchronous shaking.
+    STYLE
+    - Write **1–3 short sentences**, specific and minimal.
+    - Examples (no labels): “Blank stare, then rightward head version with right arm extension; later bilateral tonic–clonic.”
+        “Left arm flexion with right extension (fencer); rhythmic jerks follow. Unresponsive at the end.”
+    Output ONLY the paragraph (no lists, no headers, no JSON).
     """
 
 def query_task3_6(video_clip_fp, log_file_fp):

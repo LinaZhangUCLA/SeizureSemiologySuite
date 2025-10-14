@@ -21,11 +21,11 @@ def create_prompt(reference_report, inference_report):
     You are an expert clinical neurologist evaluating an AI-generated report of a patient's seizure episode. Your task is to assess the semantic and clinical similarity of the AI's report compared to a ground truth report written by a human expert.
 
     Please provide a single floating-point score from 0.0 to 1.0 based on the following criteria:
-    - 1.0 (Excellent): The AI-generated report accurately captures all critical semiological features mentioned in the ground truth. It is factually consistent and contains no hallucinations.
-    - 0.7-0.9 (Good): The AI-generated report captures the majority of the key semiological features but may miss minor details or use less precise clinical terminology.
-    - 0.4-0.6 (Moderate): The AI-generated report identifies some correct semiological features but misses significant ones or contains minor factual inaccuracies.
-    - 0.1-0.3 (Poor): The AI-generated report only describes general, non-specific events and fails to identify most of the crucial clinical signs mentioned in the ground truth.
-    - 0.0 (Failure): The AI-generated report is completely irrelevant, factually incorrect, or hallucinates information not supported by the ground truth.
+    - 5 (Excellent): The AI-generated report accurately captures all critical semiological features mentioned in the ground truth. It is factually consistent and contains no hallucinations.
+    - 4 (Good): The AI-generated report captures the majority of the key semiological features but may miss minor details or use less precise clinical terminology.
+    - 3 (Moderate): The AI-generated report identifies some correct semiological features but misses significant ones or contains minor factual inaccuracies.
+    - 2 (Poor): The AI-generated report only describes general, non-specific events and fails to identify most of the crucial clinical signs mentioned in the ground truth.
+    - 1 (Failure): The AI-generated report is completely irrelevant, factually incorrect, or hallucinates information not supported by the ground truth.
 
     Evaluate the following two reports:
 

@@ -7,7 +7,7 @@ from datetime import datetime
 # ---------- 路径配置 ----------
 INPUT_DIR = "../raw_data/task3_annotation.csv"
 OUTPUT_DIR = "../ft_data"
-VIDEO_BASE_PATH = "./video_demo"
+VIDEO_BASE_PATH = "/mnt/SSD3/lina/finetune_videos"
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
 # ------------------------------
 
@@ -66,12 +66,20 @@ def process_csv(csv_path, video_base_path):
             if not file_name:
                 continue
 
-            patient_id = file_name.split("@")[0]
-            video_id = os.path.splitext(file_name)[0]
-            video_path = os.path.join(video_base_path, file_name)
 
 
             for feature in all_features:
+
+                patient_id = file_name.split("@")[0]
+                video_id = os.path.splitext(file_name)[0]
+                if feature == "left_right_arm_movement":
+                    video_path = os.path.join(video_base_path, "task3_arm_movement")
+                elif feature == "left_right_head_turning":
+                    video_path = os.path.join(video_base_path, "task3_head_turning")
+                elif feature == "body_region_onset":
+                    video_path = os.path.join(video_base_path, "body_region_onset")
+                video_path = os.path.join(video_path, file_name)
+
 
                 raw_answer = row[feature].strip()
                 if raw_answer is not None:
@@ -79,6 +87,7 @@ def process_csv(csv_path, video_base_path):
                     # 构造 prompt 与回答
                     user_prompt = get_task3_feature_prompt(feature)
                     assistant_answer = raw_answer
+
 
                     sample = {
                         "patient_id": patient_id,

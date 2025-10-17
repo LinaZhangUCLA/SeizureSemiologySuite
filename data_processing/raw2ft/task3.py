@@ -92,6 +92,7 @@ def process_csv(csv_path, video_base_path):
                     sample = {
                         "patient_id": patient_id,
                         "video_id": video_id,
+                        "feature": feature,
                         "channel":"task-3",
                         "messages": [
                             {"role": "system", "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."},

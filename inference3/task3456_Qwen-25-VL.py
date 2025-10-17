@@ -333,7 +333,7 @@ def get_task4_feature_prompt(feature: str):
         description = feature_definitions.get(feature, "")
         return f'''
         This video shows when a patient {description}
-        Tell me the exact timestamp (MM:SS) when this feature first appears.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
         Return only the JSON format: {{"timestamp": "MM:SS"}}
         '''
 

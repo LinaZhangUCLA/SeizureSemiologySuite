@@ -44,37 +44,7 @@ def parse_arguments():
     parser.add_argument('--videos_range', type=str, default='1-2314',
                        help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')                   
     
-    # # Data settings
-    # parser.add_argument('--task3_6_dataset_dir', type=str, 
-    #                    default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset',
-    #                    help='Directory containing seizure video files')
-    # parser.add_argument('--task4_HT_dataset_dir', type=str, 
-    #                    default='/mnt/SSD3/xinyi/benchmark/video_segment/clips_head_turning',
-    #                    help='Directory containing seizure video files')
-    # parser.add_argument('--task4_AM_dataset_dir', type=str, 
-    #                    default='/mnt/SSD3/xinyi/benchmark/video_segment/clips_arm_movement',
-    #                    help='Directory containing seizure video files')
-    # parser.add_argument('--task5_dataset_dir', type=str, 
-    #                    default='/mnt/SSD3/tengyou/benchmark_tasks/task5/segments',
-    #                 # default='/mnt/SSD3/tengyou/seizure_videos/segments/all_dataset',
-    #                    help='Directory containing seizure video files')
-    # # cache directory
-    # parser.add_argument('--cache_dir', type=str, default=default_model_cache_dir,
-    #                    help='Directory for model cache (default: ' + default_model_cache_dir + ')')
-    
-    # # Output directory
-    # parser.add_argument('--output_dir', type=str, default=default_output_dir,
-    #                    help='Directory for output (default: ' + default_output_dir + ')')
-    
-    # # Video range settings
-    # parser.add_argument('--task3_6_videos_range', type=str, default='1-5',
-    #                    help='Range of videos to process (e.g., "1-100" for first 100 videos)')
-    # parser.add_argument('--task4_HT_videos_range', type=str, default='1-5',
-    #                    help='Range of videos to process (e.g., "1-100" for first 100 videos)')
-    # parser.add_argument('--task4_AM_videos_range', type=str, default='1-5',
-    #                    help='Range of videos to process (e.g., "1-100" for first 100 videos)')
-    # parser.add_argument('--task5_videos_range', type=str, default='1-5',
-    #                    help='Range of videos to process (e.g., "1-100" for first 100 videos)')
+   
     return parser.parse_args()
 
 # Parse command line arguments
@@ -106,7 +76,7 @@ feature_definitions = {
     'occur_during_sleep': "patient sleeping at the beginning of the video ",
     #'ictal_vocalization': "patient make any groaning, moaning, guttural sounds or utter stereotyped repetitive phrases ",
     'close_eyes': "patient's eyes remain consistently closed or mostly closed ",
-    'eye_blinking': "patient show rapid blinking of the eyes ",
+    'eye_blinking': "patient shows rapid blinking of the eyes ",
     'tonic': "The tonic phase is marked by a sudden onset of sustained stiffness or rigidity, usually lasting 5–20 seconds. This stiffness may be generalized, with all limbs held in fixed extension or flexion posture and can include stiffening of the head and axial body. It may also be focal involving a subset of body parts or just one body part at a time. ",
     'clonic': "Clonic Phase: Rhythmic, jerking muscle contractions involving the limbs, face, and trunk. The jerking movements gradually slow before ceasing entirely. Clonic movements present as rhythmic, regular stereotyped contraction and relaxation of the affected body parts.",
     'arm_straightening': "patient straighten or extend their arms or arm at the elbow for at least a few video frames",

@@ -58,7 +58,7 @@ Return only the JSON format: {"timestamp": "MM:SS"}
         description = feature_definitions.get(feature, "")
         return f'''
 This video shows when a patient {description}
-Tell me the exact timestamp (MM:SS) when this feature first appears.
+Tell me the exact timestamp (MM:SS) when this symptom first appears.
 Return only the JSON format: {{"timestamp": "MM:SS"}}
 '''.strip()
 
@@ -111,7 +111,7 @@ def process_csv(csv_path, video_base_path):
                 "target_time": target_time,
                 "channel":"task-4",
                 "messages": [
-                    {"role": "system", "content": "You are a medical assistant helping annotate seizure videos."},
+                    {"role": "system", "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."},
                     {"role": "user", "content": user_prompt},
                     {"role": "assistant", "content": assistant_answer},
                 ],

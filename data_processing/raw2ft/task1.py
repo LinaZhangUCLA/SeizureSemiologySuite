@@ -7,18 +7,11 @@ from datetime import datetime
 # ---------- 路径配置 ----------
 INPUT_DIR = "../raw_data/finetune_featrue_videos.csv"
 OUTPUT_DIR = "../ft_data"
-VIDEO_BASE_PATH = "./video_demo"
+VIDEO_BASE_PATH = "/mnt/SSD3/lina/finetune_videos"
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
 # ------------------------------
 
 
-all_features = [
-    'occur_during_sleep', 'blank_stare', 'close_eyes', 'eye_blinking',
-    'tonic', 'clonic', 'arm_flexion', 'arm_straightening', 'figure4',
-    'oral_automatisms', 'limb_automatisms', 'face_pulling', 'face_twitching',
-    'head_turning', 'asynchronous_movement', 'pelvic_thrusting',
-    'arms_move_simultaneously', 'full_body_shaking',
-]
 
 
 def get_task1_feature_prompt(feature: str):
@@ -133,7 +126,7 @@ def process_csv(csv_path, video_base_path):
     with open(csv_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            file_name = row["file_name"].strip()
+            file_name = row["file_name"].split("/")[-1].strip()
             feature = row["feature"].strip()
             if not file_name:
                 continue

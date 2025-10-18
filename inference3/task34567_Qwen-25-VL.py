@@ -7,6 +7,7 @@ import os
 import json
 from torch.utils.data import dataset
 from tqdm import tqdm
+import math
 
 import argparse
 
@@ -65,8 +66,9 @@ task3_HT_dataset_dir = os.path.join(args.dataset_dir, "task3_head_turning")
 task3_AM_dataset_dir = os.path.join(args.dataset_dir, "task3_arm_movement")
 task3_L_dataset_dir = os.path.join(args.dataset_dir, "task3_onset_body_part")
 task4_dataset_dir = os.path.join(args.dataset_dir, "task4_feature_segments") 
-task5_dataset_dir = os.path.join(args.dataset_dir, "task1256_segments")
-task6_dataset_dir = os.path.join(args.dataset_dir, "task1256_segments")
+task5_dataset_dir = os.path.join(args.dataset_dir, "task1256_segment_30s")
+task6_dataset_dir = os.path.join(args.dataset_dir, "task1256_segment_30s")
+task7_dataset_dir = os.path.join(args.dataset_dir, "task7_seizurevideos")
 
 # Feature definitions dictionary
 feature_definitions = {
@@ -119,7 +121,7 @@ task3_L_result_csv_fp = os.path.join(inference_dir, f'Task3_L_{model_name.split(
 task4_result_csv_fp = os.path.join(inference_dir, f'Task4_{model_name.split("/")[-1]}_{gpu_str}.csv')
 task5_result_csv_fp = os.path.join(inference_dir, f'Task5_{model_name.split("/")[-1]}_{task5_6_videos_range[0]}-{task5_6_videos_range[1]}.csv')
 task6_result_csv_fp = os.path.join(inference_dir, f'Task6_{model_name.split("/")[-1]}_{task5_6_videos_range[0]}-{task5_6_videos_range[1]}.csv')
-
+task7_result_csv_fp = os.path.join(inference_dir, f'Task7_{model_name.split("/")[-1]}_{gpu_str}.csv')
 # Log directories for each task
 log_dir = os.path.join(inference_dir, 'logs')
 os.makedirs(log_dir, exist_ok=True)
@@ -128,6 +130,7 @@ task3_log_dir = os.path.join(log_dir, 'task3')
 task4_log_dir = os.path.join(log_dir, 'task4')
 task5_log_dir = os.path.join(log_dir, 'task5')
 task6_log_dir = os.path.join(log_dir, 'task6')
+task7_log_dir = os.path.join(log_dir, 'task7')
 
 for dir_path in [task3_log_dir, task4_log_dir, task5_log_dir, task6_log_dir]:
     os.makedirs(dir_path, exist_ok=True)
@@ -288,16 +291,34 @@ def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=6
             {"type": "text", "text": query_prompt},
         ]}
     ]
+    
+    if "task7_seizurevideos" in video_path:
+        messages = [
+        {"role": "user", "content": [
+            {
+                "type": "video",
+                "video": video_path,
+                "nframes": MAX_FRAMES,  # <- 均匀抽取整段视频的 60 帧
+                "max_pixels": max_pixels,
+                "min_pixels": min_pixels,
+                "total_pixels": max_pixels * MAX_FRAMES,
+            },
+            {"type": "text", "text": query_prompt},
+        ]}
+        ]
+
     text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     image_inputs, video_inputs, video_kwargs = process_vision_info([messages], return_video_kwargs=True)
-    #print("video_kwargs:", video_kwargs, "messages:", messages)
-    fps_inputs = video_kwargs['fps']
-    #print("video input:", video_inputs[0].shape)
+    print("video_kwargs:", video_kwargs, "messages:", messages)
+    
+    print("video input:", video_inputs[0].shape)
     num_frames, _, resized_height, resized_width = video_inputs[0].shape
     # print("num of video tokens:", int(num_frames / 2 * resized_height / 28 * resized_width / 28))
-
-    inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_inputs, padding=True, return_tensors="pt")
-    inputs = inputs.to('cuda')
+    if "task7_seizurevideos" in video_path:
+        inputs = processor(text=[text], images=image_inputs, videos=video_inputs, do_sample_frames=False, padding=True,return_tensors="pt").to('cuda')
+    else:
+        fps_inputs = video_kwargs['fps']
+        inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_inputs, padding=True, return_tensors="pt").to('cuda')
 
     output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
     generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]
@@ -377,6 +398,17 @@ def get_task6_prompt():
         “Left arm flexion with right extension (fencer); rhythmic jerks follow. Unresponsive at the end.”
     Output ONLY the paragraph (no lists, no headers, no JSON).
     """
+
+    
+def get_task7_prompt_1():   
+    return """
+    Based on the patient’s seizure video and seizure semiology report, determine whether the patient has epileptic seizures (ES) or non-epileptic events (NES). Answer with 'ES' or 'NES’ and do not include any other text.
+    """
+
+def get_task7_prompt_2():   
+    return """
+    Describe the patient's seizure symptoms in the video and diagnose whether it is an epileptic seizure (ES) or a non-epileptic event (NES).  Provide a description and answer with 'ES' or 'NES’. Respond with exactly one JSON object in the format { \"answer\": \"...\", \"description\": \"...\" } and do not include any extra text outside of the JSON."
+    """    
 
 # ================== Utility functions ==================
 
@@ -560,6 +592,32 @@ def get_duration_task4(start_time, end_time):
 
     return end_sec - start_sec
 
+
+def parse_json_task7(vlm_output):
+    # Parse the JSON output from the VLM
+    try:
+        # First try to extract JSON from the output if it's wrapped in text
+        json_match = re.search(r'\{.*\}', vlm_output, re.DOTALL)
+        if json_match:
+            json_str = json_match.group(0)
+            parsed = json.loads(json_str)
+        else:
+            # Try to parse the entire output as JSON
+            parsed = json.loads(vlm_output)
+        
+        # Check if it has the expected structure
+        if isinstance(parsed, dict) and 'answer' in parsed:
+            return parsed["answer"]
+        else:
+            print(f"JSON parsed but missing required fields. Got: {parsed}")
+            return {'N/A'}
+            
+    except (json.JSONDecodeError, KeyError) as e:
+        print(f"Failed to parse JSON: {vlm_output}")
+        print(f"Error: {e}")
+        # Return default values if parsing fails
+        return {'N/A'}    
+
 # ================== Main function ==================
 
 from typing import List
@@ -597,7 +655,7 @@ def get_fp_list(file_dir):
 def main():
     global videos_range
     global task5_6_videos_range, task3_HT_videos_range, task3_AM_videos_range, task4_videos_range
-    global task5_dataset_dir, task3_HT_dataset_dir, task3_AM_dataset_dir, task4_dataset_dir, task6_dataset_dir
+    global task5_dataset_dir, task3_HT_dataset_dir, task3_AM_dataset_dir, task3_L_dataset_dir, task4_dataset_dir, task6_dataset_dir, task7_dataset_dir
     global task5_result_csv_fp, task3_HT_result_csv_fp, task3_AM_result_csv_fp, task4_result_csv_fp, task6_result_csv_fp
     
     task5_clip_fps = get_fp_list(task5_dataset_dir)
@@ -605,8 +663,7 @@ def main():
     task3_AM_clip_fps = get_fp_list(task3_AM_dataset_dir)
     task4_clip_fps = get_fp_list(task4_dataset_dir)
     task6_clip_fps = get_fp_list(task6_dataset_dir)
-
-
+    task7_clip_fps = get_fp_list(task7_dataset_dir)
 
     
     # =============================================== task3=============================================================== #
@@ -630,7 +687,7 @@ def main():
                 f.write("video_name,onset_body_part\n")
 
         # Process task4 videos
-        if int(videos_range[1]) > 2300:
+        if '7' in args.gpu:
             # Process head turning videos
             task3_HT_videos_range = validate_videos_range(task3_HT_clip_fps, task3_HT_videos_range)
             for video_clip_fp in tqdm(task3_HT_clip_fps[:], desc="Processing Task 3 Head Turning"):
@@ -649,7 +706,7 @@ def main():
                     print(f"Error processing video {video_name} for head turning: {e}")
                     with open(task3_HT_result_csv_fp, 'a') as f:
                         f.write(f"{video_name},N/A\n")
-                #break
+                break
             # Process arm movement videos
             task3_AM_videos_range = validate_videos_range(task3_AM_clip_fps, task3_AM_videos_range)
             for video_clip_fp in tqdm(task3_AM_clip_fps[:], desc="Processing Task 3 Arm Movement"):
@@ -667,7 +724,7 @@ def main():
                     print(f"Error processing video {video_name} for arm movement: {e}")
                     with open(task3_AM_result_csv_fp, 'a') as f:
                         f.write(f"{video_name},N/A\n")
-                #break
+                break
             # Process onset body part videos
             task3_L_videos_range = validate_videos_range(task3_L_clip_fps, task3_AM_videos_range)
             for video_clip_fp in tqdm(task3_L_clip_fps[:], desc="Processing Task 3 Onset Body Part"):
@@ -686,7 +743,7 @@ def main():
                     print(f"Error processing video {video_name} for onset body part: {e}")
                     with open(task3_L_result_csv_fp, 'a') as f:
                         f.write(f"{video_name},N/A\n")
-                #break
+                break
             
     except Exception as e:
         print(f"Error in Task 3 processing: {e}")
@@ -768,7 +825,7 @@ def main():
                         csv_f.write(f"{video_name},{feature},N/A\n")
                         csv_f.flush()    
                         log_f.write(f"Error processing video {video_name} for feature {feature}: {e}\n")
-                    #break
+                    break
         print(f"Processing is complete. Results are in '{task4_result_csv_fp}'.")
 
     except Exception as e:
@@ -809,7 +866,7 @@ def main():
                         print(f"Error processing video {video_clip_fp}: {e}")
                         csv_f.write(f"{video_clip_name},\"fail\"\n")
                         log_f.write(f"Error processing video {video_clip_name}: {e}\n")
-                    #break
+                    break
         print(f"Task 5 results are in: {task5_result_csv_fp}")  
 
     except Exception as e:
@@ -840,11 +897,99 @@ def main():
                     print(f"Error processing video {video_clip_fp}: {e}")
                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
                     csv_f.write(f"{video_clip_name},\"fail\"\n")
-                #break
+                break
         print(f"Task 6 results are in: {task6_result_csv_fp}")
     except Exception as e:
         print(f"Error in Task 6 processing: {e}")
         traceback.print_exc()    
+
+    
+    # =============================================== task6 =============================================================== #
+    try:
+
+        init_csv(task6_result_csv_fp, "video_name,report")
+        task6_processed = load_processed_videos(task6_result_csv_fp)        
+        os.makedirs(task6_log_dir, exist_ok=True)
+        aggregate_log_fp = os.path.join(task6_log_dir, "task6.log")
+        with open(task6_result_csv_fp, 'a', encoding='utf-8', newline='') as csv_f, open(aggregate_log_fp, 'a', encoding='utf-8') as log_f:    
+            for video_clip_fp in tqdm(task5_clip_fps[task5_videos_range[0]-1 : task5_videos_range[1]], desc="Processing Task 6"):
+                video_clip_name = video_clip_fp.split('/')[-1]
+                if video_clip_name in task6_processed:
+                    print(f"Video {video_clip_name} already processed for both tasks. Skipping.")
+                    continue     
+                    
+                try:               
+                        raw_output6 = inference(model, video_clip_fp, get_task6_prompt())
+                        report = '\"' + raw_output6 + '\"'     
+                        csv_f.write(f"{video_clip_name},{report}\n")
+                        csv_f.flush()  
+                        task6_processed.add(video_clip_name)                       
+                except Exception as e:
+                    print(f"Error processing video {video_clip_fp}: {e}")
+                    log_f.write(f"Error processing video {video_clip_name}: {e}\n")
+                    csv_f.write(f"{video_clip_name},\"fail\"\n")
+                break
+        print(f"Task 6 results are in: {task6_result_csv_fp}")
+    except Exception as e:
+        print(f"Error in Task 6 processing: {e}")
+        traceback.print_exc()    
+
+    # =============================================== task7 =============================================================== #
+    def split_list_by_gpus(task7_clip_fps, gpu_indices):
+        num_gpus_total = 8
+        n = len(task7_clip_fps)
+        chunk_size = math.ceil(n / num_gpus_total)
+        chunks = []
+        for i in range(num_gpus_total):
+            start = i * chunk_size
+            end = min((i + 1) * chunk_size, n)
+            chunks.append(task7_clip_fps[start:end])
+        selected = []
+        for idx in gpu_indices:
+            if 0 <= idx < num_gpus_total:
+                selected.extend(chunks[idx])
+            else:
+                raise ValueError(f"GPU index {idx} out of range (0–7).")
+        return selected
+    
+    try:
+
+        init_csv(task7_result_csv_fp, "video_name,prediction_with_report,prediction_without_report")
+        task7_processed = load_processed_videos(task7_result_csv_fp)        
+        os.makedirs(task7_log_dir, exist_ok=True)
+        aggregate_log_fp = os.path.join(task7_log_dir, f"task7_{gpu_str}.log")
+        gpu_indices = [int(x) for x in str(args.gpu).split(',')]
+        task7_clip_fps_selected = split_list_by_gpus(task7_clip_fps, gpu_indices)
+
+        with open(task7_result_csv_fp, 'a', encoding='utf-8', newline='') as csv_f, open(aggregate_log_fp, 'a', encoding='utf-8') as log_f:    
+            for video_clip_fp in tqdm(task7_clip_fps_selected, desc="Processing Task 7"):
+                video_clip_name = video_clip_fp.split('/')[-1]
+                if video_clip_name in task7_processed:
+                    print(f"Video {video_clip_name} already processed for both tasks. Skipping.")
+                    continue     
+                    
+                try:               
+                        raw_output7 = inference(model, video_clip_fp, get_task7_prompt_1())
+                        prediction_with_report = '\"' + raw_output7 + '\"'     
+                        raw_output7_2 = inference(model, video_clip_fp, get_task7_prompt_2())
+                        prediction_without_report = '\"' + raw_output7_2 + '\"'  
+                        log_f.write(f"{video_clip_name},\n,{prediction_with_report},\n,{prediction_without_report}\n")
+                        log_f.flush()  
+
+                        prediction_without_report =parse_json_task7(raw_output7_2)
+                        csv_f.write(f"{video_clip_name},{raw_output7},{prediction_without_report}\n")
+                        csv_f.flush()
+                        task7_processed.add(video_clip_name)                       
+                except Exception as e:
+                    print(f"Error processing video {video_clip_fp}: {e}")
+                    log_f.write(f"Error processing video {video_clip_name}: {e}\n")
+                    csv_f.write(f"{video_clip_name},\"fail\",\"fail\"\n")
+                break
+        print(f"Task 7 results are in: {task7_result_csv_fp}")
+    except Exception as e:
+        print(f"Error in Task 7 processing: {e}")
+        traceback.print_exc()    
+    
 
 if __name__ == "__main__":
     print(f"Starting seizure video feature extraction...")

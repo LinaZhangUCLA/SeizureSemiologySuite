@@ -10,6 +10,12 @@ from tqdm import tqdm
 import math
 
 import argparse
+import pandas as pd
+
+
+report_dict = pd.read_csv("./../result/ground_truth/task6_report_annotation.csv", usecols=["file_name","report"], dtype=str, encoding="utf-8-sig")\
+      .set_index("file_name")["report"].to_dict()
+#print(report_dict)
 
 LOG = True
 # default_model_cache_dir = os.path.join(os.path.dirname(__file__), 'model_cache')
@@ -400,14 +406,16 @@ def get_task6_prompt():
     """
 
     
-def get_task7_prompt_1():   
-    return """
+def get_task7_prompt_1(video_name):   
+    return f"""
     Based on the patient’s seizure video and seizure semiology report, determine whether the patient has epileptic seizures (ES) or non-epileptic events (NES). Answer with 'ES' or 'NES’ and do not include any other text.
+    seizrue report:
+    {report_dict[video_name]}
     """
 
 def get_task7_prompt_2():   
     return """
-    Describe the patient's seizure symptoms in the video and diagnose whether it is an epileptic seizure (ES) or a non-epileptic event (NES).  Provide a description and answer with 'ES' or 'NES’. Respond with exactly one JSON object in the format { \"answer\": \"...\", \"description\": \"...\" } and do not include any extra text outside of the JSON."
+    Describe the patient's seizure symptoms in the video and diagnose whether it is an epileptic seizure (ES) or a non-epileptic event (NES).  Provide a description and answer with 'ES' or 'NES’. Respond with exactly one JSON object in the format {\"description\": \"...\",\"answer\": \"...\"} and do not include any extra text outside of the JSON."
     """    
 
 # ================== Utility functions ==================
@@ -969,7 +977,7 @@ def main():
                     continue     
                     
                 try:               
-                        raw_output7 = inference(model, video_clip_fp, get_task7_prompt_1())
+                        raw_output7 = inference(model, video_clip_fp, get_task7_prompt_1(video_clip_name))
                         prediction_with_report = '\"' + raw_output7 + '\"'     
                         raw_output7_2 = inference(model, video_clip_fp, get_task7_prompt_2())
                         prediction_without_report = '\"' + raw_output7_2 + '\"'  

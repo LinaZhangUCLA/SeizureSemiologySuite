@@ -19,7 +19,7 @@ python task34567_Qwen-25-VL.py \
   --model_name Qwen/Qwen2.5-VL-7B-Instruct \
   --dataset_dir /mnt/SSD3/lina/ucla2/ssbench \
   --cache_dir /mnt/SSD3/lina/SeizureSemiologyBench/cache \
-  --output_dir /home/lina/SeizureSemiologyBench/qwen10178 \
+  --output_dir /home/lina/SeizureSemiologyBench/qwen1020 \
   --videos_range 1-2 \
 
 

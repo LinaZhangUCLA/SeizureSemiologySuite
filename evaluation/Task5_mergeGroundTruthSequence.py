@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import csv
 from datetime import datetime
 
 def parse_time_to_seconds(time_str):
@@ -202,11 +203,21 @@ def main():
             for f in missing_files:
                 print(f"- {f}")
     
-    # Save output files
-    pd.DataFrame(output_data).to_csv(output_path, index=False)
+    # Save output files manually to avoid inconsistent quoting
+    def write_csv_without_quotes(data, filepath):
+        """Write CSV with no quotes on any values"""
+        with open(filepath, 'w', encoding='utf-8') as f:
+            # Write header
+            f.write('file_name,event_sequence\n')
+            # Write data rows
+            for row in data:
+                # Write row without quotes on either column
+                f.write(f'{row["file_name"]},{row["event_sequence"]}\n')
+    
+    write_csv_without_quotes(output_data, output_path)
     print(f"\nSaved event sequences to {output_path}")
     
-    pd.DataFrame(output_data_vlm).to_csv(output_path_vlm, index=False)
+    write_csv_without_quotes(output_data_vlm, output_path_vlm)
     print(f"Saved VLM event sequences (excluding {', '.join(vlm_exclude_features)}) to {output_path_vlm}")
     
     # if missing_time_data:

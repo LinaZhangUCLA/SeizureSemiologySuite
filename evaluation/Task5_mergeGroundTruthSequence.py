@@ -30,14 +30,18 @@ def parse_time_to_seconds(time_str):
     except (ValueError, IndexError):
         return None
 
-def get_feature_sequence(row, feature_columns):
+def get_feature_sequence(row, feature_columns, exclude_features=None):
     """Get ordered sequence of features for a video
     Args:
         row: DataFrame row containing video annotations
         feature_columns: List of feature column names
+        exclude_features: List of features to exclude (optional)
     Returns:
         tuple: (ordered_features, missing_times, invalid_times, has_any_features, all_features)
     """
+    if exclude_features is None:
+        exclude_features = []
+    
     feature_times = []
     missing_times = []
     invalid_times = []
@@ -45,6 +49,10 @@ def get_feature_sequence(row, feature_columns):
     all_features = []  # Track all features marked as 'yes'
     
     for feature in feature_columns:
+        # Skip excluded features
+        if feature in exclude_features:
+            continue
+            
         # Check if feature is present (has 'yes' label)
         if str(row[feature]).strip().lower() == 'yes':
             has_any_features = True
@@ -74,11 +82,15 @@ def get_feature_sequence(row, feature_columns):
 def main():
     # Input and output paths
     input_path = 'result/ground_truth/task12_annotation.csv'
-    output_path = 'result/ground_truth/task3_annotation.csv'
+    output_path = 'result/ground_truth/task5_sequence_annotation.csv'
+    output_path_vlm = 'result/ground_truth/task5_sequence_annotation_vlm.csv'
     missing_time_log = 'result/ground_truth/missingtime_error_logs.csv'
     invalid_time_log = 'result/ground_truth/invalid_time_logs.csv'
-    no_features_path = 'result/ground_truth/task3_video_withoutfeatures.csv'
+    no_features_path = 'result/ground_truth/task5_video_withoutfeatures.csv'
     debug_log = 'result/ground_truth/debug_log.txt'
+    
+    # Features to exclude from VLM output
+    vlm_exclude_features = ['verbal_responsiveness', 'ictal_vocalization']
     
     # Read input CSV
     df = pd.read_csv(input_path, encoding='latin-1')
@@ -94,20 +106,27 @@ def main():
     # Exclude "occur_during_sleep" since it has no start_time column
     feature_columns = [col for col in feature_columns if col != 'occur_during_sleep']
     
-    # Initialize output data
+    # Initialize output data for both files
     output_data = []
+    output_data_vlm = []
     missing_time_data = []
     invalid_time_data = []
     videos_without_features = []
+    videos_without_features_vlm = []
     
     # Debug information
     # with open(debug_log, 'w') as f:
     #     f.write("Processing Details:\n")
     
-    # Process each video
+    # Process each video for both output files
     for idx, row in df.iterrows():
         file_name = row['file_name']
+        
+        # Process for original output (all features)
         ordered_features, missing_times, invalid_times, has_any_features, all_features = get_feature_sequence(row, feature_columns)
+        
+        # Process for VLM output (excluding specified features)
+        ordered_features_vlm, missing_times_vlm, invalid_times_vlm, has_any_features_vlm, all_features_vlm = get_feature_sequence(row, feature_columns, exclude_features=vlm_exclude_features)
         
         # Log processing details
         # with open(debug_log, 'a') as f:
@@ -119,12 +138,10 @@ def main():
         #         f.write(f"Missing times: {missing_times}\n")
         #         f.write(f"Invalid times: {invalid_times}\n")
         
+        # Handle original output
         if not has_any_features:
-            # Save complete record for videos without any features
             videos_without_features.append(idx)
         else:
-            # Add to output data if has any ordered features
-            # Even if some features are missing times, include the video with the features we can order
             if ordered_features or all_features:
                 output_data.append({
                     'file_name': file_name,
@@ -144,14 +161,29 @@ def main():
                     'file_name': file_name,
                     'invalid_features': ', '.join(invalid_times)
                 })
+        
+        # Handle VLM output
+        if not has_any_features_vlm:
+            videos_without_features_vlm.append(idx)
+        else:
+            if ordered_features_vlm or all_features_vlm:
+                output_data_vlm.append({
+                    'file_name': file_name,
+                    'event_sequence': ', '.join(ordered_features_vlm) if ordered_features_vlm else ', '.join(all_features_vlm)
+                })
     
-    # Print summary
-    print(f"\nSummary:")
+    # Print summary for original output
+    print(f"\nSummary (Original):")
     print(f"Total valid videos processed: {len(df)}")
     print(f"Videos with sequences: {len(output_data)}")
     print(f"Videos without any features: {len(videos_without_features)}")
     print(f"Videos with missing times: {len(missing_time_data)}")
     print(f"Videos with invalid times: {len(invalid_time_data)}")
+    
+    # Print summary for VLM output
+    print(f"\nSummary (VLM - excluding {', '.join(vlm_exclude_features)}):")
+    print(f"Videos with sequences: {len(output_data_vlm)}")
+    print(f"Videos without any features: {len(videos_without_features_vlm)}")
     
     # Verify total
     total_accounted = len(output_data) + len(videos_without_features)
@@ -173,6 +205,9 @@ def main():
     # Save output files
     pd.DataFrame(output_data).to_csv(output_path, index=False)
     print(f"\nSaved event sequences to {output_path}")
+    
+    pd.DataFrame(output_data_vlm).to_csv(output_path_vlm, index=False)
+    print(f"Saved VLM event sequences (excluding {', '.join(vlm_exclude_features)}) to {output_path_vlm}")
     
     # if missing_time_data:
     #     pd.DataFrame(missing_time_data).to_csv(missing_time_log, index=False)

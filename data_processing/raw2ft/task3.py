@@ -82,7 +82,7 @@ def process_csv(csv_path, video_base_path):
 
 
                 raw_answer = row[feature].strip()
-                if raw_answer is not None:
+                if raw_answer is not None and raw_answer != "N/A":
 
                     # 构造 prompt 与回答
                     user_prompt = get_task3_feature_prompt(feature)

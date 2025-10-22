@@ -10,9 +10,13 @@ optional: 也许需要单独安装一下math_verify: pip install math_verify==0.
 
 ## step 2: 替换文件
 
+### 1.数据集预处理文件替换
+
 `ms-swift-main/swift/llm/dataset/dataset/mllm.py`
 
 数据集预处理，使得训练集符合ms-swift训练要求
+
+### 2.奖励函数计算文件替换
 
 `ms-swift-main/examples/train/grpo/plugin/plugin.py`
 

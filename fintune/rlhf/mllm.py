@@ -36,8 +36,7 @@ class SeizurePreprocessor(RowPreprocessor):
 
 register_dataset(
     DatasetMeta(
-        ms_dataset_id='Seizure-Bench',
-        hf_dataset_id='Seizure-Bench',
+        ms_dataset_id='Seizure',
         split=['train', 'validation'],
         preprocess_func=SeizurePreprocessor(),
         tags=['multi-modal', 'en', 'seizure']))

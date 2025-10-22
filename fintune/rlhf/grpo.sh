@@ -16,7 +16,7 @@ swift rlhf \
     --lora_alpha 32 \
     --target_modules all-linear \
     --torch_dtype bfloat16 \
-    --dataset lmms-lab/multimodal-open-r1-8k-verified#1000 \
+    --dataset Seizure \
     --load_from_cache_file true \
     --external_plugins examples/train/grpo/plugin/plugin.py \
     --max_completion_length 2048 \

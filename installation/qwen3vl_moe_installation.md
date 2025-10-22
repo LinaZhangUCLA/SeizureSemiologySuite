@@ -1,6 +1,14 @@
-# Environment Installation (for Qwen2.5-VL script)
+# Environment Installation
 
 ```shell
+# If you already have the qwenvl(for qwen2.5vl) conda environment, follow these steps to save time.
+conda create --name qwen3vl_moe  --clone qwenvl
+conda activate qwen3vl_moe
+pip install transformers==4.57
+```
+
+
+<!-- ```shell
 conda create -n qwen3vl_moe python=3.10 -y
 conda activate qwen3vl_moe
 
@@ -39,4 +47,4 @@ sudo apt --fix-broken install -y
 sudo apt install -y ffmpeg
 
 ffmpeg -version
-```
+``` -->

@@ -6,6 +6,7 @@ modelscope-registry.us-west-1.cr.aliyuncs.com/modelscope-repo/modelscope:ubuntu2
 
 链接：https://modelscope.cn/docs/intro/environment-setup#%E6%9C%80%E6%96%B0%E9%95%9C%E5%83%8F
 
+optional: 也许需要单独安装一下math_verify: pip install math_verify==0.5.2
 
 # step 2: 替换文件
 

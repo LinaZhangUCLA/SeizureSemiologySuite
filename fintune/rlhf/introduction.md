@@ -1,6 +1,6 @@
-# GRPO教程
+# 使用Qwen2.5-7B-omni模型进行GRPO训练
 
-# step 1: 配置镜像
+## step 1: 配置镜像
 
 modelscope-registry.us-west-1.cr.aliyuncs.com/modelscope-repo/modelscope:ubuntu22.04-cuda12.4.0-py311-torch2.6.0-1.29.0-LLM
 
@@ -8,13 +8,13 @@ modelscope-registry.us-west-1.cr.aliyuncs.com/modelscope-repo/modelscope:ubuntu2
 
 optional: 也许需要单独安装一下math_verify: pip install math_verify==0.5.2
 
-# step 2: 替换文件
+## step 2: 替换文件
 
-## ms-swift-main/examples/train/grpo/plugin/plugin.py
+### ms-swift-main/examples/train/grpo/plugin/plugin.py
 
 引入了SerizureORM计算不同task的reward
 
-# step 3: 一键启动脚本grpo.sh
+## step 3: 一键启动脚本grpo.sh
 
 ```bash
 bash grpo.sh

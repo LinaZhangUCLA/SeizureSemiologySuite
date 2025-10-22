@@ -10,9 +10,16 @@ optional: 也许需要单独安装一下math_verify: pip install math_verify==0.
 
 ## step 2: 替换文件
 
+### ms-swift-main/swift/llm/dataset/dataset/mllm.py
+
+数据集预处理，使得训练集符合ms-swift训练要求
+
 ### ms-swift-main/examples/train/grpo/plugin/plugin.py
 
 引入了SerizureORM计算不同task的reward
+
+
+
 
 ## step 3: 一键启动脚本grpo.sh
 

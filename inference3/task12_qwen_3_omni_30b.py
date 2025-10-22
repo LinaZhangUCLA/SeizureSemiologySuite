@@ -162,7 +162,7 @@ inf_result_csv_fp = inference_dir + f'/Task1_{model_name.split("/")[-1]}_{videos
 # 360p:  (640, 360)
 # 240p:  (426, 240)
 ################################################################################################
-MAX_FRAMES = 60
+MAX_FRAMES = 120
 FPS = 2
 MAX_NEW_TOKENS = 2048
 MAX_RETRIES = 10
@@ -341,6 +341,8 @@ def inference(video_path, prompt, max_new_tokens=None, max_pixels=602112, min_pi
     # 组织多模态输入
     text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     audios, images, videos = process_mm_info(messages, use_audio_in_video=use_audio_in_video)
+    print(audios)
+    print(type(audios))
     inputs = processor(
         text=[text],
         audio=audios, images=images, videos=videos,

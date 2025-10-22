@@ -156,7 +156,7 @@ inf_result_csv_fp = inference_dir + f'/Task1_{model_name.split("/")[-1]}_{videos
 # 360p:  (640, 360)
 # 240p:  (426, 240)
 ################################################################################################
-MAX_FRAMES = 60
+MAX_FRAMES = 120
 FPS = 2
 MAX_NEW_TOKENS = 2048
 MAX_RETRIES = 10
@@ -519,7 +519,7 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                 answer_collected = True
                 break
             except Exception as e:
-                print(f"Error in prompt for feature: {feature}: {prompt}")
+                print(f"Error in prompt for feature: {feature}: {prompt}. The error message is: {str(e)}")
                 print(f"Raw VLM response: {raw_answer}")
                 print(f"Exception: {str(e)}. Retrying ({retry_count + 1}/{MAX_RETRIES})...")
 

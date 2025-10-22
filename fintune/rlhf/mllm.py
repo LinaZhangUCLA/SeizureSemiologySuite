@@ -14,6 +14,38 @@ from ..preprocessor import GroundingMixin, MessagesPreprocessor, ResponsePreproc
 from ..register import DatasetMeta, SubsetDataset, register_dataset
 
 
+
+
+# TODO: SeizurePreprocessor
+class SeizurePreprocessor(RowPreprocessor):
+
+    def preprocess(self, row: Dict[str, Any]) -> Dict[str, Any]:
+        idx = np.random.choice(range(len(row['questions'])))
+        query = row['questions'][idx]
+        response = row['answers'][idx]
+        return {
+            'messages': [{
+                'role': 'user',
+                'content': query
+            }, {
+                'role': 'assistant',
+                'content': response
+            }],
+        }
+
+
+register_dataset(
+    DatasetMeta(
+        ms_dataset_id='Seizure-Bench',
+        hf_dataset_id='Seizure-Bench',
+        split=['train', 'validation'],
+        preprocess_func=SeizurePreprocessor(),
+        tags=['multi-modal', 'en', 'seizure']))
+
+
+
+
+
 class ShareGPT4oPreprocessor(MessagesPreprocessor):
 
     def preprocess(self, row: Dict[str, Any]) -> Optional[Dict[str, Any]]:

@@ -47,7 +47,7 @@ class EvaluationCriteria:
     temporal_fidelity_weight: float = 0.25
 
 
-class SerizureORM(ORM):
+class SeizureORM(ORM):
     """
     Reward function for seizure reporting tasks.
     Computes an LLM-judged quality score (SeizureRQI) between model outputs and ground truth.
@@ -124,7 +124,7 @@ class SerizureORM(ORM):
         return f"You are an expert neurologist. Compare the following seizure reports. GROUND TRUTH: {report_gt} MODEL OUTPUT: {report_pred} Evaluate on 4 dimensions (0-100 each): 1. Structural Completeness (S) 2. Symptom Coverage (C) 3. Key Localizing Features (L) 4. Temporal Fidelity (T) Return only JSON: {{ \"S\": <int>, \"C\": <int>, \"L\": <int>, \"T\": <int> }}"
 
 
-orms['serizure_score'] = SerizureORM
+orms['seizure_score'] = SeizureORM
 
 
 # For additional reward functions, refer to swift/plugin/orm.py.

@@ -15,3 +15,7 @@ optional: 也许需要单独安装一下math_verify: pip install math_verify==0.
 引入了SerizureORM计算不同task的reward
 
 # step 3: 一键启动脚本grpo.sh
+
+```bash
+bash grpo.sh
+```

@@ -1,5 +1,6 @@
-# 4 * 50GiB
-pip install transformers math_verify trl -U
+# 2 * 50GiB
+# pip install transformers math_verify trl -U
+pip install math_verify==0.5.2
 
 MAX_PIXELS=1003520 \
 NPROC_PER_NODE=2 \
@@ -33,7 +34,7 @@ swift rlhf \
     --warmup_ratio 0.05 \
     --dataloader_num_workers 2 \
     --dataset_num_proc 2 \
-    --num_generations 8 \
+    --num_generations 4 \
     --temperature 1. \
     --top_p 0.99 \
     --top_k 50 \

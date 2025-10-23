@@ -60,7 +60,9 @@ class SeizureORM(ORM):
         self.criteria = EvaluationCriteria()
 
 
-    def __call__(self, completions, solution, channel, **kwargs) -> List[float]:
+    # TODO: 自定义的ORM需要包含一个位置参数completions，其他为关键词参数，由数据集额外字段透传
+    def __call__(self, completions, **kwargs) -> List[float]:
+    # def __call__(self, completions, solution, channel, **kwargs) -> List[float]:
         """
         Computing score for serizure tasks
 

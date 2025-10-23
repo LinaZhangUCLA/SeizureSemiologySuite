@@ -117,6 +117,7 @@ class SeizureORM(ORM):
 
 
     def _call_llm(self, prompt: str) -> Dict:
+        # TODO: 阿里云api: sk-67abd783fc3b48c28e8c97e88f21cb91
         """调用LLM并解析输出"""
         try:
             response = self.client.chat.completions.create(

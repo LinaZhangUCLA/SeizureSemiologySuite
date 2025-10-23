@@ -704,7 +704,7 @@ def main():
         output_header.append(f'justification_for_{feature}')
 
     # Create or append to JSON parsing error log file
-    json_error_log_path = os.path.join(inference_dir, f"task12_{args.gpu}.log")
+    json_error_log_path = os.path.join(inference_dir, f"qwen3_vl_32b_task12_{args.gpu}.log")
     
     # Check if file exists and is not empty
     file_exists_and_has_content = os.path.exists(json_error_log_path) and os.path.getsize(json_error_log_path) > 0

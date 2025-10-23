@@ -21,7 +21,7 @@ def get_task5_prompt():
     '''
 
 # 输入与输出路径
-csv_path = Path("./fintune/segmented_video_description_final.csv")
+csv_path = Path("./result/ground_truth/task5_segment_sequence_annotation.csv")
 output_path = Path(f"./dataset/ft_data/ft_task_5_{DEFAULT_DATE}.json")
 
 # 定义症状关键词，用于自动提取 ground truth
@@ -45,12 +45,13 @@ samples = []
 with open(csv_path, "r", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
-        if len(row) < 5:
+        if len(row) < 1:
             continue
         
-        video_id, time_range, description, seg_id, segment_video = row
-        symptoms = extract_symptoms(description)
-        file_name = row["video_filename"].strip()
+        # video_id,  description = row
+        # print(description)
+        symptoms = extract_symptoms(row["segment_feature_list"])
+        file_name = row["segment_video_name"].strip()
         video_path = os.path.join(VIDEO_BASE_PATH, file_name)
     
         patient_id = file_name.split("@")[0]
@@ -62,7 +63,7 @@ with open(csv_path, "r", encoding="utf-8") as f:
                     {"role": "system", "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."},
                     {"role": "user", "content": get_task5_prompt().strip()},
                     # {"role": "assistant", "content": symptoms if symptoms else "none"},
-                    {"role": "assistant", "content": row["description"] if row["description"] else "none"},
+                    {"role": "assistant", "content": row["segment_feature_list"] if row["segment_feature_list"] else "none"},
                 ],
                 "videos": [video_path],
                 

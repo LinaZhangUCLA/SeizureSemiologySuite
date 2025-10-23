@@ -501,7 +501,7 @@ def format_time(orig_time_str):
     return "N/A"
 
 
-def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_dict):
+def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_dict, json_error_log):
     """
     Extract features from the video by the VLM for each prompt in prompt_list,
     Return a list of extracted features in the same order as prompt_list.
@@ -526,11 +526,28 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                 # Try direct JSON parsing first
                 try:
                     answer_json = json.loads(raw_answer)
-                except json.JSONDecodeError:
+                except json.JSONDecodeError as json_err:
+                    # Log JSON parsing error to file
+                    json_error_log.write(f"Video: {file_name}\n")
+                    json_error_log.write(f"Feature: {feature}\n")
+                    json_error_log.write(f"Attempt: {retry_count + 1}\n")
+                    json_error_log.write(f"Error: {str(json_err)}\n")
+                    json_error_log.write(f"Raw response: {raw_answer}\n")
+                    json_error_log.write("-" * 50 + "\n\n")
+                    json_error_log.flush()  # Ensure it's written immediately
+                    
                     # If direct parsing fails, try cleaning the response
                     print(f"Direct JSON parsing failed, attempting to clean response...")
                     answer_json = clean_json_response(raw_answer)
                     if answer_json is None:
+                        # Log the cleaning failure too
+                        json_error_log.write(f"Video: {file_name}\n")
+                        json_error_log.write(f"Feature: {feature}\n")
+                        json_error_log.write(f"Attempt: {retry_count + 1}\n")
+                        json_error_log.write(f"Error: Failed to parse JSON even after cleaning\n")
+                        json_error_log.write(f"Raw response: {raw_answer}\n")
+                        json_error_log.write("-" * 50 + "\n\n")
+                        json_error_log.flush()
                         raise ValueError("Failed to parse JSON even after cleaning")
 
                 answer = answer_json['answer']
@@ -588,6 +605,18 @@ def main():
         output_header.append(feature)
         output_header.append(f'justification_for_{feature}')
 
+    # Create or append to JSON parsing error log file
+    json_error_log_path = os.path.join(inference_dir, f"qwen3_omni_30b_task12_{args.gpu}.log")
+    
+    # Check if file exists and is not empty
+    file_exists_and_has_content = os.path.exists(json_error_log_path) and os.path.getsize(json_error_log_path) > 0
+    
+    json_error_log = open(json_error_log_path, 'a', encoding='utf-8')
+    
+    # Only write header if file is new (doesn't exist or is empty)
+    if not file_exists_and_has_content:
+        json_error_log.write("JSON Parsing Error Log\n")
+        json_error_log.write("=" * 50 + "\n\n")
 
     # List all files in the directory to check existence quickly
     input_videos_files = os.listdir(dataset_dir)
@@ -649,7 +678,7 @@ def main():
             #video_path = os.path.join(directory, file_name)
             print(f"Processing: {video_path}")
             try:
-                answer_dict = ExtractFeatureByVLM(video_path, file_name, (video_idx + 1, len(video_list)), log_file, prompt_dict)
+                answer_dict = ExtractFeatureByVLM(video_path, file_name, (video_idx + 1, len(video_list)), log_file, prompt_dict, json_error_log)
                 # Build row with proper structure: feature, justification, start_time for each feature
                 for feature in prompt_dict.keys():
                     if feature in answer_dict:
@@ -680,8 +709,9 @@ def main():
         # Append to the output CSV (no header since it's already written)
         append_to_csv(inf_result_csv_fp, row_to_write)
 
-
-        print(f"Processing is complete. Results are in '{inf_result_csv_fp}', logs in '{log_file}'.")
+    # Close the JSON error log file
+    json_error_log.close()
+    print(f"Processing is complete. Results are in '{inf_result_csv_fp}', JSON parsing errors logged in '{json_error_log_path}'.")
 
 if __name__ == "__main__":
     print(f"Starting seizure video feature extraction...")

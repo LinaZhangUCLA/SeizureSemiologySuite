@@ -1,5 +1,6 @@
 import asyncio
 import os
+import random
 import re
 import textwrap
 from collections import Counter
@@ -59,7 +60,7 @@ class SeizureORM(ORM):
         self.criteria = EvaluationCriteria()
 
 
-    def __call__(self, completions, solution, **kwargs) -> List[float]:
+    def __call__(self, completions, solution, channel, **kwargs) -> List[float]:
         """
         Computing score for serizure tasks
 
@@ -74,14 +75,43 @@ class SeizureORM(ORM):
         rewards = []
         for content, sol in zip(completions, solution):
             # TODO: 针对不同的任务需要有不同的
-            try:
-                prompt = self._create_prompt(content, sol)
-                scores = self._call_llm(prompt)
-                reward = self._compute_rqi(scores)
-            except Exception as e:
-                print(f"[SeizureORM] Evaluation failed: {e}")
-                reward = 0.0
-            rewards.append(reward)
+            if channel == "task1-2":
+                try:
+                    reward = random.random()
+                except Exception as e:
+                    print(f"[SeizureORM] Evaluation failed: {e}")
+                    reward = 0.0
+                rewards.append(reward)
+            elif channel == "task-3":
+                try:
+                    reward = random.random()
+                except Exception as e:
+                    print(f"[SeizureORM] Evaluation failed: {e}")
+                    reward = 0.0
+                rewards.append(reward)
+            elif channel == "task-4":
+                try:
+                    reward = random.random()
+                except Exception as e:
+                    print(f"[SeizureORM] Evaluation failed: {e}")
+                    reward = 0.0
+                rewards.append(reward)
+            elif channel == "task-5":
+                try:
+                    reward = random.random()
+                except Exception as e:
+                    print(f"[SeizureORM] Evaluation failed: {e}")
+                    reward = 0.0
+                rewards.append(reward)
+            elif channel == "task-6":
+                try:
+                    prompt = self._create_prompt(content, sol)
+                    scores = self._call_llm(prompt)
+                    reward = self._compute_rqi(scores)
+                except Exception as e:
+                    print(f"[SeizureORM] Evaluation failed: {e}")
+                    reward = 0.0
+                rewards.append(reward)
 
         return rewards
 

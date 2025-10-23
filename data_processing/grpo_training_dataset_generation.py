@@ -23,7 +23,7 @@ for folder, _, files in os.walk(root_dir):
                 print(f"⚠️ 读取失败 {file_path}: {e}")
 
 # 输出合并后的文件
-output_path = "grpo_training_dataset.json"
+output_path = "raw_dataset.json"
 with open(output_path, "w", encoding="utf-8") as f:
     json.dump(merged_data, f, ensure_ascii=False, indent=2)
 

@@ -31,10 +31,10 @@ echo "Conda environment qwen3vl_moe activated."
 # Run the inference script
 python ../task12_Qwen3-VL-32B-Instruct.py \
     --gpu 2,3 \
-    --videos_range 601-1200 \
-    --output_dir /mnt/SSD1/prateik/SeizureSemiologyBench/output \
+    --videos_range 301-600 \
+    --output_dir /home/hubing/SeizureSemiologyBench/output \
     --model_name Qwen/Qwen3-VL-32B-Instruct \
     --dataset_dir /mnt/SSD3/lina/ucla2/ssbench/task1256_segment_60s \
-    --cache_dir /mnt/SSD4/prateik/cache 
+    --cache_dir /home/hubing/SeizureSemiologyBench/cache
 
 echo "Done!"

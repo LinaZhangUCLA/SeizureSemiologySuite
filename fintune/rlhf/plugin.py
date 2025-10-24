@@ -175,6 +175,8 @@ class SeizureORM(ORM):
         Returns:
             list[float]: Reward scores
         """
+        # 参数名: ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
+        # 参数名: ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
         print("参数名:", list(kwargs.keys()))
         # rewards = []
         # from math_verify import parse, verify

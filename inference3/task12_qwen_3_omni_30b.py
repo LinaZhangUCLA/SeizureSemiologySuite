@@ -531,7 +531,8 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                     json_error_log.write(f"Video: {file_name}\n")
                     json_error_log.write(f"Feature: {feature}\n")
                     json_error_log.write(f"Attempt: {retry_count + 1}\n")
-                    json_error_log.write(f"Error: {str(json_err)}\n")
+                    json_error_log.write(f"Direct Parsing Failed: {str(json_err)}\n")
+                    json_error_log.write(f"Attempting to clean response.")
                     json_error_log.write(f"Raw response: {raw_answer}\n")
                     json_error_log.write("-" * 50 + "\n\n")
                     json_error_log.flush()  # Ensure it's written immediately

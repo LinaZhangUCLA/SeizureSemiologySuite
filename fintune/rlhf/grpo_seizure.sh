@@ -9,14 +9,14 @@ CUDA_VISIBLE_DEVICES=0,1 \
 swift rlhf \
     --rlhf_type grpo \
     --model /cpfs01/projects-HDD/cfff-2b7529404594_HDD/lwt_24110850004/Qwen2.5-Omni-3B \
-    --reward_funcs seizure_score format \
-    --reward_weights 1 0.5 \
+    --reward_funcs seizure format \
+    --reward_weights 1.0 1.0 \
     --train_type lora \
     --lora_rank 8 \
     --lora_alpha 32 \
     --target_modules all-linear \
     --torch_dtype bfloat16 \
-    --dataset ./Seizure \
+    --dataset './seizure.jsonl' \
     --load_from_cache_file true \
     --external_plugins examples/train/grpo/plugin/plugin.py \
     --max_completion_length 2048 \

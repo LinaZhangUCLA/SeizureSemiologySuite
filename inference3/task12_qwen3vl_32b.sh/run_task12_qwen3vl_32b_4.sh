@@ -3,14 +3,13 @@
 
 
 # Activate virtual environment
-# eval "$(conda shell.bash hook)"
-# conda activate qwenvl
-# conda activate qwen3vl_moe
+eval "$(conda shell.bash hook)"
+conda activate qwen3vl_moe
 
-source ~/miniconda3/etc/profile.d/conda.sh
-conda activate /mnt/SSD3/lina/my_conda_env/qwen3vl_moe
-which python
-python -c 'import sys; print(sys.executable)'
+# source ~/miniconda3/etc/profile.d/conda.sh
+# conda activate /mnt/SSD3/lina/my_conda_env/qwen3vl_moe
+# which python
+# python -c 'import sys; print(sys.executable)'
 
 
 # Check if activation was successful
@@ -30,7 +29,7 @@ echo "Conda environment qwen3vl_moe activated."
 # video_range 1-2314  eg.1-1000, 1001-2000, 2001-2314
 
 # Run the inference script
-python task12_Qwen3-VL-32B-Instruct.py \
+python ../task12_Qwen3-VL-32B-Instruct.py \
     --gpu 6,7 \
     --videos_range 1801-2400 \
     --output_dir /mnt/SSD1/prateik/SeizureSemiologyBench/output \

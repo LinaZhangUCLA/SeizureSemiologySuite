@@ -7,8 +7,14 @@ import os
 import json
 import re
 from tqdm import tqdm
+import warnings
 
 import argparse
+
+# Suppress torchcodec warning
+warnings.filterwarnings("ignore", message=".*torchcodec.*")
+warnings.filterwarnings("ignore", message=".*torchvision.*decoding.*deprecated.*")
+warnings.filterwarnings("ignore", category=UserWarning, module="transformers.video_processing_utils")
 
 default_model_cache_dir = os.path.join(os.path.dirname(__file__), 'model_cache')
 default_output_dir = os.path.join(os.path.dirname(__file__), 'output')
@@ -230,40 +236,119 @@ def download_video(url, dest_path):
 
 
 def get_video_frames(video_file_path, num_frames=128, cache_dir=video_cache_dir):
+    print(f"DEBUG: get_video_frames called with: {video_file_path}")
+    print(f"DEBUG: Video file exists: {os.path.exists(video_file_path)}")
+    
     # os.makedirs(cache_dir, exist_ok=True)
 
     video_hash = hashlib.md5(video_file_path.encode('utf-8')).hexdigest()
+    print(f"DEBUG: Video hash: {video_hash}")
 
     frames_cache_file = os.path.join(cache_dir, f'{video_hash}_{num_frames}_frames.npy')
     timestamps_cache_file = os.path.join(cache_dir, f'{video_hash}_{num_frames}_timestamps.npy')
+    print(f"DEBUG: Cache files: {frames_cache_file}, {timestamps_cache_file}")
 
     if os.path.exists(frames_cache_file) and os.path.exists(timestamps_cache_file):
+        print(f"DEBUG: Loading from cache...")
         frames = np.load(frames_cache_file)
         timestamps = np.load(timestamps_cache_file)
+        print(f"DEBUG: Loaded frames shape: {frames.shape}, timestamps shape: {timestamps.shape}")
         return video_file_path, frames, timestamps
 
-    # Read video using torchvision
-    video_tensor, audio_tensor, video_info = read_video(video_file_path, pts_unit='sec')
-    total_frames = video_tensor.shape[0]
-    fps = video_info['video_fps']
+    print(f"DEBUG: Reading video with torchvision...")
+    try:
+        # Read video using torchvision
+        video_tensor, audio_tensor, video_info = read_video(video_file_path, pts_unit='sec')
+        print(f"DEBUG: Video tensor shape: {video_tensor.shape}")
+        print(f"DEBUG: Video info: {video_info}")
+        
+        total_frames = video_tensor.shape[0]
+        fps = video_info['video_fps']
+        print(f"DEBUG: Total frames: {total_frames}, FPS: {fps}")
 
-    # print("total_frames : ", total_frames)
+        # print("total_frames : ", total_frames)
 
-    indices = np.linspace(0, total_frames - 1, num=num_frames, dtype=int)
+        indices = np.linspace(0, total_frames - 1, num=num_frames, dtype=int)
+        print(f"DEBUG: Frame indices: {indices[:10]}... (showing first 10)")
 
-    # Extract selected frames
-    selected_frames = video_tensor[indices]  # Shape: [num_frames, H, W, C]
+        # Extract selected frames
+        selected_frames = video_tensor[indices]  # Shape: [num_frames, H, W, C]
+        print(f"DEBUG: Selected frames shape: {selected_frames.shape}")
 
-    # Convert to numpy array and ensure uint8 format
-    frames = selected_frames.numpy().astype(np.uint8)
+        # Convert to numpy array and ensure uint8 format
+        frames = selected_frames.numpy().astype(np.uint8)
+        print(f"DEBUG: Converted frames shape: {frames.shape}, dtype: {frames.dtype}")
 
-    # Calculate timestamps for selected frames
-    timestamps = np.array([idx / fps for idx in indices])
+        # Calculate timestamps for selected frames
+        timestamps = np.array([idx / fps for idx in indices])
+        print(f"DEBUG: Timestamps shape: {timestamps.shape}")
 
-    np.save(frames_cache_file, frames)
-    np.save(timestamps_cache_file, timestamps)
+        print(f"DEBUG: Saving to cache...")
+        np.save(frames_cache_file, frames)
+        np.save(timestamps_cache_file, timestamps)
+        print(f"DEBUG: Cache saved successfully")
 
-    return video_file_path, frames, timestamps
+        return video_file_path, frames, timestamps
+    except Exception as e:
+        print(f"DEBUG: Error in get_video_frames: {str(e)}")
+        print(f"DEBUG: Exception type: {type(e).__name__}")
+        print(f"DEBUG: Trying alternative video reading method...")
+        
+        # Try alternative method using OpenCV if torchvision fails
+        try:
+            import cv2
+            print(f"DEBUG: Attempting to read video with OpenCV...")
+            cap = cv2.VideoCapture(video_file_path)
+            
+            if not cap.isOpened():
+                raise ValueError(f"Could not open video file: {video_file_path}")
+            
+            # Get video properties
+            fps = cap.get(cv2.CAP_PROP_FPS)
+            total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+            print(f"DEBUG: OpenCV - Total frames: {total_frames}, FPS: {fps}")
+            
+            # Sample frames
+            indices = np.linspace(0, total_frames - 1, num=num_frames, dtype=int)
+            frames_list = []
+            
+            for idx in indices:
+                cap.set(cv2.CAP_PROP_POS_FRAMES, idx)
+                ret, frame = cap.read()
+                if ret:
+                    # Convert BGR to RGB
+                    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                    frames_list.append(frame_rgb)
+                else:
+                    print(f"DEBUG: Warning - Could not read frame {idx}")
+                    # Use the last successfully read frame
+                    if frames_list:
+                        frames_list.append(frames_list[-1])
+                    else:
+                        # Create a black frame as fallback
+                        frames_list.append(np.zeros((480, 640, 3), dtype=np.uint8))
+            
+            cap.release()
+            
+            if not frames_list:
+                raise ValueError("No frames could be read from video")
+            
+            frames = np.array(frames_list)
+            timestamps = np.array([idx / fps for idx in indices])
+            
+            print(f"DEBUG: OpenCV - Frames shape: {frames.shape}, timestamps shape: {timestamps.shape}")
+            
+            # Save to cache
+            np.save(frames_cache_file, frames)
+            np.save(timestamps_cache_file, timestamps)
+            print(f"DEBUG: OpenCV fallback successful")
+            
+            return video_file_path, frames, timestamps
+            
+        except Exception as cv_error:
+            print(f"DEBUG: OpenCV fallback also failed: {str(cv_error)}")
+            traceback.print_exc()
+            raise
 
 
 def create_image_grid(images, num_columns=8):
@@ -286,8 +371,13 @@ def create_image_grid(images, num_columns=8):
 
 # TODO:
 def inference(video_path, prompt, max_new_tokens=None, max_pixels=602112, min_pixels=16 * 28 * 28):
+    print(f"DEBUG: inference called with video_path: {video_path}")
+    print(f"DEBUG: prompt length: {len(prompt)}")
+    
     if max_new_tokens is None:
         max_new_tokens = MAX_NEW_TOKENS
+    print(f"DEBUG: max_new_tokens: {max_new_tokens}")
+    
     messages = [
         {"role": "user", "content": [
             {
@@ -301,25 +391,46 @@ def inference(video_path, prompt, max_new_tokens=None, max_pixels=602112, min_pi
             {"type": "text", "text": prompt},
         ]}
     ]
+    print(f"DEBUG: Messages created: {len(messages)} message(s)")
 
-    inputs = processor.apply_chat_template(
-        messages,
-        tokenize=True,
-        add_generation_prompt=True,
-        return_dict=True,
-        return_tensors="pt"
-    )
-    inputs = inputs.to(model.device)
+    try:
+        print(f"DEBUG: Applying chat template...")
+        inputs = processor.apply_chat_template(
+            messages,
+            tokenize=True,
+            add_generation_prompt=True,
+            return_dict=True,
+            return_tensors="pt"
+        )
+        print(f"DEBUG: Chat template applied successfully")
+        # print(f"DEBUG: Input keys: {inputs.keys()}")
+        print(f"DEBUG: Input shapes: {[(k, v.shape if hasattr(v, 'shape') else type(v)) for k, v in inputs.items()]}")
+        
+        inputs = inputs.to(model.device)
+        print(f"DEBUG: Inputs moved to device: {model.device}")
 
-    # Inference: Generation of the output
-    generated_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
-    generated_ids_trimmed = [
-        out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
-    ]
-    output_text = processor.batch_decode(
-        generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
-    )
-    return output_text[0]
+        # Inference: Generation of the output
+        print(f"DEBUG: Starting model generation...")
+        generated_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
+        print(f"DEBUG: Generation completed, output shape: {generated_ids.shape}")
+        
+        generated_ids_trimmed = [
+            out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
+        ]
+        print(f"DEBUG: Generated IDs trimmed, shape: {[ids.shape for ids in generated_ids_trimmed]}")
+        
+        output_text = processor.batch_decode(
+            generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
+        )
+        print(f"DEBUG: Output decoded, length: {len(output_text[0])}")
+        print(f"DEBUG: Output preview: {output_text[0][:200]}...")
+        
+        return output_text[0]
+    except Exception as e:
+        print(f"DEBUG: Error in inference: {str(e)}")
+        print(f"DEBUG: Exception type: {type(e).__name__}")
+        traceback.print_exc()
+        raise
 
 
 # ================== Paths and file names ==================
@@ -478,38 +589,53 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
     Return a list of extracted features in the same order as prompt_list.
     """
 
+    print(f"\n=== DEBUG: Starting feature extraction for {file_name} ===")
+    print(f"Video path: {video_path}")
+    print(f"Video exists: {os.path.exists(video_path)}")
+    
     # extract feature for each prompt
     answer_dict = {}
     for feature in tqdm(prompt_dict.keys(), desc=f"Inferencing on video[{video_idx_info[0]}/{video_idx_info[1]}]",
                         total=len(prompt_dict.keys())):
         prompt = prompt_dict[feature]
+        print(f"\n--- DEBUG: Processing feature '{feature}' ---")
+        print(f"Prompt: {prompt[:100]}...")
 
         answer_collected = False
 
         for retry_count in range(MAX_RETRIES):
+            print(f"  Attempt {retry_count + 1}/{MAX_RETRIES}")
+            raw_answer = None 
             try:
+                print(f"  Getting video frames...")
                 video_path, frames, timestamps = get_video_frames(video_path, num_frames=MAX_FRAMES)
-                # print(prompt)
+                print(f"  Video frames shape: {frames.shape}")
+                print(f"  Timestamps shape: {timestamps.shape}")
 
+                print(f"  Running inference...")
                 raw_answer = inference(video_path, prompt)
-                # print(raw_answer)
+                print(f"  Raw answer length: {len(raw_answer) if raw_answer else 0}")
+                print(f"  Raw answer preview: {raw_answer[:200] if raw_answer else 'None'}...")
+                
                 # Try direct JSON parsing first
                 try:
+                    print(f"  Attempting direct JSON parsing...")
                     answer_json = json.loads(raw_answer)
-                except json.JSONDecodeError:
+                    print(f"  Direct JSON parsing successful!")
+                except json.JSONDecodeError as json_err:
+                    print(f"  Direct JSON parsing failed: {json_err}")
                     # If direct parsing fails, try cleaning the response
-                    # print(f"Direct JSON parsing failed, attempting to clean response...")
+                    print(f"  Attempting to clean response...")
                     answer_json = clean_json_response(raw_answer)
                     if answer_json is None:
                         raise ValueError("Failed to parse JSON even after cleaning")
+                    print(f"  Cleaned JSON parsing successful!")
 
+                print(f"  Parsed JSON: {answer_json}")
                 answer = answer_json['answer']
                 justification = answer_json['justification']
-                # if not args.disable_logs:
-                #     append_to_csv(
-                #         log_csv,
-                #         [file_name, prompt, answer, justification]
-                #     )
+                print(f"  Extracted answer: {answer}")
+                print(f"  Extracted justification: {justification[:100]}...")
 
                 # Store all three values: answer, justification, start_time
                 answer_dict[feature] = {
@@ -517,26 +643,29 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                     'justification': justification,
                 }
                 answer_collected = True
+                print(f"  SUCCESS: Feature '{feature}' processed successfully!")
                 break
             except Exception as e:
-                print(f"Error in prompt for feature: {feature}: {prompt}. The error message is: {str(e)}")
-                print(f"Raw VLM response: {raw_answer}")
-                print(f"Exception: {str(e)}. Retrying ({retry_count + 1}/{MAX_RETRIES})...")
+                print(f"  ERROR in attempt {retry_count + 1}: {str(e)}")
+                print(f"  Raw VLM response: {raw_answer if raw_answer is not None else 'Not available'}")
+                print(f"  Exception type: {type(e).__name__}")
+                print(f"  Exception: {str(e)}. Retrying ({retry_count + 1}/{MAX_RETRIES})...")
 
                 # Add more detailed error information for JSON parsing issues
-                if isinstance(e, (json.JSONDecodeError, ValueError)):
-                    print(f"JSON parsing error details:")
-                    print(f"  - Response length: {len(raw_answer) if raw_answer else 0}")
-                    print(f"  - Response preview: {raw_answer[:200] if raw_answer else 'None'}...")
+                if isinstance(e, (json.JSONDecodeError, ValueError)) and raw_answer is not None:
+                    print(f"  JSON parsing error details:")
+                    print(f"    - Response length: {len(raw_answer) if raw_answer else 0}")
+                    print(f"    - Response preview: {raw_answer[:200] if raw_answer else 'None'}...")
                     if hasattr(e, 'pos'):
-                        print(f"  - Error position: {e.pos}")
+                        print(f"    - Error position: {e.pos}")
                     if hasattr(e, 'lineno'):
-                        print(f"  - Error line: {e.lineno}")
+                        print(f"    - Error line: {e.lineno}")
 
                 traceback.print_exc()
                 # time.sleep(10 * (retry_count + 1))
 
         if not answer_collected:
+            print(f"  FAILED: All {MAX_RETRIES} attempts failed for feature '{feature}'")
             answer_dict[feature] = {
                 'answer': "fail",
                 'justification': "fail",
@@ -547,6 +676,9 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
             #         log_csv,
             #         [file_name, prompt, "fail", "fail"]
             #     )
+    
+    print(f"\n=== DEBUG: Feature extraction complete for {file_name} ===")
+    print(f"Results: {answer_dict}")
     return answer_dict
 
 
@@ -618,9 +750,12 @@ def main():
             # If the file exists, process with Gemini
             # video_path = os.path.join(directory, file_name)
             print(f"Processing: {video_path}")
+            print(f"DEBUG: Video file exists: {os.path.exists(video_path)}")
+            print(f"DEBUG: Video file size: {os.path.getsize(video_path) if os.path.exists(video_path) else 'N/A'} bytes")
             try:
                 answer_dict = ExtractFeatureByVLM(video_path, file_name, (video_idx + 1, len(video_list)), log_file,
                                                   prompt_dict)
+                print(f"DEBUG: ExtractFeatureByVLM returned: {answer_dict}")
                 # Build row with proper structure: feature, justification, start_time for each feature
                 for feature in prompt_dict.keys():
                     if feature in answer_dict:
@@ -633,10 +768,12 @@ def main():
                         # if feature not in features_no_time:
                         #     row_to_write.append(feature_data['start_time'])
                     else:
-
+                        print(f"DEBUG: Feature '{feature}' not found in answer_dict")
                         row_to_write.extend(["fail", "fail"])
             except Exception as e:
-                print(f"Error processing video {file_name}: {str(e)}")
+                print(f"ERROR: Exception processing video {file_name}: {str(e)}")
+                print(f"ERROR: Exception type: {type(e).__name__}")
+                traceback.print_exc()
                 # Create fail entries for all features (3 columns each: feature, justification, start_time)
                 for _ in prompt_dict.keys():
                     row_to_write.extend(["fail", "fail"])

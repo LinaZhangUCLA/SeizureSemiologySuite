@@ -36,128 +36,180 @@ TO CUSTOMIZE REWARD FUNCTION:
         --reward_funcs my_reward_function
 """
 
+#
+#
+# # TODO: SerizureORM
+# from openai import OpenAI
+# @dataclass
+# class EvaluationCriteria:
+#     structural_completeness_weight: float = 0.25
+#     symptom_coverage_weight: float = 0.25
+#     key_localizing_features_weight: float = 0.25
+#     temporal_fidelity_weight: float = 0.25
+#
+#
+# class SeizureORM(ORM):
+#     """
+#     Reward function for seizure reporting tasks.
+#     Computes an LLM-judged quality score (SeizureRQI) between model outputs and ground truth.
+#     """
+#
+#     def __init__(self, api_key: str = None, model: str = "gpt-4o"):
+#         self.client = OpenAI(api_key=api_key or os.getenv("OPENAI_API_KEY"))
+#         self.model = model
+#         self.criteria = EvaluationCriteria()
+#
+#
+#     # TODO: 自定义的ORM需要包含一个位置参数completions，其他为关键词参数，由数据集额外字段透传
+#     def __call__(self, completions, **kwargs) -> List[float]:
+#     # def __call__(self, completions, solution, channel, **kwargs) -> List[float]:
+#         """
+#         Computing score for serizure tasks
+#
+#         Args:
+#             completions (list[str]): Generated outputs
+#             solution (list[str]):  Ground truth
+#
+#         Returns:
+#             list[float]: Reward scores
+#         """
+#
+#         rewards = []
+#         for content, sol in zip(completions, solution):
+#             # TODO: 针对不同的任务需要有不同的
+#             if channel == "task1-2":
+#                 try:
+#                     reward = random.random()
+#                 except Exception as e:
+#                     print(f"[SeizureORM] Evaluation failed: {e}")
+#                     reward = 0.0
+#                 rewards.append(reward)
+#             elif channel == "task-3":
+#                 try:
+#                     reward = random.random()
+#                 except Exception as e:
+#                     print(f"[SeizureORM] Evaluation failed: {e}")
+#                     reward = 0.0
+#                 rewards.append(reward)
+#             elif channel == "task-4":
+#                 try:
+#                     reward = random.random()
+#                 except Exception as e:
+#                     print(f"[SeizureORM] Evaluation failed: {e}")
+#                     reward = 0.0
+#                 rewards.append(reward)
+#             elif channel == "task-5":
+#                 try:
+#                     reward = random.random()
+#                 except Exception as e:
+#                     print(f"[SeizureORM] Evaluation failed: {e}")
+#                     reward = 0.0
+#                 rewards.append(reward)
+#             elif channel == "task-6":
+#                 try:
+#                     prompt = self._create_prompt(content, sol)
+#                     scores = self._call_llm(prompt)
+#                     reward = self._compute_rqi(scores)
+#                 except Exception as e:
+#                     print(f"[SeizureORM] Evaluation failed: {e}")
+#                     reward = 0.0
+#                 rewards.append(reward)
+#
+#         return rewards
+#
+#
+#     def _call_llm(self, prompt: str) -> Dict:
+#         # TODO: 阿里云api: sk-67abd783fc3b48c28e8c97e88f21cb91
+#         """调用LLM并解析输出"""
+#         try:
+#             response = self.client.chat.completions.create(
+#                 model=self.model,
+#                 messages=[
+#                     {"role": "system", "content": "You are a neurologist evaluator."},
+#                     {"role": "user", "content": prompt},
+#                 ],
+#                 temperature=0.0,
+#                 max_tokens=400,
+#             )
+#             text = response.choices[0].message.content.strip()
+#
+#             # 解析JSON
+#             if "```json" in text:
+#                 text = text.split("```json")[1].split("```")[0]
+#             return json.loads(text)
+#         except Exception as e:
+#             print(f"[SeizureORM] Error parsing response: {e}")
+#             return {"S": 0, "C": 0, "L": 0, "T": 0}
+#
+#     def _compute_rqi(self, scores: Dict) -> float:
+#         """计算综合SeizureRQI分数"""
+#         s, c, l, t = scores["S"], scores["C"], scores["L"], scores["T"]
+#         rqi = (
+#             self.criteria.structural_completeness_weight * s +
+#             self.criteria.symptom_coverage_weight * c +
+#             self.criteria.key_localizing_features_weight * l +
+#             self.criteria.temporal_fidelity_weight * t
+#         )
+#         return float(rqi)
+#
+#     def _create_prompt(self, report_pred: str, report_gt: str) -> str:
+#         """构造LLM判分prompt"""
+#         return f"You are an expert neurologist. Compare the following seizure reports. GROUND TRUTH: {report_gt} MODEL OUTPUT: {report_pred} Evaluate on 4 dimensions (0-100 each): 1. Structural Completeness (S) 2. Symptom Coverage (C) 3. Key Localizing Features (L) 4. Temporal Fidelity (T) Return only JSON: {{ \"S\": <int>, \"C\": <int>, \"L\": <int>, \"T\": <int> }}"
+#
+#
+# orms['seizure_score'] = SeizureORM
+#
 
 
-# TODO: SerizureORM
-from openai import OpenAI
-@dataclass
-class EvaluationCriteria:
-    structural_completeness_weight: float = 0.25
-    symptom_coverage_weight: float = 0.25
-    key_localizing_features_weight: float = 0.25
-    temporal_fidelity_weight: float = 0.25
 
 
 class SeizureORM(ORM):
-    """
-    Reward function for seizure reporting tasks.
-    Computes an LLM-judged quality score (SeizureRQI) between model outputs and ground truth.
-    """
 
-    def __init__(self, api_key: str = None, model: str = "gpt-4o"):
-        self.client = OpenAI(api_key=api_key or os.getenv("OPENAI_API_KEY"))
-        self.model = model
-        self.criteria = EvaluationCriteria()
-
-
-    # TODO: 自定义的ORM需要包含一个位置参数completions，其他为关键词参数，由数据集额外字段透传
     def __call__(self, completions, **kwargs) -> List[float]:
-    # def __call__(self, completions, solution, channel, **kwargs) -> List[float]:
         """
-        Computing score for serizure tasks
-
+        Reward function that checks if the completion is correct.
         Args:
             completions (list[str]): Generated outputs
-            solution (list[str]):  Ground truth
+            solution (list[str]): Ground Truths.
 
         Returns:
             list[float]: Reward scores
         """
-
-        rewards = []
-        for content, sol in zip(completions, solution):
-            # TODO: 针对不同的任务需要有不同的
-            if channel == "task1-2":
-                try:
-                    reward = random.random()
-                except Exception as e:
-                    print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
-                rewards.append(reward)
-            elif channel == "task-3":
-                try:
-                    reward = random.random()
-                except Exception as e:
-                    print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
-                rewards.append(reward)
-            elif channel == "task-4":
-                try:
-                    reward = random.random()
-                except Exception as e:
-                    print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
-                rewards.append(reward)
-            elif channel == "task-5":
-                try:
-                    reward = random.random()
-                except Exception as e:
-                    print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
-                rewards.append(reward)
-            elif channel == "task-6":
-                try:
-                    prompt = self._create_prompt(content, sol)
-                    scores = self._call_llm(prompt)
-                    reward = self._compute_rqi(scores)
-                except Exception as e:
-                    print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
-                rewards.append(reward)
-
-        return rewards
+        print("参数名:", list(kwargs.keys()))
+        # rewards = []
+        # from math_verify import parse, verify
+        # for content, sol in zip(completions, solution):
+        #     reward = 0.0
+        #     # Try symbolic verification first
+        #     try:
+        #         answer = parse(content)
+        #         if float(verify(answer, parse(sol))) > 0:
+        #             reward = 1.0
+        #     except Exception:
+        #         pass  # Continue to next verification method if this fails
+        #
+        #     # If symbolic verification failed, try string matching
+        #     if reward == 0.0:
+        #         try:
+        #             # Extract answer from solution if it has think/answer tags
+        #             sol_match = re.search(r'<answer>(.*?)</answer>', sol)
+        #             ground_truth = sol_match.group(1).strip() if sol_match else sol.strip()
+        #
+        #             # Extract answer from content if it has think/answer tags
+        #             content_match = re.search(r'<answer>(.*?)</answer>', content)
+        #             student_answer = content_match.group(1).strip() if content_match else content.strip()
+        #
+        #             # Compare the extracted answers
+        #             if student_answer == ground_truth:
+        #                 reward = 1.0
+        #         except Exception:
+        #             pass  # Keep reward as 0.0 if both methods fail
+        #     rewards.append(reward)
+        # return rewards
+        return [0] * len(completions)
 
 
-    def _call_llm(self, prompt: str) -> Dict:
-        # TODO: 阿里云api: sk-67abd783fc3b48c28e8c97e88f21cb91
-        """调用LLM并解析输出"""
-        try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {"role": "system", "content": "You are a neurologist evaluator."},
-                    {"role": "user", "content": prompt},
-                ],
-                temperature=0.0,
-                max_tokens=400,
-            )
-            text = response.choices[0].message.content.strip()
-
-            # 解析JSON
-            if "```json" in text:
-                text = text.split("```json")[1].split("```")[0]
-            return json.loads(text)
-        except Exception as e:
-            print(f"[SeizureORM] Error parsing response: {e}")
-            return {"S": 0, "C": 0, "L": 0, "T": 0}
-
-    def _compute_rqi(self, scores: Dict) -> float:
-        """计算综合SeizureRQI分数"""
-        s, c, l, t = scores["S"], scores["C"], scores["L"], scores["T"]
-        rqi = (
-            self.criteria.structural_completeness_weight * s +
-            self.criteria.symptom_coverage_weight * c +
-            self.criteria.key_localizing_features_weight * l +
-            self.criteria.temporal_fidelity_weight * t
-        )
-        return float(rqi)
-
-    def _create_prompt(self, report_pred: str, report_gt: str) -> str:
-        """构造LLM判分prompt"""
-        return f"You are an expert neurologist. Compare the following seizure reports. GROUND TRUTH: {report_gt} MODEL OUTPUT: {report_pred} Evaluate on 4 dimensions (0-100 each): 1. Structural Completeness (S) 2. Symptom Coverage (C) 3. Key Localizing Features (L) 4. Temporal Fidelity (T) Return only JSON: {{ \"S\": <int>, \"C\": <int>, \"L\": <int>, \"T\": <int> }}"
-
-
-orms['seizure_score'] = SeizureORM
+orms['seizure'] = SeizureORM
 
 
 # For additional reward functions, refer to swift/plugin/orm.py.

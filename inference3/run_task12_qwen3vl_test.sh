@@ -3,9 +3,15 @@
 
 
 # Activate virtual environment
-eval "$(conda shell.bash hook)"
+# eval "$(conda shell.bash hook)"
 # conda activate qwenvl
-conda activate qwen3vl_moe
+# conda activate qwen3vl_moe
+
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate /mnt/SSD3/lina/my_conda_env/qwen3vl_moe
+which python
+python -c 'import sys; print(sys.executable)'
+
 
 # Check if activation was successful
 if [ $? -ne 0 ]; then
@@ -27,9 +33,9 @@ echo "Conda environment qwen3vl_moe activated."
 python task12_Qwen3-VL-30B-A3B-Instruct.py \
     --gpu 0,1,2 \
     --videos_range 1-2 \
-    --output_dir /home/lina/SeizureSemiologyBench/qwen3vl102213 \
+    --output_dir /mnt/SSD1/prateik/SeizureSemiologyBench/output \
     --model_name Qwen/Qwen3-VL-30B-A3B-Instruct \
     --dataset_dir /mnt/SSD3/lina/ucla2/ssbench/task1256_segment_60s \
-    --cache_dir /mnt/SSD3/lina/SeizureSemiologyBench/cache 
+    --cache_dir /mnt/SSD4/prateik/cache 
 
 echo "Done!"

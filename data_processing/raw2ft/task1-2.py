@@ -7,8 +7,8 @@ from datetime import datetime
 # ---------- 路径配置 ----------
 INPUT_DIR = "../raw_data/finetune_featrue_videos.csv"
 OUTPUT_DIR = "../ft_data"
-# VIDEO_BASE_PATH = "/mnt/SSD3/lina/finetune_videos"
-VIDEO_BASE_PATH = "./dataset/videos"
+VIDEO_BASE_PATH = "/mnt/SSD3/lina/finetune_videos"
+# VIDEO_BASE_PATH = "./dataset/videos"
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
 # ------------------------------
 
@@ -134,7 +134,11 @@ def process_csv(csv_path, video_base_path):
 
             patient_id = file_name.split("@")[0]
             video_id = os.path.splitext(file_name)[0]
-            video_path = os.path.join(video_base_path, file_name)
+            video_path = os.path.join(video_base_path, "features")
+            video_path = os.path.join(video_path, feature)
+            video_path = os.path.join(video_path, file_name)
+
+
 
             # 构造 prompt 与回答
             user_prompt = get_task1_feature_prompt(feature)

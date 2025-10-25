@@ -8,7 +8,8 @@ pip install transformers==4.57
 ```
 
 
-<!-- ```shell
+```shell
+# install from the begining
 conda create -n qwen3vl_moe python=3.10 -y
 conda activate qwen3vl_moe
 
@@ -30,7 +31,7 @@ pip cache purge && \
 FLASH_ATTENTION_FORCE_BUILD=TRUE pip install flash-attn --no-build-isolation --no-cache-dir
 ```
 
-# Requires ffmpeg; optional if unavailable
+# Requires ffmpeg if there is no ffmpeg on your server
 
 ```shell
 sudo cp /var/lib/dpkg/statoverride /var/lib/dpkg/statoverride.bak
@@ -47,4 +48,4 @@ sudo apt --fix-broken install -y
 sudo apt install -y ffmpeg
 
 ffmpeg -version
-``` -->
+``` 

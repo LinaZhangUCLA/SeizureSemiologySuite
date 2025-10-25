@@ -39,26 +39,11 @@ TO CUSTOMIZE REWARD FUNCTION:
 
 
 # # TODO: SerizureORM
-# from openai import OpenAI
-# @dataclass
-# class EvaluationCriteria:
-#     structural_completeness_weight: float = 0.25
-#     symptom_coverage_weight: float = 0.25
-#     key_localizing_features_weight: float = 0.25
-#     temporal_fidelity_weight: float = 0.25
-
-
 class SeizureORM(ORM):
     """
     Reward function for seizure reporting tasks.
     Computes an LLM-judged quality score (SeizureRQI) between model outputs and ground truth.
     """
-
-    # def __init__(self, api_key: str = None, model: str = "gpt-4o"):
-    #     self.client = OpenAI(api_key=api_key or os.getenv("OPENAI_API_KEY"))
-    #     self.model = model
-    #     self.criteria = EvaluationCriteria()
-
 
     # TODO: 自定义的ORM需要包含一个位置参数completions，其他为关键词参数，由数据集额外字段透传
     def __call__(self, completions, **kwargs) -> List[float]:
@@ -68,29 +53,35 @@ class SeizureORM(ORM):
 
         Args:
             completions (list[str]): Generated outputs
-            solution (list[str]):  Ground truth
 
         Returns:
             list[float]: Reward scores
         """
-
-        # ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
-        # completions, task, messages
         import re
+
+        # kwargs: ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
+        messages = kwargs["messages"]   # 拿messages标签中的gt
+        task = kwargs["task"]   # task区分不同任务
+
+        # TODO: llm回答的思维链为<think> reasoning process here </think><answer> answer here </answer>
 
         rewards = []
         for content, message, task in zip(completions, messages, task):
             # TODO: 针对不同的任务需要有不同的计算指标
+
             if task == "task1-2":
                 # TODO: 定位某个症状是否发生，以及解释为什么。equal问题和open-ended question
                 # {'answer': 'no', 'justification': 'The patient prod...'}
                 try:
-                    llm_answer = content
+                    # TODO: 获取ground-truth的answer，答案是json，需要eval成字典
                     gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    gt_answer = eval(gt_answer)
+                    # TODO: 获取llm的answer，包括<think>...<think>和<answer>...<answer>
+                    llm_answer = content
                     match = re.search(r"<answer>(.*?)</answer>", llm_answer)
                     if match:
                         llm_answer = match.group(1)
-                    gt_answer = eval(gt_answer)
+
                     reward = 0.0
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
@@ -99,14 +90,17 @@ class SeizureORM(ORM):
                     print(f"[SeizureORM] Evaluation failed: {e}")
                     reward = 0.0
                 rewards.append(reward)
+
             elif task == "task-3":
                 # TODO: 判断身体部位定位是否准确。选择题，equal判断
                 try:
-                    llm_answer = content
                     gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    llm_answer = content
+                    # TODO: 获取llm的answer，包括<think>...<think>和<answer>...<answer>
                     match = re.search(r"<answer>(.*?)</answer>", llm_answer)
                     if match:
                         llm_answer = match.group(1)
+
                     if gt_answer == llm_answer:
                         reward = 1.0
                     else:
@@ -116,16 +110,20 @@ class SeizureORM(ORM):
                     print(f"[SeizureORM] Evaluation failed: {e}")
                     reward = 0.0
                 rewards.append(reward)
+
             elif task == "task-4":
                 # TODO: 定位症状发生时间，计算时间段重合。计算题，计算overlap/union
                 try:
-                    # 00:21-00:32
-                    llm_answer = content
                     # 01:23-02:23
                     gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    # 00:21-00:32
+                    llm_answer = content
+                    # TODO: 获取llm的answer，包括<think>...<think>和<answer>...<answer>
                     match = re.search(r"<answer>(.*?)</answer>", llm_answer)
                     if match:
                         llm_answer = match.group(1)
+
+                    # TODO： 计算reward
                     # 转秒
                     s1 = int(llm_answer.split('-')[0].split(':')[0]) * 60 + int(llm_answer.split('-')[0].split(':')[1])
                     e1 = int(llm_answer.split('-')[1].split(':')[0]) * 60 + int(llm_answer.split('-')[1].split(':')[1])
@@ -141,16 +139,19 @@ class SeizureORM(ORM):
                     print(f"[SeizureORM] Evaluation failed: {e}")
                     reward = 0.0
                 rewards.append(reward)
+
             elif task == "task-5":
                 # TODO: 症状发生顺序的排序问题。排序问题，直接计算gt中的所有两两关系在llm的回答中顺序是否正确
                 # "arm_straightening,figure4,tonic,face_twitching,clonic"
                 # "arm_straightening,tonic,figure4,face_twitching,clonic"
                 try:
-                    llm_answer = content
                     gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    llm_answer = content
+                    # TODO: 获取answer标签内容
                     match = re.search(r"<answer>(.*?)</answer>", llm_answer)
                     if match:
                         llm_answer = match.group(1)
+
                     pred_list = llm_answer.split(',')
                     gt_list = gt_answer.split(',')
                     # 构建预测序列索引
@@ -171,28 +172,34 @@ class SeizureORM(ORM):
                     print(f"[SeizureORM] Evaluation failed: {e}")
                     reward = 0.0
                 rewards.append(reward)
+
             elif task == "task-6":
                 # TODO: 病人诊断报告。open-ended问题, 计算bleu+rouge
                 try:
-                    llm_answer = content
                     gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    llm_answer = content
+                    # TODO: 获取answer标签内容
                     match = re.search(r"<answer>(.*?)</answer>", llm_answer)
                     if match:
                         llm_answer = match.group(1)
+
                     reward += self.computing_bleu_rouge_score(llm_answer["description"], gt_answer["description"])
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
                     reward = 0.0
                 rewards.append(reward)
+
             elif task == "task-7":
-                # TODO: 癫痫判断，ES和NES，以及对应的report。equal问题和open-ended question
+                # TODO: 癫痫判断，ES和NES，以及对应的description。equal问题和open-ended question
                 # {'answer': 'ES', 'description': 'Occurs out of sleep. Patient under the cove...'}
                 try:
-                    llm_answer = content
                     gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    llm_answer = content
+                    # TODO: 获取answer标签内容
                     match = re.search(r"<answer>(.*?)</answer>", llm_answer)
                     if match:
                         llm_answer = match.group(1)
+
                     reward = 0.0
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
@@ -204,76 +211,29 @@ class SeizureORM(ORM):
 
         return rewards
 
-
-    def computing_bleu_rouge_score(self, refs, cands):
+    # TODO: open-ended question的解决方案，计算rouge和bleu的分数
+    def compute_bleu_rouge(self, refs, cands):
         import math
         from rouge import Rouge
-        smoothie = 1e-8  # 防止除零
         rouge = Rouge()
-        bleu_list, rouge_list = [], []
+        eps = 1e-8
 
+        bleu_scores, rouge_scores = [], []
         for ref, cand in zip(refs, cands):
-            # --- BLEU（简单 unigram 近似版，兼容 Python 3.12）---
-            ref_tokens, cand_tokens = ref.split(), cand.split()
-            overlap = sum(1 for w in cand_tokens if w in ref_tokens)
-            precision = overlap / (len(cand_tokens) + smoothie)
-            brevity = math.exp(1 - len(ref_tokens) / (len(cand_tokens) + smoothie)) if len(cand_tokens) < len(
-                ref_tokens) else 1.0
-            bleu = brevity * precision
-            bleu_list.append(bleu)
+            ref_toks, cand_toks = ref.split(), cand.split()
+            overlap = sum(w in ref_toks for w in cand_toks)
+            precision = overlap / (len(cand_toks) + eps)
+            brevity = math.exp(1 - len(ref_toks) / (len(cand_toks) + eps)) if len(cand_toks) < len(ref_toks) else 1
+            bleu_scores.append(brevity * precision)
 
-            # --- ROUGE-L ---
             try:
-                rouge_f = rouge.get_scores(cand, ref)[0]["rouge-l"]["f"]
-            except Exception:
-                rouge_f = 0.0
-            rouge_list.append(rouge_f)
+                rouge_scores.append(rouge.get_scores(cand, ref)[0]['rouge-l']['f'])
+            except:
+                rouge_scores.append(0.0)
 
-        avg_bleu = sum(bleu_list) / len(bleu_list)
-        avg_rouge = sum(rouge_list) / len(rouge_list)
-        score = 0.5 * (avg_bleu + avg_rouge)
-        # return {"bleu": round(avg_bleu, 4), "rouge": round(avg_rouge, 4), "score": round(score, 4)}
-        return score
-
-
-    #
-    # def _call_llm(self, prompt: str) -> Dict:
-    #     # TODO: 阿里云api: sk-67abd783fc3b48c28e8c97e88f21cb91
-    #     """调用LLM并解析输出"""
-    #     try:
-    #         response = self.client.chat.completions.create(
-    #             model=self.model,
-    #             messages=[
-    #                 {"role": "system", "content": "You are a neurologist evaluator."},
-    #                 {"role": "user", "content": prompt},
-    #             ],
-    #             temperature=0.0,
-    #             max_tokens=400,
-    #         )
-    #         text = response.choices[0].message.content.strip()
-    #
-    #         # 解析JSON
-    #         if "```json" in text:
-    #             text = text.split("```json")[1].split("```")[0]
-    #         return json.loads(text)
-    #     except Exception as e:
-    #         print(f"[SeizureORM] Error parsing response: {e}")
-    #         return {"S": 0, "C": 0, "L": 0, "T": 0}
-    #
-    # def _compute_rqi(self, scores: Dict) -> float:
-    #     """计算综合SeizureRQI分数"""
-    #     s, c, l, t = scores["S"], scores["C"], scores["L"], scores["T"]
-    #     rqi = (
-    #         self.criteria.structural_completeness_weight * s +
-    #         self.criteria.symptom_coverage_weight * c +
-    #         self.criteria.key_localizing_features_weight * l +
-    #         self.criteria.temporal_fidelity_weight * t
-    #     )
-    #     return float(rqi)
-    #
-    # def _create_prompt(self, report_pred: str, report_gt: str) -> str:
-    #     """构造LLM判分prompt"""
-    #     return f"You are an expert neurologist. Compare the following seizure reports. GROUND TRUTH: {report_gt} MODEL OUTPUT: {report_pred} Evaluate on 4 dimensions (0-100 each): 1. Structural Completeness (S) 2. Symptom Coverage (C) 3. Key Localizing Features (L) 4. Temporal Fidelity (T) Return only JSON: {{ \"S\": <int>, \"C\": <int>, \"L\": <int>, \"T\": <int> }}"
+        bleu = sum(bleu_scores) / len(bleu_scores)
+        rouge_l = sum(rouge_scores) / len(rouge_scores)
+        return 0.5 * (bleu + rouge_l)
 
 
 orms['seizure_score'] = SeizureORM

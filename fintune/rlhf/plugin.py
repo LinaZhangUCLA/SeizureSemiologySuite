@@ -69,7 +69,7 @@ class SeizureORM(ORM):
         for content, message, task in zip(completions, messages, task):
             # TODO: 针对不同的任务需要有不同的计算指标
 
-            if task == "task1-2":
+            if task == "task-1-2":
                 # TODO: 定位某个症状是否发生，以及解释为什么。equal问题和open-ended question
                 # {'answer': 'no', 'justification': 'The patient prod...'}
                 try:
@@ -82,10 +82,12 @@ class SeizureORM(ORM):
                     if match:
                         llm_answer = match.group(1)
 
+                    # TODO: 计算task 1和2的reward，先判断是否正确，然后判断justification是否正确
                     reward = 0.0
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
-                        reward += self.computing_bleu_rouge_score(llm_answer["justification"], gt_answer["justification"])
+                        reward += self.computing_bleu_rouge_score(cand=llm_answer["justification"], ref=gt_answer["justification"])
+
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
                     reward = 0.0
@@ -101,6 +103,7 @@ class SeizureORM(ORM):
                     if match:
                         llm_answer = match.group(1)
 
+                    # TODO: task 3直接用equal来判断是否相等
                     if gt_answer == llm_answer:
                         reward = 1.0
                     else:
@@ -123,7 +126,7 @@ class SeizureORM(ORM):
                     if match:
                         llm_answer = match.group(1)
 
-                    # TODO： 计算reward
+                    # TODO: task 4计算重叠比例来计算预测的准确程度
                     # 转秒
                     s1 = int(llm_answer.split('-')[0].split(':')[0]) * 60 + int(llm_answer.split('-')[0].split(':')[1])
                     e1 = int(llm_answer.split('-')[1].split(':')[0]) * 60 + int(llm_answer.split('-')[1].split(':')[1])
@@ -183,7 +186,8 @@ class SeizureORM(ORM):
                     if match:
                         llm_answer = match.group(1)
 
-                    reward += self.computing_bleu_rouge_score(llm_answer["description"], gt_answer["description"])
+                    # TODO: task 6用bleu和rouge来计算相似度作为一个baseline
+                    reward += self.computing_bleu_rouge_score(cand=llm_answer["description"], ref=gt_answer["description"])
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
                     reward = 0.0
@@ -200,10 +204,11 @@ class SeizureORM(ORM):
                     if match:
                         llm_answer = match.group(1)
 
+                    # TODO: task 7先对疾病针对做equal判断，然后对description进行相似度判断
                     reward = 0.0
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
-                        reward += self.computing_bleu_rouge_score(llm_answer["description"], gt_answer["description"])
+                        reward += self.computing_bleu_rouge_score(cand=llm_answer["description"], ref=gt_answer["description"])
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
                     reward = 0.0
@@ -211,29 +216,24 @@ class SeizureORM(ORM):
 
         return rewards
 
+
     # TODO: open-ended question的解决方案，计算rouge和bleu的分数
-    def compute_bleu_rouge(self, refs, cands):
-        import math
+    def compute_bleu_rouge(self, cand, ref):
+        import sacrebleu
         from rouge import Rouge
+
+        # TODO: 计算BLEU
+        bleu = sacrebleu.sentence_bleu(cand, [ref]).score / 100.0
+        # TODO: 计算ROUGE-L
         rouge = Rouge()
-        eps = 1e-8
+        try:
+            rouge_l = rouge.get_scores(cand, ref)[0]['rouge-l']['f']
+        except:
+            rouge_l = 0.0
 
-        bleu_scores, rouge_scores = [], []
-        for ref, cand in zip(refs, cands):
-            ref_toks, cand_toks = ref.split(), cand.split()
-            overlap = sum(w in ref_toks for w in cand_toks)
-            precision = overlap / (len(cand_toks) + eps)
-            brevity = math.exp(1 - len(ref_toks) / (len(cand_toks) + eps)) if len(cand_toks) < len(ref_toks) else 1
-            bleu_scores.append(brevity * precision)
-
-            try:
-                rouge_scores.append(rouge.get_scores(cand, ref)[0]['rouge-l']['f'])
-            except:
-                rouge_scores.append(0.0)
-
-        bleu = sum(bleu_scores) / len(bleu_scores)
-        rouge_l = sum(rouge_scores) / len(rouge_scores)
-        return 0.5 * (bleu + rouge_l)
+        # TODO: 计算综合分数
+        score = 0.5 * (bleu + rouge_l)
+        return score
 
 
 orms['seizure_score'] = SeizureORM

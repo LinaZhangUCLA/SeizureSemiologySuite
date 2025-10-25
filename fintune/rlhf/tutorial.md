@@ -8,6 +8,9 @@ modelscope-registry.us-west-1.cr.aliyuncs.com/modelscope-repo/modelscope:ubuntu2
 
 optional: 也许需要单独安装一下math_verify: pip install math_verify==0.5.2
 
+pip install rouge
+pip install sacrebleu
+
 ## step 2: 替换文件
 
 ### 1.数据集预处理文件替换

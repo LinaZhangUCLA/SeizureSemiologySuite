@@ -7,7 +7,8 @@ from datetime import datetime
 # ---------- 路径配置 ----------
 INPUT_DIR = "../raw_data/finetune_featrue_videos.csv"
 OUTPUT_DIR = "../ft_data"
-VIDEO_BASE_PATH = "/mnt/SSD3/lina/finetune_videos"
+# VIDEO_BASE_PATH = "/mnt/SSD3/lina/finetune_videos"
+VIDEO_BASE_PATH = "./dataset/videos"
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
 # ------------------------------
 

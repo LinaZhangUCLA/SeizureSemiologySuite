@@ -19,7 +19,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/A0002@5-13-2021@UA6693LK@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/A0002@5-13-2021@UA6693LK@sz_v1_1.mp4"
     ]
   },
   {
@@ -42,7 +42,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0002@5-13-2021@UA6693LK@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0002@5-13-2021@UA6693LK@sz_v1_1.mp4"
     ]
   },
   {
@@ -65,7 +65,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0002@5-13-2021@UA6693LK@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/A0002@5-13-2021@UA6693LK@sz_v1_1.mp4"
     ]
   },
   {
@@ -88,7 +88,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/A0002@5-13-2021@UA6693LY@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/A0002@5-13-2021@UA6693LY@sz_v1_1.mp4"
     ]
   },
   {
@@ -111,7 +111,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0002@5-13-2021@UA6693LY@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0002@5-13-2021@UA6693LY@sz_v1_1.mp4"
     ]
   },
   {
@@ -134,7 +134,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0002@5-13-2021@UA6693LY@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/A0002@5-13-2021@UA6693LY@sz_v1_1.mp4"
     ]
   },
   {
@@ -157,7 +157,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/A0003@10-20-2020@DA0015B9@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/A0003@10-20-2020@DA0015B9@sz_v1_1.mp4"
     ]
   },
   {
@@ -180,7 +180,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0003@10-20-2020@DA0015B9@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0003@10-20-2020@DA0015B9@sz_v1_1.mp4"
     ]
   },
   {
@@ -203,7 +203,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0003@10-20-2020@DA0015B9@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/A0003@10-20-2020@DA0015B9@sz_v1_1.mp4"
     ]
   },
   {
@@ -226,7 +226,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0003@10-20-2020@DA0015B9@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0003@10-20-2020@DA0015B9@sz_v2_1.mp4"
     ]
   },
   {
@@ -249,7 +249,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0003@10-20-2020@DA0015B9@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/A0003@10-20-2020@DA0015B9@sz_v2_1.mp4"
     ]
   },
   {
@@ -272,7 +272,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0003@10-20-2020@DA0015BA@sz_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0003@10-20-2020@DA0015BA@sz_v3_1.mp4"
     ]
   },
   {
@@ -295,7 +295,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0003@10-20-2020@DA0015BA@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/A0003@10-20-2020@DA0015BA@sz_v3_1.mp4"
     ]
   },
   {
@@ -318,7 +318,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0003@10-20-2020@DA0015BA@sz_v4_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0003@10-20-2020@DA0015BA@sz_v4_1.mp4"
     ]
   },
   {
@@ -341,7 +341,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0003@10-20-2020@DA0015BA@sz_v4_1.mp4"
+      "./dataset/videos/body_region_onset/A0003@10-20-2020@DA0015BA@sz_v4_1.mp4"
     ]
   },
   {
@@ -364,7 +364,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/A0003@10-20-2020@UA6692PZ@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/A0003@10-20-2020@UA6692PZ@sz_v1_1.mp4"
     ]
   },
   {
@@ -387,7 +387,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0003@10-20-2020@UA6692PZ@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0003@10-20-2020@UA6692PZ@sz_v1_1.mp4"
     ]
   },
   {
@@ -410,7 +410,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0003@10-20-2020@UA6692PZ@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/A0003@10-20-2020@UA6692PZ@sz_v1_1.mp4"
     ]
   },
   {
@@ -433,7 +433,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0003@10-20-2020@UA6692Q0@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0003@10-20-2020@UA6692Q0@sz_v1_1.mp4"
     ]
   },
   {
@@ -456,7 +456,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0003@10-20-2020@UA6692Q0@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/A0003@10-20-2020@UA6692Q0@sz_v1_1.mp4"
     ]
   },
   {
@@ -479,7 +479,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0003@10-20-2020@UA6692Q0@sz_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0003@10-20-2020@UA6692Q0@sz_v3_1.mp4"
     ]
   },
   {
@@ -502,7 +502,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0003@10-20-2020@UA6692Q0@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/A0003@10-20-2020@UA6692Q0@sz_v3_1.mp4"
     ]
   },
   {
@@ -525,7 +525,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0003@10-20-2020@UA6692Q0@sz_v4_1.mp4"
+      "./dataset/videos/body_region_onset/A0003@10-20-2020@UA6692Q0@sz_v4_1.mp4"
     ]
   },
   {
@@ -548,7 +548,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0003@10-20-2020@UA6692Q1@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0003@10-20-2020@UA6692Q1@sz_v2_1.mp4"
     ]
   },
   {
@@ -571,7 +571,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0003@10-20-2020@UA6692Q1@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/A0003@10-20-2020@UA6692Q1@sz_v2_1.mp4"
     ]
   },
   {
@@ -594,7 +594,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0004@5-21-2019@DA0012TK@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0004@5-21-2019@DA0012TK@sz_v2_1.mp4"
     ]
   },
   {
@@ -617,7 +617,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0004@5-21-2019@DA0012TK@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/A0004@5-21-2019@DA0012TK@sz_v2_1.mp4"
     ]
   },
   {
@@ -640,7 +640,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/A0006@11-19-2019@DA0013UT@sz_v3_1.mp4"
+      "./dataset/videos/task3_head_turning/A0006@11-19-2019@DA0013UT@sz_v3_1.mp4"
     ]
   },
   {
@@ -663,7 +663,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/A0006@11-19-2019@DA0013UT@sz_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/A0006@11-19-2019@DA0013UT@sz_v3_1.mp4"
     ]
   },
   {
@@ -686,7 +686,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0006@11-19-2019@DA0013UT@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/A0006@11-19-2019@DA0013UT@sz_v3_1.mp4"
     ]
   },
   {
@@ -709,7 +709,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/A0007@11-21-2017@DA3332LI@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/A0007@11-21-2017@DA3332LI@sz_v1_1.mp4"
     ]
   },
   {
@@ -732,7 +732,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0007@11-21-2017@DA3332LI@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/A0007@11-21-2017@DA3332LI@sz_v1_1.mp4"
     ]
   },
   {
@@ -755,7 +755,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/A0007@11-21-2017@DA3332M5@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/A0007@11-21-2017@DA3332M5@sz_v1_1.mp4"
     ]
   },
   {
@@ -778,7 +778,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0007@11-21-2017@DA3332M5@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/A0007@11-21-2017@DA3332M5@sz_v1_1.mp4"
     ]
   },
   {
@@ -801,7 +801,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/A0007@11-21-2017@DA3332M9@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/A0007@11-21-2017@DA3332M9@sz_v1_1.mp4"
     ]
   },
   {
@@ -824,7 +824,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/A0007@11-21-2017@DA3332M9@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/A0007@11-21-2017@DA3332M9@sz_v1_1.mp4"
     ]
   },
   {
@@ -847,7 +847,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/B0001@9-15-2022@DA1322M1@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/B0001@9-15-2022@DA1322M1@sz_v1_1.mp4"
     ]
   },
   {
@@ -870,7 +870,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/B0001@9-15-2022@DA1322M1@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/B0001@9-15-2022@DA1322M1@sz_v1_1.mp4"
     ]
   },
   {
@@ -893,7 +893,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/B0001@9-15-2022@DA1322M1@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/B0001@9-15-2022@DA1322M1@sz_v1_1.mp4"
     ]
   },
   {
@@ -916,7 +916,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/D0001@9-25-2018@DA0011NN@nes_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/D0001@9-25-2018@DA0011NN@nes_v1_1.mp4"
     ]
   },
   {
@@ -939,7 +939,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0001@9-25-2018@DA0011NN@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/D0001@9-25-2018@DA0011NN@nes_v1_1.mp4"
     ]
   },
   {
@@ -962,7 +962,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0002@5-29-2014@TA76406W@nes_v2_2.mp4"
+      "./dataset/videos/body_region_onset/D0002@5-29-2014@TA76406W@nes_v2_2.mp4"
     ]
   },
   {
@@ -985,7 +985,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0002@5-29-2014@TA76406W@nes_v3_1.mp4"
+      "./dataset/videos/body_region_onset/D0002@5-29-2014@TA76406W@nes_v3_1.mp4"
     ]
   },
   {
@@ -1008,7 +1008,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0002@5-29-2014@TA76406W@nes_v4_1.mp4"
+      "./dataset/videos/body_region_onset/D0002@5-29-2014@TA76406W@nes_v4_1.mp4"
     ]
   },
   {
@@ -1031,7 +1031,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0002@5-29-2014@TA76406X@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/D0002@5-29-2014@TA76406X@nes_v1_1.mp4"
     ]
   },
   {
@@ -1054,7 +1054,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/D0002@5-29-2014@TA76406Z@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/D0002@5-29-2014@TA76406Z@nes_v1_1.mp4"
     ]
   },
   {
@@ -1077,7 +1077,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0002@5-29-2014@TA76406Z@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/D0002@5-29-2014@TA76406Z@nes_v1_1.mp4"
     ]
   },
   {
@@ -1100,7 +1100,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0002@5-29-2014@TA76406Z@nes_v3_1.mp4"
+      "./dataset/videos/body_region_onset/D0002@5-29-2014@TA76406Z@nes_v3_1.mp4"
     ]
   },
   {
@@ -1123,7 +1123,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0002@5-29-2014@VA7610ZK@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/D0002@5-29-2014@VA7610ZK@nes_v1_1.mp4"
     ]
   },
   {
@@ -1146,7 +1146,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0002@5-29-2014@VA7610ZK@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/D0002@5-29-2014@VA7610ZK@nes_v2_1.mp4"
     ]
   },
   {
@@ -1169,7 +1169,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/D0002@5-29-2014@VA7610ZK@nes_v4_1.mp4"
+      "./dataset/videos/task3_arm_movement/D0002@5-29-2014@VA7610ZK@nes_v4_1.mp4"
     ]
   },
   {
@@ -1192,7 +1192,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0002@5-29-2014@VA7610ZK@nes_v4_1.mp4"
+      "./dataset/videos/body_region_onset/D0002@5-29-2014@VA7610ZK@nes_v4_1.mp4"
     ]
   },
   {
@@ -1215,7 +1215,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/D0002@5-29-2014@VA76111G@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/D0002@5-29-2014@VA76111G@nes_v1_1.mp4"
     ]
   },
   {
@@ -1238,7 +1238,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0002@5-29-2014@VA76111G@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/D0002@5-29-2014@VA76111G@nes_v1_1.mp4"
     ]
   },
   {
@@ -1261,7 +1261,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/D0003@8-20-2018@DA0011FY@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/D0003@8-20-2018@DA0011FY@sz_v1_1.mp4"
     ]
   },
   {
@@ -1284,7 +1284,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/D0003@8-20-2018@DA0011FY@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/D0003@8-20-2018@DA0011FY@sz_v1_1.mp4"
     ]
   },
   {
@@ -1307,7 +1307,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0003@8-20-2018@DA0011FY@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/D0003@8-20-2018@DA0011FY@sz_v1_1.mp4"
     ]
   },
   {
@@ -1330,7 +1330,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0003@8-20-2018@DA7021DY@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/D0003@8-20-2018@DA7021DY@sz_v1_1.mp4"
     ]
   },
   {
@@ -1353,7 +1353,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/D0004@12-11-2017@DA00100C@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/D0004@12-11-2017@DA00100C@sz_v1_1.mp4"
     ]
   },
   {
@@ -1376,7 +1376,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0004@12-11-2017@DA00100C@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/D0004@12-11-2017@DA00100C@sz_v1_1.mp4"
     ]
   },
   {
@@ -1399,7 +1399,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/D0004@12-11-2017@DA00100D@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/D0004@12-11-2017@DA00100D@sz_v2_1.mp4"
     ]
   },
   {
@@ -1422,7 +1422,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0004@12-11-2017@DA00100D@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/D0004@12-11-2017@DA00100D@sz_v2_1.mp4"
     ]
   },
   {
@@ -1445,7 +1445,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/D0004@12-11-2017@DA00100U@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/D0004@12-11-2017@DA00100U@sz_v1_1.mp4"
     ]
   },
   {
@@ -1468,7 +1468,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/D0004@12-11-2017@DA00100U@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/D0004@12-11-2017@DA00100U@sz_v1_1.mp4"
     ]
   },
   {
@@ -1491,7 +1491,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/D0004@12-11-2017@DA00100U@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/D0004@12-11-2017@DA00100U@sz_v1_1.mp4"
     ]
   },
   {
@@ -1514,7 +1514,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/E0003@6-27-2022@KA96022I@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/E0003@6-27-2022@KA96022I@nes_v1_1.mp4"
     ]
   },
   {
@@ -1537,7 +1537,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/E0005@6-5-2018@DA7020X7@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/E0005@6-5-2018@DA7020X7@sz_v1_1.mp4"
     ]
   },
   {
@@ -1560,7 +1560,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/E0005@6-5-2018@DA7020X7@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/E0005@6-5-2018@DA7020X7@sz_v1_1.mp4"
     ]
   },
   {
@@ -1583,7 +1583,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/E0005@6-5-2018@DA7020X7@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/E0005@6-5-2018@DA7020X7@sz_v1_1.mp4"
     ]
   },
   {
@@ -1606,7 +1606,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/E0007@10-8-2014@TA7640SH@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/E0007@10-8-2014@TA7640SH@sz_v1_1.mp4"
     ]
   },
   {
@@ -1629,7 +1629,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/E0007@10-8-2014@TA7640SH@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/E0007@10-8-2014@TA7640SH@sz_v1_1.mp4"
     ]
   },
   {
@@ -1652,7 +1652,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/E0007@10-8-2014@VA7631PO@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/E0007@10-8-2014@VA7631PO@sz_v1_1.mp4"
     ]
   },
   {
@@ -1675,7 +1675,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/E0008@1-22-2015@TA7641A3@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/E0008@1-22-2015@TA7641A3@sz_v1_1.mp4"
     ]
   },
   {
@@ -1698,7 +1698,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/E0009@11-23-2020@DA0015I7@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/E0009@11-23-2020@DA0015I7@sz_v1_1.mp4"
     ]
   },
   {
@@ -1721,7 +1721,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/E0009@11-23-2020@DA0015I7@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/E0009@11-23-2020@DA0015I7@sz_v1_1.mp4"
     ]
   },
   {
@@ -1744,7 +1744,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/E0009@11-23-2020@DA0015I8@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/E0009@11-23-2020@DA0015I8@sz_v1_1.mp4"
     ]
   },
   {
@@ -1767,7 +1767,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/E0009@11-23-2020@DA0015I8@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/E0009@11-23-2020@DA0015I8@sz_v1_1.mp4"
     ]
   },
   {
@@ -1790,7 +1790,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/E0009@11-23-2020@DA0015II@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/E0009@11-23-2020@DA0015II@sz_v1_1.mp4"
     ]
   },
   {
@@ -1813,7 +1813,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/E0009@11-23-2020@DA0015II@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/E0009@11-23-2020@DA0015II@sz_v1_1.mp4"
     ]
   },
   {
@@ -1836,7 +1836,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/E0010@6-29-2021@DA0016IF@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/E0010@6-29-2021@DA0016IF@nes_v1_1.mp4"
     ]
   },
   {
@@ -1859,7 +1859,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/F0001@9-28-2022@KA9602FL@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/F0001@9-28-2022@KA9602FL@sz_v1_1.mp4"
     ]
   },
   {
@@ -1882,7 +1882,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/F0001@9-28-2022@KA9602FL@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/F0001@9-28-2022@KA9602FL@sz_v1_1.mp4"
     ]
   },
   {
@@ -1905,7 +1905,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/F0002@4-26-2018@DA0010PI@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/F0002@4-26-2018@DA0010PI@sz_v1_1.mp4"
     ]
   },
   {
@@ -1928,7 +1928,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/F0002@4-26-2018@DA0010PI@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/F0002@4-26-2018@DA0010PI@sz_v1_1.mp4"
     ]
   },
   {
@@ -1951,7 +1951,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/G0001@6-20-2019@DA0012ZY@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/G0001@6-20-2019@DA0012ZY@sz_v1_1.mp4"
     ]
   },
   {
@@ -1974,7 +1974,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/G0001@6-20-2019@DA0012ZY@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/G0001@6-20-2019@DA0012ZY@sz_v1_1.mp4"
     ]
   },
   {
@@ -1997,7 +1997,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/G0001@6-20-2019@DA0012ZY@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/G0001@6-20-2019@DA0012ZY@sz_v2_1.mp4"
     ]
   },
   {
@@ -2020,7 +2020,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/G0001@6-20-2019@DA0012ZY@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/G0001@6-20-2019@DA0012ZY@sz_v2_1.mp4"
     ]
   },
   {
@@ -2043,7 +2043,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/G0001@6-20-2019@DA0012ZY@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/G0001@6-20-2019@DA0012ZY@sz_v2_1.mp4"
     ]
   },
   {
@@ -2066,7 +2066,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/H0001@2-10-2015@TA7641DP@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/H0001@2-10-2015@TA7641DP@sz_v1_1.mp4"
     ]
   },
   {
@@ -2089,7 +2089,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/H0001@2-10-2015@TA7641DP@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/H0001@2-10-2015@TA7641DP@sz_v1_1.mp4"
     ]
   },
   {
@@ -2112,7 +2112,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/H0001@2-10-2015@TA7641DP@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/H0001@2-10-2015@TA7641DP@sz_v2_1.mp4"
     ]
   },
   {
@@ -2135,7 +2135,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/H0001@2-10-2015@TA7641DP@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/H0001@2-10-2015@TA7641DP@sz_v2_1.mp4"
     ]
   },
   {
@@ -2158,7 +2158,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/H0001@2-10-2015@VA7632CV@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/H0001@2-10-2015@VA7632CV@sz_v1_1.mp4"
     ]
   },
   {
@@ -2181,7 +2181,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/H0001@2-10-2015@VA7632CV@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/H0001@2-10-2015@VA7632CV@sz_v1_1.mp4"
     ]
   },
   {
@@ -2204,7 +2204,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/H0001@2-10-2015@VA7632CV@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/H0001@2-10-2015@VA7632CV@sz_v1_1.mp4"
     ]
   },
   {
@@ -2227,7 +2227,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/H0001@2-10-2015@VA7632CV@sz_v3_1.mp4"
+      "./dataset/videos/task3_head_turning/H0001@2-10-2015@VA7632CV@sz_v3_1.mp4"
     ]
   },
   {
@@ -2250,7 +2250,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/H0001@2-10-2015@VA7632CV@sz_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/H0001@2-10-2015@VA7632CV@sz_v3_1.mp4"
     ]
   },
   {
@@ -2273,7 +2273,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/H0001@2-10-2015@VA7632CV@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/H0001@2-10-2015@VA7632CV@sz_v3_1.mp4"
     ]
   },
   {
@@ -2296,7 +2296,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/H0002@12-11-2019@DA0013XI@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/H0002@12-11-2019@DA0013XI@sz_v2_1.mp4"
     ]
   },
   {
@@ -2319,7 +2319,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/H0003@6-2-2022@KA9601YM@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/H0003@6-2-2022@KA9601YM@sz_v1_1.mp4"
     ]
   },
   {
@@ -2342,7 +2342,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/H0003@6-2-2022@KA9601YM@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/H0003@6-2-2022@KA9601YM@sz_v1_1.mp4"
     ]
   },
   {
@@ -2365,7 +2365,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/H0003@6-2-2022@KA9601YM@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/H0003@6-2-2022@KA9601YM@sz_v1_1.mp4"
     ]
   },
   {
@@ -2388,7 +2388,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/H0003@6-2-2022@KA9601YM@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/H0003@6-2-2022@KA9601YM@sz_v2_1.mp4"
     ]
   },
   {
@@ -2411,7 +2411,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/H0003@6-2-2022@KA9601YM@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/H0003@6-2-2022@KA9601YM@sz_v2_1.mp4"
     ]
   },
   {
@@ -2434,7 +2434,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/H0003@6-2-2022@KA9601YM@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/H0003@6-2-2022@KA9601YM@sz_v2_1.mp4"
     ]
   },
   {
@@ -2457,7 +2457,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/H0003@6-2-2022@KA9601YN@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/H0003@6-2-2022@KA9601YN@sz_v1_1.mp4"
     ]
   },
   {
@@ -2480,7 +2480,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/H0004@2-19-2020@DA00149V@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/H0004@2-19-2020@DA00149V@sz_v1_1.mp4"
     ]
   },
   {
@@ -2503,7 +2503,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/H0004@2-19-2020@DA00149V@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/H0004@2-19-2020@DA00149V@sz_v1_1.mp4"
     ]
   },
   {
@@ -2526,7 +2526,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/H0004@2-19-2020@DA00149V@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/H0004@2-19-2020@DA00149V@sz_v1_1.mp4"
     ]
   },
   {
@@ -2549,7 +2549,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/H0004@2-19-2020@UA6691S7@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/H0004@2-19-2020@UA6691S7@sz_v1_1.mp4"
     ]
   },
   {
@@ -2572,7 +2572,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/H0004@2-19-2020@UA6691S7@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/H0004@2-19-2020@UA6691S7@sz_v1_1.mp4"
     ]
   },
   {
@@ -2595,7 +2595,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/I0001@8-25-2022@KA96029R@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/I0001@8-25-2022@KA96029R@sz_v1_1.mp4"
     ]
   },
   {
@@ -2618,7 +2618,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/I0001@8-25-2022@KA96029R@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/I0001@8-25-2022@KA96029R@sz_v1_1.mp4"
     ]
   },
   {
@@ -2641,7 +2641,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0001@8-25-2022@KA96029R@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/I0001@8-25-2022@KA96029R@sz_v1_1.mp4"
     ]
   },
   {
@@ -2664,7 +2664,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/I0002@5-9-2019@DA0012RL@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/I0002@5-9-2019@DA0012RL@nes_v1_1.mp4"
     ]
   },
   {
@@ -2687,7 +2687,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RL@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RL@nes_v1_1.mp4"
     ]
   },
   {
@@ -2710,7 +2710,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/I0002@5-9-2019@DA0012RL@nes_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/I0002@5-9-2019@DA0012RL@nes_v2_1.mp4"
     ]
   },
   {
@@ -2733,7 +2733,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RL@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RL@nes_v2_1.mp4"
     ]
   },
   {
@@ -2756,7 +2756,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/I0002@5-9-2019@DA0012RL@nes_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/I0002@5-9-2019@DA0012RL@nes_v3_1.mp4"
     ]
   },
   {
@@ -2779,7 +2779,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RL@nes_v3_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RL@nes_v3_1.mp4"
     ]
   },
   {
@@ -2802,7 +2802,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/I0002@5-9-2019@DA0012RS@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/I0002@5-9-2019@DA0012RS@nes_v1_1.mp4"
     ]
   },
   {
@@ -2825,7 +2825,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RS@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RS@nes_v1_1.mp4"
     ]
   },
   {
@@ -2848,7 +2848,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RS@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RS@nes_v2_1.mp4"
     ]
   },
   {
@@ -2871,7 +2871,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RS@nes_v3_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RS@nes_v3_1.mp4"
     ]
   },
   {
@@ -2894,7 +2894,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/I0002@5-9-2019@DA0012RS@nes_v4_1.mp4"
+      "./dataset/videos/task3_arm_movement/I0002@5-9-2019@DA0012RS@nes_v4_1.mp4"
     ]
   },
   {
@@ -2917,7 +2917,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RS@nes_v4_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RS@nes_v4_1.mp4"
     ]
   },
   {
@@ -2940,7 +2940,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RS@nes_v5_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RS@nes_v5_1.mp4"
     ]
   },
   {
@@ -2963,7 +2963,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RT@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RT@nes_v1_1.mp4"
     ]
   },
   {
@@ -2986,7 +2986,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RT@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RT@nes_v2_1.mp4"
     ]
   },
   {
@@ -3009,7 +3009,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/I0002@5-9-2019@DA0012RT@nes_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/I0002@5-9-2019@DA0012RT@nes_v3_1.mp4"
     ]
   },
   {
@@ -3032,7 +3032,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RT@nes_v3_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RT@nes_v3_1.mp4"
     ]
   },
   {
@@ -3055,7 +3055,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/I0002@5-9-2019@DA0012RT@nes_v4_1.mp4"
+      "./dataset/videos/task3_arm_movement/I0002@5-9-2019@DA0012RT@nes_v4_1.mp4"
     ]
   },
   {
@@ -3078,7 +3078,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0002@5-9-2019@DA0012RT@nes_v4_1.mp4"
+      "./dataset/videos/body_region_onset/I0002@5-9-2019@DA0012RT@nes_v4_1.mp4"
     ]
   },
   {
@@ -3101,7 +3101,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/I0003@12-15-2020@DA0015L9@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/I0003@12-15-2020@DA0015L9@sz_v1_1.mp4"
     ]
   },
   {
@@ -3124,7 +3124,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/I0003@12-15-2020@DA0015L9@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/I0003@12-15-2020@DA0015L9@sz_v1_1.mp4"
     ]
   },
   {
@@ -3147,7 +3147,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0003@12-15-2020@DA0015L9@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/I0003@12-15-2020@DA0015L9@sz_v1_1.mp4"
     ]
   },
   {
@@ -3170,7 +3170,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/I0004@11-18-2019@UA669194@sz_v6_1.mp4"
+      "./dataset/videos/task3_head_turning/I0004@11-18-2019@UA669194@sz_v6_1.mp4"
     ]
   },
   {
@@ -3193,7 +3193,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/I0004@11-18-2019@UA669194@sz_v6_1.mp4"
+      "./dataset/videos/task3_arm_movement/I0004@11-18-2019@UA669194@sz_v6_1.mp4"
     ]
   },
   {
@@ -3216,7 +3216,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0004@11-18-2019@UA669194@sz_v6_1.mp4"
+      "./dataset/videos/body_region_onset/I0004@11-18-2019@UA669194@sz_v6_1.mp4"
     ]
   },
   {
@@ -3239,7 +3239,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/I0005@6-8-2022@KA960202@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/I0005@6-8-2022@KA960202@nes_v1_1.mp4"
     ]
   },
   {
@@ -3262,7 +3262,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@3-25-2022@DA1321G0@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@3-25-2022@DA1321G0@sz_v1_1.mp4"
     ]
   },
   {
@@ -3285,7 +3285,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@3-25-2022@DA1321G0@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@3-25-2022@DA1321G0@sz_v2_1.mp4"
     ]
   },
   {
@@ -3308,7 +3308,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0001@3-25-2022@KA9601DZ@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/L0001@3-25-2022@KA9601DZ@sz_v1_1.mp4"
     ]
   },
   {
@@ -3331,7 +3331,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@3-25-2022@KA9601DZ@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@3-25-2022@KA9601DZ@sz_v1_1.mp4"
     ]
   },
   {
@@ -3354,7 +3354,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@3-25-2022@KA9601DZ@sz_v1_2.mp4"
+      "./dataset/videos/body_region_onset/L0001@3-25-2022@KA9601DZ@sz_v1_2.mp4"
     ]
   },
   {
@@ -3377,7 +3377,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@3-25-2022@KA9601E9@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@3-25-2022@KA9601E9@sz_v1_1.mp4"
     ]
   },
   {
@@ -3400,7 +3400,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@3-25-2022@KA9601EA@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@3-25-2022@KA9601EA@sz_v1_1.mp4"
     ]
   },
   {
@@ -3423,7 +3423,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@5-31-2022@KA9601XA@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@5-31-2022@KA9601XA@sz_v1_1.mp4"
     ]
   },
   {
@@ -3446,7 +3446,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@5-31-2022@KA9601XA@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@5-31-2022@KA9601XA@sz_v2_1.mp4"
     ]
   },
   {
@@ -3469,7 +3469,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@5-31-2022@KA9601XB@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@5-31-2022@KA9601XB@sz_v1_1.mp4"
     ]
   },
   {
@@ -3492,7 +3492,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/L0001@5-31-2022@KA9601XB@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/L0001@5-31-2022@KA9601XB@sz_v2_1.mp4"
     ]
   },
   {
@@ -3515,7 +3515,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@5-31-2022@KA9601XB@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@5-31-2022@KA9601XB@sz_v2_1.mp4"
     ]
   },
   {
@@ -3538,7 +3538,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@5-31-2022@KA9601XL@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@5-31-2022@KA9601XL@sz_v1_1.mp4"
     ]
   },
   {
@@ -3561,7 +3561,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@5-31-2022@KA9601XL@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@5-31-2022@KA9601XL@sz_v2_1.mp4"
     ]
   },
   {
@@ -3584,7 +3584,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@5-31-2022@KA9601XM@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@5-31-2022@KA9601XM@sz_v1_1.mp4"
     ]
   },
   {
@@ -3607,7 +3607,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@5-31-2022@KA9601XW@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@5-31-2022@KA9601XW@sz_v1_1.mp4"
     ]
   },
   {
@@ -3630,7 +3630,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/L0001@5-31-2022@KA9601XX@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/L0001@5-31-2022@KA9601XX@sz_v1_1.mp4"
     ]
   },
   {
@@ -3653,7 +3653,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0001@5-31-2022@KA9601XX@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0001@5-31-2022@KA9601XX@sz_v1_1.mp4"
     ]
   },
   {
@@ -3676,7 +3676,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-15-2019@DA00127A@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-15-2019@DA00127A@sz_v1_1.mp4"
     ]
   },
   {
@@ -3699,7 +3699,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-15-2019@DA00127A@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-15-2019@DA00127A@sz_v1_1.mp4"
     ]
   },
   {
@@ -3722,7 +3722,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-15-2019@DA00127A@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-15-2019@DA00127A@sz_v2_1.mp4"
     ]
   },
   {
@@ -3745,7 +3745,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/L0002@1-15-2019@DA00127A@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/L0002@1-15-2019@DA00127A@sz_v2_1.mp4"
     ]
   },
   {
@@ -3768,7 +3768,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-15-2019@DA00127A@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-15-2019@DA00127A@sz_v2_1.mp4"
     ]
   },
   {
@@ -3791,7 +3791,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-15-2019@DA001278@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-15-2019@DA001278@sz_v1_1.mp4"
     ]
   },
   {
@@ -3814,7 +3814,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-15-2019@DA001278@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-15-2019@DA001278@sz_v1_1.mp4"
     ]
   },
   {
@@ -3837,7 +3837,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-15-2019@DA001279@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-15-2019@DA001279@sz_v2_1.mp4"
     ]
   },
   {
@@ -3860,7 +3860,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-15-2019@DA001279@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-15-2019@DA001279@sz_v2_1.mp4"
     ]
   },
   {
@@ -3883,7 +3883,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-15-2019@DA70224N@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-15-2019@DA70224N@sz_v1_1.mp4"
     ]
   },
   {
@@ -3906,7 +3906,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-15-2019@DA70224N@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-15-2019@DA70224N@sz_v1_1.mp4"
     ]
   },
   {
@@ -3929,7 +3929,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-15-2019@DA70224N@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-15-2019@DA70224N@sz_v2_1.mp4"
     ]
   },
   {
@@ -3952,7 +3952,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-15-2019@DA70224N@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-15-2019@DA70224N@sz_v2_1.mp4"
     ]
   },
   {
@@ -3975,7 +3975,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-15-2019@DA70224O@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-15-2019@DA70224O@sz_v1_1.mp4"
     ]
   },
   {
@@ -3998,7 +3998,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/L0002@1-15-2019@DA70224O@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/L0002@1-15-2019@DA70224O@sz_v1_1.mp4"
     ]
   },
   {
@@ -4021,7 +4021,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-15-2019@DA70224O@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-15-2019@DA70224O@sz_v1_1.mp4"
     ]
   },
   {
@@ -4044,7 +4044,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-23-2018@DA00108B@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-23-2018@DA00108B@sz_v1_1.mp4"
     ]
   },
   {
@@ -4067,7 +4067,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-23-2018@DA00108B@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-23-2018@DA00108B@sz_v1_1.mp4"
     ]
   },
   {
@@ -4090,7 +4090,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-23-2018@DA00108B@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-23-2018@DA00108B@sz_v2_1.mp4"
     ]
   },
   {
@@ -4113,7 +4113,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-23-2018@DA00108B@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-23-2018@DA00108B@sz_v2_1.mp4"
     ]
   },
   {
@@ -4136,7 +4136,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-23-2018@DA00108B@sz_v3_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-23-2018@DA00108B@sz_v3_1.mp4"
     ]
   },
   {
@@ -4159,7 +4159,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-23-2018@DA00108B@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-23-2018@DA00108B@sz_v3_1.mp4"
     ]
   },
   {
@@ -4182,7 +4182,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-23-2018@DA00108I@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-23-2018@DA00108I@sz_v1_1.mp4"
     ]
   },
   {
@@ -4205,7 +4205,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-23-2018@DA00108I@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-23-2018@DA00108I@sz_v1_1.mp4"
     ]
   },
   {
@@ -4228,7 +4228,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-23-2018@DA00108J@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-23-2018@DA00108J@sz_v1_1.mp4"
     ]
   },
   {
@@ -4251,7 +4251,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-23-2018@DA00108J@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-23-2018@DA00108J@sz_v1_1.mp4"
     ]
   },
   {
@@ -4274,7 +4274,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@1-23-2018@DA00108K@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@1-23-2018@DA00108K@sz_v1_1.mp4"
     ]
   },
   {
@@ -4297,7 +4297,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@1-23-2018@DA00108K@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@1-23-2018@DA00108K@sz_v1_1.mp4"
     ]
   },
   {
@@ -4320,7 +4320,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@10-16-2023@DA9601XX@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@10-16-2023@DA9601XX@sz_v1_1.mp4"
     ]
   },
   {
@@ -4343,7 +4343,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@10-16-2023@DA9601XX@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@10-16-2023@DA9601XX@sz_v1_1.mp4"
     ]
   },
   {
@@ -4366,7 +4366,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0002@10-16-2023@DA9601XX@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/L0002@10-16-2023@DA9601XX@sz_v2_1.mp4"
     ]
   },
   {
@@ -4389,7 +4389,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@10-16-2023@DA9601XX@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@10-16-2023@DA9601XX@sz_v2_1.mp4"
     ]
   },
   {
@@ -4412,7 +4412,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0002@10-16-2023@DA9601XZ@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0002@10-16-2023@DA9601XZ@sz_v1_1.mp4"
     ]
   },
   {
@@ -4435,7 +4435,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0003@10-28-2014@TA7640V1@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0003@10-28-2014@TA7640V1@nes_v1_1.mp4"
     ]
   },
   {
@@ -4458,7 +4458,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0003@10-28-2014@TA7640V1@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/L0003@10-28-2014@TA7640V1@nes_v2_1.mp4"
     ]
   },
   {
@@ -4481,7 +4481,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0003@10-28-2014@TA7640V1@nes_v3_1.mp4"
+      "./dataset/videos/body_region_onset/L0003@10-28-2014@TA7640V1@nes_v3_1.mp4"
     ]
   },
   {
@@ -4504,7 +4504,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0003@10-28-2014@TA7640V1@nes_v4_1.mp4"
+      "./dataset/videos/body_region_onset/L0003@10-28-2014@TA7640V1@nes_v4_1.mp4"
     ]
   },
   {
@@ -4527,7 +4527,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0003@10-28-2014@TA7640V2@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0003@10-28-2014@TA7640V2@nes_v1_1.mp4"
     ]
   },
   {
@@ -4550,7 +4550,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0003@10-28-2014@TA7640V5@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0003@10-28-2014@TA7640V5@nes_v1_1.mp4"
     ]
   },
   {
@@ -4573,7 +4573,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0003@10-28-2014@TA7640V7@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0003@10-28-2014@TA7640V7@nes_v1_1.mp4"
     ]
   },
   {
@@ -4596,7 +4596,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0003@10-28-2014@TA7640VE@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0003@10-28-2014@TA7640VE@nes_v1_1.mp4"
     ]
   },
   {
@@ -4619,7 +4619,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0005@3-10-2015@TA7641JJ@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/L0005@3-10-2015@TA7641JJ@sz_v1_1.mp4"
     ]
   },
   {
@@ -4642,7 +4642,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0005@3-10-2015@TA7641JJ@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/L0005@3-10-2015@TA7641JJ@sz_v1_1.mp4"
     ]
   },
   {
@@ -4665,7 +4665,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/L0006@10-6-2021@KA9600GI@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/L0006@10-6-2021@KA9600GI@sz_v2_1.mp4"
     ]
   },
   {
@@ -4688,7 +4688,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/L0006@10-6-2021@KA9600GI@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/L0006@10-6-2021@KA9600GI@sz_v2_1.mp4"
     ]
   },
   {
@@ -4711,7 +4711,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/L0006@10-6-2021@KA9600GI@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/L0006@10-6-2021@KA9600GI@sz_v2_1.mp4"
     ]
   },
   {
@@ -4734,7 +4734,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/M0001@6-18-2020@DA0014QT@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/M0001@6-18-2020@DA0014QT@sz_v1_1.mp4"
     ]
   },
   {
@@ -4757,7 +4757,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/M0001@6-18-2020@DA0014QT@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/M0001@6-18-2020@DA0014QT@sz_v1_1.mp4"
     ]
   },
   {
@@ -4780,7 +4780,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/M0001@6-18-2020@DA0014R2@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/M0001@6-18-2020@DA0014R2@sz_v1_1.mp4"
     ]
   },
   {
@@ -4803,7 +4803,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/M0001@6-18-2020@DA0014R2@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/M0001@6-18-2020@DA0014R2@sz_v1_1.mp4"
     ]
   },
   {
@@ -4826,7 +4826,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/M0001@6-18-2020@DA0014R2@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/M0001@6-18-2020@DA0014R2@sz_v1_1.mp4"
     ]
   },
   {
@@ -4849,7 +4849,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0002@3-14-2022@DA1321F9@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0002@3-14-2022@DA1321F9@sz_v1_1.mp4"
     ]
   },
   {
@@ -4872,7 +4872,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0002@3-14-2022@DA1321F9@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0002@3-14-2022@DA1321F9@sz_v1_1.mp4"
     ]
   },
   {
@@ -4895,7 +4895,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0002@9-13-2022@DA1322LW@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0002@9-13-2022@DA1322LW@sz_v1_1.mp4"
     ]
   },
   {
@@ -4918,7 +4918,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0002@9-13-2022@DA1322LW@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0002@9-13-2022@DA1322LW@sz_v1_1.mp4"
     ]
   },
   {
@@ -4941,7 +4941,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0002@9-13-2022@KA9602CR@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0002@9-13-2022@KA9602CR@sz_v1_1.mp4"
     ]
   },
   {
@@ -4964,7 +4964,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0002@9-13-2022@KA9602CX@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0002@9-13-2022@KA9602CX@sz_v1_1.mp4"
     ]
   },
   {
@@ -4987,7 +4987,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0002@9-13-2022@KA9602CX@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0002@9-13-2022@KA9602CX@sz_v1_1.mp4"
     ]
   },
   {
@@ -5010,7 +5010,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0004@3-29-2022@KA9601GC@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0004@3-29-2022@KA9601GC@sz_v1_1.mp4"
     ]
   },
   {
@@ -5033,7 +5033,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0006@5-3-2019@DA0012QM@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0006@5-3-2019@DA0012QM@sz_v1_1.mp4"
     ]
   },
   {
@@ -5056,7 +5056,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0008@2-1-2016@KA333KWO@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0008@2-1-2016@KA333KWO@nes_v1_1.mp4"
     ]
   },
   {
@@ -5079,7 +5079,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0008@2-1-2016@KA333KWO@nes_v1_2.mp4"
+      "./dataset/videos/task3_arm_movement/N0008@2-1-2016@KA333KWO@nes_v1_2.mp4"
     ]
   },
   {
@@ -5102,7 +5102,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0008@2-1-2016@KA333KWO@nes_v1_2.mp4"
+      "./dataset/videos/body_region_onset/N0008@2-1-2016@KA333KWO@nes_v1_2.mp4"
     ]
   },
   {
@@ -5125,7 +5125,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0008@2-1-2016@KA333KXM@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0008@2-1-2016@KA333KXM@nes_v1_1.mp4"
     ]
   },
   {
@@ -5148,7 +5148,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0008@2-1-2016@KA333KYH@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0008@2-1-2016@KA333KYH@nes_v1_1.mp4"
     ]
   },
   {
@@ -5171,7 +5171,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0009@3-5-2021@UA6693AY@nes_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/N0009@3-5-2021@UA6693AY@nes_v1_1.mp4"
     ]
   },
   {
@@ -5194,7 +5194,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0009@3-5-2021@UA6693AY@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0009@3-5-2021@UA6693AY@nes_v1_1.mp4"
     ]
   },
   {
@@ -5217,7 +5217,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0009@3-5-2021@UA66939W@nes_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/N0009@3-5-2021@UA66939W@nes_v1_1.mp4"
     ]
   },
   {
@@ -5240,7 +5240,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0009@3-5-2021@UA66939W@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0009@3-5-2021@UA66939W@nes_v1_1.mp4"
     ]
   },
   {
@@ -5263,7 +5263,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0009@3-5-2021@UA66939Z@nes_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/N0009@3-5-2021@UA66939Z@nes_v1_1.mp4"
     ]
   },
   {
@@ -5286,7 +5286,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0009@3-5-2021@UA66939Z@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0009@3-5-2021@UA66939Z@nes_v1_1.mp4"
     ]
   },
   {
@@ -5309,7 +5309,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0011@4-1-2021@DA00161F@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/N0011@4-1-2021@DA00161F@sz_v1_1.mp4"
     ]
   },
   {
@@ -5332,7 +5332,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161F@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161F@sz_v1_1.mp4"
     ]
   },
   {
@@ -5355,7 +5355,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0011@4-1-2021@DA00161G@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/N0011@4-1-2021@DA00161G@sz_v1_1.mp4"
     ]
   },
   {
@@ -5378,7 +5378,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161G@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161G@sz_v1_1.mp4"
     ]
   },
   {
@@ -5401,7 +5401,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0011@4-1-2021@DA00161G@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/N0011@4-1-2021@DA00161G@sz_v2_1.mp4"
     ]
   },
   {
@@ -5424,7 +5424,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161G@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161G@sz_v2_1.mp4"
     ]
   },
   {
@@ -5447,7 +5447,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0011@4-1-2021@DA00161G@sz_v3_1.mp4"
+      "./dataset/videos/task3_head_turning/N0011@4-1-2021@DA00161G@sz_v3_1.mp4"
     ]
   },
   {
@@ -5470,7 +5470,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0011@4-1-2021@DA00161G@sz_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0011@4-1-2021@DA00161G@sz_v3_1.mp4"
     ]
   },
   {
@@ -5493,7 +5493,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161G@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161G@sz_v3_1.mp4"
     ]
   },
   {
@@ -5516,7 +5516,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0011@4-1-2021@DA00161I@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0011@4-1-2021@DA00161I@sz_v1_1.mp4"
     ]
   },
   {
@@ -5539,7 +5539,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161I@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161I@sz_v1_1.mp4"
     ]
   },
   {
@@ -5562,7 +5562,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0011@4-1-2021@DA00161I@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/N0011@4-1-2021@DA00161I@sz_v2_1.mp4"
     ]
   },
   {
@@ -5585,7 +5585,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0011@4-1-2021@DA00161I@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0011@4-1-2021@DA00161I@sz_v2_1.mp4"
     ]
   },
   {
@@ -5608,7 +5608,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161I@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161I@sz_v2_1.mp4"
     ]
   },
   {
@@ -5631,7 +5631,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0011@4-1-2021@DA00161J@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0011@4-1-2021@DA00161J@sz_v1_1.mp4"
     ]
   },
   {
@@ -5654,7 +5654,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161J@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161J@sz_v1_1.mp4"
     ]
   },
   {
@@ -5677,7 +5677,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0011@4-1-2021@DA00161K@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0011@4-1-2021@DA00161K@sz_v1_1.mp4"
     ]
   },
   {
@@ -5700,7 +5700,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161K@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161K@sz_v1_1.mp4"
     ]
   },
   {
@@ -5723,7 +5723,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0011@4-1-2021@DA00161K@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/N0011@4-1-2021@DA00161K@sz_v2_1.mp4"
     ]
   },
   {
@@ -5746,7 +5746,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161K@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161K@sz_v2_1.mp4"
     ]
   },
   {
@@ -5769,7 +5769,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161K@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161K@sz_v3_1.mp4"
     ]
   },
   {
@@ -5792,7 +5792,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161K@sz_v4_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161K@sz_v4_1.mp4"
     ]
   },
   {
@@ -5815,7 +5815,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA00161K@sz_v5_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA00161K@sz_v5_1.mp4"
     ]
   },
   {
@@ -5838,7 +5838,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0011@4-1-2021@DA001614@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/N0011@4-1-2021@DA001614@sz_v1_1.mp4"
     ]
   },
   {
@@ -5861,7 +5861,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0011@4-1-2021@DA001614@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0011@4-1-2021@DA001614@sz_v1_1.mp4"
     ]
   },
   {
@@ -5884,7 +5884,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@DA001614@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@DA001614@sz_v1_1.mp4"
     ]
   },
   {
@@ -5907,7 +5907,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@UA6693F9@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@UA6693F9@sz_v1_1.mp4"
     ]
   },
   {
@@ -5930,7 +5930,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0011@4-1-2021@UA6693FA@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0011@4-1-2021@UA6693FA@sz_v1_1.mp4"
     ]
   },
   {
@@ -5953,7 +5953,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013M6@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013M6@sz_v1_1.mp4"
     ]
   },
   {
@@ -5976,7 +5976,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v1_1.mp4"
     ]
   },
   {
@@ -5999,7 +5999,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0012@10-10-2019@DA0013M7@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0012@10-10-2019@DA0013M7@sz_v2_1.mp4"
     ]
   },
   {
@@ -6022,7 +6022,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v2_1.mp4"
     ]
   },
   {
@@ -6045,7 +6045,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v3_1.mp4"
     ]
   },
   {
@@ -6068,7 +6068,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v4_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v4_1.mp4"
     ]
   },
   {
@@ -6091,7 +6091,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v5_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v5_1.mp4"
     ]
   },
   {
@@ -6114,7 +6114,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v6_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v6_1.mp4"
     ]
   },
   {
@@ -6137,7 +6137,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v7_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v7_1.mp4"
     ]
   },
   {
@@ -6160,7 +6160,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v8_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013M7@sz_v8_1.mp4"
     ]
   },
   {
@@ -6183,7 +6183,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013ME@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013ME@sz_v1_1.mp4"
     ]
   },
   {
@@ -6206,7 +6206,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013ME@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013ME@sz_v2_1.mp4"
     ]
   },
   {
@@ -6229,7 +6229,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0012@10-10-2019@DA0013ME@sz_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0012@10-10-2019@DA0013ME@sz_v3_1.mp4"
     ]
   },
   {
@@ -6252,7 +6252,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013ME@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013ME@sz_v3_1.mp4"
     ]
   },
   {
@@ -6275,7 +6275,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0012@10-10-2019@DA0013ME@sz_v4_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0012@10-10-2019@DA0013ME@sz_v4_1.mp4"
     ]
   },
   {
@@ -6298,7 +6298,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0012@10-10-2019@DA0013ME@sz_v4_1.mp4"
+      "./dataset/videos/body_region_onset/N0012@10-10-2019@DA0013ME@sz_v4_1.mp4"
     ]
   },
   {
@@ -6321,7 +6321,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0013@9-2-2014@VA7631G3@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0013@9-2-2014@VA7631G3@sz_v1_1.mp4"
     ]
   },
   {
@@ -6344,7 +6344,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0013@9-2-2014@VA7631G3@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0013@9-2-2014@VA7631G3@sz_v1_1.mp4"
     ]
   },
   {
@@ -6367,7 +6367,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0013@9-2-2014@VA7631G3@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/N0013@9-2-2014@VA7631G3@sz_v3_1.mp4"
     ]
   },
   {
@@ -6390,7 +6390,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0013@9-2-2014@VA7631G3@sz_v4_1.mp4"
+      "./dataset/videos/body_region_onset/N0013@9-2-2014@VA7631G3@sz_v4_1.mp4"
     ]
   },
   {
@@ -6413,7 +6413,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0013@9-2-2014@VA7631G5@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/N0013@9-2-2014@VA7631G5@sz_v2_1.mp4"
     ]
   },
   {
@@ -6436,7 +6436,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0013@9-2-2014@VA7631GK@sz_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0013@9-2-2014@VA7631GK@sz_v3_1.mp4"
     ]
   },
   {
@@ -6459,7 +6459,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0013@9-2-2014@VA7631GK@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/N0013@9-2-2014@VA7631GK@sz_v3_1.mp4"
     ]
   },
   {
@@ -6482,7 +6482,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0013@9-2-2014@VA7631GK@sz_v4_1.mp4"
+      "./dataset/videos/body_region_onset/N0013@9-2-2014@VA7631GK@sz_v4_1.mp4"
     ]
   },
   {
@@ -6505,7 +6505,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_1.mp4"
     ]
   },
   {
@@ -6528,7 +6528,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_2.mp4"
+      "./dataset/videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_2.mp4"
     ]
   },
   {
@@ -6551,7 +6551,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_3.mp4"
+      "./dataset/videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_3.mp4"
     ]
   },
   {
@@ -6574,7 +6574,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_4.mp4"
+      "./dataset/videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_4.mp4"
     ]
   },
   {
@@ -6597,7 +6597,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_5.mp4"
+      "./dataset/videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_5.mp4"
     ]
   },
   {
@@ -6620,7 +6620,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_6.mp4"
+      "./dataset/videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_6.mp4"
     ]
   },
   {
@@ -6643,7 +6643,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_7.mp4"
+      "./dataset/videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_7.mp4"
     ]
   },
   {
@@ -6666,7 +6666,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_8.mp4"
+      "./dataset/videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_8.mp4"
     ]
   },
   {
@@ -6689,7 +6689,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_9.mp4"
+      "./dataset/videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_9.mp4"
     ]
   },
   {
@@ -6712,7 +6712,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_10.mp4"
+      "./dataset/videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v1_10.mp4"
     ]
   },
   {
@@ -6735,7 +6735,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/N0014@2-4-2020@DA001466@nes_v2_1.mp4"
     ]
   },
   {
@@ -6758,7 +6758,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0015@10-6-2022@DA1322SC@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/N0015@10-6-2022@DA1322SC@sz_v1_1.mp4"
     ]
   },
   {
@@ -6781,7 +6781,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0015@10-6-2022@DA1322SC@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0015@10-6-2022@DA1322SC@sz_v1_1.mp4"
     ]
   },
   {
@@ -6804,7 +6804,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0015@10-6-2022@KA9602I3@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0015@10-6-2022@KA9602I3@sz_v1_1.mp4"
     ]
   },
   {
@@ -6827,7 +6827,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0016@9-1-2022@DA1322GQ@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0016@9-1-2022@DA1322GQ@sz_v1_1.mp4"
     ]
   },
   {
@@ -6850,7 +6850,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0017@9-11-2018@DA7021H5@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/N0017@9-11-2018@DA7021H5@sz_v1_1.mp4"
     ]
   },
   {
@@ -6873,7 +6873,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0017@9-11-2018@DA7021H5@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0017@9-11-2018@DA7021H5@sz_v1_1.mp4"
     ]
   },
   {
@@ -6896,7 +6896,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/N0017@12-4-2018@DA7021YP@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/N0017@12-4-2018@DA7021YP@sz_v1_1.mp4"
     ]
   },
   {
@@ -6919,7 +6919,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/N0017@12-4-2018@DA7021YP@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/N0017@12-4-2018@DA7021YP@sz_v1_1.mp4"
     ]
   },
   {
@@ -6942,7 +6942,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/N0017@12-4-2018@DA7021YP@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/N0017@12-4-2018@DA7021YP@sz_v1_1.mp4"
     ]
   },
   {
@@ -6965,7 +6965,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0001@10-12-2023@DA9601YM@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/O0001@10-12-2023@DA9601YM@sz_v1_1.mp4"
     ]
   },
   {
@@ -6988,7 +6988,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0001@10-12-2023@DA9601YM@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0001@10-12-2023@DA9601YM@sz_v1_1.mp4"
     ]
   },
   {
@@ -7011,7 +7011,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0001@10-12-2023@DA9601YN@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/O0001@10-12-2023@DA9601YN@sz_v1_1.mp4"
     ]
   },
   {
@@ -7034,7 +7034,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0001@10-12-2023@DA9601YN@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0001@10-12-2023@DA9601YN@sz_v1_1.mp4"
     ]
   },
   {
@@ -7057,7 +7057,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0001@10-12-2023@DA9601YN@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/O0001@10-12-2023@DA9601YN@sz_v2_1.mp4"
     ]
   },
   {
@@ -7080,7 +7080,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0001@10-12-2023@DA9601YN@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0001@10-12-2023@DA9601YN@sz_v2_1.mp4"
     ]
   },
   {
@@ -7103,7 +7103,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0001@10-12-2023@DA9601YN@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/O0001@10-12-2023@DA9601YN@sz_v2_1.mp4"
     ]
   },
   {
@@ -7126,7 +7126,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0001@10-12-2023@DA9601YQ@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0001@10-12-2023@DA9601YQ@sz_v1_1.mp4"
     ]
   },
   {
@@ -7149,7 +7149,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0003@4-27-2022@KA9601OU@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0003@4-27-2022@KA9601OU@nes_v1_1.mp4"
     ]
   },
   {
@@ -7172,7 +7172,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0003@6-6-2020@DA0014P1@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0003@6-6-2020@DA0014P1@nes_v1_1.mp4"
     ]
   },
   {
@@ -7195,7 +7195,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0003@6-6-2020@DA0014P1@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0003@6-6-2020@DA0014P1@nes_v1_1.mp4"
     ]
   },
   {
@@ -7218,7 +7218,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0003@6-6-2020@DA0014P1@nes_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/O0003@6-6-2020@DA0014P1@nes_v2_1.mp4"
     ]
   },
   {
@@ -7241,7 +7241,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0003@6-6-2020@DA0014P1@nes_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0003@6-6-2020@DA0014P1@nes_v2_1.mp4"
     ]
   },
   {
@@ -7264,7 +7264,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0003@6-6-2020@DA0014P1@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/O0003@6-6-2020@DA0014P1@nes_v2_1.mp4"
     ]
   },
   {
@@ -7287,7 +7287,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0003@6-6-2020@DA0014P3@nes_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/O0003@6-6-2020@DA0014P3@nes_v1_1.mp4"
     ]
   },
   {
@@ -7310,7 +7310,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0003@6-6-2020@DA0014P3@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0003@6-6-2020@DA0014P3@nes_v1_1.mp4"
     ]
   },
   {
@@ -7333,7 +7333,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0003@6-6-2020@DA0014P3@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0003@6-6-2020@DA0014P3@nes_v1_1.mp4"
     ]
   },
   {
@@ -7356,7 +7356,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0003@6-6-2020@DA0014P5@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0003@6-6-2020@DA0014P5@nes_v1_1.mp4"
     ]
   },
   {
@@ -7379,7 +7379,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0003@6-6-2020@DA0014P5@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0003@6-6-2020@DA0014P5@nes_v1_1.mp4"
     ]
   },
   {
@@ -7402,7 +7402,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0003@6-6-2020@UA66924A@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0003@6-6-2020@UA66924A@nes_v1_1.mp4"
     ]
   },
   {
@@ -7425,7 +7425,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0003@6-6-2020@UA66924A@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0003@6-6-2020@UA66924A@nes_v1_1.mp4"
     ]
   },
   {
@@ -7448,7 +7448,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0003@6-6-2020@UA66924A@nes_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0003@6-6-2020@UA66924A@nes_v2_1.mp4"
     ]
   },
   {
@@ -7471,7 +7471,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0003@6-6-2020@UA66924A@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/O0003@6-6-2020@UA66924A@nes_v2_1.mp4"
     ]
   },
   {
@@ -7494,7 +7494,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0003@6-6-2020@UA66924A@nes_v3_1.mp4"
+      "./dataset/videos/body_region_onset/O0003@6-6-2020@UA66924A@nes_v3_1.mp4"
     ]
   },
   {
@@ -7517,7 +7517,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0004@8-27-2019@DA0013EP@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/O0004@8-27-2019@DA0013EP@sz_v1_1.mp4"
     ]
   },
   {
@@ -7540,7 +7540,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0004@8-27-2019@DA0013EP@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0004@8-27-2019@DA0013EP@sz_v1_1.mp4"
     ]
   },
   {
@@ -7563,7 +7563,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0005@3-12-2015@TA7641JO@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0005@3-12-2015@TA7641JO@sz_v1_1.mp4"
     ]
   },
   {
@@ -7586,7 +7586,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0005@3-12-2015@TA7641JO@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0005@3-12-2015@TA7641JO@sz_v1_1.mp4"
     ]
   },
   {
@@ -7609,7 +7609,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0005@3-12-2015@TA7641JO@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/O0005@3-12-2015@TA7641JO@sz_v2_1.mp4"
     ]
   },
   {
@@ -7632,7 +7632,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0005@3-12-2015@TA7641JP@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/O0005@3-12-2015@TA7641JP@sz_v1_1.mp4"
     ]
   },
   {
@@ -7655,7 +7655,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0005@3-12-2015@TA7641JP@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0005@3-12-2015@TA7641JP@sz_v1_1.mp4"
     ]
   },
   {
@@ -7678,7 +7678,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0005@3-12-2015@TA7641JP@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0005@3-12-2015@TA7641JP@sz_v1_1.mp4"
     ]
   },
   {
@@ -7701,7 +7701,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0005@3-12-2015@TA7641K4@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/O0005@3-12-2015@TA7641K4@sz_v1_1.mp4"
     ]
   },
   {
@@ -7724,7 +7724,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0005@3-12-2015@TA7641K4@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0005@3-12-2015@TA7641K4@sz_v1_1.mp4"
     ]
   },
   {
@@ -7747,7 +7747,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0005@3-12-2015@TA7641K4@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0005@3-12-2015@TA7641K4@sz_v1_1.mp4"
     ]
   },
   {
@@ -7770,7 +7770,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0005@3-12-2015@TA7641K5@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0005@3-12-2015@TA7641K5@sz_v1_1.mp4"
     ]
   },
   {
@@ -7793,7 +7793,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0005@3-12-2015@TA7641K5@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0005@3-12-2015@TA7641K5@sz_v1_1.mp4"
     ]
   },
   {
@@ -7816,7 +7816,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0005@3-12-2015@TA7641K5@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/O0005@3-12-2015@TA7641K5@sz_v2_1.mp4"
     ]
   },
   {
@@ -7839,7 +7839,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0007@1-5-2016@CA44446U@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0007@1-5-2016@CA44446U@sz_v1_1.mp4"
     ]
   },
   {
@@ -7862,7 +7862,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0008@6-21-2022@GA5980K2@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/O0008@6-21-2022@GA5980K2@sz_v1_1.mp4"
     ]
   },
   {
@@ -7885,7 +7885,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0008@6-21-2022@GA5980K2@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0008@6-21-2022@GA5980K2@sz_v1_1.mp4"
     ]
   },
   {
@@ -7908,7 +7908,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0008@6-21-2022@GA5980K2@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0008@6-21-2022@GA5980K2@sz_v1_1.mp4"
     ]
   },
   {
@@ -7931,7 +7931,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0008@6-21-2022@KA96022J@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0008@6-21-2022@KA96022J@sz_v1_1.mp4"
     ]
   },
   {
@@ -7954,7 +7954,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0009@8-8-2022@DA1322BE@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/O0009@8-8-2022@DA1322BE@sz_v1_1.mp4"
     ]
   },
   {
@@ -7977,7 +7977,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0009@8-8-2022@DA1322BE@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0009@8-8-2022@DA1322BE@sz_v1_1.mp4"
     ]
   },
   {
@@ -8000,7 +8000,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0009@8-8-2022@DA1322BE@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/O0009@8-8-2022@DA1322BE@sz_v1_1.mp4"
     ]
   },
   {
@@ -8023,7 +8023,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0010@6-11-2020@DA0014PO@sz_v3_1.mp4"
+      "./dataset/videos/task3_head_turning/O0010@6-11-2020@DA0014PO@sz_v3_1.mp4"
     ]
   },
   {
@@ -8046,7 +8046,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0010@6-11-2020@DA0014PO@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/O0010@6-11-2020@DA0014PO@sz_v3_1.mp4"
     ]
   },
   {
@@ -8069,7 +8069,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/O0010@6-11-2020@DA0014PP@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/O0010@6-11-2020@DA0014PP@sz_v2_1.mp4"
     ]
   },
   {
@@ -8092,7 +8092,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/O0010@6-11-2020@DA0014PP@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/O0010@6-11-2020@DA0014PP@sz_v2_1.mp4"
     ]
   },
   {
@@ -8115,7 +8115,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/O0010@6-11-2020@DA0014PP@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/O0010@6-11-2020@DA0014PP@sz_v2_1.mp4"
     ]
   },
   {
@@ -8138,7 +8138,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/R0001@10-17-2023@DA1324JS@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/R0001@10-17-2023@DA1324JS@sz_v1_1.mp4"
     ]
   },
   {
@@ -8161,7 +8161,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/R0001@10-17-2023@DA1324JS@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/R0001@10-17-2023@DA1324JS@sz_v1_1.mp4"
     ]
   },
   {
@@ -8184,7 +8184,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0001@10-17-2023@DA1324JS@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0001@10-17-2023@DA1324JS@sz_v1_1.mp4"
     ]
   },
   {
@@ -8207,7 +8207,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/R0001@10-17-2023@DA1324L8@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/R0001@10-17-2023@DA1324L8@sz_v1_1.mp4"
     ]
   },
   {
@@ -8230,7 +8230,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0001@10-17-2023@DA1324L8@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0001@10-17-2023@DA1324L8@sz_v1_1.mp4"
     ]
   },
   {
@@ -8253,7 +8253,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0002@6-17-2021@DA0016G9@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0002@6-17-2021@DA0016G9@sz_v1_1.mp4"
     ]
   },
   {
@@ -8276,7 +8276,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/R0002@6-17-2021@UA6693TB@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/R0002@6-17-2021@UA6693TB@sz_v1_1.mp4"
     ]
   },
   {
@@ -8299,7 +8299,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/R0002@6-17-2021@UA6693TB@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/R0002@6-17-2021@UA6693TB@sz_v1_1.mp4"
     ]
   },
   {
@@ -8322,7 +8322,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0002@6-17-2021@UA6693TB@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0002@6-17-2021@UA6693TB@sz_v1_1.mp4"
     ]
   },
   {
@@ -8345,7 +8345,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0004@5-20-2021@DA0016B4@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0004@5-20-2021@DA0016B4@nes_v1_1.mp4"
     ]
   },
   {
@@ -8368,7 +8368,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0004@5-20-2021@DA0016BK@nes_v4_1.mp4"
+      "./dataset/videos/body_region_onset/R0004@5-20-2021@DA0016BK@nes_v4_1.mp4"
     ]
   },
   {
@@ -8391,7 +8391,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0005@10-17-2019@DA0013O9@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/R0005@10-17-2019@DA0013O9@nes_v2_1.mp4"
     ]
   },
   {
@@ -8414,7 +8414,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0007@3-7-2016@CA4444H1@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0007@3-7-2016@CA4444H1@nes_v1_1.mp4"
     ]
   },
   {
@@ -8437,7 +8437,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0007@3-7-2016@CA4444H2@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0007@3-7-2016@CA4444H2@nes_v1_1.mp4"
     ]
   },
   {
@@ -8460,7 +8460,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0007@3-7-2016@CA4444HK@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0007@3-7-2016@CA4444HK@nes_v1_1.mp4"
     ]
   },
   {
@@ -8483,7 +8483,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/R0009@8-12-2013@FA16402H@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/R0009@8-12-2013@FA16402H@sz_v2_1.mp4"
     ]
   },
   {
@@ -8506,7 +8506,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0009@8-12-2013@FA16402H@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/R0009@8-12-2013@FA16402H@sz_v2_1.mp4"
     ]
   },
   {
@@ -8529,7 +8529,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0009@8-12-2013@FA16402H@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/R0009@8-12-2013@FA16402H@sz_v3_1.mp4"
     ]
   },
   {
@@ -8552,7 +8552,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0009@8-12-2013@FA16402M@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/R0009@8-12-2013@FA16402M@sz_v3_1.mp4"
     ]
   },
   {
@@ -8575,7 +8575,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0009@8-12-2013@FA16402M@sz_v4_1.mp4"
+      "./dataset/videos/body_region_onset/R0009@8-12-2013@FA16402M@sz_v4_1.mp4"
     ]
   },
   {
@@ -8598,7 +8598,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0011@9-22-2020@DA00157M@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0011@9-22-2020@DA00157M@nes_v1_1.mp4"
     ]
   },
   {
@@ -8621,7 +8621,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0011@9-22-2020@DA00157U@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/R0011@9-22-2020@DA00157U@nes_v2_1.mp4"
     ]
   },
   {
@@ -8644,7 +8644,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/R0011@9-22-2020@DA00157V@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/R0011@9-22-2020@DA00157V@nes_v1_1.mp4"
     ]
   },
   {
@@ -8667,7 +8667,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0011@9-22-2020@DA00157V@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0011@9-22-2020@DA00157V@nes_v1_1.mp4"
     ]
   },
   {
@@ -8690,7 +8690,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0011@9-22-2020@DA00157W@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0011@9-22-2020@DA00157W@nes_v1_1.mp4"
     ]
   },
   {
@@ -8713,7 +8713,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0011@9-22-2020@DA00158B@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0011@9-22-2020@DA00158B@nes_v1_1.mp4"
     ]
   },
   {
@@ -8736,7 +8736,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/R0011@9-22-2020@DA001583@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/R0011@9-22-2020@DA001583@nes_v1_1.mp4"
     ]
   },
   {
@@ -8759,7 +8759,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0011@9-22-2020@DA001583@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0011@9-22-2020@DA001583@nes_v1_1.mp4"
     ]
   },
   {
@@ -8782,7 +8782,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0011@9-22-2020@DA001584@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0011@9-22-2020@DA001584@nes_v1_1.mp4"
     ]
   },
   {
@@ -8805,7 +8805,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0011@9-22-2020@DA001584@nes_v1_2.mp4"
+      "./dataset/videos/body_region_onset/R0011@9-22-2020@DA001584@nes_v1_2.mp4"
     ]
   },
   {
@@ -8828,7 +8828,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0011@9-22-2020@DA001584@nes_v1_3.mp4"
+      "./dataset/videos/body_region_onset/R0011@9-22-2020@DA001584@nes_v1_3.mp4"
     ]
   },
   {
@@ -8851,7 +8851,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0011@9-22-2020@DA001584@nes_v1_4.mp4"
+      "./dataset/videos/body_region_onset/R0011@9-22-2020@DA001584@nes_v1_4.mp4"
     ]
   },
   {
@@ -8874,7 +8874,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0012@7-8-2019@UA6690J1@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0012@7-8-2019@UA6690J1@nes_v1_1.mp4"
     ]
   },
   {
@@ -8897,7 +8897,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/R0012@7-8-2019@UA6690J2@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/R0012@7-8-2019@UA6690J2@nes_v1_1.mp4"
     ]
   },
   {
@@ -8920,7 +8920,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0012@7-8-2019@UA6690J2@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0012@7-8-2019@UA6690J2@nes_v1_1.mp4"
     ]
   },
   {
@@ -8943,7 +8943,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/R0012@7-8-2019@UA6690J4@nes_v1_2.mp4"
+      "./dataset/videos/task3_arm_movement/R0012@7-8-2019@UA6690J4@nes_v1_2.mp4"
     ]
   },
   {
@@ -8966,7 +8966,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v1_2.mp4"
+      "./dataset/videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v1_2.mp4"
     ]
   },
   {
@@ -8989,7 +8989,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/R0012@7-8-2019@UA6690J4@nes_v1_3.mp4"
+      "./dataset/videos/task3_arm_movement/R0012@7-8-2019@UA6690J4@nes_v1_3.mp4"
     ]
   },
   {
@@ -9012,7 +9012,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v1_3.mp4"
+      "./dataset/videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v1_3.mp4"
     ]
   },
   {
@@ -9035,7 +9035,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/R0012@7-8-2019@UA6690J4@nes_v1_4.mp4"
+      "./dataset/videos/task3_arm_movement/R0012@7-8-2019@UA6690J4@nes_v1_4.mp4"
     ]
   },
   {
@@ -9058,7 +9058,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v1_4.mp4"
+      "./dataset/videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v1_4.mp4"
     ]
   },
   {
@@ -9081,7 +9081,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/R0012@7-8-2019@UA6690J4@nes_v1_5.mp4"
+      "./dataset/videos/task3_arm_movement/R0012@7-8-2019@UA6690J4@nes_v1_5.mp4"
     ]
   },
   {
@@ -9104,7 +9104,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v1_5.mp4"
+      "./dataset/videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v1_5.mp4"
     ]
   },
   {
@@ -9127,7 +9127,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v1_6.mp4"
+      "./dataset/videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v1_6.mp4"
     ]
   },
   {
@@ -9150,7 +9150,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/R0012@7-8-2019@UA6690J4@nes_v2_1.mp4"
     ]
   },
   {
@@ -9173,7 +9173,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/R0014@5-4-2022@DA1321Q8@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/R0014@5-4-2022@DA1321Q8@sz_v1_1.mp4"
     ]
   },
   {
@@ -9196,7 +9196,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0014@5-4-2022@DA1321Q8@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0014@5-4-2022@DA1321Q8@sz_v1_1.mp4"
     ]
   },
   {
@@ -9219,7 +9219,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/R0015@3-17-2022@KA9601DC@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/R0015@3-17-2022@KA9601DC@sz_v1_1.mp4"
     ]
   },
   {
@@ -9242,7 +9242,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0015@3-17-2022@KA9601DC@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0015@3-17-2022@KA9601DC@sz_v1_1.mp4"
     ]
   },
   {
@@ -9265,7 +9265,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/R0016@3-29-2021@DA0015ZD@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/R0016@3-29-2021@DA0015ZD@sz_v1_1.mp4"
     ]
   },
   {
@@ -9288,7 +9288,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/R0016@3-29-2021@DA0015ZD@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/R0016@3-29-2021@DA0015ZD@sz_v1_1.mp4"
     ]
   },
   {
@@ -9311,7 +9311,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0001@3-7-2022@DA1321CB@sz_v1.1_0.mp4"
+      "./dataset/videos/body_region_onset/S0001@3-7-2022@DA1321CB@sz_v1.1_0.mp4"
     ]
   },
   {
@@ -9334,7 +9334,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0001@3-7-2022@DA1321CB@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0001@3-7-2022@DA1321CB@sz_v1_1.mp4"
     ]
   },
   {
@@ -9357,7 +9357,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0002@6-10-2014@TA76408Z@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0002@6-10-2014@TA76408Z@sz_v1_1.mp4"
     ]
   },
   {
@@ -9380,7 +9380,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0002@6-10-2014@TA764085@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/S0002@6-10-2014@TA764085@sz_v1_1.mp4"
     ]
   },
   {
@@ -9403,7 +9403,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0002@6-10-2014@TA764085@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0002@6-10-2014@TA764085@sz_v1_1.mp4"
     ]
   },
   {
@@ -9426,7 +9426,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0002@6-10-2014@TA764090@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0002@6-10-2014@TA764090@sz_v1_1.mp4"
     ]
   },
   {
@@ -9449,7 +9449,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0002@6-10-2014@UA76200S@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0002@6-10-2014@UA76200S@sz_v1_1.mp4"
     ]
   },
   {
@@ -9472,7 +9472,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0002@7-28-2015@VA76337O@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0002@7-28-2015@VA76337O@sz_v1_1.mp4"
     ]
   },
   {
@@ -9495,7 +9495,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0002@7-28-2015@VA76339B@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0002@7-28-2015@VA76339B@sz_v1_1.mp4"
     ]
   },
   {
@@ -9518,7 +9518,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0002@7-28-2015@VA763339@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/S0002@7-28-2015@VA763339@sz_v2_1.mp4"
     ]
   },
   {
@@ -9541,7 +9541,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0003@5-4-2022@KA9601UU@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0003@5-4-2022@KA9601UU@nes_v1_1.mp4"
     ]
   },
   {
@@ -9564,7 +9564,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0004@10-4-2021@KA9600G3@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/S0004@10-4-2021@KA9600G3@sz_v2_1.mp4"
     ]
   },
   {
@@ -9587,7 +9587,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0004@10-4-2021@KA9600G3@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/S0004@10-4-2021@KA9600G3@sz_v2_1.mp4"
     ]
   },
   {
@@ -9610,7 +9610,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0005@3-18-2014@VA7610MM@nes_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/S0005@3-18-2014@VA7610MM@nes_v1_1.mp4"
     ]
   },
   {
@@ -9633,7 +9633,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0005@3-18-2014@VA7610MM@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0005@3-18-2014@VA7610MM@nes_v1_1.mp4"
     ]
   },
   {
@@ -9656,7 +9656,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0005@3-18-2014@VA7610MM@nes_v1_2.mp4"
+      "./dataset/videos/body_region_onset/S0005@3-18-2014@VA7610MM@nes_v1_2.mp4"
     ]
   },
   {
@@ -9679,7 +9679,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0005@3-18-2014@VA7610MM@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/S0005@3-18-2014@VA7610MM@nes_v2_1.mp4"
     ]
   },
   {
@@ -9702,7 +9702,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/S0005@3-18-2014@VA7610MM@nes_v4_1.mp4"
+      "./dataset/videos/task3_arm_movement/S0005@3-18-2014@VA7610MM@nes_v4_1.mp4"
     ]
   },
   {
@@ -9725,7 +9725,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0005@3-18-2014@VA7610MM@nes_v4_1.mp4"
+      "./dataset/videos/body_region_onset/S0005@3-18-2014@VA7610MM@nes_v4_1.mp4"
     ]
   },
   {
@@ -9748,7 +9748,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0005@3-18-2014@VA7610MM@nes_v5_1.mp4"
+      "./dataset/videos/body_region_onset/S0005@3-18-2014@VA7610MM@nes_v5_1.mp4"
     ]
   },
   {
@@ -9771,7 +9771,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0005@3-18-2014@VA7610MM@nes_v6_1.mp4"
+      "./dataset/videos/task3_head_turning/S0005@3-18-2014@VA7610MM@nes_v6_1.mp4"
     ]
   },
   {
@@ -9794,7 +9794,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0005@3-18-2014@VA7610MN@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0005@3-18-2014@VA7610MN@nes_v1_1.mp4"
     ]
   },
   {
@@ -9817,7 +9817,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0005@3-18-2014@VA7610MN@nes_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/S0005@3-18-2014@VA7610MN@nes_v2_1.mp4"
     ]
   },
   {
@@ -9840,7 +9840,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0005@3-18-2014@VA7610MO@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0005@3-18-2014@VA7610MO@nes_v1_1.mp4"
     ]
   },
   {
@@ -9863,7 +9863,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0005@3-18-2014@VA7610MO@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/S0005@3-18-2014@VA7610MO@nes_v2_1.mp4"
     ]
   },
   {
@@ -9886,7 +9886,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/S0005@3-18-2014@VA7610MO@nes_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/S0005@3-18-2014@VA7610MO@nes_v3_1.mp4"
     ]
   },
   {
@@ -9909,7 +9909,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0005@3-18-2014@VA7610MO@nes_v3_1.mp4"
+      "./dataset/videos/body_region_onset/S0005@3-18-2014@VA7610MO@nes_v3_1.mp4"
     ]
   },
   {
@@ -9932,7 +9932,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/S0005@3-18-2014@VA7610MP@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/S0005@3-18-2014@VA7610MP@nes_v1_1.mp4"
     ]
   },
   {
@@ -9955,7 +9955,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0005@3-18-2014@VA7610MP@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0005@3-18-2014@VA7610MP@nes_v1_1.mp4"
     ]
   },
   {
@@ -9978,7 +9978,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/S0006@11-25-2014@TA7640ZP@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/S0006@11-25-2014@TA7640ZP@nes_v1_1.mp4"
     ]
   },
   {
@@ -10001,7 +10001,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0006@11-25-2014@TA7640ZP@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0006@11-25-2014@TA7640ZP@nes_v1_1.mp4"
     ]
   },
   {
@@ -10024,7 +10024,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0006@11-25-2014@TA7640ZS@nes_v3_1.mp4"
+      "./dataset/videos/body_region_onset/S0006@11-25-2014@TA7640ZS@nes_v3_1.mp4"
     ]
   },
   {
@@ -10047,7 +10047,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0007@1-31-2022@KA96014G@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0007@1-31-2022@KA96014G@nes_v1_1.mp4"
     ]
   },
   {
@@ -10070,7 +10070,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0008@6-12-2014@TA764080@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/S0008@6-12-2014@TA764080@sz_v3_1.mp4"
     ]
   },
   {
@@ -10093,7 +10093,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0008@6-12-2014@TA764082@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/S0008@6-12-2014@TA764082@sz_v3_1.mp4"
     ]
   },
   {
@@ -10116,7 +10116,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0009@12-17-2019@UA6691GD@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/S0009@12-17-2019@UA6691GD@sz_v1_1.mp4"
     ]
   },
   {
@@ -10139,7 +10139,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0009@12-17-2019@UA6691GD@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0009@12-17-2019@UA6691GD@sz_v1_1.mp4"
     ]
   },
   {
@@ -10162,7 +10162,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0009@12-17-2019@UA6691GD@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/S0009@12-17-2019@UA6691GD@sz_v2_1.mp4"
     ]
   },
   {
@@ -10185,7 +10185,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0009@12-17-2019@UA6691GD@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/S0009@12-17-2019@UA6691GD@sz_v2_1.mp4"
     ]
   },
   {
@@ -10208,7 +10208,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0009@12-17-2019@UA6691GD@sz_v3_1.mp4"
+      "./dataset/videos/task3_head_turning/S0009@12-17-2019@UA6691GD@sz_v3_1.mp4"
     ]
   },
   {
@@ -10231,7 +10231,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0009@12-17-2019@UA6691GD@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/S0009@12-17-2019@UA6691GD@sz_v3_1.mp4"
     ]
   },
   {
@@ -10254,7 +10254,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0010@4-6-2022@DA1321JS@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/S0010@4-6-2022@DA1321JS@sz_v1_1.mp4"
     ]
   },
   {
@@ -10277,7 +10277,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0010@4-6-2022@DA1321JS@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0010@4-6-2022@DA1321JS@sz_v1_1.mp4"
     ]
   },
   {
@@ -10300,7 +10300,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0010@4-6-2022@DA1321JS@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/S0010@4-6-2022@DA1321JS@sz_v2_1.mp4"
     ]
   },
   {
@@ -10323,7 +10323,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0010@4-6-2022@KA9601IB@sz_v5_1.mp4"
+      "./dataset/videos/body_region_onset/S0010@4-6-2022@KA9601IB@sz_v5_1.mp4"
     ]
   },
   {
@@ -10346,7 +10346,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/S0010@4-6-2022@KA9601IC@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/S0010@4-6-2022@KA9601IC@sz_v1_1.mp4"
     ]
   },
   {
@@ -10369,7 +10369,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0010@4-6-2022@KA9601IC@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0010@4-6-2022@KA9601IC@sz_v1_1.mp4"
     ]
   },
   {
@@ -10392,7 +10392,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0011@5-2-2022@DA1321PU@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0011@5-2-2022@DA1321PU@sz_v1_1.mp4"
     ]
   },
   {
@@ -10415,7 +10415,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0012@7-18-2019@DA00136N@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/S0012@7-18-2019@DA00136N@sz_v1_1.mp4"
     ]
   },
   {
@@ -10438,7 +10438,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0012@7-18-2019@DA00136N@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0012@7-18-2019@DA00136N@sz_v1_1.mp4"
     ]
   },
   {
@@ -10461,7 +10461,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0012@7-18-2019@DA00136O@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/S0012@7-18-2019@DA00136O@sz_v2_1.mp4"
     ]
   },
   {
@@ -10484,7 +10484,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0012@7-18-2019@DA00136V@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/S0012@7-18-2019@DA00136V@sz_v1_1.mp4"
     ]
   },
   {
@@ -10507,7 +10507,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/S0012@7-18-2019@DA00136V@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/S0012@7-18-2019@DA00136V@sz_v1_1.mp4"
     ]
   },
   {
@@ -10530,7 +10530,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0012@7-18-2019@DA00136V@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0012@7-18-2019@DA00136V@sz_v1_1.mp4"
     ]
   },
   {
@@ -10553,7 +10553,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0013@3-8-2018@DA0010H7@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/S0013@3-8-2018@DA0010H7@sz_v1_1.mp4"
     ]
   },
   {
@@ -10576,7 +10576,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0013@3-8-2018@DA0010H7@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0013@3-8-2018@DA0010H7@sz_v1_1.mp4"
     ]
   },
   {
@@ -10599,7 +10599,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0014@11-10-2017@DA3332GP@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/S0014@11-10-2017@DA3332GP@sz_v1_1.mp4"
     ]
   },
   {
@@ -10622,7 +10622,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/S0014@11-10-2017@DA3332GP@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/S0014@11-10-2017@DA3332GP@sz_v1_1.mp4"
     ]
   },
   {
@@ -10645,7 +10645,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0014@11-10-2017@DA3332GP@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0014@11-10-2017@DA3332GP@sz_v1_1.mp4"
     ]
   },
   {
@@ -10668,7 +10668,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0014@11-10-2017@DA3332H8@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0014@11-10-2017@DA3332H8@sz_v1_1.mp4"
     ]
   },
   {
@@ -10691,7 +10691,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0015@7-26-2022@KA960273@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0015@7-26-2022@KA960273@nes_v1_1.mp4"
     ]
   },
   {
@@ -10714,7 +10714,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/S0016@4-5-2022@KA9601HS@nes_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/S0016@4-5-2022@KA9601HS@nes_v2_1.mp4"
     ]
   },
   {
@@ -10737,7 +10737,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0016@4-5-2022@KA9601HS@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/S0016@4-5-2022@KA9601HS@nes_v2_1.mp4"
     ]
   },
   {
@@ -10760,7 +10760,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/S0016@4-5-2022@KA9601I1@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/S0016@4-5-2022@KA9601I1@nes_v1_1.mp4"
     ]
   },
   {
@@ -10783,7 +10783,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0016@4-5-2022@KA9601I1@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0016@4-5-2022@KA9601I1@nes_v1_1.mp4"
     ]
   },
   {
@@ -10806,7 +10806,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/S0017@12-2-2020@DA0015J8@nes_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/S0017@12-2-2020@DA0015J8@nes_v1_1.mp4"
     ]
   },
   {
@@ -10829,7 +10829,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/S0017@12-2-2020@DA0015J8@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/S0017@12-2-2020@DA0015J8@nes_v1_1.mp4"
     ]
   },
   {
@@ -10852,7 +10852,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0017@12-2-2020@DA0015J8@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0017@12-2-2020@DA0015J8@nes_v1_1.mp4"
     ]
   },
   {
@@ -10875,7 +10875,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/S0017@12-2-2020@DA0015J8@nes_v1_2.mp4"
+      "./dataset/videos/task3_arm_movement/S0017@12-2-2020@DA0015J8@nes_v1_2.mp4"
     ]
   },
   {
@@ -10898,7 +10898,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0017@12-2-2020@DA0015J8@nes_v1_2.mp4"
+      "./dataset/videos/body_region_onset/S0017@12-2-2020@DA0015J8@nes_v1_2.mp4"
     ]
   },
   {
@@ -10921,7 +10921,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/S0018@5-4-2020@UA6691ZC@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/S0018@5-4-2020@UA6691ZC@nes_v1_1.mp4"
     ]
   },
   {
@@ -10944,7 +10944,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0001@3-21-2022@KA9601DO@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0001@3-21-2022@KA9601DO@nes_v1_1.mp4"
     ]
   },
   {
@@ -10967,7 +10967,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0001@3-21-2022@KA9601DP@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0001@3-21-2022@KA9601DP@nes_v1_1.mp4"
     ]
   },
   {
@@ -10990,7 +10990,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0001@3-21-2022@KA9601DQ@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0001@3-21-2022@KA9601DQ@nes_v1_1.mp4"
     ]
   },
   {
@@ -11013,7 +11013,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0003@4-26-2022@KA9601OY@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0003@4-26-2022@KA9601OY@sz_v1_1.mp4"
     ]
   },
   {
@@ -11036,7 +11036,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/T0003@4-26-2022@KA9601P2@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/T0003@4-26-2022@KA9601P2@sz_v1_1.mp4"
     ]
   },
   {
@@ -11059,7 +11059,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0003@4-26-2022@KA9601P2@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0003@4-26-2022@KA9601P2@sz_v1_1.mp4"
     ]
   },
   {
@@ -11082,7 +11082,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/T0003@4-26-2022@KA9601P2@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/T0003@4-26-2022@KA9601P2@sz_v2_1.mp4"
     ]
   },
   {
@@ -11105,7 +11105,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0003@4-26-2022@KA9601P2@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/T0003@4-26-2022@KA9601P2@sz_v2_1.mp4"
     ]
   },
   {
@@ -11128,7 +11128,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0004@5-27-2015@TA7641Z2@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0004@5-27-2015@TA7641Z2@sz_v1_1.mp4"
     ]
   },
   {
@@ -11151,7 +11151,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/T0004@5-27-2015@TA7641Z2@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/T0004@5-27-2015@TA7641Z2@sz_v2_1.mp4"
     ]
   },
   {
@@ -11174,7 +11174,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0004@5-27-2015@TA7641Z2@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/T0004@5-27-2015@TA7641Z2@sz_v2_1.mp4"
     ]
   },
   {
@@ -11197,7 +11197,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/T0004@5-27-2015@TA76420E@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/T0004@5-27-2015@TA76420E@sz_v1_1.mp4"
     ]
   },
   {
@@ -11220,7 +11220,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0004@5-27-2015@TA76420E@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0004@5-27-2015@TA76420E@sz_v1_1.mp4"
     ]
   },
   {
@@ -11243,7 +11243,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/T0004@5-27-2015@VA7632UP@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/T0004@5-27-2015@VA7632UP@sz_v1_1.mp4"
     ]
   },
   {
@@ -11266,7 +11266,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0004@5-27-2015@VA7632UP@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0004@5-27-2015@VA7632UP@sz_v1_1.mp4"
     ]
   },
   {
@@ -11289,7 +11289,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/T0005@9-18-2018@DA0011L4@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/T0005@9-18-2018@DA0011L4@sz_v1_1.mp4"
     ]
   },
   {
@@ -11312,7 +11312,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0005@9-18-2018@DA0011L4@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0005@9-18-2018@DA0011L4@sz_v1_1.mp4"
     ]
   },
   {
@@ -11335,7 +11335,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/T0005@9-18-2018@DA0011L5@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/T0005@9-18-2018@DA0011L5@sz_v1_1.mp4"
     ]
   },
   {
@@ -11358,7 +11358,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/T0005@9-18-2018@DA0011L5@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/T0005@9-18-2018@DA0011L5@sz_v1_1.mp4"
     ]
   },
   {
@@ -11381,7 +11381,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0005@9-18-2018@DA0011L5@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0005@9-18-2018@DA0011L5@sz_v1_1.mp4"
     ]
   },
   {
@@ -11404,7 +11404,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/T0005@9-18-2018@DA7021HQ@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/T0005@9-18-2018@DA7021HQ@sz_v1_1.mp4"
     ]
   },
   {
@@ -11427,7 +11427,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0005@9-18-2018@DA7021HQ@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0005@9-18-2018@DA7021HQ@sz_v1_1.mp4"
     ]
   },
   {
@@ -11450,7 +11450,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/T0005@9-18-2018@DA7021HQ@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/T0005@9-18-2018@DA7021HQ@sz_v2_1.mp4"
     ]
   },
   {
@@ -11473,7 +11473,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0005@9-18-2018@DA7021HQ@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/T0005@9-18-2018@DA7021HQ@sz_v2_1.mp4"
     ]
   },
   {
@@ -11496,7 +11496,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0007@10-7-2020@DA00159P@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/T0007@10-7-2020@DA00159P@nes_v1_1.mp4"
     ]
   },
   {
@@ -11519,7 +11519,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/T0007@10-7-2020@DA00159P@nes_v3_1.mp4"
+      "./dataset/videos/body_region_onset/T0007@10-7-2020@DA00159P@nes_v3_1.mp4"
     ]
   },
   {
@@ -11542,7 +11542,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/U0001@9-12-2016@CA4445HC@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/U0001@9-12-2016@CA4445HC@sz_v1_1.mp4"
     ]
   },
   {
@@ -11565,7 +11565,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/U0001@9-12-2016@CA4445HC@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/U0001@9-12-2016@CA4445HC@sz_v2_1.mp4"
     ]
   },
   {
@@ -11588,7 +11588,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/U0001@9-12-2016@CA4445HC@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/U0001@9-12-2016@CA4445HC@sz_v2_1.mp4"
     ]
   },
   {
@@ -11611,7 +11611,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/U0001@9-12-2016@CA4445HC@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/U0001@9-12-2016@CA4445HC@sz_v2_1.mp4"
     ]
   },
   {
@@ -11634,7 +11634,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/W0001@2-3-2020@DA00145Y@nes_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/W0001@2-3-2020@DA00145Y@nes_v1_1.mp4"
     ]
   },
   {
@@ -11657,7 +11657,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/W0001@2-3-2020@DA00145Y@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/W0001@2-3-2020@DA00145Y@nes_v1_1.mp4"
     ]
   },
   {
@@ -11680,7 +11680,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/W0001@2-3-2020@DA00145Y@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/W0001@2-3-2020@DA00145Y@nes_v1_1.mp4"
     ]
   },
   {
@@ -11703,7 +11703,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/W0001@2-3-2020@DA00145Y@nes_v1_2.mp4"
+      "./dataset/videos/task3_arm_movement/W0001@2-3-2020@DA00145Y@nes_v1_2.mp4"
     ]
   },
   {
@@ -11726,7 +11726,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/W0001@2-3-2020@DA00145Y@nes_v1_2.mp4"
+      "./dataset/videos/body_region_onset/W0001@2-3-2020@DA00145Y@nes_v1_2.mp4"
     ]
   },
   {
@@ -11749,7 +11749,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/W0001@2-3-2020@DA00146S@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/W0001@2-3-2020@DA00146S@nes_v1_1.mp4"
     ]
   },
   {
@@ -11772,7 +11772,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/W0001@2-3-2020@DA00146S@nes_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/W0001@2-3-2020@DA00146S@nes_v2_1.mp4"
     ]
   },
   {
@@ -11795,7 +11795,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/W0001@2-3-2020@DA00146S@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/W0001@2-3-2020@DA00146S@nes_v2_1.mp4"
     ]
   },
   {
@@ -11818,7 +11818,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/W0001@2-3-2020@DA001469@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/W0001@2-3-2020@DA001469@nes_v2_1.mp4"
     ]
   },
   {
@@ -11841,7 +11841,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/W0001@2-3-2020@DA001469@nes_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/W0001@2-3-2020@DA001469@nes_v3_1.mp4"
     ]
   },
   {
@@ -11864,7 +11864,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/W0001@2-3-2020@DA001469@nes_v3_1.mp4"
+      "./dataset/videos/body_region_onset/W0001@2-3-2020@DA001469@nes_v3_1.mp4"
     ]
   },
   {
@@ -11887,7 +11887,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Y0001@8-15-2022@DA1322DT@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/Y0001@8-15-2022@DA1322DT@sz_v1_1.mp4"
     ]
   },
   {
@@ -11910,7 +11910,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0001@8-15-2022@DA1322DT@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0001@8-15-2022@DA1322DT@sz_v1_1.mp4"
     ]
   },
   {
@@ -11933,7 +11933,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0001@8-15-2022@DA1322DT@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Y0001@8-15-2022@DA1322DT@sz_v2_1.mp4"
     ]
   },
   {
@@ -11956,7 +11956,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Y0001@8-15-2022@DA1322DU@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/Y0001@8-15-2022@DA1322DU@sz_v1_1.mp4"
     ]
   },
   {
@@ -11979,7 +11979,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0001@8-15-2022@DA1322DU@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0001@8-15-2022@DA1322DU@sz_v1_1.mp4"
     ]
   },
   {
@@ -12002,7 +12002,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Y0001@8-15-2022@DA1322DU@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/Y0001@8-15-2022@DA1322DU@sz_v2_1.mp4"
     ]
   },
   {
@@ -12025,7 +12025,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Y0001@8-15-2022@DA1322DU@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/Y0001@8-15-2022@DA1322DU@sz_v2_1.mp4"
     ]
   },
   {
@@ -12048,7 +12048,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0001@8-15-2022@DA1322DU@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Y0001@8-15-2022@DA1322DU@sz_v2_1.mp4"
     ]
   },
   {
@@ -12071,7 +12071,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Y0001@8-15-2022@DA1322DU@sz_v3_1.mp4"
+      "./dataset/videos/task3_head_turning/Y0001@8-15-2022@DA1322DU@sz_v3_1.mp4"
     ]
   },
   {
@@ -12094,7 +12094,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0001@8-15-2022@DA1322DU@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/Y0001@8-15-2022@DA1322DU@sz_v3_1.mp4"
     ]
   },
   {
@@ -12117,7 +12117,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0001@8-15-2022@DA1322DV@poss_sz_v1_0.mp4"
+      "./dataset/videos/body_region_onset/Y0001@8-15-2022@DA1322DV@poss_sz_v1_0.mp4"
     ]
   },
   {
@@ -12140,7 +12140,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Y0001@8-15-2022@DA1322DV@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Y0001@8-15-2022@DA1322DV@sz_v1_1.mp4"
     ]
   },
   {
@@ -12163,7 +12163,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0001@8-15-2022@DA1322DV@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0001@8-15-2022@DA1322DV@sz_v1_1.mp4"
     ]
   },
   {
@@ -12186,7 +12186,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0003@1-23-2019@DA00127Y@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0003@1-23-2019@DA00127Y@nes_v1_1.mp4"
     ]
   },
   {
@@ -12209,7 +12209,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0003@1-23-2019@DA00127Y@nes_v1_2.mp4"
+      "./dataset/videos/body_region_onset/Y0003@1-23-2019@DA00127Y@nes_v1_2.mp4"
     ]
   },
   {
@@ -12232,7 +12232,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0003@1-23-2019@DA00127Y@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Y0003@1-23-2019@DA00127Y@nes_v2_1.mp4"
     ]
   },
   {
@@ -12255,7 +12255,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Y0003@1-23-2019@DA001280@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/Y0003@1-23-2019@DA001280@nes_v1_1.mp4"
     ]
   },
   {
@@ -12278,7 +12278,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0003@1-23-2019@DA001280@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0003@1-23-2019@DA001280@nes_v1_1.mp4"
     ]
   },
   {
@@ -12301,7 +12301,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Y0003@1-23-2019@DA70225C@nes_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/Y0003@1-23-2019@DA70225C@nes_v1_1.mp4"
     ]
   },
   {
@@ -12324,7 +12324,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0003@1-23-2019@DA70225C@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0003@1-23-2019@DA70225C@nes_v1_1.mp4"
     ]
   },
   {
@@ -12347,7 +12347,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Y0003@1-23-2019@DA70225C@nes_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/Y0003@1-23-2019@DA70225C@nes_v2_1.mp4"
     ]
   },
   {
@@ -12370,7 +12370,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0003@1-23-2019@DA70225C@nes_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Y0003@1-23-2019@DA70225C@nes_v2_1.mp4"
     ]
   },
   {
@@ -12393,7 +12393,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Y0004@11-19-2018@DA7021VW@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Y0004@11-19-2018@DA7021VW@sz_v1_1.mp4"
     ]
   },
   {
@@ -12416,7 +12416,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Y0004@11-19-2018@DA7021VW@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/Y0004@11-19-2018@DA7021VW@sz_v1_1.mp4"
     ]
   },
   {
@@ -12439,7 +12439,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0004@11-19-2018@DA7021VW@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0004@11-19-2018@DA7021VW@sz_v1_1.mp4"
     ]
   },
   {
@@ -12462,7 +12462,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0004@11-19-2018@DA7021VW@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Y0004@11-19-2018@DA7021VW@sz_v2_1.mp4"
     ]
   },
   {
@@ -12485,7 +12485,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Y0005@3-17-2022@DA1321FC@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Y0005@3-17-2022@DA1321FC@sz_v1_1.mp4"
     ]
   },
   {
@@ -12508,7 +12508,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0005@3-17-2022@DA1321FC@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0005@3-17-2022@DA1321FC@sz_v1_1.mp4"
     ]
   },
   {
@@ -12531,7 +12531,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Y0005@3-17-2022@DA1321FC@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/Y0005@3-17-2022@DA1321FC@sz_v2_1.mp4"
     ]
   },
   {
@@ -12554,7 +12554,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0005@3-17-2022@DA1321FC@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Y0005@3-17-2022@DA1321FC@sz_v2_1.mp4"
     ]
   },
   {
@@ -12577,7 +12577,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Y0006@7-6-2015@TA764261@sz_v3_1.mp4"
+      "./dataset/videos/task3_arm_movement/Y0006@7-6-2015@TA764261@sz_v3_1.mp4"
     ]
   },
   {
@@ -12600,7 +12600,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0006@7-6-2015@TA764261@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/Y0006@7-6-2015@TA764261@sz_v3_1.mp4"
     ]
   },
   {
@@ -12623,7 +12623,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0006@7-6-2015@TA764269@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Y0006@7-6-2015@TA764269@sz_v2_1.mp4"
     ]
   },
   {
@@ -12646,7 +12646,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0006@7-6-2015@VA7632ZD@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0006@7-6-2015@VA7632ZD@sz_v1_1.mp4"
     ]
   },
   {
@@ -12669,7 +12669,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0007@9-14-2022@KA9602C4@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0007@9-14-2022@KA9602C4@sz_v1_1.mp4"
     ]
   },
   {
@@ -12692,7 +12692,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0008@1-26-2021@DA0015OO@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0008@1-26-2021@DA0015OO@nes_v1_1.mp4"
     ]
   },
   {
@@ -12715,7 +12715,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Y0009@8-13-2020@UA6692CY@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Y0009@8-13-2020@UA6692CY@nes_v1_1.mp4"
     ]
   },
   {
@@ -12738,7 +12738,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0001@3-15-2022@KA9601C7@multiple_sz1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0001@3-15-2022@KA9601C7@multiple_sz1_1.mp4"
     ]
   },
   {
@@ -12761,7 +12761,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0001@3-15-2022@KA9601C7@multiple_sz1_2.mp4"
+      "./dataset/videos/body_region_onset/Z0001@3-15-2022@KA9601C7@multiple_sz1_2.mp4"
     ]
   },
   {
@@ -12784,7 +12784,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0001@3-15-2022@KA9601C7@multiple_sz1_3.mp4"
+      "./dataset/videos/body_region_onset/Z0001@3-15-2022@KA9601C7@multiple_sz1_3.mp4"
     ]
   },
   {
@@ -12807,7 +12807,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0001@3-15-2022@KA9601C7@multiple_sz2_1.mp4"
+      "./dataset/videos/body_region_onset/Z0001@3-15-2022@KA9601C7@multiple_sz2_1.mp4"
     ]
   },
   {
@@ -12830,7 +12830,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0001@3-15-2022@KA9601C7@multiple_sz2_2.mp4"
+      "./dataset/videos/body_region_onset/Z0001@3-15-2022@KA9601C7@multiple_sz2_2.mp4"
     ]
   },
   {
@@ -12853,7 +12853,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0003@5-24-2018@DA7020TA@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0003@5-24-2018@DA7020TA@sz_v2_1.mp4"
     ]
   },
   {
@@ -12876,7 +12876,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Z0003@5-24-2018@DA7020TA@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/Z0003@5-24-2018@DA7020TA@sz_v2_1.mp4"
     ]
   },
   {
@@ -12899,7 +12899,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0003@5-24-2018@DA7020TA@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Z0003@5-24-2018@DA7020TA@sz_v2_1.mp4"
     ]
   },
   {
@@ -12922,7 +12922,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0003@5-24-2018@DA7020TA@sz_v4_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0003@5-24-2018@DA7020TA@sz_v4_1.mp4"
     ]
   },
   {
@@ -12945,7 +12945,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Z0003@5-24-2018@DA7020TA@sz_v4_1.mp4"
+      "./dataset/videos/task3_arm_movement/Z0003@5-24-2018@DA7020TA@sz_v4_1.mp4"
     ]
   },
   {
@@ -12968,7 +12968,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0003@5-24-2018@DA7020TA@sz_v4_1.mp4"
+      "./dataset/videos/body_region_onset/Z0003@5-24-2018@DA7020TA@sz_v4_1.mp4"
     ]
   },
   {
@@ -12991,7 +12991,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0003@6-13-2018@DA0010Z2@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0003@6-13-2018@DA0010Z2@sz_v1_1.mp4"
     ]
   },
   {
@@ -13014,7 +13014,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0003@6-13-2018@DA0010Z2@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0003@6-13-2018@DA0010Z2@sz_v1_1.mp4"
     ]
   },
   {
@@ -13037,7 +13037,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0003@6-13-2018@DA0010Z3@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0003@6-13-2018@DA0010Z3@sz_v1_1.mp4"
     ]
   },
   {
@@ -13060,7 +13060,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0003@6-13-2018@DA0010Z3@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0003@6-13-2018@DA0010Z3@sz_v1_1.mp4"
     ]
   },
   {
@@ -13083,7 +13083,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0003@6-13-2018@DA7020Y1@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0003@6-13-2018@DA7020Y1@sz_v1_1.mp4"
     ]
   },
   {
@@ -13106,7 +13106,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0003@6-13-2018@DA7020Y4@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0003@6-13-2018@DA7020Y4@sz_v1_1.mp4"
     ]
   },
   {
@@ -13129,7 +13129,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0003@6-13-2018@DA7020Y4@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0003@6-13-2018@DA7020Y4@sz_v1_1.mp4"
     ]
   },
   {
@@ -13152,7 +13152,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0004@1-28-2019@DA70225W@nes_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0004@1-28-2019@DA70225W@nes_v1_1.mp4"
     ]
   },
   {
@@ -13175,7 +13175,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0005@1-20-2016@KA333KUV@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0005@1-20-2016@KA333KUV@sz_v1_1.mp4"
     ]
   },
   {
@@ -13198,7 +13198,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KUV@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KUV@sz_v1_1.mp4"
     ]
   },
   {
@@ -13221,7 +13221,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v1_1.mp4"
     ]
   },
   {
@@ -13244,7 +13244,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v1_1.mp4"
     ]
   },
   {
@@ -13267,7 +13267,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v1_2.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v1_2.mp4"
     ]
   },
   {
@@ -13290,7 +13290,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v2_1.mp4"
     ]
   },
   {
@@ -13313,7 +13313,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v2_1.mp4"
     ]
   },
   {
@@ -13336,7 +13336,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v2_2.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v2_2.mp4"
     ]
   },
   {
@@ -13359,7 +13359,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v2_3.mp4"
+      "./dataset/videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v2_3.mp4"
     ]
   },
   {
@@ -13382,7 +13382,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v2_3.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v2_3.mp4"
     ]
   },
   {
@@ -13405,7 +13405,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_1.mp4"
     ]
   },
   {
@@ -13428,7 +13428,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_1.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_1.mp4"
     ]
   },
   {
@@ -13451,7 +13451,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_2.mp4"
+      "./dataset/videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_2.mp4"
     ]
   },
   {
@@ -13474,7 +13474,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_2.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_2.mp4"
     ]
   },
   {
@@ -13497,7 +13497,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_3.mp4"
+      "./dataset/videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_3.mp4"
     ]
   },
   {
@@ -13520,7 +13520,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_3.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_3.mp4"
     ]
   },
   {
@@ -13543,7 +13543,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_4.mp4"
+      "./dataset/videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_4.mp4"
     ]
   },
   {
@@ -13566,7 +13566,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_4.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_4.mp4"
     ]
   },
   {
@@ -13589,7 +13589,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_5.mp4"
+      "./dataset/videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_5.mp4"
     ]
   },
   {
@@ -13612,7 +13612,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_5.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_5.mp4"
     ]
   },
   {
@@ -13635,7 +13635,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_6.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_6.mp4"
     ]
   },
   {
@@ -13658,7 +13658,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_7.mp4"
+      "./dataset/videos/task3_head_turning/Z0005@1-20-2016@KA333KW5@sz_v3_7.mp4"
     ]
   },
   {
@@ -13681,7 +13681,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_7.mp4"
+      "./dataset/videos/body_region_onset/Z0005@1-20-2016@KA333KW5@sz_v3_7.mp4"
     ]
   },
   {
@@ -13704,7 +13704,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Z0006@2-28-2023@DA1323F0@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/Z0006@2-28-2023@DA1323F0@sz_v2_1.mp4"
     ]
   },
   {
@@ -13727,7 +13727,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0006@2-28-2023@DA1323F0@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Z0006@2-28-2023@DA1323F0@sz_v2_1.mp4"
     ]
   },
   {
@@ -13750,7 +13750,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0007@5-6-2014@TA76404O@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0007@5-6-2014@TA76404O@sz_v2_1.mp4"
     ]
   },
   {
@@ -13773,7 +13773,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0007@5-6-2014@TA76404O@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Z0007@5-6-2014@TA76404O@sz_v2_1.mp4"
     ]
   },
   {
@@ -13796,7 +13796,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0007@5-6-2014@VA7610WD@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0007@5-6-2014@VA7610WD@sz_v1_1.mp4"
     ]
   },
   {
@@ -13819,7 +13819,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0007@5-6-2014@VA7610WE@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0007@5-6-2014@VA7610WE@sz_v1_1.mp4"
     ]
   },
   {
@@ -13842,7 +13842,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0007@5-6-2014@VA7610WE@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0007@5-6-2014@VA7610WE@sz_v1_1.mp4"
     ]
   },
   {
@@ -13865,7 +13865,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0008@7-21-2021@DA7022WJ@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0008@7-21-2021@DA7022WJ@sz_v1_1.mp4"
     ]
   },
   {
@@ -13888,7 +13888,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Z0008@7-21-2021@DA7022WJ@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/Z0008@7-21-2021@DA7022WJ@sz_v1_1.mp4"
     ]
   },
   {
@@ -13911,7 +13911,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0008@7-21-2021@DA7022WJ@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0008@7-21-2021@DA7022WJ@sz_v1_1.mp4"
     ]
   },
   {
@@ -13934,7 +13934,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0008@7-21-2021@DA13202N@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0008@7-21-2021@DA13202N@sz_v1_1.mp4"
     ]
   },
   {
@@ -13957,7 +13957,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Z0008@7-21-2021@DA13202N@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/Z0008@7-21-2021@DA13202N@sz_v1_1.mp4"
     ]
   },
   {
@@ -13980,7 +13980,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0008@7-21-2021@DA13202N@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0008@7-21-2021@DA13202N@sz_v1_1.mp4"
     ]
   },
   {
@@ -14003,7 +14003,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0008@7-21-2021@DA13202N@sz_v2_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0008@7-21-2021@DA13202N@sz_v2_1.mp4"
     ]
   },
   {
@@ -14026,7 +14026,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Z0008@7-21-2021@DA13202N@sz_v2_1.mp4"
+      "./dataset/videos/task3_arm_movement/Z0008@7-21-2021@DA13202N@sz_v2_1.mp4"
     ]
   },
   {
@@ -14049,7 +14049,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0008@7-21-2021@DA13202N@sz_v2_1.mp4"
+      "./dataset/videos/body_region_onset/Z0008@7-21-2021@DA13202N@sz_v2_1.mp4"
     ]
   },
   {
@@ -14072,7 +14072,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0010@2-29-2016@LA222224@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0010@2-29-2016@LA222224@sz_v1_1.mp4"
     ]
   },
   {
@@ -14095,7 +14095,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Z0010@2-29-2016@LA222224@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/Z0010@2-29-2016@LA222224@sz_v1_1.mp4"
     ]
   },
   {
@@ -14118,7 +14118,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0010@2-29-2016@LA222224@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0010@2-29-2016@LA222224@sz_v1_1.mp4"
     ]
   },
   {
@@ -14141,7 +14141,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0010@2-29-2016@LA222226@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0010@2-29-2016@LA222226@sz_v1_1.mp4"
     ]
   },
   {
@@ -14164,7 +14164,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0010@2-29-2016@LA222227@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0010@2-29-2016@LA222227@sz_v1_1.mp4"
     ]
   },
   {
@@ -14187,7 +14187,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0011@10-25-2021@DA1320Q5@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0011@10-25-2021@DA1320Q5@sz_v1_1.mp4"
     ]
   },
   {
@@ -14210,7 +14210,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0011@10-25-2021@DA1320Q6@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0011@10-25-2021@DA1320Q6@sz_v1_1.mp4"
     ]
   },
   {
@@ -14233,7 +14233,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0011@10-25-2021@DA1320Q7@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0011@10-25-2021@DA1320Q7@sz_v1_1.mp4"
     ]
   },
   {
@@ -14256,7 +14256,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0011@10-25-2021@DA1320QG@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0011@10-25-2021@DA1320QG@sz_v1_1.mp4"
     ]
   },
   {
@@ -14279,7 +14279,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Z0012@6-10-2019@UA6690C0@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/Z0012@6-10-2019@UA6690C0@sz_v1_1.mp4"
     ]
   },
   {
@@ -14302,7 +14302,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0012@6-10-2019@UA6690C0@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0012@6-10-2019@UA6690C0@sz_v1_1.mp4"
     ]
   },
   {
@@ -14325,7 +14325,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0013@11-12-2020@UA6692V7@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0013@11-12-2020@UA6692V7@sz_v1_1.mp4"
     ]
   },
   {
@@ -14348,7 +14348,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0013@11-12-2020@UA6692V7@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0013@11-12-2020@UA6692V7@sz_v1_1.mp4"
     ]
   },
   {
@@ -14371,7 +14371,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0013@11-12-2020@UA6692V8@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0013@11-12-2020@UA6692V8@sz_v1_1.mp4"
     ]
   },
   {
@@ -14394,7 +14394,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0013@11-12-2020@UA6692V8@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0013@11-12-2020@UA6692V8@sz_v1_1.mp4"
     ]
   },
   {
@@ -14417,7 +14417,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_head_turning/Z0014@3-26-2020@DA0014FA@sz_v1_1.mp4"
+      "./dataset/videos/task3_head_turning/Z0014@3-26-2020@DA0014FA@sz_v1_1.mp4"
     ]
   },
   {
@@ -14440,7 +14440,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/task3_arm_movement/Z0014@3-26-2020@DA0014FA@sz_v1_1.mp4"
+      "./dataset/videos/task3_arm_movement/Z0014@3-26-2020@DA0014FA@sz_v1_1.mp4"
     ]
   },
   {
@@ -14463,7 +14463,7 @@
       }
     ],
     "videos": [
-      "/mnt/SSD3/lina/finetune_videos/body_region_onset/Z0014@3-26-2020@DA0014FA@sz_v1_1.mp4"
+      "./dataset/videos/body_region_onset/Z0014@3-26-2020@DA0014FA@sz_v1_1.mp4"
     ]
   }
 ]

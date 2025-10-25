@@ -54,10 +54,10 @@ class SeizureORM(ORM):
     Computes an LLM-judged quality score (SeizureRQI) between model outputs and ground truth.
     """
 
-    def __init__(self, api_key: str = None, model: str = "gpt-4o"):
-        self.client = OpenAI(api_key=api_key or os.getenv("OPENAI_API_KEY"))
-        self.model = model
-        self.criteria = EvaluationCriteria()
+    # def __init__(self, api_key: str = None, model: str = "gpt-4o"):
+    #     self.client = OpenAI(api_key=api_key or os.getenv("OPENAI_API_KEY"))
+    #     self.model = model
+    #     self.criteria = EvaluationCriteria()
 
 
     # TODO: 自定义的ORM需要包含一个位置参数completions，其他为关键词参数，由数据集额外字段透传

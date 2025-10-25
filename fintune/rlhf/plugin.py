@@ -155,22 +155,63 @@ class SeizureORM(ORM):
                     if match:
                         llm_answer = match.group(1)
 
-                    pred_list = llm_answer.split(',')
-                    gt_list = gt_answer.split(',')
-                    # 构建预测序列索引
-                    pred_index = {event: i for i, event in enumerate(pred_list)}
-                    # 统计总顺序对数和正确顺序对数
-                    total_pairs = 0
-                    correct_pairs = 0
-                    for i in range(len(gt_list)):
-                        for j in range(i + 1, len(gt_list)):
-                            a, b = gt_list[i], gt_list[j]
-                            total_pairs += 1
-                            # 两个事件都在预测序列中
-                            if a in pred_index and b in pred_index:
-                                if pred_index[a] < pred_index[b]:
-                                    correct_pairs += 1
-                    reward = correct_pairs / total_pairs if total_pairs > 0 else 0
+
+                    # TODO: 方法1，用其他人的metric指标
+                    true_seq, pred_seq = gt_answer, llm_answer
+                    # 提取所有唯一事件
+                    events = set(true_seq) | set(pred_seq)
+
+                    # 创建事件到索引的映射
+                    true_positions = {event: [] for event in events}
+                    pred_positions = {event: [] for event in events}
+
+                    # 记录每个事件在序列中的位置
+                    for i, event in enumerate(true_seq):
+                        true_positions[event].append(i)
+                    for i, event in enumerate(pred_seq):
+                        pred_positions[event].append(i)
+
+                    true_pairs = set()
+                    pred_pairs = set()
+
+                    # 生成真实序列中的时序关系对
+                    for i in range(len(true_seq)):
+                        for j in range(i + 1, len(true_seq)):
+                            true_pairs.add((true_seq[i], true_seq[j], j - i))
+
+                    # 生成预测序列中的时序关系对
+                    for i in range(len(pred_seq)):
+                        for j in range(i + 1, len(pred_seq)):
+                            pred_pairs.add((pred_seq[i], pred_seq[j], j - i))
+
+                    # 计算匹配的时序关系对
+                    matched_pairs = true_pairs & pred_pairs
+
+                    # precision, recall, f1
+                    precision = len(matched_pairs) / len(pred_pairs) if len(pred_pairs) > 0 else 0
+                    recall = len(matched_pairs) / len(true_pairs) if len(true_pairs) > 0 else 0
+                    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
+
+                    reward = f1
+
+
+                    # TODO: 方法2，备选
+                    # pred_list = llm_answer.split(',')
+                    # gt_list = gt_answer.split(',')
+                    # # 构建预测序列索引
+                    # pred_index = {event: i for i, event in enumerate(pred_list)}
+                    # # 统计总顺序对数和正确顺序对数
+                    # total_pairs = 0
+                    # correct_pairs = 0
+                    # for i in range(len(gt_list)):
+                    #     for j in range(i + 1, len(gt_list)):
+                    #         a, b = gt_list[i], gt_list[j]
+                    #         total_pairs += 1
+                    #         # 两个事件都在预测序列中
+                    #         if a in pred_index and b in pred_index:
+                    #             if pred_index[a] < pred_index[b]:
+                    #                 correct_pairs += 1
+                    # reward = correct_pairs / total_pairs if total_pairs > 0 else 0
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
                     reward = 0.0

@@ -76,6 +76,7 @@ class SeizureORM(ORM):
 
         # ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
         # completions, task, messages
+        import re
 
         rewards = []
         for content, message, task in zip(completions, messages, task):
@@ -84,9 +85,13 @@ class SeizureORM(ORM):
                 # TODO: 定位某个症状是否发生，以及解释为什么。equal问题和open-ended question
                 # {'answer': 'no', 'justification': 'The patient prod...'}
                 try:
+                    llm_answer = content
+                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
+                    if match:
+                        llm_answer = match.group(1)
+                    gt_answer = eval(gt_answer)
                     reward = 0.0
-                    llm_answer = eval([item["content"] for item in message if item["role"] == "assistant"])
-                    gt_answer = content
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
                         reward += self.computing_bleu_rouge_score(llm_answer["justification"], gt_answer["justification"])
@@ -97,8 +102,11 @@ class SeizureORM(ORM):
             elif task == "task-3":
                 # TODO: 判断身体部位定位是否准确。选择题，equal判断
                 try:
-                    llm_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    gt_answer = content
+                    llm_answer = content
+                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
+                    if match:
+                        llm_answer = match.group(1)
                     if gt_answer == llm_answer:
                         reward = 1.0
                     else:
@@ -112,9 +120,12 @@ class SeizureORM(ORM):
                 # TODO: 定位症状发生时间，计算时间段重合。计算题，计算overlap/union
                 try:
                     # 00:21-00:32
-                    llm_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    llm_answer = content
                     # 01:23-02:23
-                    gt_answer = content
+                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
+                    if match:
+                        llm_answer = match.group(1)
                     # 转秒
                     s1 = int(llm_answer.split('-')[0].split(':')[0]) * 60 + int(llm_answer.split('-')[0].split(':')[1])
                     e1 = int(llm_answer.split('-')[1].split(':')[0]) * 60 + int(llm_answer.split('-')[1].split(':')[1])
@@ -135,8 +146,11 @@ class SeizureORM(ORM):
                 # "arm_straightening,figure4,tonic,face_twitching,clonic"
                 # "arm_straightening,tonic,figure4,face_twitching,clonic"
                 try:
-                    llm_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    gt_answer = content
+                    llm_answer = content
+                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
+                    if match:
+                        llm_answer = match.group(1)
                     pred_list = llm_answer.split(',')
                     gt_list = gt_answer.split(',')
                     # 构建预测序列索引
@@ -160,8 +174,11 @@ class SeizureORM(ORM):
             elif task == "task-6":
                 # TODO: 病人诊断报告。open-ended问题, 计算bleu+rouge
                 try:
-                    llm_answer = eval([item["content"] for item in message if item["role"] == "assistant"])
-                    gt_answer = content
+                    llm_answer = content
+                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
+                    if match:
+                        llm_answer = match.group(1)
                     reward += self.computing_bleu_rouge_score(llm_answer["description"], gt_answer["description"])
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
@@ -171,9 +188,12 @@ class SeizureORM(ORM):
                 # TODO: 癫痫判断，ES和NES，以及对应的report。equal问题和open-ended question
                 # {'answer': 'ES', 'description': 'Occurs out of sleep. Patient under the cove...'}
                 try:
+                    llm_answer = content
+                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
+                    if match:
+                        llm_answer = match.group(1)
                     reward = 0.0
-                    llm_answer = eval([item["content"] for item in message if item["role"] == "assistant"])
-                    gt_answer = content
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
                         reward += self.computing_bleu_rouge_score(llm_answer["description"], gt_answer["description"])
@@ -260,7 +280,7 @@ orms['seizure_score'] = SeizureORM
 
 
 
-#
+
 #
 # class SeizureORM(ORM):
 #
@@ -277,6 +297,9 @@ orms['seizure_score'] = SeizureORM
 #         # 参数名: ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
 #         # 参数名: ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
 #         print("参数名:", list(kwargs.keys()))
+#         print(f"completions {completions[0]}")  # completions , and the light, it's always on, the light is alwa
+#         print(f"messages {kwargs['messages'][0]}")   # messages [{'role': 'system', 'content': 'You are a medical assistant helping to observe, describe, and analyze seizure videos.'}
+#         print(f"task {kwargs['task'][0]}")      # task task-1-2
 #         # rewards = []
 #         # from math_verify import parse, verify
 #         # for content, sol in zip(completions, solution):
@@ -311,7 +334,7 @@ orms['seizure_score'] = SeizureORM
 #
 #
 # orms['seizure'] = SeizureORM
-
+#
 
 # For additional reward functions, refer to swift/plugin/orm.py.
 class CountdownORM(ORM):

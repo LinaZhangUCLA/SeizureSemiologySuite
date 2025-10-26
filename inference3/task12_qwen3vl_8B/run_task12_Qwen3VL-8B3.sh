@@ -4,7 +4,7 @@
 
 # Activate virtual environment
 eval "$(conda shell.bash hook)"
-conda activate qwenvl
+conda activate qwen3vl_moe
 
 
 # Check if activation was successful
@@ -13,7 +13,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "Conda environment qwenvl activated."
+echo "Conda environment qwen3vl_moe activated."
 
 
 # model_name options

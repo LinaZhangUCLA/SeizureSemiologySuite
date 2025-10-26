@@ -2,14 +2,15 @@
 
 # todo: data_path
 VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251024'
-VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251026'
+VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251025'
 LOG_PATH="./run_logs/${VERSION_NAME}.log"
 
 # todo
 BASE_MODEL='./ckpts/init_models/Qwen2.5-Omni-7B'
+#BASE_MODEL= 'Qwen/Qwen2.5-Omni-7B'
 
 # todo: data_path
-TASK_DATASET='./dataset/test.jsonl'
+TASK_DATASET='./dataset/sft_merge_2025-10-26_swift.jsonl'
 
 # todo: model_path
 MODEL_SAVE_PATH='./ckpts/trained_models/'${VERSION_NAME}
@@ -18,7 +19,7 @@ MODEL_SAVE_PATH='./ckpts/trained_models/'${VERSION_NAME}
 mkdir -p ./run_logs/
 
 # --model_type "qwen2_5" \
-CUDA_VISIBLE_DEVICES=2,3 \
+CUDA_VISIBLE_DEVICES=0,1,2,3 \
 VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 \
 swift sft \
       --train_type full \
@@ -44,7 +45,6 @@ swift sft \
       --split_dataset_ratio 0 \
       --init_weights 'True' \
       --attn_impl 'sdpa' \
-      --report_to 'swanlab' \
+      --report_to 'wandb' \
       --enable_channel_loss 'True' \
-      --swanlab_project 'swift-robot' \
-      --output_dir $MODEL_SAVE_PATH > $LOG_PATH 2>&1 &
+      --output_dir $MODEL_SAVE_PATH > $LOG_PATH #2>&1 &

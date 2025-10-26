@@ -234,7 +234,29 @@ class SeizureORM(ORM):
                     reward = 0.0
                 rewards.append(reward)
 
-            elif task == "task-7":
+            elif task == "task-7-1":
+                # TODO: 癫痫判断，ES和NES，以及对应的description。equal问题和open-ended question
+                # {'answer': 'ES', 'description': 'Occurs out of sleep. Patient under the cove...'}
+                try:
+                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
+                    llm_answer = content
+                    # TODO: 获取answer标签内容
+                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
+                    if match:
+                        llm_answer = match.group(1)
+
+                    # TODO: task 7先对疾病针对做equal判断，然后对description进行相似度判断
+                    reward = 0.0
+                    if llm_answer["answer"] == gt_answer["answer"]:
+                        reward += 0.5
+                        reward += self.computing_bleu_rouge_score(cand=llm_answer["description"], ref=gt_answer["description"])
+                except Exception as e:
+                    print(f"[SeizureORM] Evaluation failed: {e}")
+                    reward = 0.0
+                rewards.append(reward)
+
+
+            elif task == "task-7-2":
                 # TODO: 癫痫判断，ES和NES，以及对应的description。equal问题和open-ended question
                 # {'answer': 'ES', 'description': 'Occurs out of sleep. Patient under the cove...'}
                 try:

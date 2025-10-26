@@ -99,7 +99,7 @@ for row in records_b:
                 )
             }
         ],
-        "videos": [f"./videos/{file_name}"],
+        "videos": [f"./dataset/videos/task7_seizure_videos/{file_name}"],
     }
     json_records.append(entry)
 

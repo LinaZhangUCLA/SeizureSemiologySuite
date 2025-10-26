@@ -58,6 +58,7 @@ class SeizureORM(ORM):
             list[float]: Reward scores
         """
         import re
+        import json
 
         # kwargs: ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
         messages = kwargs["messages"]   # 拿messages标签中的gt
@@ -67,65 +68,58 @@ class SeizureORM(ORM):
 
         rewards = []
         for content, message, task in zip(completions, messages, task):
-            # TODO: 针对不同的任务需要有不同的计算指标
+            # TODO: 参考deepseek-r1，奖励=format奖励+任务奖励
+            reward = 0.0
+            # 获取format奖励
+            if "<think>" in content and "</think>" in content and "<answer>" in content and "</answer>" in content:
+                reward += 0.2
 
+
+            # TODO: 处理模型的输出和ground-truth的输出
+            # 获取ground-truth的answer，答案是json，需要eval成字典
+            gt_answer_raw = [item["content"] for item in message if item["role"] == "assistant"][0].strip()
+            try:
+                gt_answer = json.loads(gt_answer_raw)
+            except:
+                gt_answer = gt_answer_raw
+            # 获取llm的answer，包括<think>...<think>和<answer>...<answer>
+            llm_answer = content
+            match = re.search(r"<answer>(.*?)</answer>", llm_answer)
+            # 如果有answer标签，则提取标签内内容为答案
+            if match:
+                print("have <think> tag")
+                llm_answer = match.group(1)
+            else:
+                print(f"no <think> tag")
+
+
+            # TODO: 针对不同的任务需要有不同的计算指标
             if task == "task-1-2":
                 # TODO: 定位某个症状是否发生，以及解释为什么。equal问题和open-ended question
                 # {'answer': 'no', 'justification': 'The patient prod...'}
                 try:
-                    # TODO: 获取ground-truth的answer，答案是json，需要eval成字典
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    gt_answer = eval(gt_answer)
-                    # TODO: 获取llm的answer，包括<think>...<think>和<answer>...<answer>
-                    llm_answer = content
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
                     # TODO: 计算task 1和2的reward，先判断是否正确，然后判断justification是否正确
-                    reward = 0.0
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
                         reward += self.computing_bleu_rouge_score(cand=llm_answer["justification"], ref=gt_answer["justification"])
 
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
                 rewards.append(reward)
 
             elif task == "task-3":
                 # TODO: 判断身体部位定位是否准确。选择题，equal判断
                 try:
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    llm_answer = content
-                    # TODO: 获取llm的answer，包括<think>...<think>和<answer>...<answer>
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
                     # TODO: task 3直接用equal来判断是否相等
                     if gt_answer == llm_answer:
-                        reward = 1.0
-                    else:
-                        reward = 0.0
-                    # reward = random.random()
+                        reward += 1.0
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
                 rewards.append(reward)
 
             elif task == "task-4":
-                # TODO: 定位症状发生时间，计算时间段重合。计算题，计算overlap/union
+                # TODO: 定位症状发生时间 01:23-02:23，计算时间段重合。计算题，计算overlap/union
                 try:
-                    # 01:23-02:23
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    # 00:21-00:32
-                    llm_answer = content
-                    # TODO: 获取llm的answer，包括<think>...<think>和<answer>...<answer>
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
                     # TODO: task 4计算重叠比例来计算预测的准确程度
                     # 转秒
                     s1 = int(llm_answer.split('-')[0].split(':')[0]) * 60 + int(llm_answer.split('-')[0].split(':')[1])
@@ -137,10 +131,9 @@ class SeizureORM(ORM):
                     # 并集长度
                     union = max(e1, e2) - min(s1, s2)
                     # 归一化 reward（IoU）
-                    reward = overlap / union
+                    reward += overlap / union
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
                 rewards.append(reward)
 
             elif task == "task-5":

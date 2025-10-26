@@ -70,7 +70,7 @@ class SeizureORM(ORM):
         for content, message, task in zip(completions, messages, task):
             # TODO: 参考deepseek-r1，奖励=format奖励+任务奖励
             reward = 0.0
-            # 获取format奖励
+            # TODO: step 1 计算format奖励
             if "<think>" in content and "</think>" in content and "<answer>" in content and "</answer>" in content:
                 reward += 0.2
 
@@ -92,8 +92,7 @@ class SeizureORM(ORM):
             else:
                 print(f"no <think> tag")
 
-
-            # TODO: 针对不同的任务需要有不同的计算指标
+            # TODO: step 2 针对不同的任务计算不同的任务奖励
             if task == "task-1-2":
                 # TODO: 定位某个症状是否发生，以及解释为什么。equal问题和open-ended question
                 # {'answer': 'no', 'justification': 'The patient prod...'}
@@ -185,7 +184,7 @@ class SeizureORM(ORM):
                     recall = len(matched_pairs) / len(true_pairs) if len(true_pairs) > 0 else 0
                     f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
 
-                    reward = f1
+                    reward += f1
 
 
                     # TODO: 方法2，备选
@@ -207,42 +206,24 @@ class SeizureORM(ORM):
                     # reward = correct_pairs / total_pairs if total_pairs > 0 else 0
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
                 rewards.append(reward)
 
             elif task == "task-6":
                 # TODO: 病人诊断报告。open-ended问题, 计算bleu+rouge
                 try:
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    llm_answer = content
-                    # TODO: 获取answer标签内容
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
                     # TODO: task 6用bleu和rouge来计算相似度作为一个baseline
                     reward += self.computing_bleu_rouge_score(cand=llm_answer["description"], ref=gt_answer["description"])
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
                 rewards.append(reward)
 
             elif task == "task-7-1":
                 # TODO: 癫痫判断，ES和NES。equal问题
                 # {"role": "assistant", "content": "NES"}
                 try:
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    llm_answer = content
-                    # TODO: 获取llm的answer，包括<think>...<think>和<answer>...<answer>
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
                     # TODO: task 3直接用equal来判断是否相等
                     if gt_answer == llm_answer:
-                        reward = 1.0
-                    else:
-                        reward = 0.0
+                        reward += 1.0
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
                     reward = 0.0
@@ -253,21 +234,12 @@ class SeizureORM(ORM):
                 # TODO: 癫痫判断，ES和NES，以及对应的description。equal问题和open-ended question
                 # {'answer': 'ES', 'description': 'Occurs out of sleep. Patient under the cove...'}
                 try:
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    llm_answer = content
-                    # TODO: 获取answer标签内容
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
                     # TODO: task 7先对疾病针对做equal判断，然后对description进行相似度判断
-                    reward = 0.0
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
                         reward += self.computing_bleu_rouge_score(cand=llm_answer["description"], ref=gt_answer["description"])
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
                 rewards.append(reward)
 
         return rewards

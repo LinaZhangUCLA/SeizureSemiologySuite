@@ -47,7 +47,6 @@ class SeizureORM(ORM):
 
     # TODO: 自定义的ORM需要包含一个位置参数completions，其他为关键词参数，由数据集额外字段透传
     def __call__(self, completions, **kwargs) -> List[float]:
-    # def __call__(self, completions, solution, channel, **kwargs) -> List[float]:
         """
         Computing score for serizure tasks
 
@@ -58,89 +57,91 @@ class SeizureORM(ORM):
             list[float]: Reward scores
         """
         import re
+        import json
+
 
         # kwargs: ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
         messages = kwargs["messages"]   # 拿messages标签中的gt
-        task = kwargs["task"]   # task区分不同任务
+        tasks = kwargs["task"]   # task区分不同任务
+        solutions = kwargs["solution"]
+        print(f"completions {completions}")
+        print(f"messages {messages}")
+        print(f"tasks {tasks}")
 
         # TODO: llm回答的思维链为<think> reasoning process here </think><answer> answer here </answer>
 
         rewards = []
-        for content, message, task in zip(completions, messages, task):
-            # TODO: 针对不同的任务需要有不同的计算指标
+        for content, solution, task in zip(completions, solutions, tasks):
+            # TODO: 参考deepseek-r1，奖励=format奖励+任务奖励
+            reward = 0.0
+            # TODO: step 1 计算format奖励
+            if "<think>" in content and "</think>" in content and "<answer>" in content and "</answer>" in content:
+                reward += 0.2
 
+
+            # TODO: 处理模型的输出和ground-truth的输出
+            # 获取ground-truth的answer，答案是json，需要eval成字典
+            try:
+                gt_answer = json.loads(solution)
+            except:
+                gt_answer = solution
+            # 获取llm的answer，包括<think>...<think>和<answer>...<answer>
+            llm_answer = content
+            match = re.search(r"<answer>(.*?)</answer>", llm_answer)
+            # 如果有answer标签，则提取标签内内容为答案
+            if match:
+                print("have <think> tag")
+                llm_answer = match.group(1)
+            else:
+                print(f"no <think> tag")
+
+            # TODO: step 2 针对不同的任务计算不同的任务奖励
             if task == "task-1-2":
                 # TODO: 定位某个症状是否发生，以及解释为什么。equal问题和open-ended question
                 # {'answer': 'no', 'justification': 'The patient prod...'}
                 try:
-                    # TODO: 获取ground-truth的answer，答案是json，需要eval成字典
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    gt_answer = eval(gt_answer)
-                    # TODO: 获取llm的answer，包括<think>...<think>和<answer>...<answer>
-                    llm_answer = content
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
                     # TODO: 计算task 1和2的reward，先判断是否正确，然后判断justification是否正确
-                    reward = 0.0
+                    print(f"debug task 1-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
+                    # print(f"debug task 1-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
                         reward += self.computing_bleu_rouge_score(cand=llm_answer["justification"], ref=gt_answer["justification"])
 
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
                 rewards.append(reward)
 
             elif task == "task-3":
                 # TODO: 判断身体部位定位是否准确。选择题，equal判断
                 try:
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    llm_answer = content
-                    # TODO: 获取llm的answer，包括<think>...<think>和<answer>...<answer>
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
+                    print(f"debug task 3: llm answer {llm_answer}, gt answer {gt_answer}")
                     # TODO: task 3直接用equal来判断是否相等
                     if gt_answer == llm_answer:
-                        reward = 1.0
-                    else:
-                        reward = 0.0
-                    # reward = random.random()
+                        reward += 1.0
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
                 rewards.append(reward)
 
             elif task == "task-4":
-                # TODO: 定位症状发生时间，计算时间段重合。计算题，计算overlap/union
+                # TODO: 定位症状发生时间 01:23-02:23，计算时间段重合。计算题，计算overlap/union
+                # {'timestamp': '00:41'}
                 try:
-                    # 01:23-02:23
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    # 00:21-00:32
-                    llm_answer = content
-                    # TODO: 获取llm的answer，包括<think>...<think>和<answer>...<answer>
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
+                    print(f"debug task 4: llm answer {llm_answer}, gt answer {gt_answer}")
                     # TODO: task 4计算重叠比例来计算预测的准确程度
+                    llm_time, gt_time = llm_answer['timestamp'], gt_answer['timestamp']
                     # 转秒
-                    s1 = int(llm_answer.split('-')[0].split(':')[0]) * 60 + int(llm_answer.split('-')[0].split(':')[1])
-                    e1 = int(llm_answer.split('-')[1].split(':')[0]) * 60 + int(llm_answer.split('-')[1].split(':')[1])
-                    s2 = int(gt_answer.split('-')[0].split(':')[0]) * 60 + int(gt_answer.split('-')[0].split(':')[1])
-                    e2 = int(gt_answer.split('-')[1].split(':')[0]) * 60 + int(gt_answer.split('-')[1].split(':')[1])
+                    s1 = int(llm_time.split('-')[0].split(':')[0]) * 60 + int(llm_time.split('-')[0].split(':')[1])
+                    e1 = int(llm_time.split('-')[1].split(':')[0]) * 60 + int(llm_time.split('-')[1].split(':')[1])
+                    s2 = int(gt_time.split('-')[0].split(':')[0]) * 60 + int(gt_time.split('-')[0].split(':')[1])
+                    e2 = int(gt_time.split('-')[1].split(':')[0]) * 60 + int(gt_time.split('-')[1].split(':')[1])
                     # 交集长度
                     overlap = max(0, min(e1, e2) - max(s1, s2))
                     # 并集长度
                     union = max(e1, e2) - min(s1, s2)
                     # 归一化 reward（IoU）
-                    reward = overlap / union
+                    reward += overlap / union
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
                 rewards.append(reward)
 
             elif task == "task-5":
@@ -148,13 +149,7 @@ class SeizureORM(ORM):
                 # "arm_straightening,figure4,tonic,face_twitching,clonic"
                 # "arm_straightening,tonic,figure4,face_twitching,clonic"
                 try:
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    llm_answer = content
-                    # TODO: 获取answer标签内容
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
+                    print(f"debug task 5: llm answer {llm_answer}, gt answer {gt_answer}")
 
                     # TODO: 方法1，用其他人的metric指标
                     true_seq, pred_seq = gt_answer, llm_answer
@@ -192,7 +187,7 @@ class SeizureORM(ORM):
                     recall = len(matched_pairs) / len(true_pairs) if len(true_pairs) > 0 else 0
                     f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
 
-                    reward = f1
+                    reward += f1
 
 
                     # TODO: 方法2，备选
@@ -214,52 +209,51 @@ class SeizureORM(ORM):
                     # reward = correct_pairs / total_pairs if total_pairs > 0 else 0
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
                 rewards.append(reward)
 
             elif task == "task-6":
                 # TODO: 病人诊断报告。open-ended问题, 计算bleu+rouge
                 try:
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    llm_answer = content
-                    # TODO: 获取answer标签内容
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
+                    print(f"debug task 6: llm answer {llm_answer}, gt answer {gt_answer}")
                     # TODO: task 6用bleu和rouge来计算相似度作为一个baseline
-                    reward += self.computing_bleu_rouge_score(cand=llm_answer["description"], ref=gt_answer["description"])
+                    reward += self.computing_bleu_rouge_score(cand=llm_answer, ref=gt_answer)
+                except Exception as e:
+                    print(f"[SeizureORM] Evaluation failed: {e}")
+                rewards.append(reward)
+
+            elif task == "task-7-1":
+                # TODO: 癫痫判断，ES和NES。equal问题
+                # {"role": "assistant", "content": "NES"}
+                try:
+                    print(f"debug task 7-1: llm answer {llm_answer}, gt answer {gt_answer}")
+                    # TODO: task 3直接用equal来判断是否相等
+                    if gt_answer == llm_answer:
+                        reward += 1.0
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
                     reward = 0.0
                 rewards.append(reward)
 
-            elif task == "task-7":
+            elif task == "task-7-2":
                 # TODO: 癫痫判断，ES和NES，以及对应的description。equal问题和open-ended question
                 # {'answer': 'ES', 'description': 'Occurs out of sleep. Patient under the cove...'}
                 try:
-                    gt_answer = [item["content"] for item in message if item["role"] == "assistant"]
-                    llm_answer = content
-                    # TODO: 获取answer标签内容
-                    match = re.search(r"<answer>(.*?)</answer>", llm_answer)
-                    if match:
-                        llm_answer = match.group(1)
-
+                    print(f"debug task 7-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
                     # TODO: task 7先对疾病针对做equal判断，然后对description进行相似度判断
-                    reward = 0.0
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
                         reward += self.computing_bleu_rouge_score(cand=llm_answer["description"], ref=gt_answer["description"])
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
                 rewards.append(reward)
+
+            print(f"task is {task}, reward is {reward}")
 
         return rewards
 
 
     # TODO: open-ended question的解决方案，计算rouge和bleu的分数
-    def compute_bleu_rouge(self, cand, ref):
+    def computing_bleu_rouge_score(self, cand, ref):
         import sacrebleu
         from rouge import Rouge
 
@@ -277,65 +271,9 @@ class SeizureORM(ORM):
         return score
 
 
-orms['seizure_score'] = SeizureORM
+orms['seizure'] = SeizureORM
 
 
-
-
-#
-# class SeizureORM(ORM):
-#
-#     def __call__(self, completions, **kwargs) -> List[float]:
-#         """
-#         Reward function that checks if the completion is correct.
-#         Args:
-#             completions (list[str]): Generated outputs
-#             solution (list[str]): Ground Truths.
-#
-#         Returns:
-#             list[float]: Reward scores
-#         """
-#         # 参数名: ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
-#         # 参数名: ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
-#         print("参数名:", list(kwargs.keys()))
-#         print(f"completions {completions[0]}")  # completions , and the light, it's always on, the light is alwa
-#         print(f"messages {kwargs['messages'][0]}")   # messages [{'role': 'system', 'content': 'You are a medical assistant helping to observe, describe, and analyze seizure videos.'}
-#         print(f"task {kwargs['task'][0]}")      # task task-1-2
-#         # rewards = []
-#         # from math_verify import parse, verify
-#         # for content, sol in zip(completions, solution):
-#         #     reward = 0.0
-#         #     # Try symbolic verification first
-#         #     try:
-#         #         answer = parse(content)
-#         #         if float(verify(answer, parse(sol))) > 0:
-#         #             reward = 1.0
-#         #     except Exception:
-#         #         pass  # Continue to next verification method if this fails
-#         #
-#         #     # If symbolic verification failed, try string matching
-#         #     if reward == 0.0:
-#         #         try:
-#         #             # Extract answer from solution if it has think/answer tags
-#         #             sol_match = re.search(r'<answer>(.*?)</answer>', sol)
-#         #             ground_truth = sol_match.group(1).strip() if sol_match else sol.strip()
-#         #
-#         #             # Extract answer from content if it has think/answer tags
-#         #             content_match = re.search(r'<answer>(.*?)</answer>', content)
-#         #             student_answer = content_match.group(1).strip() if content_match else content.strip()
-#         #
-#         #             # Compare the extracted answers
-#         #             if student_answer == ground_truth:
-#         #                 reward = 1.0
-#         #         except Exception:
-#         #             pass  # Keep reward as 0.0 if both methods fail
-#         #     rewards.append(reward)
-#         # return rewards
-#         return [0] * len(completions)
-#
-#
-# orms['seizure'] = SeizureORM
-#
 
 # For additional reward functions, refer to swift/plugin/orm.py.
 class CountdownORM(ORM):

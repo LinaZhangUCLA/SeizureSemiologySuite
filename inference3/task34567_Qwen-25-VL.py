@@ -315,9 +315,9 @@ def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=6
 
     text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     image_inputs, video_inputs, video_kwargs = process_vision_info([messages], return_video_kwargs=True)
-    print("video_kwargs:", video_kwargs, "messages:", messages)
+    # print("video_kwargs:", video_kwargs, "messages:", messages)
     
-    print("video input:", video_inputs[0].shape)
+    # print("video input:", video_inputs[0].shape)
     num_frames, _, resized_height, resized_width = video_inputs[0].shape
     # print("num of video tokens:", int(num_frames / 2 * resized_height / 28 * resized_width / 28))
     if "task7_seizurevideos" in video_path:
@@ -895,7 +895,7 @@ def main():
 
     # =============================================== task6 =============================================================== #
     try:
-
+        task5_videos_range = validate_videos_range(task5_clip_fps, videos_range)   #task6 uses the same video set as task5
         init_csv(task6_result_csv_fp, "video_name,report")
         task6_processed = load_processed_videos(task6_result_csv_fp)        
         os.makedirs(task6_log_dir, exist_ok=True)

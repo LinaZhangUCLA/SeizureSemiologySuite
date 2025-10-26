@@ -26,6 +26,13 @@ with (open(input_file, "r", encoding="utf-8") as fin, open(output_file, "w", enc
         for msg in item["messages"]:
             if msg["role"] == "system":
                 msg["content"] = 'You are a medical assistant helping to observe, describe, and analyze seizure videos. When answering, first reason step by step inside <think>...</think> tags, and then give the final answer inside <answer>...</answer>, respectively, i.e., <think> reasoning process here </think><answer> answer here </answer>.'
+                # msg["content"] = 'A conversation between User and Assistant. The user asks a question, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think><answer> answer here </answer>'
+
+        # for msg in item["messages"]:
+        #     if msg["role"] == "user":
+        #         msg["content"] = 'describe the video.\n\n<video>'
+
+
 
         # 保留指定字段
         filtered_item = {

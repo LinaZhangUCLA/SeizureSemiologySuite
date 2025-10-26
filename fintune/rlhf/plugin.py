@@ -61,12 +61,10 @@ class SeizureORM(ORM):
 
 
         # kwargs: ['task', 'messages', 'videos', 'is_truncated', 'multi_turn_infos', 'trainer_state']
-        messages = kwargs["messages"]   # 拿messages标签中的gt
+        # messages = kwargs["messages"]   # 拿messages标签中的gt
         tasks = kwargs["task"]   # task区分不同任务
         solutions = kwargs["solution"]
-        print(f"completions {completions}")
-        print(f"messages {messages}")
-        print(f"tasks {tasks}")
+
 
         # TODO: llm回答的思维链为<think> reasoning process here </think><answer> answer here </answer>
 
@@ -80,7 +78,7 @@ class SeizureORM(ORM):
 
 
             # TODO: 处理模型的输出和ground-truth的输出
-            # 获取ground-truth的answer，答案是json，需要eval成字典
+            # 获取ground-truth的answer，如果是json则加载为json，否则加载为文本
             try:
                 gt_answer = json.loads(solution)
             except:
@@ -98,7 +96,7 @@ class SeizureORM(ORM):
             # TODO: step 2 针对不同的任务计算不同的任务奖励
             if task == "task-1-2":
                 # TODO: 定位某个症状是否发生，以及解释为什么。equal问题和open-ended question
-                # {'answer': 'no', 'justification': 'The patient prod...'}
+                # ground-truth example: {'answer': 'no', 'justification': 'The patient prod...'}
                 try:
                     # TODO: 计算task 1和2的reward，先判断是否正确，然后判断justification是否正确
                     print(f"debug task 1-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
@@ -113,6 +111,7 @@ class SeizureORM(ORM):
 
             elif task == "task-3":
                 # TODO: 判断身体部位定位是否准确。选择题，equal判断
+                # ground-truth example: right
                 try:
                     print(f"debug task 3: llm answer {llm_answer}, gt answer {gt_answer}")
                     # TODO: task 3直接用equal来判断是否相等
@@ -124,7 +123,7 @@ class SeizureORM(ORM):
 
             elif task == "task-4":
                 # TODO: 定位症状发生时间 01:23-02:23，计算时间段重合。计算题，计算overlap/union
-                # {'timestamp': '00:41'}
+                # ground-truth example: {'timestamp': '00:41'}
                 try:
                     print(f"debug task 4: llm answer {llm_answer}, gt answer {gt_answer}")
                     # TODO: task 4计算重叠比例来计算预测的准确程度
@@ -146,8 +145,7 @@ class SeizureORM(ORM):
 
             elif task == "task-5":
                 # TODO: 症状发生顺序的排序问题。排序问题，直接计算gt中的所有两两关系在llm的回答中顺序是否正确
-                # "arm_straightening,figure4,tonic,face_twitching,clonic"
-                # "arm_straightening,tonic,figure4,face_twitching,clonic"
+                # ground-truth example: head_turning, arm_straightening, arm_flexion, tonic, clonic
                 try:
                     print(f"debug task 5: llm answer {llm_answer}, gt answer {gt_answer}")
 
@@ -189,30 +187,14 @@ class SeizureORM(ORM):
 
                     reward += f1
 
-
-                    # TODO: 方法2，备选
-                    # pred_list = llm_answer.split(',')
-                    # gt_list = gt_answer.split(',')
-                    # # 构建预测序列索引
-                    # pred_index = {event: i for i, event in enumerate(pred_list)}
-                    # # 统计总顺序对数和正确顺序对数
-                    # total_pairs = 0
-                    # correct_pairs = 0
-                    # for i in range(len(gt_list)):
-                    #     for j in range(i + 1, len(gt_list)):
-                    #         a, b = gt_list[i], gt_list[j]
-                    #         total_pairs += 1
-                    #         # 两个事件都在预测序列中
-                    #         if a in pred_index and b in pred_index:
-                    #             if pred_index[a] < pred_index[b]:
-                    #                 correct_pairs += 1
-                    # reward = correct_pairs / total_pairs if total_pairs > 0 else 0
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
                 rewards.append(reward)
 
+
             elif task == "task-6":
                 # TODO: 病人诊断报告。open-ended问题, 计算bleu+rouge
+                # ground-truth example: The patient is sleeping in bed. He lets out a loud...
                 try:
                     print(f"debug task 6: llm answer {llm_answer}, gt answer {gt_answer}")
                     # TODO: task 6用bleu和rouge来计算相似度作为一个baseline
@@ -221,9 +203,10 @@ class SeizureORM(ORM):
                     print(f"[SeizureORM] Evaluation failed: {e}")
                 rewards.append(reward)
 
+
             elif task == "task-7-1":
                 # TODO: 癫痫判断，ES和NES。equal问题
-                # {"role": "assistant", "content": "NES"}
+                # ground-truth example: ES
                 try:
                     print(f"debug task 7-1: llm answer {llm_answer}, gt answer {gt_answer}")
                     # TODO: task 3直接用equal来判断是否相等
@@ -236,7 +219,7 @@ class SeizureORM(ORM):
 
             elif task == "task-7-2":
                 # TODO: 癫痫判断，ES和NES，以及对应的description。equal问题和open-ended question
-                # {'answer': 'ES', 'description': 'Occurs out of sleep. Patient under the cove...'}
+                # ground-truth example: {'answer': 'ES', 'description': 'Occurs out of sleep. Patient under the cove...'}
                 try:
                     print(f"debug task 7-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
                     # TODO: task 7先对疾病针对做equal判断，然后对description进行相似度判断
@@ -252,7 +235,7 @@ class SeizureORM(ORM):
         return rewards
 
 
-    # TODO: open-ended question的解决方案，计算rouge和bleu的分数
+    # TODO: open-ended question的baseline解决方案，计算rouge和bleu的分数
     def computing_bleu_rouge_score(self, cand, ref):
         import sacrebleu
         from rouge import Rouge

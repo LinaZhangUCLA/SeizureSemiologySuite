@@ -21,7 +21,7 @@ def get_task6_prompt():
     Output ONLY the paragraph (no lists, no headers, no JSON).
     """
 
-input_csv = "./result/ground_truth/task6_report_annotation.csv"
+input_csv = "./fintune/data/task6_segmented_descriptions.csv"
 output_path = Path(f"./dataset/ft_data/ft_task_6_{DEFAULT_DATE}.json")
 
 records = []
@@ -30,7 +30,7 @@ with open(input_csv, "r", encoding="utf-8") as f:
     for row in reader:
         print(row)
         video_filename = row["\ufefffile_name"]
-        description = row["report"]
+        description = row["description"]
 
         patient_id = video_filename.split("@")[0]
         video_id = os.path.splitext(video_filename)[0]
@@ -53,7 +53,7 @@ with open(input_csv, "r", encoding="utf-8") as f:
                     "content": description.strip()
                 }
             ],
-            "videos": [f"./videos/{video_filename}"]
+            "videos": [f"./dataset/videos/task56_segments/{video_filename}"]
         }
 
         records.append(record)

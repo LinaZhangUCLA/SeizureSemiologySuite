@@ -726,7 +726,7 @@ def main():
     #                 print(f"Error processing video {video_name} for head turning: {e}")
     #                 with open(task3_HT_result_csv_fp, 'a') as f:
     #                     f.write(f"{video_name},N/A\n")
-    #             break
+    #             #break
     #         # Process arm movement videos
     #         task3_AM_videos_range = validate_videos_range(task3_AM_clip_fps, task3_AM_videos_range)
     #         for video_clip_fp in tqdm(task3_AM_clip_fps[:], desc="Processing Task 3 Arm Movement"):
@@ -744,7 +744,7 @@ def main():
     #                 print(f"Error processing video {video_name} for arm movement: {e}")
     #                 with open(task3_AM_result_csv_fp, 'a') as f:
     #                     f.write(f"{video_name},N/A\n")
-    #             break
+    #             #break
     #         # Process onset body part videos
     #         task3_L_videos_range = validate_videos_range(task3_L_clip_fps, task3_AM_videos_range)
     #         for video_clip_fp in tqdm(task3_L_clip_fps[:], desc="Processing Task 3 Onset Body Part"):
@@ -763,7 +763,7 @@ def main():
     #                 print(f"Error processing video {video_name} for onset body part: {e}")
     #                 with open(task3_L_result_csv_fp, 'a') as f:
     #                     f.write(f"{video_name},N/A\n")
-    #             break
+    #             #break
             
     # except Exception as e:
     #     print(f"Error in Task 3 processing: {e}")
@@ -845,7 +845,7 @@ def main():
                         csv_f.write(f"{video_name},{feature},N/A\n")
                         csv_f.flush()    
                         log_f.write(f"Error processing video {video_name} for feature {feature}: {e}\n")
-                    break
+                    #break
         print(f"Processing is complete. Results are in '{task4_result_csv_fp}'.")
 
     except Exception as e:
@@ -886,7 +886,7 @@ def main():
     #                     print(f"Error processing video {video_clip_fp}: {e}")
     #                     csv_f.write(f"{video_clip_name},\"fail\"\n")
     #                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
-    #                 break
+    #                 #break
     #     print(f"Task 5 results are in: {task5_result_csv_fp}")  
 
     # except Exception as e:
@@ -917,7 +917,7 @@ def main():
                     print(f"Error processing video {video_clip_fp}: {e}")
                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
                     csv_f.write(f"{video_clip_name},\"fail\"\n")
-                break
+                #break
         print(f"Task 6 results are in: {task6_result_csv_fp}")
     except Exception as e:
         print(f"Error in Task 6 processing: {e}")
@@ -975,7 +975,7 @@ def main():
                     print(f"Error processing video {video_clip_fp}: {e}")
                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
                     csv_f.write(f"{video_clip_name},\"fail\",\"fail\"\n")
-                break
+                #break
         print(f"Task 7 results are in: {task7_result_csv_fp}")
     except Exception as e:
         print(f"Error in Task 7 processing: {e}")

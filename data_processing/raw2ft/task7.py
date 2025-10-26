@@ -1,3 +1,8 @@
+# ================================================================
+# Created by: Jungang
+# Email: ljungang.02@gmail.com
+# Description: Prepare ms-swift fine-tuning JSON for task-7 groundtruth data.
+# ================================================================
 import csv
 import json
 from pathlib import Path
@@ -57,7 +62,7 @@ for row in records_a:
                 "content": label
             }
         ],
-        "videos": [f"./videos/{file_name}"],
+        "videos": [f"./dataset/videos/task7_seizure_videos/{file_name}"],
     }
     json_records.append(entry)
 

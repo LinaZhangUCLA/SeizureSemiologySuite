@@ -16,17 +16,16 @@ with (open(input_file, "r", encoding="utf-8") as fin, open(output_file, "w", enc
             continue  # 跳过空行
         item = json.loads(line)
 
-        # TODO: 测试使用
-        task = item.get("channel", "")
-        if task in seen_tasks:
-            continue  # 已经处理过这个 task，跳过
-        seen_tasks.add(task)
+        # # TODO: 测试使用
+        # task = item.get("channel", "")
+        # if task in seen_tasks:
+        #     continue  # 已经处理过这个 task，跳过
+        # seen_tasks.add(task)
 
         # TODO: 修改 messages 的 system 命令，添加 <think>...<think> 和 <answer>...<answer> 的逻辑
         for msg in item["messages"]:
             if msg["role"] == "system":
                 msg["content"] = 'You are a medical assistant helping to observe, describe, and analyze seizure videos. When answering, first reason step by step inside <think>...</think> tags, and then give the final answer inside <answer>...</answer>, respectively, i.e., <think> reasoning process here </think><answer> answer here </answer>.'
-                # msg["content"] = 'A conversation between User and Assistant. The user asks a question, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think><answer> answer here </answer>'
 
         # for msg in item["messages"]:
         #     if msg["role"] == "user":
@@ -39,8 +38,8 @@ with (open(input_file, "r", encoding="utf-8") as fin, open(output_file, "w", enc
             "task": item.get("channel", ""),   # 防止有缺失
             "messages": item.get("messages", []),
             "solution": [m["content"] for m in item.get("messages", []) if m.get("role") == "assistant"][0],
-            # "videos": item["videos"]
-            "videos": ["./video_demo_debug.mp4"]
+            "videos": item["videos"]
+            # "videos": ["./video_demo_debug.mp4"]
         }
 
         # 写入 JSONL

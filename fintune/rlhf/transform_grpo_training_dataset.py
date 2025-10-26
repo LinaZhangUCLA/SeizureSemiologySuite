@@ -5,7 +5,7 @@ import json
 # output_file = "../../dataset/grpo_merge_2025-10-26.jsonl"  # 目标 JSONL 文件
 
 input_file = "sft_merge_2025-10-26_swift.jsonl"  # 原始 JSONL 文件
-output_file = "grpo_merge_2025-10-26.jsonl"  # 目标 JSONL 文件
+output_file = "grpo_merge_2025-10-26_swfit.jsonl"  # 目标 JSONL 文件
 
 # 打开输入和输出文件
 with (open(input_file, "r", encoding="utf-8") as fin, open(output_file, "w", encoding="utf-8") as fout):

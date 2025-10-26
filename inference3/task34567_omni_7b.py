@@ -789,7 +789,7 @@ def main():
         #feature_folders = [d for d in os.listdir(task4_dataset_dir) if os.path.isdir(os.path.join(task4_dataset_dir, d))]
         
         feature_folders_split =  [
-                ['ictal_vocalization','blank_stare',],
+                ['ictal_vocalization','blank_stare','close_eyes','eye_blinking',],
                 #['blank_stare','close_eyes','eye_blinking',],
                 ['tonic','clonic','arm_flexion',],
                 ['arm_straightening','figure4','oral_automatisms',],

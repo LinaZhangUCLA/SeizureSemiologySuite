@@ -301,12 +301,15 @@ def inference(model, video_path, query_prompt, max_new_tokens=None):
     if max_new_tokens is None:
         max_new_tokens = MAX_NEW_TOKENS
 
-    # 1) 提取音频（24kHz, mono）
+    
     audio_path = _extract_audio_to_wav(video_path, globals().get('audio_cache_dir', video_cache_dir))
-    use_audio_in_video = False if audio_path else True  # 有独立wav就 False
+    use_audio_in_video = False if audio_path else True  
 
-    # 2) messages：只给最小字段 + 加 system
+
+    
     msg_content = [{"type": "video", "video": video_path}]
+    if "task4_feature_segments" in video_path:
+        msg_content[0]["fps"] = 1  
     if audio_path:
         msg_content.append({"type": "audio", "audio": audio_path})
     msg_content.append({"type": "text", "text": query_prompt})
@@ -316,18 +319,24 @@ def inference(model, video_path, query_prompt, max_new_tokens=None):
         {"role": "user", "content": msg_content},
     ]
 
-    # 3) 预处理（显式传 use_audio_in_video）
+    
     text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    audios, images, videos = process_mm_info(messages, use_audio_in_video=use_audio_in_video)
+    audios, images, videos, video_kwargs = process_mm_info(
+        messages, use_audio_in_video=use_audio_in_video, return_video_kwargs=True
+    )
+    fps_inputs = video_kwargs.get("fps", None)
+    if isinstance(fps_inputs, list):
+        fps_inputs = fps_inputs[0]
 
     inputs = processor(
         text=[text],
         audio=audios, images=images, videos=videos,
+        fps=fps_inputs,              
         padding=True, return_tensors="pt",
         use_audio_in_video=use_audio_in_video,
     ).to(model.device)
 
-    # 4) 生成（显式传 use_audio_in_video；关闭采样）
+    
     output_ids = model.generate(
         **inputs,
         max_new_tokens=max_new_tokens,
@@ -370,7 +379,7 @@ def get_task4_feature_prompt(feature: str):
         This video shows when a patient {description}
         Tell me the exact timestamp (MM:SS) when this symptom first appears.
         Output EXACTLY one timestamp in MM:SS format. No text, no JSON, no code fences.
-        Do NOT output 00:00 unless the symptom is clearly within the FIRST SECOND.
+        Do NOT output 00:00 unless the symptom is clearly begins within the first 0.0–0.9 seconds of the clip..
         '''
 
 def get_task3_HT_prompt():
@@ -496,7 +505,7 @@ def parse_json_task4(vlm_output):
         return {"timestamp": "N/A"}
     s = vlm_output.strip()
 
-    # 直接找 {...} JSON
+    
     m = re.search(r'\{.*\}', s, re.DOTALL)
     if m:
         try:
@@ -506,7 +515,7 @@ def parse_json_task4(vlm_output):
         except Exception:
             pass
 
-    # 兜底：抓第一个 MM:SS
+    
     t = re.search(r'(\d{1,2}:\d{2}(?:\.\d+)?)', s)
     if t:
         return {"timestamp": t.group(1)}
@@ -575,12 +584,12 @@ def query_task4(video_clip_fp, feature):
     prompt = get_task4_feature_prompt(feature)
     raw_resp = inference(model, video_clip_fp, prompt)
 
-    # ictal_vocalization：我们已要求模型只输出 MM:SS
+   
     if feature == "ictal_vocalization":
         timestamp = format_time_task4(raw_resp)
         return timestamp, raw_resp
 
-    # 其他特征：仍用现有 JSON 兜底逻辑
+    
     time_resp = parse_json_task4(raw_resp)
     timestamp = format_time_task4(time_resp['timestamp'])
     return timestamp, raw_resp

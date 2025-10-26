@@ -20,15 +20,15 @@ pip install sacrebleu
 
 ### 奖励函数计算文件替换
 
-`ms-swift-main/examples/train/grpo/plugin/plugin.py`
+
+将`SeizureSemiologyBench/fintune/rlhf/plugin.py`的文件替换到`ms-swift-main/examples/train/grpo/plugin/plugin.py`
 
 引入了SerizureORM计算不同task的reward
-
 
 
 
 ## step 4: 一键启动脚本grpo.sh
 
 ```bash
-bash grpo_seizure.sh
+bash qwen2_5_omni_task_1_7_grpo.sh
 ```

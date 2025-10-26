@@ -1,6 +1,6 @@
 # 2 * 50GiB
 # pip install transformers math_verify trl -U
-pip install math_verify==0.5.2
+#pip install math_verify==0.5.2
 
 MAX_PIXELS=1003520 \
 NPROC_PER_NODE=2 \

@@ -11,6 +11,8 @@ with open(input_file, "r", encoding="utf-8") as f:
 # 写入 JSONL 文件
 with open(output_file, "w", encoding="utf-8") as f:
     for item in data:
+        # TODO: 需要修改messages的system的命令，添加<think>...<think>和<answer>...<answer>的逻辑
+
         # 只保留指定字段
         filtered_item = {
             "task": item["channel"],

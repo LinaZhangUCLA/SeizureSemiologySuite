@@ -8,6 +8,7 @@ from datetime import datetime
 INPUT_DIR = "../raw_data/task3_annotation.csv"
 OUTPUT_DIR = "../ft_data"
 VIDEO_BASE_PATH = "/mnt/SSD3/lina/finetune_videos"
+# VIDEO_BASE_PATH = "./dataset/videos"
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
 # ------------------------------
 

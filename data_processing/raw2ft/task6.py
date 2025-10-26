@@ -1,3 +1,8 @@
+# ================================================================
+# Created by: Jungang
+# Email: ljungang.02@gmail.com
+# Description: Prepare ms-swift fine-tuning JSON for task-6 groundtruth data.
+# ================================================================
 import csv
 import json
 import os

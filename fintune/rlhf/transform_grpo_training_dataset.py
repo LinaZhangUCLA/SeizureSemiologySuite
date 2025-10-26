@@ -7,12 +7,20 @@ import json
 input_file = "sft_merge_2025-10-26_swift.jsonl"  # 原始 JSONL 文件
 output_file = "grpo_merge_2025-10-26_swift.jsonl"  # 目标 JSONL 文件
 
+seen_tasks = set()  # 用于记录已经处理过的 task
+
 # 打开输入和输出文件
 with (open(input_file, "r", encoding="utf-8") as fin, open(output_file, "w", encoding="utf-8") as fout):
     for line in fin:
         if not line.strip():
             continue  # 跳过空行
         item = json.loads(line)
+
+        # TODO: 测试使用
+        task = item.get("channel", "")
+        if task in seen_tasks:
+            continue  # 已经处理过这个 task，跳过
+        seen_tasks.add(task)
 
         # TODO: 修改 messages 的 system 命令，添加 <think>...<think> 和 <answer>...<answer> 的逻辑
         for msg in item["messages"]:
@@ -23,8 +31,9 @@ with (open(input_file, "r", encoding="utf-8") as fin, open(output_file, "w", enc
         filtered_item = {
             "task": item.get("channel", ""),   # 防止有缺失
             "messages": item.get("messages", []),
-            "videos": item["videos"]
-            # "videos": "./video_demo.mp4"
+            "solution": [m["content"] for m in item.get("messages", []) if m.get("role") == "assistant"][0],
+            # "videos": item["videos"]
+            "videos": ["./video_demo_debug.mp4"]
         }
 
         # 写入 JSONL

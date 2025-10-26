@@ -9,3 +9,6 @@ run_logs
 
 # jungang-dev
 git-jungang.sh
+
+output/
+wandb/

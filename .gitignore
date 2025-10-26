@@ -1,2 +1,11 @@
 # dataset
-dataset/
+dataset/videos
+
+# ckpts
+ckpts/
+
+# log
+run_logs
+
+# jungang-dev
+git-jungang.sh

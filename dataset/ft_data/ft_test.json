@@ -1,0 +1,50 @@
+[
+{
+    "patient_id": "A0002",
+    "video_id": "A0002@5-13-2021@UA6693LK@sz_v1_1",
+    "feature": "head_turning",
+    "channel": "task-1-2",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
+      },
+      {
+        "role": "user",
+        "content": "Does the patient forcibly or stiffly rotate their head to one side in the video? Answer with 'yes' or 'no' and provide a justification for the answer. Respond with exactly one JSON object in the format { \"answer\": \"...\", \"justification\": \"...\" } and do not include any extra text outside of the JSON."
+      },
+      {
+        "role": "assistant",
+        "content": {
+          "answer": "yes",
+          "justification": "The patient's head and body stiffen and arch to the right, with the head forcibly and stiffly turned to the right side."
+        }
+      }
+    ],
+    "videos": [
+      "./dataset/videos/test_01.mp4"
+    ]
+  },
+  {
+    "patient_id": "A0002",
+    "video_id": "A0002@5-13-2021@UA6693LK@sz_v1_1_segment_0",
+    "channel": "task-5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
+      },
+      {
+        "role": "user",
+        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text."
+      },
+      {
+        "role": "assistant",
+        "content": "ictal_vocalization"
+      }
+    ],
+    "videos": [
+      "./dataset/videos/test_01.mp4"
+    ]
+  }
+]

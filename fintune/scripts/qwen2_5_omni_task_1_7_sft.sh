@@ -2,6 +2,7 @@
 
 # todo: data_path
 VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251024'
+VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251025'
 LOG_PATH="./run_logs/${VERSION_NAME}.log"
 
 # todo
@@ -12,6 +13,9 @@ TASK_DATASET='./dataset/ft_data/ft_test.json'
 
 # todo: model_path
 MODEL_SAVE_PATH='./ckpts/trained_models/'${VERSION_NAME}
+
+
+mkdir -p ./run_logs/
 
 # --model_type "qwen2_5" \
 CUDA_VISIBLE_DEVICES=2,3 \
@@ -36,7 +40,7 @@ swift sft \
       --warmup_ratio 0.05 \
       --dataloader_num_workers 4 \
       --model $BASE_MODEL \
-      --dataset $MEITUAN_V6_DATASET \
+      --dataset $TASK_DATASET \
       --split_dataset_ratio 0 \
       --init_weights 'True' \
       --attn_impl 'sdpa' \

@@ -2,14 +2,14 @@
 
 # todo: data_path
 VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251024'
-VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251025'
+VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251026'
 LOG_PATH="./run_logs/${VERSION_NAME}.log"
 
 # todo
 BASE_MODEL='./ckpts/init_models/Qwen2.5-Omni-7B'
 
 # todo: data_path
-TASK_DATASET='./dataset/ft_data/ft_test.json'
+TASK_DATASET='./dataset/test.jsonl'
 
 # todo: model_path
 MODEL_SAVE_PATH='./ckpts/trained_models/'${VERSION_NAME}
@@ -23,7 +23,7 @@ VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 \
 swift sft \
       --train_type full \
       --torch_dtype bfloat16 \
-      --num_train_epochs 3 \
+      --num_train_epochs 1 \
       --per_device_train_batch_size 1 \
       --per_device_eval_batch_size 1 \
       --learning_rate 2e-5 \
@@ -36,7 +36,7 @@ swift sft \
       --save_steps 200 \
       --save_total_limit 5 \
       --logging_steps 1 \
-      --max_length 8192 \
+      --max_length 16384 \
       --warmup_ratio 0.05 \
       --dataloader_num_workers 4 \
       --model $BASE_MODEL \
@@ -44,4 +44,7 @@ swift sft \
       --split_dataset_ratio 0 \
       --init_weights 'True' \
       --attn_impl 'sdpa' \
+      --report_to 'swanlab' \
+      --enable_channel_loss 'True' \
+      --swanlab_project 'swift-robot' \
       --output_dir $MODEL_SAVE_PATH > $LOG_PATH 2>&1 &

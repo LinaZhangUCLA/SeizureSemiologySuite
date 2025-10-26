@@ -660,6 +660,18 @@ def get_fp_list(file_dir):
             fp_list.append(os.path.join(file_dir, file))
     return fp_list
 
+
+def init_csv(file_path, header):
+    if not os.path.exists(file_path):
+        with open(file_path, 'w') as f:
+            f.write(header + "\n")
+
+def load_processed_videos(csv_fp):
+    if not os.path.exists(csv_fp):
+        return set()
+    with open(csv_fp, 'r') as f:
+        return {line.split(',')[0] for line in f.readlines()[1:] if line.strip()}    
+
 def main():
     global videos_range
     global task5_6_videos_range, task3_HT_videos_range, task3_AM_videos_range, task4_videos_range

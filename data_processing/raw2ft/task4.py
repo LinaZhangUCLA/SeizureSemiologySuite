@@ -11,9 +11,9 @@ import argparse
 from datetime import datetime
 
 # ---------- 路径配置 ----------
-INPUT_DIR = "./fintune/task4_groundtruth"
+INPUT_DIR = "./fintune/data/task4_groundtruth"
 OUTPUT_DIR = "./dataset/ft_data"
-VIDEO_BASE_PATH = "./videos"
+VIDEO_BASE_PATH = "./dataset/videos/task4_time"
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
 # ------------------------------
 
@@ -97,7 +97,7 @@ def process_csv(csv_path, video_base_path):
 
             patient_id = file_name.split("@")[0]
             video_id = os.path.splitext(file_name)[0]
-            video_path = os.path.join(video_base_path, file_name)
+            video_path = os.path.join(video_base_path, feature,file_name)
 
             # 构造 prompt 与回答
             user_prompt = get_task4_feature_prompt(feature)

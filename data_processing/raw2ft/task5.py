@@ -8,7 +8,7 @@ import json
 import os
 from pathlib import Path
 from datetime import datetime
-VIDEO_BASE_PATH = "./videos"
+VIDEO_BASE_PATH = "./dataset/videos/task56_segments"
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
 # 定义 prompt
 def get_task5_prompt():
@@ -21,7 +21,7 @@ def get_task5_prompt():
     '''
 
 # 输入与输出路径
-csv_path = Path("./result/ground_truth/task5_segment_sequence_annotation.csv")
+csv_path = Path("./fintune/data/task5_segment_sequence_annotation.csv")
 output_path = Path(f"./dataset/ft_data/ft_task_5_{DEFAULT_DATE}.json")
 
 # 定义症状关键词，用于自动提取 ground truth

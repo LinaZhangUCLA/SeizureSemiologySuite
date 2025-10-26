@@ -6,12 +6,16 @@ modelscope-registry.us-west-1.cr.aliyuncs.com/modelscope-repo/modelscope:ubuntu2
 
 链接：https://modelscope.cn/docs/intro/environment-setup#%E6%9C%80%E6%96%B0%E9%95%9C%E5%83%8F
 
-optional: 也许需要单独安装一下math_verify: pip install math_verify==0.5.2
 
+## step 2: 安装包
+
+`
+pip install math_verify==0.5.2
 pip install rouge
 pip install sacrebleu
+`
 
-## step 2: 替换文件
+## step 3: 替换文件
 
 
 ### 奖励函数计算文件替换
@@ -23,8 +27,8 @@ pip install sacrebleu
 
 
 
-## step 3: 一键启动脚本grpo.sh
+## step 4: 一键启动脚本grpo.sh
 
 ```bash
-bash grpo.sh
+bash grpo_seizure.sh
 ```

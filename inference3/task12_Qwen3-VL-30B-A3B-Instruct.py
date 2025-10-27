@@ -205,7 +205,7 @@ from peft import PeftModel
 # )
 model = Qwen3VLMoeForConditionalGeneration.from_pretrained(
     model_name,
-    torch_dtype=torch.bfloat16,
+    dtype=torch.bfloat16,
     attn_implementation="flash_attention_2",
     device_map="auto"
 )

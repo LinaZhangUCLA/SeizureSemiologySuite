@@ -29,7 +29,7 @@ echo "Conda environment qwen3vl_moe activated."
 
 # Run the inference script
 python task34567_Qwen3VL_dense.py \
-    --gpu 1,2 \
+    --gpu 2,3 \
     --videos_range 1-2 \
     --output_dir /home/lina/SeizureSemiologyBench/qwen3vl32b1026 \
     --model_name Qwen/Qwen3-VL-32B-Instruct \

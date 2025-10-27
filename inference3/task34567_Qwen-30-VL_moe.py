@@ -13,8 +13,8 @@ import argparse
 import pandas as pd
 
 
-report_dict = pd.read_csv("./../result/ground_truth/task6_report_annotation.csv", usecols=["file_name","report"], dtype=str, encoding="utf-8-sig")\
-      .set_index("file_name")["report"].to_dict()
+# report_dict = pd.read_csv("./../result/ground_truth/task6_report_annotation.csv", usecols=["file_name","report"], dtype=str, encoding="utf-8-sig")\
+#       .set_index("file_name")["report"].to_dict()
 #print(report_dict)
 
 LOG = True
@@ -33,8 +33,8 @@ def parse_arguments():
                        help='GPU device ID(s) to use (default: 0). Can be a single number or comma-separated numbers (e.g., 7 or 0,1,2)')
 
     # Model settings
-    parser.add_argument('--model_name', type=str, default='Qwen/Qwen3-VL-8B-Instruct',
-                       help='Model name to use (default: Qwen/Qwen3-VL-8B-Instruct)')
+    parser.add_argument('--model_name', type=str, default='Qwen/Qwen3-VL-30B-A3B-Instruct',
+                       help='Model name to use (default: Qwen/Qwen3-VL-30B-A3B-Instruct)')
 
 
       # Data settings
@@ -151,9 +151,9 @@ for dir_path in [task3_log_dir, task4_log_dir, task5_log_dir, task6_log_dir]:
 # 360p:  (640, 360)
 # 240p:  (426, 240)
 ################################################################################################
-MAX_FRAMES = 120
+MAX_FRAMES = 60
 FPS = 2
-TASK4_FPS = 2
+TASK4_FPS = 1
 MAX_NEW_TOKENS = 2048
 MAX_RETRIES = 10
 
@@ -183,12 +183,12 @@ os.environ['HF_HOME'] = hf_cache_dir
 os.environ['MODELSCOPE_CACHE'] = modelscope_cache_dir
 
 import torch
-from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
+from transformers import Qwen3VLMoeForConditionalGeneration, AutoProcessor
 from qwen_vl_utils import process_vision_info
 from peft import PeftModel
 
 # Load base model first
-model = Qwen3VLForConditionalGeneration.from_pretrained(
+model = Qwen3VLMoeForConditionalGeneration.from_pretrained(
     model_name, 
     torch_dtype=torch.bfloat16, 
     # attn_implementation="flash_attention_2",
@@ -307,7 +307,7 @@ def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=6
             {
                 "type": "video",
                 "video": video_path,
-                "nframes": MAX_FRAMES,  # <- 均匀抽取整段视频的 120 帧
+                "nframes": MAX_FRAMES,  # <- 均匀抽取整段视频的 60 帧
                 "max_pixels": max_pixels,
                 "min_pixels": min_pixels,
                 "total_pixels": max_pixels * MAX_FRAMES,
@@ -326,18 +326,8 @@ def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=6
     if "task7_seizurevideos" in video_path:
         inputs = processor(text=[text], images=image_inputs, videos=video_inputs, do_sample_frames=False, padding=True,return_tensors="pt").to('cuda')
     else:
-        # fps_inputs = 2 #video_kwargs['fps']
-        # inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_inputs, padding=True, return_tensors="pt").to('cuda')
-        def to_pyint(x):
-            if hasattr(x, 'item'):
-                return round(x.item())
-            return round(x)
-        fps_inputs = video_kwargs['fps']
-        fps_inputs = [to_pyint(x) for x in fps_inputs]
-        #print(f"not task7_seizurevideos: fps_inputs: {fps_inputs}")
-        # Pass the first element if processing a single video
-        fps_value = fps_inputs[0] if len(fps_inputs) == 1 else fps_inputs
-        inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_value, padding=True, return_tensors="pt").to('cuda')
+        fps_inputs = int(video_kwargs['fps'][0])
+        inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_inputs, padding=True, return_tensors="pt").to('cuda')
 
     output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
     generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]
@@ -699,7 +689,7 @@ def main():
     task7_clip_fps = get_fp_list(task7_dataset_dir)
 
     
-    #=============================================== task3=============================================================== #
+    # =============================================== task3=============================================================== #
     try:
         # Get all task4 clips
         task3_HT_clip_fps = get_fp_list(task3_HT_dataset_dir)
@@ -720,7 +710,7 @@ def main():
                 f.write("video_name,onset_body_part\n")
 
         # Process task4 videos
-        if '3' in args.gpu:
+        if '7' in args.gpu:
             # Process head turning videos
             task3_HT_videos_range = validate_videos_range(task3_HT_clip_fps, task3_HT_videos_range)
             for video_clip_fp in tqdm(task3_HT_clip_fps[:], desc="Processing Task 3 Head Turning"):
@@ -781,7 +771,7 @@ def main():
     except Exception as e:
         print(f"Error in Task 3 processing: {e}")
         traceback.print_exc()
-    #=============================================== task4 =============================================================== #
+    # =============================================== task4 =============================================================== #
     # Initialize task4 CSV file
     try:
         if not os.path.exists(task4_result_csv_fp):

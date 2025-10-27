@@ -203,11 +203,15 @@ from peft import PeftModel
 # model = Qwen3VLMoeForConditionalGeneration.from_pretrained(
 #     model_name, torch_dtype="auto", device_map="auto"
 # )
+# visible_gpus = list(range(torch.cuda.device_count()))
+# max_memory = {i: "78GiB" for i in visible_gpus}  # leave ~2GB headroom on A100-80GB
+# max_memory[0] = "65GiB"
 model = Qwen3VLMoeForConditionalGeneration.from_pretrained(
     model_name,
     dtype=torch.bfloat16,
     attn_implementation="flash_attention_2",
-    device_map="auto"
+    device_map="auto",
+    # max_memory=max_memory
 )
 # Move model to GPU
 # model = model.to('cuda')
@@ -236,68 +240,68 @@ def download_video(url, dest_path):
 
 
 def get_video_frames(video_file_path, num_frames=128, cache_dir=video_cache_dir):
-    print(f"DEBUG: get_video_frames called with: {video_file_path}")
-    print(f"DEBUG: Video file exists: {os.path.exists(video_file_path)}")
+    # print(f"DEBUG: get_video_frames called with: {video_file_path}")
+    # print(f"DEBUG: Video file exists: {os.path.exists(video_file_path)}")
     
     # os.makedirs(cache_dir, exist_ok=True)
 
     video_hash = hashlib.md5(video_file_path.encode('utf-8')).hexdigest()
-    print(f"DEBUG: Video hash: {video_hash}")
+    # print(f"DEBUG: Video hash: {video_hash}")
 
     frames_cache_file = os.path.join(cache_dir, f'{video_hash}_{num_frames}_frames.npy')
     timestamps_cache_file = os.path.join(cache_dir, f'{video_hash}_{num_frames}_timestamps.npy')
-    print(f"DEBUG: Cache files: {frames_cache_file}, {timestamps_cache_file}")
+    # print(f"DEBUG: Cache files: {frames_cache_file}, {timestamps_cache_file}")
 
     if os.path.exists(frames_cache_file) and os.path.exists(timestamps_cache_file):
-        print(f"DEBUG: Loading from cache...")
+        # print(f"DEBUG: Loading from cache...")
         frames = np.load(frames_cache_file)
         timestamps = np.load(timestamps_cache_file)
-        print(f"DEBUG: Loaded frames shape: {frames.shape}, timestamps shape: {timestamps.shape}")
+        # print(f"DEBUG: Loaded frames shape: {frames.shape}, timestamps shape: {timestamps.shape}")
         return video_file_path, frames, timestamps
 
-    print(f"DEBUG: Reading video with torchvision...")
+    # print(f"DEBUG: Reading video with torchvision...")
     try:
         # Read video using torchvision
         video_tensor, audio_tensor, video_info = read_video(video_file_path, pts_unit='sec')
-        print(f"DEBUG: Video tensor shape: {video_tensor.shape}")
-        print(f"DEBUG: Video info: {video_info}")
+        # print(f"DEBUG: Video tensor shape: {video_tensor.shape}")
+        # print(f"DEBUG: Video info: {video_info}")
         
         total_frames = video_tensor.shape[0]
         fps = video_info['video_fps']
-        print(f"DEBUG: Total frames: {total_frames}, FPS: {fps}")
+        # print(f"DEBUG: Total frames: {total_frames}, FPS: {fps}")
 
         # print("total_frames : ", total_frames)
 
         indices = np.linspace(0, total_frames - 1, num=num_frames, dtype=int)
-        print(f"DEBUG: Frame indices: {indices[:10]}... (showing first 10)")
+        # print(f"DEBUG: Frame indices: {indices[:10]}... (showing first 10)")
 
         # Extract selected frames
         selected_frames = video_tensor[indices]  # Shape: [num_frames, H, W, C]
-        print(f"DEBUG: Selected frames shape: {selected_frames.shape}")
+        # print(f"DEBUG: Selected frames shape: {selected_frames.shape}")
 
         # Convert to numpy array and ensure uint8 format
         frames = selected_frames.numpy().astype(np.uint8)
-        print(f"DEBUG: Converted frames shape: {frames.shape}, dtype: {frames.dtype}")
+        # print(f"DEBUG: Converted frames shape: {frames.shape}, dtype: {frames.dtype}")
 
         # Calculate timestamps for selected frames
         timestamps = np.array([idx / fps for idx in indices])
-        print(f"DEBUG: Timestamps shape: {timestamps.shape}")
+        # print(f"DEBUG: Timestamps shape: {timestamps.shape}")
 
-        print(f"DEBUG: Saving to cache...")
+        # print(f"DEBUG: Saving to cache...")
         np.save(frames_cache_file, frames)
         np.save(timestamps_cache_file, timestamps)
-        print(f"DEBUG: Cache saved successfully")
+        # print(f"DEBUG: Cache saved successfully")
 
         return video_file_path, frames, timestamps
     except Exception as e:
-        print(f"DEBUG: Error in get_video_frames: {str(e)}")
-        print(f"DEBUG: Exception type: {type(e).__name__}")
-        print(f"DEBUG: Trying alternative video reading method...")
+        # print(f"DEBUG: Error in get_video_frames: {str(e)}")
+        # print(f"DEBUG: Exception type: {type(e).__name__}")
+        # print(f"DEBUG: Trying alternative video reading method...")
         
         # Try alternative method using OpenCV if torchvision fails
         try:
             import cv2
-            print(f"DEBUG: Attempting to read video with OpenCV...")
+            # print(f"DEBUG: Attempting to read video with OpenCV...")
             cap = cv2.VideoCapture(video_file_path)
             
             if not cap.isOpened():
@@ -306,7 +310,7 @@ def get_video_frames(video_file_path, num_frames=128, cache_dir=video_cache_dir)
             # Get video properties
             fps = cap.get(cv2.CAP_PROP_FPS)
             total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-            print(f"DEBUG: OpenCV - Total frames: {total_frames}, FPS: {fps}")
+            # print(f"DEBUG: OpenCV - Total frames: {total_frames}, FPS: {fps}")
             
             # Sample frames
             indices = np.linspace(0, total_frames - 1, num=num_frames, dtype=int)
@@ -320,7 +324,7 @@ def get_video_frames(video_file_path, num_frames=128, cache_dir=video_cache_dir)
                     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                     frames_list.append(frame_rgb)
                 else:
-                    print(f"DEBUG: Warning - Could not read frame {idx}")
+                    # print(f"DEBUG: Warning - Could not read frame {idx}")
                     # Use the last successfully read frame
                     if frames_list:
                         frames_list.append(frames_list[-1])
@@ -336,17 +340,17 @@ def get_video_frames(video_file_path, num_frames=128, cache_dir=video_cache_dir)
             frames = np.array(frames_list)
             timestamps = np.array([idx / fps for idx in indices])
             
-            print(f"DEBUG: OpenCV - Frames shape: {frames.shape}, timestamps shape: {timestamps.shape}")
-            
+            # print(f"DEBUG: OpenCV - Frames shape: {frames.shape}, timestamps shape: {timestamps.shape}")
+            # 
             # Save to cache
             np.save(frames_cache_file, frames)
             np.save(timestamps_cache_file, timestamps)
-            print(f"DEBUG: OpenCV fallback successful")
+            # print(f"DEBUG: OpenCV fallback successful")
             
             return video_file_path, frames, timestamps
             
         except Exception as cv_error:
-            print(f"DEBUG: OpenCV fallback also failed: {str(cv_error)}")
+            # print(f"DEBUG: OpenCV fallback also failed: {str(cv_error)}")
             traceback.print_exc()
             raise
 
@@ -371,12 +375,12 @@ def create_image_grid(images, num_columns=8):
 
 # TODO:
 def inference(video_path, prompt, max_new_tokens=None, max_pixels=602112, min_pixels=16 * 28 * 28):
-    print(f"DEBUG: inference called with video_path: {video_path}")
-    print(f"DEBUG: prompt length: {len(prompt)}")
+    # print(f"DEBUG: inference called with video_path: {video_path}")
+    # print(f"DEBUG: prompt length: {len(prompt)}")
     
     if max_new_tokens is None:
         max_new_tokens = MAX_NEW_TOKENS
-    print(f"DEBUG: max_new_tokens: {max_new_tokens}")
+    # print(f"DEBUG: max_new_tokens: {max_new_tokens}")
     
     messages = [
         {"role": "user", "content": [
@@ -391,10 +395,10 @@ def inference(video_path, prompt, max_new_tokens=None, max_pixels=602112, min_pi
             {"type": "text", "text": prompt},
         ]}
     ]
-    print(f"DEBUG: Messages created: {len(messages)} message(s)")
+    # print(f"DEBUG: Messages created: {len(messages)} message(s)")
 
     try:
-        print(f"DEBUG: Applying chat template...")
+        # print(f"DEBUG: Applying chat template...")
         inputs = processor.apply_chat_template(
             messages,
             tokenize=True,
@@ -402,33 +406,33 @@ def inference(video_path, prompt, max_new_tokens=None, max_pixels=602112, min_pi
             return_dict=True,
             return_tensors="pt"
         )
-        print(f"DEBUG: Chat template applied successfully")
+        # print(f"DEBUG: Chat template applied successfully")
         # print(f"DEBUG: Input keys: {inputs.keys()}")
-        print(f"DEBUG: Input shapes: {[(k, v.shape if hasattr(v, 'shape') else type(v)) for k, v in inputs.items()]}")
+        # print(f"DEBUG: Input shapes: {[(k, v.shape if hasattr(v, 'shape') else type(v)) for k, v in inputs.items()]}")
         
-        inputs = inputs.to(model.device)
-        print(f"DEBUG: Inputs moved to device: {model.device}")
+        # inputs = inputs.to(model.device)
+        # print(f"DEBUG: Inputs moved to device: {model.device}")
 
         # Inference: Generation of the output
-        print(f"DEBUG: Starting model generation...")
+        # print(f"DEBUG: Starting model generation...")
         generated_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
-        print(f"DEBUG: Generation completed, output shape: {generated_ids.shape}")
+        # print(f"DEBUG: Generation completed, output shape: {generated_ids.shape}")
         
         generated_ids_trimmed = [
             out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
         ]
-        print(f"DEBUG: Generated IDs trimmed, shape: {[ids.shape for ids in generated_ids_trimmed]}")
+        # print(f"DEBUG: Generated IDs trimmed, shape: {[ids.shape for ids in generated_ids_trimmed]}")
         
         output_text = processor.batch_decode(
             generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
         )
-        print(f"DEBUG: Output decoded, length: {len(output_text[0])}")
-        print(f"DEBUG: Output preview: {output_text[0][:200]}...")
+        # print(f"DEBUG: Output decoded, length: {len(output_text[0])}")
+        # print(f"DEBUG: Output preview: {output_text[0][:200]}...")
         
         return output_text[0]
     except Exception as e:
-        print(f"DEBUG: Error in inference: {str(e)}")
-        print(f"DEBUG: Exception type: {type(e).__name__}")
+        # print(f"DEBUG: Error in inference: {str(e)}")
+        # print(f"DEBUG: Exception type: {type(e).__name__}")
         traceback.print_exc()
         raise
 
@@ -750,12 +754,12 @@ def main():
             # If the file exists, process with Gemini
             # video_path = os.path.join(directory, file_name)
             print(f"Processing: {video_path}")
-            print(f"DEBUG: Video file exists: {os.path.exists(video_path)}")
-            print(f"DEBUG: Video file size: {os.path.getsize(video_path) if os.path.exists(video_path) else 'N/A'} bytes")
+            # print(f"DEBUG: Video file exists: {os.path.exists(video_path)}")
+            # print(f"DEBUG: Video file size: {os.path.getsize(video_path) if os.path.exists(video_path) else 'N/A'} bytes")
             try:
                 answer_dict = ExtractFeatureByVLM(video_path, file_name, (video_idx + 1, len(video_list)), log_file,
                                                   prompt_dict)
-                print(f"DEBUG: ExtractFeatureByVLM returned: {answer_dict}")
+                # print(f"DEBUG: ExtractFeatureByVLM returned: {answer_dict}")
                 # Build row with proper structure: feature, justification, start_time for each feature
                 for feature in prompt_dict.keys():
                     if feature in answer_dict:
@@ -768,7 +772,7 @@ def main():
                         # if feature not in features_no_time:
                         #     row_to_write.append(feature_data['start_time'])
                     else:
-                        print(f"DEBUG: Feature '{feature}' not found in answer_dict")
+                        # print(f"DEBUG: Feature '{feature}' not found in answer_dict")
                         row_to_write.extend(["fail", "fail"])
             except Exception as e:
                 print(f"ERROR: Exception processing video {file_name}: {str(e)}")

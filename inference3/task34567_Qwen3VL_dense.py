@@ -287,6 +287,58 @@ def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=6
     if "task4_feature_segments" in video_path:
         video_fps = TASK4_FPS
 
+    # messages = [
+    #     {"role": "user", "content": [
+    #         {
+    #             "type": "video",
+    #             "video": video_path,
+    #             "max_pixels": max_pixels,
+    #             "min_pixels": min_pixels,
+    #             "total_pixels": max_pixels * MAX_FRAMES,
+    #             "fps": video_fps,
+    #         },
+    #         {"type": "text", "text": query_prompt},
+    #     ]}
+    # ]
+    
+    # if "task7_seizurevideos" in video_path:
+    #     messages = [
+    #     {"role": "user", "content": [
+    #         {
+    #             "type": "video",
+    #             "video": video_path,
+    #             "nframes": MAX_FRAMES,  # <- 均匀抽取整段视频的 120 帧
+    #             "max_pixels": max_pixels,
+    #             "min_pixels": min_pixels,
+    #             "total_pixels": max_pixels * MAX_FRAMES,
+    #         },
+    #         {"type": "text", "text": query_prompt},
+    #     ]}
+    #     ]
+
+    # text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    # image_inputs, video_inputs, video_kwargs = process_vision_info([messages], return_video_kwargs=True)
+    # # print("video_kwargs:", video_kwargs, "messages:", messages)
+    
+    # # print("video input:", video_inputs[0].shape)
+    # num_frames, _, resized_height, resized_width = video_inputs[0].shape
+    # # print("num of video tokens:", int(num_frames / 2 * resized_height / 28 * resized_width / 28))
+    # if "task7_seizurevideos" in video_path:
+    #     inputs = processor(text=[text], images=image_inputs, videos=video_inputs, do_sample_frames=False, padding=True,return_tensors="pt").to('cuda')
+    # else:
+    #     # fps_inputs = 2 #video_kwargs['fps']
+    #     # inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_inputs, padding=True, return_tensors="pt").to('cuda')
+    #     def to_pyint(x):
+    #         if hasattr(x, 'item'):
+    #             return round(x.item())
+    #         return round(x)
+    #     fps_inputs = video_kwargs['fps']
+    #     fps_inputs = [to_pyint(x) for x in fps_inputs]
+    #     #print(f"not task7_seizurevideos: fps_inputs: {fps_inputs}")
+    #     # Pass the first element if processing a single video
+    #     fps_value = fps_inputs[0] if len(fps_inputs) == 1 else fps_inputs
+    #     inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_value, padding=True, return_tensors="pt").to('cuda')
+     
     messages = [
         {"role": "user", "content": [
             {
@@ -295,7 +347,7 @@ def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=6
                 "max_pixels": max_pixels,
                 "min_pixels": min_pixels,
                 "total_pixels": max_pixels * MAX_FRAMES,
-                "fps": video_fps,
+                "sample_fps": video_fps,
             },
             {"type": "text", "text": query_prompt},
         ]}
@@ -317,27 +369,18 @@ def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=6
         ]
 
     text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    image_inputs, video_inputs, video_kwargs = process_vision_info([messages], return_video_kwargs=True)
-    # print("video_kwargs:", video_kwargs, "messages:", messages)
-    
-    # print("video input:", video_inputs[0].shape)
-    num_frames, _, resized_height, resized_width = video_inputs[0].shape
-    # print("num of video tokens:", int(num_frames / 2 * resized_height / 28 * resized_width / 28))
-    if "task7_seizurevideos" in video_path:
-        inputs = processor(text=[text], images=image_inputs, videos=video_inputs, do_sample_frames=False, padding=True,return_tensors="pt").to('cuda')
+    image_inputs, video_inputs, video_kwargs = process_vision_info([messages], return_video_kwargs=True, 
+                                                                   #image_patch_size= 16,
+                                                                   return_video_metadata=True)
+    if video_inputs is not None:
+        video_inputs, video_metadatas = zip(*video_inputs)
+        video_inputs, video_metadatas = list(video_inputs), list(video_metadatas)
     else:
-        # fps_inputs = 2 #video_kwargs['fps']
-        # inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_inputs, padding=True, return_tensors="pt").to('cuda')
-        def to_pyint(x):
-            if hasattr(x, 'item'):
-                return round(x.item())
-            return round(x)
-        fps_inputs = video_kwargs['fps']
-        fps_inputs = [to_pyint(x) for x in fps_inputs]
-        #print(f"not task7_seizurevideos: fps_inputs: {fps_inputs}")
-        # Pass the first element if processing a single video
-        fps_value = fps_inputs[0] if len(fps_inputs) == 1 else fps_inputs
-        inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_value, padding=True, return_tensors="pt").to('cuda')
+        video_metadatas = None
+
+
+    inputs = processor(text=[text], images=image_inputs, videos=video_inputs, video_metadata=video_metadatas, **video_kwargs, do_resize=False, return_tensors="pt").to('cuda')
+
 
     output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
     generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]

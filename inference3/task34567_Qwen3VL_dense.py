@@ -326,8 +326,18 @@ def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=6
     if "task7_seizurevideos" in video_path:
         inputs = processor(text=[text], images=image_inputs, videos=video_inputs, do_sample_frames=False, padding=True,return_tensors="pt").to('cuda')
     else:
-        fps_inputs = 2 #video_kwargs['fps']
-        inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_inputs, padding=True, return_tensors="pt").to('cuda')
+        # fps_inputs = 2 #video_kwargs['fps']
+        # inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_inputs, padding=True, return_tensors="pt").to('cuda')
+        def to_pyint(x):
+            if hasattr(x, 'item'):
+                return round(x.item())
+            return round(x)
+        fps_inputs = video_kwargs['fps']
+        fps_inputs = [to_pyint(x) for x in fps_inputs]
+        #print(f"not task7_seizurevideos: fps_inputs: {fps_inputs}")
+        # Pass the first element if processing a single video
+        fps_value = fps_inputs[0] if len(fps_inputs) == 1 else fps_inputs
+        inputs = processor(text=[text], images=image_inputs, videos=video_inputs, fps=fps_value, padding=True, return_tensors="pt").to('cuda')
 
     output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
     generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]

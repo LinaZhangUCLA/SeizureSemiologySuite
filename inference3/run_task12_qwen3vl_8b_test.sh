@@ -33,7 +33,7 @@ echo "Conda environment qwen3vl_moe activated."
 python task12_Qwen3-VL-32B-Instruct.py \
     --gpu 2 \
     --videos_range 1-2 \
-    --output_dir /home/lina/SeizureSemiologyBench/qwen3vl8b1024 \
+    --output_dir /home/lina/SeizureSemiologyBench/qwen3vl8b10241 \
     --model_name Qwen/Qwen3-VL-8B-Instruct \
     --dataset_dir /mnt/SSD3/lina/ucla2/ssbench/task1256_segment_60s \
     --cache_dir /mnt/SSD3/lina/cache 

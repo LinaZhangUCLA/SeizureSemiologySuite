@@ -1,12 +1,19 @@
 #!/bin/bash
 
+
+
+VERSION_PREFIX="qwen_2.5_omni_task_1_7_sft"
+TIMESTAMP="$(date +%Y%m%d%H%M%S)"
+VERSION_NAME="${VERSION_PREFIX}_${TIMESTAMP}"
+
+
 # todo: data_path
-VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251024'
-VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251025'
+# VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251024'
+# VERSION_NAME='qwen_2.5_omni_task_1_7_sft_20251025'
 LOG_PATH="./run_logs/${VERSION_NAME}.log"
 
 # todo
-BASE_MODEL='./ckpts/init_models/Qwen2.5-Omni-7B'
+BASE_MODEL='./ckpts/init_models/Qwen2.5-Omni-3B'
 #BASE_MODEL= 'Qwen/Qwen2.5-Omni-7B'
 
 # todo: data_path
@@ -19,7 +26,7 @@ MODEL_SAVE_PATH='./ckpts/trained_models/'${VERSION_NAME}
 mkdir -p ./run_logs/
 
 # --model_type "qwen2_5" \
-CUDA_VISIBLE_DEVICES=0,1,2,3 \
+CUDA_VISIBLE_DEVICES=1,2,3 \
 VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 \
 swift sft \
       --train_type full \
@@ -37,7 +44,7 @@ swift sft \
       --save_steps 200 \
       --save_total_limit 5 \
       --logging_steps 1 \
-      --max_length 16384 \
+      --max_length 32768 \
       --warmup_ratio 0.05 \
       --dataloader_num_workers 4 \
       --model $BASE_MODEL \

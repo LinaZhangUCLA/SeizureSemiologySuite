@@ -5,6 +5,9 @@
 conda create --name qwen3vl_moe  --clone qwenvl
 conda activate qwen3vl_moe
 pip install transformers==4.57
+
+#if run task34567 need this package, for task12 no need this package
+pip install qwen-vl-utils==0.0.14
 ```
 
 

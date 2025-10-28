@@ -1,11 +1,13 @@
 # dataset
 dataset/videos
-
+cache_frames
 # ckpts
 ckpts/
 
 # log
 run_logs
+swanlog
 
 # jungang-dev
 git-jungang.sh
+fintune/scripts/debug

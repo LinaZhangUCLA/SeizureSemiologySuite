@@ -4,8 +4,6 @@
 # from torchvision.io import read_video    # pip install torchvision
 
 import os
-# pytorch cuda allocator memory allocation
-os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 import json
 from torch.utils.data import dataset
 from tqdm import tqdm
@@ -35,8 +33,8 @@ def parse_arguments():
                        help='GPU device ID(s) to use (default: 0). Can be a single number or comma-separated numbers (e.g., 7 or 0,1,2)')
 
     # Model settings
-    parser.add_argument('--model_name', type=str, default='Qwen/Qwen3-VL-30B-A3B-Instruct',
-                       help='Model name to use (default: Qwen/Qwen3-VL-30B-A3B-Instruct)')
+    parser.add_argument('--model_name', type=str, default='Qwen/Qwen3-VL-8B-Instruct',
+                       help='Model name to use (default: Qwen/Qwen3-VL-8B-Instruct)')
 
 
       # Data settings
@@ -185,12 +183,12 @@ os.environ['HF_HOME'] = hf_cache_dir
 os.environ['MODELSCOPE_CACHE'] = modelscope_cache_dir
 
 import torch
-from transformers import Qwen3VLMoeForConditionalGeneration, AutoProcessor
+from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
 from qwen_vl_utils import process_vision_info
 from peft import PeftModel
 
 # Load base model first
-model = Qwen3VLMoeForConditionalGeneration.from_pretrained(
+model = Qwen3VLForConditionalGeneration.from_pretrained(
     model_name, 
     torch_dtype=torch.bfloat16, 
     # attn_implementation="flash_attention_2",
@@ -280,6 +278,7 @@ def create_image_grid(images, num_columns=8):
         grid_image.paste(image, position)
 
     return grid_image
+
 
 def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=602112, min_pixels=16 * 28 * 28):
     if max_new_tokens is None:

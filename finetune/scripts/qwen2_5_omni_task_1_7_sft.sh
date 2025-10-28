@@ -58,5 +58,5 @@ swift sft \
   --report_to 'swanlab' \
   --enable_channel_loss 'True' \
   --swanlab_project 'swift-robot' \
-  --custom_register_path ./fintune/utils/custom_sample/dataset.py \
+  --custom_register_path ./finetune/utils/custom_sample/dataset.py \
   --output_dir $MODEL_SAVE_PATH > $LOG_PATH 2>&1 &

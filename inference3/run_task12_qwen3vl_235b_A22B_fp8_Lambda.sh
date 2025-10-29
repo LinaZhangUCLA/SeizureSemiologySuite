@@ -28,7 +28,7 @@ echo "Conda environment qwen3vl_moe activated."
 # video_range 1-2314  eg.1-1000, 1001-2000, 2001-2314
 
 # Run the inference script
-python /home/ubuntu/SeizureSemiologyBench/inference3/task12_Qwen3-VL-30B-A3B-Instruct.py \
+python /home/ubuntu/SeizureSemiologyBench/inference3/task12_Qwen3-VL-235B-A22B-Instruct-fp8.py \
     --gpu 0,1,2,3,4,5,6,7 \
     --videos_range 1-2 \
     --output_dir /home/ubuntu/seizure_local/output \

@@ -190,22 +190,36 @@ from qwen_vl_utils import process_vision_info
 from peft import PeftModel
 
 # Load base model first
-model = Qwen3VLMoeForConditionalGeneration.from_pretrained(
-    model_name, 
-    torch_dtype=torch.bfloat16, 
-    # attn_implementation="flash_attention_2",
-    attn_implementation="sdpa",
-    device_map="auto"
+# model = Qwen3VLMoeForConditionalGeneration.from_pretrained(
+#     model_name, 
+#     torch_dtype='auto', 
+#     # attn_implementation="flash_attention_2",
+#     attn_implementation="sdpa",
+#     device_map="auto"
     
-)
+# )
 
 # Move model to GPU
 # model = model.to('cuda')
 
 
 # Load processor from the base model name, not the checkpoint
-processor = AutoProcessor.from_pretrained(model_name, cache_dir=hf_cache_dir)
+# processor = AutoProcessor.from_pretrained(model_name, cache_dir=hf_cache_dir)
 
+from transformers import AutoModelForImageTextToText, AutoProcessor
+from qwen_vl_utils import process_vision_info
+
+model = AutoModelForImageTextToText.from_pretrained(
+    model_name, dtype="auto", device_map="auto"
+)
+model.tie_weights()
+# processor = AutoProcessor.from_pretrained("Qwen/Qwen3-VL-235B-A22B-Instruct")
+
+from qwen_vl_utils import process_vision_info
+from transformers import AutoProcessor
+
+checkpoint_path = "Qwen/Qwen3-VL-235B-A22B-Instruct-FP8"
+processor = AutoProcessor.from_pretrained(checkpoint_path)
 
 import os
 import hashlib

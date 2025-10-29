@@ -3,7 +3,6 @@
 # from transformers import AutoModel, AutoTokenizer
 # from torchvision.io import read_video    # pip install torchvision
 
-from ast import Load
 import os
 import json
 from torch.utils.data import dataset
@@ -14,8 +13,8 @@ import argparse
 import pandas as pd
 
 
-report_dict = pd.read_csv("./../result/ground_truth/task6_report_annotation.csv", usecols=["file_name","report"], dtype=str, encoding="utf-8-sig")\
-      .set_index("file_name")["report"].to_dict()
+report_dict = pd.read_csv("/home/jiarui/result/ground_truth/task6_report_annotation.csv", usecols=["file_name","report"], dtype=str, encoding="utf-8-sig")\
+       .set_index("file_name")["report"].to_dict()
 print(report_dict)
 
 LOG = True
@@ -27,15 +26,15 @@ default_model_cache_dir = './model_cache'
 default_output_dir = './output'
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description='Seizure Video Feature Extraction using Qwen2.5-VL')
+    parser = argparse.ArgumentParser(description='Seizure Video Feature Extraction using Qwen3-Omni-30B-A3B-Instruct')
     
     # GPU settings
     parser.add_argument('--gpu', type=str, default='0,1', 
                        help='GPU device ID(s) to use (default: 0). Can be a single number or comma-separated numbers (e.g., 7 or 0,1,2)')
 
     # Model settings
-    parser.add_argument('--model_name', type=str, default='Qwen/Qwen3-VL-8B-Instruct',
-                       help='Model name to use (default: Qwen/Qwen3-VL-8B-Instruct)')
+    parser.add_argument('--model_name', type=str, default='Qwen/Qwen3-Omni-30B-A3B-Instruct',
+                       help='Model name to use (default: Qwen/Qwen3-Omni-30B-A3B-Instruct)')
 
 
       # Data settings
@@ -161,7 +160,7 @@ MAX_RETRIES = 10
 
 import time
 import traceback
-import pandas as pdƒ
+import pandas as pd
 import csv
 import numpy as np
 # from lmdeploy import pipeline, TurbomindEngineConfig
@@ -184,26 +183,18 @@ os.environ['HF_HOME'] = hf_cache_dir
 os.environ['MODELSCOPE_CACHE'] = modelscope_cache_dir
 
 import torch
-from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
-from qwen_vl_utils import process_vision_info
+from transformers import Qwen3OmniMoeForConditionalGeneration, Qwen3OmniMoeProcessor
+from qwen_omni_utils import process_mm_info
 from peft import PeftModel
 
 # Load base model first
-model = Qwen3VLForConditionalGeneration.from_pretrained(
-    model_name, 
-    torch_dtype=torch.bfloat16, 
-    # attn_implementation="flash_attention_2",
+model = Qwen3OmniMoeForConditionalGeneration.from_pretrained(
+    model_name,
+    torch_dtype=torch.bfloat16,
     attn_implementation="sdpa",
-    device_map="auto"
-    
+    device_map="auto",
 )
-
-# Move model to GPU
-# model = model.to('cuda')
-
-
-# Load processor from the base model name, not the checkpoint
-processor = AutoProcessor.from_pretrained(model_name, cache_dir=hf_cache_dir)
+processor = Qwen3OmniMoeProcessor.from_pretrained(model_name, cache_dir=hf_cache_dir)
 
 
 import os
@@ -280,7 +271,6 @@ def create_image_grid(images, num_columns=8):
 
     return grid_image
 
-
 def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=602112, min_pixels=16 * 28 * 28):
     if max_new_tokens is None:
         max_new_tokens = MAX_NEW_TOKENS
@@ -319,19 +309,25 @@ def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=6
         ]
 
     text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    image_inputs, video_inputs, video_kwargs = process_vision_info([messages], return_video_kwargs=True, 
+    audios, images, videos = process_mm_info(messages, use_audio_in_video=True)
+    # image_inputs, video_inputs, video_kwargs = process_vision_info(messages, return_video_kwargs=True,
                                                                    #image_patch_size= 16,
-                                                                   return_video_metadata=True)
-    if video_inputs is not None:
-        video_inputs, video_metadatas = zip(*video_inputs)
-        video_inputs, video_metadatas = list(video_inputs), list(video_metadatas)
-    else:
-        video_metadatas = None
+                                                                #    return_video_metadata=True)
+    # if video_inputs is not None:
+    #     video_inputs, video_metadatas = zip(*video_inputs)
+    #     video_inputs, video_metadatas = list(video_inputs), list(video_metadatas)
+    # else:
+    #     video_metadatas = None
+    print("audios from process_mm_info:", type(audios), getattr(audios, "shape", None) or (len(audios) if hasattr(audios, "__len__") else None))
+    inputs = processor(
+        text=[text],
+        audio=audios, images=images, videos=videos,
+        padding=True, return_tensors="pt",
+        use_audio_in_video=True,
+    ).to(device=model.device, dtype=torch.bfloat16)
+    # inputs = processor(text=[text], images=image_inputs, videos=video_inputs, video_metadata=video_metadatas, **video_kwargs, return_tensors="pt").to('cuda')
 
-
-    inputs = processor(text=[text], images=image_inputs, videos=video_inputs, video_metadata=video_metadatas, **video_kwargs, return_tensors="pt").to('cuda')
-
-    output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
+    output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens, use_audio_in_video=True, return_audio=False)
     generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]
     raw_output = processor.batch_decode(generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True)
     # print("raw_output:", raw_output[0])
@@ -693,12 +689,12 @@ def main():
     
     # =============================================== task3=============================================================== #
     try:
-        # Get all task4 clips
+         # Get all task4 clips
         task3_HT_clip_fps = get_fp_list(task3_HT_dataset_dir)
         task3_AM_clip_fps = get_fp_list(task3_AM_dataset_dir)
         task3_L_clip_fps = get_fp_list(task3_L_dataset_dir)
 
-        # Initialize task3 CSV files
+    #     # Initialize task3 CSV files
         if not os.path.exists(task3_HT_result_csv_fp):
             with open(task3_HT_result_csv_fp, 'w') as f:
                 f.write("video_name,head_turning_direction\n")
@@ -713,7 +709,7 @@ def main():
 
     #     # Process task4 videos
         if '7' in args.gpu:
-    #         # Process head turning videos
+            # Process head turning videos
             task3_HT_videos_range = validate_videos_range(task3_HT_clip_fps, task3_HT_videos_range)
             for video_clip_fp in tqdm(task3_HT_clip_fps[:], desc="Processing Task 3 Head Turning"):
                 video_name = video_clip_fp.split('/')[-1]
@@ -731,8 +727,8 @@ def main():
                     print(f"Error processing video {video_name} for head turning: {e}")
                     with open(task3_HT_result_csv_fp, 'a') as f:
                         f.write(f"{video_name},N/A\n")
-                #break
-    #         # Process arm movement videos
+                break
+        # Process arm movement videos
             task3_AM_videos_range = validate_videos_range(task3_AM_clip_fps, task3_AM_videos_range)
             for video_clip_fp in tqdm(task3_AM_clip_fps[:], desc="Processing Task 3 Arm Movement"):
                 video_name = video_clip_fp.split('/')[-1]
@@ -749,8 +745,8 @@ def main():
                     print(f"Error processing video {video_name} for arm movement: {e}")
                     with open(task3_AM_result_csv_fp, 'a') as f:
                         f.write(f"{video_name},N/A\n")
-                #break
-    #         # Process onset body part videos
+                break
+            # Process onset body part videos
             task3_L_videos_range = validate_videos_range(task3_L_clip_fps, task3_AM_videos_range)
             for video_clip_fp in tqdm(task3_L_clip_fps[:], desc="Processing Task 3 Onset Body Part"):
                 video_name = video_clip_fp.split('/')[-1]
@@ -768,7 +764,7 @@ def main():
                     print(f"Error processing video {video_name} for onset body part: {e}")
                     with open(task3_L_result_csv_fp, 'a') as f:
                         f.write(f"{video_name},N/A\n")
-                #break
+                break
 
     except Exception as e:
         print(f"Error in Task 3 processing: {e}")
@@ -850,7 +846,7 @@ def main():
                         csv_f.write(f"{video_name},{feature},N/A\n")
                         csv_f.flush()    
                         log_f.write(f"Error processing video {video_name} for feature {feature}: {e}\n")
-                    #break
+                    break
         print(f"Processing is complete. Results are in '{task4_result_csv_fp}'.")
 
     except Exception as e:
@@ -865,7 +861,7 @@ def main():
                     f.write(header + "\n")
 
         init_csv(task5_result_csv_fp, "video_name,event_sequence")
-        #Load already processed video names to avoid re-reading file each time
+        # Load already processed video names to avoid re-reading file each time
         def load_processed_videos(csv_fp):
             if not os.path.exists(csv_fp):
                 return set()
@@ -873,7 +869,7 @@ def main():
                 return {line.split(',')[0] for line in f.readlines()[1:] if line.strip()}
 
         task5_processed = load_processed_videos(task5_result_csv_fp)
-        task5_videos_range = validate_videos_range(task5_clip_fps, videos_range)
+        task5_videos_range = validate_videos_range(task5_clip_fps, videos_range)   
         with open(task5_result_csv_fp, 'a') as csv_f, open(os.path.join(task5_log_dir, "task5.log"), 'a') as log_f:
             for video_clip_fp in tqdm(task5_clip_fps[task5_videos_range[0]-1 : task5_videos_range[1]], desc="Processing Task 5"):
                 video_clip_name = video_clip_fp.split('/')[-1]
@@ -881,22 +877,22 @@ def main():
                 if video_clip_name in task5_processed:
                     print(f"Video {video_clip_name} already processed for both tasks. Skipping.")
                     continue
-                try:
+                try: 
                     raw_output5 = inference(model, video_clip_fp, get_task5_prompt())
-                    event_sequence = '\"' + raw_output5 + '\"'
+                    event_sequence = '\"' + raw_output5 + '\"'              
                     csv_f.write(f"{video_clip_name},{event_sequence}\n")
-                    csv_f.flush()
-                    task5_processed.add(video_clip_name)
+                    csv_f.flush() 
+                    task5_processed.add(video_clip_name)                                       
                 except Exception as e:
                     print(f"Error processing video {video_clip_fp}: {e}")
                     csv_f.write(f"{video_clip_name},\"fail\"\n")
                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
-                    #break
-        print(f"Task 5 results are in: {task5_result_csv_fp}")  
+                break
+        print(f"Task 5 results are in: {task5_result_csv_fp}")
 
     except Exception as e:
         print(f"Error in Task 5 processing: {e}")
-        traceback.print_exc()    
+        traceback.print_exc()
 
     # =============================================== task6 =============================================================== #
     try:
@@ -922,7 +918,7 @@ def main():
                     print(f"Error processing video {video_clip_fp}: {e}")
                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
                     csv_f.write(f"{video_clip_name},\"fail\"\n")
-                #break
+                break
         print(f"Task 6 results are in: {task6_result_csv_fp}")
     except Exception as e:
         print(f"Error in Task 6 processing: {e}")
@@ -980,7 +976,7 @@ def main():
                     print(f"Error processing video {video_clip_fp}: {e}")
                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
                     csv_f.write(f"{video_clip_name},\"fail\",\"fail\"\n")
-                #break
+                break
         print(f"Task 7 results are in: {task7_result_csv_fp}")
     except Exception as e:
         print(f"Error in Task 7 processing: {e}")

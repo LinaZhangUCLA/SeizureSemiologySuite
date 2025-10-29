@@ -74,8 +74,8 @@ task3_HT_dataset_dir = os.path.join(args.dataset_dir, "task3_head_turning")
 task3_AM_dataset_dir = os.path.join(args.dataset_dir, "task3_arm_movement")
 task3_L_dataset_dir = os.path.join(args.dataset_dir, "task3_onset_body_part")
 task4_dataset_dir = os.path.join(args.dataset_dir, "task4_feature_segments") 
-task5_dataset_dir = os.path.join(args.dataset_dir, "task1256_segment_30s")
-task6_dataset_dir = os.path.join(args.dataset_dir, "task1256_segment_30s")
+task5_dataset_dir = os.path.join(args.dataset_dir, "task1256_segment_60s")
+task6_dataset_dir = os.path.join(args.dataset_dir, "task1256_segment_60s")
 task7_dataset_dir = os.path.join(args.dataset_dir, "task7_seizurevideos")
 
 # Feature definitions dictionary
@@ -151,9 +151,9 @@ for dir_path in [task3_log_dir, task4_log_dir, task5_log_dir, task6_log_dir]:
 # 360p:  (640, 360)
 # 240p:  (426, 240)
 ################################################################################################
-MAX_FRAMES = 60
+MAX_FRAMES = 120
 FPS = 2
-TASK4_FPS = 1
+TASK4_FPS = 2
 MAX_NEW_TOKENS = 2048
 MAX_RETRIES = 10
 

@@ -921,7 +921,7 @@ def main():
                     print(f"Error processing video {video_clip_fp}: {e}")
                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
                     csv_f.write(f"{video_clip_name},\"fail\"\n")
-                break
+                #break
         print(f"Task 6 results are in: {task6_result_csv_fp}")
     except Exception as e:
         print(f"Error in Task 6 processing: {e}")
@@ -979,7 +979,7 @@ def main():
                     print(f"Error processing video {video_clip_fp}: {e}")
                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
                     csv_f.write(f"{video_clip_name},\"fail\",\"fail\"\n")
-                break
+                #break
         print(f"Task 7 results are in: {task7_result_csv_fp}")
     except Exception as e:
         print(f"Error in Task 7 processing: {e}")

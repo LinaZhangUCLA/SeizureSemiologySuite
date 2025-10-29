@@ -849,7 +849,7 @@ def main():
                         csv_f.write(f"{video_name},{feature},N/A\n")
                         csv_f.flush()    
                         log_f.write(f"Error processing video {video_name} for feature {feature}: {e}\n")
-                    break
+                    #break
         print(f"Processing is complete. Results are in '{task4_result_csv_fp}'.")
 
     except Exception as e:

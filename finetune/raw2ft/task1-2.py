@@ -5,10 +5,10 @@ import argparse
 from datetime import datetime
 
 # ---------- 路径配置 ----------
-INPUT_DIR = "../raw_data/finetune_featrue_videos.csv"
+INPUT_DIR = "../rawdata/task12_finetune_featrue_videos.csv"
 OUTPUT_DIR = "../ft_data"
-VIDEO_BASE_PATH = "/mnt/SSD3/lina/finetune_videos"
-# VIDEO_BASE_PATH = "./dataset/videos"
+#VIDEO_BASE_PATH = "/mnt/SSD3/lina/finetune_videos"
+VIDEO_BASE_PATH = "./dataset/videos"
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
 # ------------------------------
 
@@ -89,16 +89,14 @@ def get_task1_feature_prompt(feature: str):
         return '''
         Does the patient display repetitive, rhythmic, anteroposterior (forward-and-backward) movements of the hips? Answer 'yes' or 'no' and provide a justification for the answer. Respond with exactly one JSON object in the format { \"answer\": \"...\", \"justification\": \"...\" } and do not include any extra text outside of the JSON.
         '''.strip()
-    if feature == 'intensity_evolution':
-        return '''
-        Please determine if the intensity of the seizure changes over time. Answer with 'yes' or 'no' and provide a justification for the answer. Respond with exactly one JSON object in the format { \"answer\": \"...\", \"justification\": \"...\" } and do not include any extra text outside of the JSON.
-        '''.strip()
     if feature == 'full_body_shaking':
         return '''
         Does the patient experience shaking of the entire body including arms, legs, torso? Answer with 'yes' or 'no' and provide a justification for the answer. Respond with exactly one JSON object in the format { \"answer\": \"...\", \"justification\": \"...\" } and do not include any extra text outside of the JSON.
         '''.strip()
-
-
+    if feature == 'verbal_responsiveness':    
+        return '''
+        If the patient is addressed verbally by a different person, did they respond verbally in a coherent manner? Answer 'yes' or 'no'. If the patient is not addressed verbally by a different person, then the answer should be 'NA'.Give an answer and provide a justification for the answer. Respond with exactly one JSON object in the format { \"answer\": \"...\", \"justification\": \"...\" } and do not include any extra text outside of the JSON.
+        '''.strip()
 
 
 def seconds_to_mmss(seconds_str: str):
@@ -134,7 +132,7 @@ def process_csv(csv_path, video_base_path):
 
             patient_id = file_name.split("@")[0]
             video_id = os.path.splitext(file_name)[0]
-            video_path = os.path.join(video_base_path, "features")
+            video_path = os.path.join(video_base_path, "task12_features")
             video_path = os.path.join(video_path, feature)
             video_path = os.path.join(video_path, file_name)
 
@@ -176,7 +174,7 @@ def main():
 
     samples = process_csv(args.input_dir, args.video_base_path)
     all_samples.extend(samples)
-
+    print("total sample num: ", len(all_samples))
     out_path = os.path.join(args.output_dir, f"ft_task_1-2_{args.date}.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(all_samples, f, ensure_ascii=False, indent=2)

@@ -1,11 +1,15 @@
 import json
-
+from datetime import datetime
 # 输入和输出文件名
 # input_file = "../../dataset/sft_merge_2025-10-26_swift.jsonl"  # 原始 JSONL 文件
 # output_file = "../../dataset/grpo_merge_2025-10-26.jsonl"  # 目标 JSONL 文件
 
-input_file = "sft_merge_2025-10-26_swift.jsonl"  # 原始 JSONL 文件
-output_file = "grpo_merge_2025-10-26_swift.jsonl"  # 目标 JSONL 文件
+DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
+DEFAULT_DATE = '2025-10-28'
+
+
+input_file = f"../dataset/sft_merge_{DEFAULT_DATE}_swift_train.jsonl"  # 原始 JSONL 文件
+output_file = f"../dataset/grpo_merge_{DEFAULT_DATE}_swift_train.jsonl"  # 目标 JSONL 文件
 
 seen_tasks = set()  # 用于记录已经处理过的 task
 

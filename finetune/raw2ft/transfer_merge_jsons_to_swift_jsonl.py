@@ -9,10 +9,25 @@
 import json
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
+from datetime import datetime
 
-IN_PATH  = Path("./dataset/sft_merge_2025-10-26.json")
-OUT_JSON = Path("./dataset/sft_merge_2025-10-26_swift.json")
-OUT_JSONL= Path("./dataset/sft_merge_2025-10-26_swift.jsonl")
+#!/usr/bin/env python3
+import sys
+import pandas as pd
+
+
+path = "../datasplit/fold0_val.csv"
+df = pd.read_csv(path)  
+uniq_patitent_list = sorted(df["patient_id"].dropna().astype(str).unique())
+print(len(uniq_patitent_list))
+
+
+DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
+DEFAULT_DATE = '2025-10-28'
+
+IN_PATH  = Path(f"../dataset/sft_merge_{DEFAULT_DATE}.json")
+OUT_JSON = Path(f"../dataset/sft_merge_{DEFAULT_DATE}_swift_train.json")
+OUT_JSONL= Path(f"../dataset/sft_merge_{DEFAULT_DATE}_swift_train.jsonl")
 
 def load_mixed_json(p: Path) -> Iterable[Dict[str, Any]]:
     """Load a file that may be a JSON array, single JSON object, or JSONL."""
@@ -22,7 +37,7 @@ def load_mixed_json(p: Path) -> Iterable[Dict[str, Any]]:
     try:
         obj = json.loads(text)
         if isinstance(obj, list):
-            return obj
+            return ob
         if isinstance(obj, dict):
             return [obj]
         return []
@@ -127,6 +142,10 @@ def main() -> None:
     converted: List[Dict[str, Any]] = []
     dropped = 0
     for r in records:
+        #print("patientid: ",r.get("patient_id"))
+        if r.get("patient_id") in uniq_patitent_list:
+            dropped += 1
+            continue
         msgs = normalize_messages(r)
         if not msgs:
             dropped += 1
@@ -142,11 +161,11 @@ def main() -> None:
         out_item["messages"] = msgs
         out_item["videos"] = videos
         out_item["images"] = images
-
+        #print(out_item)
         converted.append(out_item)
-
+        
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
-    # JSON array
+    #JSON array
     OUT_JSON.write_text(json.dumps(converted, ensure_ascii=False, indent=2), encoding="utf-8")
     # JSONL
     with OUT_JSONL.open("w", encoding="utf-8") as f:

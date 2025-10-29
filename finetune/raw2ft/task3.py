@@ -5,10 +5,10 @@ import argparse
 from datetime import datetime
 
 # ---------- 路径配置 ----------
-INPUT_DIR = "../raw_data/task3_annotation.csv"
+INPUT_DIR = "../rawdata/task3_spatial_annotation.csv"
 OUTPUT_DIR = "../ft_data"
-VIDEO_BASE_PATH = "/mnt/SSD3/lina/finetune_videos"
-# VIDEO_BASE_PATH = "./dataset/videos"
+#VIDEO_BASE_PATH = "/mnt/SSD3/lina/finetune_videos"
+VIDEO_BASE_PATH = "./dataset/videos"
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
 # ------------------------------
 
@@ -78,7 +78,7 @@ def process_csv(csv_path, video_base_path):
                 elif feature == "left_right_head_turning":
                     video_path = os.path.join(video_base_path, "task3_head_turning")
                 elif feature == "body_region_onset":
-                    video_path = os.path.join(video_base_path, "body_region_onset")
+                    video_path = os.path.join(video_base_path, "task3_onset_body_part")
                 video_path = os.path.join(video_path, file_name)
 
 
@@ -119,7 +119,7 @@ def main():
 
     samples = process_csv(args.input_dir, args.video_base_path)
     all_samples.extend(samples)
-
+    print("total sample num: ", len(all_samples))
     out_path = os.path.join(args.output_dir, f"ft_task_3_{args.date}.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(all_samples, f, ensure_ascii=False, indent=2)

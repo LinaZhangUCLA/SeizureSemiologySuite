@@ -9,11 +9,11 @@ from pathlib import Path
 from datetime import datetime
 
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
-output_path = Path(f"./dataset/ft_data/ft_task_7_{DEFAULT_DATE}.json")
+output_path = Path(f"../ft_data/ft_task_7_{DEFAULT_DATE}.json")
 
 # 文件路径
-csv_esnes = Path("./fintune/data/task7_esnes_annotation.csv")
-csv_gt = Path("./result/ground_truth/task7_annotation.csv")
+csv_esnes = Path("../rawdata/task7_esnes_annotation.csv")
+# csv_gt = Path("../result/ground_truth/task7_annotation.csv")
 
 def load_csv(path):
     with open(path, "r", encoding="utf-8") as f:
@@ -28,13 +28,13 @@ def make_video_id(filename: str):
 
 # 加载CSV
 records_a = load_csv(csv_esnes)  
-records_b = load_csv(csv_gt)     # 只有 label
+# records_b = load_csv(csv_gt)     # 只有 label
 
 json_records = []
 
 # ---------- (1) Type-A ----------
 for row in records_a:
-    print(row)
+    #print(row)
     file_name = row["\ufefffile_name"]
     label = row["label"].strip()
     report = row["report"].strip()
@@ -67,11 +67,11 @@ for row in records_a:
     json_records.append(entry)
 
 # ---------- (2) Type-B ----------
-for row in records_b:
-    file_name = row["file_name"]
-    label = row["label"].strip()
-    # 找到对应报告
-    report_match = next((r["report"] for r in records_a if r["\ufefffile_name"] == file_name), "")
+# for row in records_b:
+#     file_name = row["file_name"]
+#     label = row["label"].strip()
+#     # 找到对应报告
+#     report_match = next((r["report"] for r in records_a if r["\ufefffile_name"] == file_name), "")
 
     entry = {
         "patient_id": make_patient_id(file_name),
@@ -94,7 +94,7 @@ for row in records_b:
             {
                 "role": "assistant",
                 "content": json.dumps(
-                    {"answer": label, "description": report_match},
+                    {"answer": label, "description": report},
                     ensure_ascii=False
                 )
             }

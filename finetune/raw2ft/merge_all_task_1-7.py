@@ -11,8 +11,8 @@ from typing import Any, Dict, Iterable, List, Tuple
 from datetime import datetime
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
 
-SRC_DIR = Path("./data_processing/ft_data")
-OUT_PATH = Path(f"./dataset/sft_merge_{DEFAULT_DATE}.json")
+SRC_DIR = Path("../ft_data")
+OUT_PATH = Path(f"../dataset/sft_merge_{DEFAULT_DATE}.json")
 DEDUPE = False  # change to True if you want to deduplicate
 
 def load_json_file(p: Path) -> Iterable[Dict[str, Any]]:

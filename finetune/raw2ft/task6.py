@@ -26,14 +26,14 @@ def get_task6_prompt():
     Output ONLY the paragraph (no lists, no headers, no JSON).
     """
 
-input_csv = "./fintune/data/task6_segmented_descriptions.csv"
-output_path = Path(f"./dataset/ft_data/ft_task_6_{DEFAULT_DATE}.json")
+input_csv = "../rawdata/task6_segmented_descriptions.csv"
+output_path = Path(f"../ft_data/ft_task_6_{DEFAULT_DATE}.json")
 
 records = []
 with open(input_csv, "r", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
-        print(row)
+        #print(row)
         video_filename = row["\ufefffile_name"]
         description = row["description"]
 

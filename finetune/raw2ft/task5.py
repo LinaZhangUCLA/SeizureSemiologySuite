@@ -21,8 +21,8 @@ def get_task5_prompt():
     '''
 
 # 输入与输出路径
-csv_path = Path("./fintune/data/task5_segment_sequence_annotation.csv")
-output_path = Path(f"./dataset/ft_data/ft_task_5_{DEFAULT_DATE}.json")
+csv_path = Path("../rawdata/task5_segment_sequence_annotation.csv")
+output_path = Path(f"../ft_data/ft_task_5_{DEFAULT_DATE}.json")
 
 # 定义症状关键词，用于自动提取 ground truth
 SYMPTOMS = [

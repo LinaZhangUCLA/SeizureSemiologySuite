@@ -11,14 +11,15 @@ import argparse
 from datetime import datetime
 
 # ---------- 路径配置 ----------
-INPUT_DIR = "./fintune/data/task4_groundtruth"
-OUTPUT_DIR = "./dataset/ft_data"
+INPUT_DIR = "../rawdata/task4_groundtruth"
+OUTPUT_DIR = "../ft_data"
 VIDEO_BASE_PATH = "./dataset/videos/task4_time"
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
 # ------------------------------
 
 # ---------- feature definitions ----------
 feature_definitions = {
+   'blank_stare': "patient exhibit a blank stare ",
    'arm_flexion': "flex their arms or arm at the elbows for at least a few video frames.",
    'arms_move_simultaneously': "move their arms approximately at the same time.",
    'occur_during_sleep': "are sleeping at the beginning of the video.",
@@ -137,7 +138,7 @@ def main():
             csv_path = os.path.join(args.input_dir, fn)
             samples = process_csv(csv_path, args.video_base_path)
             all_samples.extend(samples)
-
+    print("total sample num: ", len(all_samples))
     out_path = os.path.join(args.output_dir, f"ft_task_4_{args.date}.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(all_samples, f, ensure_ascii=False, indent=2)

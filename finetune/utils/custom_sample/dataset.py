@@ -12,7 +12,7 @@ from swift.llm.dataset.register import DatasetMeta, register_dataset
 
 # TASK_DATASET = os.environ.get("TASK_DATASET", "./dataset/ft_data/ft_task_5_2025-10-23.jsonl")
 
-TASK_DATASET = os.environ.get("TASK_DATASET", "./dataset/sft_merge_2025-10-26_swift.jsonl")
+TASK_DATASET = os.environ.get("TASK_DATASET", "'../dataset/sft_merge_2025-10-28_swift_train.jsonl'")
 
 # ===================== 工具函数 =====================
 def _abspath(p: str) -> str:

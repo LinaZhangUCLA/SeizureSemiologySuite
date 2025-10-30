@@ -119,7 +119,7 @@ all_features = ['blank_stare','close_eyes','eye_blinking',
             'tonic','clonic','arm_flexion','arm_straightening','figure4','oral_automatisms','limb_automatisms',
             'face_pulling','face_twitching','head_turning','asynchronous_movement','pelvic_thrusting',
             'arms_move_simultaneously','full_body_shaking', 
-            # 'ictal_vocalization', 'verbal_responsiveness','occur_during_sleep',
+            'ictal_vocalization', #'verbal_responsiveness','occur_during_sleep',
             ]
 
 # CSV and log files for each task

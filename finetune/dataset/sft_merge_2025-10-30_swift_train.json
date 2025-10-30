@@ -81194,30 +81194,6 @@
   {
     "patient_id": "L0002",
     "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1",
-    "feature": "left_right_head_turning",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Does the patient's head turn to the patient's left or to the patient's right?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "right"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_head_turning/L0002@1-23-2018@DA00108B@sz_v1_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1",
     "feature": "body_region_onset",
     "channel": "task-3",
     "messages": [
@@ -81938,30 +81914,6 @@
   {
     "patient_id": "M0001",
     "video_id": "M0001@6-18-2020@DA0014R2@sz_v1_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/M0001@6-18-2020@DA0014R2@sz_v1_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "M0001",
-    "video_id": "M0001@6-18-2020@DA0014R2@sz_v1_1",
     "feature": "body_region_onset",
     "channel": "task-3",
     "messages": [
@@ -81980,30 +81932,6 @@
     ],
     "videos": [
       "./dataset/videos/task3_onset_body_part/M0001@6-18-2020@DA0014R2@sz_v1_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "N0002",
-    "video_id": "N0002@3-14-2022@DA1321F9@sz_v1_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/N0002@3-14-2022@DA1321F9@sz_v1_1.mp4"
     ],
     "images": []
   },
@@ -83642,30 +83570,6 @@
   {
     "patient_id": "O0001",
     "video_id": "O0001@10-12-2023@DA9601YN@sz_v2_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/O0001@10-12-2023@DA9601YN@sz_v2_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "O0001",
-    "video_id": "O0001@10-12-2023@DA9601YN@sz_v2_1",
     "feature": "body_region_onset",
     "channel": "task-3",
     "messages": [
@@ -84314,30 +84218,6 @@
   {
     "patient_id": "O0005",
     "video_id": "O0005@3-12-2015@TA7641K4@sz_v1_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/O0005@3-12-2015@TA7641K4@sz_v1_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "O0005",
-    "video_id": "O0005@3-12-2015@TA7641K4@sz_v1_1",
     "feature": "body_region_onset",
     "channel": "task-3",
     "messages": [
@@ -84524,30 +84404,6 @@
     ],
     "videos": [
       "./dataset/videos/task3_head_turning/O0009@8-8-2022@DA1322BE@sz_v1_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "O0009",
-    "video_id": "O0009@8-8-2022@DA1322BE@sz_v1_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/O0009@8-8-2022@DA1322BE@sz_v1_1.mp4"
     ],
     "images": []
   },
@@ -84908,30 +84764,6 @@
     ],
     "videos": [
       "./dataset/videos/task3_head_turning/R0002@6-17-2021@UA6693TB@sz_v1_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "R0002",
-    "video_id": "R0002@6-17-2021@UA6693TB@sz_v1_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/R0002@6-17-2021@UA6693TB@sz_v1_1.mp4"
     ],
     "images": []
   },
@@ -87290,30 +87122,6 @@
   {
     "patient_id": "S0017",
     "video_id": "S0017@12-2-2020@DA0015J8@nes_v1_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/S0017@12-2-2020@DA0015J8@nes_v1_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "S0017",
-    "video_id": "S0017@12-2-2020@DA0015J8@nes_v1_1",
     "feature": "body_region_onset",
     "channel": "task-3",
     "messages": [
@@ -88028,30 +87836,6 @@
     ],
     "videos": [
       "./dataset/videos/task3_head_turning/U0001@9-12-2016@CA4445HC@sz_v2_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "U0001",
-    "video_id": "U0001@9-12-2016@CA4445HC@sz_v2_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/U0001@9-12-2016@CA4445HC@sz_v2_1.mp4"
     ],
     "images": []
   },
@@ -89258,30 +89042,6 @@
   {
     "patient_id": "Z0003",
     "video_id": "Z0003@5-24-2018@DA7020TA@sz_v4_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/Z0003@5-24-2018@DA7020TA@sz_v4_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "Z0003",
-    "video_id": "Z0003@5-24-2018@DA7020TA@sz_v4_1",
     "feature": "body_region_onset",
     "channel": "task-3",
     "messages": [
@@ -90314,30 +90074,6 @@
   {
     "patient_id": "Z0008",
     "video_id": "Z0008@7-21-2021@DA7022WJ@sz_v1_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/Z0008@7-21-2021@DA7022WJ@sz_v1_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "Z0008",
-    "video_id": "Z0008@7-21-2021@DA7022WJ@sz_v1_1",
     "feature": "body_region_onset",
     "channel": "task-3",
     "messages": [
@@ -90386,30 +90122,6 @@
   {
     "patient_id": "Z0008",
     "video_id": "Z0008@7-21-2021@DA13202N@sz_v1_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/Z0008@7-21-2021@DA13202N@sz_v1_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "Z0008",
-    "video_id": "Z0008@7-21-2021@DA13202N@sz_v1_1",
     "feature": "body_region_onset",
     "channel": "task-3",
     "messages": [
@@ -90452,30 +90164,6 @@
     ],
     "videos": [
       "./dataset/videos/task3_head_turning/Z0008@7-21-2021@DA13202N@sz_v2_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "Z0008",
-    "video_id": "Z0008@7-21-2021@DA13202N@sz_v2_1",
-    "feature": "left_right_arm_movement",
-    "channel": "task-3",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Which arm of the patient is moving in the video?\n        Answer with \"left\" or \"right\" only. Do not include any extra text. Return exactly one word: left or right.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": ""
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task3_arm_movement/Z0008@7-21-2021@DA13202N@sz_v2_1.mp4"
     ],
     "images": []
   },
@@ -141333,29 +141021,6 @@
     "images": []
   },
   {
-    "patient_id": "E0006",
-    "video_id": "E0006@6-2-2015@TA7641ZV@sz_v1_1_segment_5",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "clonic"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/E0006@6-2-2015@TA7641ZV@sz_v1_1_segment_5.mp4"
-    ],
-    "images": []
-  },
-  {
     "patient_id": "E0007",
     "video_id": "E0007@10-8-2014@TA7640SH@sz_v1_1_segment_0",
     "channel": "task-5",
@@ -145129,75 +144794,6 @@
   },
   {
     "patient_id": "I0002",
-    "video_id": "I0002@5-9-2019@DA0012RL@nes_v4_1_segment_11",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/I0002@5-9-2019@DA0012RL@nes_v4_1_segment_11.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "I0002",
-    "video_id": "I0002@5-9-2019@DA0012RL@nes_v4_1_segment_12",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/I0002@5-9-2019@DA0012RL@nes_v4_1_segment_12.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "I0002",
-    "video_id": "I0002@5-9-2019@DA0012RL@nes_v4_1_segment_13",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/I0002@5-9-2019@DA0012RL@nes_v4_1_segment_13.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "I0002",
     "video_id": "I0002@5-9-2019@DA0012RS@nes_v1_1_segment_0",
     "channel": "task-5",
     "messages": [
@@ -147452,29 +147048,6 @@
   },
   {
     "patient_id": "L0001",
-    "video_id": "L0001@5-31-2022@KA9601X9@sz_v1_1_segment_3",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0001@5-31-2022@KA9601X9@sz_v1_1_segment_3.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0001",
     "video_id": "L0001@5-31-2022@KA9601XA@sz_v1_1_segment_0",
     "channel": "task-5",
     "messages": [
@@ -149241,535 +148814,6 @@
     ],
     "videos": [
       "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_3.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_4",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "full_body_shaking"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_4.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_5",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_5.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_6",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_6.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_7",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_7.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_8",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_8.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_9",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_9.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_10",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_10.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_11",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_11.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_12",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_12.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_13",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_13.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_14",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_14.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_15",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_15.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_16",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_16.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_17",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_17.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_18",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_18.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_19",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_19.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_20",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_20.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_21",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_21.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_22",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_22.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_23",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_23.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_24",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_24.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_25",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_25.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "L0002",
-    "video_id": "L0002@1-23-2018@DA00108B@sz_v1_1_segment_26",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/L0002@1-23-2018@DA00108B@sz_v1_1_segment_26.mp4"
     ],
     "images": []
   },
@@ -163965,29 +163009,6 @@
     "images": []
   },
   {
-    "patient_id": "R0007",
-    "video_id": "R0007@3-7-2016@CA4444HK@nes_v1_1_segment_12",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "full_body_shaking"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/R0007@3-7-2016@CA4444HK@nes_v1_1_segment_12.mp4"
-    ],
-    "images": []
-  },
-  {
     "patient_id": "R0009",
     "video_id": "R0009@8-12-2013@FA16402H@sz_v2_1_segment_0",
     "channel": "task-5",
@@ -172287,29 +171308,6 @@
     ],
     "videos": [
       "./dataset/videos/task56_segments/T0004@5-27-2015@VA7632UP@sz_v1_1_segment_1.mp4"
-    ],
-    "images": []
-  },
-  {
-    "patient_id": "T0004",
-    "video_id": "T0004@5-27-2015@VA7632UP@sz_v1_1_segment_2",
-    "channel": "task-5",
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."
-      },
-      {
-        "role": "user",
-        "content": "Output the sequence of the any observed seizure symptoms of the patient in the video in chronological order.\n    The symptoms are limited to head_turning, blank_stare, close_eyes, eye_blinking, face_pulling, face_twitching, tonic, clonic, arm_straightening, arm_flexion, figure4, oral_automatisms, limb_automatisms, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously.\n    If a symptom is not present in the video, it should not be included in the output.\n    Example output: head_turning, arm_straightening, arm_flexion, tonic, clonic.\n    Output only the seizure symptoms. Do not include any other text.\n\n<video>"
-      },
-      {
-        "role": "assistant",
-        "content": "none"
-      }
-    ],
-    "videos": [
-      "./dataset/videos/task56_segments/T0004@5-27-2015@VA7632UP@sz_v1_1_segment_2.mp4"
     ],
     "images": []
   },

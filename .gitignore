@@ -14,3 +14,7 @@ git-jungang.sh
 output/
 wandb/
 fintune/scripts/debug
+
+finetune/ckpts
+finetune/dataset/videos
+finetune/run_logs

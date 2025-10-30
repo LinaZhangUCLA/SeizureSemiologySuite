@@ -11,23 +11,24 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List
 from datetime import datetime
 
+
 #!/usr/bin/env python3
 import sys
 import pandas as pd
 
 
-path = "../datasplit/fold0_val.csv"
+path = "./datasplit/fold0_val.csv"
 df = pd.read_csv(path)  
 uniq_patitent_list = sorted(df["patient_id"].dropna().astype(str).unique())
 print(len(uniq_patitent_list))
 
 
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
-DEFAULT_DATE = '2025-10-28'
+DEFAULT_DATE_Pre = '2025-10-28'
 
-IN_PATH  = Path(f"../dataset/sft_merge_{DEFAULT_DATE}.json")
-OUT_JSON = Path(f"../dataset/sft_merge_{DEFAULT_DATE}_swift_train.json")
-OUT_JSONL= Path(f"../dataset/sft_merge_{DEFAULT_DATE}_swift_train.jsonl")
+IN_PATH  = Path(f"./dataset/sft_merge_{DEFAULT_DATE_Pre}.json")
+OUT_JSON = Path(f"./dataset/sft_merge_{DEFAULT_DATE}_swift_train.json")
+OUT_JSONL= Path(f"./dataset/sft_merge_{DEFAULT_DATE}_swift_train.jsonl")
 
 def load_mixed_json(p: Path) -> Iterable[Dict[str, Any]]:
     """Load a file that may be a JSON array, single JSON object, or JSONL."""
@@ -37,7 +38,7 @@ def load_mixed_json(p: Path) -> Iterable[Dict[str, Any]]:
     try:
         obj = json.loads(text)
         if isinstance(obj, list):
-            return ob
+            return obj
         if isinstance(obj, dict):
             return [obj]
         return []
@@ -141,6 +142,7 @@ def main() -> None:
 
     converted: List[Dict[str, Any]] = []
     dropped = 0
+    not_exit = 0
     for r in records:
         #print("patientid: ",r.get("patient_id"))
         if r.get("patient_id") in uniq_patitent_list:
@@ -162,7 +164,16 @@ def main() -> None:
         out_item["videos"] = videos
         out_item["images"] = images
         #print(out_item)
-        converted.append(out_item)
+        #print("videos: ", videos)
+        p = Path(videos[0])
+        if p.is_file():  # 存在且是文件
+            converted.append(out_item)   
+        else:    
+            print("not exist: ",videos)
+            #print(videos[0])
+            not_exit += 1
+            continue
+        
         
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     #JSON array
@@ -177,6 +188,8 @@ def main() -> None:
     print(f"  - {OUT_JSONL.resolve()}")
     if dropped:
         print(f"[NOTE] dropped {dropped} records without valid messages")
+    if not_exit:
+        print(f"[NOTE] {not_exit} records not exist")     
 
 if __name__ == "__main__":
     main()

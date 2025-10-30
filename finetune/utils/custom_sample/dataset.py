@@ -12,7 +12,7 @@ from swift.llm.dataset.register import DatasetMeta, register_dataset
 
 # TASK_DATASET = os.environ.get("TASK_DATASET", "./dataset/ft_data/ft_task_5_2025-10-23.jsonl")
 
-TASK_DATASET = os.environ.get("TASK_DATASET", "'../dataset/sft_merge_2025-10-28_swift_train.jsonl'")
+TASK_DATASET = os.environ.get("TASK_DATASET", './dataset/sft_merge_2025-10-30_swift_train.jsonl')
 
 # ===================== 工具函数 =====================
 def _abspath(p: str) -> str:
@@ -27,20 +27,20 @@ def _probe_video_meta(vpath: str) -> Dict[str, float]:
         try:
             raw_fps = float(vr.get_avg_fps())
             if raw_fps <= 0:
-                raw_fps = 25.0
+                raw_fps = 30.0
         except Exception:
-            raw_fps = 25.0
+            raw_fps = 30.0
         return {"total": total, "raw_fps": raw_fps}
     except Exception:
-        return {"total": 0.0, "raw_fps": 25.0}
+        return {"total": 0.0, "raw_fps": 30.0}
 
 def _rule_by_channel(channel: str) -> Dict[str, Any]:
     ch = (channel or "")
     if "task-4" in ch:
         return {"mode": "sample_fps", "sample_fps": 1.0}
     if "task-7-1" in ch or "task-7-2" in ch or "task-7" in ch:
-        return {"mode": "nframes", "nframes": 32}
-    return {"mode": "nframes", "nframes": 10}
+        return {"mode": "nframes", "nframes": 60}
+    return {"mode": "nframes", "nframes": 60}
     return {"mode": "sample_fps", "sample_fps": 2.0}
 
 def _make_videos_kwargs(vpath: str, channel: str) -> Dict[str, Any]:
@@ -50,7 +50,7 @@ def _make_videos_kwargs(vpath: str, channel: str) -> Dict[str, Any]:
     # 均匀采样目标 nframes，同时估算 sample_fps（便于后端按 fps 采样时接近 nframes）
     meta = _probe_video_meta(vpath)
     total, raw_fps = max(meta["total"], 1.0), meta["raw_fps"]
-    nframes = int(rule.get("nframes", 32))
+    nframes = int(rule.get("nframes", 60))
     est_sample_fps = max((nframes / total) * raw_fps, 0.1)
     return {"nframes": nframes, "sample_fps": float(est_sample_fps)}
 

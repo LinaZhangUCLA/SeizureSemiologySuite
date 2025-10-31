@@ -10,19 +10,21 @@ import pandas as pd
 # ========== CONFIGURATION - EDIT THESE VALUES ==========
 # Qwen API settings
 API_BASE = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-API_KEY = ""  # <-- Put your DashScope API key here
+API_KEY = 'sk-03164559b7d548da873c5d7a934a9059'   # <-- Put your DashScope API key here
 MODEL = "qwen-plus"
 
 # File paths
 BASE_DIR = "result/vlm_inference"
 MODELS = [
-    "InternVL3_5-8B",
-    "InternVL3_5-38B",
-    "Qwen2.5-VL-7B-Instruct",
-    "Qwen2.5-VL-32B-Instruct",
-    "Qwen2.5-VL-72B-Instruct",
-    "Lingshu-32B",
-    "Qwen2.5-Omni-7B",
+    # "InternVL3_5-8B",
+    # "InternVL3_5-38B",
+    # "Qwen2.5-VL-7B-Instruct",
+    # "Qwen2.5-VL-32B-Instruct",
+    # "Qwen2.5-VL-72B-Instruct",
+    # "Lingshu-32B",
+    # "Qwen2.5-Omni-7B",
+    'Qwen3-VL-8B-Instruct',
+    'Qwen3-VL-32B-Instruct'
 ]
 
 # Processing settings

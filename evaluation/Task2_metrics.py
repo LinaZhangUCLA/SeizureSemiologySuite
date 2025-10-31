@@ -32,8 +32,34 @@ os.makedirs(OUT_DIR, exist_ok=True)
 csv_pattern = os.path.join(VLM_INFERENCE_DIR, "**/*all_merged_llmmerge.csv")
 pred_csv_files = glob.glob(csv_pattern, recursive=True)
 
+# 如果没找到，尝试不用递归的方式
+if not pred_csv_files:
+    print(f"Trying alternative search method...")
+    # 遍历子目录
+    for root, dirs, files in os.walk(VLM_INFERENCE_DIR):
+        for file in files:
+            if file.endswith('all_merged_llmmerge.csv'):
+                pred_csv_files.append(os.path.join(root, file))
+
 if not pred_csv_files:
     print(f"No CSV files found matching pattern: {csv_pattern}")
+    print(f"\nChecking if directory exists: {VLM_INFERENCE_DIR}")
+    print(f"Directory exists: {os.path.exists(VLM_INFERENCE_DIR)}")
+    if os.path.exists(VLM_INFERENCE_DIR):
+        print(f"\nContents of {VLM_INFERENCE_DIR}:")
+        for item in os.listdir(VLM_INFERENCE_DIR):
+            item_path = os.path.join(VLM_INFERENCE_DIR, item)
+            if os.path.isdir(item_path):
+                print(f"  [DIR]  {item}")
+                # 显示子目录中的CSV文件
+                try:
+                    for subitem in os.listdir(item_path):
+                        if subitem.endswith('.csv'):
+                            print(f"    - {subitem}")
+                except PermissionError:
+                    pass
+            elif item.endswith('.csv'):
+                print(f"  [FILE] {item}")
     exit(1)
 
 print(f"Found {len(pred_csv_files)} CSV file(s) to process:")
@@ -133,17 +159,25 @@ def compute_bertscore(cands, refs, model, tokenizer, device, num_layers=9, batch
     return all_f1
 
 
+def normalize_model_name(name):
+    """标准化模型名称，用于匹配（忽略大小写、分隔符）"""
+    return name.lower().replace('-', '').replace('_', '').replace('.', '')
+
+
 def process_csv(pred_csv_path, gt, model, tokenizer, device):
     """Process a single prediction CSV file"""
     pred_filename = os.path.basename(pred_csv_path)
-    match = re.search(r'(Qwen[\w\.-]+|InternVL[\w\.-]+)', pred_filename, re.IGNORECASE)
+    
+    # 修复：使用非贪婪匹配，并在 Instruct 或下划线处停止
+    match = re.search(r'(Qwen[\w\.-]+?|InternVL[\w\.-]+?)(?:-Instruct|_all_merged)', pred_filename, re.IGNORECASE)
     if match:
         model_identifier = match.group(1)
     else:
         folder_name = os.path.basename(os.path.dirname(pred_csv_path))
         model_identifier = folder_name
 
-    model_identifier = re.sub(r'-Instruct', '', model_identifier, flags=re.IGNORECASE)
+    # 清理标识符（移除可能残留的 -Instruct）
+    model_identifier = re.sub(r'-Instruct.*$', '', model_identifier, flags=re.IGNORECASE)
 
     # 生成输出文件名
     output_filename = f"{model_identifier}_feature_summary.csv"
@@ -153,16 +187,20 @@ def process_csv(pred_csv_path, gt, model, tokenizer, device):
     print(f"  Model identifier: {model_identifier}")
     print(f"  Output file: {out_file}")
 
-    # 检查输出文件是否已存在
+    # 检查输出文件是否已存在（精确匹配）
     if os.path.exists(out_file):
         print(f"  ✓ Output file already exists, skipping.\n")
         return
 
+    # 检查是否存在相似的文件（标准化后匹配）
     existing_files = glob.glob(os.path.join(OUT_DIR, "*_feature_summary.csv"))
-    base_name = model_identifier.lower().replace('-', '_').replace('.', '')
+    normalized_target = normalize_model_name(model_identifier)
+    
     for existing in existing_files:
-        existing_base = os.path.basename(existing).replace('_feature_summary.csv', '').lower().replace('-', '_').replace('.', '')
-        if base_name == existing_base:
+        existing_model = os.path.basename(existing).replace('_feature_summary.csv', '')
+        normalized_existing = normalize_model_name(existing_model)
+        
+        if normalized_target == normalized_existing:
             print(f"  ✓ Similar output file already exists ({os.path.basename(existing)}), skipping.\n")
             return
 
@@ -258,7 +296,6 @@ for pred_csv in pred_csv_files:
 print("=" * 60)
 print("Batch processing complete!")
 print("=" * 60)
-
 
 
 #Test code for calculate score

@@ -7,11 +7,13 @@ import shutil
 
 
 # === Set your input folder and output path ===
-BASE_DIR = "/mnt/SSD3/lina/ssb/"
+# Get the script directory and project root
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+BASE_DIR = PROJECT_ROOT
 DEDUP_ON_COLUMN = 'file_name' 
-#origin_dir = BASE_DIR + "vlm_original/"
-origin_dir = "/mnt/SSD3/lina/ssb/v3/output/"
-output_dir = BASE_DIR + "v3/vlm_inference/"
+origin_dir = os.path.join(BASE_DIR, "inference_result")
+output_dir = os.path.join(BASE_DIR, "result", "vlm_inference")
 # ============================================
 
 def read_csv_file(input_file: str) -> pd.DataFrame:
@@ -64,7 +66,7 @@ def mergecsv(task_name: str, model: str,subtask:str=None):
     header = []
     for fp in files_sorted:
         print(fp)
-        if task_name=='Task3_6' :
+        if task_name=='Task3_6' or task_name=='Task7':
             df = read_csv_file(fp)
         else:
             df = pd.read_csv(fp, dtype=str)          # use string dtype to avoid type mismatches
@@ -92,6 +94,9 @@ def mergecsv(task_name: str, model: str,subtask:str=None):
         merged = merged.rename(columns={"video_name": "file_name"})
     if subtask=='Task5':    
         merged = merged[["video_name", "start_time","end_time"]]
+        merged = merged.rename(columns={"video_name": "file_name"})
+    if subtask=='Task7':    
+        merged = merged[["video_name", "prediction_with_report", "prediction_without_report"]]
         merged = merged.rename(columns={"video_name": "file_name"})    
 
     # Optional de-duplication on a specific column
@@ -112,13 +117,13 @@ def mergecsv(task_name: str, model: str,subtask:str=None):
     # Save
     if not subtask:
         subtask = task_name
-    OUTPUT_CSV = output_dir + model + f"/{subtask}_{model}_all.csv"
+    OUTPUT_CSV = os.path.join(output_dir, model, f"{subtask}_{model}_all.csv")
     os.makedirs(os.path.dirname(OUTPUT_CSV), exist_ok=True)
     merged.to_csv(OUTPUT_CSV, index=False)
     print("Merge complete. Saved to:", OUTPUT_CSV)
     print("Total rows:", len(merged))
     
-    error_log = output_dir + f'row_error_file_stat.log'
+    error_log = os.path.join(output_dir, 'row_error_file_stat.log')
     if not os.path.exists(error_log):
         with open(error_log, 'w') as f:
             f.write("Row count errors:\n")
@@ -140,22 +145,29 @@ def mergecsv(task_name: str, model: str,subtask:str=None):
            #write to row_error.log
               with open(error_log, "a") as f:
                   f.write(f"{OUTPUT_CSV} has {len(merged)} rows, expected 2413\n")
-                  print(f"!!!!!!!!!!!!{OUTPUT_CSV} has {len(merged)} rows, expected 2413\n")    
+                  print(f"!!!!!!!!!!!!{OUTPUT_CSV} has {len(merged)} rows, expected 2413\n")
+    if subtask == 'Task7':
+       if len(merged) != 438:
+           #write to row_error.log
+              with open(error_log, "a") as f:
+                  f.write(f"{OUTPUT_CSV} has {len(merged)} rows, expected 438\n")
+                  print(f"!!!!!!!!!!!!{OUTPUT_CSV} has {len(merged)} rows, expected 438\n")    
 
 
 
 
 if __name__ == "__main__":
 
-    for model in ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni']:
+    for model in ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']:
         
-        output_modle_dir = output_dir + model
+        output_modle_dir = os.path.join(output_dir, model)
         os.makedirs(output_modle_dir, exist_ok=True)
 
         #model = 'Qwen2.5-VL-7B-Instruct'
         # task_name = 'Task1'
         # subtask = 'Task1'
-        # mergecsv(task_name, model,subtask)      
+        # mergecsv(task_name, model,subtask)  
+
         task_name = 'Task3_6'
         subtask = 'Task3'
         mergecsv(task_name, model,subtask)
@@ -166,17 +178,25 @@ if __name__ == "__main__":
         if model in['InternVL3_5-8B','InternVL3_5-38B']:
             am_end =113
             ht_end =130
+
         # shutil.copy(origin_dir+ model + f"/Task4_AM_{model}_1-{am_end}.csv", output_dir + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
         # shutil.copy(origin_dir + model + f"/Task4_HT_{model}_1-{ht_end}.csv", output_dir + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
-        
-        shutil.copy(origin_dir + f"/Task4_AM_{model}_1-{am_end}.csv", output_dir + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
-        shutil.copy(origin_dir  + f"/Task4_HT_{model}_1-{ht_end}.csv", output_dir + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
+        shutil.copy(os.path.join(origin_dir, f"Task4_AM_{model}_1-{am_end}.csv"), os.path.join(output_dir, model, f"Task4_AM_{model}_1-112.csv"))
+        shutil.copy(os.path.join(origin_dir, f"Task4_HT_{model}_1-{ht_end}.csv"), os.path.join(output_dir, model, "Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv"))
        
         task_name = 'Task4L_5'
         subtask = 'Task4L'
         mergecsv(task_name, model,subtask)
         subtask = 'Task5'
         mergecsv(task_name, model,subtask)
+        
+        # Task7 processing
+        try:
+            task_name = 'Task7'
+            subtask = 'Task7'
+            mergecsv(task_name, model, subtask)
+        except FileNotFoundError as e:
+            print(f"Skipping Task7 for {model}: {e}")
 
     # model = 'InternVL3_5-8B'
     # task_name = 'Task1'
@@ -210,3 +230,5 @@ if __name__ == "__main__":
     # mergecsv(task_name, model,subtask)
     # subtask = 'Task5'
     # mergecsv(task_name, model,subtask)
+
+ 

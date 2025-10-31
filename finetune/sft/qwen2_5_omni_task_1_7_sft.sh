@@ -34,6 +34,9 @@ mkdir -p './ckpts/trained_models/'
 #VIDEO_MAX_PIXELS=$((392*448)) \
 # --dataloader_num_workers 4 \
 
+export SAMPLING_RATE=16000
+
+PYTHONWARNINGS='ignore:PySoundFile failed.*:UserWarning:swift.llm.template.template.qwen,ignore:__audioread_load.*:FutureWarning:librosa.core.audio' \
 PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True' \
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 NPROC_PER_NODE=8 \
@@ -42,6 +45,7 @@ FPS_MAX_FRAMES=60 \
 MAX_PIXELS=$((FPS_MAX_FRAMES * VIDEO_MAX_PIXELS)) \
 swift sft \
     --model "Qwen/Qwen2.5-Omni-7B"\
+    --model_kwargs '{"use_audio_in_video": true}' \
     --dataset ssb \
     --custom_register_path ./utils/custom_sample/dataset.py \
     --load_from_cache_file true \

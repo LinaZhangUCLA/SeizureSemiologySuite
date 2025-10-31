@@ -40,19 +40,23 @@ MODEL_NAMES = [
     'Qwen2.5-VL-72B',
     'Audio-flamingo-3',
     'Qwen2.5-Omni-7B',
-    'Lingshu-32B'
+    'Lingshu-32B',
+    'Qwen3-VL-8B',
+    'Qwen3-VL-32B'
 ]
 
 # Mapping from display model names to actual file path names
 MODEL_PATH_MAPPING = {
     'Qwen2.5-VL-7B': 'qwen2_5_vl_7B',
-    'InternVL3.5-8B': 'internvl3_5_8B',
+    'InternVL3.5-8B': 'internvl3_5_8B', 
     'Qwen2.5-VL-32B': 'qwen2_5_vl_32B',
     'InternVL3.5-38B': 'internvl3_5_38B',
     'Qwen2.5-VL-72B': 'qwen2_5_vl_72B',
     'Audio-flamingo-3': 'AF3',
     'Qwen2.5-Omni-7B': 'qwen2_5_omni_7B',
-    'Lingshu-32B': 'lingshu_32B'
+    'Lingshu-32B': 'lingshu_32B',
+    'Qwen3-VL-8B': 'Qwen3-VL-8B',
+    'Qwen3-VL-32B': 'Qwen3-VL-32B'
 }
 
 # Create reverse mapping (file path name to display name)

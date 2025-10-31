@@ -5,7 +5,7 @@ from datetime import datetime
 # output_file = "../../dataset/grpo_merge_2025-10-26.jsonl"  # 目标 JSONL 文件
 
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
-DEFAULT_DATE = '2025-10-28'
+
 
 
 input_file = f"../dataset/sft_merge_{DEFAULT_DATE}_swift_train.jsonl"  # 原始 JSONL 文件

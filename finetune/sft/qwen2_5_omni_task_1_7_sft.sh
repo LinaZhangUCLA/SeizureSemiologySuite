@@ -54,7 +54,7 @@ swift sft \
     --torch_dtype bfloat16 \
     --attn_impl sdpa \
     --gradient_checkpointing true \
-    --num_train_epochs 2 \
+    --num_train_epochs 3 \
     --per_device_train_batch_size 1 \
     --per_device_eval_batch_size 1 \
     --learning_rate 5e-5 \

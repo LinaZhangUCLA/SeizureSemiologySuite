@@ -13,9 +13,9 @@ import argparse
 import pandas as pd
 
 
-report_dict = pd.read_csv("/home/jiarui/result/ground_truth/task6_report_annotation.csv", usecols=["file_name","report"], dtype=str, encoding="utf-8-sig")\
-       .set_index("file_name")["report"].to_dict()
-print(report_dict)
+report_dict = pd.read_csv("./../result/ground_truth/task6_report_annotation.csv", usecols=["file_name","report"], dtype=str, encoding="utf-8-sig")\
+      .set_index("file_name")["report"].to_dict()
+#print(report_dict)
 
 LOG = True
 # default_model_cache_dir = os.path.join(os.path.dirname(__file__), 'model_cache')
@@ -188,13 +188,24 @@ from qwen_omni_utils import process_mm_info
 from peft import PeftModel
 
 # Load base model first
+# model = Qwen3OmniMoeForConditionalGeneration.from_pretrained(
+#     model_name,
+#     torch_dtype=torch.bfloat16,
+#     attn_implementation="sdpa",
+#     device_map="auto",
+# )
 model = Qwen3OmniMoeForConditionalGeneration.from_pretrained(
     model_name,
-    torch_dtype=torch.bfloat16,
-    attn_implementation="sdpa",
+    dtype="auto",
     device_map="auto",
+    attn_implementation="sdpa",
 )
 processor = Qwen3OmniMoeProcessor.from_pretrained(model_name, cache_dir=hf_cache_dir)
+# ===== Qwen 官方 system 提示（开启音频/语音能力所需） =====
+QWEN_SYS_PROMPT = (
+    "You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, "
+    "capable of perceiving auditory and visual inputs, as well as generating text and speech."
+)
 
 
 import os
@@ -271,68 +282,105 @@ def create_image_grid(images, num_columns=8):
 
     return grid_image
 
-def inference(model, video_path, query_prompt, max_new_tokens=None, max_pixels=602112, min_pixels=16 * 28 * 28):
+def _extract_audio_to_wav(video_path: str, out_dir: str) -> str:
+    base = os.path.splitext(os.path.basename(video_path))[0]
+    wav_path = os.path.join(out_dir, f"{base}_24k_mono.wav")
+    try:
+        os.makedirs(out_dir, exist_ok=True)
+        cmd = ["ffmpeg", "-y", "-i", video_path, "-vn", "-ac", "1", "-ar", "24000", wav_path]
+        subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return wav_path if os.path.isfile(wav_path) else ""
+    except Exception:
+        return ""
+
+def inference(model, video_path, query_prompt, max_new_tokens=None):
     if max_new_tokens is None:
         max_new_tokens = MAX_NEW_TOKENS
 
-    video_fps = FPS
-    if "task4_feature_segments" in video_path:
-        video_fps = TASK4_FPS
+    
+    # audio_path = _extract_audio_to_wav(video_path, globals().get('audio_cache_dir', video_cache_dir))
+    # use_audio_in_video = False if audio_path else True  
+    # # use_audio_in_video = True
+
+
+    
+    # msg_content = [{"type": "video", "video": video_path}]
+    # if "task4_feature_segments" in video_path:
+    #     msg_content[0]["fps"] = 1  
+    # if audio_path:
+    #     msg_content.append({"type": "audio", "audio": audio_path})
+    # msg_content.append({"type": "text", "text": query_prompt})
+
+    # messages = [
+    #     {"role": "system", "content": [{"type": "text", "text": QWEN_SYS_PROMPT}]},
+    #     {"role": "user", "content": msg_content},
+    # ]
 
     messages = [
-        {"role": "user", "content": [
-            {
-                "type": "video",
-                "video": video_path,
-                "max_pixels": max_pixels,
-                "min_pixels": min_pixels,
-                "total_pixels": max_pixels * MAX_FRAMES,
-                "fps": video_fps,
-            },
-            {"type": "text", "text": query_prompt},
-        ]}
+    {
+        "role": "user",
+        "content": [
+            {"type": "video", "video": video_path},
+            {"type": "text", "text": query_prompt}
+        ],
+    },
     ]
-    
-    if "task7_seizurevideos" in video_path:
-        messages = [
-        {"role": "user", "content": [
-            {
-                "type": "video",
-                "video": video_path,
-                "nframes": MAX_FRAMES,  # <- 均匀抽取整段视频的 120 帧
-                "max_pixels": max_pixels,
-                "min_pixels": min_pixels,
-                "total_pixels": max_pixels * MAX_FRAMES,
-            },
-            {"type": "text", "text": query_prompt},
-        ]}
-        ]
+    use_audio_in_video = True
+    text = processor.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)
+    audios, images, videos = process_mm_info(messages, use_audio_in_video=use_audio_in_video)
+    print("audios content:", audios)
+    inputs = processor(text=text, 
+                    audio=audios, 
+                    images=images, 
+                    videos=videos, 
+                    return_tensors="pt", 
+                    padding=True, 
+                    use_audio_in_video=use_audio_in_video)
+    inputs = inputs.to(model.device).to(model.dtype)
 
-    text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    audios, images, videos = process_mm_info(messages, use_audio_in_video=True)
-    # image_inputs, video_inputs, video_kwargs = process_vision_info(messages, return_video_kwargs=True,
-                                                                   #image_patch_size= 16,
-                                                                #    return_video_metadata=True)
-    # if video_inputs is not None:
-    #     video_inputs, video_metadatas = zip(*video_inputs)
-    #     video_inputs, video_metadatas = list(video_inputs), list(video_metadatas)
-    # else:
-    #     video_metadatas = None
-    print("audios from process_mm_info:", type(audios), getattr(audios, "shape", None) or (len(audios) if hasattr(audios, "__len__") else None))
-    inputs = processor(
-        text=[text],
-        audio=audios, images=images, videos=videos,
-        padding=True, return_tensors="pt",
-        use_audio_in_video=True,
-    ).to(device=model.device, dtype=torch.bfloat16)
-    # inputs = processor(text=[text], images=image_inputs, videos=video_inputs, video_metadata=video_metadatas, **video_kwargs, return_tensors="pt").to('cuda')
+    # Inference: Generation of the output text and audio
+    text_ids, audio = model.generate(**inputs, 
+                                    speaker="Ethan", 
+                                    thinker_return_dict_in_generate=True,
+                                    use_audio_in_video=use_audio_in_video,
+                                    max_new_tokens=max_new_tokens,
+                                    return_audio=False,
+                                    do_sample=False,
+                                    temperature=0.0)
 
-    output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens, use_audio_in_video=True, return_audio=False)
-    generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]
-    raw_output = processor.batch_decode(generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True)
-    # print("raw_output:", raw_output[0])
+    text = processor.batch_decode(text_ids.sequences[:, inputs["input_ids"].shape[1] :],
+                                skip_special_tokens=True,
+                                clean_up_tokenization_spaces=False)
+    return text[0]
+
+    # text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    # audios, images, videos, video_kwargs = process_mm_info(
+    #     messages, use_audio_in_video=use_audio_in_video, return_video_kwargs=True, 
+    # )
+    # fps_inputs = video_kwargs.get("fps", None)
+    # if isinstance(fps_inputs, list):
+    #     fps_inputs = fps_inputs[0]
+
+    # inputs = processor(
+    #     text=[text],
+    #     audio=audios, images=images, videos=videos,
+    #     fps=fps_inputs,              
+    #     padding=True, return_tensors="pt",
+    #     use_audio_in_video=use_audio_in_video
+    # ).to(model.device).to(dtype=torch.bfloat16)
+
     
-    return raw_output[0]
+    # output_ids = model.generate(
+    #     **inputs,
+    #     max_new_tokens=max_new_tokens,
+    #     use_audio_in_video=use_audio_in_video,
+    #     return_audio=False,
+    #     do_sample=False,
+    #     temperature=0.0,
+    # )
+    # generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]
+    # raw = processor.batch_decode(generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True)[0]
+    # return raw
 
 # ================== Paths and file names ==================
 
@@ -689,12 +737,12 @@ def main():
     
     # =============================================== task3=============================================================== #
     try:
-         # Get all task4 clips
+        # Get all task4 clips
         task3_HT_clip_fps = get_fp_list(task3_HT_dataset_dir)
         task3_AM_clip_fps = get_fp_list(task3_AM_dataset_dir)
         task3_L_clip_fps = get_fp_list(task3_L_dataset_dir)
 
-    #     # Initialize task3 CSV files
+        # Initialize task3 CSV files
         if not os.path.exists(task3_HT_result_csv_fp):
             with open(task3_HT_result_csv_fp, 'w') as f:
                 f.write("video_name,head_turning_direction\n")
@@ -707,7 +755,7 @@ def main():
             with open(task3_L_result_csv_fp, 'w') as f:
                 f.write("video_name,onset_body_part\n")
 
-    #     # Process task4 videos
+        # Process task4 videos
         if '7' in args.gpu:
             # Process head turning videos
             task3_HT_videos_range = validate_videos_range(task3_HT_clip_fps, task3_HT_videos_range)
@@ -727,8 +775,8 @@ def main():
                     print(f"Error processing video {video_name} for head turning: {e}")
                     with open(task3_HT_result_csv_fp, 'a') as f:
                         f.write(f"{video_name},N/A\n")
-                break
-        # Process arm movement videos
+                #break
+            # Process arm movement videos
             task3_AM_videos_range = validate_videos_range(task3_AM_clip_fps, task3_AM_videos_range)
             for video_clip_fp in tqdm(task3_AM_clip_fps[:], desc="Processing Task 3 Arm Movement"):
                 video_name = video_clip_fp.split('/')[-1]
@@ -745,8 +793,8 @@ def main():
                     print(f"Error processing video {video_name} for arm movement: {e}")
                     with open(task3_AM_result_csv_fp, 'a') as f:
                         f.write(f"{video_name},N/A\n")
-                break
-            # Process onset body part videos
+                #break
+        # Process onset body part videos
             task3_L_videos_range = validate_videos_range(task3_L_clip_fps, task3_AM_videos_range)
             for video_clip_fp in tqdm(task3_L_clip_fps[:], desc="Processing Task 3 Onset Body Part"):
                 video_name = video_clip_fp.split('/')[-1]
@@ -764,7 +812,7 @@ def main():
                     print(f"Error processing video {video_name} for onset body part: {e}")
                     with open(task3_L_result_csv_fp, 'a') as f:
                         f.write(f"{video_name},N/A\n")
-                break
+                #break
 
     except Exception as e:
         print(f"Error in Task 3 processing: {e}")
@@ -780,7 +828,7 @@ def main():
         #feature_folders = [d for d in os.listdir(task4_dataset_dir) if os.path.isdir(os.path.join(task4_dataset_dir, d))]
         
         feature_folders_split =  [
-                ['blank_stare','close_eyes','eye_blinking',],
+                ['blank_stare','close_eyes','eye_blinking','ictal_vocalization',],
                 ['tonic','clonic','arm_flexion',],
                 ['arm_straightening','figure4','oral_automatisms',],
                 ['limb_automatisms','face_pulling',],
@@ -846,7 +894,7 @@ def main():
                         csv_f.write(f"{video_name},{feature},N/A\n")
                         csv_f.flush()    
                         log_f.write(f"Error processing video {video_name} for feature {feature}: {e}\n")
-                    break
+                    #break
         print(f"Processing is complete. Results are in '{task4_result_csv_fp}'.")
 
     except Exception as e:
@@ -869,30 +917,31 @@ def main():
                 return {line.split(',')[0] for line in f.readlines()[1:] if line.strip()}
 
         task5_processed = load_processed_videos(task5_result_csv_fp)
-        task5_videos_range = validate_videos_range(task5_clip_fps, videos_range)   
-        with open(task5_result_csv_fp, 'a') as csv_f, open(os.path.join(task5_log_dir, "task5.log"), 'a') as log_f:
+        task5_videos_range = validate_videos_range(task5_clip_fps, videos_range)
+        task5_log_file = os.path.join(task5_log_dir, f"task5_gpu{gpu_str}.log")
+        with open(task5_result_csv_fp, 'a') as csv_f, open(task5_log_file, 'a') as log_f:
             for video_clip_fp in tqdm(task5_clip_fps[task5_videos_range[0]-1 : task5_videos_range[1]], desc="Processing Task 5"):
                 video_clip_name = video_clip_fp.split('/')[-1]
 
                 if video_clip_name in task5_processed:
                     print(f"Video {video_clip_name} already processed for both tasks. Skipping.")
                     continue
-                try: 
+                try:
                     raw_output5 = inference(model, video_clip_fp, get_task5_prompt())
-                    event_sequence = '\"' + raw_output5 + '\"'              
+                    event_sequence = '\"' + raw_output5 + '\"'
                     csv_f.write(f"{video_clip_name},{event_sequence}\n")
-                    csv_f.flush() 
-                    task5_processed.add(video_clip_name)                                       
+                    csv_f.flush()
+                    task5_processed.add(video_clip_name)
                 except Exception as e:
                     print(f"Error processing video {video_clip_fp}: {e}")
                     csv_f.write(f"{video_clip_name},\"fail\"\n")
                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
-                break
-        print(f"Task 5 results are in: {task5_result_csv_fp}")
+                #break
+        print(f"Task 5 results are in: {task5_result_csv_fp}")  
 
     except Exception as e:
         print(f"Error in Task 5 processing: {e}")
-        traceback.print_exc()
+        traceback.print_exc()    
 
     # =============================================== task6 =============================================================== #
     try:
@@ -900,7 +949,7 @@ def main():
         init_csv(task6_result_csv_fp, "video_name,report")
         task6_processed = load_processed_videos(task6_result_csv_fp)        
         os.makedirs(task6_log_dir, exist_ok=True)
-        aggregate_log_fp = os.path.join(task6_log_dir, "task6.log")
+        aggregate_log_fp = os.path.join(task6_log_dir, f"task6_gpu{gpu_str}.log")
         with open(task6_result_csv_fp, 'a', encoding='utf-8', newline='') as csv_f, open(aggregate_log_fp, 'a', encoding='utf-8') as log_f:    
             for video_clip_fp in tqdm(task5_clip_fps[task5_videos_range[0]-1 : task5_videos_range[1]], desc="Processing Task 6"):
                 video_clip_name = video_clip_fp.split('/')[-1]
@@ -918,7 +967,7 @@ def main():
                     print(f"Error processing video {video_clip_fp}: {e}")
                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
                     csv_f.write(f"{video_clip_name},\"fail\"\n")
-                break
+                #break
         print(f"Task 6 results are in: {task6_result_csv_fp}")
     except Exception as e:
         print(f"Error in Task 6 processing: {e}")
@@ -976,7 +1025,7 @@ def main():
                     print(f"Error processing video {video_clip_fp}: {e}")
                     log_f.write(f"Error processing video {video_clip_name}: {e}\n")
                     csv_f.write(f"{video_clip_name},\"fail\",\"fail\"\n")
-                break
+                #break
         print(f"Task 7 results are in: {task7_result_csv_fp}")
     except Exception as e:
         print(f"Error in Task 7 processing: {e}")

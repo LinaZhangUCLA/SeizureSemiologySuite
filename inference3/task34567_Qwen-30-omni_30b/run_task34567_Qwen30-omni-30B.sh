@@ -1,0 +1,38 @@
+#!/bin/bash
+
+
+
+# Activate virtual environment
+eval "$(conda shell.bash hook)"
+conda activate omni3
+
+# source ~/miniconda3/etc/profile.d/conda.sh
+# conda activate /mnt/SSD3/lina/my_conda_env/qwen3vl_moe
+# which python
+# python -c 'import sys; print(sys.executable)'
+
+
+# Check if activation was successful
+if [ $? -ne 0 ]; then
+  echo "Failed to activate conda environment qwenvl. Exiting."
+  exit 1
+fi
+
+echo "Conda environment omni3 activated."
+
+
+# model_name options
+# Qwen/Qwen2.5-VL-7B-Instruct   1GPU  
+# Qwen/Qwen2.5-VL-32B-Instruct  2GPU
+# Qwen/Qwen2.5-VL-72B-Instruct  4GPU
+
+# video_range 1-2314  eg.1-1000, 1001-2000, 2001-2314
+# Run the inference script
+python ../task34567_Qwen-30-omni_moe.py \
+    --gpu 0,1 \
+    --videos_range 1-300 \
+    --output_dir /home/hubing/SeizureSemiologyBench/output \
+    --model_name Qwen/Qwen3-Omni-30B-A3B-Instruct \
+    --dataset_dir /mnt/SSD3/lina/ucla2/ssbench \
+    --cache_dir /home/hubing/SeizureSemiologyBench/cache 
+echo "Done!"

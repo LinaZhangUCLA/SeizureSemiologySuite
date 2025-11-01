@@ -153,7 +153,8 @@ def process_csv(csv_path, video_base_path):
                 "messages": [
                     {"role": "system", "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."},
                     {"role": "user", "content": user_prompt},
-                    {"role": "assistant", "content": str({ "answer": assistant_answer1, "justification": assistant_answer2 })},
+                    #{"role": "assistant", "content": str({ "answer": assistant_answer1, "justification": assistant_answer2 })},
+                    {"role": "assistant", "content": json.dumps({"answer": assistant_answer1, "justification": assistant_answer2},ensure_ascii=False)},
                 ],
                 "videos": [video_path],
             }

@@ -17,16 +17,16 @@ import sys
 import pandas as pd
 
 
-path = "./datasplit/fold0_val.csv"
-df = pd.read_csv(path)  
+test_path = "./datasplit/fold0_val.csv"
+df = pd.read_csv(test_path)  
 uniq_patitent_list = sorted(df["patient_id"].dropna().astype(str).unique())
 print(len(uniq_patitent_list))
 
 
 DEFAULT_DATE = datetime.now().strftime("%Y-%m-%d")
-DEFAULT_DATE_Pre = '2025-10-28'
+#DEFAULT_DATE_Pre = '2025-10-28'pyt
 
-IN_PATH  = Path(f"./dataset/sft_merge_{DEFAULT_DATE_Pre}.json")
+IN_PATH  = Path(f"./dataset/sft_merge_{DEFAULT_DATE}.json")
 OUT_JSON = Path(f"./dataset/sft_merge_{DEFAULT_DATE}_swift_train.json")
 OUT_JSONL= Path(f"./dataset/sft_merge_{DEFAULT_DATE}_swift_train.jsonl")
 

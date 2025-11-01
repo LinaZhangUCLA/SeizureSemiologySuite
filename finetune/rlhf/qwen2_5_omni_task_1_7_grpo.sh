@@ -10,7 +10,9 @@ BASE_MODEL='Qwen/Qwen2.5-Omni-7B'
 MODEL_SAVE_PATH='./ckpts/trained_models/'${VERSION_NAME}
 
 # todo: data_path
-TASK_DATASET='./dataset/grpo_merge_2025-10-30_swift_train.jsonl'
+export TASK_DATASET='./dataset/grpo_merge_2025-11-01_swift_train.jsonl'
+
+
 
 mkdir -p './run_logs/'
 mkdir -p './ckpts/'
@@ -27,9 +29,11 @@ MAX_PIXELS=$((FPS_MAX_FRAMES * VIDEO_MAX_PIXELS)) \
 NPROC_PER_NODE=2 \
 ENABLE_AUDIO_OUTPUT=1 \
 CUDA_VISIBLE_DEVICES=2,3 \
+FPS=1 \
 swift rlhf \
     --rlhf_type grpo \
     --model "Qwen/Qwen2.5-Omni-7B" \
+    --model_kwargs '{"use_audio_in_video": true}' \
     --reward_funcs seizure \
     --reward_weights 1.0 \
     --train_type lora \
@@ -37,7 +41,7 @@ swift rlhf \
     --lora_alpha 32 \
     --target_modules all-linear \
     --torch_dtype bfloat16 \
-    --dataset $TASK_DATASET \
+    --dataset $TASK_DATASET  \
     --load_from_cache_file true \
     --external_plugins './rlhf/plugin.py' \
     --max_completion_length 2048 \

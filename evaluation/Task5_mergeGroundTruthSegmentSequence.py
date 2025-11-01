@@ -218,9 +218,9 @@ def main():
             
             # Create segment feature list for regular output (comma-separated)
             if features_in_interval:
-                segment_feature_list = ', '.join(features_in_interval)
+                segment_feature_list = '"' + ', '.join(features_in_interval) + '"'
             else:
-                segment_feature_list = ''
+                segment_feature_list = ""
             
             output_data.append({
                 'segment_video_name': segment_video_name,
@@ -230,9 +230,9 @@ def main():
             # Create segment feature list for VLM output (exclude acoustic features)
             features_in_interval_vlm = [f for f in features_in_interval if f not in vlm_exclude_features]
             if features_in_interval_vlm:
-                segment_feature_list_vlm = ', '.join(features_in_interval_vlm)
+                segment_feature_list_vlm = '"' + ', '.join(features_in_interval_vlm) + '"'
             else:
-                segment_feature_list_vlm = ''
+                segment_feature_list_vlm = ""
             
             output_data_vlm.append({
                 'segment_video_name': segment_video_name,

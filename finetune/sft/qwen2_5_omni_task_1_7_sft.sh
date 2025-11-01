@@ -8,9 +8,8 @@ LOG_PATH="./run_logs/${VERSION_NAME}.log"
 # todo
 #BASE_MODEL='../ckpts/init_models/Qwen2.5-Omni-3B'
 #BASE_MODEL= 'Qwen/Qwen2.5-Omni-7B'
-
 # todo: data_path
-export TASK_DATASET='./dataset/sft_merge_2025-10-31_swift_train.jsonl'
+export TASK_DATASET='./dataset/sft_merge_2025-11-01_swift_train.jsonl'
 
 export WANDB_API_KEY="***REMOVED***"   # 或提前 wandb login
 export WANDB_PROJECT="seizurebench"
@@ -42,12 +41,12 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 NPROC_PER_NODE=8 \
 VIDEO_MAX_PIXELS=$((784*448)) \
 FPS_MAX_FRAMES=60 \
+FPS=1 \
 MAX_PIXELS=$((FPS_MAX_FRAMES * VIDEO_MAX_PIXELS)) \
 swift sft \
     --model "Qwen/Qwen2.5-Omni-7B"\
     --model_kwargs '{"use_audio_in_video": true}' \
-    --dataset ssb \
-    --custom_register_path ./utils/custom_sample/dataset.py \
+    --dataset $TASK_DATASET  \
     --load_from_cache_file true \
     --split_dataset_ratio 0.05 \
     --train_type lora \

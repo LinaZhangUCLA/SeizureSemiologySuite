@@ -50,7 +50,7 @@ with open(csv_path, "r", encoding="utf-8") as f:
         
         # video_id,  description = row
         # print(description)
-        symptoms = extract_symptoms(row["segment_feature_list"])
+        #symptoms = extract_symptoms(row["segment_feature_list"])
         file_name = row["segment_video_name"].strip()
         video_path = os.path.join(VIDEO_BASE_PATH, file_name)
     
@@ -63,7 +63,7 @@ with open(csv_path, "r", encoding="utf-8") as f:
                     {"role": "system", "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."},
                     {"role": "user", "content": get_task5_prompt().strip()},
                     # {"role": "assistant", "content": symptoms if symptoms else "none"},
-                    {"role": "assistant", "content": row["segment_feature_list"] if row["segment_feature_list"] else ""},
+                    {"role": "assistant", "content": str(row["segment_feature_list"]).replace('""', '"').replace('"', '') if row["segment_feature_list"] else ""},
                 ],
                 "videos": [video_path],
                 

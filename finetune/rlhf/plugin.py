@@ -6,9 +6,11 @@ import textwrap
 from collections import Counter
 from copy import deepcopy
 from typing import Dict, List, Union
+from rapidfuzz.distance import LCSseq
 
 import json
 import torch
+import pandas as pd
 
 from swift.llm import PtEngine, RequestConfig, RolloutInferRequest, Template, to_device
 from swift.llm.infer.protocol import ChatCompletionResponse, ChatCompletionResponseChoice
@@ -44,6 +46,8 @@ class SeizureORM(ORM):
     Reward function for seizure reporting tasks.
     Computes an LLM-judged quality score (SeizureRQI) between model outputs and ground truth.
     """
+
+
 
     # TODO: 自定义的ORM需要包含一个位置参数completions，其他为关键词参数，由数据集额外字段透传
     def __call__(self, completions, **kwargs) -> List[float]:
@@ -90,10 +94,10 @@ class SeizureORM(ORM):
             match = re.search(r"<answer>\s*([\s\S]*?)\s*</answer>", llm_answer)
             # 如果有answer标签，则提取标签内内容为答案
             if match:
-                print("have <answer> tag")
+                #print("have <answer> tag")
                 llm_answer = match.group(1)
             else:
-                print(f"no <answer> tag")
+                #print(f"no <answer> tag")
                 llm_answer = content
 
             # TODO: step 2 针对不同的任务计算不同的任务奖励
@@ -102,12 +106,9 @@ class SeizureORM(ORM):
                 # ground-truth example: {'answer': 'no', 'justification': 'The patient prod...'}
                 try:
                     # TODO: 计算task 1和2的reward，先判断是否正确，然后判断justification是否正确
-                    print(f"debug task 1-2: llm answer {llm_answer}, gt answer {gt_answer}", type(llm_answer), type(gt_answer))
-
+                    #print(f"debug task 1-2: llm answer {llm_answer}, gt answer {gt_answer}", type(llm_answer), type(gt_answer))
                     llm_answer = json.loads(llm_answer)
-                    gt_answer = json.loads(llm_answer)
-
-                    print(f"debug task 1-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
+                    #print(f"debug task 1-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
                     # print(f"debug task 1-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
@@ -121,7 +122,7 @@ class SeizureORM(ORM):
                 # TODO: 判断身体部位定位是否准确。选择题，equal判断
                 # ground-truth example: right
                 try:
-                    print(f"debug task 3: llm answer {llm_answer}, gt answer {gt_answer}")
+                    #print(f"debug task 3: llm answer {llm_answer}, gt answer {gt_answer}")
                     # TODO: task 3直接用equal来判断是否相等
                     if gt_answer == llm_answer:
                         reward += 1.0
@@ -133,19 +134,19 @@ class SeizureORM(ORM):
                 # TODO: 定位症状发生时间 01:23-02:23，计算时间段重合。计算题，计算overlap/union
                 # ground-truth example: {'timestamp': '00:41'}
                 try:
-                    print(f"debug task 4: llm answer {llm_answer}, gt answer {gt_answer}", type(llm_answer),type(gt_answer))
+                    #print(f"debug task 4: llm answer {llm_answer}, gt answer {gt_answer}", type(llm_answer),type(gt_answer))
                     # TODO: task 4计算重叠比例来计算预测的准确程度
                                        
                     llm_answer = json.loads(llm_answer)
                     # gt_answer = json.loads(llm_answer)
 
                     llm_time, gt_time = llm_answer['timestamp'], gt_answer['timestamp']
-                    print("llm_time: ",llm_time, "gt_time: ",gt_time)
+                    #print("llm_time: ",llm_time, "gt_time: ",gt_time)
 
                     # 转秒
                     s1 = int(llm_time.split(':')[0]) * 60 + int(llm_time.split(':')[1])
                     s2 = int(gt_time.split(':')[0]) * 60 + int(gt_time.split(':')[1])
-                    print("times: ", s1,s2)
+                    #print("times: ", s1,s2)
                     if s1 < 0:
                         reward += 0
                     else:
@@ -158,45 +159,17 @@ class SeizureORM(ORM):
                 # TODO: 症状发生顺序的排序问题。排序问题，直接计算gt中的所有两两关系在llm的回答中顺序是否正确
                 # ground-truth example: head_turning, arm_straightening, arm_flexion, tonic, clonic
                 try:
-                    print(f"debug task 5: llm answer {llm_answer}, gt answer {gt_answer}")
+                    #print(f"debug task 5: llm answer {llm_answer}, gt answer {gt_answer}",type(llm_answer),type(gt_answer))
+                    
+                    # true_seq = str(gt_answer).split(",")
+                    # pred_seq = str(llm_answer).split(",")
 
-                    # TODO: 方法1，用其他人的metric指标
-                    true_seq, pred_seq = gt_answer, llm_answer
-                    # 提取所有唯一事件
-                    events = set(true_seq) | set(pred_seq)
+                    pred_tokens = self.tokenize(str(llm_answer))
+                    gt_tokens = self.tokenize(str(gt_answer))
+                    lcs_len = LCSseq.similarity(pred_tokens, gt_tokens)
+                    lcs_ratio_gt = (lcs_len / len(pred_tokens)) if len(pred_tokens) > 0 else 0.0
 
-                    # 创建事件到索引的映射
-                    true_positions = {event: [] for event in events}
-                    pred_positions = {event: [] for event in events}
-
-                    # 记录每个事件在序列中的位置
-                    for i, event in enumerate(true_seq):
-                        true_positions[event].append(i)
-                    for i, event in enumerate(pred_seq):
-                        pred_positions[event].append(i)
-
-                    true_pairs = set()
-                    pred_pairs = set()
-
-                    # 生成真实序列中的时序关系对
-                    for i in range(len(true_seq)):
-                        for j in range(i + 1, len(true_seq)):
-                            true_pairs.add((true_seq[i], true_seq[j], j - i))
-
-                    # 生成预测序列中的时序关系对
-                    for i in range(len(pred_seq)):
-                        for j in range(i + 1, len(pred_seq)):
-                            pred_pairs.add((pred_seq[i], pred_seq[j], j - i))
-
-                    # 计算匹配的时序关系对
-                    matched_pairs = true_pairs & pred_pairs
-
-                    # precision, recall, f1
-                    precision = len(matched_pairs) / len(pred_pairs) if len(pred_pairs) > 0 else 0
-                    recall = len(matched_pairs) / len(true_pairs) if len(true_pairs) > 0 else 0
-                    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
-
-                    reward += f1
+                    reward += (lcs_ratio_gt * 5)
 
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
@@ -207,7 +180,7 @@ class SeizureORM(ORM):
                 # TODO: 病人诊断报告。open-ended问题, 计算bleu+rouge
                 # ground-truth example: The patient is sleeping in bed. He lets out a loud...
                 try:
-                    print(f"debug task 6: llm answer {llm_answer}, gt answer {gt_answer}")
+                    #print(f"debug task 6: llm answer {llm_answer}, gt answer {gt_answer}")
                     # TODO: task 6用bleu和rouge来计算相似度作为一个baseline
                     reward += self.computing_bleu_rouge_score(cand=llm_answer, ref=gt_answer)
                 except Exception as e:
@@ -219,20 +192,22 @@ class SeizureORM(ORM):
                 # TODO: 癫痫判断，ES和NES。equal问题
                 # ground-truth example: ES
                 try:
-                    print(f"debug task 7-1: llm answer {llm_answer}, gt answer {gt_answer}")
+                    #print(f"debug task 7-1: llm answer {llm_answer}, gt answer {gt_answer}")
                     # TODO: task 3直接用equal来判断是否相等
                     if gt_answer == llm_answer:
                         reward += 1.0
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
-                    reward = 0.0
+                    reward += 0.0
                 rewards.append(reward)
 
             elif task == "task-7-2":
                 # TODO: 癫痫判断，ES和NES，以及对应的description。equal问题和open-ended question
                 # ground-truth example: {'answer': 'ES', 'description': 'Occurs out of sleep. Patient under the cove...'}
                 try:
-                    print(f"debug task 7-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
+                    #print(f"debug task 7-2: llm answer {llm_answer}, gt answer {gt_answer}", type(llm_answer), type(gt_answer))
+                    llm_answer = json.loads(llm_answer)
+                    #print(f"debug task 7-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
                     # TODO: task 7先对疾病针对做equal判断，然后对description进行相似度判断
                     if llm_answer["answer"] == gt_answer["answer"]:
                         reward += 0.5
@@ -241,8 +216,8 @@ class SeizureORM(ORM):
                     print(f"[SeizureORM] Evaluation failed: {e}")
                 rewards.append(reward)
 
-            print(f"task is {task}, reward is {reward}")
-        print(rewards)
+            #print(f"task is {task}, reward is {reward}")
+        #print(rewards)
         return rewards
 
 
@@ -263,6 +238,19 @@ class SeizureORM(ORM):
         # TODO: 计算综合分数
         score = 0.5 * (bleu + rouge_l)
         return score
+
+    def tokenize(self,seq_str: str) -> list[str]:
+        if pd.isna(seq_str):
+            return []
+        parts = [p for p in re.split(r",", str(seq_str))]
+        tokens = []
+        for p in parts:
+            t = p.strip().strip('"').strip("'").strip()
+            t = t.rstrip(".;")
+            t = re.sub(r"\s+", "_", t)
+            if t:
+                tokens.append(t)
+        return tokens
 
 
 orms['seizure'] = SeizureORM

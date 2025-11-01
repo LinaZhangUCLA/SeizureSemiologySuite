@@ -1,0 +1,2109 @@
+segment_video_name,segment_feature_list
+A0002@5-13-2021@UA6693LK@sz_v1_1_segment_0.mp4,arm_flexion, head_turning, arm_straightening, figure4, tonic
+A0002@5-13-2021@UA6693LK@sz_v1_1_segment_1.mp4,arm_flexion, head_turning, arm_straightening, figure4, tonic, face_twitching, clonic
+A0002@5-13-2021@UA6693LK@sz_v1_1_segment_2.mp4,arm_straightening, figure4, tonic, face_twitching, clonic
+A0002@5-13-2021@UA6693LK@sz_v1_1_segment_3.mp4,arm_straightening, figure4, tonic, face_twitching, clonic
+A0002@5-13-2021@UA6693LK@sz_v2_1_segment_0.mp4,
+A0002@5-13-2021@UA6693LK@sz_v2_1_segment_1.mp4,
+A0002@5-13-2021@UA6693LY@sz_v1_1_segment_0.mp4,head_turning, arm_flexion, tonic, face_twitching, arm_straightening, figure4
+A0002@5-13-2021@UA6693LY@sz_v1_1_segment_1.mp4,head_turning, arm_flexion, tonic, face_twitching, arm_straightening, figure4
+A0002@5-13-2021@UA6693LY@sz_v1_1_segment_2.mp4,tonic, face_twitching, arm_straightening
+A0002@5-13-2021@UA6693LY@sz_v1_1_segment_3.mp4,tonic, face_twitching, arm_straightening, clonic
+A0003@10-20-2020@DA0015B9@sz_v1_1_segment_0.mp4,face_pulling, tonic, arm_straightening, arm_flexion, head_turning, figure4, face_twitching, clonic
+A0003@10-20-2020@DA0015B9@sz_v1_1_segment_1.mp4,tonic, arm_straightening, arm_flexion, head_turning, figure4, face_twitching, clonic
+A0003@10-20-2020@DA0015B9@sz_v2_1_segment_0.mp4,limb_automatisms, face_pulling, arm_straightening, tonic, arm_flexion, figure4, face_twitching
+A0003@10-20-2020@DA0015BA@sz_v3_1_segment_0.mp4,face_pulling, tonic, arm_straightening, limb_automatisms, arm_flexion, face_twitching, eye_blinking
+A0003@10-20-2020@DA0015BA@sz_v4_1_segment_0.mp4,face_pulling, tonic, arm_straightening, arm_flexion, eye_blinking, face_twitching
+A0003@10-20-2020@UA6692PZ@sz_v1_1_segment_0.mp4,face_pulling, arm_straightening, face_twitching, tonic, eye_blinking, arm_flexion, figure4
+A0003@10-20-2020@UA6692Q0@sz_v1_1_segment_0.mp4,face_pulling, face_twitching, limb_automatisms, eye_blinking
+A0003@10-20-2020@UA6692Q0@sz_v3_1_segment_0.mp4,face_pulling, limb_automatisms
+A0003@10-20-2020@UA6692Q0@sz_v4_1_segment_0.mp4,limb_automatisms, face_pulling
+A0003@10-20-2020@UA6692Q0@sz_v4_1_segment_1.mp4,limb_automatisms, face_pulling, tonic, eye_blinking, face_twitching
+A0003@10-20-2020@UA6692Q1@sz_v1_1_segment_0.mp4,
+A0003@10-20-2020@UA6692Q1@sz_v1_1_segment_1.mp4,limb_automatisms
+A0003@10-20-2020@UA6692Q1@sz_v2_1_segment_0.mp4,face_pulling, tonic, limb_automatisms, blank_stare, arm_straightening, face_twitching, arm_flexion, eye_blinking
+A0004@5-21-2019@DA0012TK@sz_v2_1_segment_0.mp4,limb_automatisms
+A0006@11-19-2019@DA0013UT@sz_v3_1_segment_0.mp4,arm_flexion, blank_stare, arm_straightening, head_turning, face_pulling, figure4
+A0006@11-19-2019@DA0013UT@sz_v3_1_segment_1.mp4,arm_flexion, blank_stare, arm_straightening, head_turning, face_pulling, figure4
+A0007@11-21-2017@DA3332LI@sz_v1_1_segment_0.mp4,limb_automatisms
+A0007@11-21-2017@DA3332LI@sz_v1_1_segment_1.mp4,limb_automatisms, clonic, full_body_shaking
+A0007@11-21-2017@DA3332LI@sz_v1_1_segment_2.mp4,limb_automatisms, clonic, full_body_shaking, head_turning
+A0007@11-21-2017@DA3332LI@sz_v1_1_segment_3.mp4,limb_automatisms, clonic, full_body_shaking, head_turning, arm_straightening, tonic, arm_flexion, figure4
+A0007@11-21-2017@DA3332LI@sz_v1_1_segment_4.mp4,limb_automatisms, clonic, full_body_shaking, arm_straightening, tonic, arm_flexion, figure4
+A0007@11-21-2017@DA3332LI@sz_v1_1_segment_5.mp4,limb_automatisms, clonic, full_body_shaking, arm_straightening, tonic
+A0007@11-21-2017@DA3332LI@sz_v1_1_segment_6.mp4,limb_automatisms, clonic, arm_straightening
+A0007@11-21-2017@DA3332M5@sz_v1_1_segment_0.mp4,arms_move_simultaneously, arm_flexion, head_turning
+A0007@11-21-2017@DA3332M5@sz_v1_1_segment_1.mp4,arms_move_simultaneously, arm_flexion, head_turning, full_body_shaking, arm_straightening
+A0007@11-21-2017@DA3332M5@sz_v1_1_segment_2.mp4,head_turning, full_body_shaking, arm_straightening, clonic
+A0007@11-21-2017@DA3332M5@sz_v1_1_segment_3.mp4,full_body_shaking, arm_straightening, clonic
+A0007@11-21-2017@DA3332M9@sz_v1_1_segment_0.mp4,limb_automatisms, arm_flexion, face_pulling, head_turning, face_twitching
+A0007@11-21-2017@DA3332M9@sz_v1_1_segment_1.mp4,arm_flexion, face_pulling, head_turning, face_twitching, arm_straightening, figure4, tonic
+A0007@11-21-2017@DA3332M9@sz_v1_1_segment_2.mp4,head_turning, face_twitching, arm_straightening, tonic, clonic
+A0007@11-21-2017@DA3332M9@sz_v1_1_segment_3.mp4,face_twitching, arm_straightening, clonic
+B0001@9-15-2022@DA1322M1@sz_v1_1_segment_0.mp4,head_turning, arm_flexion, face_pulling, face_twitching
+B0001@9-15-2022@DA1322M1@sz_v1_1_segment_1.mp4,arm_flexion, face_pulling, face_twitching, limb_automatisms
+B0001@9-15-2022@DA1322M1@sz_v1_1_segment_2.mp4,arm_flexion, face_pulling, face_twitching, limb_automatisms, clonic
+D0001@9-25-2018@DA0011NN@nes_v1_1_segment_0.mp4,limb_automatisms, head_turning
+D0002@5-29-2014@TA76406W@nes_v2_1_segment_0.mp4,limb_automatisms
+D0002@5-29-2014@TA76406W@nes_v2_2_segment_0.mp4,limb_automatisms, asynchronous_movement
+D0002@5-29-2014@TA76406W@nes_v2_2_segment_1.mp4,limb_automatisms, asynchronous_movement
+D0002@5-29-2014@TA76406W@nes_v3_1_segment_0.mp4,blank_stare, asynchronous_movement, arms_move_simultaneously, oral_automatisms
+D0002@5-29-2014@TA76406W@nes_v3_1_segment_1.mp4,asynchronous_movement, oral_automatisms
+D0002@5-29-2014@TA76406W@nes_v4_1_segment_0.mp4,asynchronous_movement, arms_move_simultaneously, face_pulling
+D0002@5-29-2014@TA76406X@nes_v1_1_segment_0.mp4,close_eyes, oral_automatisms, asynchronous_movement, arms_move_simultaneously, blank_stare, full_body_shaking
+D0002@5-29-2014@TA76406X@nes_v1_1_segment_1.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously, blank_stare, full_body_shaking
+D0002@5-29-2014@TA76406Z@nes_v1_1_segment_0.mp4,limb_automatisms, blank_stare
+D0002@5-29-2014@TA76406Z@nes_v1_1_segment_1.mp4,blank_stare, oral_automatisms, asynchronous_movement, close_eyes
+D0002@5-29-2014@TA76406Z@nes_v1_1_segment_2.mp4,blank_stare, oral_automatisms, asynchronous_movement, close_eyes
+D0002@5-29-2014@TA76406Z@nes_v1_1_segment_3.mp4,blank_stare, asynchronous_movement, close_eyes
+D0002@5-29-2014@TA76406Z@nes_v1_1_segment_4.mp4,blank_stare, asynchronous_movement, close_eyes
+D0002@5-29-2014@TA76406Z@nes_v1_1_segment_5.mp4,asynchronous_movement, close_eyes
+D0002@5-29-2014@TA76406Z@nes_v1_1_segment_6.mp4,asynchronous_movement, close_eyes
+D0002@5-29-2014@TA76406Z@nes_v3_1_segment_0.mp4,
+D0002@5-29-2014@TA76406Z@nes_v3_1_segment_1.mp4,
+D0002@5-29-2014@VA7610ZK@nes_v1_1_segment_0.mp4,oral_automatisms, close_eyes
+D0002@5-29-2014@VA7610ZK@nes_v1_1_segment_1.mp4,oral_automatisms, limb_automatisms
+D0002@5-29-2014@VA7610ZK@nes_v1_1_segment_2.mp4,limb_automatisms
+D0002@5-29-2014@VA7610ZK@nes_v1_1_segment_3.mp4,blank_stare
+D0002@5-29-2014@VA7610ZK@nes_v1_1_segment_4.mp4,blank_stare
+D0002@5-29-2014@VA7610ZK@nes_v1_1_segment_5.mp4,blank_stare
+D0002@5-29-2014@VA7610ZK@nes_v1_1_segment_6.mp4,
+D0002@5-29-2014@VA7610ZK@nes_v1_1_segment_7.mp4,
+D0002@5-29-2014@VA7610ZK@nes_v1_1_segment_8.mp4,
+D0002@5-29-2014@VA7610ZK@nes_v1_1_segment_9.mp4,
+D0002@5-29-2014@VA7610ZK@nes_v2_1_segment_0.mp4,blank_stare
+D0002@5-29-2014@VA7610ZK@nes_v2_1_segment_1.mp4,blank_stare
+D0002@5-29-2014@VA7610ZK@nes_v2_1_segment_2.mp4,blank_stare, oral_automatisms
+D0002@5-29-2014@VA7610ZK@nes_v2_1_segment_3.mp4,blank_stare, oral_automatisms, asynchronous_movement, arms_move_simultaneously
+D0002@5-29-2014@VA7610ZK@nes_v2_1_segment_4.mp4,arms_move_simultaneously
+D0002@5-29-2014@VA7610ZK@nes_v4_1_segment_0.mp4,asynchronous_movement
+D0002@5-29-2014@VA7610ZK@nes_v4_1_segment_1.mp4,asynchronous_movement, close_eyes, arms_move_simultaneously, full_body_shaking
+D0002@5-29-2014@VA7610ZK@nes_v4_1_segment_2.mp4,asynchronous_movement, close_eyes, arms_move_simultaneously, full_body_shaking
+D0002@5-29-2014@VA7610ZK@nes_v4_1_segment_3.mp4,asynchronous_movement, close_eyes, arms_move_simultaneously, full_body_shaking
+D0002@5-29-2014@VA7610ZK@nes_v4_1_segment_4.mp4,close_eyes
+D0002@5-29-2014@VA7610ZK@nes_v4_1_segment_5.mp4,close_eyes
+D0002@5-29-2014@VA76111G@nes_v1_1_segment_0.mp4,asynchronous_movement
+D0002@5-29-2014@VA76111G@nes_v1_1_segment_1.mp4,asynchronous_movement, arms_move_simultaneously
+D0002@5-29-2014@VA76111G@nes_v1_1_segment_2.mp4,asynchronous_movement, arms_move_simultaneously
+D0002@5-29-2014@VA76111G@nes_v1_1_segment_3.mp4,
+D0002@5-29-2014@VA76111G@nes_v1_1_segment_4.mp4,
+D0003@8-20-2018@DA0011FY@sz_v1_1_segment_0.mp4,
+D0003@8-20-2018@DA0011FY@sz_v1_1_segment_1.mp4,
+D0003@8-20-2018@DA0011FY@sz_v1_1_segment_2.mp4,head_turning, face_pulling, tonic, arm_straightening, eye_blinking
+D0003@8-20-2018@DA0011FY@sz_v1_1_segment_3.mp4,tonic, arm_straightening, eye_blinking, clonic, face_twitching
+D0003@8-20-2018@DA0011FY@sz_v1_1_segment_4.mp4,arm_straightening, clonic, face_twitching
+D0003@8-20-2018@DA7021DY@sz_v1_1_segment_0.mp4,
+D0003@8-20-2018@DA7021DY@sz_v1_1_segment_1.mp4,arm_flexion, tonic, full_body_shaking, arms_move_simultaneously, arm_straightening, clonic
+D0003@8-20-2018@DA7021DY@sz_v1_1_segment_2.mp4,tonic, full_body_shaking, arm_straightening, clonic
+D0003@8-20-2018@DA7021DY@sz_v1_1_segment_3.mp4,full_body_shaking, arm_straightening, clonic
+D0004@12-11-2017@DA00100C@sz_v1_1_segment_0.mp4,
+D0004@12-11-2017@DA00100C@sz_v1_1_segment_1.mp4,face_pulling, head_turning, tonic, arms_move_simultaneously, arm_straightening
+D0004@12-11-2017@DA00100C@sz_v1_1_segment_2.mp4,face_pulling, tonic, arms_move_simultaneously, arm_straightening, clonic, arm_flexion
+D0004@12-11-2017@DA00100C@sz_v1_1_segment_3.mp4,tonic, clonic, arm_flexion
+D0004@12-11-2017@DA00100C@sz_v1_1_segment_4.mp4,clonic, eye_blinking
+D0004@12-11-2017@DA00100C@sz_v1_1_segment_5.mp4,clonic, eye_blinking
+D0004@12-11-2017@DA00100C@sz_v1_1_segment_6.mp4,clonic, eye_blinking, figure4
+D0004@12-11-2017@DA00100C@sz_v1_1_segment_7.mp4,eye_blinking, figure4
+D0004@12-11-2017@DA00100D@sz_v2_1_segment_0.mp4,
+D0004@12-11-2017@DA00100D@sz_v2_1_segment_1.mp4,tonic
+D0004@12-11-2017@DA00100D@sz_v2_1_segment_2.mp4,tonic, arm_flexion, figure4, arm_straightening
+D0004@12-11-2017@DA00100D@sz_v2_1_segment_3.mp4,tonic, arm_straightening, clonic, oral_automatisms
+D0004@12-11-2017@DA00100D@sz_v2_1_segment_4.mp4,clonic, oral_automatisms
+D0004@12-11-2017@DA00100U@sz_v1_1_segment_0.mp4,head_turning, arm_straightening, tonic, arm_flexion, figure4
+D0004@12-11-2017@DA00100U@sz_v1_1_segment_1.mp4,head_turning, arm_straightening, tonic, arm_flexion, figure4, clonic
+D0004@12-11-2017@DA00100U@sz_v1_1_segment_2.mp4,arm_straightening, tonic, clonic
+D0004@12-11-2017@DA00100U@sz_v1_1_segment_3.mp4,clonic
+E0003@6-27-2022@KA96022I@nes_v1_1_segment_0.mp4,
+E0003@6-27-2022@KA96022I@nes_v1_1_segment_1.mp4,
+E0003@6-27-2022@KA96022I@nes_v1_1_segment_2.mp4,
+E0003@6-27-2022@KA96022I@nes_v1_1_segment_3.mp4,
+E0005@6-5-2018@DA7020X7@sz_v1_1_segment_0.mp4,limb_automatisms
+E0005@6-5-2018@DA7020X7@sz_v1_1_segment_1.mp4,oral_automatisms, head_turning
+E0005@6-5-2018@DA7020X7@sz_v1_1_segment_2.mp4,oral_automatisms, head_turning, clonic, arm_straightening, tonic, arm_flexion, figure4
+E0005@6-5-2018@DA7020X7@sz_v1_1_segment_3.mp4,clonic, arm_straightening, tonic, arm_flexion, figure4
+E0006@6-2-2015@TA7641ZV@sz_v1_1_segment_0.mp4,tonic, face_twitching, clonic, arm_flexion, head_turning
+E0006@6-2-2015@TA7641ZV@sz_v1_1_segment_1.mp4,tonic, face_twitching, clonic, head_turning
+E0006@6-2-2015@TA7641ZV@sz_v1_1_segment_2.mp4,tonic, face_twitching, clonic, head_turning
+E0006@6-2-2015@TA7641ZV@sz_v1_1_segment_3.mp4,tonic, clonic, head_turning
+E0006@6-2-2015@TA7641ZV@sz_v1_1_segment_4.mp4,tonic, clonic, head_turning
+E0006@6-2-2015@TA7641ZV@sz_v1_1_segment_5.mp4,clonic
+E0007@10-8-2014@TA7640SH@sz_v1_1_segment_0.mp4,
+E0007@10-8-2014@TA7640SH@sz_v1_1_segment_1.mp4,limb_automatisms
+E0007@10-8-2014@TA7640SH@sz_v1_1_segment_2.mp4,limb_automatisms, head_turning
+E0007@10-8-2014@TA7640SH@sz_v1_1_segment_3.mp4,head_turning
+E0007@10-8-2014@TA7640SH@sz_v1_1_segment_4.mp4,
+E0007@10-8-2014@TA7640TP@sz_v1_1_segment_0.mp4,limb_automatisms
+E0007@10-8-2014@TA7640TP@sz_v1_1_segment_1.mp4,limb_automatisms
+E0007@10-8-2014@TA7640TP@sz_v1_1_segment_2.mp4,
+E0007@10-8-2014@TA7640TP@sz_v1_1_segment_3.mp4,
+E0007@10-8-2014@VA7631PO@sz_v1_1_segment_0.mp4,limb_automatisms
+E0007@10-8-2014@VA7631PO@sz_v1_1_segment_1.mp4,limb_automatisms
+E0007@10-8-2014@VA7631PO@sz_v1_1_segment_2.mp4,limb_automatisms, oral_automatisms
+E0007@10-8-2014@VA7631PO@sz_v1_1_segment_3.mp4,limb_automatisms, oral_automatisms
+E0007@10-8-2014@VA7631PO@sz_v1_1_segment_4.mp4,limb_automatisms
+E0007@10-8-2014@VA7631PO@sz_v1_1_segment_5.mp4,limb_automatisms
+E0008@1-22-2015@TA7641A3@sz_v1_1_segment_0.mp4,oral_automatisms, clonic, face_twitching
+E0008@1-22-2015@TA7641A3@sz_v1_1_segment_1.mp4,oral_automatisms, clonic, face_twitching
+E0008@1-22-2015@TA7641A3@sz_v1_1_segment_2.mp4,oral_automatisms, clonic, face_twitching
+E0009@11-23-2020@DA0015I7@sz_v1_1_segment_0.mp4,head_turning, arms_move_simultaneously, arm_flexion
+E0009@11-23-2020@DA0015I7@sz_v1_1_segment_1.mp4,head_turning, arms_move_simultaneously, arm_flexion, clonic, oral_automatisms, arm_straightening, figure4
+E0009@11-23-2020@DA0015I7@sz_v1_1_segment_2.mp4,arms_move_simultaneously, arm_flexion, clonic, oral_automatisms, arm_straightening, figure4, tonic
+E0009@11-23-2020@DA0015I8@sz_v1_1_segment_0.mp4,head_turning, tonic, arm_flexion, face_pulling, full_body_shaking, arms_move_simultaneously, clonic
+E0009@11-23-2020@DA0015I8@sz_v1_1_segment_1.mp4,tonic, arm_flexion, face_pulling, full_body_shaking, arms_move_simultaneously, clonic, eye_blinking, arm_straightening, figure4
+E0009@11-23-2020@DA0015I8@sz_v1_1_segment_2.mp4,tonic, arm_flexion, face_pulling, full_body_shaking, clonic, arm_straightening, figure4
+E0009@11-23-2020@DA0015I8@sz_v1_1_segment_3.mp4,arm_flexion, face_pulling, clonic
+E0009@11-23-2020@DA0015II@sz_v1_1_segment_0.mp4,head_turning, arms_move_simultaneously, arm_flexion, tonic, face_pulling, arm_straightening, figure4, eye_blinking
+E0009@11-23-2020@DA0015II@sz_v1_1_segment_1.mp4,arm_flexion, tonic, face_pulling, arm_straightening, figure4, eye_blinking, clonic
+E0009@11-23-2020@DA0015II@sz_v1_1_segment_2.mp4,arm_flexion, eye_blinking, clonic, oral_automatisms
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_0.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_1.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_2.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_3.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_4.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_5.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_6.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_7.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_8.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_9.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_10.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_11.mp4,close_eyes, face_pulling
+E0010@6-29-2021@DA0016IF@nes_v1_1_segment_12.mp4,close_eyes
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_0.mp4,
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_1.mp4,
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_2.mp4,clonic, blank_stare, head_turning
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_3.mp4,clonic, blank_stare, head_turning, arm_straightening, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_4.mp4,clonic, blank_stare, head_turning, arm_straightening, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_5.mp4,clonic, blank_stare, arm_straightening, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_6.mp4,clonic, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_7.mp4,clonic, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_8.mp4,clonic, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_9.mp4,clonic, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_10.mp4,clonic, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_11.mp4,clonic, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_12.mp4,clonic, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_13.mp4,clonic, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_14.mp4,clonic, arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_15.mp4,arms_move_simultaneously
+F0001@9-28-2022@KA9602FL@sz_v1_1_segment_16.mp4,arms_move_simultaneously
+F0002@4-26-2018@DA0010PI@sz_v1_1_segment_0.mp4,head_turning, face_pulling, clonic, close_eyes
+F0002@4-26-2018@DA0010PI@sz_v1_1_segment_1.mp4,head_turning, face_pulling, clonic, close_eyes
+F0002@4-26-2018@DA0010PI@sz_v1_1_segment_2.mp4,clonic, close_eyes
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_0.mp4,
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_1.mp4,limb_automatisms
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_2.mp4,limb_automatisms, head_turning, arm_flexion, tonic, arm_straightening, figure4, oral_automatisms
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_3.mp4,tonic, arm_straightening, oral_automatisms, clonic
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_4.mp4,arm_straightening, oral_automatisms, clonic
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_5.mp4,arm_straightening, clonic
+G0001@6-20-2019@DA0012ZY@sz_v2_1_segment_0.mp4,oral_automatisms
+G0001@6-20-2019@DA0012ZY@sz_v2_1_segment_1.mp4,oral_automatisms, head_turning, face_pulling
+G0001@6-20-2019@DA0012ZY@sz_v2_1_segment_2.mp4,oral_automatisms, head_turning, face_pulling, full_body_shaking, arm_straightening, clonic
+G0001@6-20-2019@DA0012ZY@sz_v2_1_segment_3.mp4,full_body_shaking, arm_straightening, clonic, arm_flexion
+G0001@6-20-2019@DA0012ZY@sz_v2_1_segment_4.mp4,arm_straightening, clonic, arm_flexion
+H0001@2-10-2015@TA7641DP@sz_v1_1_segment_0.mp4,arm_flexion, face_twitching
+H0001@2-10-2015@TA7641DP@sz_v1_1_segment_1.mp4,arm_flexion, face_twitching, face_pulling, head_turning
+H0001@2-10-2015@TA7641DP@sz_v2_1_segment_0.mp4,oral_automatisms
+H0001@2-10-2015@TA7641DP@sz_v2_1_segment_1.mp4,oral_automatisms, arm_flexion
+H0001@2-10-2015@TA7641DP@sz_v2_1_segment_2.mp4,oral_automatisms, arm_flexion, face_pulling, face_twitching
+H0001@2-10-2015@TA7641DP@sz_v2_1_segment_3.mp4,face_pulling, face_twitching
+H0001@2-10-2015@VA7632CV@sz_v1_1_segment_0.mp4,
+H0001@2-10-2015@VA7632CV@sz_v1_1_segment_1.mp4,blank_stare, face_twitching, head_turning, arm_flexion
+H0001@2-10-2015@VA7632CV@sz_v1_1_segment_2.mp4,blank_stare, face_twitching, head_turning, arm_flexion, oral_automatisms, face_pulling, clonic, tonic, arm_straightening
+H0001@2-10-2015@VA7632CV@sz_v1_1_segment_3.mp4,blank_stare, face_twitching, arm_flexion, oral_automatisms, face_pulling, clonic, tonic, arm_straightening
+H0001@2-10-2015@VA7632CV@sz_v1_1_segment_4.mp4,blank_stare, oral_automatisms, face_pulling, clonic, tonic, arm_straightening
+H0001@2-10-2015@VA7632CV@sz_v3_1_segment_0.mp4,
+H0001@2-10-2015@VA7632CV@sz_v3_1_segment_1.mp4,oral_automatisms, clonic, blank_stare, face_twitching
+H0001@2-10-2015@VA7632CV@sz_v3_1_segment_2.mp4,oral_automatisms, clonic, blank_stare, face_twitching, arm_straightening, face_pulling, tonic
+H0001@2-10-2015@VA7632CV@sz_v3_1_segment_3.mp4,oral_automatisms, clonic, blank_stare, arm_straightening
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_0.mp4,oral_automatisms, limb_automatisms
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_1.mp4,oral_automatisms, limb_automatisms
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_2.mp4,limb_automatisms
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_3.mp4,limb_automatisms
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_4.mp4,limb_automatisms
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_5.mp4,
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_6.mp4,
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_7.mp4,
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_8.mp4,
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_9.mp4,arm_flexion
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_10.mp4,arm_flexion, clonic
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_11.mp4,arm_flexion, clonic
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_12.mp4,clonic
+H0002@12-11-2019@DA0013XA@sz_v1_1_segment_13.mp4,
+H0002@12-11-2019@DA0013XI@sz_v2_1_segment_0.mp4,oral_automatisms, limb_automatisms
+H0002@12-11-2019@DA0013XI@sz_v2_1_segment_1.mp4,oral_automatisms, limb_automatisms
+H0003@6-2-2022@KA9601YM@sz_v1_1_segment_0.mp4,oral_automatisms, head_turning, tonic
+H0003@6-2-2022@KA9601YM@sz_v1_1_segment_1.mp4,head_turning, tonic, arm_straightening, clonic, arm_flexion
+H0003@6-2-2022@KA9601YM@sz_v1_1_segment_2.mp4,tonic, arm_straightening, clonic, arm_flexion
+H0003@6-2-2022@KA9601YM@sz_v2_1_segment_0.mp4,head_turning, face_pulling, tonic, face_twitching, arm_flexion, arm_straightening
+H0003@6-2-2022@KA9601YM@sz_v2_1_segment_1.mp4,head_turning, face_pulling, tonic, face_twitching, arm_flexion, arm_straightening, eye_blinking, clonic
+H0003@6-2-2022@KA9601YM@sz_v2_1_segment_2.mp4,tonic, eye_blinking, clonic
+H0003@6-2-2022@KA9601YN@sz_v1_1_segment_0.mp4,oral_automatisms, face_pulling, arm_flexion
+H0003@6-2-2022@KA9601YN@sz_v1_1_segment_1.mp4,face_pulling, arm_flexion, arm_straightening, tonic, clonic
+H0003@6-2-2022@KA9601YN@sz_v1_1_segment_2.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_0.mp4,blank_stare
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_1.mp4,
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_2.mp4,
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_3.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_4.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_5.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_6.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_7.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_8.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_9.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_10.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_11.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_12.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_13.mp4,clonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_14.mp4,clonic, arm_flexion, arms_move_simultaneously
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_15.mp4,clonic, arm_flexion, arms_move_simultaneously, head_turning, tonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_16.mp4,clonic, arm_flexion, arms_move_simultaneously, tonic
+H0004@2-19-2020@DA00149V@sz_v1_1_segment_17.mp4,clonic, arm_flexion, tonic
+H0004@2-19-2020@UA6691S7@sz_v1_1_segment_0.mp4,arm_flexion, head_turning, tonic, clonic
+H0004@2-19-2020@UA6691S7@sz_v1_1_segment_1.mp4,arm_flexion, head_turning, tonic, clonic
+H0004@2-19-2020@UA6691S7@sz_v1_1_segment_2.mp4,arm_flexion, tonic
+I0001@8-25-2022@KA96029R@sz_v1_1_segment_0.mp4,tonic, arm_flexion, head_turning
+I0002@5-9-2019@DA0012RL@nes_v1_1_segment_0.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v1_1_segment_1.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v1_1_segment_2.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v1_1_segment_3.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v1_1_segment_4.mp4,close_eyes, tonic
+I0002@5-9-2019@DA0012RL@nes_v1_1_segment_5.mp4,close_eyes, tonic
+I0002@5-9-2019@DA0012RL@nes_v1_1_segment_6.mp4,close_eyes, tonic
+I0002@5-9-2019@DA0012RL@nes_v1_1_segment_7.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v1_1_segment_8.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v1_1_segment_9.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_0.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_1.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_2.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_3.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_4.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_5.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_6.mp4,close_eyes, asynchronous_movement, clonic
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_7.mp4,close_eyes, asynchronous_movement, clonic
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_8.mp4,close_eyes, asynchronous_movement, clonic
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_9.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_10.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_11.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_12.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_13.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_14.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RL@nes_v2_1_segment_15.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_0.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_1.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_2.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_3.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_4.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_5.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_6.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_7.mp4,close_eyes, asynchronous_movement, full_body_shaking, arm_straightening, arms_move_simultaneously
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_8.mp4,close_eyes, asynchronous_movement, full_body_shaking, arm_straightening, arms_move_simultaneously
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_9.mp4,close_eyes, asynchronous_movement, full_body_shaking, arms_move_simultaneously
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_10.mp4,close_eyes, asynchronous_movement, full_body_shaking, arms_move_simultaneously
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_11.mp4,close_eyes, asynchronous_movement, full_body_shaking, arms_move_simultaneously
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_12.mp4,close_eyes, asynchronous_movement, full_body_shaking
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_13.mp4,close_eyes, asynchronous_movement, full_body_shaking
+I0002@5-9-2019@DA0012RL@nes_v3_1_segment_14.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_0.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_1.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_2.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_3.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_4.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_5.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_6.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_7.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_8.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_9.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_10.mp4,close_eyes
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_11.mp4,
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_12.mp4,
+I0002@5-9-2019@DA0012RL@nes_v4_1_segment_13.mp4,
+I0002@5-9-2019@DA0012RS@nes_v1_1_segment_0.mp4,arm_straightening, asynchronous_movement, arms_move_simultaneously, full_body_shaking
+I0002@5-9-2019@DA0012RS@nes_v1_1_segment_1.mp4,arm_straightening, asynchronous_movement, arms_move_simultaneously, full_body_shaking
+I0002@5-9-2019@DA0012RS@nes_v1_1_segment_2.mp4,arm_straightening, asynchronous_movement, full_body_shaking
+I0002@5-9-2019@DA0012RS@nes_v1_1_segment_3.mp4,arm_straightening, asynchronous_movement, full_body_shaking
+I0002@5-9-2019@DA0012RS@nes_v1_1_segment_4.mp4,arm_straightening, asynchronous_movement, full_body_shaking
+I0002@5-9-2019@DA0012RS@nes_v2_1_segment_0.mp4,close_eyes, arm_straightening, full_body_shaking, arms_move_simultaneously, asynchronous_movement, pelvic_thrusting
+I0002@5-9-2019@DA0012RS@nes_v2_1_segment_1.mp4,close_eyes, arm_straightening, full_body_shaking, arms_move_simultaneously, asynchronous_movement, pelvic_thrusting
+I0002@5-9-2019@DA0012RS@nes_v2_1_segment_2.mp4,close_eyes
+I0002@5-9-2019@DA0012RS@nes_v3_1_segment_0.mp4,asynchronous_movement, full_body_shaking, close_eyes
+I0002@5-9-2019@DA0012RS@nes_v3_1_segment_1.mp4,asynchronous_movement, full_body_shaking, close_eyes
+I0002@5-9-2019@DA0012RS@nes_v3_1_segment_2.mp4,asynchronous_movement, full_body_shaking, close_eyes
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_0.mp4,close_eyes
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_1.mp4,close_eyes
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_2.mp4,close_eyes, asynchronous_movement
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_3.mp4,close_eyes, asynchronous_movement, full_body_shaking, arms_move_simultaneously, arm_flexion
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_4.mp4,close_eyes, asynchronous_movement, full_body_shaking, arms_move_simultaneously, arm_flexion
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_5.mp4,close_eyes, asynchronous_movement, full_body_shaking, arms_move_simultaneously
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_6.mp4,close_eyes, asynchronous_movement, full_body_shaking, eye_blinking
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_7.mp4,close_eyes, asynchronous_movement, full_body_shaking, eye_blinking
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_8.mp4,close_eyes, asynchronous_movement, full_body_shaking
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_9.mp4,close_eyes, asynchronous_movement, limb_automatisms
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_10.mp4,close_eyes, asynchronous_movement, limb_automatisms
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_11.mp4,close_eyes, asynchronous_movement, limb_automatisms
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_12.mp4,close_eyes, asynchronous_movement, limb_automatisms
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_13.mp4,close_eyes, asynchronous_movement, limb_automatisms, arm_straightening, tonic
+I0002@5-9-2019@DA0012RS@nes_v4_1_segment_14.mp4,close_eyes, arm_straightening, tonic
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_0.mp4,close_eyes
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_1.mp4,close_eyes
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_2.mp4,close_eyes
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_3.mp4,close_eyes
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_4.mp4,close_eyes, eye_blinking
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_5.mp4,close_eyes, eye_blinking
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_6.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously, full_body_shaking
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_7.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously, full_body_shaking, pelvic_thrusting
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_8.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously, full_body_shaking
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_9.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously, full_body_shaking
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_10.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously, full_body_shaking
+I0002@5-9-2019@DA0012RS@nes_v5_1_segment_11.mp4,close_eyes
+I0002@5-9-2019@DA0012RT@nes_v1_1_segment_0.mp4,close_eyes, asynchronous_movement, full_body_shaking, arms_move_simultaneously
+I0002@5-9-2019@DA0012RT@nes_v2_1_segment_0.mp4,asynchronous_movement
+I0002@5-9-2019@DA0012RT@nes_v2_1_segment_1.mp4,asynchronous_movement, close_eyes
+I0002@5-9-2019@DA0012RT@nes_v2_1_segment_2.mp4,asynchronous_movement, close_eyes
+I0002@5-9-2019@DA0012RT@nes_v2_1_segment_3.mp4,asynchronous_movement, close_eyes, arms_move_simultaneously, full_body_shaking, arm_straightening
+I0002@5-9-2019@DA0012RT@nes_v2_1_segment_4.mp4,asynchronous_movement, close_eyes, arms_move_simultaneously, full_body_shaking, arm_straightening
+I0002@5-9-2019@DA0012RT@nes_v2_1_segment_5.mp4,close_eyes, full_body_shaking
+I0002@5-9-2019@DA0012RT@nes_v3_1_segment_0.mp4,asynchronous_movement, pelvic_thrusting
+I0002@5-9-2019@DA0012RT@nes_v3_1_segment_1.mp4,asynchronous_movement, pelvic_thrusting, tonic, arm_straightening
+I0002@5-9-2019@DA0012RT@nes_v3_1_segment_2.mp4,asynchronous_movement, pelvic_thrusting, tonic, arm_straightening, oral_automatisms
+I0002@5-9-2019@DA0012RT@nes_v3_1_segment_3.mp4,asynchronous_movement, pelvic_thrusting, tonic, arm_straightening, oral_automatisms, close_eyes
+I0002@5-9-2019@DA0012RT@nes_v3_1_segment_4.mp4,asynchronous_movement, pelvic_thrusting, close_eyes, full_body_shaking
+I0002@5-9-2019@DA0012RT@nes_v3_1_segment_5.mp4,asynchronous_movement, pelvic_thrusting, close_eyes, full_body_shaking
+I0002@5-9-2019@DA0012RT@nes_v3_1_segment_6.mp4,asynchronous_movement, close_eyes
+I0002@5-9-2019@DA0012RT@nes_v4_1_segment_0.mp4,close_eyes, full_body_shaking, arms_move_simultaneously, asynchronous_movement
+I0002@5-9-2019@DA0012RT@nes_v4_1_segment_1.mp4,close_eyes, full_body_shaking, arms_move_simultaneously, asynchronous_movement
+I0002@5-9-2019@DA0012RT@nes_v4_1_segment_2.mp4,close_eyes, full_body_shaking, asynchronous_movement
+I0002@5-9-2019@DA0012RT@nes_v4_1_segment_3.mp4,close_eyes, full_body_shaking, asynchronous_movement
+I0002@5-9-2019@DA0012RT@nes_v4_1_segment_4.mp4,close_eyes, full_body_shaking, asynchronous_movement
+I0002@5-9-2019@DA0012RT@nes_v4_1_segment_5.mp4,close_eyes, full_body_shaking, asynchronous_movement
+I0003@12-15-2020@DA0015L9@sz_v1_1_segment_0.mp4,limb_automatisms
+I0003@12-15-2020@DA0015L9@sz_v1_1_segment_1.mp4,arm_flexion, arm_straightening, tonic
+I0003@12-15-2020@DA0015L9@sz_v1_1_segment_2.mp4,arm_flexion, arm_straightening, tonic
+I0003@12-15-2020@DA0015L9@sz_v1_1_segment_3.mp4,arm_flexion, tonic, head_turning, face_pulling, clonic, eye_blinking, oral_automatisms
+I0003@12-15-2020@DA0015L9@sz_v1_1_segment_4.mp4,arm_flexion, tonic, face_pulling, clonic, eye_blinking, oral_automatisms
+I0003@12-15-2020@DA0015L9@sz_v1_1_segment_5.mp4,arm_flexion, clonic, oral_automatisms
+I0003@12-15-2020@DA0015L9@sz_v1_1_segment_6.mp4,clonic
+I0004@11-18-2019@UA669194@sz_v6_1_segment_0.mp4,blank_stare, head_turning
+I0004@11-18-2019@UA669194@sz_v6_1_segment_1.mp4,blank_stare, head_turning, face_pulling, face_twitching, oral_automatisms, arm_flexion, tonic, clonic, arm_straightening
+I0004@11-18-2019@UA669194@sz_v6_1_segment_2.mp4,head_turning, face_pulling, face_twitching, arm_flexion, tonic, clonic, arm_straightening
+I0004@11-18-2019@UA669194@sz_v6_1_segment_3.mp4,face_pulling, face_twitching, arm_flexion, clonic
+I0005@6-8-2022@KA960202@nes_v1_1_segment_0.mp4,close_eyes, asynchronous_movement, full_body_shaking, arm_flexion
+L0001@3-25-2022@DA1321G0@sz_v1_1_segment_0.mp4,
+L0001@3-25-2022@DA1321G0@sz_v1_1_segment_1.mp4,close_eyes
+L0001@3-25-2022@DA1321G0@sz_v1_1_segment_2.mp4,close_eyes
+L0001@3-25-2022@DA1321G0@sz_v1_1_segment_3.mp4,close_eyes
+L0001@3-25-2022@DA1321G0@sz_v1_1_segment_4.mp4,close_eyes
+L0001@3-25-2022@DA1321G0@sz_v1_1_segment_5.mp4,close_eyes
+L0001@3-25-2022@DA1321G0@sz_v2_1_segment_0.mp4,
+L0001@3-25-2022@DA1321G0@sz_v2_1_segment_1.mp4,asynchronous_movement
+L0001@3-25-2022@DA1321G0@sz_v2_1_segment_2.mp4,asynchronous_movement
+L0001@3-25-2022@KA9601DZ@sz_v1_1_segment_0.mp4,head_turning
+L0001@3-25-2022@KA9601DZ@sz_v1_2_segment_0.mp4,close_eyes
+L0001@3-25-2022@KA9601DZ@sz_v1_2_segment_1.mp4,close_eyes
+L0001@3-25-2022@KA9601E9@sz_v1_1_segment_0.mp4,arm_straightening, tonic, close_eyes
+L0001@3-25-2022@KA9601E9@sz_v1_1_segment_1.mp4,arm_straightening, tonic, close_eyes
+L0001@3-25-2022@KA9601E9@sz_v1_1_segment_2.mp4,arm_straightening, tonic, close_eyes, asynchronous_movement
+L0001@3-25-2022@KA9601E9@sz_v1_1_segment_3.mp4,arm_straightening, tonic, close_eyes, asynchronous_movement
+L0001@3-25-2022@KA9601E9@sz_v1_1_segment_4.mp4,arm_straightening, tonic, close_eyes, asynchronous_movement
+L0001@3-25-2022@KA9601E9@sz_v1_1_segment_5.mp4,arm_straightening, tonic, close_eyes, asynchronous_movement
+L0001@3-25-2022@KA9601E9@sz_v1_1_segment_6.mp4,arm_straightening, tonic, close_eyes, asynchronous_movement
+L0001@3-25-2022@KA9601E9@sz_v1_1_segment_7.mp4,arm_straightening, close_eyes, asynchronous_movement
+L0001@3-25-2022@KA9601E9@sz_v1_1_segment_8.mp4,arm_straightening, close_eyes
+L0001@3-25-2022@KA9601EA@sz_v1_1_segment_0.mp4,limb_automatisms, close_eyes
+L0001@3-25-2022@KA9601EA@sz_v1_1_segment_1.mp4,close_eyes
+L0001@3-25-2022@KA9601EA@sz_v1_1_segment_2.mp4,close_eyes
+L0001@3-25-2022@KA9601EA@sz_v1_1_segment_3.mp4,close_eyes, tonic, arm_straightening, asynchronous_movement
+L0001@3-25-2022@KA9601EA@sz_v1_1_segment_4.mp4,close_eyes, tonic, arm_straightening, asynchronous_movement
+L0001@3-25-2022@KA9601EA@sz_v1_1_segment_5.mp4,close_eyes, tonic, arm_straightening, asynchronous_movement
+L0001@3-25-2022@KA9601EA@sz_v1_1_segment_6.mp4,close_eyes, tonic, arm_straightening, asynchronous_movement
+L0001@3-25-2022@KA9601EA@sz_v1_1_segment_7.mp4,close_eyes, asynchronous_movement
+L0001@5-31-2022@KA9601X9@sz_v1_1_segment_0.mp4,
+L0001@5-31-2022@KA9601X9@sz_v1_1_segment_1.mp4,
+L0001@5-31-2022@KA9601X9@sz_v1_1_segment_2.mp4,
+L0001@5-31-2022@KA9601X9@sz_v1_1_segment_3.mp4,
+L0001@5-31-2022@KA9601XA@sz_v1_1_segment_0.mp4,close_eyes
+L0001@5-31-2022@KA9601XA@sz_v1_1_segment_1.mp4,close_eyes
+L0001@5-31-2022@KA9601XA@sz_v2_1_segment_0.mp4,limb_automatisms
+L0001@5-31-2022@KA9601XB@sz_v1_1_segment_0.mp4,close_eyes
+L0001@5-31-2022@KA9601XB@sz_v1_1_segment_1.mp4,close_eyes, limb_automatisms
+L0001@5-31-2022@KA9601XB@sz_v1_1_segment_2.mp4,close_eyes
+L0001@5-31-2022@KA9601XB@sz_v2_1_segment_0.mp4,close_eyes, tonic
+L0001@5-31-2022@KA9601XB@sz_v2_1_segment_1.mp4,close_eyes, tonic
+L0001@5-31-2022@KA9601XL@sz_v1_1_segment_0.mp4,
+L0001@5-31-2022@KA9601XL@sz_v1_1_segment_1.mp4,
+L0001@5-31-2022@KA9601XL@sz_v1_1_segment_2.mp4,
+L0001@5-31-2022@KA9601XL@sz_v1_1_segment_3.mp4,
+L0001@5-31-2022@KA9601XL@sz_v1_1_segment_4.mp4,eye_blinking
+L0001@5-31-2022@KA9601XL@sz_v1_1_segment_5.mp4,eye_blinking
+L0001@5-31-2022@KA9601XL@sz_v1_1_segment_6.mp4,eye_blinking
+L0001@5-31-2022@KA9601XL@sz_v2_1_segment_0.mp4,
+L0001@5-31-2022@KA9601XL@sz_v2_1_segment_1.mp4,
+L0001@5-31-2022@KA9601XL@sz_v2_1_segment_2.mp4,
+L0001@5-31-2022@KA9601XL@sz_v2_1_segment_3.mp4,tonic
+L0001@5-31-2022@KA9601XL@sz_v2_1_segment_4.mp4,tonic
+L0001@5-31-2022@KA9601XM@sz_v1_1_segment_0.mp4,close_eyes
+L0001@5-31-2022@KA9601XM@sz_v1_1_segment_1.mp4,close_eyes
+L0001@5-31-2022@KA9601XM@sz_v1_1_segment_2.mp4,close_eyes, asynchronous_movement
+L0001@5-31-2022@KA9601XM@sz_v1_1_segment_3.mp4,close_eyes, asynchronous_movement
+L0001@5-31-2022@KA9601XM@sz_v1_1_segment_4.mp4,close_eyes, tonic
+L0001@5-31-2022@KA9601XM@sz_v1_1_segment_5.mp4,close_eyes, tonic
+L0001@5-31-2022@KA9601XM@sz_v1_1_segment_6.mp4,close_eyes
+L0001@5-31-2022@KA9601XW@sz_v1_1_segment_0.mp4,
+L0001@5-31-2022@KA9601XW@sz_v1_1_segment_1.mp4,close_eyes, tonic
+L0001@5-31-2022@KA9601XW@sz_v1_1_segment_2.mp4,close_eyes, tonic
+L0001@5-31-2022@KA9601XW@sz_v1_1_segment_3.mp4,close_eyes, tonic
+L0001@5-31-2022@KA9601XW@sz_v1_1_segment_4.mp4,close_eyes
+L0001@5-31-2022@KA9601XX@sz_v1_1_segment_0.mp4,asynchronous_movement
+L0001@5-31-2022@KA9601XX@sz_v1_1_segment_1.mp4,asynchronous_movement, arm_flexion
+L0001@5-31-2022@KA9601XX@sz_v1_1_segment_2.mp4,asynchronous_movement, arm_flexion
+L0001@5-31-2022@KA9601XX@sz_v1_1_segment_3.mp4,asynchronous_movement, arm_flexion
+L0001@5-31-2022@KA9601XX@sz_v1_1_segment_4.mp4,asynchronous_movement, arm_flexion
+L0001@5-31-2022@KA9601XX@sz_v1_1_segment_5.mp4,asynchronous_movement, arm_flexion
+L0001@5-31-2022@KA9601XX@sz_v1_1_segment_6.mp4,asynchronous_movement, arm_flexion
+L0001@5-31-2022@KA9601XX@sz_v1_1_segment_7.mp4,asynchronous_movement, arm_flexion
+L0001@5-31-2022@KA9601XX@sz_v1_1_segment_8.mp4,arm_flexion
+L0002@1-15-2019@DA00127A@sz_v1_1_segment_0.mp4,head_turning, limb_automatisms
+L0002@1-15-2019@DA00127A@sz_v1_1_segment_1.mp4,head_turning, limb_automatisms
+L0002@1-15-2019@DA00127A@sz_v1_1_segment_2.mp4,blank_stare
+L0002@1-15-2019@DA00127A@sz_v1_1_segment_3.mp4,blank_stare
+L0002@1-15-2019@DA00127A@sz_v1_1_segment_4.mp4,blank_stare
+L0002@1-15-2019@DA00127A@sz_v2_1_segment_0.mp4,head_turning, arm_flexion, blank_stare
+L0002@1-15-2019@DA00127A@sz_v2_1_segment_1.mp4,head_turning, arm_flexion, blank_stare
+L0002@1-15-2019@DA00127A@sz_v2_1_segment_2.mp4,arm_flexion, blank_stare
+L0002@1-15-2019@DA00127A@sz_v2_1_segment_3.mp4,
+L0002@1-15-2019@DA00127A@sz_v2_1_segment_4.mp4,
+L0002@1-15-2019@DA001278@sz_v1_1_segment_0.mp4,arm_straightening
+L0002@1-15-2019@DA001278@sz_v1_1_segment_1.mp4,arm_straightening, head_turning
+L0002@1-15-2019@DA001278@sz_v1_1_segment_2.mp4,head_turning
+L0002@1-15-2019@DA001278@sz_v1_1_segment_3.mp4,
+L0002@1-15-2019@DA001278@sz_v1_1_segment_4.mp4,
+L0002@1-15-2019@DA001279@sz_v2_1_segment_0.mp4,blank_stare
+L0002@1-15-2019@DA001279@sz_v2_1_segment_1.mp4,blank_stare, head_turning
+L0002@1-15-2019@DA001279@sz_v2_1_segment_2.mp4,blank_stare
+L0002@1-15-2019@DA001279@sz_v2_1_segment_3.mp4,blank_stare
+L0002@1-15-2019@DA001279@sz_v2_1_segment_4.mp4,
+L0002@1-15-2019@DA70224N@sz_v1_1_segment_0.mp4,head_turning, limb_automatisms
+L0002@1-15-2019@DA70224N@sz_v1_1_segment_1.mp4,head_turning, limb_automatisms, arm_flexion, blank_stare
+L0002@1-15-2019@DA70224N@sz_v1_1_segment_2.mp4,limb_automatisms, arm_flexion, blank_stare
+L0002@1-15-2019@DA70224N@sz_v1_1_segment_3.mp4,limb_automatisms, blank_stare, oral_automatisms
+L0002@1-15-2019@DA70224N@sz_v1_1_segment_4.mp4,limb_automatisms, blank_stare, eye_blinking
+L0002@1-15-2019@DA70224N@sz_v1_1_segment_5.mp4,limb_automatisms, eye_blinking
+L0002@1-15-2019@DA70224N@sz_v2_1_segment_0.mp4,head_turning, blank_stare
+L0002@1-15-2019@DA70224N@sz_v2_1_segment_1.mp4,blank_stare
+L0002@1-15-2019@DA70224N@sz_v2_1_segment_2.mp4,blank_stare
+L0002@1-15-2019@DA70224O@sz_v1_1_segment_0.mp4,head_turning, limb_automatisms, blank_stare
+L0002@1-15-2019@DA70224O@sz_v1_1_segment_1.mp4,blank_stare
+L0002@1-15-2019@DA70224O@sz_v1_1_segment_2.mp4,blank_stare
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_0.mp4,full_body_shaking, head_turning
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_1.mp4,full_body_shaking, head_turning
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_2.mp4,full_body_shaking
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_3.mp4,full_body_shaking
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_4.mp4,full_body_shaking
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_5.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_6.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_7.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_8.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_9.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_10.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_11.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_12.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_13.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_14.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_15.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_16.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_17.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_18.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_19.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_20.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_21.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_22.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_23.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_24.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_25.mp4,
+L0002@1-23-2018@DA00108B@sz_v1_1_segment_26.mp4,
+L0002@1-23-2018@DA00108B@sz_v2_1_segment_0.mp4,arms_move_simultaneously, head_turning, arm_flexion
+L0002@1-23-2018@DA00108B@sz_v2_1_segment_1.mp4,arms_move_simultaneously, head_turning, arm_flexion
+L0002@1-23-2018@DA00108B@sz_v2_1_segment_2.mp4,arms_move_simultaneously, arm_flexion
+L0002@1-23-2018@DA00108B@sz_v2_1_segment_3.mp4,arms_move_simultaneously, arm_flexion, eye_blinking
+L0002@1-23-2018@DA00108B@sz_v3_1_segment_0.mp4,head_turning, oral_automatisms
+L0002@1-23-2018@DA00108B@sz_v3_1_segment_1.mp4,oral_automatisms, arm_flexion
+L0002@1-23-2018@DA00108B@sz_v3_1_segment_2.mp4,arm_flexion
+L0002@1-23-2018@DA00108B@sz_v3_1_segment_3.mp4,arm_flexion
+L0002@1-23-2018@DA00108I@sz_v1_1_segment_0.mp4,head_turning, arm_flexion
+L0002@1-23-2018@DA00108I@sz_v1_1_segment_1.mp4,arm_flexion
+L0002@1-23-2018@DA00108I@sz_v1_1_segment_2.mp4,
+L0002@1-23-2018@DA00108J@sz_v1_1_segment_0.mp4,head_turning, arm_flexion
+L0002@1-23-2018@DA00108J@sz_v1_1_segment_1.mp4,head_turning, arm_flexion, figure4
+L0002@1-23-2018@DA00108J@sz_v1_1_segment_2.mp4,figure4
+L0002@1-23-2018@DA00108J@sz_v1_1_segment_3.mp4,
+L0002@1-23-2018@DA00108K@sz_v1_1_segment_0.mp4,head_turning
+L0002@1-23-2018@DA00108K@sz_v1_1_segment_1.mp4,head_turning
+L0002@10-16-2023@DA9601XX@sz_v1_1_segment_0.mp4,head_turning, arm_flexion
+L0002@10-16-2023@DA9601XX@sz_v1_1_segment_1.mp4,head_turning, arm_flexion
+L0002@10-16-2023@DA9601XX@sz_v1_1_segment_2.mp4,arm_flexion
+L0002@10-16-2023@DA9601XX@sz_v1_1_segment_3.mp4,arm_flexion
+L0002@10-16-2023@DA9601XX@sz_v2_1_segment_0.mp4,head_turning, blank_stare, arm_flexion
+L0002@10-16-2023@DA9601XX@sz_v2_1_segment_1.mp4,head_turning, blank_stare, arm_flexion
+L0002@10-16-2023@DA9601XX@sz_v2_1_segment_2.mp4,blank_stare, arm_flexion
+L0002@10-16-2023@DA9601XX@sz_v2_1_segment_3.mp4,blank_stare, arm_flexion
+L0002@10-16-2023@DA9601XZ@sz_v1_1_segment_0.mp4,
+L0002@10-16-2023@DA9601XZ@sz_v1_1_segment_1.mp4,
+L0002@10-16-2023@DA9601XZ@sz_v1_1_segment_2.mp4,arm_flexion
+L0002@10-16-2023@DA9601XZ@sz_v1_1_segment_3.mp4,arm_flexion
+L0003@10-28-2014@TA7640V1@nes_v1_1_segment_0.mp4,close_eyes, asynchronous_movement
+L0003@10-28-2014@TA7640V1@nes_v2_1_segment_0.mp4,asynchronous_movement, arms_move_simultaneously, limb_automatisms
+L0003@10-28-2014@TA7640V1@nes_v2_1_segment_1.mp4,asynchronous_movement, blank_stare
+L0003@10-28-2014@TA7640V1@nes_v3_1_segment_0.mp4,close_eyes, arms_move_simultaneously, oral_automatisms
+L0003@10-28-2014@TA7640V1@nes_v3_1_segment_1.mp4,arms_move_simultaneously, oral_automatisms
+L0003@10-28-2014@TA7640V1@nes_v4_1_segment_0.mp4,arm_flexion
+L0003@10-28-2014@TA7640V2@nes_v1_1_segment_0.mp4,arm_flexion, close_eyes
+L0003@10-28-2014@TA7640V5@nes_v1_1_segment_0.mp4,oral_automatisms, close_eyes
+L0003@10-28-2014@TA7640V5@nes_v1_1_segment_1.mp4,close_eyes
+L0003@10-28-2014@TA7640V7@nes_v1_1_segment_0.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously, arm_straightening
+L0003@10-28-2014@TA7640V7@nes_v1_1_segment_1.mp4,close_eyes, asynchronous_movement, arm_straightening
+L0003@10-28-2014@TA7640VE@nes_v1_1_segment_0.mp4,arms_move_simultaneously
+L0003@10-28-2014@TA7640VE@nes_v1_1_segment_1.mp4,arms_move_simultaneously, arm_flexion
+L0003@10-28-2014@TA7640VE@nes_v1_1_segment_2.mp4,arm_flexion
+L0003@10-28-2014@TA7640VE@nes_v1_1_segment_3.mp4,asynchronous_movement
+L0003@10-28-2014@TA7640VE@nes_v1_1_segment_4.mp4,asynchronous_movement
+L0003@10-28-2014@TA7640VE@nes_v1_1_segment_5.mp4,asynchronous_movement
+L0003@10-28-2014@TA7640VE@nes_v1_1_segment_6.mp4,asynchronous_movement
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_0.mp4,limb_automatisms, face_pulling, head_turning, blank_stare
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_1.mp4,limb_automatisms, face_pulling, head_turning, blank_stare, tonic, arm_straightening, arm_flexion
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_2.mp4,blank_stare, tonic, arm_straightening, arm_flexion
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_3.mp4,arm_straightening, arm_flexion, clonic
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_4.mp4,arm_straightening, arm_flexion, clonic
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_5.mp4,arm_straightening, arm_flexion, clonic
+L0006@10-6-2021@KA9600GI@sz_v2_1_segment_0.mp4,
+L0006@10-6-2021@KA9600GI@sz_v2_1_segment_1.mp4,head_turning, blank_stare, arm_flexion, oral_automatisms
+L0006@10-6-2021@KA9600GI@sz_v2_1_segment_2.mp4,head_turning, blank_stare, arm_flexion, oral_automatisms, arm_straightening, tonic, clonic
+L0006@10-6-2021@KA9600GI@sz_v2_1_segment_3.mp4,blank_stare, arm_straightening, clonic, asynchronous_movement
+L0006@10-6-2021@KA9600GI@sz_v2_1_segment_4.mp4,blank_stare, clonic, asynchronous_movement
+L0006@10-6-2021@KA9600GI@sz_v2_1_segment_5.mp4,clonic, asynchronous_movement
+M0001@6-18-2020@DA0014QT@sz_v1_1_segment_0.mp4,blank_stare, arm_flexion, head_turning
+M0001@6-18-2020@DA0014QT@sz_v1_1_segment_1.mp4,arm_flexion, head_turning
+M0001@6-18-2020@DA0014R2@sz_v1_1_segment_0.mp4,head_turning, blank_stare
+M0001@6-18-2020@DA0014R2@sz_v1_1_segment_1.mp4,head_turning, blank_stare
+N0002@3-14-2022@DA1321F9@sz_v1_1_segment_0.mp4,limb_automatisms, oral_automatisms
+N0002@9-13-2022@DA1322LW@sz_v1_1_segment_0.mp4,limb_automatisms, oral_automatisms
+N0002@9-13-2022@DA1322LW@sz_v1_1_segment_1.mp4,limb_automatisms, oral_automatisms
+N0002@9-13-2022@KA9602CR@sz_v1_1_segment_0.mp4,oral_automatisms
+N0002@9-13-2022@KA9602CX@sz_v1_1_segment_0.mp4,limb_automatisms, eye_blinking, oral_automatisms
+N0002@9-13-2022@KA9602CX@sz_v1_1_segment_1.mp4,limb_automatisms, eye_blinking, oral_automatisms
+N0002@9-13-2022@KA9602CX@sz_v1_1_segment_2.mp4,limb_automatisms, eye_blinking, oral_automatisms
+N0002@9-13-2022@KA9602CX@sz_v2_1_segment_0.mp4,
+N0002@9-13-2022@KA9602CX@sz_v2_1_segment_1.mp4,oral_automatisms
+N0002@9-13-2022@KA9602CY@sz_v1_1_segment_0.mp4,eye_blinking, oral_automatisms
+N0002@9-13-2022@KA9602CY@sz_v1_1_segment_1.mp4,oral_automatisms
+N0002@9-13-2022@KA9602CY@sz_v2_1_segment_0.mp4,oral_automatisms
+N0002@9-13-2022@KA9602CY@sz_v2_1_segment_1.mp4,oral_automatisms
+N0002@9-13-2022@KA9602CY@sz_v2_1_segment_2.mp4,oral_automatisms
+N0004@3-29-2022@KA9601GC@sz_v1_1_segment_0.mp4,tonic, arms_move_simultaneously
+N0004@3-29-2022@KA9601GC@sz_v1_1_segment_1.mp4,tonic, arm_straightening, clonic, arm_flexion
+N0004@3-29-2022@KA9601GC@sz_v1_1_segment_2.mp4,tonic, arm_straightening, clonic, arm_flexion
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_0.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_1.mp4,close_eyes, arm_flexion, tonic
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_2.mp4,close_eyes, arm_flexion, tonic
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_3.mp4,close_eyes, tonic
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_4.mp4,close_eyes, tonic
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_5.mp4,close_eyes, tonic
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_6.mp4,close_eyes, tonic
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_7.mp4,close_eyes, tonic
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_8.mp4,close_eyes, tonic
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_9.mp4,close_eyes, tonic
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_10.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_11.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_12.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_13.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_14.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_15.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_16.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_17.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_18.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_19.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_20.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_21.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_22.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_23.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_24.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_25.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_26.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_27.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_28.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_29.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_30.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_31.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_32.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_33.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_34.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_35.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_36.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_37.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_38.mp4,close_eyes
+N0006@5-3-2019@DA0012QM@sz_v1_1_segment_39.mp4,close_eyes
+N0007@8-26-2014@VA7631F0@sz_v1_1_segment_0.mp4,face_twitching
+N0007@8-26-2014@VA7631F0@sz_v2_1_segment_0.mp4,oral_automatisms, limb_automatisms
+N0007@8-26-2014@VA7631F0@sz_v2_1_segment_1.mp4,oral_automatisms, limb_automatisms
+N0008@2-1-2016@KA333KWO@nes_v1_1_segment_0.mp4,close_eyes, asynchronous_movement
+N0008@2-1-2016@KA333KWO@nes_v1_1_segment_1.mp4,close_eyes, asynchronous_movement
+N0008@2-1-2016@KA333KWO@nes_v1_1_segment_2.mp4,close_eyes, asynchronous_movement
+N0008@2-1-2016@KA333KWO@nes_v1_1_segment_3.mp4,close_eyes, asynchronous_movement
+N0008@2-1-2016@KA333KWO@nes_v1_1_segment_4.mp4,close_eyes, asynchronous_movement
+N0008@2-1-2016@KA333KWO@nes_v1_1_segment_5.mp4,close_eyes, asynchronous_movement
+N0008@2-1-2016@KA333KWO@nes_v1_1_segment_6.mp4,close_eyes, asynchronous_movement
+N0008@2-1-2016@KA333KWO@nes_v1_1_segment_7.mp4,close_eyes
+N0008@2-1-2016@KA333KWO@nes_v1_2_segment_0.mp4,blank_stare, asynchronous_movement, close_eyes, full_body_shaking
+N0008@2-1-2016@KA333KWO@nes_v1_2_segment_1.mp4,asynchronous_movement, close_eyes, full_body_shaking
+N0008@2-1-2016@KA333KWO@nes_v1_2_segment_2.mp4,asynchronous_movement, close_eyes, full_body_shaking
+N0008@2-1-2016@KA333KWO@nes_v1_2_segment_3.mp4,asynchronous_movement, close_eyes, full_body_shaking
+N0008@2-1-2016@KA333KWO@nes_v1_2_segment_4.mp4,asynchronous_movement, close_eyes, full_body_shaking
+N0008@2-1-2016@KA333KWO@nes_v1_2_segment_5.mp4,asynchronous_movement, full_body_shaking
+N0008@2-1-2016@KA333KWO@nes_v1_2_segment_6.mp4,asynchronous_movement, full_body_shaking
+N0008@2-1-2016@KA333KWO@nes_v1_2_segment_7.mp4,asynchronous_movement, full_body_shaking
+N0008@2-1-2016@KA333KXM@nes_v1_1_segment_0.mp4,asynchronous_movement, clonic, arms_move_simultaneously, full_body_shaking, close_eyes
+N0008@2-1-2016@KA333KXM@nes_v1_1_segment_1.mp4,asynchronous_movement, clonic, arms_move_simultaneously, full_body_shaking, close_eyes
+N0008@2-1-2016@KA333KXM@nes_v1_1_segment_2.mp4,asynchronous_movement, clonic, arms_move_simultaneously, full_body_shaking, close_eyes
+N0008@2-1-2016@KA333KXM@nes_v1_1_segment_3.mp4,asynchronous_movement, clonic, arms_move_simultaneously, full_body_shaking, close_eyes
+N0008@2-1-2016@KA333KXM@nes_v1_1_segment_4.mp4,asynchronous_movement, clonic, arms_move_simultaneously, full_body_shaking, close_eyes, blank_stare
+N0008@2-1-2016@KA333KXM@nes_v1_1_segment_5.mp4,asynchronous_movement, clonic, arms_move_simultaneously, full_body_shaking, blank_stare
+N0008@2-1-2016@KA333KXM@nes_v1_1_segment_6.mp4,asynchronous_movement, clonic, full_body_shaking, blank_stare
+N0008@2-1-2016@KA333KYH@nes_v1_1_segment_0.mp4,close_eyes, arms_move_simultaneously, oral_automatisms
+N0008@2-1-2016@KA333KYH@nes_v1_1_segment_1.mp4,close_eyes, oral_automatisms
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_0.mp4,
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_1.mp4,
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_2.mp4,
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_3.mp4,
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_4.mp4,
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_5.mp4,
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_6.mp4,
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_7.mp4,
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_8.mp4,close_eyes
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_9.mp4,close_eyes
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_10.mp4,close_eyes, arm_flexion
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_11.mp4,close_eyes, arm_flexion, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_12.mp4,close_eyes, arm_flexion, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_13.mp4,close_eyes, arm_flexion, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_14.mp4,close_eyes, arm_flexion, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_15.mp4,close_eyes, arm_flexion, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_16.mp4,close_eyes, arm_flexion, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_17.mp4,close_eyes, arm_flexion, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_18.mp4,close_eyes, arm_flexion, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_19.mp4,close_eyes, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_20.mp4,close_eyes, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_21.mp4,close_eyes, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_22.mp4,close_eyes, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_23.mp4,close_eyes, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_24.mp4,close_eyes, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_25.mp4,close_eyes, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_26.mp4,close_eyes, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_27.mp4,close_eyes, asynchronous_movement
+N0009@3-5-2021@UA6693AY@nes_v1_1_segment_28.mp4,close_eyes, asynchronous_movement
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_0.mp4,close_eyes, tonic, head_turning
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_1.mp4,close_eyes, tonic, head_turning
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_2.mp4,close_eyes, tonic
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_3.mp4,close_eyes, tonic
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_4.mp4,close_eyes, tonic
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_5.mp4,close_eyes, tonic
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_6.mp4,close_eyes, tonic
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_7.mp4,close_eyes, tonic
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_8.mp4,close_eyes, tonic
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_9.mp4,close_eyes, tonic
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_10.mp4,close_eyes, tonic
+N0009@3-5-2021@UA66939W@nes_v1_1_segment_11.mp4,close_eyes, tonic
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_0.mp4,
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_1.mp4,
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_2.mp4,
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_3.mp4,close_eyes
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_4.mp4,close_eyes
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_5.mp4,close_eyes
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_6.mp4,close_eyes, head_turning
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_7.mp4,close_eyes, head_turning, tonic
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_8.mp4,close_eyes, tonic, asynchronous_movement
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_9.mp4,close_eyes, tonic, asynchronous_movement
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_10.mp4,close_eyes, tonic, asynchronous_movement
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_11.mp4,close_eyes, tonic, asynchronous_movement
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_12.mp4,close_eyes, tonic, asynchronous_movement
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_13.mp4,close_eyes, tonic, asynchronous_movement, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_14.mp4,close_eyes, tonic, asynchronous_movement, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_15.mp4,close_eyes, tonic, asynchronous_movement, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_16.mp4,close_eyes, tonic, asynchronous_movement, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_17.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_18.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_19.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_20.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_21.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_22.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_23.mp4,close_eyes, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_24.mp4,close_eyes, arms_move_simultaneously
+N0009@3-5-2021@UA66939Z@nes_v1_1_segment_25.mp4,close_eyes
+N0011@4-1-2021@DA00161F@sz_v1_1_segment_0.mp4,
+N0011@4-1-2021@DA00161F@sz_v1_1_segment_1.mp4,arm_flexion, blank_stare, tonic
+N0011@4-1-2021@DA00161F@sz_v1_1_segment_2.mp4,arm_flexion, blank_stare, tonic, arm_straightening, head_turning
+N0011@4-1-2021@DA00161F@sz_v1_1_segment_3.mp4,blank_stare, tonic, arm_straightening, head_turning, clonic
+N0011@4-1-2021@DA00161F@sz_v1_1_segment_4.mp4,blank_stare, arm_straightening, clonic
+N0011@4-1-2021@DA00161F@sz_v1_1_segment_5.mp4,blank_stare, clonic
+N0011@4-1-2021@DA00161G@sz_v1_1_segment_0.mp4,tonic, blank_stare, arm_straightening, head_turning, figure4
+N0011@4-1-2021@DA00161G@sz_v1_1_segment_1.mp4,tonic, blank_stare, arm_straightening, head_turning, figure4, arm_flexion
+N0011@4-1-2021@DA00161G@sz_v1_1_segment_2.mp4,tonic, blank_stare, head_turning, arm_flexion
+N0011@4-1-2021@DA00161G@sz_v1_1_segment_3.mp4,tonic, blank_stare, clonic
+N0011@4-1-2021@DA00161G@sz_v1_1_segment_4.mp4,blank_stare, clonic
+N0011@4-1-2021@DA00161G@sz_v2_1_segment_0.mp4,head_turning, arms_move_simultaneously, tonic, arm_straightening
+N0011@4-1-2021@DA00161G@sz_v2_1_segment_1.mp4,head_turning, arms_move_simultaneously, tonic, arm_straightening, blank_stare, arm_flexion, figure4
+N0011@4-1-2021@DA00161G@sz_v2_1_segment_2.mp4,head_turning, tonic, arm_straightening, blank_stare, arm_flexion, figure4
+N0011@4-1-2021@DA00161G@sz_v2_1_segment_3.mp4,tonic, arm_straightening, blank_stare, clonic
+N0011@4-1-2021@DA00161G@sz_v2_1_segment_4.mp4,blank_stare, clonic
+N0011@4-1-2021@DA00161G@sz_v3_1_segment_0.mp4,blank_stare, tonic, arm_straightening, arms_move_simultaneously, head_turning, arm_flexion
+N0011@4-1-2021@DA00161G@sz_v3_1_segment_1.mp4,blank_stare, tonic, head_turning, arm_flexion, close_eyes, clonic
+N0011@4-1-2021@DA00161G@sz_v3_1_segment_2.mp4,tonic, close_eyes, clonic
+N0011@4-1-2021@DA00161G@sz_v3_1_segment_3.mp4,tonic, close_eyes, clonic
+N0011@4-1-2021@DA00161I@sz_v1_1_segment_0.mp4,tonic, arm_flexion, blank_stare
+N0011@4-1-2021@DA00161I@sz_v1_1_segment_1.mp4,tonic, arm_flexion, blank_stare, clonic, limb_automatisms
+N0011@4-1-2021@DA00161I@sz_v1_1_segment_2.mp4,tonic, arm_flexion, limb_automatisms
+N0011@4-1-2021@DA00161I@sz_v2_1_segment_0.mp4,head_turning, blank_stare, arm_flexion, tonic, arm_straightening, figure4
+N0011@4-1-2021@DA00161I@sz_v2_1_segment_1.mp4,head_turning, blank_stare, arm_flexion, tonic, arm_straightening, figure4, eye_blinking, limb_automatisms
+N0011@4-1-2021@DA00161I@sz_v2_1_segment_2.mp4,arm_flexion, tonic, limb_automatisms
+N0011@4-1-2021@DA00161J@sz_v1_1_segment_0.mp4,eye_blinking, blank_stare, arm_flexion
+N0011@4-1-2021@DA00161J@sz_v1_1_segment_1.mp4,blank_stare, arm_flexion
+N0011@4-1-2021@DA00161J@sz_v1_1_segment_2.mp4,blank_stare, arm_flexion
+N0011@4-1-2021@DA00161K@sz_v1_1_segment_0.mp4,tonic, arm_straightening, arm_flexion
+N0011@4-1-2021@DA00161K@sz_v2_1_segment_0.mp4,tonic, arm_straightening
+N0011@4-1-2021@DA00161K@sz_v2_1_segment_1.mp4,arm_straightening, arm_flexion, blank_stare, head_turning
+N0011@4-1-2021@DA00161K@sz_v3_1_segment_0.mp4,tonic
+N0011@4-1-2021@DA00161K@sz_v3_1_segment_1.mp4,tonic
+N0011@4-1-2021@DA00161K@sz_v3_1_segment_2.mp4,tonic
+N0011@4-1-2021@DA00161K@sz_v3_1_segment_3.mp4,tonic
+N0011@4-1-2021@DA00161K@sz_v4_1_segment_0.mp4,blank_stare, arm_straightening, tonic, arm_flexion, eye_blinking
+N0011@4-1-2021@DA00161K@sz_v4_1_segment_1.mp4,blank_stare, tonic, arm_flexion
+N0011@4-1-2021@DA00161K@sz_v5_1_segment_0.mp4,blank_stare, arm_flexion, tonic, clonic, face_pulling, face_twitching, limb_automatisms
+N0011@4-1-2021@DA001614@sz_v1_1_segment_0.mp4,arm_flexion, blank_stare, tonic, arm_straightening, figure4
+N0011@4-1-2021@DA001614@sz_v1_1_segment_1.mp4,arm_flexion, blank_stare, tonic, arm_straightening, figure4, clonic
+N0011@4-1-2021@DA001614@sz_v1_1_segment_2.mp4,arm_flexion, blank_stare, tonic, head_turning
+N0011@4-1-2021@DA001614@sz_v1_1_segment_3.mp4,arm_flexion, head_turning
+N0011@4-1-2021@DA001614@sz_v1_1_segment_4.mp4,
+N0011@4-1-2021@UA6693F9@sz_v1_1_segment_0.mp4,blank_stare, arm_straightening, arm_flexion, tonic
+N0011@4-1-2021@UA6693F9@sz_v1_1_segment_1.mp4,blank_stare, arm_flexion, tonic
+N0011@4-1-2021@UA6693F9@sz_v1_1_segment_2.mp4,blank_stare, arm_flexion, tonic
+N0011@4-1-2021@UA6693FA@sz_v1_1_segment_0.mp4,arm_straightening, arms_move_simultaneously, tonic, arm_flexion, oral_automatisms, blank_stare
+N0011@4-1-2021@UA6693FA@sz_v1_1_segment_1.mp4,tonic, arm_flexion, oral_automatisms, blank_stare
+N0012@10-10-2019@DA0013M6@sz_v1_1_segment_0.mp4,eye_blinking, face_pulling, close_eyes
+N0012@10-10-2019@DA0013M7@sz_v1_1_segment_0.mp4,arm_flexion, close_eyes
+N0012@10-10-2019@DA0013M7@sz_v2_1_segment_0.mp4,clonic, arm_flexion, close_eyes
+N0012@10-10-2019@DA0013M7@sz_v3_1_segment_0.mp4,close_eyes, clonic
+N0012@10-10-2019@DA0013M7@sz_v4_1_segment_0.mp4,clonic, arm_flexion, close_eyes
+N0012@10-10-2019@DA0013M7@sz_v5_1_segment_0.mp4,close_eyes
+N0012@10-10-2019@DA0013M7@sz_v6_1_segment_0.mp4,clonic, arms_move_simultaneously, arm_flexion, close_eyes
+N0012@10-10-2019@DA0013M7@sz_v6_1_segment_1.mp4,close_eyes
+N0012@10-10-2019@DA0013M7@sz_v7_1_segment_0.mp4,close_eyes, arms_move_simultaneously, arm_flexion
+N0012@10-10-2019@DA0013M7@sz_v7_1_segment_1.mp4,
+N0012@10-10-2019@DA0013M7@sz_v8_1_segment_0.mp4,clonic, arm_flexion, figure4
+N0012@10-10-2019@DA0013ME@sz_v1_1_segment_0.mp4,arm_straightening, arm_flexion, figure4
+N0012@10-10-2019@DA0013ME@sz_v2_1_segment_0.mp4,oral_automatisms
+N0012@10-10-2019@DA0013ME@sz_v3_1_segment_0.mp4,oral_automatisms, arm_flexion
+N0012@10-10-2019@DA0013ME@sz_v4_1_segment_0.mp4,clonic, arm_flexion
+N0013@9-2-2014@VA7631G3@sz_v1_1_segment_0.mp4,close_eyes, face_twitching, face_pulling, tonic, arm_straightening
+N0013@9-2-2014@VA7631G3@sz_v1_1_segment_1.mp4,close_eyes, face_twitching, face_pulling, tonic, arm_straightening
+N0013@9-2-2014@VA7631G3@sz_v1_1_segment_2.mp4,face_pulling
+N0013@9-2-2014@VA7631G3@sz_v3_1_segment_0.mp4,close_eyes, face_pulling
+N0013@9-2-2014@VA7631G3@sz_v3_1_segment_1.mp4,close_eyes
+N0013@9-2-2014@VA7631G3@sz_v4_1_segment_0.mp4,close_eyes
+N0013@9-2-2014@VA7631G3@sz_v4_1_segment_1.mp4,close_eyes, face_pulling, eye_blinking
+N0013@9-2-2014@VA7631G3@sz_v4_1_segment_2.mp4,close_eyes, face_pulling, eye_blinking
+N0013@9-2-2014@VA7631G5@sz_v2_1_segment_0.mp4,close_eyes, face_pulling
+N0013@9-2-2014@VA7631G5@sz_v2_1_segment_1.mp4,close_eyes, face_pulling
+N0013@9-2-2014@VA7631G5@sz_v2_1_segment_2.mp4,close_eyes
+N0013@9-2-2014@VA7631GK@sz_v3_1_segment_0.mp4,close_eyes, face_twitching, tonic, arm_flexion
+N0013@9-2-2014@VA7631GK@sz_v3_1_segment_1.mp4,close_eyes, face_twitching, tonic, arm_flexion
+N0013@9-2-2014@VA7631GK@sz_v4_1_segment_0.mp4,close_eyes
+N0013@9-2-2014@VA7631GK@sz_v4_1_segment_1.mp4,close_eyes, arm_flexion
+N0014@2-4-2020@DA001466@nes_v1_1_segment_0.mp4,close_eyes
+N0014@2-4-2020@DA001466@nes_v1_2_segment_0.mp4,close_eyes
+N0014@2-4-2020@DA001466@nes_v1_3_segment_0.mp4,close_eyes
+N0014@2-4-2020@DA001466@nes_v1_4_segment_0.mp4,close_eyes
+N0014@2-4-2020@DA001466@nes_v1_5_segment_0.mp4,close_eyes
+N0014@2-4-2020@DA001466@nes_v1_6_segment_0.mp4,close_eyes
+N0014@2-4-2020@DA001466@nes_v1_7_segment_0.mp4,close_eyes
+N0014@2-4-2020@DA001466@nes_v1_8_segment_0.mp4,close_eyes
+N0014@2-4-2020@DA001466@nes_v1_9_segment_0.mp4,close_eyes
+N0014@2-4-2020@DA001466@nes_v1_10_segment_0.mp4,close_eyes
+N0014@2-4-2020@DA001466@nes_v2_1_segment_0.mp4,close_eyes
+N0015@10-6-2022@DA1322SC@sz_v1_1_segment_0.mp4,blank_stare
+N0015@10-6-2022@DA1322SC@sz_v1_1_segment_1.mp4,blank_stare, head_turning, tonic, arm_flexion, close_eyes, arm_straightening, figure4
+N0015@10-6-2022@DA1322SC@sz_v1_1_segment_2.mp4,head_turning, tonic, arm_flexion, close_eyes, arm_straightening, figure4, clonic
+N0015@10-6-2022@DA1322SC@sz_v1_1_segment_3.mp4,arm_flexion, close_eyes, arm_straightening, clonic
+N0015@10-6-2022@KA9602I3@sz_v1_1_segment_0.mp4,
+N0015@10-6-2022@KA9602I3@sz_v1_1_segment_1.mp4,arm_flexion, head_turning, arm_straightening, figure4, tonic
+N0015@10-6-2022@KA9602I3@sz_v1_1_segment_2.mp4,arm_flexion, head_turning, arm_straightening, figure4, tonic, clonic
+N0015@10-6-2022@KA9602I3@sz_v1_1_segment_3.mp4,arm_flexion, head_turning, arm_straightening, figure4, clonic, blank_stare
+N0015@10-6-2022@KA9602I3@sz_v1_1_segment_4.mp4,blank_stare
+N0016@9-1-2022@DA1322GQ@sz_v1_1_segment_0.mp4,tonic, arms_move_simultaneously, arm_straightening, arm_flexion, oral_automatisms, clonic
+N0016@9-1-2022@DA1322GQ@sz_v1_1_segment_1.mp4,tonic, oral_automatisms, clonic
+N0016@9-1-2022@DA1322GQ@sz_v1_1_segment_2.mp4,tonic, oral_automatisms, clonic
+N0017@9-11-2018@DA7021H5@sz_v1_1_segment_0.mp4,oral_automatisms
+N0017@9-11-2018@DA7021H5@sz_v1_1_segment_1.mp4,blank_stare, face_twitching, face_pulling, close_eyes
+N0017@9-11-2018@DA7021H5@sz_v1_1_segment_2.mp4,blank_stare, face_twitching, face_pulling, close_eyes, arm_flexion, tonic, arm_straightening, figure4
+N0017@9-11-2018@DA7021H5@sz_v1_1_segment_3.mp4,face_twitching, close_eyes, arm_flexion, arm_straightening, figure4
+N0017@9-11-2018@DA7021H5@sz_v1_1_segment_4.mp4,face_twitching
+N0017@12-4-2018@DA7021YP@sz_v1_1_segment_0.mp4,oral_automatisms, eye_blinking
+N0017@12-4-2018@DA7021YP@sz_v1_1_segment_1.mp4,oral_automatisms, eye_blinking, blank_stare, face_pulling, face_twitching, tonic, head_turning, arm_flexion, arm_straightening, figure4
+N0017@12-4-2018@DA7021YP@sz_v1_1_segment_2.mp4,face_pulling, face_twitching, tonic, head_turning, arm_flexion, arm_straightening, figure4, clonic
+N0017@12-4-2018@DA7021YP@sz_v1_1_segment_3.mp4,arm_flexion, arm_straightening, figure4, clonic
+N0017@12-4-2018@DA7021YP@sz_v1_1_segment_4.mp4,clonic
+O0001@8-27-2020@UA6692F4@sz_v1_1_segment_0.mp4,
+O0001@8-27-2020@UA6692F4@sz_v1_1_segment_1.mp4,
+O0001@8-27-2020@UA6692F4@sz_v1_1_segment_2.mp4,
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_0.mp4,close_eyes
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_1.mp4,close_eyes
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_2.mp4,close_eyes
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_3.mp4,close_eyes
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_4.mp4,close_eyes
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_5.mp4,close_eyes
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_6.mp4,close_eyes
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_7.mp4,close_eyes
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_8.mp4,close_eyes
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_9.mp4,close_eyes
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_10.mp4,close_eyes
+O0001@8-27-2020@UA6692FE@sz_v1.1_0_segment_11.mp4,close_eyes
+O0001@10-12-2023@DA9601WC@nes_v1_1_segment_0.mp4,close_eyes
+O0001@10-12-2023@DA9601WC@nes_v1_1_segment_1.mp4,close_eyes
+O0001@10-12-2023@DA9601YM@sz_v1_1_segment_0.mp4,head_turning, face_pulling, face_twitching, arm_straightening
+O0001@10-12-2023@DA9601YM@sz_v1_1_segment_1.mp4,head_turning, face_pulling, face_twitching, arm_straightening, tonic, arm_flexion, eye_blinking, clonic
+O0001@10-12-2023@DA9601YM@sz_v1_1_segment_2.mp4,face_pulling, arm_flexion, eye_blinking, clonic, figure4
+O0001@10-12-2023@DA9601YM@sz_v1_1_segment_3.mp4,arm_flexion, clonic, figure4
+O0001@10-12-2023@DA9601YN@sz_v1_1_segment_0.mp4,head_turning, face_pulling, face_twitching, tonic, arm_flexion
+O0001@10-12-2023@DA9601YN@sz_v1_1_segment_1.mp4,head_turning, face_pulling, face_twitching, tonic, arm_flexion, eye_blinking, clonic
+O0001@10-12-2023@DA9601YN@sz_v1_1_segment_2.mp4,face_pulling, face_twitching, arm_flexion, eye_blinking, clonic
+O0001@10-12-2023@DA9601YN@sz_v1_1_segment_3.mp4,face_pulling, face_twitching, arm_flexion, clonic
+O0001@10-12-2023@DA9601YN@sz_v2_1_segment_0.mp4,head_turning, face_pulling, face_twitching
+O0001@10-12-2023@DA9601YN@sz_v2_1_segment_1.mp4,head_turning, face_pulling, face_twitching, tonic, arm_flexion, clonic, eye_blinking
+O0001@10-12-2023@DA9601YN@sz_v2_1_segment_2.mp4,face_pulling, face_twitching, arm_flexion, clonic, eye_blinking
+O0001@10-12-2023@DA9601YN@sz_v2_1_segment_3.mp4,face_pulling, face_twitching, clonic
+O0001@10-12-2023@DA9601YQ@sz_v1_1_segment_0.mp4,
+O0001@10-12-2023@DA9601YQ@sz_v1_1_segment_1.mp4,
+O0001@10-12-2023@DA9601YQ@sz_v1_1_segment_2.mp4,blank_stare, face_pulling, face_twitching, head_turning, close_eyes
+O0001@10-12-2023@DA9601YQ@sz_v1_1_segment_3.mp4,blank_stare, face_pulling, face_twitching, head_turning, close_eyes, tonic, arm_flexion
+O0001@10-12-2023@DA9601YQ@sz_v1_1_segment_4.mp4,face_pulling, face_twitching, head_turning, close_eyes, tonic, arm_flexion, clonic, eye_blinking
+O0001@10-12-2023@DA9601YQ@sz_v1_1_segment_5.mp4,face_pulling, face_twitching, arm_flexion, clonic
+O0003@4-27-2022@KA9601OU@nes_v1_1_segment_0.mp4,close_eyes
+O0003@4-27-2022@KA9601OU@nes_v1_1_segment_1.mp4,close_eyes
+O0003@4-27-2022@KA9601OU@nes_v1_1_segment_2.mp4,close_eyes
+O0003@4-27-2022@KA9601OU@nes_v1_1_segment_3.mp4,close_eyes
+O0003@4-27-2022@KA9601OU@nes_v1_1_segment_4.mp4,close_eyes
+O0003@4-27-2022@KA9601OU@nes_v1_1_segment_5.mp4,close_eyes
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_0.mp4,close_eyes, oral_automatisms
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_1.mp4,close_eyes, oral_automatisms
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_2.mp4,close_eyes, oral_automatisms
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_3.mp4,close_eyes, eye_blinking
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_4.mp4,close_eyes
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_5.mp4,close_eyes
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_6.mp4,close_eyes, pelvic_thrusting
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_7.mp4,close_eyes, pelvic_thrusting
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_8.mp4,close_eyes, pelvic_thrusting, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_9.mp4,close_eyes, pelvic_thrusting, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_10.mp4,close_eyes, pelvic_thrusting, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_11.mp4,close_eyes, pelvic_thrusting, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_12.mp4,close_eyes, pelvic_thrusting, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_13.mp4,close_eyes, pelvic_thrusting, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_14.mp4,close_eyes, pelvic_thrusting, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_15.mp4,close_eyes, pelvic_thrusting, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_16.mp4,close_eyes, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_17.mp4,close_eyes, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_18.mp4,close_eyes, asynchronous_movement
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_19.mp4,close_eyes, asynchronous_movement
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_20.mp4,close_eyes, asynchronous_movement
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_21.mp4,close_eyes, asynchronous_movement
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_22.mp4,close_eyes, asynchronous_movement
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_23.mp4,close_eyes, asynchronous_movement
+O0003@6-6-2020@DA0014P1@nes_v1_1_segment_24.mp4,close_eyes, asynchronous_movement
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_0.mp4,oral_automatisms
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_1.mp4,oral_automatisms, face_twitching
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_2.mp4,oral_automatisms, face_twitching, asynchronous_movement
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_3.mp4,oral_automatisms, face_twitching, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_4.mp4,oral_automatisms, face_twitching, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_5.mp4,oral_automatisms, face_twitching, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_6.mp4,face_twitching, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_7.mp4,face_twitching, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_8.mp4,face_twitching, asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_9.mp4,asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_10.mp4,asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_11.mp4,asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P1@nes_v2_1_segment_12.mp4,asynchronous_movement, full_body_shaking
+O0003@6-6-2020@DA0014P3@nes_v1_1_segment_0.mp4,oral_automatisms
+O0003@6-6-2020@DA0014P3@nes_v1_1_segment_1.mp4,oral_automatisms, asynchronous_movement, arm_flexion, pelvic_thrusting, limb_automatisms
+O0003@6-6-2020@DA0014P3@nes_v1_1_segment_2.mp4,oral_automatisms, asynchronous_movement, arm_flexion, pelvic_thrusting, limb_automatisms
+O0003@6-6-2020@DA0014P3@nes_v1_1_segment_3.mp4,oral_automatisms, asynchronous_movement, arm_flexion, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@DA0014P3@nes_v1_1_segment_4.mp4,oral_automatisms, asynchronous_movement, arm_flexion, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@DA0014P3@nes_v1_1_segment_5.mp4,oral_automatisms, asynchronous_movement, arm_flexion, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@DA0014P3@nes_v1_1_segment_6.mp4,oral_automatisms, asynchronous_movement, arm_flexion, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@DA0014P3@nes_v1_1_segment_7.mp4,oral_automatisms, asynchronous_movement, arm_flexion, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@DA0014P3@nes_v1_1_segment_8.mp4,oral_automatisms, asynchronous_movement, arm_flexion, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_0.mp4,asynchronous_movement, oral_automatisms
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_1.mp4,asynchronous_movement, oral_automatisms, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_2.mp4,asynchronous_movement, oral_automatisms, pelvic_thrusting, face_pulling, full_body_shaking
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_3.mp4,asynchronous_movement, oral_automatisms, pelvic_thrusting, face_pulling, full_body_shaking
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_4.mp4,asynchronous_movement, pelvic_thrusting, face_pulling, full_body_shaking
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_5.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_6.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_7.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_8.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_9.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_10.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_11.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_12.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_13.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_14.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_15.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_16.mp4,asynchronous_movement, pelvic_thrusting, arm_flexion
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_17.mp4,asynchronous_movement, pelvic_thrusting, arm_flexion
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_18.mp4,asynchronous_movement, pelvic_thrusting, arm_flexion
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_19.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_20.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_21.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_22.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_23.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_24.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_25.mp4,asynchronous_movement
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_26.mp4,asynchronous_movement
+O0003@6-6-2020@DA0014P5@nes_v1_1_segment_27.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_0.mp4,
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_1.mp4,
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_2.mp4,
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_3.mp4,oral_automatisms, asynchronous_movement, face_pulling
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_4.mp4,oral_automatisms, asynchronous_movement, face_pulling
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_5.mp4,oral_automatisms, asynchronous_movement, face_pulling
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_6.mp4,oral_automatisms, asynchronous_movement, face_pulling
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_7.mp4,oral_automatisms, asynchronous_movement, face_pulling
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_8.mp4,oral_automatisms, asynchronous_movement, face_pulling
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_9.mp4,oral_automatisms, asynchronous_movement, face_pulling, tonic, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_10.mp4,oral_automatisms, asynchronous_movement, face_pulling, tonic, pelvic_thrusting, full_body_shaking, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_11.mp4,oral_automatisms, asynchronous_movement, face_pulling, tonic, pelvic_thrusting, full_body_shaking, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_12.mp4,oral_automatisms, asynchronous_movement, face_pulling, tonic, pelvic_thrusting, full_body_shaking, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_13.mp4,oral_automatisms, asynchronous_movement, tonic, pelvic_thrusting, full_body_shaking, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_14.mp4,oral_automatisms, asynchronous_movement, tonic, pelvic_thrusting, full_body_shaking, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_15.mp4,oral_automatisms, asynchronous_movement, tonic, pelvic_thrusting, full_body_shaking, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_16.mp4,oral_automatisms, asynchronous_movement, tonic, pelvic_thrusting, full_body_shaking, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_17.mp4,oral_automatisms, asynchronous_movement, tonic, pelvic_thrusting, full_body_shaking, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_18.mp4,oral_automatisms, asynchronous_movement, tonic, pelvic_thrusting, full_body_shaking, arm_flexion, blank_stare
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_19.mp4,asynchronous_movement, tonic, pelvic_thrusting, full_body_shaking, arm_flexion, blank_stare
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_20.mp4,asynchronous_movement, tonic, pelvic_thrusting, full_body_shaking, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_21.mp4,asynchronous_movement, tonic, pelvic_thrusting, full_body_shaking, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_22.mp4,asynchronous_movement, tonic, pelvic_thrusting, full_body_shaking, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_23.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_24.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_25.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_26.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_27.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_28.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_29.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_30.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_31.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_32.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_33.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_34.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_35.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_36.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_37.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_38.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_39.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v1_1_segment_40.mp4,asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v2_1_segment_0.mp4,close_eyes, asynchronous_movement, arm_flexion, arms_move_simultaneously
+O0003@6-6-2020@UA66924A@nes_v2_1_segment_1.mp4,close_eyes, asynchronous_movement, arm_flexion, arms_move_simultaneously, full_body_shaking, oral_automatisms
+O0003@6-6-2020@UA66924A@nes_v2_1_segment_2.mp4,close_eyes, asynchronous_movement, arm_flexion, arms_move_simultaneously, full_body_shaking, oral_automatisms
+O0003@6-6-2020@UA66924A@nes_v2_1_segment_3.mp4,close_eyes, asynchronous_movement, arm_flexion, arms_move_simultaneously, full_body_shaking, oral_automatisms
+O0003@6-6-2020@UA66924A@nes_v2_1_segment_4.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v2_1_segment_5.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v2_1_segment_6.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v2_1_segment_7.mp4,close_eyes, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v2_1_segment_8.mp4,close_eyes, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v2_1_segment_9.mp4,close_eyes
+O0003@6-6-2020@UA66924A@nes_v2_1_segment_10.mp4,close_eyes
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_0.mp4,face_pulling
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_1.mp4,face_pulling, oral_automatisms
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_2.mp4,face_pulling
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_3.mp4,face_pulling, asynchronous_movement
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_4.mp4,face_pulling, asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_5.mp4,face_pulling, asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_6.mp4,face_pulling, asynchronous_movement, pelvic_thrusting, arm_flexion
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_7.mp4,face_pulling, asynchronous_movement, pelvic_thrusting, arm_flexion, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_8.mp4,face_pulling, asynchronous_movement, pelvic_thrusting, arm_flexion, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_9.mp4,face_pulling, asynchronous_movement, pelvic_thrusting, arm_flexion, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_10.mp4,face_pulling, asynchronous_movement, pelvic_thrusting, arm_flexion, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_11.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_12.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_13.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_14.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_15.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_16.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_17.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_18.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_19.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_20.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_21.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_22.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_23.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_24.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_25.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_26.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_27.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_28.mp4,asynchronous_movement, pelvic_thrusting
+O0003@6-6-2020@UA66924A@nes_v3_1_segment_29.mp4,
+O0004@8-27-2019@DA0013EP@sz_v1_1_segment_0.mp4,
+O0004@8-27-2019@DA0013EP@sz_v1_1_segment_1.mp4,oral_automatisms, face_twitching
+O0004@8-27-2019@DA0013EP@sz_v1_1_segment_2.mp4,oral_automatisms, face_twitching, blank_stare
+O0004@8-27-2019@DA0013EP@sz_v1_1_segment_3.mp4,oral_automatisms, face_twitching, blank_stare, arm_flexion, head_turning, arm_straightening, tonic
+O0004@8-27-2019@DA0013EP@sz_v1_1_segment_4.mp4,face_twitching, arm_flexion, head_turning, tonic
+O0004@8-27-2019@DA0013EP@sz_v1_1_segment_5.mp4,face_twitching, arm_flexion
+O0004@8-27-2019@DA0013EP@sz_v1_1_segment_6.mp4,
+O0004@8-27-2019@DA0013EP@sz_v1_1_segment_7.mp4,
+O0004@8-27-2019@DA0013EP@sz_v1_1_segment_8.mp4,
+O0004@8-27-2019@DA0013EP@sz_v1_1_segment_9.mp4,
+O0004@8-27-2019@DA0013EP@sz_v1_1_segment_10.mp4,
+O0005@3-12-2015@TA7641JO@sz_v1_1_segment_0.mp4,arm_flexion
+O0005@3-12-2015@TA7641JO@sz_v1_1_segment_1.mp4,arm_flexion, eye_blinking
+O0005@3-12-2015@TA7641JO@sz_v1_1_segment_2.mp4,arm_straightening
+O0005@3-12-2015@TA7641JO@sz_v1_1_segment_3.mp4,arm_straightening, clonic, full_body_shaking
+O0005@3-12-2015@TA7641JO@sz_v1_1_segment_4.mp4,clonic, full_body_shaking
+O0005@3-12-2015@TA7641JO@sz_v2_1_segment_0.mp4,
+O0005@3-12-2015@TA7641JO@sz_v2_1_segment_1.mp4,limb_automatisms, eye_blinking
+O0005@3-12-2015@TA7641JO@sz_v2_1_segment_2.mp4,limb_automatisms, eye_blinking
+O0005@3-12-2015@TA7641JO@sz_v2_1_segment_3.mp4,limb_automatisms
+O0005@3-12-2015@TA7641JO@sz_v2_1_segment_4.mp4,limb_automatisms, tonic, arm_flexion
+O0005@3-12-2015@TA7641JO@sz_v2_1_segment_5.mp4,limb_automatisms, tonic, arm_flexion
+O0005@3-12-2015@TA7641JO@sz_v2_1_segment_6.mp4,limb_automatisms, clonic
+O0005@3-12-2015@TA7641JO@sz_v2_1_segment_7.mp4,limb_automatisms, clonic, arm_straightening, figure4, blank_stare
+O0005@3-12-2015@TA7641JO@sz_v2_1_segment_8.mp4,limb_automatisms, blank_stare
+O0005@3-12-2015@TA7641JP@sz_v1_1_segment_0.mp4,clonic, limb_automatisms
+O0005@3-12-2015@TA7641JP@sz_v1_1_segment_1.mp4,clonic, limb_automatisms, tonic, arm_straightening, arm_flexion, head_turning, figure4
+O0005@3-12-2015@TA7641JP@sz_v1_1_segment_2.mp4,clonic, tonic, arm_flexion, head_turning, figure4, eye_blinking
+O0005@3-12-2015@TA7641JP@sz_v1_1_segment_3.mp4,clonic, tonic, eye_blinking
+O0005@3-12-2015@TA7641JP@sz_v1_1_segment_4.mp4,clonic, eye_blinking
+O0005@3-12-2015@TA7641K4@sz_v1_1_segment_0.mp4,limb_automatisms, tonic, arm_flexion
+O0005@3-12-2015@TA7641K4@sz_v1_1_segment_1.mp4,limb_automatisms, tonic, arm_flexion, clonic, eye_blinking
+O0005@3-12-2015@TA7641K4@sz_v1_1_segment_2.mp4,limb_automatisms, tonic, arm_flexion, clonic, eye_blinking, arm_straightening, figure4
+O0005@3-12-2015@TA7641K4@sz_v1_1_segment_3.mp4,tonic, arm_flexion, clonic, arm_straightening, figure4, head_turning
+O0005@3-12-2015@TA7641K4@sz_v1_1_segment_4.mp4,tonic, arm_flexion, clonic, arm_straightening, head_turning
+O0005@3-12-2015@TA7641K4@sz_v1_1_segment_5.mp4,arm_flexion, clonic, arm_straightening
+O0005@3-12-2015@TA7641K4@sz_v1_1_segment_6.mp4,clonic
+O0005@3-12-2015@TA7641K5@sz_v1_1_segment_0.mp4,
+O0005@3-12-2015@TA7641K5@sz_v1_1_segment_1.mp4,eye_blinking, arm_flexion, clonic, limb_automatisms
+O0005@3-12-2015@TA7641K5@sz_v1_1_segment_2.mp4,arm_flexion, clonic, limb_automatisms, tonic, arm_straightening, blank_stare
+O0005@3-12-2015@TA7641K5@sz_v1_1_segment_3.mp4,arm_flexion, clonic, tonic, blank_stare, figure4
+O0005@3-12-2015@TA7641K5@sz_v1_1_segment_4.mp4,arm_flexion, clonic, figure4
+O0005@3-12-2015@TA7641K5@sz_v1_1_segment_5.mp4,arm_flexion, clonic, figure4
+O0005@3-12-2015@TA7641K5@sz_v2_1_segment_0.mp4,tonic
+O0005@3-12-2015@TA7641K5@sz_v2_1_segment_1.mp4,tonic, arm_flexion, limb_automatisms, arm_straightening, figure4, blank_stare
+O0005@3-12-2015@TA7641K5@sz_v2_1_segment_2.mp4,tonic, arm_flexion, arm_straightening, figure4, blank_stare, full_body_shaking, close_eyes, clonic
+O0005@3-12-2015@TA7641K5@sz_v2_1_segment_3.mp4,tonic, arm_flexion, full_body_shaking, close_eyes, clonic
+O0006@1-21-2016@CA4444A4@sz_v1_1_segment_0.mp4,oral_automatisms, clonic, limb_automatisms
+O0006@1-21-2016@CA4444A4@sz_v1_1_segment_1.mp4,oral_automatisms, clonic, limb_automatisms
+O0006@1-21-2016@CA4444A4@sz_v1_1_segment_2.mp4,oral_automatisms, clonic, limb_automatisms
+O0007@1-5-2016@CA44446U@sz_v1_1_segment_0.mp4,eye_blinking, face_pulling
+O0007@1-5-2016@CA44446U@sz_v1_1_segment_1.mp4,face_pulling, blank_stare
+O0007@1-5-2016@CA44446U@sz_v2_1_segment_0.mp4,close_eyes
+O0008@6-21-2022@GA5980K2@sz_v1_1_segment_0.mp4,arms_move_simultaneously, tonic, arm_straightening
+O0008@6-21-2022@GA5980K2@sz_v1_1_segment_1.mp4,arms_move_simultaneously, tonic, arm_straightening, face_twitching, clonic
+O0008@6-21-2022@GA5980K2@sz_v1_1_segment_2.mp4,arms_move_simultaneously, face_twitching, clonic
+O0008@6-21-2022@KA96022J@sz_v1_1_segment_0.mp4,blank_stare, tonic, arms_move_simultaneously, figure4, arm_straightening, eye_blinking, clonic
+O0008@6-21-2022@KA96022J@sz_v1_1_segment_1.mp4,tonic, arms_move_simultaneously, arm_straightening, eye_blinking, clonic
+O0008@6-21-2022@KA96022J@sz_v1_1_segment_2.mp4,tonic, arms_move_simultaneously, arm_straightening, eye_blinking, clonic
+O0009@8-8-2022@DA1322BE@sz_v1_1_segment_0.mp4,oral_automatisms
+O0009@8-8-2022@DA1322BE@sz_v1_1_segment_1.mp4,oral_automatisms, blank_stare, head_turning, tonic, arm_straightening
+O0009@8-8-2022@DA1322BE@sz_v1_1_segment_2.mp4,head_turning, tonic, arm_straightening, clonic, arm_flexion, figure4
+O0009@8-8-2022@DA1322BE@sz_v1_1_segment_3.mp4,tonic, arm_straightening, clonic
+O0009@8-8-2022@DA1322BE@sz_v1_1_segment_4.mp4,tonic
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_0.mp4,oral_automatisms, eye_blinking, arm_straightening, figure4
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_1.mp4,arm_straightening, figure4, face_twitching, head_turning, face_pulling
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_2.mp4,face_twitching, head_turning, face_pulling
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_3.mp4,head_turning, face_pulling
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_4.mp4,face_pulling
+O0010@6-11-2020@DA0014PO@sz_v3_1_segment_5.mp4,
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_0.mp4,tonic, arm_straightening, arm_flexion, figure4, head_turning
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_1.mp4,tonic, arm_straightening, arm_flexion, figure4, head_turning
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_2.mp4,tonic, arm_straightening, arm_flexion, figure4
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_3.mp4,tonic, arm_straightening, arm_flexion, figure4
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_4.mp4,tonic, arm_flexion
+O0010@6-11-2020@DA0014PP@sz_v2_1_segment_5.mp4,tonic, arm_flexion
+O0011@2-27-2019@DA7022D0@sz_v1_1_segment_0.mp4,arms_move_simultaneously, tonic, arm_straightening, eye_blinking
+O0011@2-27-2019@DA7022D0@sz_v1_1_segment_1.mp4,tonic, arm_straightening
+R0001@10-17-2023@DA1324JS@sz_v1_1_segment_0.mp4,eye_blinking, oral_automatisms
+R0001@10-17-2023@DA1324JS@sz_v1_1_segment_1.mp4,oral_automatisms
+R0001@10-17-2023@DA1324JS@sz_v1_1_segment_2.mp4,oral_automatisms, tonic, head_turning, face_pulling, face_twitching, limb_automatisms, clonic, arm_flexion
+R0001@10-17-2023@DA1324JS@sz_v1_1_segment_3.mp4,oral_automatisms, tonic, head_turning, face_pulling, face_twitching, limb_automatisms, clonic, arm_flexion, arm_straightening, figure4
+R0001@10-17-2023@DA1324JS@sz_v1_1_segment_4.mp4,oral_automatisms, tonic, face_pulling, face_twitching, clonic, arm_flexion, arm_straightening, figure4
+R0001@10-17-2023@DA1324L8@sz_v1_1_segment_0.mp4,
+R0001@10-17-2023@DA1324L8@sz_v1_1_segment_1.mp4,
+R0001@10-17-2023@DA1324L8@sz_v1_1_segment_2.mp4,head_turning, tonic, arm_flexion, face_twitching
+R0001@10-17-2023@DA1324L8@sz_v1_1_segment_3.mp4,head_turning, tonic, arm_flexion, face_twitching, clonic, arm_straightening, blank_stare
+R0001@10-17-2023@DA1324L8@sz_v1_1_segment_4.mp4,tonic, face_twitching, clonic, blank_stare
+R0001@10-17-2023@DA1324L8@sz_v1_1_segment_5.mp4,tonic, face_twitching, clonic, blank_stare
+R0002@6-17-2021@DA0016G9@sz_v2_1_segment_0.mp4,
+R0002@6-17-2021@DA0016G9@sz_v2_1_segment_1.mp4,
+R0002@6-17-2021@UA6693TB@sz_v1_1_segment_0.mp4,oral_automatisms, face_twitching, head_turning
+R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4,oral_automatisms, face_twitching, head_turning, tonic, eye_blinking, arm_flexion
+R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4,face_twitching, tonic, eye_blinking, arm_flexion, clonic
+R0002@6-17-2021@UA6693TB@sz_v1_1_segment_3.mp4,face_twitching, tonic, arm_flexion, clonic
+R0002@6-17-2021@UA6693TC@sz_v1_1_segment_0.mp4,blank_stare
+R0002@6-17-2021@UA6693TC@sz_v2_1_segment_0.mp4,
+R0002@9-3-2023@AA16128L@sz_v1_1_segment_0.mp4,
+R0002@9-3-2023@AA16128M@sz_v1_1_segment_0.mp4,
+R0002@9-3-2023@AA16128M@sz_v2_1_segment_0.mp4,arm_flexion
+R0002@9-3-2023@DA9601MS@sz_v1_1_segment_0.mp4,
+R0002@9-3-2023@DA9601MT@multiple_sz1_2_segment_0.mp4,close_eyes
+R0002@9-3-2023@DA9601MT@multiple_sz1_3_segment_0.mp4,
+R0002@9-3-2023@DA9601MT@multiple_sz1_3_segment_1.mp4,
+R0002@9-3-2023@DA9601MV@sz_v1_1_segment_0.mp4,
+R0002@9-3-2023@DA9601MV@sz_v3_1_segment_0.mp4,
+R0004@5-20-2021@DA0016B4@nes_v1_1_segment_0.mp4,blank_stare
+R0004@5-20-2021@DA0016B4@nes_v1_1_segment_1.mp4,blank_stare
+R0004@5-20-2021@DA0016B4@nes_v1_1_segment_2.mp4,
+R0004@5-20-2021@DA0016BK@nes_v4_1_segment_0.mp4,face_twitching
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_0.mp4,close_eyes
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_1.mp4,close_eyes
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_2.mp4,close_eyes
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_3.mp4,close_eyes
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_4.mp4,close_eyes
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_5.mp4,close_eyes
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_6.mp4,close_eyes
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_7.mp4,close_eyes
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_8.mp4,close_eyes
+R0005@10-17-2019@DA0013O9@nes_v2_1_segment_9.mp4,close_eyes
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_0.mp4,
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_1.mp4,
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_2.mp4,
+R0006@11-3-2014@VA7631US@nes_v1_1_segment_3.mp4,
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_0.mp4,
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_1.mp4,
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_2.mp4,arms_move_simultaneously
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4,arms_move_simultaneously
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4,arms_move_simultaneously
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4,arms_move_simultaneously, pelvic_thrusting, asynchronous_movement, full_body_shaking, arm_flexion
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4,arms_move_simultaneously, pelvic_thrusting, asynchronous_movement, full_body_shaking, arm_flexion
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4,arms_move_simultaneously, pelvic_thrusting, asynchronous_movement, full_body_shaking, arm_flexion
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4,arms_move_simultaneously, pelvic_thrusting, asynchronous_movement, full_body_shaking, arm_flexion
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4,arms_move_simultaneously, pelvic_thrusting, asynchronous_movement, full_body_shaking, arm_flexion
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_10.mp4,arms_move_simultaneously, pelvic_thrusting, asynchronous_movement, full_body_shaking, arm_flexion
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_11.mp4,arms_move_simultaneously, pelvic_thrusting, asynchronous_movement, full_body_shaking, arm_flexion
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_12.mp4,arms_move_simultaneously, pelvic_thrusting, asynchronous_movement, full_body_shaking, arm_flexion
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_13.mp4,arms_move_simultaneously, pelvic_thrusting, asynchronous_movement, full_body_shaking
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_14.mp4,arms_move_simultaneously, pelvic_thrusting, asynchronous_movement, full_body_shaking
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_15.mp4,arms_move_simultaneously, pelvic_thrusting
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_16.mp4,arms_move_simultaneously, pelvic_thrusting
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_17.mp4,arms_move_simultaneously, pelvic_thrusting
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_18.mp4,arms_move_simultaneously, pelvic_thrusting
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_19.mp4,arms_move_simultaneously, pelvic_thrusting
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_20.mp4,arms_move_simultaneously, pelvic_thrusting
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_21.mp4,arms_move_simultaneously, pelvic_thrusting
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_22.mp4,arms_move_simultaneously, pelvic_thrusting
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_23.mp4,arms_move_simultaneously, pelvic_thrusting
+R0007@3-7-2016@CA4444H1@nes_v1_1_segment_24.mp4,arms_move_simultaneously
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_0.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, close_eyes, arm_flexion
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, close_eyes, arm_flexion
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, close_eyes
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_3.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, close_eyes
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_4.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, close_eyes
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_5.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, close_eyes
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_6.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, close_eyes
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_7.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, close_eyes
+R0007@3-7-2016@CA4444H2@nes_v1_1_segment_8.mp4,asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, close_eyes
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_0.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement, arms_move_simultaneously, arm_flexion
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_1.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement, arms_move_simultaneously, arm_flexion
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_2.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement, arms_move_simultaneously, arm_flexion
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_3.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement, arms_move_simultaneously, arm_flexion
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_4.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement, arms_move_simultaneously, arm_flexion
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_5.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement, arms_move_simultaneously, arm_flexion
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_6.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement, arms_move_simultaneously, arm_flexion
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_7.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement, arms_move_simultaneously, arm_flexion
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_8.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement, arms_move_simultaneously, arm_flexion
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_9.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement, arms_move_simultaneously, arm_flexion
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_10.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement, arms_move_simultaneously
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_11.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement
+R0007@3-7-2016@CA4444HK@nes_v1_1_segment_12.mp4,full_body_shaking, pelvic_thrusting, asynchronous_movement
+R0009@8-12-2013@FA16402H@sz_v2_1_segment_0.mp4,arms_move_simultaneously, arm_straightening, tonic
+R0009@8-12-2013@FA16402H@sz_v2_1_segment_1.mp4,arms_move_simultaneously, tonic
+R0009@8-12-2013@FA16402H@sz_v2_1_segment_2.mp4,tonic
+R0009@8-12-2013@FA16402H@sz_v3_1_segment_0.mp4,arm_straightening, arms_move_simultaneously, tonic
+R0009@8-12-2013@FA16402H@sz_v3_1_segment_1.mp4,
+R0009@8-12-2013@FA16402M@sz_v3_1_segment_0.mp4,tonic, arms_move_simultaneously, arm_straightening
+R0009@8-12-2013@FA16402M@sz_v4_1_segment_0.mp4,tonic, arm_straightening
+R0009@8-12-2013@FA16402M@sz_v4_1_segment_1.mp4,
+R0009@8-12-2013@FA16402M@sz_v4_1_segment_2.mp4,
+R0010@3-23-2015@VA7632JF@sz_v1_1_segment_0.mp4,tonic, arm_straightening, arm_flexion, figure4, full_body_shaking, clonic, eye_blinking
+R0010@3-23-2015@VA7632JF@sz_v1_1_segment_1.mp4,tonic, arm_flexion, full_body_shaking, clonic, eye_blinking
+R0010@3-23-2015@VA7632JF@sz_v1_1_segment_2.mp4,tonic, full_body_shaking, clonic
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_0.mp4,close_eyes, limb_automatisms, asynchronous_movement, arms_move_simultaneously
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_1.mp4,close_eyes, limb_automatisms, asynchronous_movement, arms_move_simultaneously
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_2.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_3.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_4.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_5.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_6.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_7.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_8.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_9.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_10.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_11.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_12.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_13.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_14.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_15.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_16.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_17.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_18.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_19.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_20.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_21.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_22.mp4,close_eyes, limb_automatisms
+R0011@9-22-2020@DA00157M@nes_v1_1_segment_23.mp4,close_eyes
+R0011@9-22-2020@DA00157U@nes_v2_1_segment_0.mp4,close_eyes, arms_move_simultaneously
+R0011@9-22-2020@DA00157U@nes_v2_1_segment_1.mp4,close_eyes, asynchronous_movement
+R0011@9-22-2020@DA00157U@nes_v2_1_segment_2.mp4,close_eyes, asynchronous_movement
+R0011@9-22-2020@DA00157U@nes_v2_1_segment_3.mp4,close_eyes, asynchronous_movement
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_0.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_1.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_2.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_3.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_4.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_5.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_6.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+R0011@9-22-2020@DA00157V@nes_v1_1_segment_7.mp4,pelvic_thrusting
+R0011@9-22-2020@DA00157W@nes_v1_1_segment_0.mp4,asynchronous_movement
+R0011@9-22-2020@DA00157W@nes_v1_1_segment_1.mp4,asynchronous_movement
+R0011@9-22-2020@DA00157W@nes_v1_1_segment_2.mp4,asynchronous_movement, close_eyes
+R0011@9-22-2020@DA00157W@nes_v1_1_segment_3.mp4,asynchronous_movement, close_eyes
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_0.mp4,close_eyes, arms_move_simultaneously, asynchronous_movement
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_1.mp4,close_eyes, asynchronous_movement
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_2.mp4,close_eyes
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_3.mp4,close_eyes
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_4.mp4,close_eyes
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_5.mp4,close_eyes
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_6.mp4,close_eyes
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_7.mp4,close_eyes
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_8.mp4,close_eyes
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_9.mp4,close_eyes
+R0011@9-22-2020@DA00158B@nes_v1_1_segment_10.mp4,close_eyes
+R0011@9-22-2020@DA001583@nes_v1_1_segment_0.mp4,close_eyes, asynchronous_movement, limb_automatisms, arms_move_simultaneously
+R0011@9-22-2020@DA001583@nes_v1_1_segment_1.mp4,close_eyes, asynchronous_movement, limb_automatisms
+R0011@9-22-2020@DA001583@nes_v1_1_segment_2.mp4,close_eyes, asynchronous_movement, limb_automatisms
+R0011@9-22-2020@DA001584@nes_v1_1_segment_0.mp4,close_eyes, arms_move_simultaneously, asynchronous_movement
+R0011@9-22-2020@DA001584@nes_v1_1_segment_1.mp4,close_eyes, asynchronous_movement
+R0011@9-22-2020@DA001584@nes_v1_2_segment_0.mp4,close_eyes, pelvic_thrusting, full_body_shaking, arms_move_simultaneously, asynchronous_movement
+R0011@9-22-2020@DA001584@nes_v1_3_segment_0.mp4,close_eyes, full_body_shaking, arms_move_simultaneously, pelvic_thrusting, asynchronous_movement
+R0011@9-22-2020@DA001584@nes_v1_3_segment_1.mp4,close_eyes, arms_move_simultaneously, asynchronous_movement
+R0011@9-22-2020@DA001584@nes_v1_4_segment_0.mp4,close_eyes, asynchronous_movement, pelvic_thrusting, full_body_shaking, arms_move_simultaneously
+R0011@9-22-2020@DA001584@nes_v1_4_segment_1.mp4,close_eyes, asynchronous_movement, pelvic_thrusting, full_body_shaking
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_0.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_1.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_2.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_3.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_4.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_5.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_6.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_7.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_8.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_9.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_10.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_11.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_12.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_13.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_14.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_15.mp4,close_eyes
+R0012@7-8-2019@UA6690J1@nes_v1_1_segment_16.mp4,close_eyes
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_0.mp4,
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_1.mp4,
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_2.mp4,
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_3.mp4,
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_4.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_5.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_6.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_7.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_8.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_9.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_10.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_11.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_12.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_13.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_14.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_15.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_16.mp4,full_body_shaking, arms_move_simultaneously, asynchronous_movement
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_17.mp4,full_body_shaking, arms_move_simultaneously, asynchronous_movement
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_18.mp4,arms_move_simultaneously, asynchronous_movement
+R0012@7-8-2019@UA6690J2@nes_v1_1_segment_19.mp4,asynchronous_movement
+R0012@7-8-2019@UA6690J4@nes_v1_1_segment_0.mp4,full_body_shaking
+R0012@7-8-2019@UA6690J4@nes_v1_1_segment_1.mp4,full_body_shaking, close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_1_segment_2.mp4,full_body_shaking, close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_1_segment_3.mp4,full_body_shaking, close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_1_segment_4.mp4,full_body_shaking, close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_1_segment_5.mp4,full_body_shaking, close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_1_segment_6.mp4,full_body_shaking, close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_2_segment_0.mp4,asynchronous_movement, arms_move_simultaneously, full_body_shaking
+R0012@7-8-2019@UA6690J4@nes_v1_2_segment_1.mp4,asynchronous_movement
+R0012@7-8-2019@UA6690J4@nes_v1_2_segment_2.mp4,asynchronous_movement
+R0012@7-8-2019@UA6690J4@nes_v1_3_segment_0.mp4,
+R0012@7-8-2019@UA6690J4@nes_v1_3_segment_1.mp4,
+R0012@7-8-2019@UA6690J4@nes_v1_3_segment_2.mp4,
+R0012@7-8-2019@UA6690J4@nes_v1_3_segment_3.mp4,
+R0012@7-8-2019@UA6690J4@nes_v1_3_segment_4.mp4,
+R0012@7-8-2019@UA6690J4@nes_v1_3_segment_5.mp4,
+R0012@7-8-2019@UA6690J4@nes_v1_3_segment_6.mp4,
+R0012@7-8-2019@UA6690J4@nes_v1_3_segment_7.mp4,
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_0.mp4,
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_1.mp4,asynchronous_movement
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_2.mp4,asynchronous_movement, arms_move_simultaneously
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_3.mp4,asynchronous_movement, arms_move_simultaneously, full_body_shaking
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_4.mp4,asynchronous_movement, arms_move_simultaneously, full_body_shaking
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_5.mp4,asynchronous_movement, arms_move_simultaneously, full_body_shaking
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_6.mp4,asynchronous_movement, arms_move_simultaneously, full_body_shaking
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_7.mp4,asynchronous_movement, arms_move_simultaneously, full_body_shaking, close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_8.mp4,asynchronous_movement, arms_move_simultaneously, full_body_shaking, close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_9.mp4,asynchronous_movement, arms_move_simultaneously, full_body_shaking
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_10.mp4,asynchronous_movement
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_11.mp4,asynchronous_movement
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_12.mp4,asynchronous_movement
+R0012@7-8-2019@UA6690J4@nes_v1_4_segment_13.mp4,asynchronous_movement
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_0.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_1.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_2.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_3.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_4.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_5.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_6.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_7.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_8.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_9.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_10.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_11.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_5_segment_12.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_6_segment_0.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_6_segment_1.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_6_segment_2.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_6_segment_3.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_6_segment_4.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v1_6_segment_5.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v2_1_segment_0.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v2_1_segment_1.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v2_1_segment_2.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v2_1_segment_3.mp4,close_eyes
+R0012@7-8-2019@UA6690J4@nes_v2_1_segment_4.mp4,close_eyes
+R0014@5-4-2022@DA1321Q8@sz_v1_1_segment_0.mp4,blank_stare
+R0014@5-4-2022@DA1321Q8@sz_v1_1_segment_1.mp4,blank_stare, head_turning
+R0015@3-17-2022@KA9601DC@sz_v1_1_segment_0.mp4,head_turning, face_pulling, face_twitching, blank_stare, tonic
+R0015@3-17-2022@KA9601DC@sz_v1_1_segment_1.mp4,head_turning, face_pulling, face_twitching, blank_stare, tonic, arm_straightening, arm_flexion, figure4, clonic
+R0015@3-17-2022@KA9601DC@sz_v1_1_segment_2.mp4,head_turning, face_pulling, face_twitching, blank_stare, tonic, arm_straightening, arm_flexion, figure4, clonic
+R0015@3-17-2022@KA9601DC@sz_v1_1_segment_3.mp4,face_pulling, face_twitching, blank_stare, clonic
+R0015@3-17-2022@KA9601DC@sz_v1_1_segment_4.mp4,face_pulling, blank_stare
+R0015@3-17-2022@KA9601DC@sz_v1_1_segment_5.mp4,face_pulling
+R0015@3-17-2022@KA9601DC@sz_v1_1_segment_6.mp4,face_pulling
+R0015@3-17-2022@KA9601DC@sz_v1_1_segment_7.mp4,
+R0016@3-29-2021@DA0015ZD@sz_v1_1_segment_0.mp4,face_pulling, tonic, arm_flexion
+R0016@3-29-2021@DA0015ZD@sz_v1_1_segment_1.mp4,face_pulling, tonic, arm_flexion, face_twitching, arm_straightening, figure4, eye_blinking, clonic
+R0016@3-29-2021@DA0015ZD@sz_v1_1_segment_2.mp4,face_pulling, tonic, face_twitching, eye_blinking, clonic
+S0001@3-7-2022@KA9601AP@nes_v1_1_segment_0.mp4,
+S0002@6-10-2014@TA76408S@sz_v1_1_segment_0.mp4,oral_automatisms
+S0002@6-10-2014@TA76408S@sz_v1_1_segment_1.mp4,oral_automatisms
+S0002@6-10-2014@TA76408S@sz_v1_1_segment_2.mp4,oral_automatisms
+S0002@6-10-2014@TA76408S@sz_v1_1_segment_3.mp4,oral_automatisms
+S0002@6-10-2014@TA76408Z@sz_v1_1_segment_0.mp4,oral_automatisms
+S0002@6-10-2014@TA76408Z@sz_v1_1_segment_1.mp4,oral_automatisms
+S0002@6-10-2014@TA76408Z@sz_v1_1_segment_2.mp4,oral_automatisms
+S0002@6-10-2014@TA76408Z@sz_v1_1_segment_3.mp4,oral_automatisms
+S0002@6-10-2014@TA76408Z@sz_v1_1_segment_4.mp4,
+S0002@6-10-2014@TA764085@sz_v1_1_segment_0.mp4,
+S0002@6-10-2014@TA764085@sz_v1_1_segment_1.mp4,oral_automatisms, head_turning, face_twitching
+S0002@6-10-2014@TA764085@sz_v1_1_segment_2.mp4,oral_automatisms, head_turning, face_twitching, tonic, arm_straightening
+S0002@6-10-2014@TA764085@sz_v1_1_segment_3.mp4,tonic, arm_straightening, eye_blinking, clonic
+S0002@6-10-2014@TA764085@sz_v1_1_segment_4.mp4,tonic, eye_blinking, clonic
+S0002@6-10-2014@TA764085@sz_v1_1_segment_5.mp4,clonic
+S0002@6-10-2014@TA764090@sz_v1_1_segment_0.mp4,
+S0002@6-10-2014@UA76200S@sz_v1_1_segment_0.mp4,
+S0002@6-10-2014@UA76200S@sz_v1_1_segment_1.mp4,oral_automatisms
+S0002@6-10-2014@UA76200S@sz_v1_1_segment_2.mp4,oral_automatisms
+S0002@6-10-2014@UA76200S@sz_v1_1_segment_3.mp4,oral_automatisms
+S0002@6-10-2014@UA76200S@sz_v1_1_segment_4.mp4,oral_automatisms
+S0002@7-28-2015@VA76337A@sz_v1_1_segment_0.mp4,
+S0002@7-28-2015@VA76337O@sz_v1_1_segment_0.mp4,
+S0002@7-28-2015@VA76337O@sz_v1_1_segment_1.mp4,
+S0002@7-28-2015@VA76337O@sz_v1_1_segment_2.mp4,
+S0002@7-28-2015@VA76337O@sz_v1_1_segment_3.mp4,
+S0002@7-28-2015@VA76339B@sz_v1_1_segment_0.mp4,
+S0002@7-28-2015@VA76339B@sz_v1_1_segment_1.mp4,
+S0002@7-28-2015@VA763339@sz_v2_1_segment_0.mp4,close_eyes
+S0002@7-28-2015@VA763339@sz_v2_1_segment_1.mp4,close_eyes
+S0002@7-28-2015@VA763339@sz_v2_1_segment_2.mp4,close_eyes
+S0003@5-4-2022@KA9601UH@nes_v1.1_0_segment_0.mp4,close_eyes
+S0003@5-4-2022@KA9601UU@nes_v1_1_segment_0.mp4,
+S0003@5-4-2022@KA9601UU@nes_v1_1_segment_1.mp4,eye_blinking, close_eyes
+S0003@5-4-2022@KA9601UU@nes_v1_1_segment_2.mp4,close_eyes
+S0003@5-4-2022@KA9601UU@nes_v1_1_segment_3.mp4,close_eyes
+S0003@5-4-2022@KA9601UU@nes_v1_1_segment_4.mp4,close_eyes
+S0003@5-4-2022@KA9601UU@nes_v1_1_segment_5.mp4,close_eyes
+S0004@10-4-2021@KA9600G3@sz_v2_1_segment_0.mp4,head_turning, close_eyes, tonic, face_pulling
+S0004@10-4-2021@KA9600G3@sz_v2_1_segment_1.mp4,head_turning, close_eyes, tonic, face_pulling, eye_blinking, clonic, face_twitching, arm_straightening
+S0004@10-4-2021@KA9600G3@sz_v2_1_segment_2.mp4,close_eyes, tonic, face_pulling, eye_blinking, clonic, face_twitching, arm_straightening
+S0004@10-4-2021@KA9600G3@sz_v2_1_segment_3.mp4,close_eyes, eye_blinking, clonic
+S0005@3-18-2014@VA7610MM@nes_v1_1_segment_0.mp4,asynchronous_movement, full_body_shaking, arm_flexion, arms_move_simultaneously
+S0005@3-18-2014@VA7610MM@nes_v1_1_segment_1.mp4,asynchronous_movement, full_body_shaking, arm_flexion, arms_move_simultaneously
+S0005@3-18-2014@VA7610MM@nes_v1_1_segment_2.mp4,asynchronous_movement, full_body_shaking, arm_flexion, arms_move_simultaneously
+S0005@3-18-2014@VA7610MM@nes_v1_1_segment_3.mp4,asynchronous_movement, full_body_shaking, arms_move_simultaneously
+S0005@3-18-2014@VA7610MM@nes_v1_2_segment_0.mp4,asynchronous_movement, arms_move_simultaneously, full_body_shaking, face_pulling
+S0005@3-18-2014@VA7610MM@nes_v2_1_segment_0.mp4,asynchronous_movement, full_body_shaking, arm_flexion, arms_move_simultaneously
+S0005@3-18-2014@VA7610MM@nes_v2_1_segment_1.mp4,asynchronous_movement, full_body_shaking, arm_flexion, arms_move_simultaneously
+S0005@3-18-2014@VA7610MM@nes_v4_1_segment_0.mp4,arm_flexion, asynchronous_movement, full_body_shaking
+S0005@3-18-2014@VA7610MM@nes_v4_1_segment_1.mp4,arm_flexion, asynchronous_movement, full_body_shaking
+S0005@3-18-2014@VA7610MM@nes_v5_1_segment_0.mp4,limb_automatisms, arm_straightening, arm_flexion, full_body_shaking, asynchronous_movement, arms_move_simultaneously
+S0005@3-18-2014@VA7610MM@nes_v5_1_segment_1.mp4,limb_automatisms, arm_straightening, arm_flexion, full_body_shaking, asynchronous_movement, arms_move_simultaneously
+S0005@3-18-2014@VA7610MM@nes_v6_1_segment_0.mp4,asynchronous_movement, full_body_shaking, arms_move_simultaneously, arm_straightening, arm_flexion
+S0005@3-18-2014@VA7610MM@nes_v6_1_segment_1.mp4,asynchronous_movement, arms_move_simultaneously, arm_straightening, arm_flexion
+S0005@3-18-2014@VA7610MN@nes_v1_1_segment_0.mp4,full_body_shaking, asynchronous_movement, arm_straightening, arm_flexion
+S0005@3-18-2014@VA7610MN@nes_v1_1_segment_1.mp4,full_body_shaking, asynchronous_movement, arm_straightening, arm_flexion
+S0005@3-18-2014@VA7610MN@nes_v1_1_segment_2.mp4,
+S0005@3-18-2014@VA7610MN@nes_v2_1_segment_0.mp4,arms_move_simultaneously, asynchronous_movement, full_body_shaking, arm_flexion
+S0005@3-18-2014@VA7610MN@nes_v2_1_segment_1.mp4,arms_move_simultaneously, asynchronous_movement, full_body_shaking, arm_flexion
+S0005@3-18-2014@VA7610MO@nes_v1_1_segment_0.mp4,arms_move_simultaneously, asynchronous_movement, full_body_shaking, arm_straightening, arm_flexion
+S0005@3-18-2014@VA7610MO@nes_v1_1_segment_1.mp4,arms_move_simultaneously, asynchronous_movement, full_body_shaking, arm_straightening, arm_flexion
+S0005@3-18-2014@VA7610MO@nes_v1_1_segment_2.mp4,full_body_shaking, arm_flexion
+S0005@3-18-2014@VA7610MO@nes_v2_1_segment_0.mp4,full_body_shaking, arms_move_simultaneously, arm_straightening, asynchronous_movement
+S0005@3-18-2014@VA7610MO@nes_v2_1_segment_1.mp4,arm_straightening
+S0005@3-18-2014@VA7610MO@nes_v3_1_segment_0.mp4,full_body_shaking, arms_move_simultaneously, asynchronous_movement
+S0005@3-18-2014@VA7610MP@nes_v1_1_segment_0.mp4,full_body_shaking, asynchronous_movement, arm_flexion
+S0005@3-18-2014@VA7610MP@nes_v1_1_segment_1.mp4,full_body_shaking, asynchronous_movement, arm_flexion
+S0006@11-25-2014@TA7640ZP@nes_v1_1_segment_0.mp4,arms_move_simultaneously, asynchronous_movement
+S0006@11-25-2014@TA7640ZP@nes_v1_1_segment_1.mp4,arms_move_simultaneously, asynchronous_movement, full_body_shaking
+S0006@11-25-2014@TA7640ZP@nes_v1_1_segment_2.mp4,asynchronous_movement, full_body_shaking
+S0006@11-25-2014@TA7640ZP@nes_v1_1_segment_3.mp4,asynchronous_movement, full_body_shaking
+S0006@11-25-2014@TA7640ZP@nes_v1_1_segment_4.mp4,asynchronous_movement, full_body_shaking
+S0006@11-25-2014@TA7640ZP@nes_v1_1_segment_5.mp4,asynchronous_movement, full_body_shaking
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_0.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_1.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_2.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_3.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_4.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_5.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_6.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_7.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_8.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_9.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_10.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_11.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_12.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_13.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_14.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_15.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_16.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_17.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_18.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_19.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_20.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_21.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_22.mp4,close_eyes, asynchronous_movement
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_23.mp4,close_eyes, asynchronous_movement, full_body_shaking
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_24.mp4,close_eyes, asynchronous_movement, full_body_shaking
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_25.mp4,close_eyes, asynchronous_movement
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_26.mp4,close_eyes, asynchronous_movement
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_27.mp4,close_eyes, asynchronous_movement
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_28.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_29.mp4,close_eyes
+S0006@11-25-2014@TA7640ZS@nes_v3_1_segment_30.mp4,close_eyes
+S0007@1-31-2022@KA96014G@nes_v1_1_segment_0.mp4,close_eyes, pelvic_thrusting
+S0007@1-31-2022@KA96014G@nes_v1_1_segment_1.mp4,close_eyes, pelvic_thrusting
+S0008@6-12-2014@TA764080@sz_v3_1_segment_0.mp4,limb_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_1.mp4,limb_automatisms, oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_2.mp4,limb_automatisms, oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_3.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_4.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_5.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_6.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_7.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_8.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_9.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_10.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_11.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_12.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_13.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_14.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_15.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_16.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_17.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_18.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_19.mp4,oral_automatisms
+S0008@6-12-2014@TA764080@sz_v3_1_segment_20.mp4,oral_automatisms
+S0008@6-12-2014@TA764082@sz_v3_1_segment_0.mp4,oral_automatisms, limb_automatisms
+S0008@6-12-2014@TA764082@sz_v3_1_segment_1.mp4,oral_automatisms, limb_automatisms
+S0009@12-17-2019@UA6691GD@sz_v1_1_segment_0.mp4,tonic, head_turning, eye_blinking, arm_straightening, clonic
+S0009@12-17-2019@UA6691GD@sz_v1_1_segment_1.mp4,tonic, arm_straightening, clonic
+S0009@12-17-2019@UA6691GD@sz_v1_1_segment_2.mp4,tonic, arm_straightening, clonic
+S0009@12-17-2019@UA6691GD@sz_v2_1_segment_0.mp4,arms_move_simultaneously, tonic, head_turning, arm_straightening
+S0009@12-17-2019@UA6691GD@sz_v2_1_segment_1.mp4,tonic, arm_straightening, clonic
+S0009@12-17-2019@UA6691GD@sz_v2_1_segment_2.mp4,tonic, arm_straightening, clonic
+S0009@12-17-2019@UA6691GD@sz_v2_1_segment_3.mp4,tonic, arm_straightening, clonic
+S0009@12-17-2019@UA6691GD@sz_v3_1_segment_0.mp4,head_turning, tonic, arm_straightening
+S0009@12-17-2019@UA6691GD@sz_v3_1_segment_1.mp4,tonic, arm_straightening, clonic
+S0009@12-17-2019@UA6691GD@sz_v3_1_segment_2.mp4,tonic, clonic
+S0010@4-6-2022@DA1321JS@sz_v1_1_segment_0.mp4,arm_flexion, head_turning
+S0010@4-6-2022@DA1321JS@sz_v1_1_segment_1.mp4,arm_flexion, head_turning
+S0010@4-6-2022@DA1321JS@sz_v1_1_segment_2.mp4,arm_flexion, head_turning
+S0010@4-6-2022@DA1321JS@sz_v2_1_segment_0.mp4,arm_flexion
+S0010@4-6-2022@KA9601IB@sz_v5_1_segment_0.mp4,blank_stare
+S0010@4-6-2022@KA9601IC@sz_v1_1_segment_0.mp4,arm_flexion
+S0011@5-2-2022@DA1321PU@sz_v1_1_segment_0.mp4,oral_automatisms, limb_automatisms, eye_blinking
+S0011@5-2-2022@DA1321PU@sz_v1_1_segment_1.mp4,oral_automatisms, limb_automatisms, eye_blinking, blank_stare
+S0011@5-2-2022@DA1321PU@sz_v1_1_segment_2.mp4,oral_automatisms, blank_stare
+S0011@5-2-2022@DA1321PU@sz_v1_1_segment_3.mp4,oral_automatisms, blank_stare
+S0011@5-2-2022@DA1321PU@sz_v1_1_segment_4.mp4,oral_automatisms
+S0012@7-18-2019@DA00136N@sz_v1_1_segment_0.mp4,head_turning, arm_flexion, tonic, full_body_shaking, arm_straightening, figure4
+S0012@7-18-2019@DA00136N@sz_v1_1_segment_1.mp4,head_turning, arm_flexion, tonic, full_body_shaking, arm_straightening, figure4
+S0012@7-18-2019@DA00136N@sz_v1_1_segment_2.mp4,tonic, full_body_shaking, clonic
+S0012@7-18-2019@DA00136N@sz_v1_1_segment_3.mp4,tonic, full_body_shaking, clonic
+S0012@7-18-2019@DA00136O@sz_v2_1_segment_0.mp4,tonic, arm_flexion
+S0012@7-18-2019@DA00136O@sz_v2_1_segment_1.mp4,tonic, arm_flexion, arm_straightening, figure4
+S0012@7-18-2019@DA00136O@sz_v2_1_segment_2.mp4,tonic, arm_flexion, arm_straightening, figure4, clonic
+S0012@7-18-2019@DA00136O@sz_v2_1_segment_3.mp4,tonic, clonic
+S0012@7-18-2019@DA00136V@sz_v1_1_segment_0.mp4,head_turning, face_pulling, close_eyes, arm_flexion, arm_straightening, figure4, tonic
+S0012@7-18-2019@DA00136V@sz_v1_1_segment_1.mp4,arm_flexion, arm_straightening, figure4, tonic, clonic
+S0012@7-18-2019@DA00136V@sz_v1_1_segment_2.mp4,tonic, clonic
+S0013@3-8-2018@DA0010H7@sz_v1_1_segment_0.mp4,head_turning, tonic, full_body_shaking, arm_straightening
+S0013@3-8-2018@DA0010H7@sz_v1_1_segment_1.mp4,tonic, full_body_shaking, arm_straightening
+S0013@3-8-2018@DA0010H7@sz_v1_1_segment_2.mp4,tonic, full_body_shaking, arm_flexion, clonic
+S0013@3-8-2018@DA0010H7@sz_v1_1_segment_3.mp4,tonic, arm_flexion, clonic
+S0014@11-10-2017@DA3332GP@sz_v1_1_segment_0.mp4,arms_move_simultaneously, head_turning, eye_blinking, face_pulling, tonic, clonic, arm_straightening, arm_flexion, figure4
+S0014@11-10-2017@DA3332GP@sz_v1_1_segment_1.mp4,arms_move_simultaneously, head_turning, face_pulling, tonic, clonic, arm_straightening, arm_flexion, figure4
+S0014@11-10-2017@DA3332GP@sz_v1_1_segment_2.mp4,face_pulling, tonic, clonic, arm_straightening
+S0014@11-10-2017@DA3332GP@sz_v1_1_segment_3.mp4,tonic, clonic
+S0014@11-10-2017@DA3332H8@sz_v1_1_segment_0.mp4,arm_flexion, tonic, clonic, full_body_shaking, eye_blinking, arm_straightening, figure4
+S0014@11-10-2017@DA3332H8@sz_v1_1_segment_1.mp4,arm_flexion, tonic, clonic, full_body_shaking, arm_straightening, figure4
+S0014@11-10-2017@DA3332H8@sz_v1_1_segment_2.mp4,tonic, clonic, full_body_shaking
+S0015@7-26-2022@KA960273@nes_v1_1_segment_0.mp4,
+S0015@7-26-2022@KA960273@nes_v1_1_segment_1.mp4,
+S0015@7-26-2022@KA960273@nes_v1_1_segment_2.mp4,
+S0016@4-5-2022@KA9601HS@nes_v2_1_segment_0.mp4,asynchronous_movement, arm_flexion
+S0016@4-5-2022@KA9601HS@nes_v2_1_segment_1.mp4,
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_0.mp4,
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_1.mp4,
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_2.mp4,
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_3.mp4,full_body_shaking, asynchronous_movement
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_4.mp4,full_body_shaking, asynchronous_movement
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_5.mp4,full_body_shaking, asynchronous_movement
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_6.mp4,full_body_shaking, asynchronous_movement
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_7.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_8.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_9.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_10.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_11.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_12.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_13.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_14.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_15.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_16.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_17.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_18.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_19.mp4,full_body_shaking
+S0016@4-5-2022@KA9601I1@nes_v1_1_segment_20.mp4,full_body_shaking
+S0017@12-2-2020@DA0015J8@nes_v1_1_segment_0.mp4,close_eyes, arms_move_simultaneously, head_turning
+S0017@12-2-2020@DA0015J8@nes_v1_1_segment_1.mp4,close_eyes, head_turning, asynchronous_movement
+S0017@12-2-2020@DA0015J8@nes_v1_1_segment_2.mp4,close_eyes, asynchronous_movement
+S0017@12-2-2020@DA0015J8@nes_v1_1_segment_3.mp4,close_eyes
+S0017@12-2-2020@DA0015J8@nes_v1_2_segment_0.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously
+S0017@12-2-2020@DA0015J8@nes_v1_2_segment_1.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously
+S0017@12-2-2020@DA0015J8@nes_v1_2_segment_2.mp4,close_eyes, arms_move_simultaneously
+S0017@12-2-2020@DA0015J8@nes_v1_2_segment_3.mp4,close_eyes, arms_move_simultaneously
+S0018@5-4-2020@UA6691ZC@nes_v1_1_segment_0.mp4,asynchronous_movement
+S0018@5-4-2020@UA6691ZC@nes_v1_1_segment_1.mp4,asynchronous_movement
+S0018@5-4-2020@UA6691ZC@nes_v1_1_segment_2.mp4,asynchronous_movement, close_eyes, arm_straightening, full_body_shaking
+S0018@5-4-2020@UA6691ZC@nes_v1_1_segment_3.mp4,asynchronous_movement, close_eyes, arm_straightening, full_body_shaking
+S0018@5-4-2020@UA6691ZC@nes_v1_1_segment_4.mp4,asynchronous_movement
+S0018@5-4-2020@UA6691ZC@nes_v1_1_segment_5.mp4,asynchronous_movement
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_0.mp4,
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_1.mp4,arms_move_simultaneously
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_2.mp4,arms_move_simultaneously
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_3.mp4,arms_move_simultaneously
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_4.mp4,
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_5.mp4,
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_6.mp4,
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_7.mp4,
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_8.mp4,
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_9.mp4,full_body_shaking, asynchronous_movement
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_10.mp4,full_body_shaking, asynchronous_movement
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_11.mp4,full_body_shaking, asynchronous_movement
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_0.mp4,head_turning, asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_1.mp4,head_turning, asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_2.mp4,head_turning, asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_3.mp4,head_turning, asynchronous_movement, close_eyes, arm_flexion
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_4.mp4,head_turning, asynchronous_movement, close_eyes, arm_flexion
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_5.mp4,head_turning, asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_6.mp4,asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_7.mp4,asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_8.mp4,asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_9.mp4,asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_10.mp4,asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_11.mp4,asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_12.mp4,asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_13.mp4,asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_14.mp4,asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_15.mp4,asynchronous_movement, close_eyes
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_16.mp4,close_eyes
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_0.mp4,
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_1.mp4,close_eyes
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_2.mp4,close_eyes, asynchronous_movement, pelvic_thrusting, eye_blinking
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_3.mp4,close_eyes, asynchronous_movement, pelvic_thrusting, eye_blinking
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_4.mp4,close_eyes, asynchronous_movement
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_5.mp4,close_eyes, asynchronous_movement
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_6.mp4,close_eyes, asynchronous_movement
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_7.mp4,close_eyes
+T0003@4-26-2022@KA9601OY@sz_v1_1_segment_0.mp4,arms_move_simultaneously, tonic, arm_flexion, blank_stare
+T0003@4-26-2022@KA9601OY@sz_v1_1_segment_1.mp4,arms_move_simultaneously, tonic, arm_flexion, blank_stare
+T0003@4-26-2022@KA9601OY@sz_v1_1_segment_2.mp4,blank_stare, asynchronous_movement
+T0003@4-26-2022@KA9601OY@sz_v1_1_segment_3.mp4,blank_stare, asynchronous_movement
+T0003@4-26-2022@KA9601OY@sz_v1_1_segment_4.mp4,blank_stare
+T0003@4-26-2022@KA9601P2@sz_v1_1_segment_0.mp4,arm_flexion, arms_move_simultaneously, arm_straightening, tonic, asynchronous_movement
+T0003@4-26-2022@KA9601P2@sz_v1_1_segment_1.mp4,arm_flexion, tonic, asynchronous_movement
+T0003@4-26-2022@KA9601P2@sz_v1_1_segment_2.mp4,tonic, asynchronous_movement
+T0003@4-26-2022@KA9601P2@sz_v2_1_segment_0.mp4,arm_flexion, arms_move_simultaneously, arm_straightening, tonic, face_pulling, blank_stare
+T0003@4-26-2022@KA9601P2@sz_v2_1_segment_1.mp4,arm_flexion, tonic, face_pulling, blank_stare
+T0004@5-27-2015@TA7641Z2@sz_v1_1_segment_0.mp4,eye_blinking
+T0004@5-27-2015@TA7641Z2@sz_v1_1_segment_1.mp4,eye_blinking
+T0004@5-27-2015@TA7641Z2@sz_v1_1_segment_2.mp4,
+T0004@5-27-2015@TA7641Z2@sz_v2_1_segment_0.mp4,limb_automatisms, eye_blinking, arm_flexion
+T0004@5-27-2015@TA7641Z2@sz_v2_1_segment_1.mp4,limb_automatisms, eye_blinking, arm_flexion
+T0004@5-27-2015@TA7641Z2@sz_v2_1_segment_2.mp4,limb_automatisms
+T0004@5-27-2015@TA76420E@sz_v1_1_segment_0.mp4,limb_automatisms, eye_blinking
+T0004@5-27-2015@VA7632UP@sz_v1_1_segment_0.mp4,limb_automatisms
+T0004@5-27-2015@VA7632UP@sz_v1_1_segment_1.mp4,limb_automatisms, eye_blinking
+T0004@5-27-2015@VA7632UP@sz_v1_1_segment_2.mp4,
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_0.mp4,tonic, arm_flexion
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_1.mp4,tonic, arm_flexion, clonic
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_2.mp4,tonic, arm_flexion, clonic
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_3.mp4,tonic, arm_flexion, clonic
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_4.mp4,tonic, arm_flexion, clonic
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_5.mp4,tonic, arm_flexion, clonic, arm_straightening
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_6.mp4,tonic, arm_flexion, clonic, arm_straightening
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_7.mp4,tonic, arm_flexion, clonic, arm_straightening
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_8.mp4,tonic, arm_flexion, clonic
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_9.mp4,tonic, arm_flexion, clonic
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_10.mp4,tonic, arm_flexion, clonic
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_11.mp4,tonic, arm_flexion, clonic
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_12.mp4,tonic, arm_flexion, clonic
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_13.mp4,tonic, arm_flexion, clonic
+T0005@9-18-2018@DA0011L4@sz_v1_1_segment_14.mp4,tonic, arm_flexion, clonic
+T0005@9-18-2018@DA0011L5@sz_v1_1_segment_0.mp4,arm_flexion, tonic, head_turning
+T0005@9-18-2018@DA0011L5@sz_v1_1_segment_1.mp4,arm_flexion, tonic, head_turning, clonic, arm_straightening
+T0005@9-18-2018@DA0011L5@sz_v1_1_segment_2.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA0011L5@sz_v1_1_segment_3.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA0011L5@sz_v1_1_segment_4.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA0011L5@sz_v1_1_segment_5.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA0011L5@sz_v1_1_segment_6.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA0011L5@sz_v1_1_segment_7.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA0011L5@sz_v1_1_segment_8.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA0011L5@sz_v1_1_segment_9.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA0011L5@sz_v1_1_segment_10.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v1_1_segment_0.mp4,arm_flexion
+T0005@9-18-2018@DA7021HQ@sz_v1_1_segment_1.mp4,arm_flexion, tonic, clonic
+T0005@9-18-2018@DA7021HQ@sz_v1_1_segment_2.mp4,arm_flexion, tonic, clonic
+T0005@9-18-2018@DA7021HQ@sz_v1_1_segment_3.mp4,arm_flexion, tonic, clonic
+T0005@9-18-2018@DA7021HQ@sz_v1_1_segment_4.mp4,arm_flexion, tonic, clonic
+T0005@9-18-2018@DA7021HQ@sz_v1_1_segment_5.mp4,arm_flexion, tonic, clonic
+T0005@9-18-2018@DA7021HQ@sz_v1_1_segment_6.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v1_1_segment_7.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v1_1_segment_8.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v1_1_segment_9.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_0.mp4,arm_flexion, tonic, clonic
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_1.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_2.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_3.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_4.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_5.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_6.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_7.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_8.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_9.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_10.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_11.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0005@9-18-2018@DA7021HQ@sz_v2_1_segment_12.mp4,arm_flexion, tonic, clonic, arm_straightening
+T0007@10-7-2020@DA00159P@nes_v1_1_segment_0.mp4,close_eyes, full_body_shaking, pelvic_thrusting, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v1_1_segment_1.mp4,close_eyes, full_body_shaking, pelvic_thrusting, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v1_1_segment_2.mp4,close_eyes
+T0007@10-7-2020@DA00159P@nes_v1_2_segment_0.mp4,close_eyes, pelvic_thrusting, full_body_shaking, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v1_2_segment_1.mp4,close_eyes, pelvic_thrusting, full_body_shaking, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v1_2_segment_2.mp4,close_eyes, pelvic_thrusting, full_body_shaking, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v1_2_segment_3.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v1_2_segment_4.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v1_2_segment_5.mp4,close_eyes, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v3_1_segment_0.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v3_1_segment_1.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v3_1_segment_2.mp4,close_eyes, pelvic_thrusting, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v3_1_segment_3.mp4,close_eyes, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v3_1_segment_4.mp4,close_eyes, asynchronous_movement
+T0007@10-7-2020@DA00159P@nes_v3_1_segment_5.mp4,close_eyes, asynchronous_movement
+U0001@9-12-2016@CA4445HC@sz_v1_1_segment_0.mp4,asynchronous_movement, arms_move_simultaneously
+U0001@9-12-2016@CA4445HC@sz_v2_1_segment_0.mp4,asynchronous_movement, arms_move_simultaneously, head_turning, arm_straightening
+W0001@2-3-2020@DA00145Y@nes_v1_1_segment_0.mp4,arm_flexion, head_turning, face_pulling, asynchronous_movement, tonic
+W0001@2-3-2020@DA00145Y@nes_v1_1_segment_1.mp4,arm_flexion, face_pulling, asynchronous_movement, tonic
+W0001@2-3-2020@DA00145Y@nes_v1_1_segment_2.mp4,arm_flexion, face_pulling, asynchronous_movement, tonic
+W0001@2-3-2020@DA00145Y@nes_v1_1_segment_3.mp4,arm_flexion, face_pulling, asynchronous_movement, tonic
+W0001@2-3-2020@DA00145Y@nes_v1_1_segment_4.mp4,face_pulling, asynchronous_movement, tonic, blank_stare
+W0001@2-3-2020@DA00145Y@nes_v1_2_segment_0.mp4,
+W0001@2-3-2020@DA00145Y@nes_v1_2_segment_1.mp4,
+W0001@2-3-2020@DA00145Y@nes_v1_2_segment_2.mp4,
+W0001@2-3-2020@DA00145Y@nes_v1_2_segment_3.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_0.mp4,arm_flexion
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_1.mp4,arm_flexion
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_2.mp4,arm_flexion
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_3.mp4,arm_flexion
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_4.mp4,arm_flexion
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_5.mp4,arm_flexion
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_6.mp4,arm_flexion
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_7.mp4,arm_flexion
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_8.mp4,arm_flexion
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_9.mp4,arm_flexion
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_0.mp4,
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_1.mp4,
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_2.mp4,
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_3.mp4,
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_4.mp4,
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_5.mp4,
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_6.mp4,
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_7.mp4,
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_8.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_9.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_10.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_11.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_12.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_13.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_14.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_15.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_16.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_17.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_18.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_19.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_20.mp4,arm_straightening, asynchronous_movement
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_21.mp4,arm_straightening, asynchronous_movement
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_22.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_23.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_24.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_25.mp4,arm_straightening
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_26.mp4,arm_straightening
+W0001@2-3-2020@DA001469@nes_v2_1_segment_0.mp4,face_pulling, tonic, arm_straightening
+W0001@2-3-2020@DA001469@nes_v2_1_segment_1.mp4,face_pulling, tonic, arm_straightening
+W0001@2-3-2020@DA001469@nes_v3_1_segment_0.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_1.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_2.mp4,arm_flexion, asynchronous_movement, full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_3.mp4,arm_flexion, asynchronous_movement, full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_4.mp4,arm_flexion, asynchronous_movement, full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_5.mp4,arm_flexion, asynchronous_movement, full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_6.mp4,arm_flexion, asynchronous_movement, full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_7.mp4,arm_flexion, asynchronous_movement, full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_8.mp4,arm_flexion, asynchronous_movement, full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_9.mp4,arm_flexion, asynchronous_movement, full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_10.mp4,arm_flexion, asynchronous_movement, full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_11.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_12.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_13.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_14.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_15.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_16.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_17.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_18.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_19.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_20.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_21.mp4,arm_flexion, asynchronous_movement
+W0001@2-3-2020@DA001469@nes_v3_1_segment_22.mp4,arm_flexion
+Y0001@8-15-2022@DA1322CP@sz_v1_1_segment_0.mp4,close_eyes
+Y0001@8-15-2022@DA1322DT@sz_v1_1_segment_0.mp4,tonic, blank_stare, clonic, arm_flexion
+Y0001@8-15-2022@DA1322DT@sz_v1_1_segment_1.mp4,tonic, blank_stare, arm_flexion
+Y0001@8-15-2022@DA1322DT@sz_v1_1_segment_2.mp4,tonic, blank_stare, arm_flexion
+Y0001@8-15-2022@DA1322DT@sz_v2_1_segment_0.mp4,
+Y0001@8-15-2022@DA1322DT@sz_v2_1_segment_1.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v1_1_segment_0.mp4,arm_straightening, arm_flexion, figure4, tonic
+Y0001@8-15-2022@DA1322DU@sz_v1_1_segment_1.mp4,arm_straightening, arm_flexion, figure4, tonic
+Y0001@8-15-2022@DA1322DU@sz_v1_1_segment_2.mp4,arm_flexion, tonic
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_0.mp4,oral_automatisms
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_1.mp4,oral_automatisms, blank_stare, arm_flexion
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_2.mp4,blank_stare, arm_flexion
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_3.mp4,arm_flexion
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_4.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_5.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_6.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_7.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_8.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_9.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_10.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_11.mp4,head_turning, face_pulling, tonic
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_12.mp4,head_turning, face_pulling, tonic, full_body_shaking, arm_straightening, figure4, clonic, face_twitching
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_13.mp4,head_turning, face_pulling, tonic, full_body_shaking, arm_straightening, figure4, clonic, face_twitching
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_14.mp4,face_pulling, tonic, full_body_shaking, clonic, face_twitching
+Y0001@8-15-2022@DA1322DU@sz_v2_1_segment_15.mp4,face_pulling, tonic, full_body_shaking, clonic, face_twitching
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_0.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_1.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_2.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_3.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_4.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_5.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_6.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_7.mp4,head_turning, tonic
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_8.mp4,head_turning, tonic, arm_flexion, face_twitching, clonic
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_9.mp4,tonic, arm_flexion, face_twitching, clonic, face_pulling, arm_straightening
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_10.mp4,tonic, clonic, face_pulling, arm_straightening
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_11.mp4,tonic, clonic, face_pulling
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_12.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_13.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_14.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_15.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_16.mp4,
+Y0001@8-15-2022@DA1322DU@sz_v3_1_segment_17.mp4,
+Y0001@8-15-2022@DA1322DV@poss_sz_v1_0_segment_0.mp4,close_eyes
+Y0001@8-15-2022@DA1322DV@sz_v1_1_segment_0.mp4,
+Y0001@8-15-2022@DA1322DV@sz_v1_1_segment_1.mp4,
+Y0001@8-15-2022@DA1322DV@sz_v1_1_segment_2.mp4,head_turning
+Y0001@8-15-2022@DA1322DV@sz_v1_1_segment_3.mp4,head_turning
+Y0001@8-15-2022@DA1322DV@sz_v1_1_segment_4.mp4,arm_flexion, tonic, face_twitching, full_body_shaking, face_pulling, clonic, arm_straightening, figure4
+Y0001@8-15-2022@DA1322DV@sz_v1_1_segment_5.mp4,arm_flexion, tonic, face_twitching, full_body_shaking, face_pulling, clonic, arm_straightening, figure4
+Y0001@8-15-2022@DA1322DV@sz_v1_1_segment_6.mp4,tonic, face_twitching, full_body_shaking, face_pulling, clonic, arm_straightening
+Y0001@8-15-2022@DA1322DV@sz_v1_1_segment_7.mp4,tonic, face_twitching, full_body_shaking, face_pulling, clonic, arm_straightening
+Y0003@1-23-2019@DA00127Y@nes_v1_1_segment_0.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v1_1_segment_1.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v1_1_segment_2.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v1_1_segment_3.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v1_2_segment_0.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v1_2_segment_1.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v1_2_segment_2.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v1_2_segment_3.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v2_1_segment_0.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v2_1_segment_1.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v2_1_segment_2.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v2_1_segment_3.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v2_1_segment_4.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v2_1_segment_5.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v3_1_segment_0.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v3_1_segment_1.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v3_1_segment_2.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v3_1_segment_3.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v3_1_segment_4.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v3_1_segment_5.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v3_1_segment_6.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v4_1_segment_0.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v4_1_segment_1.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v4_1_segment_2.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_0.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_1.mp4,close_eyes
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_2.mp4,close_eyes, oral_automatisms
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_3.mp4,close_eyes, oral_automatisms
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_4.mp4,close_eyes
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_5.mp4,close_eyes
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_6.mp4,close_eyes
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_7.mp4,close_eyes
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_8.mp4,close_eyes
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_9.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_10.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_11.mp4,blank_stare
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_12.mp4,blank_stare
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_13.mp4,blank_stare
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_14.mp4,
+Y0003@1-23-2019@DA00127Y@nes_v5_1_segment_15.mp4,
+Y0003@1-23-2019@DA001280@nes_v1_1_segment_0.mp4,asynchronous_movement
+Y0003@1-23-2019@DA001280@nes_v1_1_segment_1.mp4,asynchronous_movement
+Y0003@1-23-2019@DA001280@nes_v1_1_segment_2.mp4,asynchronous_movement
+Y0003@1-23-2019@DA001280@nes_v1_1_segment_3.mp4,
+Y0003@1-23-2019@DA001280@nes_v1_1_segment_4.mp4,
+Y0003@1-23-2019@DA001280@nes_v2_1_segment_0.mp4,
+Y0003@1-23-2019@DA001280@nes_v2_1_segment_1.mp4,
+Y0003@1-23-2019@DA001280@nes_v2_1_segment_2.mp4,
+Y0003@1-23-2019@DA001280@nes_v2_1_segment_3.mp4,
+Y0003@1-23-2019@DA001280@nes_v2_1_segment_4.mp4,
+Y0003@1-23-2019@DA001280@nes_v2_1_segment_5.mp4,
+Y0003@1-23-2019@DA001280@nes_v2_1_segment_6.mp4,
+Y0003@1-23-2019@DA001280@nes_v2_1_segment_7.mp4,
+Y0003@1-23-2019@DA001280@nes_v2_1_segment_8.mp4,
+Y0003@1-23-2019@DA001280@nes_v2_1_segment_9.mp4,
+Y0003@1-23-2019@DA70225C@nes_v1_1_segment_0.mp4,asynchronous_movement
+Y0003@1-23-2019@DA70225C@nes_v1_1_segment_1.mp4,asynchronous_movement
+Y0003@1-23-2019@DA70225C@nes_v1_1_segment_2.mp4,asynchronous_movement
+Y0003@1-23-2019@DA70225C@nes_v1_1_segment_3.mp4,asynchronous_movement
+Y0003@1-23-2019@DA70225C@nes_v1_1_segment_4.mp4,
+Y0003@1-23-2019@DA70225C@nes_v1_1_segment_5.mp4,
+Y0003@1-23-2019@DA70225C@nes_v1_1_segment_6.mp4,
+Y0003@1-23-2019@DA70225C@nes_v1_1_segment_7.mp4,
+Y0003@1-23-2019@DA70225C@nes_v2_1_segment_0.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously
+Y0003@1-23-2019@DA70225C@nes_v2_1_segment_1.mp4,close_eyes, asynchronous_movement, arms_move_simultaneously
+Y0003@1-23-2019@DA70225C@nes_v2_1_segment_2.mp4,close_eyes
+Y0003@1-23-2019@DA70225C@nes_v2_1_segment_3.mp4,close_eyes
+Y0004@11-19-2018@DA7021VW@sz_v1_1_segment_0.mp4,head_turning, face_pulling, arm_flexion, tonic
+Y0004@11-19-2018@DA7021VW@sz_v1_1_segment_1.mp4,head_turning, face_pulling, arm_flexion, tonic, face_twitching, clonic
+Y0004@11-19-2018@DA7021VW@sz_v1_1_segment_2.mp4,arm_flexion, tonic, face_twitching, clonic
+Y0004@11-19-2018@DA7021VW@sz_v2_1_segment_0.mp4,close_eyes, face_pulling, arm_flexion, tonic, face_twitching
+Y0004@11-19-2018@DA7021VW@sz_v2_1_segment_1.mp4,close_eyes, arm_flexion, tonic, face_twitching, oral_automatisms, clonic
+Y0004@11-19-2018@DA7021VW@sz_v2_1_segment_2.mp4,close_eyes, arm_flexion, tonic, face_twitching, oral_automatisms, clonic
+Y0005@3-17-2022@DA1321FC@sz_v1_1_segment_0.mp4,oral_automatisms, tonic
+Y0005@3-17-2022@DA1321FC@sz_v1_1_segment_1.mp4,tonic, full_body_shaking, head_turning, arm_flexion, eye_blinking, arm_straightening, figure4
+Y0005@3-17-2022@DA1321FC@sz_v1_1_segment_2.mp4,tonic, full_body_shaking, head_turning, eye_blinking, arm_straightening, clonic
+Y0005@3-17-2022@DA1321FC@sz_v1_1_segment_3.mp4,tonic, full_body_shaking, clonic
+Y0005@3-17-2022@DA1321FC@sz_v1_1_segment_4.mp4,tonic, clonic
+Y0005@3-17-2022@DA1321FC@sz_v2_1_segment_0.mp4,oral_automatisms
+Y0005@3-17-2022@DA1321FC@sz_v2_1_segment_1.mp4,head_turning, face_pulling, face_twitching, arm_flexion, tonic, arm_straightening, figure4
+Y0005@3-17-2022@DA1321FC@sz_v2_1_segment_2.mp4,head_turning, face_pulling, face_twitching, arm_flexion, tonic, arm_straightening, figure4, clonic, full_body_shaking
+Y0005@3-17-2022@DA1321FC@sz_v2_1_segment_3.mp4,face_pulling, face_twitching, tonic, clonic, full_body_shaking
+Y0005@3-17-2022@DA1321FC@sz_v2_1_segment_4.mp4,face_pulling, face_twitching, tonic, clonic, full_body_shaking
+Y0006@7-6-2015@TA764261@sz_v3_1_segment_0.mp4,full_body_shaking
+Y0006@7-6-2015@TA764269@sz_v2_1_segment_0.mp4,full_body_shaking
+Y0006@7-6-2015@VA7632ZD@sz_v1_1_segment_0.mp4,
+Y0006@7-6-2015@VA7632ZD@sz_v1_1_segment_1.mp4,full_body_shaking
+Y0006@7-6-2015@VA7632ZD@sz_v1_1_segment_2.mp4,full_body_shaking
+Y0007@9-14-2022@KA9602C4@sz_v1_1_segment_0.mp4,arm_straightening, tonic
+Y0007@9-14-2022@KA9602C4@sz_v1_1_segment_1.mp4,tonic
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_0.mp4,close_eyes, asynchronous_movement
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_1.mp4,close_eyes, asynchronous_movement, full_body_shaking
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_2.mp4,close_eyes, asynchronous_movement
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_3.mp4,close_eyes, asynchronous_movement
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_4.mp4,close_eyes, asynchronous_movement
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_5.mp4,close_eyes, asynchronous_movement
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_6.mp4,close_eyes, asynchronous_movement
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_7.mp4,close_eyes, asynchronous_movement
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_8.mp4,close_eyes, asynchronous_movement
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_9.mp4,close_eyes, asynchronous_movement
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_10.mp4,close_eyes, asynchronous_movement
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_0.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_1.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_2.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_3.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_4.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_5.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_6.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_7.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_8.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_9.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_10.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_11.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_12.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_13.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_14.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_15.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_16.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_17.mp4,close_eyes
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_18.mp4,close_eyes
+Z0001@3-15-2022@KA9601C7@multiple_sz2_1_segment_0.mp4,
+Z0003@5-24-2018@DA7020TA@sz_v2_1_segment_0.mp4,head_turning, arm_straightening, arm_flexion
+Z0003@5-24-2018@DA7020TA@sz_v4_1_segment_0.mp4,arm_flexion, head_turning
+Z0003@6-13-2018@DA0010Z2@sz_v1_1_segment_0.mp4,head_turning
+Z0003@6-13-2018@DA0010Z3@sz_v1_1_segment_0.mp4,head_turning
+Z0003@6-13-2018@DA7020Y1@sz_v1_1_segment_0.mp4,
+Z0003@6-13-2018@DA7020Y1@sz_v1_1_segment_1.mp4,
+Z0003@6-13-2018@DA7020Y1@sz_v1_1_segment_2.mp4,
+Z0003@6-13-2018@DA7020Y4@sz_v1_1_segment_0.mp4,head_turning
+Z0003@6-13-2018@DA7020Y4@sz_v1_1_segment_1.mp4,head_turning, arm_flexion
+Z0003@6-13-2018@DA7020Y4@sz_v1_1_segment_2.mp4,arm_flexion
+Z0003@6-13-2018@DA7020Y4@sz_v1_1_segment_3.mp4,arm_flexion
+Z0003@6-13-2018@DA7020Y4@sz_v1_1_segment_4.mp4,arm_flexion
+Z0004@1-28-2019@DA70225W@nes_v1_1_segment_0.mp4,arms_move_simultaneously
+Z0005@1-20-2016@KA333KUV@sz_v1_1_segment_0.mp4,head_turning, arm_straightening
+Z0005@1-20-2016@KA333KUV@sz_v1_1_segment_1.mp4,head_turning, arm_straightening, eye_blinking
+Z0005@1-20-2016@KA333KUV@sz_v1_1_segment_2.mp4,arm_straightening
+Z0005@1-20-2016@KA333KW5@sz_v1_1_segment_0.mp4,arm_flexion, tonic, clonic
+Z0005@1-20-2016@KA333KW5@sz_v1_1_segment_1.mp4,arm_flexion, tonic, clonic, head_turning
+Z0005@1-20-2016@KA333KW5@sz_v1_2_segment_0.mp4,face_pulling, arm_flexion, tonic, clonic, full_body_shaking
+Z0005@1-20-2016@KA333KW5@sz_v1_2_segment_1.mp4,face_pulling, arm_flexion, tonic, clonic, full_body_shaking
+Z0005@1-20-2016@KA333KW5@sz_v2_1_segment_0.mp4,head_turning, arm_flexion
+Z0005@1-20-2016@KA333KW5@sz_v2_1_segment_1.mp4,arm_flexion
+Z0005@1-20-2016@KA333KW5@sz_v2_1_segment_2.mp4,
+Z0005@1-20-2016@KA333KW5@sz_v2_1_segment_3.mp4,
+Z0005@1-20-2016@KA333KW5@sz_v2_1_segment_4.mp4,
+Z0005@1-20-2016@KA333KW5@sz_v2_2_segment_0.mp4,face_pulling, tonic
+Z0005@1-20-2016@KA333KW5@sz_v2_2_segment_1.mp4,face_pulling, tonic, clonic
+Z0005@1-20-2016@KA333KW5@sz_v2_3_segment_0.mp4,head_turning, face_pulling
+Z0005@1-20-2016@KA333KW5@sz_v2_3_segment_1.mp4,face_pulling, arm_flexion, tonic, clonic, full_body_shaking
+Z0005@1-20-2016@KA333KW5@sz_v3_1_segment_0.mp4,head_turning, tonic, arm_flexion, full_body_shaking
+Z0005@1-20-2016@KA333KW5@sz_v3_1_segment_1.mp4,head_turning, tonic, arm_flexion, full_body_shaking
+Z0005@1-20-2016@KA333KW5@sz_v3_1_segment_2.mp4,tonic, arm_flexion, full_body_shaking
+Z0005@1-20-2016@KA333KW5@sz_v3_2_segment_0.mp4,head_turning, blank_stare, tonic
+Z0005@1-20-2016@KA333KW5@sz_v3_2_segment_1.mp4,head_turning, blank_stare, tonic, arm_flexion, full_body_shaking
+Z0005@1-20-2016@KA333KW5@sz_v3_3_segment_0.mp4,head_turning, blank_stare, arm_flexion, tonic
+Z0005@1-20-2016@KA333KW5@sz_v3_3_segment_1.mp4,head_turning, blank_stare, arm_flexion, tonic, clonic
+Z0005@1-20-2016@KA333KW5@sz_v3_4_segment_0.mp4,head_turning, blank_stare, tonic
+Z0005@1-20-2016@KA333KW5@sz_v3_4_segment_1.mp4,blank_stare, tonic, arm_flexion
+Z0005@1-20-2016@KA333KW5@sz_v3_5_segment_0.mp4,blank_stare, head_turning, tonic
+Z0005@1-20-2016@KA333KW5@sz_v3_5_segment_1.mp4,blank_stare, tonic, full_body_shaking, arm_flexion
+Z0005@1-20-2016@KA333KW5@sz_v3_5_segment_2.mp4,blank_stare, tonic, full_body_shaking
+Z0005@1-20-2016@KA333KW5@sz_v3_6_segment_0.mp4,blank_stare
+Z0005@1-20-2016@KA333KW5@sz_v3_6_segment_1.mp4,blank_stare, tonic
+Z0005@1-20-2016@KA333KW5@sz_v3_7_segment_0.mp4,close_eyes, head_turning, arm_straightening, arm_flexion, tonic
+Z0005@1-20-2016@KA333KW5@sz_v3_7_segment_1.mp4,close_eyes, arm_straightening, arm_flexion, tonic, full_body_shaking, clonic
+Z0005@1-20-2016@KA333KW5@sz_v3_7_segment_2.mp4,close_eyes, arm_flexion, tonic, full_body_shaking, clonic
+Z0005@1-20-2016@KA333KW5@sz_v4_1_segment_0.mp4,close_eyes, arm_straightening, tonic, clonic, arm_flexion
+Z0005@1-20-2016@KA333KW5@sz_v4_1_segment_1.mp4,close_eyes, tonic, clonic, arm_flexion, full_body_shaking
+Z0005@1-20-2016@KA333KW5@sz_v4_1_segment_2.mp4,close_eyes, tonic, clonic, arm_flexion, full_body_shaking
+Z0006@2-28-2023@DA1323F0@sz_v2_1_segment_0.mp4,limb_automatisms
+Z0006@2-28-2023@DA1323F0@sz_v2_1_segment_1.mp4,limb_automatisms, oral_automatisms
+Z0006@2-28-2023@DA1323F0@sz_v2_1_segment_2.mp4,
+Z0006@2-28-2023@DA1323F0@sz_v2_1_segment_3.mp4,asynchronous_movement
+Z0006@2-28-2023@DA1323F0@sz_v2_1_segment_4.mp4,asynchronous_movement, arm_flexion
+Z0007@5-6-2014@TA76404O@sz_v1_1_segment_0.mp4,oral_automatisms
+Z0007@5-6-2014@TA76404O@sz_v1_1_segment_1.mp4,
+Z0007@5-6-2014@TA76404O@sz_v1_1_segment_2.mp4,
+Z0007@5-6-2014@TA76404O@sz_v2_1_segment_0.mp4,oral_automatisms
+Z0007@5-6-2014@TA76404O@sz_v2_1_segment_1.mp4,arm_flexion, head_turning
+Z0007@5-6-2014@TA76404O@sz_v2_1_segment_2.mp4,arm_flexion, head_turning, tonic, arm_straightening, figure4
+Z0007@5-6-2014@TA76404O@sz_v2_1_segment_3.mp4,arm_flexion, tonic, arm_straightening, figure4, clonic
+Z0007@5-6-2014@VA7610WD@sz_v1_1_segment_0.mp4,
+Z0007@5-6-2014@VA7610WD@sz_v1_1_segment_1.mp4,limb_automatisms
+Z0007@5-6-2014@VA7610WD@sz_v1_1_segment_2.mp4,
+Z0007@5-6-2014@VA7610WE@sz_v1_1_segment_0.mp4,
+Z0007@5-6-2014@VA7610WE@sz_v1_1_segment_1.mp4,blank_stare
+Z0007@5-6-2014@VA7610WE@sz_v1_1_segment_2.mp4,blank_stare, face_pulling, head_turning, tonic, arm_flexion, clonic
+Z0007@5-6-2014@VA7610WE@sz_v1_1_segment_3.mp4,blank_stare, face_pulling, tonic, arm_flexion, clonic
+Z0007@5-6-2014@VA7610WE@sz_v1_1_segment_4.mp4,blank_stare, tonic, arm_flexion, clonic
+Z0008@7-21-2021@DA7022WJ@sz_v1_1_segment_0.mp4,close_eyes
+Z0008@7-21-2021@DA7022WJ@sz_v1_1_segment_1.mp4,close_eyes, head_turning, tonic
+Z0008@7-21-2021@DA7022WJ@sz_v1_1_segment_2.mp4,close_eyes, head_turning, tonic, arm_flexion
+Z0008@7-21-2021@DA7022WJ@sz_v1_1_segment_3.mp4,close_eyes, tonic, arm_flexion
+Z0008@7-21-2021@DA13202N@sz_v1_1_segment_0.mp4,close_eyes, oral_automatisms
+Z0008@7-21-2021@DA13202N@sz_v1_1_segment_1.mp4,close_eyes, oral_automatisms, head_turning, tonic, face_pulling, arm_flexion
+Z0008@7-21-2021@DA13202N@sz_v1_1_segment_2.mp4,close_eyes, head_turning, tonic, face_pulling, arm_flexion, face_twitching
+Z0008@7-21-2021@DA13202N@sz_v2_1_segment_0.mp4,close_eyes, oral_automatisms
+Z0008@7-21-2021@DA13202N@sz_v2_1_segment_1.mp4,close_eyes, oral_automatisms, face_pulling, tonic, head_turning
+Z0008@7-21-2021@DA13202N@sz_v2_1_segment_2.mp4,close_eyes, oral_automatisms, face_pulling, tonic, head_turning, face_twitching, arm_flexion
+Z0008@7-21-2021@DA13202N@sz_v2_1_segment_3.mp4,close_eyes, tonic, arm_flexion
+Z0010@2-29-2016@LA222224@sz_v1_1_segment_0.mp4,limb_automatisms
+Z0010@2-29-2016@LA222224@sz_v1_1_segment_1.mp4,limb_automatisms, head_turning, tonic, full_body_shaking
+Z0010@2-29-2016@LA222224@sz_v1_1_segment_2.mp4,head_turning, tonic, full_body_shaking, eye_blinking, face_pulling, clonic, arm_flexion, face_twitching
+Z0010@2-29-2016@LA222224@sz_v1_1_segment_3.mp4,tonic, full_body_shaking, eye_blinking, face_pulling, clonic, arm_flexion, face_twitching, arm_straightening, figure4
+Z0010@2-29-2016@LA222224@sz_v1_1_segment_4.mp4,tonic, full_body_shaking, eye_blinking, face_pulling, clonic, face_twitching
+Z0010@2-29-2016@LA222224@sz_v1_1_segment_5.mp4,full_body_shaking, eye_blinking, face_pulling
+Z0010@2-29-2016@LA222226@sz_v1_1_segment_0.mp4,arm_flexion, limb_automatisms, tonic
+Z0010@2-29-2016@LA222226@sz_v1_1_segment_1.mp4,limb_automatisms
+Z0010@2-29-2016@LA222226@sz_v1_1_segment_2.mp4,
+Z0010@2-29-2016@LA222226@sz_v1_1_segment_3.mp4,
+Z0010@2-29-2016@LA222227@sz_v1_1_segment_0.mp4,oral_automatisms, limb_automatisms
+Z0011@10-25-2021@DA1320Q5@sz_v1_1_segment_0.mp4,limb_automatisms
+Z0011@10-25-2021@DA1320Q5@sz_v1_1_segment_1.mp4,limb_automatisms
+Z0011@10-25-2021@DA1320Q5@sz_v1_1_segment_2.mp4,limb_automatisms, pelvic_thrusting
+Z0011@10-25-2021@DA1320Q5@sz_v1_1_segment_3.mp4,limb_automatisms, pelvic_thrusting
+Z0011@10-25-2021@DA1320Q5@sz_v1_1_segment_4.mp4,pelvic_thrusting
+Z0011@10-25-2021@DA1320Q5@sz_v1_1_segment_5.mp4,
+Z0011@10-25-2021@DA1320Q5@sz_v1_1_segment_6.mp4,
+Z0011@10-25-2021@DA1320Q5@sz_v1_1_segment_7.mp4,
+Z0011@10-25-2021@DA1320Q5@sz_v1_1_segment_8.mp4,
+Z0011@10-25-2021@DA1320Q5@sz_v1_1_segment_9.mp4,
+Z0011@10-25-2021@DA1320Q6@sz_v1_1_segment_0.mp4,limb_automatisms
+Z0011@10-25-2021@DA1320Q6@sz_v1_1_segment_1.mp4,limb_automatisms, arm_flexion, clonic, oral_automatisms, tonic
+Z0011@10-25-2021@DA1320Q6@sz_v1_1_segment_2.mp4,limb_automatisms, arm_flexion, clonic, oral_automatisms, tonic
+Z0011@10-25-2021@DA1320Q6@sz_v1_1_segment_3.mp4,limb_automatisms, arm_flexion, clonic, oral_automatisms, tonic
+Z0011@10-25-2021@DA1320Q7@sz_v1_1_segment_0.mp4,close_eyes, arm_flexion
+Z0011@10-25-2021@DA1320Q7@sz_v1_1_segment_1.mp4,close_eyes, arm_flexion
+Z0011@10-25-2021@DA1320Q7@sz_v1_1_segment_2.mp4,close_eyes, arm_flexion, limb_automatisms
+Z0011@10-25-2021@DA1320Q7@sz_v1_1_segment_3.mp4,close_eyes, arm_flexion
+Z0011@10-25-2021@DA1320QG@sz_v1_1_segment_0.mp4,
+Z0011@10-25-2021@DA1320QG@sz_v1_1_segment_1.mp4,
+Z0011@10-25-2021@DA1320QG@sz_v1_1_segment_2.mp4,
+Z0011@10-25-2021@DA1320QG@sz_v1_1_segment_3.mp4,
+Z0011@10-25-2021@DA1320QG@sz_v1_1_segment_4.mp4,
+Z0011@10-25-2021@DA1320QG@sz_v1_1_segment_5.mp4,
+Z0011@10-25-2021@DA1320QG@sz_v1_1_segment_6.mp4,
+Z0011@10-25-2021@DA1320QG@sz_v1_1_segment_7.mp4,
+Z0011@10-25-2021@DA1320QG@sz_v1_1_segment_8.mp4,
+Z0012@6-10-2019@UA6690C0@sz_v1_1_segment_0.mp4,close_eyes, tonic, arm_straightening
+Z0012@6-10-2019@UA6690C0@sz_v1_1_segment_1.mp4,close_eyes, tonic, arm_straightening
+Z0012@6-10-2019@UA6690C0@sz_v1_1_segment_2.mp4,close_eyes, full_body_shaking
+Z0012@6-10-2019@UA6690C0@sz_v1_1_segment_3.mp4,full_body_shaking
+Z0013@11-12-2020@UA6692V7@sz_v1_1_segment_0.mp4,oral_automatisms, arm_flexion, blank_stare, eye_blinking, head_turning
+Z0013@11-12-2020@UA6692V7@sz_v1_1_segment_1.mp4,oral_automatisms, arm_flexion, blank_stare, eye_blinking, head_turning
+Z0013@11-12-2020@UA6692V7@sz_v1_1_segment_2.mp4,oral_automatisms
+Z0013@11-12-2020@UA6692V8@sz_v1_1_segment_0.mp4,limb_automatisms, oral_automatisms, eye_blinking
+Z0013@11-12-2020@UA6692V8@sz_v1_1_segment_1.mp4,oral_automatisms, eye_blinking, head_turning, blank_stare, tonic, arm_flexion
+Z0013@11-12-2020@UA6692V8@sz_v1_1_segment_2.mp4,oral_automatisms, head_turning, blank_stare, tonic, arm_flexion
+Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_0.mp4,head_turning, arm_flexion, tonic, face_pulling, full_body_shaking
+Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_1.mp4,head_turning, arm_flexion, tonic, face_pulling, full_body_shaking, arm_straightening, face_twitching, clonic, eye_blinking
+Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_2.mp4,tonic, face_pulling, full_body_shaking, arm_straightening, face_twitching, clonic, eye_blinking
+Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_3.mp4,tonic, face_pulling, full_body_shaking, arm_straightening, face_twitching, clonic, eye_blinking

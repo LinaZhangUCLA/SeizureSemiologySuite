@@ -146,7 +146,7 @@ def main():
             if ordered_features or all_features:
                 output_data.append({
                     'file_name': file_name,
-                    'event_sequence': ', '.join(ordered_features) if ordered_features else ', '.join(all_features)
+                    'event_sequence': '"' + (', '.join(ordered_features) if ordered_features else ', '.join(all_features)) + '"'
                 })
             
             # Log missing times
@@ -170,7 +170,7 @@ def main():
             if ordered_features_vlm or all_features_vlm:
                 output_data_vlm.append({
                     'file_name': file_name,
-                    'event_sequence': ', '.join(ordered_features_vlm) if ordered_features_vlm else ', '.join(all_features_vlm)
+                    'event_sequence': '"' + (', '.join(ordered_features_vlm) if ordered_features_vlm else ', '.join(all_features_vlm)) + '"'
                 })
     
     # Print summary for original output

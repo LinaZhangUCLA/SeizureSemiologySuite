@@ -120,7 +120,9 @@ if __name__ == "__main__":
     for model in model_names:
         pred_csv = f"{base_dir}result/vlm_inference/{model}/Task5_{model}_all_merge.csv"
         if os.path.isfile(pred_csv):
-            gt_csv = f"{base_dir}result/ground_truth/task5_sequence_annotation.csv"
+            gt_csv = f"{base_dir}result/ground_truth/task5_sequence_annotation_vlm.csv"
+            if("omni" in model.lower()):
+                gt_csv = f"{base_dir}result/ground_truth/task5_sequence_annotation.csv"
             out_csv = f"{base_dir}metrics/task5/task5_sequence_3_metrics_{model}.csv"
             model_metrics = main(pred_csv,gt_csv, out_csv)
             model_metrics["model"] = model

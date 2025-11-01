@@ -22,3 +22,4 @@ finetune/run_logs
 inference_result2/
 inference_result3/
 inference_result31/
+.DS_Store

@@ -65,7 +65,8 @@ class SeizureORM(ORM):
         tasks = kwargs["task"]   # task区分不同任务
         solutions = kwargs["solution"]
 
-
+        #print("completions: ",completions)
+        #print("kwargs ", kwargs)
         # TODO: llm回答的思维链为<think> reasoning process here </think><answer> answer here </answer>
 
         rewards = []
@@ -85,13 +86,15 @@ class SeizureORM(ORM):
                 gt_answer = solution
             # 获取llm的answer，包括<think>...<think>和<answer>...<answer>
             llm_answer = content
-            match = re.search(r"<answer>(.*?)</answer>", llm_answer)
+            #match = re.search(r"<answer>(.*?)</answer>", llm_answer)
+            match = re.search(r"<answer>\s*([\s\S]*?)\s*</answer>", llm_answer)
             # 如果有answer标签，则提取标签内内容为答案
             if match:
-                print("have <think> tag")
+                print("have <answer> tag")
                 llm_answer = match.group(1)
             else:
-                print(f"no <think> tag")
+                print(f"no <answer> tag")
+                llm_answer = content
 
             # TODO: step 2 针对不同的任务计算不同的任务奖励
             if task == "task-1-2":
@@ -99,6 +102,11 @@ class SeizureORM(ORM):
                 # ground-truth example: {'answer': 'no', 'justification': 'The patient prod...'}
                 try:
                     # TODO: 计算task 1和2的reward，先判断是否正确，然后判断justification是否正确
+                    print(f"debug task 1-2: llm answer {llm_answer}, gt answer {gt_answer}", type(llm_answer), type(gt_answer))
+
+                    llm_answer = json.loads(llm_answer)
+                    gt_answer = json.loads(llm_answer)
+
                     print(f"debug task 1-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
                     # print(f"debug task 1-2: llm answer {llm_answer['answer']}, gt answer {gt_answer['answer']}")
                     if llm_answer["answer"] == gt_answer["answer"]:
@@ -125,20 +133,23 @@ class SeizureORM(ORM):
                 # TODO: 定位症状发生时间 01:23-02:23，计算时间段重合。计算题，计算overlap/union
                 # ground-truth example: {'timestamp': '00:41'}
                 try:
-                    print(f"debug task 4: llm answer {llm_answer}, gt answer {gt_answer}")
+                    print(f"debug task 4: llm answer {llm_answer}, gt answer {gt_answer}", type(llm_answer),type(gt_answer))
                     # TODO: task 4计算重叠比例来计算预测的准确程度
+                                       
+                    llm_answer = json.loads(llm_answer)
+                    # gt_answer = json.loads(llm_answer)
+
                     llm_time, gt_time = llm_answer['timestamp'], gt_answer['timestamp']
+                    print("llm_time: ",llm_time, "gt_time: ",gt_time)
+
                     # 转秒
-                    s1 = int(llm_time.split('-')[0].split(':')[0]) * 60 + int(llm_time.split('-')[0].split(':')[1])
-                    e1 = int(llm_time.split('-')[1].split(':')[0]) * 60 + int(llm_time.split('-')[1].split(':')[1])
-                    s2 = int(gt_time.split('-')[0].split(':')[0]) * 60 + int(gt_time.split('-')[0].split(':')[1])
-                    e2 = int(gt_time.split('-')[1].split(':')[0]) * 60 + int(gt_time.split('-')[1].split(':')[1])
-                    # 交集长度
-                    overlap = max(0, min(e1, e2) - max(s1, s2))
-                    # 并集长度
-                    union = max(e1, e2) - min(s1, s2)
-                    # 归一化 reward（IoU）
-                    reward += overlap / union
+                    s1 = int(llm_time.split(':')[0]) * 60 + int(llm_time.split(':')[1])
+                    s2 = int(gt_time.split(':')[0]) * 60 + int(gt_time.split(':')[1])
+                    print("times: ", s1,s2)
+                    if s1 < 0:
+                        reward += 0
+                    else:
+                        reward += (1 - min(1, abs(s1 - s2) / 60))
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
                 rewards.append(reward)
@@ -231,7 +242,7 @@ class SeizureORM(ORM):
                 rewards.append(reward)
 
             print(f"task is {task}, reward is {reward}")
-
+        print(rewards)
         return rewards
 
 

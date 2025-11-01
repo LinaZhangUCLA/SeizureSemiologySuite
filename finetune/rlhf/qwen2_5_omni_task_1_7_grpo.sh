@@ -24,9 +24,9 @@ PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True' \
 VIDEO_MAX_PIXELS=$((228*228)) \
 FPS_MAX_FRAMES=60 \
 MAX_PIXELS=$((FPS_MAX_FRAMES * VIDEO_MAX_PIXELS)) \
-NPROC_PER_NODE=4 \
+NPROC_PER_NODE=2 \
 ENABLE_AUDIO_OUTPUT=1 \
-CUDA_VISIBLE_DEVICES=0,1,2,3 \
+CUDA_VISIBLE_DEVICES=2,3 \
 swift rlhf \
     --rlhf_type grpo \
     --model "Qwen/Qwen2.5-Omni-7B" \

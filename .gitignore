@@ -18,3 +18,7 @@ fintune/scripts/debug
 finetune/ckpts
 finetune/dataset/videos
 finetune/run_logs
+
+inference_result2/
+inference_result3/
+inference_result31/

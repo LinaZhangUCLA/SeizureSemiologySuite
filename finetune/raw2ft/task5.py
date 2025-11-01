@@ -63,7 +63,7 @@ with open(csv_path, "r", encoding="utf-8") as f:
                     {"role": "system", "content": "You are a medical assistant helping to observe, describe, and analyze seizure videos."},
                     {"role": "user", "content": get_task5_prompt().strip()},
                     # {"role": "assistant", "content": symptoms if symptoms else "none"},
-                    {"role": "assistant", "content": row["segment_feature_list"] if row["segment_feature_list"] else "none"},
+                    {"role": "assistant", "content": row["segment_feature_list"] if row["segment_feature_list"] else ""},
                 ],
                 "videos": [video_path],
                 

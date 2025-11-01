@@ -10,7 +10,7 @@ LOG_PATH="./run_logs/${VERSION_NAME}.log"
 #BASE_MODEL= 'Qwen/Qwen2.5-Omni-7B'
 
 # todo: data_path
-export TASK_DATASET='./dataset/sft_merge_2025-10-30_swift_train.jsonl'
+export TASK_DATASET='./dataset/sft_merge_2025-10-31_swift_train.jsonl'
 
 export WANDB_API_KEY="***REMOVED***"   # 或提前 wandb login
 export WANDB_PROJECT="seizurebench"

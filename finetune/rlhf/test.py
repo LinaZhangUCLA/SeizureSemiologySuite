@@ -24,7 +24,13 @@ To determine the exact timestamp when the rhythmic jerking movements first appea
 
 # print(llm_answer)
 
-
+<think>
+The video shows a patient undergoing a medical examination or treatment. The patient appears to be experiencing distress or discomfort. A healthcare professional is interacting with the patient, possibly adjusting equipment or attempting to soothe the patient. The patient's facial expressions and body language suggest distress, which could be indicative of an epileptic seizure. However, without specific seizure symptoms like loss of consciousness, convulsions, or abnormal movements, it is not conclusive. Additional context such as background information or knowledge of the patient's medical history would be necessary for an accurate diagnosis.
+</think>
+{
+  "answer": "NES",
+  "description": "The patient appears to be experiencing distress or discomfort. A healthcare professional is interacting with the patient, possibly adjusting equipment or attempting to soothe the patient. The patient's facial expressions and body language suggest distress, which could be indicative of an epileptic seizure. However, without specific seizure symptoms like loss of consciousness, convulsions, or abnormal movements, it is not conclusive. Additional context such as background information or knowledge of the patient's medical history would be necessary for an accurate diagnosis."
+}, gt answer {'answer': 'ES', 'description': 'The patient is laying in bed and his mom is giving him a massage at 14:15:32, he exhibits oroalimentary automatisms at 14:15:34, he exhibits dyscognitive language symptoms at 14:15:50. Right manual gestural automatisms are evident at 14:16:06, and bimanual gestural automatisms occur at 14:16:11, he looks to the left at 14:16:14, and the seizure terminates at 14:18:03.'}
 
 
 llm_answer = """{
@@ -42,3 +48,13 @@ gt_answer = json.loads(gt_answer)
 
 
 print(gt_answer)
+
+
+
+
+
+
+
+
+
+

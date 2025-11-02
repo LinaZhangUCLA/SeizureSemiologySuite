@@ -33,7 +33,10 @@ def parse_arguments():
     # Model settings
     parser.add_argument('--model_name', type=str, default='OpenGVLab/InternVL3_5-8B',
                        help='Model name to use (default: OpenGVLab/InternVL3_5-8B)')
-
+    
+    parser.add_argument('--tp', type=str, 
+                       default=1,
+                       help='gpu number')
 
       # Data settings
     parser.add_argument('--dataset_dir', type=str, 
@@ -188,7 +191,7 @@ from decord import VideoReader, cpu
 from PIL import Image
 
 # Load LMDeploy pipeline for InternVL3.5
-engine_cfg = PytorchEngineConfig(tp=1, session_len=32768)
+engine_cfg = PytorchEngineConfig(tp=int(args.tp), session_len=32768)
 pipe = pipeline(model_name, backend_config=engine_cfg)
 
 
@@ -763,8 +766,8 @@ def main():
         print(f"Selected features from GPUs {args.gpu}: {feature_folders}")
 
         # Set video range for task4 (no validation needed since we process within each feature folder)
-        task4_videos_range = [int(task4_videos_range[0]), int(task4_videos_range[1])]
-        print(f"Task4 video range: {task4_videos_range[0]}-{task4_videos_range[1]}")
+        # task4_videos_range = [int(task4_videos_range[0]), int(task4_videos_range[1])]
+        # print(f"Task4 video range: {task4_videos_range[0]}-{task4_videos_range[1]}")
 
         processed = set()
         with open(task4_result_csv_fp, 'r') as f:
@@ -773,7 +776,7 @@ def main():
             except StopIteration:
                 pass
             processed = set(','.join(line.strip().split(',')[:2]) for line in f)
-        
+        print(processed)
         
         task4_log_file = os.path.join(task4_log_dir, f"task4_gpu{gpu_str}.log") 
         with open(task4_result_csv_fp, 'a') as csv_f, open(task4_log_file, 'a') as log_f:
@@ -782,15 +785,10 @@ def main():
                 feature_log_path = os.path.join(task4_log_dir, f"{feature}.log")
                 
                 # Get all MP4 files in the feature folder
-                all_video_files = [f for f in os.listdir(feature_path) if f.endswith('.mp4')]
-                all_video_files.sort()  # Sort to ensure consistent ordering
+                video_files = [f for f in os.listdir(feature_path) if f.endswith('.mp4')]
+                video_files.sort()  # Sort to ensure consistent ordering
                 
                 # Apply video range filter
-                start_idx = max(0, task4_videos_range[0]-1)
-                end_idx = min(len(all_video_files), task4_videos_range[1])
-                video_files = all_video_files[start_idx:end_idx]
-                print(f"Processing {len(video_files)} videos for feature {feature} (range: {task4_videos_range[0]}-{task4_videos_range[1]}, available: {len(all_video_files)})")
-                
                 for video_name in tqdm(video_files, desc=f"Processing {feature} videos"):
                     video_path = os.path.join(feature_path, video_name)
                     key = f"{video_name},{feature}"
@@ -813,7 +811,7 @@ def main():
                             timestamp = 'N/A'
                         else:
                             frame_number = int(frame_str)
-                            timestamp_seconds = frame_number // FPS
+                            timestamp_seconds = frame_number // TASK4_FPS
                             minutes = timestamp_seconds // 60
                             seconds = timestamp_seconds % 60
                             timestamp = f"{minutes:02d}:{seconds:02d}"
@@ -882,7 +880,7 @@ def main():
         init_csv(task6_result_csv_fp, "video_name,report")
         task6_processed = load_processed_videos(task6_result_csv_fp)        
         os.makedirs(task6_log_dir, exist_ok=True)
-        aggregate_log_fp = os.path.join(task6_log_dir, "task6.log")
+        aggregate_log_fp = os.path.join(task6_log_dir, f"task6_{gpu_str}.log")
         task5_videos_range = validate_videos_range(task5_clip_fps, task5_6_videos_range)
         with open(task6_result_csv_fp, 'a', encoding='utf-8', newline='') as csv_f, open(aggregate_log_fp, 'a', encoding='utf-8') as log_f:    
             for video_clip_fp in tqdm(task5_clip_fps[task5_videos_range[0]-1 : task5_videos_range[1]], desc="Processing Task 6"):

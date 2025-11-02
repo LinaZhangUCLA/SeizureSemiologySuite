@@ -18,17 +18,23 @@ mkdir -p './run_logs/'
 mkdir -p './ckpts/'
 mkdir -p './ckpts/trained_models/'
 
+#VIDEO_MAX_PIXELS=$((784*448)) \
+#VIDEO_MAX_PIXELS=$((392*448)) \
+# --dataloader_num_workers 4 \
+
 export WANDB_API_KEY="***REMOVED***"   # 或提前 wandb login
 export WANDB_PROJECT="seizurebench_grpo"
 export WANDB_ENTITY="linazhang-ucla"
 
+export ENABLE_AUDIO_OUTPUT=False
+
 PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True' \
-VIDEO_MAX_PIXELS=$((228*228)) \
+VIDEO_MAX_PIXELS=$((784*448)) \
 FPS_MAX_FRAMES=60 \
 MAX_PIXELS=$((FPS_MAX_FRAMES * VIDEO_MAX_PIXELS)) \
-NPROC_PER_NODE=2 \
+NPROC_PER_NODE=8 \
 ENABLE_AUDIO_OUTPUT=1 \
-CUDA_VISIBLE_DEVICES=2,3 \
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 FPS=1 \
 swift rlhf \
     --rlhf_type grpo \
@@ -44,24 +50,23 @@ swift rlhf \
     --dataset $TASK_DATASET  \
     --load_from_cache_file true \
     --external_plugins './rlhf/plugin.py' \
-    --max_completion_length 2048 \
-    --num_train_epochs 1 \
+    --max_steps 6000 \
     --per_device_train_batch_size 2 \
     --per_device_eval_batch_size 2 \
     --learning_rate 1e-5 \
     --gradient_accumulation_steps 1 \
-    --eval_steps 100 \
-    --save_steps 100 \
+    --eval_steps 300 \
+    --save_steps 300 \
     --save_total_limit 2 \
     --logging_steps 5 \
     --max_new_tokens 1024 \
     --max_length 32768 \
     --warmup_ratio 0.05 \
-    --dataloader_num_workers 4 \
-    --dataset_num_proc 2 \
+    --dataloader_num_workers 8 \
+    --dataset_num_proc 8 \
     --num_generations 4 \
-    --temperature 1. \
-    --top_p 0.99 \
+    --temperature 0.8 \
+    --top_p 0.95 \
     --top_k 50 \
     --system './rlhf/prompt.txt' \
     --deepspeed zero2 \

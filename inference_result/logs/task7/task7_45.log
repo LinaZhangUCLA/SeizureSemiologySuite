@@ -1,0 +1,1898 @@
+O0009@8-8-2022@DA1322BE@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient in the video suddenly exhibits abnormal behavior, characterized by stiffening and jerking of the arms, vocalization, and apparent unresponsiveness. These symptoms suggest a possible epileptic seizure (ES). The patient's body stiffens, and the arms are held tightly, indicating a tonic-clonic phase commonly seen in epileptic seizures. The patient also appears to lose consciousness and is unresponsive to external stimuli, which is typical of an ES. The medical staff attempts to restrain the patient gently to prevent injury, which is a standard procedure during a seizure. The presence of medical equipment and monitoring devices indicates that the patient is under observation, likely due to a history of seizures or other neurological conditions. The symptoms observed align with those of an epileptic seizure, characterized by sudden onset, loss of consciousness, and involuntary muscle movements.", "answer": "ES"}"
+O0010@6-11-2020@DA0014PO@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient in the video exhibits several symptoms indicative of a seizure. Initially, the patient is lying in a hospital bed, seemingly unresponsive. The patient then begins to move, raising their arms and appearing to be in distress. The patient's movements are erratic and uncoordinated, with the arms flailing and the body twisting. The patient also vocalizes, which can be a symptom of a seizure. Medical staff enter the room and attempt to restrain the patient, indicating that the patient's movements are uncontrollable. The patient's eyes are open, but the patient appears to be unresponsive to the surroundings. These symptoms are consistent with an epileptic seizure (ES), characterized by sudden, uncontrolled electrical disturbances in the brain that can cause changes in behavior, movements, feelings, and levels of consciousness.","answer": "ES"}"
+O0010@6-11-2020@DA0014PP@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient in the video appears to be experiencing a seizure characterized by sudden, involuntary movements, such as arm and leg jerking, and a loss of consciousness. The patient is lying in a hospital bed, and medical staff are attending to them, suggesting a serious medical event. These symptoms are indicative of an epileptic seizure (ES).","answer": "ES"}"
+O0011@2-27-2019@DA7022D0@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient in the video is lying on a hospital bed, moving their arms and legs, and appears to be vocalizing. The movements are not typical of a generalized tonic-clonic seizure, and the patient remains responsive to the surroundings, which is more indicative of a non-epileptic event (NES).","answer": "NES"}"
+R0001@10-17-2023@DA1324JS@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient in the video appears to be in a hospital bed, initially calm but then suddenly becomes agitated, moving their arms and legs restlessly. They exhibit signs of confusion, looking around disoriented, and at one point, vocalize with apparent distress. These symptoms suggest a possible non-epileptic event (psychogenic seizure) rather than an epileptic seizure, as there is no evidence of typical epileptic seizure activity such as loss of consciousness, tonic-clonic movements, or postictal state. The patient's responsiveness and agitation are more consistent with a non-epileptic seizure (NES).","answer": "NES"}"
+R0001@10-17-2023@DA1324L8@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient in the video appears to be lying in a hospital bed, initially still. They then begin to move their arms and legs, showing signs of waking up or reacting to stimuli. The movements are not convulsive or tonic-clonic, which are typical of epileptic seizures. The patient seems to be regaining consciousness and responding to the nurse's presence, indicating a non-epileptic event.","answer": "NES"}"
+R0002@6-17-2021@DA0016G9@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in a resting state with no visible signs of seizure activity such as convulsions, rigidity, or loss of consciousness. The patient's posture and environment suggest a calm and stable condition.", "answer": "NES"}"
+R0002@6-17-2021@DA0016G9@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, interacting with a smartphone and a tablet, and does not exhibit any typical seizure symptoms such as convulsions, loss of consciousness, or abnormal movements. The patient appears to be fully aware and responsive throughout the video.","answer": "NES"}"
+R0002@6-17-2021@UA6693TA@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is sitting in a chair, appearing to be in a relaxed state, with no visible signs of seizure activity such as convulsions or loss of consciousness.", "answer": "NES"}"
+R0002@6-17-2021@UA6693TB@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient in the video appears to be experiencing a seizure characterized by sudden, involuntary movements and a loss of awareness. The patient is seated in a chair, and during the event, they exhibit stiffening and jerking of the arms, along with a possible cry or vocalization. The patient also seems to be unresponsive to external stimuli during the event. These symptoms are typical of an epileptic seizure (ES), which involves abnormal electrical activity in the brain leading to sudden, involuntary movements and loss of awareness. The presence of medical personnel and the patient's medical restraints further suggest that this is a controlled environment for monitoring and managing seizures.", "answer": "ES"}"
+R0002@6-17-2021@UA6693TC@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is sitting in a hospital bed, eating a sandwich, and interacting with a visitor. There are no visible seizure symptoms such as convulsions, loss of consciousness, or abnormal movements.", "answer": "NES"}"
+R0002@6-17-2021@UA6693TC@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient in the video is lying in a hospital bed, covered with a blanket, and appears to be unresponsive. A woman is sitting beside the bed, interacting with the patient, possibly checking on them or providing care. There are no visible signs of convulsions, muscle stiffness, or other typical seizure symptoms. The patient remains still throughout the video, and the woman does not exhibit any urgent or emergency responses typically associated with a seizure. The environment is calm, and there are no signs of distress or panic.", "answer": "NES"}"
+R0002@9-3-2023@AA16128K@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is sitting in a chair, appearing relaxed and not exhibiting any seizure symptoms such as convulsions, loss of consciousness, or abnormal movements. The patient is interacting with others in the room, indicating normal behavior. There are no signs of a seizure occurring.", "answer": "NES"}"
+R0002@9-3-2023@AA16128L@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be in a resting state with no visible signs of seizure activity such as convulsions or abnormal movements.", "answer": "NES"}"
+R0002@9-3-2023@AA16128M@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in a state of rest or sleep. There are no visible signs of seizure activity such as convulsions, rigidity, or abnormal movements. The environment is a typical hospital room with medical equipment around the bed.", "answer": "NES"}"
+R0002@9-3-2023@AA16128M@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient appears to be lying still in the hospital bed with no visible signs of seizure activity such as convulsions or jerking movements. The environment is calm, and the patient seems to be in a resting state.", "answer": "NES"}"
+R0002@9-3-2023@DA9601MS@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is sitting in a chair, interacting with others, and appears to be eating. There are no visible signs of seizure activity such as convulsions or loss of consciousness.", "answer": "NES"}"
+R0002@9-3-2023@DA9601MT@multiple_sz1_1.mp4,
+,"ES",
+,"{"description": "The patient is sitting in a chair, covered with a blanket, and appears to be resting. There are no visible signs of seizure activity such as convulsions, loss of consciousness, or abnormal movements. The patient seems calm and is not exhibiting any typical seizure symptoms.", "answer": "NES"}"
+R0002@9-3-2023@DA9601MT@multiple_sz1_2.mp4,
+,"ES",
+,"{"description": "The patient is sitting in a chair, covered with a blanket, and appears to be in a relaxed state. There are no visible signs of seizure activity such as convulsions, loss of consciousness, or abnormal movements.", "answer": "NES"}"
+R0002@9-3-2023@DA9601MT@multiple_sz1_3.mp4,
+,"ES",
+,"{"description": "The patient is sitting in a chair, covered with a blanket, and appears to be interacting with someone off-camera. There are no visible signs of seizure activity such as convulsions, loss of consciousness, or abnormal movements.", "answer": "NES"}"
+R0002@9-3-2023@DA9601MT@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The provided frames do not show any visible seizure symptoms. The patient appears to be resting on the bed, and there is no indication of convulsions, loss of consciousness, or other typical seizure symptoms. The environment is calm and static, suggesting no seizure activity is occurring at the moment.","answer": "NES"}"
+R0002@9-3-2023@DA9601MU@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is sitting up in bed, eating from a bowl, and appears to be in a normal state without any signs of seizure activity such as convulsions, loss of consciousness, or abnormal movements.", "answer": "NES"}"
+R0002@9-3-2023@DA9601MV@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be resting. There are no visible signs of seizure activity such as convulsions, rigidity, or abnormal movements. The patient is holding a phone and seems to be engaged with it. The environment is calm, and there are no signs of distress or seizure activity.", "answer": "NES"}"
+R0002@9-3-2023@DA9601MV@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient is sitting in a recliner, covered with a blanket, and appears to be using a mobile device. There are no visible signs of seizure activity such as convulsions, loss of consciousness, or abnormal movements.", "answer": "NES"}"
+R0002@9-3-2023@DA9601MV@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be resting. There are no visible signs of seizure activity such as convulsions, rigidity, or abnormal movements. The patient seems to be in a stable condition with medical equipment around, indicating monitoring but no active seizure symptoms.", "answer": "NES"}"
+R0004@5-20-2021@DA0016B4@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be in a post-seizure state. There is no visible tonic-clonic activity or other seizure symptoms observed in the video. The patient seems to be resting and is being attended to by medical staff, indicating a possible post-ictal state or a non-epileptic event.","answer": "NES"}"
+R0004@5-20-2021@DA0016BK@nes_v4_1.mp4,
+,"ES",
+,"{"description": "The patient in the video appears to be lying in a hospital bed, initially smiling and interacting with a tablet. There are no visible signs of convulsions, loss of consciousness, or other typical seizure symptoms. The patient seems relaxed and responsive, indicating no seizure activity.", "answer": "NES"}"
+R0005@10-17-2019@DA0013O9@nes_v2_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in a post-seizure state. There is no active convulsion or tonic-clonic movement observed. The medical staff are monitoring the patient and adjusting equipment, indicating a controlled environment post-event. The patient's symptoms seem to be resolving, and there is no ongoing seizure activity visible.", "answer": "ES"}"
+R0006@11-3-2014@VA7631US@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying on a hospital bed, interacting with medical staff, and appears to be conscious and responsive. There are no visible signs of seizure activity such as convulsions or loss of consciousness.", "answer": "NES"}"
+R0007@3-7-2016@CA4444H1@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying on a hospital bed with her arms raised and her head tilted back. She appears to be unresponsive and is breathing through a nasal cannula. Her body is stiff, and her arms are clenched, indicating a possible seizure. The medical staff is monitoring her closely, adjusting equipment, and providing care. The patient's symptoms include unresponsiveness, stiffening of the body, and clenched arms, which are characteristic of a seizure event.","answer": "ES"}"
+R0007@3-7-2016@CA4444H2@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, wearing a green hospital gown and a bandage on her head. She is moving her arms and hands rhythmically, and her facial expressions suggest she might be experiencing discomfort or pain. A medical professional is present, monitoring the patient closely. The movements appear to be controlled and not indicative of a typical epileptic seizure, which often involves more pronounced and uncontrolled movements of the limbs and body.", "answer": "NES"}"
+R0007@3-7-2016@CA4444HK@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is sitting up in bed, appearing to be in a state of confusion or distress, with her arms slightly raised and her eyes closed. The medical staff are trying to comfort her and ensure her safety. There are no visible convulsions or typical seizure postures observed. The patient's movements are not rhythmic or repetitive, and she seems to be responding to the medical staff's presence and touch.", "answer": "NES"}"
+R0009@8-12-2013@FA16402H@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient in the video appears to be experiencing a seizure characterized by sudden, involuntary movements and a loss of consciousness. The patient is lying in a hospital bed, initially reading a book, then suddenly starts moving their arms and legs erratically, and appears to be unresponsive. The patient's facial expressions indicate distress, and they seem to be struggling. Medical staff enter the room to assist, suggesting the severity of the event. These symptoms are indicative of an epileptic seizure (ES), which involves abnormal electrical activity in the brain leading to sudden, involuntary movements and loss of awareness.","answer": "ES"}"
+R0009@8-12-2013@FA16402H@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient in the video appears to be lying in a hospital bed, exhibiting symptoms such as sudden arm movements, vocalizations, and a distressed facial expression. These symptoms suggest a possible seizure. The patient's arms are raised and moving erratically, and they seem to be experiencing involuntary movements and possibly some form of altered consciousness.", "answer": "ES"}"
+R0009@8-12-2013@FA16402M@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient appears to be in a hospital bed, covered with a blanket, and is moving their arms and hands in a repetitive manner. They seem to be unresponsive to their surroundings and are possibly talking or making sounds. A healthcare worker approaches to check on them.", "answer": "ES"}"
+R0009@8-12-2013@FA16402M@sz_v4_1.mp4,
+,"ES",
+,"{"description": "The patient in the video appears to be lying in a hospital bed, initially calm. The patient then extends their arm and begins to exhibit signs of distress, such as vocalizing and moving their arms. A healthcare worker approaches to assist. The movements and reactions seem purposeful and responsive to the environment, rather than random convulsions typically seen in epileptic seizures.", "answer": "NES"}"
+R0010@3-23-2015@VA7632JF@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying on a hospital bed, showing signs of distress, with his arms crossed over his chest and his head turned to the side. He appears to be experiencing a seizure characterized by vocalization and possible limb stiffness. The medical staff is attending to him, providing oxygen and monitoring his condition closely. The patient's symptoms include vocalization and physical tension, which are consistent with seizure activity.", "answer": "ES"}"
+R0011@9-22-2020@DA00157M@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient in the video appears to be experiencing a seizure characterized by altered consciousness and hand movements. The patient is lying in a hospital bed, and medical staff are present, monitoring and assisting the patient. The patient's symptoms include hand gestures and unresponsiveness to external stimuli, which are typical signs of a seizure. The medical staff are checking the patient's vitals and providing support, indicating a potentially serious event. Based on the observed symptoms and the medical response, the event appears to be an epileptic seizure (ES).","answer": "ES"}"
+R0011@9-22-2020@DA00157U@nes_v2_1.mp4,
+,"ES",
+,"{"description": "The patient appears to be in a hospital bed, with a bandaged head and a neck brace, suggesting a recent injury or surgery. The patient is seen eating and interacting with visitors, indicating no immediate signs of a seizure. There are no convulsions, loss of consciousness, or other typical seizure symptoms observed in the video.","answer": "NES"}"
+R0011@9-22-2020@DA00157V@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, wearing a hospital gown and a bandage on the head. The patient exhibits rhythmic, involuntary movements of the arms and facial expressions consistent with a seizure. The patient appears unresponsive to external stimuli during the episode.", "answer": "ES"}"
+R0011@9-22-2020@DA00157W@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in a post-seizure state. There is no active convulsion or tonic-clonic movement observed. The patient seems to be recovering and is being attended to by a healthcare professional who is adjusting the bandage on the patient's head. The patient's eyes are open, and they appear to be regaining consciousness.", "answer": "ES"}"
+R0011@9-22-2020@DA001583@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, holding a stuffed animal, and appears to be moving their arms and legs in a rhythmic manner. They seem to be unresponsive to their surroundings and exhibit repetitive movements. The patient's facial expressions and body movements suggest a possible seizure. However, the movements are not typical of a generalized tonic-clonic seizure, which often involves more violent and symmetrical muscle contractions. The patient's ability to hold onto the stuffed animal and the relatively controlled nature of the movements may indicate a non-epileptic event, such as a psychogenic non-epileptic seizure (PNES).", "answer": "NES"}"
+R0011@9-22-2020@DA001584@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, initially appearing to be in a resting state. There are no visible signs of seizure activity such as convulsions, rigidity, or abnormal movements. The patient remains still throughout the video, and there are no observable changes in their state that would indicate a seizure. A healthcare worker approaches the patient towards the end of the video, suggesting routine monitoring or care. Given the lack of typical seizure symptoms, this appears to be a non-epileptic event (NES).","answer": "NES"}"
+R0011@9-22-2020@DA001584@nes_v1_2.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in a relaxed state with no visible signs of convulsions, rigidity, or other typical seizure symptoms. The patient's arms are resting by their sides, and they seem to be awake and possibly interacting with someone off-camera. There are no signs of postictal state or confusion typically seen after a seizure.", "answer": "NES"}"
+R0011@9-22-2020@DA001584@nes_v1_3.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in a post-seizure state. There is no visible convulsion or tonic-clonic activity at the moment. The patient seems to be regaining consciousness and is being monitored by medical staff. The environment suggests a controlled medical setting, and the patient is connected to monitoring equipment. The symptoms prior to this state likely included typical epileptic seizure activity, given the context and setting.", "answer": "ES"}"
+R0011@9-22-2020@DA001584@nes_v1_4.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in distress, with medical staff attending to them. There is no visible convulsion or typical seizure activity observed in the frames provided. The patient's arms are extended, and they seem to be experiencing some discomfort or pain, but there are no clear signs of a seizure such as rhythmic jerking or loss of consciousness.","answer": "NES"}"
+R0011@9-22-2020@DA00158B@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, initially appearing calm. The patient's eyes are open, and they seem to be looking around. The patient's arms are resting on the bed, and there is no visible movement or convulsion. The patient's facial expression changes slightly, but there is no significant physical activity or signs of a seizure. The patient remains in a similar position throughout the video, with no observable seizure activity or other symptoms indicative of a seizure.", "answer": "NES"}"
+O0009@8-8-2022@DA1322BE@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a sudden onset of abnormal movements, which could indicate a seizure. The patient is lying in a hospital bed, wearing a head wrap and a vest, suggesting they may have been involved in some form of trauma or medical incident. The presence of medical staff and equipment indicates that the patient is under observation and care. The patient's behavior includes moving their arms and body in a way that suggests involuntary muscle contractions, which is characteristic of seizures. The staff's actions, such as adjusting the patient's position and monitoring vital signs, further suggest that the patient is experiencing a seizure-like event.",
+  "answer": "ES"
+}
+```"
+O0010@6-11-2020@DA0014PO@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden movements, facial contortions, and apparent loss of consciousness. The medical staff responds by checking vital signs and preparing for intervention, indicating a serious medical event. The patient's condition appears to be monitored closely, suggesting a neurological emergency.",
+  "answer": "ES"
+}
+```"
+O0010@6-11-2020@DA0014PP@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden movements, loss of control, and involuntary actions such as flailing arms and legs. The medical staff responds by restraining the patient to prevent injury, indicating a serious and potentially harmful episode. The patient's head is also wrapped, suggesting prior trauma or medical intervention, which could be related to the seizure. The presence of medical personnel and equipment further supports the clinical context of the event.",
+  "answer": "ES"
+}
+```"
+O0011@2-27-2019@DA7022D0@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by involuntary movements, including flailing arms and legs, and facial expressions that suggest distress or discomfort. The patient is lying in a hospital bed, wearing a medical gown and plaid pants, with a bandage on their head. There is a healthcare professional present, holding what appears to be a tablet, possibly documenting the episode. Another individual is also present, gesturing towards the patient, which might indicate communication or instruction related to the seizure. The environment suggests a clinical setting, with medical equipment and furniture visible in the background.",
+  "answer": "ES"
+}
+```"
+R0001@10-17-2023@DA1324JS@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by sudden, uncontrolled movements and potential loss of consciousness. The individual is lying down in a hospital bed, wearing a hospital gown and a head covering, indicating a medical setting. There are medical personnel present, suggesting that the patient is under observation and care. The patient's body language and the presence of medical staff imply that this is a serious medical event requiring immediate attention.",
+  "answer": "ES"
+}
+```"
+R0001@10-17-2023@DA1324L8@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden movements and changes in consciousness. The patient appears to be lying in a hospital bed, covered with a blanket, and there are medical devices and equipment around, indicating a clinical setting. The patient's body moves erratically, suggesting involuntary muscle contractions. The presence of medical staff and the clinical environment further suggest that this is a monitored event, likely for diagnostic purposes.",
+  "answer": "ES"
+}
+```"
+R0002@6-17-2021@DA0016G9@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, wearing a head wrap, which might suggest recent medical intervention or monitoring. The patient's posture is relatively still, and there are no visible signs of convulsions, loss of consciousness, or other overt seizure activity such as twitching, jerking movements, or changes in behavior. The environment includes typical hospital equipment like a remote control, a pillow, and medical supplies, indicating a controlled setting for observation or treatment. However, without observable clinical signs of a seizure, it is challenging to definitively classify the event based on this visual information alone.",
+  "answer": "NES"
+}
+```"
+R0002@6-17-2021@DA0016G9@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, wearing a headband and a t-shirt with a graphic design. The patient is holding a smartphone and interacting with it, showing no signs of convulsions, loss of consciousness, or other typical seizure symptoms such as muscle rigidity, jerking movements, or altered mental status. The environment suggests a controlled setting, likely for monitoring, but there is no visible evidence of a seizure occurring during the recorded footage.",
+  "answer": "NES"
+}
+```"
+R0002@6-17-2021@UA6693TA@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be in a medical setting, wearing a head wrap and a bib, suggesting they may have experienced some form of seizure or medical event. The presence of medical equipment, such as what looks like an EEG machine, indicates monitoring for neurological activity. The patient's posture and the context suggest they might be recovering from a seizure. However, there are no visible convulsions, loss of consciousness, or other overt signs of active seizure activity in the provided frames. The patient seems relatively calm and composed, which could imply that any seizure activity has already passed.",
+  "answer": "NES"
+}
+```"
+R0002@6-17-2021@UA6693TB@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient in a hospital setting, wearing a headband and a medical vest, indicating some form of monitoring or treatment. The patient appears to be seated initially but then experiences a sudden onset of movement that includes flailing arms and legs, suggesting a loss of control over voluntary movements. Medical staff are seen quickly approaching the patient, indicating urgency and concern. The patient's behavior is characterized by involuntary, uncontrolled movements, which are typical signs of a seizure. The presence of medical personnel and the environment suggest that this is a monitored situation where such events are expected and managed.",
+  "answer": "ES"
+}
+```"
+R0002@6-17-2021@UA6693TC@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient sitting in a hospital bed, wearing a head wrap and eating from a tray. There is no visible evidence of convulsions, loss of consciousness, or other typical seizure symptoms such as twitching, jerking movements, or changes in behavior. The patient appears to be engaged in a normal activity without any signs of distress or abnormal movement.",
+  "answer": "NES"
+}
+```"
+R0002@6-17-2021@UA6693TC@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient lying in a hospital bed, covered with a blanket, while another person sits nearby. The patient appears to be experiencing some form of seizure activity, as indicated by their body movements and the presence of medical equipment such as monitors and IV lines. The individual sitting next to the patient seems to be observing closely, possibly reacting to the patient's condition. The environment suggests a clinical setting, which is typical for monitoring and treating seizures.",
+  "answer": "ES"
+}
+```"
+R0002@9-3-2023@AA16128K@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, covered with a blanket, and wearing a head wrap. There is no visible evidence of convulsive movements, loss of consciousness, or other typical seizure symptoms such as twitching, jerking, or staring spells. The patient seems to be resting calmly without any signs of distress or abnormal behavior that would suggest a seizure. The environment includes medical equipment and personal items, indicating a hospital setting, but there are no active signs of a seizure occurring at the moment captured in the video.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@AA16128L@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, connected to various medical equipment, including what seems to be an IV drip and monitoring devices. The patient's head is slightly turned to one side, and there is no visible movement or convulsions that would typically indicate a seizure. The environment suggests a controlled setting where the patient is under observation, possibly for monitoring purposes. There are no signs of muscle rigidity, jerking movements, or loss of consciousness that are characteristic of an epileptic seizure.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@AA16128M@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, covered with a blanket, and connected to medical equipment. There is no visible movement or convulsions that would typically indicate a seizure. The environment suggests a monitoring setup, but without observable symptoms such as twitching, jerking, or loss of consciousness, it is difficult to determine if a seizure is occurring. The lack of active symptoms leans towards a non-epileptic event.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@AA16128M@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, connected to various medical equipment, including what seems to be an IV drip and monitoring devices. The patient's head is covered with a bandage, suggesting recent medical intervention. There is no visible movement or convulsions that would typically indicate a seizure activity. The environment is calm, and there are no signs of distress or abnormal behavior from the patient.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MS@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient sitting at a table in what appears to be a hospital room, engaging in activities such as handling food items and interacting with another individual. There are no visible signs of convulsions, loss of consciousness, or other typical seizure symptoms like muscle rigidity, jerking movements, or altered mental status. The patient appears to be alert and responsive throughout the sequence.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MT@multiple_sz1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, wearing a head wrap, which might suggest recent medical intervention or monitoring. The patient's body language does not show overt signs of convulsions, tonic-clonic movements, or other typical seizure behaviors such as rhythmic jerking or loss of consciousness. Instead, the patient seems relatively still, possibly indicating a state of rest or recovery rather than active seizure activity. The presence of medical equipment and the calm demeanor of the accompanying person further suggest that the situation is being monitored but does not currently involve acute seizure activity.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MT@multiple_sz1_2.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying down in a hospital bed, covered with a blanket, and seems to be experiencing some form of distress or discomfort. The individual next to the patient is holding what looks like a medical device, possibly monitoring the patient's condition. There are no visible signs of convulsions, loss of consciousness, or other typical symptoms associated with an epileptic seizure such as tonic-clonic movements or automatisms. The environment suggests a medical setting where the patient is being observed and potentially treated for a condition that may not necessarily be epilepsy.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MT@multiple_sz1_3.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be in a hospital setting, lying in a chair with a bandage on their head. They are covered with a blanket and seem to be resting or waiting. There is no visible evidence of convulsions, loss of consciousness, or other typical seizure symptoms such as twitching, jerking movements, or changes in behavior. The patient remains relatively still throughout the video, and there are no signs of sudden onset of symptoms that would suggest a seizure. The presence of medical staff and equipment suggests monitoring, but no active seizure activity is observed.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MT@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a hospital room setting with medical equipment visible, including an IV stand and monitoring devices. The patient appears to be lying in bed, covered with white sheets, and there is no visible movement or activity that suggests a seizure. The environment is calm, and there are no signs of convulsions, loss of consciousness, or other typical seizure symptoms such as twitching, jerking, or abnormal posturing. The lack of observable symptoms makes it difficult to diagnose a seizure from this video alone.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MU@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient lying in bed, wearing a white cap and connected to medical equipment, suggesting a hospital setting. The patient appears to be drinking from a cup while another person stands beside them, possibly assisting. There is no visible evidence of convulsions, loss of consciousness, or other typical seizure symptoms such as muscle rigidity, jerking movements, or altered mental status. The environment and the actions depicted do not indicate an active seizure event.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MV@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying down in a hospital setting, covered with a blanket, and wearing a head wrap. There is no visible evidence of convulsions, loss of consciousness, or other typical seizure symptoms such as twitching, jerking movements, or changes in behavior. The patient seems to be resting calmly without any signs of active seizure activity.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MV@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying down in a hospital setting, covered with a blanket, and wearing a head wrap. There is no visible evidence of convulsive movements, loss of consciousness, or other typical seizure symptoms such as twitching, jerking, or staring spells. The patient seems to be resting calmly without any signs of distress or abnormal behavior that would suggest a seizure.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MV@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, covered with a blanket, and wearing a head wrap. There is no visible evidence of convulsive movements, loss of consciousness, or other typical seizure symptoms such as twitching, jerking, or staring spells. The environment suggests a calm and controlled setting, possibly indicating that the patient is resting or recovering from a medical procedure rather than experiencing a seizure.",
+  "answer": "NES"
+}
+```"
+R0004@5-20-2021@DA0016B4@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, wearing a hospital gown and a cap. The patient seems to be under medical observation, as indicated by the presence of medical personnel and equipment such as an IV line and monitoring devices. The patient's behavior includes moving their arms and hands in a manner that suggests they might be experiencing some form of involuntary movement. However, there are no clear signs of convulsions, loss of consciousness, or other typical symptoms associated with a full-blown epileptic seizure. The patient remains relatively calm and does not exhibit severe muscle contractions or rhythmic jerking movements.",
+  "answer": "NES"
+}
+```"
+R0004@5-20-2021@DA0016BK@nes_v4_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by repetitive, rhythmic movements of the arms and head. The patient is lying in a hospital bed, connected to monitoring equipment, which suggests a clinical setting for observation. The movements are involuntary and seem to follow a pattern typical of seizures, such as jerking or twitching. The patient's facial expressions and body language indicate discomfort or distress, which is common during a seizure episode.",
+  "answer": "ES"
+}
+```"
+R0005@10-17-2019@DA0013O9@nes_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, wearing a neck brace and showing signs of distress. There are medical personnel present, indicating that the patient is under observation and care. The patient's condition suggests they may have experienced a seizure, as indicated by the presence of medical staff and equipment typically used for monitoring vital signs during such events. The patient's head is bandaged, which could imply prior trauma or injury, but this does not necessarily indicate the nature of the seizure.",
+  "answer": "ES"
+}
+```"
+R0006@11-3-2014@VA7631US@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying on a hospital bed, wearing a headband and plaid shirt, with medical personnel present. The patient seems to be engaged in conversation and does not exhibit overt signs of convulsions, loss of consciousness, or other typical seizure behaviors such as tonic-clonic movements or automatisms. Instead, the patient is sitting up, interacting with the medical staff, and appears to be in a relatively calm state. There are no visible signs of rhythmic jerking, staring spells, or postictal confusion that are commonly associated with epileptic seizures.",
+  "answer": "NES"
+}
+```"
+R0007@3-7-2016@CA4444H1@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+    "description": "The patient in the video is lying on a hospital bed, appearing to be in distress. The medical staff is actively monitoring and attending to the patient. The patient exhibits signs of convulsions or involuntary movements, which are characteristic of a seizure. The presence of medical personnel and equipment suggests that the patient is being evaluated for a potential seizure disorder. The patient's condition seems to be under control as the staff is managing the situation effectively.",
+    "answer": "ES"
+}
+```"
+R0007@3-7-2016@CA4444H2@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by involuntary movements, including clenching of fists and twitching of limbs. The patient is lying in a hospital bed, wearing a headband and medical attire, indicating a clinical setting. There are medical personnel present, suggesting that the patient is under observation and receiving care. The patient's eyes are closed, and there is no visible convulsive activity, which might suggest a more subtle form of seizure activity.",
+  "answer": "ES"
+}
+```"
+R0007@3-7-2016@CA4444HK@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure while lying in a hospital bed. The patient's eyes are closed, and there is visible movement and tension in their body. Medical personnel are present, indicating that the situation is being monitored closely. The patient's head is covered with a bandage, suggesting they may have sustained some form of injury. The medical staff is actively engaged, with one person checking the patient's vital signs and another providing support. The environment includes medical equipment and monitoring devices, reinforcing the clinical setting.",
+  "answer": "ES"
+}
+```"
+R0009@8-12-2013@FA16402H@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden arm movements, facial contortions, and apparent loss of consciousness. The patient appears to be lying in a hospital bed, wearing a hospital gown and cap, and is being observed by medical staff. The seizure seems to involve involuntary muscle contractions and a lack of control over body movements, which are typical characteristics of a seizure. Medical personnel are present, indicating that this is a monitored situation, likely in a clinical setting.",
+  "answer": "ES"
+}
+```"
+R0009@8-12-2013@FA16402H@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video exhibits several symptoms that are indicative of a seizure. The patient is lying in a hospital bed, wearing a hospital gown, and appears to be experiencing involuntary movements. Specifically, the patient's arms are flailing and moving uncontrollably, which is a common sign of a seizure. Additionally, the patient seems to be in distress, as indicated by their facial expressions and body language. The presence of medical personnel and equipment further suggests that this is a monitored medical event. The patient's behavior includes repetitive, uncontrolled movements and potential vocalizations, which are characteristic of a seizure.",
+  "answer": "ES"
+}
+```"
+R0009@8-12-2013@FA16402M@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, wearing a hospital gown and a headband, which suggests they are under medical care. The patient seems to be experiencing some form of distress or discomfort, as indicated by their body language and facial expressions. However, there are no visible signs of convulsions, loss of consciousness, or other typical symptoms associated with an epileptic seizure such as tonic-clonic movements, staring spells, or automatisms. Instead, the patient's behavior might suggest a state of anxiety, pain, or another non-epileptic condition. The presence of medical staff and equipment further indicates that the patient is being monitored for potential health issues, but the specific symptoms observed do not align with classic epileptic seizure characteristics.",
+  "answer": "NES"
+}
+```"
+R0009@8-12-2013@FA16402M@sz_v4_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by sudden, uncontrolled movements and vocalizations. The individual is lying in a hospital bed, wearing a hospital gown and a head covering, indicating a medical setting. The patient's arms are moving erratically, and there is visible distress and discomfort. The presence of medical staff and equipment further suggests that this is a monitored event. The patient's behavior includes repetitive, involuntary movements and vocal outbursts, which are typical signs of a seizure.",
+  "answer": "ES"
+}
+```"
+R0010@3-23-2015@VA7632JF@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including convulsions, loss of consciousness, and involuntary movements. The individual appears to be lying down on a hospital bed, with medical personnel present, indicating a clinical setting. The patient's arms are moving uncontrollably, and they seem to be struggling against the restraints applied by the medical staff. The presence of medical equipment and the patient's condition suggest that this is a controlled environment for monitoring and managing seizures.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA00157M@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by abnormal movements and behaviors. The patient is lying in a hospital bed, connected to monitoring equipment, indicating a medical setting. There are healthcare professionals present, suggesting that the patient is under observation and care. The patient's head is wrapped, which could indicate prior trauma or surgery. The patient's arms are moving in a manner that suggests involuntary muscle contractions, a common feature of seizures. The presence of medical staff and the use of monitoring devices suggest that the patient is being evaluated for neurological activity, which is typical during a seizure event.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA00157U@nes_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by sudden, uncontrolled movements and potential loss of consciousness. The patient is lying in a hospital bed with medical equipment around, indicating a clinical setting. The patient's head is wrapped, suggesting prior medical intervention or injury. The presence of medical staff and the use of restraints suggest that the patient may have exhibited violent or uncontrollable behavior during the seizure. The patient's arm is being held down, possibly to prevent self-injury or harm to others. The overall context points towards a medical emergency where the patient is receiving care for a seizure-like episode.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA00157V@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by involuntary movements, including flailing arms and facial contortions. The patient is lying in a hospital bed, suggesting medical monitoring, and there are visible medical devices and equipment around, indicating a clinical setting. The patient's eyes are closed, and their head is moving erratically, which are common signs of a seizure. The presence of a bandage on the head could indicate prior trauma or surgery, but this does not directly influence the classification of the seizure type based on the observed symptoms.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA00157W@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, wearing a hospital gown and a head wrap, which may indicate recent medical intervention or monitoring. The patient has electrodes attached to their head, suggesting that an electroencephalogram (EEG) is being used to monitor brain activity. The patient's eyes are closed, and there is no visible convulsive movement, which might suggest a more subtle form of seizure or possibly a non-convulsive state. The presence of medical staff and equipment further indicates that the patient is under close observation for neurological events.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA001583@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by involuntary movements, including flailing arms and facial contortions. The patient is lying in a hospital bed, wearing a medical gown and a headband, indicating a clinical setting. There are medical devices and personnel present, suggesting monitoring and treatment. The patient's behavior includes repetitive, uncontrolled movements that are typical of seizure activity.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA001584@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, covered with a blanket, and wearing a cap. The patient's eyes are closed, and there is no visible movement or convulsion that would typically indicate a seizure. The environment suggests a medical setting with monitoring equipment nearby, but there are no signs of active seizure activity such as twitching, jerking, or loss of consciousness. The patient remains still throughout the video, which does not align with the typical presentation of an epileptic seizure.",
+  "answer": "NES"
+}
+```"
+R0011@9-22-2020@DA001584@nes_v1_2.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, covered with a blanket, and wearing a headband. The patient's facial expressions change, showing signs of discomfort or distress. There is no visible convulsive movement or tonic-clonic activity that is typically associated with epileptic seizures. Instead, the patient seems to be experiencing a more subtle form of distress, possibly indicating a non-epileptic event such as a panic attack or another psychological condition.",
+  "answer": "NES"
+}
+```"
+R0011@9-22-2020@DA001584@nes_v1_3.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, covered with a blanket, and has a bandage on their head. The patient's facial expressions change, showing signs of discomfort or distress. There is no visible convulsive movement or tonic-clonic activity that is typically associated with epileptic seizures. Instead, the patient seems to be experiencing a more subtle form of distress, possibly indicating a non-epileptic event such as a psychological or emotional reaction.",
+  "answer": "NES"
+}
+```"
+R0011@9-22-2020@DA001584@nes_v1_4.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by facial twitching, involuntary movements, and potential changes in consciousness. The presence of medical personnel and the clinical setting suggest that this is being monitored for diagnostic purposes. The patient's head is covered with what seems to be a bandage or monitoring equipment, indicating possible neurological assessment. The overall context points towards a controlled environment typical for diagnosing seizures.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA00158B@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, connected to medical equipment, including what seems to be an EEG monitor. The patient's facial expressions and movements suggest discomfort or distress. There is no visible convulsive movement or tonic-clonic activity that is typically associated with epileptic seizures. Instead, the patient's behavior might indicate a state of confusion or altered consciousness, which could be indicative of a non-epileptic event such as a psychological episode or another medical condition.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J1@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient lying in a hospital bed, appearing to be under medical supervision. The patient is wearing a head wrap and has an oxygen mask on, indicating they may be receiving treatment for respiratory issues. There are medical staff present, suggesting that the patient is being monitored closely. However, there is no visible evidence of convulsions, loss of consciousness, or other typical seizure symptoms such as muscle rigidity, jerking movements, or postictal state. The patient remains relatively still throughout the video, which does not align with the typical presentation of an epileptic seizure.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J2@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, wearing a surgical cap and medical attire, indicating recent surgery or medical intervention. The patient is connected to monitoring equipment, suggesting close observation for potential complications. A healthcare professional is present, actively engaging with the patient, possibly checking vital signs or providing care. The patient's posture and the presence of medical staff suggest a controlled environment typical of post-operative care or intensive monitoring. There is no visible evidence of convulsive movements, loss of consciousness, or other classic seizure symptoms such as tonic-clonic activity, which are hallmark features of epileptic seizures. Instead, the scene depicts routine medical care rather than an acute seizure event.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, wearing a surgical cap and medical attire, indicating recent medical intervention. The patient is holding a remote control and a smartphone, suggesting some level of consciousness and interaction with their environment. There is no visible evidence of convulsions, loss of consciousness, or other typical seizure symptoms such as tonic-clonic movements, staring spells, or automatisms. The presence of medical staff and equipment suggests monitoring for potential complications, but the patient's behavior does not exhibit overt signs of an epileptic seizure.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_2.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, connected to medical equipment, which suggests they are under observation for a potential seizure event. The patient's arms are positioned by their sides, and there is no visible convulsive movement or other overt signs of a seizure such as tonic-clonic activity, automatisms, or postictal state. The presence of medical staff and monitoring equipment indicates that the patient is being closely observed, but the lack of observable seizure activity makes it difficult to definitively classify the event as an epileptic seizure based on visual evidence alone.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_3.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, wearing a surgical cap and medical attire, suggesting they may have undergone a procedure. The patient's eyes are closed, and their facial expression seems relaxed or possibly distressed. There is no visible convulsive movement or abnormal behavior that would typically indicate an active seizure. The environment includes medical equipment and monitoring devices, which could be used to detect seizures but are not actively showing signs of seizure activity in this frame.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_4.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, wearing a surgical cap and medical attire, indicating recent surgery or medical treatment. The patient's eyes are closed, and there is no visible movement or convulsion that would typically indicate a seizure. The environment includes medical equipment and monitoring devices, suggesting the patient is under observation for post-operative care. There is no evidence of rhythmic jerking, loss of consciousness, or other classic seizure symptoms such as tongue biting or urinary incontinence.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_5.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, connected to medical equipment, including what seems to be an EEG monitor. The patient is wearing a hospital gown and has a head covering, which is typical for patients undergoing monitoring or treatment. There is no visible evidence of convulsive movements, loss of consciousness, or other overt signs of a seizure in the provided frames. The environment suggests a controlled setting where the patient is being observed, possibly for diagnostic purposes. However, without clear visual evidence of seizure activity such as tonic-clonic movements, staring spells, or automatisms, it is difficult to definitively describe active seizure symptoms from these still images alone.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_6.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, wearing a surgical cap and connected to medical equipment, including what seems to be an ECG monitor. The patient's arm is raised, and they are holding a remote control. There is no visible convulsive movement or loss of consciousness that would typically indicate a seizure. The environment suggests a post-operative or monitoring setting rather than an active seizure scenario.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, wearing a medical gown and a head covering, suggesting they are under medical observation. The patient has an IV line in their arm, indicating they may be receiving treatment. There are medical devices and equipment visible in the background, including what looks like an EEG machine, which is commonly used to monitor brain activity for diagnosing seizures. The patient seems to be resting or sleeping, and there is no visible convulsive movement or other overt signs of a seizure occurring during the video. However, the presence of monitoring equipment suggests that the patient might have experienced or is being monitored for seizures.",
+  "answer": "ES"
+}
+```"
+R0014@5-4-2022@DA1321Q8@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient lying in a hospital bed, appearing to be in a state of rest or possibly experiencing a seizure. The patient is wearing a hospital gown and has a bandage on their head, suggesting they may have undergone some form of medical procedure or are recovering from an injury. The patient's eyes are closed, and there is no visible convulsive movement or other overt signs of a seizure such as twitching, jerking, or loss of consciousness. The environment includes medical equipment and a person interacting with the patient, indicating a clinical setting. However, without clear evidence of convulsions, tonic-clonic movements, or other typical seizure behaviors, it is difficult to definitively classify the event as an epileptic seizure based solely on this visual information.",
+  "answer": "NES"
+}
+```"
+R0015@3-17-2022@KA9601DC@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by sudden, uncontrolled movements and potential loss of consciousness. The individual is lying in a hospital bed, wearing a hospital gown and a head wrap, indicating medical attention. There are medical personnel present, including a nurse who is checking the patient's vital signs using a stethoscope. The patient's body language suggests involuntary movements, which could be indicative of a seizure. The environment is a clinical setting, equipped with medical devices and supplies, further supporting the context of a medical evaluation.",
+  "answer": "ES"
+}
+```"
+R0016@3-29-2021@DA0015ZD@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden onset of abnormal movements such as flailing arms and legs, facial grimacing, and apparent loss of consciousness. The patient appears to be in a hospital setting, suggesting medical observation and intervention. The presence of medical staff and equipment further indicates that this is a monitored event. The patient's behavior includes involuntary movements and potential vocalizations, which are typical of seizure activity.",
+  "answer": "ES"
+}
+```"
+S0001@3-7-2022@DA1321CA@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure-like episode while lying in a hospital bed. The patient is covered with a blanket, and there is medical equipment visible, including monitors and a computer screen displaying 'PHILIPS'. A healthcare professional is present, observing the patient closely. The patient's head is wrapped in a bandage, suggesting they may have sustained some form of injury. The patient's body language indicates discomfort or distress, possibly indicative of a seizure. The environment suggests a clinical setting where the patient is being monitored for medical conditions.",
+  "answer": "ES"
+}
+```"
+S0001@3-7-2022@DA1321CB@sz_v1.1_0.mp4,
+,"NES",
+,"```json
+{
+  "description": "The video shows a patient sitting in a hospital bed, appearing calm and alert. There are no visible signs of convulsions, loss of consciousness, or other typical seizure symptoms such as twitching, jerking movements, or changes in behavior. The patient is dressed in a hospital gown and is surrounded by medical equipment, including monitors and IV lines, but there is no indication of active seizure activity.",
+  "answer": "NES"
+}
+```"
+S0001@3-7-2022@DA1321CB@sz_v1.2_0.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, wearing a hospital gown and a neck brace. They are holding a pen and paper, seemingly engaged in writing. The environment includes medical equipment such as a monitor displaying 'PHILIPS', suggesting a clinical setting. There are no visible signs of convulsions, loss of consciousness, or other typical seizure symptoms like muscle rigidity, jerking movements, or altered mental status. The patient's posture and activity suggest they are alert and focused on writing.",
+  "answer": "NES"
+}
+```"
+S0001@3-7-2022@DA1321CB@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The video shows a patient lying in a hospital bed, appearing to be in a state of distress or discomfort. The patient is wearing a surgical cap and gown, suggesting they may have undergone a procedure. There is medical equipment visible, including monitors and a computer screen displaying 'PHILIPS'. The patient seems to be moving their arms and hands in a manner that could indicate involuntary movements. The environment suggests a clinical setting with ongoing monitoring and care.",
+  "answer": "ES"
+}
+```"
+S0001@3-7-2022@KA9601AP@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, wearing a hospital gown and a cap. The patient is holding a cup and seems to be engaged in some activity, possibly drinking from the cup. There are medical devices and equipment visible around the bed, including a monitor and other medical supplies. The patient's movements are deliberate and controlled, indicating no signs of convulsions, loss of consciousness, or involuntary muscle spasms that are typically associated with seizures. The environment suggests a calm and controlled setting, typical for monitoring a patient post-procedure or during recovery.",
+  "answer": "NES"
+}
+```"
+S0002@6-10-2014@TA764085@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient lying in a hospital bed, initially appearing calm but then exhibiting signs of distress. The patient is seen holding a phone to their ear, which suggests they might be trying to communicate or seek help. As the scene progresses, medical staff enter the room, indicating that the patient's condition has deteriorated. The patient appears to be in discomfort, with visible signs of agitation and possible convulsions. The presence of multiple healthcare professionals and the use of medical equipment suggest that the situation is being managed as a medical emergency.",
+  "answer": "ES"
+}
+```"
+S0002@6-10-2014@TA76408S@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying down, partially covered by a blanket, and holding a remote control. There is no visible evidence of convulsive movements, loss of consciousness, or other typical signs of an epileptic seizure such as tonic-clonic activity, automatisms, or postictal state. The patient seems to be interacting with others and handling objects, which suggests awareness and responsiveness. The environment looks like a hospital room, but the patient's behavior does not indicate a seizure.",
+  "answer": "NES"
+}
+```"
+S0002@6-10-2014@TA76408Z@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient appears to be experiencing a seizure-like episode while sitting in a chair. The patient is holding a stuffed toy and seems to be in a state of distress, with their head covered by a cloth. There is no visible convulsive movement or tonic-clonic activity that is typically associated with epileptic seizures. The patient's posture and behavior suggest a more controlled and possibly psychogenic origin rather than a neurological one.",
+  "answer": "NES"
+}
+```"
+S0002@6-10-2014@TA764090@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient lying in a hospital bed, appearing to experience a seizure-like episode. The patient is seen moving erratically, with their arms flailing and body twitching. There is visible distress, and medical staff are present, indicating concern and readiness to intervene. The patient's movements are uncontrolled and seem to escalate, suggesting a loss of voluntary control over their muscles.",
+  "answer": "ES"
+}
+```"
+S0002@6-10-2014@UA76200S@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient lying in a hospital bed, appearing to be asleep or resting. A healthcare professional enters the frame and gently checks on the patient. There are no visible signs of convulsions, loss of consciousness, or other typical seizure symptoms such as twitching, jerking movements, or changes in behavior. The patient remains calm and does not exhibit any sudden or involuntary movements that would suggest a seizure.",
+  "answer": "NES"
+}
+```"
+S0002@7-28-2015@VA763339@sz_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, covered with a blanket, and wearing a head wrap. The patient's eyes are closed, and there is no visible movement or convulsion that would typically indicate a seizure. The environment includes medical equipment such as monitors and IV stands, suggesting a controlled setting for observation. However, without observable signs of tonic-clonic movements, loss of consciousness, or other typical seizure symptoms, it is difficult to definitively diagnose a seizure from this still image alone.",
+  "answer": "NES"
+}
+```"
+S0002@7-28-2015@VA76337A@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by repetitive, rhythmic movements of the arms and legs. The patient's head is moving back and forth, and there seems to be a loss of consciousness or altered awareness. The movements are involuntary and appear to be occurring in a pattern that suggests a neurological origin. The setting is a hospital room, indicating medical monitoring, which is common for patients experiencing seizures.",
+  "answer": "ES"
+}
+```"
+S0002@7-28-2015@VA76337O@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, covered with a blanket, and connected to medical equipment, including what seems to be an ECG monitor. The patient's head is slightly raised on a pillow, and there is no visible convulsive movement or tonic-clonic activity that is typically associated with epileptic seizures. The patient's posture and the lack of overt physical signs suggest a state of rest or possibly a non-convulsive event. The presence of medical personnel and monitoring equipment indicates a controlled environment, but the absence of clear seizure activity points towards a non-epileptic event.",
+  "answer": "NES"
+}
+```"
+S0002@7-28-2015@VA76339B@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be in a hospital setting, connected to various medical devices including an EEG monitor displaying brain activity. The patient is wearing a head cap with electrodes, suggesting monitoring for seizures. The patient's posture and facial expression indicate discomfort or distress, which could be indicative of a seizure event. However, there are no visible convulsions or tonic-clonic movements typically associated with epileptic seizures. The environment and equipment suggest a controlled setting for monitoring and diagnosis.",
+  "answer": "NES"
+}
+```"
+S0003@5-4-2022@KA9601UH@nes_v1.1_0.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by repetitive, rhythmic movements and a state of distress. The individual is seen covering their face with their hands, which could indicate a reaction to sensory overload or discomfort. The setting appears to be a hospital room, suggesting medical monitoring. The patient's behavior includes repetitive hand movements near the face, which might be indicative of a seizure activity. However, without more specific clinical details such as EEG readings or a clear onset and progression of symptoms, it is challenging to definitively classify the seizure type.",
+  "answer": "NES"
+}
+```"
+S0003@5-4-2022@KA9601UU@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by sudden, uncontrolled movements and loss of consciousness. The individual is lying down in a hospital bed, wearing a medical gown and a head covering, indicating a clinical setting. Medical personnel are present, suggesting that the patient is under observation and receiving care. The patient's body language and the presence of medical equipment suggest a serious medical condition. The patient's eyes are closed, and there is no visible convulsive movement, which might indicate a more subtle form of seizure activity.",
+  "answer": "ES"
+}
+```"
+S0003@5-4-2022@KA9601UV@nes_v1.1_0.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient appears to be seated at a desk, wearing a white cap and a white vest over dark clothing. They are engaged in writing or drawing on a notebook. The environment includes medical equipment and supplies, suggesting a clinical setting. There are no visible signs of convulsions, loss of consciousness, or other typical seizure symptoms such as muscle rigidity, jerking movements, or altered mental status. The patient seems focused and calm, indicating normal activity without any apparent seizure behavior.",
+  "answer": "NES"
+}
+```"
+S0003@5-4-2022@KA9601UV@nes_v1.2_0.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, wearing a head wrap and a vest, and is engaged with a tablet device. The environment includes medical equipment such as monitors and IV lines, indicating a clinical setting. There are no visible signs of convulsions, loss of consciousness, or other typical seizure symptoms like muscle rigidity, jerking movements, or altered mental status. The patient seems alert and focused on the tablet, suggesting normal cognitive function.",
+  "answer": "NES"
+}
+```"
+S0004@10-4-2021@KA9600G3@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden onset of abnormal movements, loss of consciousness, and apparent distress. The individual is lying in a hospital bed, connected to medical equipment, which suggests a clinical setting for monitoring such events. The presence of medical staff actively engaging with the patient further indicates that this is a controlled environment for managing seizures. The patient's behavior includes convulsions and involuntary movements, which are characteristic of seizure activity.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden movements, loss of consciousness, and convulsions. The medical staff responds by checking the patient's vital signs and providing care, indicating a serious medical event. The presence of medical personnel and the environment suggest that this is a controlled setting where such events are monitored and treated.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v1_2.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden onset of abnormal movements such as raising one arm and making repetitive motions. The patient appears to be unresponsive and is being closely monitored by medical staff. The environment suggests a hospital setting with medical equipment present, indicating that the patient is under observation for potential neurological issues.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden onset of abnormal movements such as jerking or convulsions, loss of consciousness, and potential vocalization or crying out. The patient appears to be lying in a hospital bed, suggesting medical observation. Medical staff are present, indicating that the episode is being monitored and possibly treated. The patient's behavior includes repetitive, involuntary movements which are characteristic of seizure activity.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v4_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden onset of abnormal movements such as flailing arms and legs, facial contortions, and vocalizations. The patient appears to be lying in a hospital bed, suggesting a medical setting where seizures might be monitored. The presence of medical equipment and personnel further indicates that this could be a controlled environment for managing seizures. The patient's behavior includes repetitive, involuntary movements and seems to be unresponsive to external stimuli, which are typical characteristics of a seizure.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v5_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video exhibits sudden, uncontrolled movements including raising both arms abruptly and repeatedly. The patient appears to be vocalizing loudly, which could indicate a seizure-related cry or scream. The patient's eyes may be closed or rolling back, though this is not explicitly mentioned. The presence of medical personnel and the hospital setting suggest that the patient is under observation for potential seizures. The patient's behavior is consistent with a seizure event, as indicated by the abrupt onset of motor symptoms and vocalization.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v6_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video is lying in a hospital bed, exhibiting signs of distress with arms raised and clenched fists, suggesting a state of intense physical tension or discomfort. The patient appears to be vocalizing loudly, which could indicate a seizure-related cry or scream. The presence of medical personnel and equipment around the bed suggests that this is a monitored environment, likely indicating a medical evaluation of the episode. The patient's movements and expressions suggest a sudden onset of abnormal behavior, consistent with seizure activity.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MN@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video is lying in a hospital bed, exhibiting signs of distress and discomfort. The individual appears to be experiencing a sudden onset of symptoms characterized by raised arms, clenched fists, and a wide-open mouth, suggesting a state of intense physical tension or convulsion. The patient's behavior includes repetitive movements and a lack of voluntary control over their limbs, which are typical indicators of a seizure. The presence of medical equipment and personnel in the room further suggests that this is a monitored medical setting, likely observing a seizure event.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MN@nes_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden onset of abnormal movements such as raising arms, clenching fists, and repetitive jerking motions. The patient appears to be in distress, with facial expressions indicating discomfort or pain. There is also a caregiver present who seems concerned and attentive, suggesting that this is a medical emergency. The setting is a hospital room equipped with medical devices, which is typical for monitoring patients during seizures.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MO@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video exhibits symptoms consistent with a seizure, including sudden onset of abnormal movements such as raising arms and making claw-like gestures, along with vocalizations like screaming. The patient appears to be unresponsive and has involuntary muscle contractions. The presence of medical personnel and the hospital setting suggest that this is a monitored event, which could indicate a clinical diagnosis process. The patient's behavior includes elements typical of a seizure, such as loss of consciousness and stereotyped movements.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MO@nes_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video is lying on a hospital bed, partially covered by a blanket. The individual appears to be experiencing a seizure-like episode characterized by sudden, uncontrolled movements. Specifically, the patient raises both arms above their head, with fingers splayed out, and seems to be making repetitive, jerking motions. The facial expression suggests distress or discomfort, and the patient's eyes may be closed or moving rapidly. The setting includes medical equipment and supplies, indicating a clinical environment. The presence of another person, possibly a healthcare provider, observing the event further supports the clinical context.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MO@nes_v3_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by sudden, uncontrolled movements. The individual is lying down, partially covered with a blanket, and exhibits arm raising and repetitive jerking motions. These movements suggest a possible tonic-clonic component, which is typical in epileptic seizures. The patient's facial expressions and body language indicate distress and discomfort, further supporting the presence of a seizure. The environment includes medical equipment and a nurse observing the patient, indicating a clinical setting appropriate for monitoring such events.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MP@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video exhibits symptoms consistent with a seizure, including sudden onset of abnormal movements such as raising their arm and opening their mouth widely. The patient appears to be in a hospital bed, suggesting they may be under medical observation. The movements are involuntary and seem to follow a pattern typical of seizures, where there is a loss of control over body movements. The patient's facial expression and posture indicate distress, which is common during a seizure episode.",
+  "answer": "ES"
+}
+```"
+S0006@11-25-2014@TA7640ZP@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by repetitive, involuntary movements and potential loss of consciousness. The individual is lying down, covered with a blanket, and seems to be in distress. Medical personnel are present, indicating that this is a clinical setting where the patient is being monitored and cared for. The presence of medical equipment and the actions of the healthcare providers suggest that the patient is undergoing a medical evaluation or treatment.",
+  "answer": "ES"
+}
+```"
+S0006@11-25-2014@TA7640ZS@nes_v3_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs that could be indicative of a seizure, such as sudden movements, changes in consciousness, and potential loss of control over body functions. The individual appears to be lying in bed, possibly experiencing involuntary movements or convulsions. The presence of medical equipment and the setting suggest a clinical environment where seizures might be monitored. The person accompanying the patient seems concerned and is providing support, which is typical during a seizure event.",
+  "answer": "ES"
+}
+```"
+S0007@1-31-2022@KA96014G@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by sudden, uncontrolled movements and potential loss of consciousness. The doctor is using a smartphone to record or monitor the event, which suggests that the medical team is documenting the seizure for diagnostic purposes. The patient's head is covered with what seems to be a bandage or wrap, indicating possible trauma or prior medical intervention. The setting is a hospital room, equipped with medical devices and monitors, further supporting the clinical context of the seizure observation.",
+  "answer": "ES"
+}
+```"
+S0008@6-12-2014@TA764080@sz_v3_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient appears to be experiencing a series of repetitive, rhythmic movements that could be indicative of a seizure. The individual is sitting on a hospital bed, holding what seems to be a toy or object, and exhibits jerking motions with their arms and head. These movements are consistent and appear to be involuntary, suggesting a possible seizure activity. The setting is a medical environment, which is typical for monitoring such events. The patient's attire and the presence of medical equipment further support the context of a clinical observation.",
+  "answer": "ES"
+}
+```"
+S0008@6-12-2014@TA764082@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying down, covered with a blanket, and wearing a headband. The patient's eyes are closed, and there is no visible convulsive movement or twitching. The patient seems to be in a state of rest or possibly sleep, without any signs of sudden, involuntary movements that are characteristic of epileptic seizures. There is no evidence of rhythmic jerking, loss of consciousness, or other typical seizure symptoms.",
+  "answer": "NES"
+}
+```"
+S0009@12-17-2019@UA6691GD@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, covered with white sheets. The patient's head is moving slightly, and there seems to be some twitching or jerking motions, particularly around the facial area. The patient's eyes may be closed, and there is no visible convulsive movement that would typically indicate a generalized tonic-clonic seizure. The movements appear more subtle and localized, suggesting a possible partial seizure or a non-epileptic event.",
+  "answer": "NES"
+}
+```"
+S0009@12-17-2019@UA6691GD@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, connected to medical equipment, suggesting a clinical setting. The patient's body is moving erratically, with visible convulsions and twitching of the limbs. These movements are consistent with the involuntary muscle contractions typically observed during a seizure. The patient's head is also moving uncontrollably, which can be indicative of tonic-clonic activity often seen in epileptic seizures. The overall context, including the medical environment and the nature of the movements, points towards a seizure event.",
+  "answer": "ES"
+}
+```"
+S0009@12-17-2019@UA6691GD@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by repetitive, involuntary movements. The individual is lying in a hospital bed, covered with a blanket, and seems to be in distress. The movements include twitching and jerking motions, which are typical signs of a seizure. The environment suggests a medical setting, indicating that the patient is under observation for such events. The presence of medical equipment and the patient's condition further support the likelihood of a seizure occurring.",
+  "answer": "ES"
+}
+```"
+S0010@4-6-2022@DA1321JS@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient lying in a hospital bed, appearing to be in distress. The patient is wearing a white cap and has medical equipment attached, including what seems to be an oxygen mask or nasal cannula. The patient's arms are moving erratically, suggesting involuntary movements. A person in a red shirt and another individual are present, providing support and comfort. The setting indicates a medical environment, likely an intensive care unit or a similar facility. The patient's condition appears to be monitored closely, as evidenced by the presence of medical staff and equipment.",
+  "answer": "ES"
+}
+```"
+S0010@4-6-2022@DA1321JS@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by repetitive, involuntary movements and altered consciousness. The individual is lying in a hospital bed, wearing a white cap and appears to be under medical observation. The person beside the patient seems concerned and is interacting with them, possibly providing care or comfort. The setting includes medical equipment and supplies, indicating a clinical environment. The patient's movements suggest a loss of control over their body, which is typical of seizure activity.",
+  "answer": "ES"
+}
+```"
+S0010@4-6-2022@KA9601IB@sz_v5_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient lying in a hospital bed, appearing to be under medical observation. The patient is wearing a cap and has monitoring equipment attached, indicating a clinical setting. There is no visible convulsive movement or tonic-clonic activity that is typically associated with epileptic seizures. The patient remains relatively still throughout the video, suggesting a lack of overt seizure activity. A healthcare provider enters the frame and interacts with the patient, checking the monitoring device and adjusting the patient's position, which implies routine care rather than active seizure management.",
+  "answer": "NES"
+}
+```"
+S0010@4-6-2022@KA9601IC@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, connected to medical equipment, suggesting a clinical setting. The patient's head is moving slightly, indicating some form of involuntary movement. The patient seems to be experiencing a state of distress or discomfort, as indicated by their body language and facial expressions. The movements are not severe convulsions but rather subtle, repetitive motions that could suggest a seizure-like episode.",
+  "answer": "ES"
+}
+```"
+S0011@5-2-2022@DA1321PU@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient appears to be lying in a hospital bed, wearing a hospital gown and a cap. The patient's eyes are closed, and there is no visible convulsive movement or tonic-clonic activity. The patient seems to be in a state of rest or possibly experiencing a non-convulsive event. There are no signs of rhythmic jerking, loss of consciousness, or other typical seizure behaviors. The environment includes medical equipment and monitoring devices, suggesting a clinical setting appropriate for observation of such events.",
+  "answer": "NES"
+}
+```"
+S0012@7-18-2019@DA00136N@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, connected to various medical equipment, including what seems to be an IV drip and monitoring devices. The patient's body is covered with a blanket, and there are no visible signs of convulsions, muscle rigidity, or loss of consciousness that are typically associated with epileptic seizures. Instead, the patient's movements appear to be more subtle and controlled, possibly indicating restlessness or discomfort rather than a seizure. The environment suggests a medical setting where the patient is under observation, but the lack of overt seizure activity points towards a non-epileptic event.",
+  "answer": "NES"
+}
+```"
+S0012@7-18-2019@DA00136O@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by sudden, uncontrolled movements and potential loss of consciousness. The individual is lying in a hospital bed, showing signs of distress such as grimacing and involuntary arm movements. Medical staff are present, indicating that the situation is being monitored and managed. The patient's condition suggests a neurological event, but without more specific details about the nature of the movements, duration, and other clinical features, it is challenging to definitively classify the seizure type.",
+  "answer": "ES"
+}
+```"
+S0012@7-18-2019@DA00136V@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden onset of abnormal movements such as jerking or convulsions, and appears to be unresponsive. The patient is in a hospital setting with medical personnel present, indicating that this is a monitored event. The patient's behavior includes involuntary movements and potential loss of consciousness, which are typical characteristics of a seizure. The presence of medical equipment and monitoring devices further suggests that the patient is being observed for neurological activity.",
+  "answer": "ES"
+}
+```"
+S0013@3-8-2018@DA0010H7@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video exhibits signs of a seizure, including sudden onset of abnormal movements, loss of consciousness, and potential convulsions. The patient appears to be lying in a hospital bed, wearing pajamas with a headband, and there are medical personnel present who are attending to the patient. The environment suggests a clinical setting, indicating that the patient is under medical observation. The presence of medical staff and the context of the hospital room suggest that this is a controlled environment for monitoring and treating seizures.",
+  "answer": "ES"
+}
+```"
+S0014@11-10-2017@DA3332GP@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient in the video appears to be experiencing a seizure characterized by involuntary movements, including facial contortions and head movements. The presence of medical personnel and the clinical setting suggest that the patient is under observation for a potential neurological event. The patient's eyes are closed, and there is no indication of consciousness or voluntary control over movements. The use of medical equipment and the presence of electrodes on the patient's head further imply that this could be part of a diagnostic procedure, possibly an electroencephalogram (EEG), which is commonly used to detect epileptic seizures.",
+  "answer": "ES"
+}
+```"
+S0014@11-10-2017@DA3332H8@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The video shows a patient lying on a hospital bed, appearing to be in a state of distress or discomfort. The patient is wearing a floral top and gray pants, with blue socks on their feet. There are medical personnel present, including a person in a red shirt who seems to be attending to the patient. The patient's arms are raised, and they appear to be moving restlessly. The environment includes medical equipment and furniture typical of a hospital setting. The patient's movements suggest a possible seizure, characterized by involuntary muscle contractions and a lack of responsiveness.",
+  "answer": "ES"
+}
+```"
+S0015@7-26-2022@KA960273@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient in the video appears to be lying in a hospital bed, covered with a blanket, and wearing a hospital gown. The patient seems to be experiencing discomfort or pain, as indicated by their facial expressions and body language. There is no visible evidence of convulsions, loss of consciousness, or other typical signs of an epileptic seizure such as tonic-clonic movements or automatisms. Instead, the patient's behavior suggests they might be in pain or distress, possibly due to another medical condition or event.",
+  "answer": "NES"
+}
+```"
+O0009@8-8-2022@DA1322BE@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient, who has a head bandage and is lying in a hospital bed, suddenly begins to exhibit a series of involuntary movements. His arms and legs start to jerk and twitch erratically. He then arches his back and his head is thrown back, indicating a tonic phase. This is followed by a clonic phase where his limbs continue to jerk rhythmically. The entire episode lasts for several seconds, after which the patient appears to relax and return to a normal state. The movements are symmetrical and involve the entire body, which is characteristic of a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+O0010@6-11-2020@DA0014PO@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of symptoms consistent with a seizure. Initially, he is lying in bed with his eyes closed. He then suddenly opens his eyes, raises his arms, and begins to thrash his limbs. His body convulses, and he appears to be in distress. The patient's movements are rhythmic and involve his entire body, including his arms and legs. He also shows signs of rigidity and clenching of his fists. The episode lasts for several seconds, after which he gradually calms down and returns to a resting state. The symptoms are characteristic of a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+O0010@6-11-2020@DA0014PP@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden, brief episode of involuntary muscle contractions, including jerking of the arms and legs, and a loss of consciousness. The episode is characterized by a rapid onset and termination, with the patient quickly regaining awareness and normalcy. The clinical presentation is consistent with a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+O0011@2-27-2019@DA7022D0@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of tonic-clonic activity, characterized by a brief stiffening of the body followed by rhythmic jerking of the limbs. The patient's eyes are open and fixed, and they are making a loud, strained vocalization. The episode is brief and resolves spontaneously.",
+  "answer": "ES"
+}
+```"
+R0001@10-17-2023@DA1324JS@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of tonic-clonic movements, characterized by a stiffening of the body (tonic phase) followed by rhythmic jerking of the limbs (clonic phase). The episode is accompanied by a loss of consciousness, with the patient's eyes rolling back and a possible brief period of cyanosis. The seizure lasts for approximately 1-2 minutes before gradually subsiding, after which the patient appears confused and disoriented.",
+  "answer": "ES"
+}
+```"
+R0001@10-17-2023@DA1324L8@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, jerking movements primarily affecting the limbs and torso. The movements are forceful and involve the entire body, consistent with a tonic-clonic seizure. The patient's eyes are closed, and they appear to be unconscious during the episode.",
+  "answer": "ES"
+}
+```"
+R0002@6-17-2021@DA0016G9@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a bandage on his head. He appears to be in a state of altered consciousness, with his eyes open but not fully alert. He does not exhibit any of the typical motor symptoms of a seizure, such as convulsions, jerking, or tonic-clonic movements. His movements are minimal and appear to be due to discomfort or drowsiness rather than a seizure. The patient's condition is consistent with a post-procedural state, possibly after a medical intervention like an EEG or a brain scan.",
+  "answer": "NES"
+}
+```"
+R0002@6-17-2021@DA0016G9@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, seemingly alert and engaged in conversation. He is holding a smartphone and appears to be interacting with someone off-camera, possibly on a video call. His movements are purposeful and coordinated, and he is able to speak and respond to questions. There are no signs of convulsions, loss of consciousness, or other typical seizure symptoms.",
+  "answer": "NES"
+}
+```"
+R0002@6-17-2021@UA6693TA@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is sitting in a chair with a white cap on their head. They exhibit a series of rhythmic, repetitive movements involving their head and upper body, including nodding and shaking. The movements are somewhat jerky and appear to be involuntary. The patient's eyes are closed or looking down, and they do not respond to the nurse's presence or actions. The movements are continuous and do not show the typical progression of a tonic-clonic seizure, nor do they have the characteristics of a psychogenic non-epileptic seizure (PNES) such as dramatic flailing or resistance to restraint. The movements are more consistent with a benign or physiological tremor or a specific type of movement disorder.",
+  "answer": "NES"
+}
+```"
+R0002@6-17-2021@UA6693TB@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of intense, uncontrolled motor activity. This includes violent, rhythmic, and symmetrical shaking of the arms and legs, accompanied by a loss of muscle tone causing the body to slump forward. The patient's eyes roll back, and they make a loud, strained vocalization. The episode is brief, lasting only a few seconds, and is followed by immediate post-ictal confusion and fatigue. The clinical presentation is consistent with a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+R0002@6-17-2021@UA6693TC@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is sitting up in a hospital bed, eating a meal. They are not exhibiting any of the typical symptoms of a seizure, such as convulsions, loss of consciousness, or unusual movements. The patient appears to be fully alert and engaged in eating.",
+  "answer": "NES"
+}
+```"
+R0002@6-17-2021@UA6693TC@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be in a state of altered consciousness. The patient's head is slightly tilted, and they are not exhibiting any overt convulsive movements. The patient's eyes are closed, and they do not respond to the caregiver's touch or verbal cues. The patient's breathing is regular, and there are no signs of cyanosis or respiratory distress. The patient's limbs are relaxed, and there is no evidence of tonic-clonic movements or other seizure-related symptoms.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@AA16128K@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is sitting in a chair with a bandage on his head, appearing to be in a state of rest or recovery. There are no visible signs of convulsions, loss of consciousness, or other typical seizure symptoms. The patient's posture and lack of movement suggest a non-epileptic condition.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@AA16128L@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a bandage on their head. They are not exhibiting any visible signs of convulsions, jerking, or other typical motor seizure symptoms. The patient appears to be in a state of rest or sleep, with no abnormal movements.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@AA16128M@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+    "description": "The patient is lying in a hospital bed with a bandage on their head. They are connected to medical equipment, including an IV drip and a monitor. The patient's eyes are closed, and they appear to be resting or sleeping. There are no visible signs of convulsions, muscle spasms, or other typical seizure symptoms. The patient remains still throughout the video, with no sudden movements or changes in facial expression.",
+    "answer": "NES"
+}
+```"
+R0002@9-3-2023@AA16128M@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a bandage on their head. They are not exhibiting any visible signs of convulsions, jerking, or other typical motor seizure symptoms. The patient appears to be resting or asleep.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MS@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is sitting in a chair with a bandage on his head. He is holding a piece of paper and appears to be in a state of distress. He is shaking his head and moving his arms in a repetitive manner. The patient's movements are not rhythmic and do not follow a typical seizure pattern. The patient's eyes are open and he appears to be aware of his surroundings. The patient's movements are not consistent with a typical epileptic seizure.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MT@multiple_sz1_1.mp4,
+,"ES",
+,"```json
+{
+    "description": "The patient is lying in a hospital bed with a bandage on his head. He appears to be in a state of rest or possibly unconsciousness, with no visible convulsions or rhythmic movements. The environment suggests a medical setting, possibly after a medical procedure or injury. There are no signs of typical epileptic seizure activity such as tonic-clonic movements, automatisms, or loss of bladder control.",
+    "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MT@multiple_sz1_2.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a bandage on his head. He appears to be in a state of rest or sleep, with no visible signs of convulsions, jerking, or other typical seizure activity. The environment is calm, and there are no sudden movements or changes in his condition that would suggest a seizure.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MT@multiple_sz1_3.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a bandage on his head. He suddenly begins to shake violently, with his arms and legs jerking uncontrollably. His eyes roll back into his head, and he appears to be unconscious. The shaking continues for several seconds before gradually subsiding. The patient then regains consciousness and appears disoriented.",
+  "answer": "ES"
+}
+```"
+R0002@9-3-2023@DA9601MT@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with their head turned to the side. Their body is rigid, and their limbs are extended. The patient's eyes are open, and they are staring blankly ahead. The patient's facial expression is fixed, and they do not respond to verbal stimuli. The patient's breathing is shallow and irregular. The patient's limbs are shaking rhythmically, and their body is convulsing. The patient's eyes roll back into their head, and their pupils are dilated. The patient's skin is pale, and they are sweating profusely. The patient's limbs are jerking uncontrollably, and their body is arching. The patient's eyes are rolling back into their head, and their pupils are fixed and dilated. The patient's breathing is labored, and they are gasping for air. The patient's limbs are twitching, and their body is convulsing. The patient's eyes are rolling back into their head, and their pupils are dilated. The patient's skin is clammy, and they are sweating profusely. The patient's limbs are jerking uncontrollably, and their body is arching. The patient's eyes are rolling back into their head, and their pupils are fixed and dilated. The patient's breathing is labored, and they are gasping for air. The patient's limbs are twitching, and their body is convulsing. The patient's eyes are rolling back into their head, and their pupils are dilated. The patient's skin is pale, and they are sweating profusely. The patient's limbs are jerking uncontrollably, and their body is arching. The patient's eyes are rolling back into their head, and their pupils are fixed and dilated. The patient's breathing is labored, and they are gasping for air. The patient's limbs are twitching, and their body is convulsing. The patient's eyes are rolling back into their head, and their pupils are dilated. The patient's skin is clammy, and they are sweating profusely. The patient's limbs are jerking uncontrollably, and their body is arching. The patient's eyes are rolling back into their head, and their pupils are fixed and dilated. The patient's breathing is labored, and they are gasping for air. The patient's limbs are twitching, and their body is convulsing. The patient's eyes are rolling back into their head, and their pupils are dilated. The patient's skin is pale, and they are sweating profusely. The patient's limbs are jerking uncontrollably, and their body is arching. The patient's eyes are rolling back into their head, and their pupils are fixed and dilated. The patient's breathing is labored, and they are gasping for air. The patient's limbs are twitching, and their body is convulsing. The patient's eyes are rolling back into their head, and their pupils are dilated. The patient's skin is clammy, and they are sweating profusely. The patient's limbs are jerking uncontrollably, and their body is arching. The patient's eyes are rolling back into their head, and their pupils are fixed and dilated. The patient's breathing is labored, and they are gasping for air. The patient's limbs are twitching, and their body is convulsing. The patient's eyes are rolling back into their head, and their pupils are dilated. The patient's skin is pale, and they are sweating profusely. The patient's limbs are jerking uncontrollably, and their body is arching. The patient's eyes are rolling back into their head, and their pupils are fixed and dilated. The patient's breathing is labored, and they are gasping for air. The patient's limbs are twitching, and their body is convulsing. The patient's eyes are rolling back into their head, and their pupils are dilated. The patient's skin is clammy, and they are sweating profusely. The patient's limbs are jerking uncontrollably, and their body is arching. The patient's eyes are rolling back into their head, and their pupils are fixed and dilated. The patient's breathing is labored, and they are gasping for air. The patient's limbs are twitching, and their body is convulsing. The patient's eyes are rolling back into their head, and their pupils are dilated. The patient's skin is pale, and they are sweating profusely. The patient's limbs are jerking uncontrollably, and their body is arching. The patient's eyes are rolling back into their head, and their pupils are fixed and dilated. The patient's breathing is labored, and they are gasping for air. The patient's limbs are twitching, and their body is convulsing."
+R0002@9-3-2023@DA9601MU@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a bandage on their head. They are holding a cup and appear to be drinking from it. There are no visible signs of convulsions, loss of consciousness, or other typical seizure symptoms. The patient's actions seem controlled and purposeful, suggesting they are not experiencing a seizure.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MV@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a white bandage on his head. He is covered with a white blanket and appears to be resting or sleeping. There are no visible signs of convulsions, jerking movements, or other typical seizure symptoms. The patient remains still throughout the video.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MV@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a recliner with a white bandage on their head. They are holding a red object in their hands and appear to be looking at it. There is no visible convulsive movement, loss of consciousness, or other typical signs of a seizure. The patient's posture and actions are consistent with a non-epileptic event.",
+  "answer": "NES"
+}
+```"
+R0002@9-3-2023@DA9601MV@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a recliner with a bandage on his head. He is covered with a blanket and appears to be resting or sleeping. There are no visible signs of convulsions, jerking movements, or other typical seizure symptoms. The patient remains still throughout the video.",
+  "answer": "NES"
+}
+```"
+R0004@5-20-2021@DA0016B4@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a bandage on his head. He is conscious and responsive, talking and gesturing with his hands. He does not exhibit any convulsive movements, loss of consciousness, or other typical signs of a seizure. His behavior is consistent with a non-epileptic event.",
+  "answer": "NES"
+}
+```"
+R0004@5-20-2021@DA0016BK@nes_v4_1.mp4,
+,"NES",
+,"```json
+{
+    "description": "The patient exhibits a series of rhythmic, repetitive movements involving the head and upper body. The movements are characterized by a back-and-forth motion of the head and shoulders, with the arms moving in coordination. The patient's eyes are closed, and there is no evidence of loss of consciousness or post-ictal confusion. The movements are consistent and appear to be under some degree of control, suggesting a possible non-epileptic origin.",
+    "answer": "NES"
+}
+```"
+R0005@10-17-2019@DA0013O9@nes_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, repetitive movements involving his head and upper body, including head nodding and shoulder shrugging. These movements are consistent with myoclonic jerks, which are sudden, brief, involuntary muscle contractions. The movements are not generalized and do not involve loss of consciousness or post-ictal confusion. The patient remains responsive and can follow commands, such as opening his eyes and moving his limbs on request. The movements are not associated with any other typical signs of an epileptic seizure, such as automatisms or tonic-clonic activity.",
+  "answer": "NES"
+}
+```"
+R0006@11-3-2014@VA7631US@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a brief episode of staring and blinking, which is consistent with an absence seizure. This type of seizure is characterized by a sudden, brief loss of awareness and staring, often accompanied by subtle movements like blinking or chewing. The episode is short-lived and the patient quickly returns to normal activity, which is typical of absence seizures.",
+  "answer": "ES"
+}
+```"
+R0007@3-7-2016@CA4444H1@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a series of symptoms consistent with a non-epileptic event (NES). Initially, she appears to be in a state of altered consciousness, with her eyes closed and a relaxed posture. As the event progresses, she begins to show signs of distress, including facial grimacing and clenched fists. Her breathing becomes labored, and she appears to be gasping for air. The patient's arms are raised, and she is holding onto her chest, indicating discomfort. Her movements are not rhythmic or stereotyped, which is typical of an epileptic seizure. Instead, her actions seem to be driven by a psychological or emotional response, possibly related to anxiety or panic. The patient's condition improves after receiving oxygen, suggesting that the event was not due to a lack of oxygen but rather a psychological or emotional trigger.",
+  "answer": "NES"
+}
+```"
+R0007@3-7-2016@CA4444H2@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, repetitive movements involving the arms and hands, including clenched fists and jerking motions. These movements are accompanied by a loss of consciousness, with the patient's eyes closed and head tilted back. The patient also shows signs of distress, such as grimacing and vocalizations. The movements are consistent with a tonic-clonic seizure, which is characterized by a sudden loss of consciousness followed by muscle contractions and jerking movements.",
+  "answer": "ES"
+}
+```"
+R0007@3-7-2016@CA4444HK@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+    "description": "The patient exhibits a series of rhythmic, repetitive movements involving her arms and legs, which are consistent with clonic movements. These movements are accompanied by a loss of consciousness, as indicated by her closed eyes and lack of response to verbal stimuli. The movements are not isolated to one side of the body, suggesting a generalized onset. The patient's breathing appears to be regular, and there is no evidence of cyanosis or significant changes in color. The movements are sustained and do not resolve quickly, indicating a prolonged event.",
+    "answer": "ES"
+}
+```"
+R0009@8-12-2013@FA16402H@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient, a woman in a hospital bed, suddenly begins to cry out and scream. She then exhibits a series of rhythmic, jerking movements of her head and upper body, accompanied by a loss of muscle tone that causes her to slump back into the bed. Her eyes roll back, and she appears to be in distress. The movements are brief and then cease, after which she appears to be in a state of exhaustion.",
+  "answer": "ES"
+}
+```"
+R0009@8-12-2013@FA16402H@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of intense, rhythmic, and forceful jerking movements of the head and upper body, accompanied by a loud, distressed cry. The movements are not localized to one part of the body but affect the entire upper body in a generalized, convulsive pattern. The patient's eyes are open and appear to be rolling back, and they are crying out in pain. The episode is brief, lasting only a few seconds, and is followed by a period of relaxation and crying. The movements are consistent with a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+R0009@8-12-2013@FA16402M@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden, brief episode of intense, high-pitched vocalization, followed by a period of apparent confusion and disorientation. They then attempt to communicate with a visitor, asking if they can be heard. The event is brief and does not involve the typical motor convulsions or loss of consciousness associated with a generalized tonic-clonic seizure.",
+  "answer": "NES"
+}
+```"
+R0009@8-12-2013@FA16402M@sz_v4_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of symptoms consistent with a non-epileptic event (NES). The episode begins with a sudden, loud cry, followed by intense, rhythmic, and forceful thrashing of the arms and legs. The patient's body arches, and they display a high degree of emotional distress, including crying and screaming. The movements are not stereotyped and appear to be under some degree of volitional control, as the patient can modulate the intensity and direction of the movements. The episode is prolonged and does not show the typical EEG patterns associated with epileptic seizures. The patient's response to the nurse's intervention, including verbal communication and attempts to regain control, further supports the diagnosis of a non-epileptic event.",
+  "answer": "NES"
+}
+```"
+R0010@3-23-2015@VA7632JF@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden, intense episode of convulsive activity. This begins with a loud, prolonged scream, followed by violent, rhythmic, and symmetrical shaking of the head and upper body. The patient's eyes roll back, and they are unresponsive to the nurse's attempts to communicate. The episode is characterized by a loss of muscle tone, causing the head to fall back, and the patient is unable to maintain a position. The shaking is continuous and forceful, lasting for an extended period. The patient is also given oxygen during the episode, suggesting a medical emergency. The symptoms are consistent with a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA00157M@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a series of symptoms consistent with a non-epileptic event (NES). Initially, she appears to be in distress, with her eyes rolling back and her head tilting back. She then begins to shake her head and arms, but her movements are not the typical rhythmic jerking seen in an epileptic seizure. Instead, her movements are more erratic and appear to be under some degree of volitional control. She also shows signs of vocalization and attempts to communicate, which is more common in NES. The patient's condition improves after medical staff intervene, suggesting a psychological rather than a neurological origin.",
+  "answer": "NES"
+}
+```"
+R0011@9-22-2020@DA00157U@nes_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, repetitive, and forceful jaw clenching and tongue protrusion movements. These movements are sustained and do not show the typical progression of a tonic-clonic seizure, such as a loss of consciousness or generalized convulsions. The patient's eyes remain open, and they appear to be aware of their surroundings, which is inconsistent with a generalized epileptic seizure. The movements are more consistent with a stereotyped motor pattern often seen in non-epileptic events.",
+  "answer": "NES"
+}
+```"
+R0011@9-22-2020@DA00157V@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+    "description": "The patient exhibits a series of rhythmic, jerking movements primarily affecting the head and upper body. The movements are characterized by a sudden onset, a brief duration, and a return to baseline, consistent with a motor seizure. The patient's eyes are closed, and there is no evidence of a post-ictal state or confusion following the event.",
+    "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA00157W@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, repetitive movements involving the head and upper body. The movements are characterized by a slow, rolling motion of the head from side to side, accompanied by a corresponding rolling of the shoulders and upper torso. The patient's eyes are open, and they appear to be looking around the room, suggesting awareness. The movements are not as forceful or as stereotyped as typical tonic-clonic seizures, and there is no evidence of loss of consciousness or post-ictal confusion. The movements are more akin to a motor tic or a psychogenic movement disorder.",
+  "answer": "NES"
+}
+```"
+R0011@9-22-2020@DA001583@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, jerking movements primarily affecting the arms and upper body. The movements are forceful and involve the entire arm, with the hands clenching and unclenching. The patient's eyes are closed, and they appear to be in distress, with facial grimacing and moaning. The movements are not localized to one part of the body but seem to involve the whole upper body in a coordinated, repetitive fashion. The patient is conscious and responsive to the medical staff, who are attending to them. The movements are consistent with a tonic-clonic seizure, which is a type of generalized epileptic seizure.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA001584@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a tonic-clonic seizure. This is characterized by a sudden loss of consciousness, followed by a tonic phase where the body stiffens, and then a clonic phase with rhythmic jerking movements of the limbs. The patient's eyes roll back, and they make involuntary vocalizations.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA001584@nes_v1_2.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a tonic-clonic seizure. Initially, they have a tonic phase with a sudden stiffening of the body and a grimacing facial expression. This is followed by a clonic phase, characterized by rhythmic, jerking movements of the head and upper body. The patient's eyes are open and rolling back during the event.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA001584@nes_v1_3.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, repetitive, and forceful head movements, characterized by a distinct pattern of nodding or shaking. This movement is continuous and appears to be a motor seizure, with the patient's head moving up and down and side to side in a stereotyped manner. The patient's eyes are closed, and they appear to be in a state of altered consciousness, consistent with a motor seizure.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA001584@nes_v1_4.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, repetitive, and symmetrical movements. The movements begin with a forceful, upward jerk of the head and upper body, followed by a brief period of rigidity. This is then succeeded by a series of rapid, jerking movements involving the head, neck, and upper limbs. The patient's eyes are closed throughout the event, and they appear to be in a state of altered consciousness. The movements are not localized to one side of the body and are not associated with any obvious external trigger.",
+  "answer": "ES"
+}
+```"
+R0011@9-22-2020@DA00158B@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of repetitive, rhythmic, and involuntary movements primarily affecting the head and upper body. The movements are characterized by a distinct pattern of head nodding, followed by a brief pause, and then a more forceful, jerking motion of the head and shoulders. This sequence repeats multiple times throughout the video. The patient's eyes are closed or partially closed, and their facial expression appears to be one of discomfort or strain. The movements are not isolated to a single muscle group but involve a coordinated pattern of muscle contractions and relaxations. The patient's arms remain relatively still, with only minor movements accompanying the head and upper body jerks. The overall pattern of movements is consistent and predictable, suggesting a physiological origin rather than a random or voluntary action.",
+  "answer": "ES"
+}
+```"
+R0012@7-8-2019@UA6690J1@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a sudden, brief episode of involuntary muscle contractions, characterized by a stiffening of the body and jerking movements of the limbs. This occurs while the patient is lying in bed and is observed by medical staff. The episode is short-lived and resolves spontaneously without any loss of consciousness or post-ictal confusion.",
+  "answer": "ES"
+}
+```"
+R0012@7-8-2019@UA6690J2@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a brief episode of rhythmic, involuntary movements in the right hand, which is consistent with a myoclonic seizure. The patient is conscious and aware during the event, and the movements are localized to one limb. The EEG does not show any epileptiform discharges during the event, and the patient reports no loss of consciousness or other typical features of an epileptic seizure.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden, brief episode of altered consciousness, characterized by a loss of awareness and a blank stare. The patient's eyes are open but unresponsive, and they do not respond to verbal stimuli. The episode is brief, lasting only a few seconds, and the patient quickly returns to their normal state without any post-ictal confusion or automatisms. There are no clonic or tonic movements, and the patient's limbs remain relaxed. The episode appears to be a transient loss of awareness without any motor manifestations.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_2.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a bandage on their head. They are not exhibiting any convulsive movements, loss of consciousness, or other typical signs of a seizure. The patient appears to be awake and alert, with a calm facial expression. Medical staff are attending to them, checking their vital signs and adjusting equipment, but there is no indication of a seizure event occurring.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_3.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a bandage on their head. They are not exhibiting any visible convulsions, jerking movements, or loss of consciousness. Their eyes are open, and they appear to be in a state of rest or sleep, with no signs of the typical motor or sensory symptoms associated with a seizure.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_4.mp4,
+,"ES",
+,"```json
+{
+    "description": "The patient is lying in a hospital bed with a bandage on their head, appearing to be in a state of rest or recovery. They are connected to medical equipment, including an IV drip and a blood pressure monitor. The patient occasionally moves their hands and adjusts their position, indicating some level of consciousness and responsiveness. The environment suggests a clinical setting, likely a recovery room or intensive care unit, with medical supplies and equipment visible around the bed.",
+    "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_5.mp4,
+,"ES",
+,"```json
+{
+    "description": "The patient exhibits a series of rhythmic, repetitive movements involving the arms and legs, which are consistent with clonic movements. These movements are accompanied by a loss of consciousness and a lack of response to external stimuli. The patient's eyes are closed, and there is no evidence of a tonic phase preceding the clonic movements. The movements are symmetrical and involve both sides of the body, which is typical of generalized tonic-clonic seizures. The patient does not exhibit any signs of automatisms or focal neurological deficits.",
+    "answer": "ES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v1_6.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a bandage on their head. They are not exhibiting any convulsive movements, loss of consciousness, or other typical signs of a seizure. The patient appears to be resting or sleeping, and there is no indication of a sudden, involuntary physical event.",
+  "answer": "NES"
+}
+```"
+R0012@7-8-2019@UA6690J4@nes_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden, brief episode of loss of consciousness, characterized by a sudden drop in head position and a lack of response to verbal stimuli. The episode is brief and resolves spontaneously without any post-ictal confusion or automatisms. The patient's eyes are closed, and there is no rhythmic jerking or tonic-clonic activity.",
+  "answer": "NES"
+}
+```"
+R0014@5-4-2022@DA1321Q8@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, covered with a white blanket. He is holding a book in his left hand and a phone in his right hand. He appears to be reading or looking at the phone. Suddenly, he begins to convulse, with his body jerking and his head moving back and forth. His eyes roll back into his head, and he appears to be unconscious. The convulsions continue for several seconds before he regains consciousness and looks around, appearing disoriented.",
+  "answer": "ES"
+}
+```"
+R0015@3-17-2022@KA9601DC@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, jerking movements primarily affecting the head and upper limbs. The movements are brief and occur in clusters, with the patient's eyes rolling back and mouth opening. The patient's breathing is labored, and there is a noticeable increase in muscle tone in the limbs. The episode is followed by a period of confusion and disorientation.",
+  "answer": "ES"
+}
+```"
+R0016@3-29-2021@DA0015ZD@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of tonic-clonic movements, characterized by a stiffening of the body followed by rhythmic jerking of the limbs. This is accompanied by a loss of consciousness, with the patient's eyes rolling back and mouth opening. The episode is brief and resolves spontaneously, with the patient returning to a normal state.",
+  "answer": "ES"
+}
+```"
+S0001@3-7-2022@DA1321CA@sz_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with a bandage on their head. They are conscious and appear to be in conversation with a visitor. There are no signs of convulsions, loss of consciousness, or any other typical seizure activity. The patient's movements are limited to talking and gesturing with their hands.",
+  "answer": "NES"
+}
+```"
+S0001@3-7-2022@DA1321CB@sz_v1.1_0.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is sitting up in a hospital bed, appearing to be in a state of distress. They are looking around with a vacant expression, their head is slightly tilted, and they are making small, repetitive movements with their hands. The patient's eyes are open but seem unfocused, and they do not respond to external stimuli. The movements are not rhythmic or convulsive, and there is no loss of consciousness or tonic-clonic activity.",
+  "answer": "NES"
+}
+```"
+S0001@3-7-2022@DA1321CB@sz_v1.2_0.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is sitting up in a hospital bed, wearing a neck pillow and a hat. They are holding a pen and writing in a notebook. Their head is slightly bowed, and they appear to be focused on their writing. There are no visible signs of convulsions, loss of consciousness, or other typical seizure symptoms.",
+  "answer": "NES"
+}
+```"
+S0001@3-7-2022@DA1321CB@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, covered with a blanket. They are holding a remote control and appear to be watching television. The patient's head is moving slightly, and they seem to be in a relaxed state. There are no signs of convulsions, loss of consciousness, or other typical seizure symptoms. The patient's movements are minimal and do not indicate any abnormal or uncontrolled activity.",
+  "answer": "NES"
+}
+```"
+S0001@3-7-2022@KA9601AP@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+    "description": "The patient is lying in a hospital bed, holding a cup and a spoon. They appear to be eating or drinking. Suddenly, they raise their left arm and extend it outward, holding it in that position for several seconds. The movement is slow and deliberate, not the typical rapid, jerking motion associated with a seizure. The patient's facial expression remains relatively calm, and there is no loss of consciousness or other signs of a typical epileptic seizure.",
+    "answer": "NES"
+}
+```"
+S0002@6-10-2014@TA764085@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of tonic-clonic movements, characterized by a loss of consciousness, stiffening of the body, and rhythmic jerking of the limbs. The episode is brief, lasting approximately 30 seconds, followed by a period of confusion and drowsiness. The patient's eyes are open during the event, and there is no evidence of automatisms or aura.",
+  "answer": "ES"
+}
+```"
+S0002@6-10-2014@TA76408S@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a brief episode of altered consciousness, characterized by a sudden loss of awareness, a blank stare, and a lack of response to external stimuli. This episode is followed by a rapid return to normal alertness and responsiveness. The event is brief and does not involve the typical motor manifestations of a generalized tonic-clonic seizure.",
+  "answer": "NES"
+}
+```"
+S0002@6-10-2014@TA76408Z@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden, brief episode of altered consciousness, characterized by a blank stare, unresponsiveness, and a lack of purposeful movement. The episode is short-lived, lasting only a few seconds, and is immediately followed by a return to normal alertness and responsiveness. There are no signs of convulsions, automatisms, or post-ictal confusion.",
+  "answer": "NES"
+}
+```"
+S0002@6-10-2014@TA764090@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of rhythmic, repetitive jerking movements of the limbs, which is a classic sign of a generalized tonic-clonic seizure. The movements are symmetrical and involve the entire body, consistent with an epileptic seizure.",
+  "answer": "ES"
+}
+```"
+S0002@6-10-2014@UA76200S@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden, brief episode of involuntary muscle contractions, characterized by a stiffening of the body and jerking movements, which is consistent with a tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+S0002@7-28-2015@VA763339@sz_v2_1.mp4,
+,"NES",
+,"```json
+{
+    "description": "The patient exhibits a brief, sudden, and involuntary muscle contraction, primarily affecting the right arm and hand. The movement is a quick, jerking motion that lasts for approximately one second before the patient returns to a relaxed state. The patient's eyes remain open throughout the event, and there is no loss of consciousness or significant change in facial expression.",
+    "answer": "NES"
+}
+```"
+S0002@7-28-2015@VA76337A@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+    "description": "The patient exhibits a series of rhythmic, repetitive movements involving the head and upper body. The movements are characterized by a back-and-forth motion of the head and shoulders, with the arms moving in a coordinated, jerking fashion. These movements are consistent with a tonic-clonic seizure, which is a type of generalized seizure.",
+    "answer": "ES"
+}
+```"
+S0002@7-28-2015@VA76337O@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+    "description": "The patient exhibits a sudden onset of rhythmic, repetitive movements involving the arms and legs, which are sustained for several seconds. The movements appear to be generalized and involve the entire body. The patient's eyes are closed, and there is no response to verbal stimuli. The movements cease abruptly, and the patient returns to a normal state.",
+    "answer": "ES"
+}
+```"
+S0002@7-28-2015@VA76339B@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+    "description": "The patient exhibits a series of brief, involuntary muscle contractions, primarily affecting the head and neck region. These movements are rhythmic and repetitive, lasting for several seconds. The patient's eyes are open, and they appear to be aware of their surroundings. There is no loss of consciousness or significant alteration in mental status. The movements cease abruptly, and the patient returns to their baseline state without any post-ictal confusion.",
+    "answer": "NES"
+}
+```"
+S0003@5-4-2022@KA9601UH@nes_v1.1_0.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is sitting in a hospital bed, appearing to be in a state of distress. They are holding their head in their hands, then lean back and close their eyes, suggesting a period of intense discomfort or pain. The patient does not exhibit any of the typical motor symptoms of a seizure, such as convulsions, jerking, or loss of consciousness. The behavior is more consistent with a non-epileptic event, such as a severe headache, panic attack, or a psychogenic non-epileptic seizure.",
+  "answer": "NES"
+}
+```"
+S0003@5-4-2022@KA9601UU@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient, who is wearing a head cap and a mask, is initially sitting up. A medical professional then helps the patient lie down on a bed. After lying down, the patient's body exhibits a series of rhythmic, jerking movements, primarily affecting the limbs and trunk. The movements are brief and stop after a few seconds, after which the patient appears to relax and fall asleep.",
+  "answer": "ES"
+}
+```"
+S0003@5-4-2022@KA9601UV@nes_v1.1_0.mp4,
+,"NES",
+,"```json
+{
+    "description": "The patient is sitting upright in a hospital bed, wearing a white cap and a white vest. They are looking down at a tablet or book in their lap and appear to be writing or drawing on it. Their head is slightly bowed, and their hands are moving in a controlled manner. There are no signs of convulsions, loss of consciousness, or any other typical seizure activity.",
+    "answer": "NES"
+}
+```"
+S0003@5-4-2022@KA9601UV@nes_v1.2_0.mp4,
+,"NES",
+,"```json
+{
+    "description": "The patient is sitting upright in a hospital bed, wearing a white cap and a green shirt. They are focused on a tablet device, using their right hand to interact with the screen. The patient's movements are limited to their hand and arm, with no signs of convulsions, loss of consciousness, or other typical seizure symptoms. The environment appears calm and controlled, with medical equipment visible but not actively in use.",
+    "answer": "NES"
+}
+```"
+S0004@10-4-2021@KA9600G3@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient, who has a head bandage and is connected to monitoring equipment, suddenly begins to convulse violently. Their head is thrown back, and they arch their back significantly. The patient's eyes roll back into their head, and they emit a loud, strained cry. The convulsions are intense and involve the entire body, lasting for several seconds before subsiding. The patient then appears to be in a state of confusion and distress.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of tonic-clonic movements, characterized by a stiffening of the body followed by rhythmic jerking of the limbs. The episode is brief and resolves spontaneously. The patient is unresponsive during the event and has no recollection of it afterward.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v1_2.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of tonic-clonic activity, characterized by a loud cry, stiffening of the body, and rhythmic jerking of the limbs. The episode is brief and resolves spontaneously, with the patient becoming unresponsive during the event.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of tonic-clonic activity, characterized by a loud cry, stiffening of the body, and rhythmic jerking of the limbs. This is followed by a period of post-ictal confusion and disorientation. The clinical presentation is consistent with a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v4_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, jerking movements primarily affecting the upper body and arms. The movements are forceful and involve the entire arm, not just the fingers or hands. The patient's eyes are open and fixed, and they are making a strained, grunting sound. The movements are not localized to one side of the body, and there is no evidence of a tonic phase or loss of consciousness. The movements are consistent with a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v5_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of tonic-clonic movements, characterized by a stiffening of the body and rhythmic jerking of the limbs, which is a classic presentation of a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MM@nes_v6_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a tonic-clonic seizure. This is characterized by an initial tonic phase, where the body becomes rigid, followed by a clonic phase with rhythmic jerking movements. The patient's arms are thrown upwards, and their body is convulsing. The episode is brief, lasting approximately 15 seconds, and is followed by a post-ictal state where the patient is drowsy and disoriented.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MN@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of tonic-clonic movements, characterized by a stiffening of the body and rhythmic jerking of the limbs. This is accompanied by a loss of consciousness, with the patient's eyes rolling back and mouth agape. The episode is brief, lasting approximately 30 seconds, and is followed by a period of confusion and disorientation. The patient is unresponsive during the event and does not recall it afterward.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MN@nes_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a tonic-clonic seizure. This is characterized by an initial tonic phase, where the body stiffens, followed by a clonic phase with rhythmic jerking movements of the limbs. The patient also shows signs of autonomic changes, such as facial flushing and increased salivation, and post-ictal symptoms like confusion and fatigue.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MO@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a tonic-clonic seizure. This is characterized by a sudden, forceful extension of the arms and legs (tonic phase), followed by rhythmic, jerking movements of the limbs (clonic phase). The patient's eyes are open and staring, and they are making a loud, strained vocalization. The seizure activity is bilateral and symmetric, affecting the entire body.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MO@nes_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a tonic-clonic seizure. This is characterized by a sudden, forceful extension of the arms and legs (tonic phase), followed by rhythmic, jerking movements of the limbs (clonic phase). The patient's eyes are open and fixed, and they are unresponsive to external stimuli. The seizure activity is bilateral and symmetric, affecting the entire body. The episode lasts for approximately 30 seconds before resolving.",
+  "answer": "ES"
+}
+```"
+S0005@3-18-2014@VA7610MO@nes_v3_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a tonic-clonic seizure. This is characterized by a sudden, forceful extension of the right arm (tonic phase), followed by rhythmic, jerking movements of the same arm (clonic phase). The patient's eyes are open and fixed, and they are making strained vocalizations. The seizure activity is unilateral, affecting only the right arm, and the patient remains conscious throughout the event.",
+  "answer": "NES"
+}
+```"
+S0005@3-18-2014@VA7610MP@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, forceful, and repetitive arm movements, primarily involving the right arm, which is raised and clenched into a fist. The movements are accompanied by a fixed, open-mouthed expression and a lack of responsiveness to the environment. The movements are highly stereotyped and occur in a regular, rhythmic pattern, which is characteristic of a motor seizure.",
+  "answer": "ES"
+}
+```"
+S0006@11-25-2014@TA7640ZP@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of rhythmic, repetitive movements involving the head and upper limbs, consistent with clonic movements. The patient is conscious and responsive during the event, with no loss of awareness or post-ictal confusion. The movements are brief and resolve spontaneously without any need for intervention.",
+  "answer": "NES"
+}
+```"
+S0006@11-25-2014@TA7640ZS@nes_v3_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, jerking movements primarily affecting the limbs and trunk. These movements are accompanied by a loss of consciousness, with the patient's eyes rolling back and a clenched jaw. The episode lasts for approximately 30 seconds before gradually subsiding. The patient appears to be in a state of post-ictal confusion following the event.",
+  "answer": "ES"
+}
+```"
+S0007@1-31-2022@KA96014G@nes_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a tonic-clonic seizure. Initially, she is lying still with her eyes closed. Suddenly, she begins to convulse violently, with her head and body jerking and twisting. Her arms and legs are thrown out and then drawn back in a rhythmic pattern. Her eyes roll back, and she appears to be in a state of unconsciousness. The seizure activity is intense and involves the entire body.",
+  "answer": "ES"
+}
+```"
+S0008@6-12-2014@TA764080@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+    "description": "The patient exhibits a series of repetitive, rhythmic movements involving the head and upper body, including nodding, shaking, and flexing. These movements are accompanied by a loss of consciousness, with the patient's eyes closed and a blank expression. The movements are not associated with any tonic-clonic activity or loss of bladder/bowel control. The patient's breathing remains regular throughout the episode, and there is no evidence of tongue biting or post-ictal confusion. The episode lasts for approximately 2 minutes before resolving spontaneously.",
+    "answer": "NES"
+}
+```"
+S0008@6-12-2014@TA764082@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, repetitive movements of the head and upper body, including nodding and shaking. These movements are accompanied by a fixed, staring gaze and a lack of response to external stimuli. The patient's eyes are open but appear unfocused, and there is no loss of consciousness. The movements are somewhat symmetrical and occur in a pattern that suggests a non-epileptic origin.",
+  "answer": "NES"
+}
+```"
+S0009@12-17-2019@UA6691GD@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+    "description": "The patient exhibits a series of rhythmic, jerking movements primarily affecting the limbs and head. The movements are repetitive and occur in a pattern consistent with clonic activity. The patient's eyes are open, and there is no loss of consciousness. The movements are localized to the extremities and do not spread in a generalized manner.",
+    "answer": "ES"
+}
+```"
+S0009@12-17-2019@UA6691GD@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, jerking movements primarily affecting the head and upper body. The movements are forceful and involve the entire upper body, including the arms and shoulders, in a pattern consistent with tonic-clonic activity. The patient's eyes are open and fixed, and they appear to be in a state of altered consciousness. The movements are sustained and do not resolve quickly, lasting for an extended period.",
+  "answer": "ES"
+}
+```"
+S0009@12-17-2019@UA6691GD@sz_v3_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, jerking movements primarily affecting the arms and upper body. The movements are repetitive and appear to be generalized, involving the entire upper body. The patient's eyes are open and appear to be rolling back, and there is a loss of consciousness. The movements are not localized to one side of the body, and there is no evidence of a specific aura or warning sign before the onset. The movements are consistent with a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+S0010@4-6-2022@DA1321JS@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of tonic-clonic activity, characterized by a loss of consciousness, stiffening of the body, and rhythmic jerking movements of the limbs. This is accompanied by a change in facial expression and a brief period of unresponsiveness.",
+  "answer": "ES"
+}
+```"
+S0010@4-6-2022@DA1321JS@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of rhythmic, jerking movements of the head and upper body, accompanied by a loss of consciousness and a blank stare. The movements are brief and resolve spontaneously. The patient appears to be in a state of altered consciousness during the event.",
+  "answer": "ES"
+}
+```"
+S0010@4-6-2022@KA9601IB@sz_v5_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient, a young girl, is lying in a hospital bed. She suddenly begins to convulse violently, arching her back and thrashing her limbs. Her eyes roll back in her head, and she appears to be in distress. The seizure lasts for several seconds before she gradually calms down.",
+  "answer": "ES"
+}
+```"
+S0010@4-6-2022@KA9601IC@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed with their head turned to the side. They begin to exhibit rhythmic, repetitive movements of the head and upper body, including nodding and shaking. The movements are somewhat jerky and appear to be occurring in a pattern, consistent with a motor seizure. The patient's eyes are closed, and they do not appear to be responsive to external stimuli during the event.",
+  "answer": "ES"
+}
+```"
+S0011@5-2-2022@DA1321PU@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, repetitive movements primarily involving the arms and hands. Initially, the right arm is raised and moves in a circular motion. Subsequently, both arms are brought together in front of the chest, and the hands clasp and unclasp repeatedly. The movements are slow, deliberate, and appear to be under some degree of control, lacking the typical features of a generalized tonic-clonic seizure. The patient's eyes are closed throughout, and there is no evidence of loss of consciousness or post-ictal confusion.",
+  "answer": "NES"
+}
+```"
+S0012@7-18-2019@DA00136N@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of rhythmic, jerking movements primarily affecting the arms and upper body. The movements are forceful and involve the entire arm, including the shoulder and elbow, in a repetitive, uncontrolled manner. The patient's head is also involved, moving in a similar jerking fashion. The movements are continuous and do not appear to be localized to a specific part of the body, suggesting a generalized motor seizure.",
+  "answer": "ES"
+}
+```"
+S0012@7-18-2019@DA00136O@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden, brief episode of involuntary muscle contractions, including facial grimacing, clenched jaw, and stiffened limbs. The episode is preceded by a brief period of neck flexion and a vocalization, followed by a return to a relaxed state. The event is short-lived and does not involve prolonged loss of consciousness or post-ictal confusion.",
+  "answer": "NES"
+}
+```"
+S0012@7-18-2019@DA00136V@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a classic tonic-clonic seizure. It begins with a sudden, loud scream and a tonic phase where the body stiffens and the head arches back. This is immediately followed by a clonic phase, characterized by violent, rhythmic jerking movements of the arms and legs. The patient's eyes roll back, and they appear to be in distress throughout the episode.",
+  "answer": "ES"
+}
+```"
+S0013@3-8-2018@DA0010H7@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of tonic-clonic movements, characterized by a loss of consciousness, stiffening of the body, and rhythmic jerking of the limbs. This is accompanied by an open mouth and a loud cry, which are typical features of a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+S0014@11-10-2017@DA3332GP@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a series of symptoms consistent with a non-epileptic event (NES). Initially, they display a sudden, intense facial grimace and open their mouth wide, which is followed by a period of rhythmic, involuntary jaw clenching and tongue protrusion. The patient's eyes are closed or tightly shut, and they appear to be in a state of distress. The movements are not the typical tonic-clonic convulsions seen in an epileptic seizure but rather a pattern of muscle tension and facial contortion. The patient's arms are held stiffly at their sides, and there is no evidence of the generalized convulsions or loss of consciousness that would be expected in an epileptic seizure. The overall presentation is more consistent with a psychogenic non-epileptic seizure (PNES), which is a type of NES.",
+  "answer": "NES"
+}
+```"
+S0014@11-10-2017@DA3332H8@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits a sudden onset of rhythmic, jerking movements of the limbs and body, which is a classic sign of a seizure. The movements are not purposeful and appear to be involuntary.",
+  "answer": "ES"
+}
+```"
+S0015@7-26-2022@KA960273@nes_v1_1.mp4,
+,"NES",
+,"```json
+{
+    "description": "The patient exhibits a series of rhythmic, repetitive movements involving the arms and legs, including flexing and extending the limbs, which are consistent with tonic-clonic seizure activity. The movements are symmetrical and involve the entire body, with the patient lying supine and the limbs moving in a coordinated, jerking manner. The patient's eyes are open, and there is no loss of consciousness, which is atypical for a typical epileptic seizure. The movements are not triggered by external stimuli and occur spontaneously. The patient's breathing is regular, and there is no cyanosis or incontinence. The episode lasts for approximately 30 seconds, after which the patient returns to a relaxed state with no postictal confusion.",
+    "answer": "NES"
+}
+```"

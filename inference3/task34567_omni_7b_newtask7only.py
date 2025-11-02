@@ -15,7 +15,7 @@ import argparse
 import pandas as pd
 
 
-report_dict = pd.read_csv("/home/jiarui/result/ground_truth/task6_report_annotation.csv", usecols=["file_name","report"], dtype=str, encoding="utf-8-sig")\
+report_dict = pd.read_csv("./../result/ground_truth/task6_report_annotation.csv", usecols=["file_name","report"], dtype=str, encoding="utf-8-sig")\
       .set_index("file_name")["report"].to_dict()
 #print(report_dict)
 

@@ -24,7 +24,7 @@ echo "Conda environment internvl3_5 activated."
 # video_range 1-2314  eg.1-1000, 1001-2000, 2001-2314
 
 # Run the inference script
-python task34567_InternVL3_5.py \
+python task34567_InternVL3_53.py \
     --gpu 2 \
     --tp 1 \
     --videos_range 601-900 \

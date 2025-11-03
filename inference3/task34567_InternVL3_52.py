@@ -62,7 +62,7 @@ args = parse_arguments()
 gpu_str = "".join(str(args.gpu).split(',')) 
 
 # Set GPU environment variable
-os.environ['CUDA_VISIBLE_DEVICES'] = str(int(args.gpu)-4)
+os.environ['CUDA_VISIBLE_DEVICES'] = '3'#str(int(args.gpu)-4)
 
 # Set the directories/paths from arguments
 ################################################################################################
@@ -885,10 +885,11 @@ def main():
         with open(task6_result_csv_fp, 'a', encoding='utf-8', newline='') as csv_f, open(aggregate_log_fp, 'a', encoding='utf-8') as log_f:    
             for video_clip_fp in tqdm(task5_clip_fps[task5_videos_range[0]-1 : task5_videos_range[1]], desc="Processing Task 6"):
                 video_clip_name = video_clip_fp.split('/')[-1]
+                if video_clip_name < 'N0013@9-2-2014@VA7631G3@sz_v3_1_segment_0.mp4':
+                    continue
                 if video_clip_name in task6_processed:
                     print(f"Video {video_clip_name} already processed for both tasks. Skipping.")
-                    continue     
-                    
+                    continue       
                 try:               
                         raw_output6 = inference(video_clip_fp, get_task6_prompt())
                         report = '\"' + raw_output6 + '\"'     

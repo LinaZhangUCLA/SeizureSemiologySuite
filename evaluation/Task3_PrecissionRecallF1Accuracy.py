@@ -229,10 +229,10 @@ def write_metrics_file(model_names, results_dict, output_path):
                         if feature in results_dict[model]:
                             metrics = results_dict[model][feature]
                             row.extend([
-                                f"{metrics['precision']:.3f}" if metrics['precision'] != '' else '',
-                                f"{metrics['recall']:.3f}" if metrics['recall'] != '' else '',
-                                f"{metrics['f1']:.3f}" if metrics['f1'] != '' else '',
-                                f"{metrics['accuracy']:.3f}" if metrics['accuracy'] != '' else ''
+                                f"{float(metrics['precision']):.2f}" if metrics['precision'] != '' else '',
+                                f"{float(metrics['recall']):.2f}" if metrics['recall'] != '' else '',
+                                f"{float(metrics['f1']):.2f}" if metrics['f1'] != '' else '',
+                                f"{float(metrics['accuracy']):.2f}" if metrics['accuracy'] != '' else ''
                             ])
                         else:
                             row.extend(['', '', '', ''])

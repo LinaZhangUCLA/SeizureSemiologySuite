@@ -62,7 +62,7 @@ args = parse_arguments()
 gpu_str = "".join(str(args.gpu).split(',')) 
 
 # Set GPU environment variable
-os.environ['CUDA_VISIBLE_DEVICES'] = '3'#str(int(args.gpu)-4)
+os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 
 # Set the directories/paths from arguments
 ################################################################################################
@@ -737,101 +737,101 @@ def main():
     # Initialize task4 CSV file
 
 
-    try:
-        if not os.path.exists(task4_result_csv_fp):
-            with open(task4_result_csv_fp, 'w') as f:
-                f.write("video_name,feature,timestamp\n")
+    # try:
+    #     if not os.path.exists(task4_result_csv_fp):
+    #         with open(task4_result_csv_fp, 'w') as f:
+    #             f.write("video_name,feature,timestamp\n")
 
-        # Process each feature folder
-        #feature_folders = [d for d in os.listdir(task4_dataset_dir) if os.path.isdir(os.path.join(task4_dataset_dir, d))]
+    #     # Process each feature folder
+    #     #feature_folders = [d for d in os.listdir(task4_dataset_dir) if os.path.isdir(os.path.join(task4_dataset_dir, d))]
         
-        feature_folders_split =  [
-                ['blank_stare','close_eyes','eye_blinking',],
-                ['tonic','clonic','arm_flexion',],
-                ['arm_straightening','figure4','oral_automatisms',],
-                ['limb_automatisms','face_pulling',],
-                ['head_turning','asynchronous_movement',],
-                ['pelvic_thrusting','arms_move_simultaneously',],
-                ['full_body_shaking', 'start',],
-                ['face_twitching','end'],
-                # 'ictal_vocalization', 'verbal_responsiveness','occur_during_sleep',
-                ]
+    #     feature_folders_split =  [
+    #             ['blank_stare','close_eyes','eye_blinking',],
+    #             ['tonic','clonic','arm_flexion',],
+    #             ['arm_straightening','figure4','oral_automatisms',],
+    #             ['limb_automatisms','face_pulling',],
+    #             ['head_turning','asynchronous_movement',],
+    #             ['pelvic_thrusting','arms_move_simultaneously',],
+    #             ['full_body_shaking', 'start',],
+    #             ['face_twitching','end'],
+    #             # 'ictal_vocalization', 'verbal_responsiveness','occur_during_sleep',
+    #             ]
 
-        gpu_indices = [int(x) for x in str(args.gpu).split(',')]
-        feature_folders = []
-        for idx in gpu_indices:
-            if idx < 0 or idx >= len(feature_folders_split):
-                raise ValueError(f"Invalid GPU index {idx}, valid range: 0-{len(feature_folders_split)-1}")
-            feature_folders.extend(feature_folders_split[idx])
-        print(f"Selected features from GPUs {args.gpu}: {feature_folders}")
+    #     gpu_indices = [int(x) for x in str(args.gpu).split(',')]
+    #     feature_folders = []
+    #     for idx in gpu_indices:
+    #         if idx < 0 or idx >= len(feature_folders_split):
+    #             raise ValueError(f"Invalid GPU index {idx}, valid range: 0-{len(feature_folders_split)-1}")
+    #         feature_folders.extend(feature_folders_split[idx])
+    #     print(f"Selected features from GPUs {args.gpu}: {feature_folders}")
 
-        # Set video range for task4 (no validation needed since we process within each feature folder)
-        # task4_videos_range = [int(task4_videos_range[0]), int(task4_videos_range[1])]
-        # print(f"Task4 video range: {task4_videos_range[0]}-{task4_videos_range[1]}")
+    #     # Set video range for task4 (no validation needed since we process within each feature folder)
+    #     # task4_videos_range = [int(task4_videos_range[0]), int(task4_videos_range[1])]
+    #     # print(f"Task4 video range: {task4_videos_range[0]}-{task4_videos_range[1]}")
 
-        processed = set()
-        with open(task4_result_csv_fp, 'r') as f:
-            try:
-                next(f)  # 跳过表头
-            except StopIteration:
-                pass
-            processed = set(','.join(line.strip().split(',')[:2]) for line in f)
-        print(processed)
+    #     processed = set()
+    #     with open(task4_result_csv_fp, 'r') as f:
+    #         try:
+    #             next(f)  # 跳过表头
+    #         except StopIteration:
+    #             pass
+    #         processed = set(','.join(line.strip().split(',')[:2]) for line in f)
+    #     print(processed)
         
-        task4_log_file = os.path.join(task4_log_dir, f"task4_gpu{gpu_str}.log") 
-        with open(task4_result_csv_fp, 'a') as csv_f, open(task4_log_file, 'a') as log_f:
-            for feature in tqdm(feature_folders, desc="Processing features"):
-                feature_path = os.path.join(task4_dataset_dir, feature)
-                feature_log_path = os.path.join(task4_log_dir, f"{feature}.log")
+    #     task4_log_file = os.path.join(task4_log_dir, f"task4_gpu{gpu_str}.log") 
+    #     with open(task4_result_csv_fp, 'a') as csv_f, open(task4_log_file, 'a') as log_f:
+    #         for feature in tqdm(feature_folders, desc="Processing features"):
+    #             feature_path = os.path.join(task4_dataset_dir, feature)
+    #             feature_log_path = os.path.join(task4_log_dir, f"{feature}.log")
                 
-                # Get all MP4 files in the feature folder
-                video_files = [f for f in os.listdir(feature_path) if f.endswith('.mp4')]
-                video_files.sort()  # Sort to ensure consistent ordering
+    #             # Get all MP4 files in the feature folder
+    #             video_files = [f for f in os.listdir(feature_path) if f.endswith('.mp4')]
+    #             video_files.sort()  # Sort to ensure consistent ordering
                 
-                # Apply video range filter
-                for video_name in tqdm(video_files, desc=f"Processing {feature} videos"):
-                    video_path = os.path.join(feature_path, video_name)
-                    key = f"{video_name},{feature}"
-                    if key in processed:
-                        print(f"Skipping already processed: {video_name} ({feature})")
-                        continue           
+    #             # Apply video range filter
+    #             for video_name in tqdm(video_files, desc=f"Processing {feature} videos"):
+    #                 video_path = os.path.join(feature_path, video_name)
+    #                 key = f"{video_name},{feature}"
+    #                 if key in processed:
+    #                     print(f"Skipping already processed: {video_name} ({feature})")
+    #                     continue           
                     
-                    try:
-                        # Use feature-specific prompt from definitions
-                        prompt = get_task4_feature_prompt(feature)
-                        raw_resp = inference(video_path, prompt)                       
-                        log_f.write(f"Video: {video_name}\n")
-                        log_f.write(f"Prompt Used: {prompt}\n")
-                        log_f.write(f"Raw Response: {raw_resp}\n")
-                        log_f.write("-" * 50 + "\n")
+    #                 try:
+    #                     # Use feature-specific prompt from definitions
+    #                     prompt = get_task4_feature_prompt(feature)
+    #                     raw_resp = inference(video_path, prompt)                       
+    #                     log_f.write(f"Video: {video_name}\n")
+    #                     log_f.write(f"Prompt Used: {prompt}\n")
+    #                     log_f.write(f"Raw Response: {raw_resp}\n")
+    #                     log_f.write("-" * 50 + "\n")
 
-                        frame_resp = parse_json_task4(raw_resp)
-                        frame_str = frame_resp['frame']
-                        if frame_str == 'N/A':
-                            timestamp = 'N/A'
-                        else:
-                            frame_number = int(frame_str)
-                            timestamp_seconds = frame_number // TASK4_FPS
-                            minutes = timestamp_seconds // 60
-                            seconds = timestamp_seconds % 60
-                            timestamp = f"{minutes:02d}:{seconds:02d}"
-                        csv_f.write(f"{video_name},{feature},{timestamp}\n")
-                        csv_f.flush()
-                        processed.add(key)    
+    #                     frame_resp = parse_json_task4(raw_resp)
+    #                     frame_str = frame_resp['frame']
+    #                     if frame_str == 'N/A':
+    #                         timestamp = 'N/A'
+    #                     else:
+    #                         frame_number = int(frame_str)
+    #                         timestamp_seconds = frame_number // TASK4_FPS
+    #                         minutes = timestamp_seconds // 60
+    #                         seconds = timestamp_seconds % 60
+    #                         timestamp = f"{minutes:02d}:{seconds:02d}"
+    #                     csv_f.write(f"{video_name},{feature},{timestamp}\n")
+    #                     csv_f.flush()
+    #                     processed.add(key)    
                                         
-                        print(f"Successfully processed {video_name} for feature {feature}: timestamp={timestamp}")
+    #                     print(f"Successfully processed {video_name} for feature {feature}: timestamp={timestamp}")
                         
-                    except Exception as e:
-                        print(f"Error processing video {video_name} for feature {feature}: {e}")
-                        csv_f.write(f"{video_name},{feature},N/A\n")
-                        csv_f.flush()    
-                        log_f.write(f"Error processing video {video_name} for feature {feature}: {e}\n")
-                    #break
-        print(f"Processing is complete. Results are in '{task4_result_csv_fp}'.")
+    #                 except Exception as e:
+    #                     print(f"Error processing video {video_name} for feature {feature}: {e}")
+    #                     csv_f.write(f"{video_name},{feature},N/A\n")
+    #                     csv_f.flush()    
+    #                     log_f.write(f"Error processing video {video_name} for feature {feature}: {e}\n")
+    #                 #break
+    #     print(f"Processing is complete. Results are in '{task4_result_csv_fp}'.")
 
-    except Exception as e:
-        print(f"Error in Task 4 processing: {e}")
-        traceback.print_exc()
+    # except Exception as e:
+    #     print(f"Error in Task 4 processing: {e}")
+    #     traceback.print_exc()
     # =============================================== task5  =============================================================== #
     # try:
 
@@ -875,36 +875,35 @@ def main():
     #     traceback.print_exc()    
 
     # =============================================== task6 =============================================================== #
-    try:
+    # try:
 
-        init_csv(task6_result_csv_fp, "video_name,report")
-        task6_processed = load_processed_videos(task6_result_csv_fp)        
-        os.makedirs(task6_log_dir, exist_ok=True)
-        aggregate_log_fp = os.path.join(task6_log_dir, f"task6_{gpu_str}.log")
-        task5_videos_range = validate_videos_range(task5_clip_fps, task5_6_videos_range)
-        with open(task6_result_csv_fp, 'a', encoding='utf-8', newline='') as csv_f, open(aggregate_log_fp, 'a', encoding='utf-8') as log_f:    
-            for video_clip_fp in tqdm(task5_clip_fps[task5_videos_range[0]-1 : task5_videos_range[1]], desc="Processing Task 6"):
-                video_clip_name = video_clip_fp.split('/')[-1]
-                if video_clip_name < 'N0013@9-2-2014@VA7631G3@sz_v3_1_segment_0.mp4':
-                    continue
-                if video_clip_name in task6_processed:
-                    print(f"Video {video_clip_name} already processed for both tasks. Skipping.")
-                    continue       
-                try:               
-                        raw_output6 = inference(video_clip_fp, get_task6_prompt())
-                        report = '\"' + raw_output6 + '\"'     
-                        csv_f.write(f"{video_clip_name},{report}\n")
-                        csv_f.flush()  
-                        task6_processed.add(video_clip_name)                       
-                except Exception as e:
-                    print(f"Error processing video {video_clip_fp}: {e}")
-                    log_f.write(f"Error processing video {video_clip_name}: {e}\n")
-                    csv_f.write(f"{video_clip_name},\"fail\"\n")
-                #break
-        print(f"Task 6 results are in: {task6_result_csv_fp}")
-    except Exception as e:
-        print(f"Error in Task 6 processing: {e}")
-        traceback.print_exc()    
+    #     init_csv(task6_result_csv_fp, "video_name,report")
+    #     task6_processed = load_processed_videos(task6_result_csv_fp)        
+    #     os.makedirs(task6_log_dir, exist_ok=True)
+    #     aggregate_log_fp = os.path.join(task6_log_dir, f"task6_{gpu_str}.log")
+    #     task5_videos_range = validate_videos_range(task5_clip_fps, task5_6_videos_range)
+    #     with open(task6_result_csv_fp, 'a', encoding='utf-8', newline='') as csv_f, open(aggregate_log_fp, 'a', encoding='utf-8') as log_f:    
+    #         for video_clip_fp in tqdm(task5_clip_fps[task5_videos_range[0]-1 : task5_videos_range[1]], desc="Processing Task 6"):
+    #             video_clip_name = video_clip_fp.split('/')[-1]
+    #             if video_clip_name in task6_processed:
+    #                 print(f"Video {video_clip_name} already processed for both tasks. Skipping.")
+    #                 continue     
+                    
+    #             try:               
+    #                     raw_output6 = inference(video_clip_fp, get_task6_prompt())
+    #                     report = '\"' + raw_output6 + '\"'     
+    #                     csv_f.write(f"{video_clip_name},{report}\n")
+    #                     csv_f.flush()  
+    #                     task6_processed.add(video_clip_name)                       
+    #             except Exception as e:
+    #                 print(f"Error processing video {video_clip_fp}: {e}")
+    #                 log_f.write(f"Error processing video {video_clip_name}: {e}\n")
+    #                 csv_f.write(f"{video_clip_name},\"fail\"\n")
+    #             #break
+    #     print(f"Task 6 results are in: {task6_result_csv_fp}")
+    # except Exception as e:
+    #     print(f"Error in Task 6 processing: {e}")
+    #     traceback.print_exc()    
 
 
 

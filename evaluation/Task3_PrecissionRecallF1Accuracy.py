@@ -30,15 +30,16 @@ def calculate_metrics(y_true, y_pred, feature_name=None):
     
     return accuracy, precision, recall, f1
 
-def get_model_metrics(model_name):
+def get_model_metrics(model_name, model_path_name):
     """Calculate metrics for a specific model
     Args:
-        model_name (str): Name of the model to evaluate
+        model_name (str): Display name of the model
+        model_path_name (str): Actual file path name of the model
     Returns:
         dict: Dictionary containing metrics for each feature
     """
     # File paths
-    gt_path = 'result/ground_truth/task4_annotation.csv'
+    gt_path = 'result/ground_truth/task3_spatial_annotation.csv'
     
     try:
         # Read ground truth file
@@ -49,7 +50,7 @@ def get_model_metrics(model_name):
         
         # Process head turning feature
         try:
-            pred_path = f'result/vlm_inference/{model_name}/Task4_HT_{model_name}_1-129.csv'
+            pred_path = f'result/vlm_inference/{model_path_name}/Task3_HT_{model_path_name}_1-129.csv'
             df_pred = pd.read_csv(pred_path, encoding='latin-1')
             
             # Merge ground truth and predictions
@@ -90,7 +91,7 @@ def get_model_metrics(model_name):
             
         # Process arm movement feature
         try:
-            pred_path = f'result/vlm_inference/{model_name}/Task4_AM_{model_name}_1-112.csv'
+            pred_path = f'result/vlm_inference/{model_path_name}/Task3_AM_{model_path_name}_1-112.csv'
             df_pred = pd.read_csv(pred_path, encoding='latin-1')
             
             # Merge ground truth and predictions
@@ -131,7 +132,7 @@ def get_model_metrics(model_name):
             
         # Process body region onset feature
         try:
-            pred_path = f'result/vlm_inference/{model_name}/Task4L_{model_name}_all.csv'
+            pred_path = f'result/vlm_inference/{model_path_name}/Task3_bodypart_{model_path_name}_all.csv'
             df_pred = pd.read_csv(pred_path, encoding='latin-1')
             
             # Process predictions - take first prediction for each video
@@ -247,24 +248,41 @@ def write_metrics_file(model_names, results_dict, output_path):
 
 def main():
     # Model names
-
     model_names = [
+        'Qwen2.5-VL-7B',
+        'InternVL3.5-8B',
+        'Qwen2.5-VL-32B',
+        'InternVL3.5-38B',
+        'Qwen2.5-VL-72B',
+        'Audio-flamingo-3',
         'Qwen2.5-Omni-7B',
-        'Qwen2.5-VL-7B-Instruct',
-        'Qwen2.5-VL-32B-Instruct',
-        'Qwen2.5-VL-72B-Instruct',
-        'InternVL3_5-8B',
-        'InternVL3_5-38B',
-        'Lingshu-32B'
+        'Lingshu-32B',
+        'Qwen3-VL-8B',
+        'Qwen3-VL-32B'
     ]
+
+    # Mapping from display model names to actual file path names
+    model_path_mapping = {
+        'Qwen2.5-VL-7B': 'Qwen2.5-VL-7B-Instruct',
+        'InternVL3.5-8B': 'InternVL3_5-8B',
+        'Qwen2.5-VL-32B': 'Qwen2.5-VL-32B-Instruct',
+        'InternVL3.5-38B': 'InternVL3_5-38B',
+        'Qwen2.5-VL-72B': 'Qwen2.5-VL-72B-Instruct',
+        'Audio-flamingo-3': 'audio-flamingo-3',
+        'Qwen2.5-Omni-7B': 'Qwen2.5-Omni-7B',
+        'Lingshu-32B': 'Lingshu-32B',
+        'Qwen3-VL-8B': 'Qwen3-VL-8B-Instruct',
+        'Qwen3-VL-32B': 'Qwen3-VL-32B-Instruct'
+    }
     
-    output_path = 'metrics/Task4_spatial_metrics.csv'
+    output_path = 'metrics/Task3_spatial_metrics.csv'
     
     # Calculate metrics for each model
     results_dict = {}
     for model in model_names:
         print(f"\nProcessing model: {model}")
-        results_dict[model] = get_model_metrics(model)
+        model_path_name = model_path_mapping.get(model, model)
+        results_dict[model] = get_model_metrics(model, model_path_name)
     
     # Write results to file
     write_metrics_file(model_names, results_dict, output_path)

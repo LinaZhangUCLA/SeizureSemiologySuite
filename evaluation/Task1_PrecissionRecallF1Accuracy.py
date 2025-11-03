@@ -59,7 +59,7 @@ def get_model_metrics(model_name, features, model_path_mapping):
     if model_name.lower() == 'audio-flamingo-3':
         pred_path = f'result/vlm_inference/{actual_model_name}/Task1_AF3_Full_Results.csv'
     else:
-        pred_path = f'result/vlm_inference/{actual_model_name}/Task1_{actual_model_name}_all_merged.csv'
+        pred_path = f'result/vlm_inference/{actual_model_name}/Task12_{actual_model_name}_all_merged.csv'
     
     try:
         # Read ground truth and prediction files
@@ -203,7 +203,9 @@ def main():
         'Qwen2.5-VL-72B',
         'Audio-flamingo-3',
         'Qwen2.5-Omni-7B',
-        'Lingshu-32B'
+        'Lingshu-32B',
+        'Qwen3-VL-8B',
+        'Qwen3-VL-32B'
     ]
     
     # Mapping from display model names to actual file path names
@@ -213,7 +215,9 @@ def main():
         'Qwen2.5-VL-32B': 'Qwen2.5-VL-32B-Instruct',
         'InternVL3.5-38B': 'InternVL3_5-38B',
         'Qwen2.5-VL-72B': 'Qwen2.5-VL-72B-Instruct',
-        'Audio-flamingo-3': 'audio-flamingo-3'
+        'Audio-flamingo-3': 'audio-flamingo-3',
+        'Qwen3-VL-8B': 'Qwen3-VL-8B-Instruct',
+        'Qwen3-VL-32B': 'Qwen3-VL-32B-Instruct'
     }
     
     output_path = 'metrics/Task1_precision_recall_f1_accuracy.csv'

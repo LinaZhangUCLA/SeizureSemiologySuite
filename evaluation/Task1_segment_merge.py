@@ -4,15 +4,19 @@ import re
 from collections import OrderedDict
 
 # ====================================
-BASE_DIR = "/Users/pxy_amber/Downloads"
+BASE_DIR = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference"
+# MODELS = [
+#     "InternVL3_5-8B",
+#     "InternVL3_5-38B",
+#     "Qwen2.5-VL-7B-Instruct",
+#     "Qwen2.5-VL-32B-Instruct",
+#     "Qwen2.5-VL-72B-Instruct",
+#     "Lingshu-32B",
+#     "Qwen2.5-Omni-7B",
+# ]
+
 MODELS = [
-    "InternVL3_5-8B",
-    "InternVL3_5-38B",
-    "Qwen2.5-VL-7B-Instruct",
-    "Qwen2.5-VL-32B-Instruct",
-    "Qwen2.5-VL-72B-Instruct",
-    "Lingshu-32B",
-    "Qwen2.5-Omni-7B",
+    "Qwen3-VL-8B-Instruct",
 ]
 # ====================================
 
@@ -151,8 +155,8 @@ def merge_one_csv(input_csv: str, output_csv: str):
 
 def main():
     for model in MODELS:
-        in_csv  = os.path.join(BASE_DIR, f"Task1_{model}_all.csv")
-        out_csv = os.path.join(BASE_DIR, f"Task1_{model}_all_merged.csv")
+        in_csv  = os.path.join(BASE_DIR,model, f"Task1_{model}_all.csv")
+        out_csv = os.path.join(BASE_DIR,model, f"Task12_{model}_all_merged.csv")
         if not os.path.exists(in_csv):
             print(f"[Skip] Input not found: {in_csv}")
             continue

@@ -1,8 +1,0 @@
-model,left_right_head_turning_precision,left_right_head_turning_recall,left_right_head_turning_f1,left_right_head_turning_accuracy,left_right_arm_movement_precision,left_right_arm_movement_recall,left_right_arm_movement_f1,left_right_arm_movement_accuracy,body_region_onset_precision,body_region_onset_recall,body_region_onset_f1,body_region_onset_accuracy
-Qwen2.5-Omni-7B,0.561,0.464,0.508,0.516,0.364,0.105,0.163,0.255,0.057,0.075,0.027,0.078
-Qwen2.5-VL-7B-Instruct,0.537,0.942,0.684,0.531,0.485,0.211,0.294,0.300,0.107,0.115,0.098,0.234
-Qwen2.5-VL-32B-Instruct,0.618,0.493,0.548,0.562,0.553,0.342,0.423,0.355,0.169,0.098,0.090,0.366
-Qwen2.5-VL-72B-Instruct,0.500,0.101,0.169,0.461,0.959,0.618,0.752,0.718,0.136,0.120,0.098,0.299
-InternVL3_5-8B,0.535,0.986,0.694,0.531,0.663,0.829,0.737,0.591,0.092,0.108,0.046,0.122
-InternVL3_5-38B,0.539,1.000,0.701,0.539,0.667,0.895,0.764,0.618,0.108,0.141,0.077,0.159
-Lingshu-32B,0.539,1.000,0.701,0.539,0.726,0.697,0.711,0.609,0.097,0.083,0.071,0.249

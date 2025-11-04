@@ -6,7 +6,7 @@ VERSION_NAME="${VERSION_PREFIX}_${TIMESTAMP}"
 LOG_PATH="./run_logs/${VERSION_NAME}.log"
 
 # todo model_path
-BASE_MODEL='Qwen/Qwen2.5-Omni-7B'
+BASE_MODEL='./sft/seizure_omni_sft'
 MODEL_SAVE_PATH='./ckpts/trained_models/'${VERSION_NAME}
 
 # todo: data_path
@@ -38,7 +38,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 FPS=1 \
 swift rlhf \
     --rlhf_type grpo \
-    --model "Qwen/Qwen2.5-Omni-7B" \
+    --model $BASE_MODEL \
     --model_kwargs '{"use_audio_in_video": true}' \
     --reward_funcs seizure \
     --reward_weights 1.0 \
@@ -64,7 +64,7 @@ swift rlhf \
     --warmup_ratio 0.05 \
     --dataloader_num_workers 8 \
     --dataset_num_proc 8 \
-    --num_generations 4 \
+    --num_generations 6 \
     --temperature 0.8 \
     --top_p 0.95 \
     --top_k 50 \

@@ -1,0 +1,427 @@
+A0002@5-13-2021@UA6693LK@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying on a hospital bed, initially appearing to be asleep but then suddenly becomes agitated, moving his arms and legs vigorously. He is wearing a cap and has electrodes attached to his head, suggesting he might be undergoing some form of medical monitoring. The patient's movements are rapid and uncontrolled, which could indicate a seizure. However, without additional context such as the patient's medical history or the presence of a medical professional, it is difficult to definitively diagnose the nature of the event.", "answer": "NES"}"
+A0002@5-13-2021@UA6693LK@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be experiencing a seizure. The patient's head is turned to the side, and their eyes are closed. There is no visible convulsion or twitching of the limbs, which might suggest a non-epileptic event.", "answer": "NES"}"
+A0002@5-13-2021@UA6693LY@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying on a hospital bed, initially appearing to be asleep but then suddenly becomes unresponsive and starts convulsing. The convulsions involve jerking movements of the body and limbs, which are characteristic of a seizure. Medical staff quickly intervene, placing an oxygen mask on the patient and securing restraints to prevent injury.",
+  "answer": "ES"
+}"
+A0003@10-20-2020@DA0015B9@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, displaying signs of a seizure with sudden movements of her arms and legs, loss of consciousness, and a blank stare. The patient's eyes are open but appear to be staring off into space. There is no response to verbal commands during the episode.",
+  "answer": "ES"
+}"
+A0003@10-20-2020@DA0015B9@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be experiencing a seizure. The patient's head is turned to the side, and their eyes are closed. There is no visible convulsion or loss of consciousness, but the patient's movements suggest a possible seizure activity.", "answer": "NES"}"
+A0003@10-20-2020@DA0015BA@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a white sheet. They appear to be experiencing a seizure, as indicated by their sudden movement and loss of consciousness. The patient's eyes are closed, and they seem to be in a state of unconsciousness. There is no visible convulsion or twitching of the limbs, which might suggest a non-epileptic event.", "answer": "NES"}"
+A0003@10-20-2020@DA0015BA@sz_v4_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, initially appearing to be asleep. Suddenly, she begins to move her arms and legs in a jerky manner, which is characteristic of a seizure. Her movements are uncontrolled and forceful, indicating a loss of voluntary muscle control typical of an epileptic seizure.", "answer": "ES"}"
+A0003@10-20-2020@UA6692PZ@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying on a hospital bed, wearing a headband with electrodes attached, suggesting she is undergoing an EEG test. She appears to be in discomfort, with her eyes closed and her mouth slightly open. Her body movements are minimal, but there is a noticeable change in her facial expression and eye movement, which could indicate a seizure-like activity.",
+  "answer": "NES"
+}"
+A0003@10-20-2020@UA6692Q0@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be in a state of rest. There are no visible convulsions, loss of consciousness, or abnormal movements that would typically indicate an epileptic seizure. The patient seems to be interacting with a laptop, which suggests they might be engaged in some form of activity or communication.", "answer": "NES"}"
+A0003@10-20-2020@UA6692Q0@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be experiencing a sudden onset of abnormal movements. The patient's head turns sharply to the right, followed by a rapid movement of the left arm and hand, which seems to be jerking. The patient's eyes briefly open during this movement, but there is no clear indication of consciousness or awareness. The movements are not rhythmic and appear to be uncontrolled.", "answer": "NES"}"
+A0003@10-20-2020@UA6692Q0@sz_v4_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, covered with a blanket. The patient's eyes are closed initially but then open briefly before closing again. There is no convulsive movement observed, and the patient appears to be in a state of rest.",
+  "answer": "NES"
+}"
+A0003@10-20-2020@UA6692Q1@sz_v1_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying in a hospital bed, initially appearing to be asleep but then suddenly moving their arms and legs in a jerky manner, which is characteristic of a seizure. The patient's eyes are closed during this movement, and there is no clear indication of voluntary control over these movements.",
+  "answer": "ES"
+}"
+A0003@10-20-2020@UA6692Q1@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, initially appearing to be asleep or resting. There is no visible convulsion, loss of consciousness, or any other typical signs of a seizure such as jerking movements or altered behavior. The patient's eyes open briefly, and there is no evidence of involuntary muscle contractions or loss of awareness.", "answer": "NES"}"
+A0004@5-21-2019@DA0012TK@sz_v2_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying in a hospital bed, covered with a blanket. The patient's eyes are closed initially, then they open briefly before closing again. There is no convulsive movement observed, but the patient's breathing appears to be irregular.",
+  "answer": "NES"
+}"
+A0006@11-19-2019@DA0013UT@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, initially reading a book. Suddenly, she stops reading, looks around, and then begins to move her arms and legs in a jerky manner. She appears to be disoriented and is not responding to her surroundings. The movements are not rhythmic and seem to be uncontrolled.", "answer": "NES"}"
+A0007@11-21-2017@DA3332LI@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is experiencing a sudden onset of altered mental status, with no prior warning signs. The patient's eyes are open but unfocused, and there is no response to verbal stimuli. The patient's movements are jerky and uncontrolled, which could be indicative of a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+A0007@11-21-2017@DA3332M5@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying on a hospital bed, initially sitting up but then lying down. There is no clear evidence of convulsions, loss of consciousness, or other typical seizure symptoms such as staring spells or repetitive movements. The patient appears to be conscious and responsive throughout the video.",
+  "answer": "NES"
+}"
+A0007@11-21-2017@DA3332M9@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying on a hospital bed, wearing a headband with electrodes attached, suggesting a medical monitoring setup. The patient's body is rigid, and there is no loss of consciousness observed. The patient's eyes are open, and there is no convulsive movement. The patient appears to be in a state of alertness despite the rigidity.",
+  "answer": "NES"
+}
+```"
+B0001@9-15-2022@DA1322M1@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits signs of a seizure, including loss of consciousness, body stiffening, and rhythmic jerking movements.", "answer": "ES"}"
+D0001@9-25-2018@DA0011NN@nes_v1_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is sitting in a wheelchair, wearing a hospital gown and a beanie, with electrodes attached to their head. They appear to be engaged in drawing on a piece of paper. The patient's right hand, which is gloved, moves slightly as they draw. There are no signs of convulsions, loss of consciousness, or any other typical symptoms of an epileptic seizure. The patient seems to be in a calm state.",
+  "answer": "NES"
+}"
+D0002@5-29-2014@TA76406W@nes_v2_1.mp4,
+,"NES",
+,"{"description": "The patient is lying on a hospital bed, covered with a white sheet, and appears to be experiencing a seizure. The patient's eyes are closed, and their head is tilted back slightly. There is no visible convulsion or twitching of the limbs, which might suggest a non-epileptic event such as a fainting spell or syncope.", "answer": "NES"}"
+D0002@5-29-2014@TA76406W@nes_v2_2.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying on a hospital bed, wearing a cap and a hospital gown. He appears to be experiencing a seizure, as indicated by his head turning to the side, his eyes rolling back, and his mouth opening. The patient's body is rigid, and he seems to be in a state of unconsciousness.",
+  "answer": "ES"
+}"
+D0002@5-29-2014@TA76406W@nes_v3_1.mp4,
+,"NES",
+,"{"description": "The patient is sitting in a hospital bed, holding a can of soda and appears to be in distress. He is wearing a bandage on his head and has a medical device attached to his chest. His movements are erratic and he seems to be experiencing convulsions.", "answer": "ES"}"
+D0002@5-29-2014@TA76406W@nes_v4_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in distress. He is holding his chest and appears to be experiencing discomfort or pain. There is no visible convulsion or loss of consciousness, which suggests this may not be a typical epileptic seizure.", "answer": "NES"}"
+D0002@5-29-2014@TA76406X@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in bed, covered with a white sheet, and appears to be experiencing a seizure. The patient's eyes are closed, and there is a noticeable jerking motion in their body, particularly in the arms and legs. The patient's facial expression changes, indicating a loss of consciousness and control over bodily functions.", "answer": "ES"}"
+D0002@5-29-2014@TA76406Z@nes_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, holding a remote control. He appears to be experiencing a sudden change in his condition, as indicated by his movements and the presence of a medical device on his abdomen. The patient's behavior suggests a loss of consciousness or altered mental state, which could be indicative of a seizure.",
+  "answer": "NES"
+}"
+D0002@5-29-2014@TA76406Z@nes_v3_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, holding a remote control and appears to be experiencing a sudden change in behavior. The patient's eyes are closed, and there is no visible convulsion or loss of consciousness.", "answer": "NES"}"
+D0002@5-29-2014@VA7610ZK@nes_v1_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying in a hospital bed, covered with a white sheet, and appears to be experiencing a sudden onset of symptoms including altered consciousness, eye deviation, and possible twitching or jerking movements. The patient's eyes are closed at times, and there is a noticeable change in their facial expression and body posture.",
+  "answer": "NES"
+}"
+D0002@5-29-2014@VA7610ZK@nes_v2_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in distress. There is a remote control on their chest, and they have food scattered around them. The patient's mouth is open, and they seem to be experiencing some form of convulsion or seizure-like activity.", "answer": "NES"}"
+D0002@5-29-2014@VA7610ZK@nes_v4_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, wearing a cap and a medical device on their chest. They appear to be experiencing a sudden onset of symptoms including head nodding, eye rolling, and a loss of consciousness. The patient's movements are jerky and uncontrolled, which are typical signs of a seizure.",
+  "answer": "ES"
+}"
+D0002@5-29-2014@VA76111G@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient, seated in a hospital chair, is holding a telephone receiver to his ear. He appears to be in distress, with his head tilted back and eyes closed. The patient's movements are jerky and uncontrolled, suggesting a loss of voluntary motor function. There is no evidence of prior medical history indicating epilepsy.", "answer": "NES"}"
+D0003@8-20-2018@DA0011FY@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, initially appearing to be asleep but then suddenly begins to move his arms and legs in a jerky manner, which is characteristic of a seizure. The patient's eyes are closed during this movement, and there is no clear indication of prior warning signs such as staring or lip smacking that would typically precede an ES.",
+  "answer": "NES"
+}"
+D0003@8-20-2018@DA7021DY@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, initially appearing to be asleep but then suddenly begins to exhibit signs of a seizure, including twitching movements and loss of consciousness. The patient's eyes roll back, and there is no response to external stimuli.",
+  "answer": "ES"
+}
+```"
+D0004@12-11-2017@DA00100C@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient, who appears to be in a hospital setting, suddenly collapses while sitting in a chair. He is wearing a headband and has a laptop on his lap. The patient's body stiffens, and he falls backward, indicating a loss of consciousness. Medical personnel quickly respond by assisting him, placing him in a reclined position, and ensuring he is safe. The patient's condition suggests a sudden onset of symptoms that could be indicative of a seizure.",
+  "answer": "ES"
+}"
+D0004@12-11-2017@DA00100D@sz_v2_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, initially covered by a white sheet. The patient's head moves from side to side, and their eyes roll back. The patient's body stiffens, and they appear to be experiencing a loss of consciousness. The patient's movements are rhythmic and repetitive, suggesting a seizure-like activity.",
+  "answer": "ES"
+}"
+D0004@12-11-2017@DA00100U@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, initially appearing to be asleep or unconscious. Suddenly, they exhibit signs of a seizure, including jerking movements of their arms and legs, and a loss of consciousness. The patient's eyes roll back, and they appear to be experiencing convulsions. After the initial episode, medical staff quickly intervenes, suggesting that this was likely an epileptic seizure.",
+  "answer": "ES"
+}"
+E0003@6-27-2022@KA96022I@nes_v1_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed, wearing a hospital gown and a headband. They appear to be experiencing a sudden onset of symptoms that include twitching movements in their face and arms, which are characteristic of a seizure. The patient's eyes are closed, and they seem to be in a state of distress. The nurse is present, observing and documenting the event.", "answer": "ES"}"
+E0005@6-5-2018@DA7020X7@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient, lying in a hospital bed, suddenly stops using the tablet and begins to thrash around violently. The patient's eyes roll back, and they appear to be experiencing a loss of consciousness. The patient's movements are uncontrolled and forceful, which is characteristic of a seizure.",
+  "answer": "ES"
+}"
+E0006@6-2-2015@TA7641ZV@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient exhibits generalized tonic-clonic movements, loss of consciousness, and convulsive activity involving the entire body, which are typical symptoms of an epileptic seizure.",
+  "answer": "ES"
+}"
+E0007@10-8-2014@TA7640SH@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits signs of a seizure, including loss of consciousness, head nodding, and body movements that are not voluntary. The patient's eyes are closed, and there is no response to external stimuli.", "answer": "ES"}"
+E0007@10-8-2014@TA7640TP@sz_v1_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying in a hospital bed, initially appearing to be asleep but then suddenly moving his head and eyes rapidly, which is indicative of a seizure. The rapid eye movements and head movements suggest a possible epileptic seizure.",
+  "answer": "ES"
+}"
+E0007@10-8-2014@VA7631PO@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is sitting in a hospital bed, wearing a headband, and appears to be experiencing a seizure. His hands are clenched together, and he seems to be in discomfort. A healthcare professional is present, observing and possibly assisting.", "answer": "NES"}"
+E0008@1-22-2015@TA7641A3@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a white sheet, and appears to be experiencing a seizure. The patient's eyes are closed, and there is a noticeable change in their facial expression and body movements, which are typical signs of a seizure. The patient's head is slightly tilted to one side, and their mouth may be open, which are common features during a seizure.", "answer": "ES"}"
+E0009@11-23-2020@DA0015I7@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient exhibits signs of a seizure, including loss of consciousness, generalized tonic-clonic movements, and a period of postictal confusion.",
+  "answer": "ES"
+}"
+E0009@11-23-2020@DA0015I8@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient exhibits signs of a seizure, including loss of consciousness, rhythmic jerking movements, and a sudden onset of symptoms that progress to a state of unresponsiveness.",
+  "answer": "ES"
+}"
+E0009@11-23-2020@DA0015II@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient exhibits generalized tonic-clonic movements, loss of consciousness, and convulsive activity involving the entire body, which are typical symptoms of an epileptic seizure.",
+  "answer": "ES"
+}"
+E0010@6-29-2021@DA0016IF@nes_v1_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be experiencing a seizure. The patient's eyes are closed, and there is no visible movement or convulsions. The patient is wearing a hospital wristband and has an IV line attached to their hand.",
+  "answer": "NES"
+}"
+F0001@9-28-2022@KA9602FL@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, wearing a hospital gown and a headband. There is no visible movement or convulsions that would typically indicate a seizure. The patient appears to be in a state of rest, with no signs of altered consciousness or abnormal motor activity.",
+  "answer": "NES"
+}
+```"
+F0002@4-26-2018@DA0010PI@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, covered with a white blanket. They appear to be experiencing a sudden onset of symptoms characterized by jerking movements of their arms and legs, which are typical signs of a seizure. The patient's eyes are closed, and they seem to be in a state of convulsion.",
+  "answer": "ES"
+}
+```"
+G0001@6-20-2019@DA0012ZY@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits signs of a generalized tonic-clonic seizure, characterized by loss of consciousness, stiffening of muscles, rhythmic jerking movements, and postictal confusion.", "answer": "ES"}"
+G0001@6-20-2019@DA0012ZY@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits signs of a generalized tonic-clonic seizure, characterized by loss of consciousness, stiffening of muscles, rhythmic jerking movements, and postictal confusion.", "answer": "ES"}"
+H0001@2-10-2015@TA7641DP@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a white sheet, and appears to be in a state of rest. There are no visible convulsions, loss of consciousness, or abnormal movements that would typically indicate an epileptic seizure. The patient seems to be in a calm state, possibly asleep or resting, without any signs of distress or abnormal behavior.", "answer": "NES"}"
+H0001@2-10-2015@TA7641DP@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, wearing a cap with electrodes attached to their head. They appear to be in a state of rest or sleep. There are no visible convulsions, loss of consciousness, or other typical signs of a seizure such as jerking movements or altered behavior. The patient remains still throughout the video.", "answer": "NES"}"
+H0001@2-10-2015@VA7632CV@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, covered with a white sheet, and appears to be experiencing a seizure. The patient's eyes are closed, and there is a noticeable jerking motion in their arms and legs. The patient's head is turned to the side, and they seem to be in distress. There are medical devices attached to the patient, including an IV and a monitor, indicating that this is taking place in a hospital setting.", "answer": "ES"}"
+H0001@2-10-2015@VA7632CV@sz_v3_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be experiencing a seizure. The patient's eyes are closed, and their head is turned to the side. There are medical devices attached to the patient, including an IV and a monitor. The patient's movements suggest a loss of consciousness and possible convulsions.",
+  "answer": "ES"
+}"
+A0002@5-13-2021@UA6693LK@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits sudden, uncontrolled movements including thrashing, flailing arms, and head movements, followed by a period of altered consciousness and assistance from medical staff. These symptoms suggest a seizure, but without EEG or other diagnostic data, it is difficult to definitively classify as epileptic or non-epileptic.", "answer": "NES"}"
+A0002@5-13-2021@UA6693LK@sz_v2_1.mp4,
+,"NES",
+,"{"description": "The patient appears to be in a hospital bed with medical equipment nearby, suggesting a clinical setting. The patient is initially lying still, then begins to show signs of distress or discomfort, such as moving their arms and adjusting their position. The patient's movements seem to be a response to discomfort or pain rather than a seizure. The patient does not exhibit typical seizure symptoms such as convulsions, loss of consciousness, or rhythmic jerking movements. The patient's behavior is more consistent with a non-epileptic event, such as a reaction to pain or discomfort.", "answer": "NES"}"
+A0002@5-13-2021@UA6693LY@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits sudden, violent movements including thrashing limbs, rapid head movements, and involuntary body contortions. The medical team quickly intervenes to restrain and monitor the patient, suggesting a loss of consciousness and uncontrolled motor activity typical of a seizure. The rapid onset and intensity of the movements, along with the need for immediate medical intervention, are consistent with an epileptic seizure.", "answer": "ES"}"
+A0003@10-20-2020@DA0015B9@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient in the video appears to be experiencing a seizure characterized by sudden, uncontrolled movements and altered consciousness. She is lying in a hospital bed with medical equipment around her, indicating a clinical setting. Her body movements are erratic, and she seems to be losing control over her limbs and facial expressions, which are typical signs of a seizure. The patient's eyes are rolling back, and her mouth is open, suggesting a loss of awareness and motor control. These symptoms are consistent with an epileptic seizure, as they involve sudden, involuntary muscle contractions and a loss of consciousness. The presence of medical equipment and the patient's location in a hospital room further support the likelihood of an epileptic seizure rather than a non-epileptic event.", "answer": "ES"}"
+A0003@10-20-2020@DA0015B9@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient, who appears to be in a hospital bed with medical equipment around, exhibits signs of distress and confusion. She is seen adjusting her position, moving her arms, and at times appears to be in discomfort or disoriented. The movements seem to be more indicative of a non-epileptic event, as there is no clear evidence of rhythmic jerking, loss of consciousness, or other classic seizure signs. Her behavior suggests she might be experiencing a psychological or physiological reaction rather than an epileptic seizure.", "answer": "NES"}"
+A0003@10-20-2020@DA0015BA@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed with a headband, appearing to be in a state of distress or discomfort. She exhibits repetitive, rhythmic movements with her arms and legs, including jerking motions and possibly vocalizations, which are characteristic of seizure activity. Her facial expression suggests she is not fully conscious and is experiencing involuntary muscle contractions. These symptoms are consistent with an epileptic seizure (ES), as they involve sudden, uncontrolled electrical discharges in the brain leading to motor and possibly sensory symptoms.", "answer": "ES"}"
+A0003@10-20-2020@DA0015BA@sz_v4_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed and appears to be experiencing a seizure. She initially lies still, then begins to exhibit involuntary movements, including jerking motions with her arms and legs, and her head. Her facial expression suggests discomfort or confusion. She does not appear to be conscious during the episode, and her movements are not rhythmic or consistent with typical epileptic seizure patterns. The movements seem more erratic and less coordinated, which may indicate a non-epileptic event.", "answer": "NES"}"
+A0003@10-20-2020@UA6692PZ@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient in the video exhibits signs of a seizure, including sudden, involuntary movements, altered consciousness, and possibly loss of awareness. The patient's head is thrown back, eyes are rolled back, and the body appears to be in a state of convulsion or spasms. These symptoms are consistent with an epileptic seizure, as they involve abnormal electrical activity in the brain leading to motor and cognitive disturbances. The presence of medical equipment and the hospital setting further supports the likelihood of an epileptic seizure rather than a non-epileptic event, which typically does not involve such dramatic motor manifestations.", "answer": "ES"}"
+A0003@10-20-2020@UA6692Q0@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient appears to be in a hospital bed with medical equipment, including wires attached to her head, suggesting monitoring. She is initially still, then begins to exhibit movements such as lifting her head, gesturing with her hands, and interacting with her laptop. Her movements seem purposeful and responsive to her environment, indicating she is conscious and aware. There is no evidence of convulsions, loss of consciousness, or other typical seizure symptoms. The behavior appears to be a voluntary reaction to her surroundings rather than a seizure event.", "answer": "NES"}"
+A0003@10-20-2020@UA6692Q0@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed with a head wrap, covered by a blanket. The patient appears to be awake and alert, moving their arms and legs slightly, and occasionally shifting position. There are no signs of convulsions, loss of consciousness, or abnormal movements typical of an epileptic seizure. The patient's behavior seems to be consistent with normal waking activity, possibly indicating discomfort or restlessness rather than a seizure event.", "answer": "NES"}"
+A0003@10-20-2020@UA6692Q0@sz_v4_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, initially appearing to be asleep or resting. Suddenly, the patient begins to exhibit signs of a seizure, including jerking movements of the arms and legs, facial contortions, and possibly loss of consciousness or altered mental state. These movements are involuntary and appear to be rhythmic and repetitive, which are characteristic of epileptic seizures. The patient does not show signs of external triggers such as emotional distress or physical pain, which would suggest a non-epileptic event. The presence of medical equipment and the hospital setting further supports the likelihood of an epileptic seizure.", "answer": "ES"}"
+A0003@10-20-2020@UA6692Q1@sz_v1_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed with medical equipment around. She appears to be experiencing a seizure, as she moves her arms and head erratically, possibly with involuntary movements. She seems to be in a state of confusion or disorientation, and her movements are not coordinated. The seizure appears to be sudden and intense, with the patient not responding to external stimuli. This behavior is consistent with an epileptic seizure (ES), as it involves sudden, uncontrolled electrical activity in the brain, leading to involuntary movements and loss of consciousness.", "answer": "ES"}"
+A0003@10-20-2020@UA6692Q1@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient in the video appears to be experiencing a seizure characterized by sudden, involuntary movements, including jerking motions of the arms and legs, and possibly altered consciousness or confusion. These symptoms are consistent with an epileptic seizure, as they involve abnormal electrical activity in the brain leading to motor and cognitive disturbances. The patient's movements are not consistent with a non-epileptic event, which typically involves psychological or physiological triggers rather than seizure-like motor activity.", "answer": "ES"}"
+A0004@5-21-2019@DA0012TK@sz_v2_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed with medical equipment around, appearing to be in a state of unconsciousness or altered mental status. The patient's body is rigid and they are not moving, which is consistent with a seizure. The patient's eyes are closed and their facial expression is unresponsive, indicating a lack of awareness. The patient's body is not moving in a way that suggests voluntary movement, and the patient's breathing is not visibly labored or irregular, which suggests that the seizure is not a result of a non-epileptic event. The patient's body is not moving in a way that suggests voluntary movement, and the patient's breathing is not visibly labored or irregular, which suggests that the seizure is not a result of a non-epileptic event.", "answer": "ES"}"
+A0006@11-19-2019@DA0013UT@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient, initially reading a book, suddenly experiences involuntary movements, including raising her arm and head, followed by the assistance of another person to adjust her position and the application of an oxygen mask. These behaviors suggest a loss of consciousness or altered mental state, which could indicate a seizure. However, without clinical details such as EEG findings or a clear history of epilepsy, it is difficult to definitively classify the event. The presence of an oxygen mask suggests respiratory distress or altered consciousness, which may be consistent with a non-epileptic event (NES) such as a psychogenic non-epileptic seizure or a medical emergency like a stroke or heart attack, rather than an epileptic seizure (ES), which typically involves specific motor symptoms like convulsions or loss of awareness without immediate respiratory compromise. Given the context, it is more likely to be a NES.", "answer": "NES"}"
+A0007@11-21-2017@DA3332LI@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient experiences a sudden loss of consciousness, followed by involuntary movements and a tonic-clonic seizure, with medical staff intervening to manage the episode. The seizure is characterized by muscle rigidity and jerking movements, consistent with an epileptic seizure.", "answer": "ES"}"
+A0007@11-21-2017@DA3332M5@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient experiences a sudden loss of consciousness, with involuntary movements including convulsions and limb jerking. He is observed to be unresponsive to verbal stimuli and exhibits muscle rigidity and twitching, consistent with a seizure. The medical team intervenes promptly, securing the patient and administering emergency care, which suggests a neurological event rather than a psychological or physiological non-epileptic event. The presence of a seizure-like episode with motor symptoms and loss of consciousness strongly indicates an epileptic seizure.", "answer": "ES"}"
+A0007@11-21-2017@DA3332M9@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient experiences a seizure characterized by involuntary movements, including convulsions and loss of consciousness, which are typical of an epileptic seizure. The medical staff responds promptly, indicating a recognized and managed seizure event.", "answer": "ES"}"
+B0001@9-15-2022@DA1322M1@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient, a young child in a hospital bed, initially appears to be sleeping. Suddenly, the child begins to exhibit signs of distress, including thrashing movements, vocalizations, and possible loss of consciousness. A caregiver quickly intervenes, attempting to calm the child and provide reassurance. The child's movements are erratic and uncontrolled, suggesting a seizure-like event. The presence of medical equipment and the immediate response of a caregiver indicate a clinical setting. The symptoms observed, including sudden onset, uncontrolled movements, and altered consciousness, are consistent with an epileptic seizure.", "answer": "ES"}"
+D0001@9-25-2018@DA0011NN@nes_v1_1.mp4,
+,"NES",
+,"{"description": "The patient, who appears to be in a hospital setting and wearing a surgical cap and gloves, is seated in a wheelchair and engaged in coloring. The patient suddenly experiences a seizure, characterized by rapid, jerky movements of the head and arms, and appears to be in a state of confusion or disorientation. The patient's movements are abrupt and involuntary, suggesting a neurological event rather than a psychological or physiological response. The seizure is brief and ends with the patient regaining composure, indicating a possible epileptic seizure.", "answer": "ES"}"
+D0002@5-29-2014@TA76406W@nes_v2_1.mp4,
+,"NES",
+,"{"description": "The patient appears to be in a hospital bed, wearing a bandage on his head and connected to medical equipment. He is engaged in conversation with a healthcare professional who is taking notes. There is no visible evidence of seizure activity such as convulsions, loss of consciousness, or abnormal movements. The patient's behavior is calm and coherent, indicating he is not experiencing a seizure.", "answer": "NES"}"
+D0002@5-29-2014@TA76406W@nes_v2_2.mp4,
+,"NES",
+,"{"description": "The patient appears to be experiencing a seizure, characterized by sudden, involuntary movements and altered consciousness. The patient's body is rigid, and he seems to be unresponsive to external stimuli, which are typical signs of a seizure. The patient's facial expression and body language suggest a loss of awareness and control, which are consistent with an epileptic seizure.", "answer": "ES"}"
+D0002@5-29-2014@TA76406W@nes_v3_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in a state of rest or mild distress. He is holding a can and seems to be drinking from it, then begins to manipulate a small object, possibly a pen or similar item, in his hands. His facial expression remains relatively calm, and there are no signs of convulsions, loss of consciousness, or abnormal movements that would suggest a seizure. His behavior appears to be deliberate and controlled, consistent with a non-epileptic event.", "answer": "NES"}"
+D0002@5-29-2014@TA76406W@nes_v4_1.mp4,
+,"NES",
+,"{"description": "The patient appears to be experiencing a seizure characterized by involuntary movements and altered consciousness. He is seated upright in a hospital bed with medical equipment nearby, suggesting a clinical setting. His facial expressions and body movements indicate a loss of control over his actions, which is typical of an epileptic seizure. The presence of medical monitoring equipment and the patient's apparent lack of awareness or responsiveness further support the diagnosis of an epileptic seizure.", "answer": "ES"}"
+D0002@5-29-2014@TA76406X@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed with a bandage on his head, holding a remote control. He appears to be speaking and gesturing with his hands, showing signs of alertness and responsiveness. There is no evidence of convulsions, loss of consciousness, or other typical seizure symptoms such as stiffening, jerking movements, or abnormal posturing. His behavior suggests he is conscious and able to interact with his surroundings, which is inconsistent with an epileptic seizure. The scenario is more indicative of a non-epileptic event, possibly related to discomfort, conversation, or a reaction to the environment.", "answer": "NES"}"
+D0002@5-29-2014@TA76406Z@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed with a head injury, appearing to be in a state of altered consciousness. He is holding a remote control and seems to be speaking or reacting to something, but his movements are limited and he does not exhibit typical seizure symptoms such as convulsions, loss of consciousness, or rhythmic jerking. The presence of a head injury and the fact that he is in a hospital bed suggest a possible neurological issue, but the lack of classic seizure activity indicates that this is more likely a non-epileptic event.", "answer": "NES"}"
+D0002@5-29-2014@TA76406Z@nes_v3_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in a state of distress or discomfort, holding a medical device to his ear. He is not exhibiting typical seizure symptoms such as convulsions, loss of consciousness, or unusual movements. His behavior seems more indicative of a non-epileptic event, possibly related to pain, anxiety, or a reaction to medication or medical equipment.", "answer": "NES"}"
+D0002@5-29-2014@VA7610ZK@nes_v1_1.mp4,
+,"NES",
+,"{"description": "The patient appears to be in a hospital bed with medical equipment, including an IV and electrodes on his chest, suggesting monitoring for cardiac or neurological activity. He is holding a tablet and seems to be speaking or reacting to something on the screen. His movements are deliberate and controlled, and he does not exhibit the typical signs of a seizure such as convulsions, loss of consciousness, or involuntary muscle contractions. His behavior is consistent with someone who is awake, aware, and engaged in conversation or activity, which is more indicative of a non-epileptic event.", "answer": "NES"}"
+D0002@5-29-2014@VA7610ZK@nes_v2_1.mp4,
+,"ES",
+,"{"description": "The patient appears to be experiencing a seizure characterized by sudden, involuntary movements and possibly loss of consciousness or altered mental state. However, without further medical context or diagnostic tools, it is not possible to definitively diagnose whether this is an epileptic seizure (ES) or a non-epileptic event (NES).", "answer": "NES"}"
+D0002@5-29-2014@VA7610ZK@nes_v4_1.mp4,
+,"ES",
+,"{"description": "The patient experiences a sudden, intense episode characterized by facial grimacing, vocalizations, and involuntary movements, including jerking motions of the arms and legs. These symptoms are accompanied by a loss of consciousness and are consistent with the clinical presentation of an epileptic seizure, which typically involves abnormal electrical activity in the brain leading to motor, sensory, or cognitive symptoms.", "answer": "ES"}"
+D0002@5-29-2014@VA76111G@nes_v1_1.mp4,
+,"NES",
+,"{"description": "The patient is initially seen talking on the phone, then suddenly stops, appears confused, and is observed by medical staff who intervene. The patient does not exhibit typical seizure symptoms such as convulsions, loss of consciousness, or postictal confusion. The behavior appears to be a reaction to an external stimulus or a medical intervention, suggesting a non-epileptic event.", "answer": "NES"}"
+D0003@8-20-2018@DA0011FY@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is initially asleep in the hospital bed, then suddenly experiences a seizure characterized by jerking movements, loss of consciousness, and involuntary muscle contractions. The seizure appears to be generalized, involving the entire body, and is followed by a period of confusion and disorientation. The medical staff quickly intervenes to stabilize the patient, indicating a potentially life-threatening event. The seizure is brief but intense, with no clear trigger visible in the video, and the patient's response to the seizure is consistent with an epileptic seizure.", "answer": "ES"}"
+D0003@8-20-2018@DA7021DY@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is initially lying still in bed, then suddenly begins to exhibit signs of a seizure, including jerking movements, loss of consciousness, and uncontrolled body movements. Medical staff quickly intervene to stabilize him, indicating a potentially severe seizure event.", "answer": "ES"}"
+D0004@12-11-2017@DA00100C@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient initially appears to be in distress, with sudden movements and possible loss of consciousness, followed by medical personnel intervening to manage his condition. The abrupt onset and the need for immediate medical intervention suggest a seizure-like event. However, without EEG or other diagnostic data, it's not possible to definitively classify it as epileptic or non-epileptic. Given the context of the video and the typical presentation of non-epileptic events, it is more likely to be a non-epileptic event.", "answer": "NES"}"
+D0004@12-11-2017@DA00100D@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits sudden, involuntary movements, including thrashing and flailing of limbs, followed by a period of apparent unconsciousness or altered mental state, which are characteristic of an epileptic seizure.", "answer": "ES"}"
+D0004@12-11-2017@DA00100U@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits sudden, uncontrolled movements, including thrashing and flailing limbs, along with loss of consciousness and confusion, which are characteristic of an epileptic seizure.", "answer": "ES"}"
+E0003@6-27-2022@KA96022I@nes_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is sitting upright in a hospital bed, appearing calm and composed. She is not exhibiting any signs of convulsions, loss of consciousness, or abnormal movements. Instead, she is interacting with a medical professional who is taking notes. The patient appears to be in a state of emotional distress, as she covers her face with her hands and seems to be crying. This behavior is consistent with emotional or psychological distress rather than a seizure. There are no observable motor symptoms such as jerking, stiffening, or loss of awareness that would suggest an epileptic seizure. The patient's behavior is more indicative of a non-epileptic event, likely related to emotional or psychological factors.", "answer": "NES"}"
+E0005@6-5-2018@DA7020X7@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient, initially calm and reading, suddenly experiences a seizure characterized by rapid, uncontrolled movements of the arms and legs, followed by loss of consciousness and inability to respond to stimuli. The seizure is brief but intense, with the patient becoming unresponsive and requiring assistance from medical staff to manage the episode. The abrupt onset and the patient's inability to control movements suggest a neurological event consistent with an epileptic seizure.", "answer": "ES"}"
+E0006@6-2-2015@TA7641ZV@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is experiencing a seizure characterized by uncontrolled movements, loss of consciousness, and involuntary muscle contractions. The medical team is actively managing the situation with interventions such as oxygen administration and monitoring vital signs, indicating a severe neurological event. The patient's symptoms are consistent with an epileptic seizure (ES) due to the presence of convulsions, altered mental status, and the need for immediate medical intervention.", "answer": "ES"}"
+E0007@10-8-2014@TA7640SH@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits sudden, involuntary movements including head jerking, body stiffening, and convulsions, which are characteristic of epileptic seizures. The presence of EEG monitoring and the clinical setting further support the diagnosis of an epileptic seizure.", "answer": "ES"}"
+E0007@10-8-2014@TA7640TP@sz_v1_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed, initially appearing to be in a state of rest or sleep. He then begins to exhibit signs of discomfort or confusion, rubbing his ear and head, and appears to be in distress or pain. He does not display typical seizure symptoms such as convulsions, loss of consciousness, or abnormal movements. The presence of a medical professional and the patient's apparent awareness and responsiveness suggest this is more likely a non-epileptic event, possibly related to pain or discomfort rather than a seizure.", "answer": "NES"}"
+E0007@10-8-2014@VA7631PO@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed with a bandage on his head, suggesting a recent head injury. He is holding a cup and appears to be in a state of rest or mild discomfort. An older woman enters the scene and interacts with him, possibly offering comfort or checking on his condition. The patient does not exhibit any signs of convulsions, loss of consciousness, or other typical seizure symptoms such as muscle rigidity or jerking movements. His behavior seems calm and responsive to the woman's presence, indicating no acute neurological event.", "answer": "NES"}"
+E0008@1-22-2015@TA7641A3@sz_v1_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed with a head wrap, appearing to be in a state of altered consciousness. She remains relatively still with minimal movement, occasionally blinking or shifting her gaze. There is no observable convulsive activity, loss of bladder control, or other signs typically associated with epileptic seizures. The presence of a medical professional checking vitals and the patient's calm demeanor suggest a non-epileptic event, possibly a medical check-up or a response to medication.", "answer": "NES"}"
+E0009@11-23-2020@DA0015I7@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits sudden, involuntary movements including jerking and flailing of limbs, facial grimacing, and loss of consciousness, which are characteristic of an epileptic seizure. The presence of medical staff intervening to manage the seizure further supports this diagnosis.", "answer": "ES"}"
+E0009@11-23-2020@DA0015I8@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits sudden, uncontrolled movements including flailing arms and legs, vocalizations, and appears to be in distress. Medical staff intervene promptly to manage the situation, suggesting a seizure-like event. The rapid onset and intensity of symptoms, along with the patient's lack of responsiveness to environmental stimuli, are indicative of a seizure. However, without EEG confirmation or a detailed medical history, a definitive diagnosis cannot be made solely based on video. The event appears to be consistent with an epileptic seizure due to the sudden, generalized motor activity and loss of awareness.", "answer": "ES"}"
+E0009@11-23-2020@DA0015II@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits sudden, involuntary movements including thrashing, vocalizations, and loss of consciousness, which are characteristic of a seizure. The medical team responds with emergency interventions, suggesting a seizure event. The patient's symptoms are consistent with an epileptic seizure (ES) due to the abrupt onset, motor activity, and the need for immediate medical intervention.", "answer": "ES"}"
+E0010@6-29-2021@DA0016IF@nes_v1_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed, appearing to be in a state of unconsciousness or altered mental state, with her eyes closed and minimal movement. She is wearing a head wrap, suggesting a recent medical procedure or injury. A medical professional enters and attaches a device to her finger, likely for monitoring vital signs. The patient remains still and unresponsive during this interaction, which is consistent with a non-epileptic event (NES), such as a post-operative state or a medical condition requiring monitoring rather than an epileptic seizure. Epileptic seizures typically involve more pronounced motor activity, such as jerking or twitching, or altered consciousness with specific seizure types, which are not observed here.", "answer": "NES"}"
+F0001@9-28-2022@KA9602FL@sz_v1_1.mp4,
+,"NES",
+,"{"description": "The patient in the video appears to be experiencing a seizure characterized by sudden, uncontrolled movements and loss of consciousness. The patient is initially lying in bed with medical equipment around, and then begins to exhibit jerking movements and appears to be unresponsive to stimuli. The medical staff quickly intervenes, suggesting a seizure event. The patient's symptoms include involuntary muscle contractions, altered consciousness, and possible vocalizations or moaning, which are consistent with epileptic seizures. The rapid onset and the patient's response to medical intervention further support the diagnosis of an epileptic seizure.", "answer": "ES"}"
+F0002@4-26-2018@DA0010PI@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits sudden, violent movements including thrashing, flailing arms, and legs, along with vocalizations and loss of consciousness, which are indicative of a seizure. The rapid onset and severity of symptoms, combined with the clinical setting and the intervention by medical staff, suggest a seizure event. The patient's symptoms align with an epileptic seizure (ES) due to the characteristic motor and behavioral manifestations.", "answer": "ES"}"
+G0001@6-20-2019@DA0012ZY@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient experiences sudden, uncontrolled movements, including thrashing limbs and convulsions, followed by a loss of consciousness. The seizure is accompanied by a dramatic physical reaction and is managed by medical staff with interventions such as oxygen administration and repositioning, suggesting a severe neurological event. These symptoms are consistent with an epileptic seizure.", "answer": "ES"}"
+G0001@6-20-2019@DA0012ZY@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits sudden, uncontrolled movements, including thrashing and flailing limbs, along with loss of consciousness and apparent confusion upon regaining awareness. These symptoms are consistent with a seizure, and given the context of a hospital setting and the presence of medical staff responding with emergency procedures, it is likely an epileptic seizure (ES).", "answer": "ES"}"
+H0001@2-10-2015@TA7641DP@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient, who has a head injury and is in a hospital bed, experiences a seizure characterized by sudden, involuntary movements and altered consciousness. The patient's eyes roll back, and they appear to be unresponsive, which are typical signs of an epileptic seizure. The patient also exhibits repetitive, jerky movements with a loss of control over their body, further supporting the diagnosis of an epileptic seizure.", "answer": "ES"}"
+H0001@2-10-2015@TA7641DP@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed with a headband attached, possibly for EEG monitoring. The patient appears to be in a state of altered consciousness, with eyes closed and minimal movement. There is no visible convulsive activity or loss of consciousness typical of epileptic seizures. The patient's behavior seems to be more consistent with a non-epileptic event, such as a period of drowsiness or a post-operative state.", "answer": "NES"}"
+H0001@2-10-2015@VA7632CV@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient, who is in a hospital bed with medical equipment, initially appears to be resting. Suddenly, the patient begins to exhibit signs of a seizure, including rapid, jerky movements of the arms and legs, and appears to be agitated or confused. The patient's movements are uncontrolled and appear to be a result of neurological activity rather than a psychological or physiological response. The presence of medical equipment and the patient's condition suggest that this is a medical emergency requiring immediate attention. The seizure appears to be a generalized seizure, which is consistent with an epileptic seizure.", "answer": "ES"}"
+H0001@2-10-2015@VA7632CV@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient exhibits sudden, uncontrolled movements including flailing arms and legs, and appears to be unresponsive to stimuli, which are characteristic of a seizure. The involvement of medical staff to manage the patient's movements and ensure safety suggests a seizure event. The patient's behavior, including the sudden onset of movements and lack of responsiveness, aligns with the clinical presentation of an epileptic seizure.", "answer": "ES"}"

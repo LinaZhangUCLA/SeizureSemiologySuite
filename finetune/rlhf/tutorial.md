@@ -13,6 +13,8 @@ modelscope-registry.us-west-1.cr.aliyuncs.com/modelscope-repo/modelscope:ubuntu2
 pip install math_verify==0.5.2
 pip install rouge
 pip install sacrebleu
+pip install rapidfuzz
+
 `
 
 ## step 3: 替换文件

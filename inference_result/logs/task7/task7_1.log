@@ -222,3 +222,281 @@ L0002@1-23-2018@DA00108K@sz_v1_1.mp4,
 L0002@10-16-2023@DA9601XX@sz_v1_1.mp4,
 ,"ES",
 ,"{"description": "The patient exhibits sudden, uncontrolled movements including rapid head movements, flailing limbs, and a loss of consciousness or altered mental state, which are characteristic of an epileptic seizure. The presence of medical equipment and the involvement of healthcare professionals further suggest a clinical setting where such symptoms would be recognized as epileptic.", "answer": "ES"}"
+I0002@5-9-2019@DA0012RL@nes_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying on a hospital bed, appearing to be in distress. The patient's eyes are closed, and there is no visible movement or convulsions. The patient's breathing seems to be regular, and there are no signs of loss of consciousness or altered mental status.",
+  "answer": "NES"
+}
+```"
+I0002@5-9-2019@DA0012RL@nes_v3_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying on a hospital bed, appearing to be in a state of distress. The patient's eyes are closed, and their body is rigid, which could indicate a seizure. However, without observing the patient's full body movements, facial expressions, or any other specific seizure characteristics such as jerking or loss of consciousness, it is difficult to definitively diagnose the event.",
+  "answer": "NES"
+}"
+I0002@5-9-2019@DA0012RL@nes_v4_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying on a hospital bed, appearing to be unconscious or in a state of distress. The patient's eyes are closed, and there is no visible movement or convulsions. The patient's skin appears pale, and there is no response to external stimuli.",
+  "answer": "NES"
+}
+```"
+I0002@5-9-2019@DA0012RS@nes_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying on a hospital bed, appearing to be in a state of distress. The patient's eyes are closed, and their mouth is slightly open. There is no visible convulsion or twitching of the body, which suggests that this may not be a typical epileptic seizure. The patient's condition seems to be more akin to a state of unconsciousness or possibly a fainting episode.",
+  "answer": "NES"
+}"
+I0002@5-9-2019@DA0012RS@nes_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is lying on a hospital bed, appearing to be in a state of rest or sleep. There are no visible signs of convulsions, loss of consciousness, or other typical symptoms of an epileptic seizure such as jerking movements or altered behavior. The patient's eyes are closed, and there is no evidence of abnormal muscle contractions or loss of awareness.",
+  "answer": "NES"
+}
+```"
+I0002@5-9-2019@DA0012RS@nes_v3_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying on their side in a hospital bed, showing signs of discomfort and distress. They appear to be experiencing involuntary movements, possibly twitching or jerking motions, which could be indicative of a seizure. The patient's head is turned to the side, and they seem to be in a state of confusion or disorientation.",
+  "answer": "NES"
+}"
+I0002@5-9-2019@DA0012RS@nes_v4_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying in a hospital bed, appearing to be in distress. The patient's head is turned to the side, and they seem to be experiencing some form of discomfort or pain. There is no clear evidence of rhythmic jerking movements or loss of consciousness that would typically indicate an epileptic seizure.",
+  "answer": "NES"
+}"
+I0002@5-9-2019@DA0012RS@nes_v5_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is lying on a hospital bed, appearing to be in distress. The patient's eyes are closed, and there is no visible convulsion or loss of consciousness. The patient's breathing appears to be normal, and there are no signs of involuntary movements that would typically accompany an epileptic seizure.",
+  "answer": "NES"
+}
+```"
+I0002@5-9-2019@DA0012RT@nes_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying on a hospital bed, covered with a white sheet. The patient's right arm is extended outward, and there appears to be a medical device attached to their chest. The patient's head is slightly tilted to the side, and their eyes are closed. There is no visible convulsion or loss of consciousness, but the patient's body movements suggest a possible seizure.",
+  "answer": "NES"
+}"
+I0002@5-9-2019@DA0012RT@nes_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying on a hospital bed, appearing to be in a state of rest or sleep. There are no visible signs of convulsions, loss of consciousness, or other typical symptoms of an epileptic seizure such as jerking movements or altered behavior. The patient's eyes are closed, and there is no indication of abnormal muscle activity or changes in breathing pattern.",
+  "answer": "NES"
+}
+```"
+I0002@5-9-2019@DA0012RT@nes_v3_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying on a hospital bed, covered with a white sheet. The patient's eyes are closed, and their head is tilted back slightly. There is no visible convulsion or jerking movements. The patient appears to be in a state of unconsciousness or deep sleep.",
+  "answer": "NES"
+}"
+I0002@5-9-2019@DA0012RT@nes_v4_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying on a hospital bed, appearing to be in a state of rest or sleep. There are no visible convulsions, loss of consciousness, or other typical signs of a seizure such as jerking movements or altered behavior. The patient's eyes are closed, and there is no evidence of involuntary muscle contractions or changes in breathing pattern.",
+  "answer": "NES"
+}"
+I0003@12-15-2020@DA0015L9@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, initially appearing to be in distress. They are wearing a cap and have a bandage on their head. The patient's movements become erratic, with their arms flailing and their body twisting. The patient's eyes are closed, and they appear to be experiencing convulsions. The patient's breathing becomes irregular, and their skin turns pale. The patient's condition deteriorates rapidly, and medical staff rush into the room to assist.",
+  "answer": "ES"
+}"
+I0004@11-18-2019@UA669194@sz_v6_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying on a hospital bed, covered with a white blanket. They have a medical device attached to their head, possibly for monitoring brain activity. The patient's eyes are closed, and they appear to be in a state of unconsciousness or deep sleep. There is no visible convulsion or jerking movements that would typically accompany an epileptic seizure. The patient's breathing seems regular, and there are no signs of loss of consciousness or altered mental status that would suggest a non-epileptic event.",
+  "answer": "NES"
+}"
+I0005@6-8-2022@KA960202@nes_v1_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying in a hospital bed, covered with a blanket, and appears to be experiencing a seizure. The patient's eyes are closed, and there is a noticeable jerking motion in their body, which is characteristic of a seizure. The patient's head is turned to the side, and they seem to be in discomfort.",
+  "answer": "ES"
+}"
+L0001@3-25-2022@DA1321G0@sz_v1_1.mp4,
+,"NES",
+,"{"description": "The patient is sitting upright in a hospital bed, wearing a hospital gown and a headband. There is no visible convulsion, loss of consciousness, or abnormal movements that would typically indicate an epileptic seizure. The patient appears to be in a state of rest, possibly experiencing discomfort or distress.", "answer": "NES"}"
+L0001@3-25-2022@DA1321G0@sz_v2_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed, wearing a hospital gown and a cap. The patient's eyes are closed, and there appears to be no significant movement or convulsions. The patient's hands are relaxed on their lap, and there are no signs of jerking or loss of consciousness.", "answer": "NES"}"
+L0001@3-25-2022@KA9601DZ@sz_v1_1.mp4,
+,"NES",
+,"{"description": "The patient is sitting in a hospital bed, wearing a hospital gown and a headband. The patient appears to be in a state of confusion or disorientation, as they are looking around and moving their head slightly. There are no visible convulsions, loss of consciousness, or other typical signs of a seizure.", "answer": "NES"}"
+L0001@3-25-2022@KA9601DZ@sz_v1_2.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed, wearing a hospital gown and a cap. They appear to be experiencing a seizure, as indicated by their head movements and facial contortions.", "answer": "ES"}"
+L0001@3-25-2022@KA9601E9@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, covered with a white blanket, and appears to be experiencing a sudden onset of symptoms that include twitching movements in his arms and legs, which could be indicative of a seizure. The patient's eyes may be rolling back, and he might be experiencing loss of consciousness or altered mental status.",
+  "answer": "NES"
+}
+```"
+L0001@3-25-2022@KA9601EA@sz_v1_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying in a hospital bed, wearing a hospital gown and a headband. They appear to be experiencing a sudden onset of symptoms that include a loss of consciousness, followed by rhythmic jerking movements of their arms and legs. The patient's eyes are closed during the episode, and they do not respond to verbal stimuli. After the episode, the patient regains consciousness but appears confused and disoriented.",
+  "answer": "ES"
+}"
+L0001@5-31-2022@KA9601X9@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, covered with a blanket, and wearing a hospital gown with an orange border. The patient appears to be experiencing a seizure, as indicated by their head movements and facial expressions. The patient's eyes are closed, and they seem to be in a state of distress.",
+  "answer": "ES"
+}
+```"
+L0001@5-31-2022@KA9601XA@sz_v1_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed, covered with a blanket, and wearing a hospital gown. They have a bandage on their head and are connected to medical equipment. The patient's eyes are closed, and they appear to be in a state of rest or sleep. There are no visible signs of convulsions, jerking movements, or loss of consciousness that would typically indicate an epileptic seizure.", "answer": "NES"}"
+L0001@5-31-2022@KA9601XA@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, covered with a blanket and wearing a hospital gown. They have a cap on their head, which appears to be part of a medical monitoring setup. The patient's eyes are closed, and they seem to be in a state of rest or sleep. There are no visible signs of convulsions, jerking movements, or any other typical seizure symptoms such as loss of consciousness or altered behavior that would suggest an epileptic seizure.",
+  "answer": "NES"
+}
+```"
+L0001@5-31-2022@KA9601XB@sz_v1_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed, covered with a white sheet and wearing a hospital gown. They have a bandage on their head and are connected to medical equipment. The patient's eyes are closed, and they appear to be in a state of unconsciousness or deep sleep. There are no visible convulsions, jerking movements, or loss of consciousness that would typically indicate an epileptic seizure.", "answer": "NES"}"
+L0001@5-31-2022@KA9601XB@sz_v2_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, wearing a hospital gown and a headband with electrodes attached. The patient's eyes are closed, and there is no visible movement or convulsion. The patient's facial expression remains unchanged throughout the video.", "answer": "NES"}"
+L0001@5-31-2022@KA9601XL@sz_v1_1.mp4,
+,"NES",
+,"{"description": "The patient is lying in a hospital bed, wearing a hospital gown and a cap. The patient's eyes are closed, and there appears to be some movement in the face and mouth area, which could be indicative of a seizure. However, without more information about the duration, pattern, and context of these movements, it is difficult to definitively diagnose whether this is an epileptic seizure or a non-epileptic event.", "answer": "NES"}"
+L0001@5-31-2022@KA9601XL@sz_v2_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying in a hospital bed, wearing a hospital gown and a cap. The patient's eyes are closed, and there appears to be some movement in their facial muscles and possibly their hands. The patient seems to be experiencing a sudden onset of symptoms that could be indicative of a seizure.",
+  "answer": "NES"
+}"
+L0001@5-31-2022@KA9601XM@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is experiencing a sudden onset of altered mental status, with a loss of consciousness and no recall of events following the episode. The patient's eyes were rolling back, and there was no response to verbal stimuli during the event.",
+  "answer": "NES"
+}
+```"
+L0001@5-31-2022@KA9601XW@sz_v1_1.mp4,
+,"NES",
+,"{
+  "description": "The patient is lying in a hospital bed, covered with a white blanket and wearing a hospital gown. They have a bandage on their head and are connected to medical equipment. The patient's eyes are closed, and they appear to be experiencing a seizure characterized by rhythmic eye movements and twitching of the face and arms.",
+  "answer": "ES"
+}"
+L0001@5-31-2022@KA9601XX@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, wearing a cap with electrodes attached to their head, suggesting they are undergoing some form of neurological monitoring. The patient appears to be in a state of rest, with minimal movement observed. There is no clear evidence of convulsions, loss of consciousness, or other typical signs of a seizure such as altered behavior or physical jerks.",
+  "answer": "NES"
+}"
+L0002@1-15-2019@DA001278@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, covered with a white sheet, and appears to be experiencing a sudden onset of convulsions. The patient's body is rigid, and there is a loss of consciousness. The patient's eyes are closed, and there is no response to external stimuli.",
+  "answer": "ES"
+}
+```"
+L0002@1-15-2019@DA001279@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is lying on a hospital bed, covered with a white blanket, and appears to be in a state of rest. There are no visible signs of convulsions, loss of consciousness, or any other typical symptoms of a seizure such as jerking movements or altered behavior.",
+  "answer": "NES"
+}
+```"
+L0002@1-15-2019@DA001279@sz_v2_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, initially appearing to be asleep but then suddenly becomes unresponsive and starts jerking their arms and legs violently. The patient's eyes roll back, and they appear to be in distress. This sequence of events is consistent with the typical symptoms of a generalized tonic-clonic seizure.",
+  "answer": "ES"
+}
+```"
+L0002@1-15-2019@DA00127A@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is lying in a hospital bed, covered with a white sheet. There is a medical professional standing beside the bed, and another person is assisting with the patient's position. The patient appears to be experiencing a sudden change in posture and movement, which could indicate a seizure. The patient's eyes are closed, and there is a sense of urgency as the medical staff is actively involved in managing the situation.",
+  "answer": "NES"
+}
+```"
+L0002@1-15-2019@DA00127A@sz_v2_1.mp4,
+,"NES",
+,"{
+  "description": "The patient exhibits tonic-clonic movements, loss of consciousness, and generalized convulsions, which are characteristic of an epileptic seizure.",
+  "answer": "ES"
+}"
+L0002@1-15-2019@DA70224N@sz_v1_1.mp4,
+,"NES",
+,"```json
+{
+  "description": "The patient is experiencing a sudden onset of generalized tonic-clonic movements, characterized by stiffening followed by rhythmic jerking. The patient's eyes are rolling back, and there is no response to external stimuli.",
+  "answer": "ES"
+}
+```"
+L0002@1-15-2019@DA70224N@sz_v2_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient exhibits generalized tonic-clonic movements, loss of consciousness, and convulsive activity involving the entire body, which are typical symptoms of an epileptic seizure.",
+  "answer": "ES"
+}
+```"
+L0002@1-15-2019@DA70224O@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is experiencing a sudden onset of generalized tonic-clonic movements, characterized by stiffening followed by rhythmic jerking. The patient's eyes are rolling back, and there is no response to external stimuli during the episode.",
+  "answer": "ES"
+}"
+L0002@1-23-2018@DA00108B@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, experiencing a sudden onset of convulsions and loss of consciousness. The patient's body is rigid, and there is no response to external stimuli. The patient's eyes are rolling back, and there is a lack of awareness.",
+  "answer": "ES"
+}"
+L0002@1-23-2018@DA00108B@sz_v2_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is experiencing a sudden onset of uncontrolled movements, including jerking of limbs and loss of consciousness, which are characteristic of a seizure. The patient's behavior does not align with typical non-epileptic events such as fainting or panic attacks.",
+  "answer": "ES"
+}"
+L0002@1-23-2018@DA00108B@sz_v3_1.mp4,
+,"ES",
+,"{"description": "The patient is lying in a hospital bed, initially appearing to be asleep or unconscious. Suddenly, they begin to move their arms and legs rapidly and uncontrollably, which is characteristic of a seizure. The patient's eyes are closed during this period, and there is no clear indication of a response to external stimuli. After the movement stops, the patient appears confused and disoriented.", "answer": "ES"}"
+L0002@1-23-2018@DA00108I@sz_v1_1.mp4,
+,"ES",
+,"{"description": "The patient, a woman in a hospital gown and headscarf, is seated in a chair. She appears to be experiencing a sudden onset of uncontrolled movements, including jerking of her arms and legs, and a loss of consciousness. Her eyes are closed, and she seems to be in distress. The movements are rapid and forceful, suggesting a loss of voluntary control over her body.", "answer": "ES"}"
+L0002@1-23-2018@DA00108J@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient exhibits sudden, uncontrolled movements that appear to be convulsive in nature, consistent with a seizure. The patient's body stiffens, and there is a loss of consciousness, which are typical signs of an epileptic seizure.",
+  "answer": "ES"
+}"
+L0002@1-23-2018@DA00108K@sz_v1_1.mp4,
+,"ES",
+,"{
+  "description": "The patient is lying in a hospital bed, initially appearing to be asleep but then suddenly becomes agitated, moving her arms and legs rapidly. She appears to be experiencing a loss of consciousness and control over her movements, which are characteristic of a seizure.",
+  "answer": "ES"
+}"
+L0002@10-16-2023@DA9601XX@sz_v1_1.mp4,
+,"ES",
+,"```json
+{
+  "description": "The patient is sitting in a chair, suddenly leans back, and then falls to the floor. There is no loss of consciousness or convulsive movements observed.",
+  "answer": "NES"
+}
+```"

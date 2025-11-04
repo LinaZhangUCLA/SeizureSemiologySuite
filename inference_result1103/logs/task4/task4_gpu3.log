@@ -1,0 +1,2320 @@
+Video: A0003@10-20-2020@DA0015B9@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@DA0015BA@sz_v3_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v3_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v4_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q1@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q1@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0004@5-21-2019@DA0012TK@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0007@11-21-2017@DA3332LI@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0007@11-21-2017@DA3332M9@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: B0001@9-15-2022@DA1322M1@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: D0001@9-25-2018@DA0011NN@nes_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: D0002@5-29-2014@TA76406W@nes_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: D0002@5-29-2014@TA76406W@nes_v2_2_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: D0002@5-29-2014@TA76406Z@nes_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: D0002@5-29-2014@VA7610ZK@nes_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:21:00"}
+```
+--------------------------------------------------
+Video: E0005@6-5-2018@DA7020X7@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: E0007@10-8-2014@TA7640SH@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: E0007@10-8-2014@TA7640TP@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: E0007@10-8-2014@VA7631PO@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: G0001@6-20-2019@DA0012ZY@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: H0002@12-11-2019@DA0013XA@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: H0002@12-11-2019@DA0013XI@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: I0002@5-9-2019@DA0012RS@nes_v4_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: I0003@12-15-2020@DA0015L9@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: L0001@3-25-2022@KA9601EA@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: L0001@5-31-2022@KA9601XB@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: L0002@1-15-2019@DA00127A@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: L0002@1-15-2019@DA70224N@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: L0002@1-15-2019@DA70224O@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: L0003@10-28-2014@TA7640V1@nes_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: L0005@3-10-2015@TA7641JJ@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: N0002@9-13-2022@DA1322LW@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: N0002@9-13-2022@KA9602CX@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: N0011@4-1-2021@DA00161I@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: N0011@4-1-2021@DA00161I@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:06.00"}
+```
+--------------------------------------------------
+Video: N0011@4-1-2021@DA00161K@sz_v5_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: O0003@6-6-2020@DA0014P3@nes_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:05:00"}
+```
+--------------------------------------------------
+Video: O0005@3-12-2015@TA7641JO@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: O0005@3-12-2015@TA7641JP@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: O0005@3-12-2015@TA7641K4@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: O0005@3-12-2015@TA7641K5@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: O0005@3-12-2015@TA7641K5@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: O0006@1-21-2016@CA4444A4@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: S0008@6-12-2014@TA764080@sz_v3_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:28.00"}
+```
+--------------------------------------------------
+Video: S0008@6-12-2014@TA764082@sz_v3_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: S0011@5-2-2022@DA1321PU@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: T0004@5-27-2015@TA7641Z2@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: T0004@5-27-2015@TA76420E@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: T0004@5-27-2015@VA7632UP@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:25:00"}
+```
+--------------------------------------------------
+Video: Z0006@2-28-2023@DA1323F0@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: Z0007@5-6-2014@VA7610WD@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:12.00"}
+```
+--------------------------------------------------
+Video: Z0010@2-29-2016@LA222224@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: Z0010@2-29-2016@LA222226@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: Z0010@2-29-2016@LA222227@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:19:00"}
+```
+--------------------------------------------------
+Video: Z0011@10-25-2021@DA1320Q5@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: Z0011@10-25-2021@DA1320Q6@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: Z0011@10-25-2021@DA1320Q7@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: Z0013@11-12-2020@UA6692V8@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:28:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@DA0015B9@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@DA0015B9@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@DA0015BA@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:28:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@DA0015BA@sz_v4_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:29:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692PZ@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:25:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v4_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q1@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:30:00"}
+```
+--------------------------------------------------
+Video: A0006@11-19-2019@DA0013UT@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15.00"}
+```
+--------------------------------------------------
+Video: A0007@11-21-2017@DA3332M9@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:20:00"}
+```
+--------------------------------------------------
+Video: B0001@9-15-2022@DA1322M1@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: D0002@5-29-2014@TA76406W@nes_v4_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: D0003@8-20-2018@DA0011FY@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:28:00"}
+```
+--------------------------------------------------
+Video: D0004@12-11-2017@DA00100C@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: E0009@11-23-2020@DA0015I8@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:18:00"}
+```
+--------------------------------------------------
+Video: E0009@11-23-2020@DA0015II@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:18:00"}
+```
+--------------------------------------------------
+Video: E0010@6-29-2021@DA0016IF@nes_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: F0002@4-26-2018@DA0010PI@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: G0001@6-20-2019@DA0012ZY@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00:00"}
+```
+--------------------------------------------------
+Video: H0001@2-10-2015@TA7641DP@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: H0001@2-10-2015@TA7641DP@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:12:00"}
+```
+--------------------------------------------------
+Video: H0001@2-10-2015@VA7632CV@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: H0001@2-10-2015@VA7632CV@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: H0003@6-2-2022@KA9601YM@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: H0003@6-2-2022@KA9601YN@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: I0003@12-15-2020@DA0015L9@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: I0004@11-18-2019@UA669194@sz_v6_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: L0005@3-10-2015@TA7641JJ@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: N0011@4-1-2021@DA00161K@sz_v5_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: N0012@10-10-2019@DA0013M6@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: N0013@9-2-2014@VA7631G3@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:25:00"}
+```
+--------------------------------------------------
+Video: N0013@9-2-2014@VA7631G3@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: N0013@9-2-2014@VA7631G3@sz_v4_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: N0013@9-2-2014@VA7631G5@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: N0017@12-4-2018@DA7021YP@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: N0017@9-11-2018@DA7021H5@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:28:00"}
+```
+--------------------------------------------------
+Video: O0001@10-12-2023@DA9601YM@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: O0001@10-12-2023@DA9601YN@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15.00"}
+```
+--------------------------------------------------
+Video: O0001@10-12-2023@DA9601YN@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15.00"}
+```
+--------------------------------------------------
+Video: O0001@10-12-2023@DA9601YQ@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:25:00"}
+```
+--------------------------------------------------
+Video: O0003@6-6-2020@DA0014P5@nes_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: O0003@6-6-2020@UA66924A@nes_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: O0003@6-6-2020@UA66924A@nes_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:18:00"}
+--------------------------------------------------
+Video: O0007@1-5-2016@CA44446U@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: O0010@6-11-2020@DA0014PO@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:06:15"}
+```
+--------------------------------------------------
+Video: R0001@10-17-2023@DA1324JS@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: R0015@3-17-2022@KA9601DC@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:29:00"}
+```
+--------------------------------------------------
+Video: R0016@3-29-2021@DA0015ZD@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: S0004@10-4-2021@KA9600G3@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:25:00"}
+```
+--------------------------------------------------
+Video: S0005@3-18-2014@VA7610MM@nes_v1_2_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15:00"}
+```
+--------------------------------------------------
+Video: S0012@7-18-2019@DA00136V@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:28:00"}
+```
+--------------------------------------------------
+Video: S0014@11-10-2017@DA3332GP@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:25:00"}
+```
+--------------------------------------------------
+Video: T0003@4-26-2022@KA9601P2@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: W0001@2-3-2020@DA00145Y@nes_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: W0001@2-3-2020@DA001469@nes_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: Y0001@8-15-2022@DA1322DU@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: Y0001@8-15-2022@DA1322DU@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:19:00"}
+```
+--------------------------------------------------
+Video: Y0001@8-15-2022@DA1322DV@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15.00"}
+```
+--------------------------------------------------
+Video: Y0004@11-19-2018@DA7021VW@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:25:00"}
+```
+--------------------------------------------------
+Video: Y0004@11-19-2018@DA7021VW@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:29:00"}
+```
+--------------------------------------------------
+Video: Y0005@3-17-2022@DA1321FC@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:10:00"}
+```
+--------------------------------------------------
+Video: Z0005@1-20-2016@KA333KW5@sz_v1_2_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: Z0005@1-20-2016@KA333KW5@sz_v2_2_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: Z0005@1-20-2016@KA333KW5@sz_v2_3_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: Z0007@5-6-2014@VA7610WE@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:15.00"}
+```
+--------------------------------------------------
+Video: Z0008@7-21-2021@DA13202N@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:28:00"}
+```
+--------------------------------------------------
+Video: Z0008@7-21-2021@DA13202N@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:27:00"}
+```
+--------------------------------------------------
+Video: Z0010@2-29-2016@LA222224@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: Z0014@3-26-2020@DA0014FA@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: ```json
+{"timestamp": "00:00"}
+```
+--------------------------------------------------
+Video: A0003@10-20-2020@DA0015B9@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:30"}
+--------------------------------------------------
+Video: A0003@10-20-2020@DA0015BA@sz_v3_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:27"}
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:58"}
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v3_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:25"}
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v4_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:53"}
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q1@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q1@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:30"}
+--------------------------------------------------
+Video: A0004@5-21-2019@DA0012TK@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:30"}
+--------------------------------------------------
+Video: A0007@11-21-2017@DA3332LI@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:32"}
+--------------------------------------------------
+Video: A0007@11-21-2017@DA3332M9@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:46"}
+--------------------------------------------------
+Video: B0001@9-15-2022@DA1322M1@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00:00"}
+--------------------------------------------------
+Video: D0001@9-25-2018@DA0011NN@nes_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:31"}
+--------------------------------------------------
+Video: D0002@5-29-2014@TA76406W@nes_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: D0002@5-29-2014@TA76406W@nes_v2_2_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:21"}
+--------------------------------------------------
+Video: D0002@5-29-2014@TA76406Z@nes_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: D0002@5-29-2014@VA7610ZK@nes_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:22"}
+--------------------------------------------------
+Video: E0005@6-5-2018@DA7020X7@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:37"}
+--------------------------------------------------
+Video: E0007@10-8-2014@TA7640SH@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: E0007@10-8-2014@TA7640TP@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:27"}
+--------------------------------------------------
+Video: E0007@10-8-2014@VA7631PO@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: G0001@6-20-2019@DA0012ZY@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: H0002@12-11-2019@DA0013XA@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: H0002@12-11-2019@DA0013XI@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:28"}
+--------------------------------------------------
+Video: I0002@5-9-2019@DA0012RS@nes_v4_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: I0003@12-15-2020@DA0015L9@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: L0001@3-25-2022@KA9601EA@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: L0001@5-31-2022@KA9601XB@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:23"}
+--------------------------------------------------
+Video: L0002@1-15-2019@DA00127A@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:14"}
+--------------------------------------------------
+Video: L0002@1-15-2019@DA70224N@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: L0002@1-15-2019@DA70224O@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: L0003@10-28-2014@TA7640V1@nes_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: L0005@3-10-2015@TA7641JJ@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: N0002@9-13-2022@DA1322LW@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: N0002@9-13-2022@KA9602CX@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: N0011@4-1-2021@DA00161I@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: N0011@4-1-2021@DA00161I@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00:06"}
+--------------------------------------------------
+Video: N0011@4-1-2021@DA00161K@sz_v5_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: O0003@6-6-2020@DA0014P3@nes_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: O0005@3-12-2015@TA7641JO@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: O0005@3-12-2015@TA7641JP@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00:07"}
+--------------------------------------------------
+Video: O0005@3-12-2015@TA7641K4@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:25"}
+--------------------------------------------------
+Video: O0005@3-12-2015@TA7641K5@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: O0005@3-12-2015@TA7641K5@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: O0006@1-21-2016@CA4444A4@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:45"}
+--------------------------------------------------
+Video: S0008@6-12-2014@TA764080@sz_v3_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:31"}
+--------------------------------------------------
+Video: S0008@6-12-2014@TA764082@sz_v3_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:41"}
+--------------------------------------------------
+Video: S0011@5-2-2022@DA1321PU@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:03"}
+--------------------------------------------------
+Video: T0004@5-27-2015@TA7641Z2@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:31"}
+--------------------------------------------------
+Video: T0004@5-27-2015@TA76420E@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00:02"}
+--------------------------------------------------
+Video: T0004@5-27-2015@VA7632UP@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:24"}
+--------------------------------------------------
+Video: Z0006@2-28-2023@DA1323F0@sz_v2_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:23"}
+--------------------------------------------------
+Video: Z0007@5-6-2014@VA7610WD@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: Z0010@2-29-2016@LA222224@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: Z0010@2-29-2016@LA222226@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00:00"}
+--------------------------------------------------
+Video: Z0010@2-29-2016@LA222227@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:25"}
+--------------------------------------------------
+Video: Z0011@10-25-2021@DA1320Q5@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: Z0011@10-25-2021@DA1320Q6@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: Z0011@10-25-2021@DA1320Q7@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:16"}
+--------------------------------------------------
+Video: Z0013@11-12-2020@UA6692V8@sz_v1_1_limb_automatisms.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit repetitive, stereotyped limb movements such as fumbling, picking, rubbing or patting.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:37"}
+--------------------------------------------------
+Video: A0003@10-20-2020@DA0015B9@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:39"}
+--------------------------------------------------
+Video: A0003@10-20-2020@DA0015B9@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:43"}
+--------------------------------------------------
+Video: A0003@10-20-2020@DA0015BA@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:30"}
+--------------------------------------------------
+Video: A0003@10-20-2020@DA0015BA@sz_v4_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:30"}
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692PZ@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:34"}
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:57"}
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:28"}
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q0@sz_v4_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:25"}
+--------------------------------------------------
+Video: A0003@10-20-2020@UA6692Q1@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:30"}
+--------------------------------------------------
+Video: A0006@11-19-2019@DA0013UT@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:47"}
+--------------------------------------------------
+Video: A0007@11-21-2017@DA3332M9@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:47"}
+--------------------------------------------------
+Video: B0001@9-15-2022@DA1322M1@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:35"}
+--------------------------------------------------
+Video: D0002@5-29-2014@TA76406W@nes_v4_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: D0003@8-20-2018@DA0011FY@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:30"}
+--------------------------------------------------
+Video: D0004@12-11-2017@DA00100C@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: E0009@11-23-2020@DA0015I8@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:39"}
+--------------------------------------------------
+Video: E0009@11-23-2020@DA0015II@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:28"}
+--------------------------------------------------
+Video: E0010@6-29-2021@DA0016IF@nes_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: F0002@4-26-2018@DA0010PI@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:26"}
+--------------------------------------------------
+Video: G0001@6-20-2019@DA0012ZY@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00:00"}
+--------------------------------------------------
+Video: H0001@2-10-2015@TA7641DP@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: H0001@2-10-2015@TA7641DP@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: H0001@2-10-2015@VA7632CV@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: H0001@2-10-2015@VA7632CV@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00:00"}
+--------------------------------------------------
+Video: H0003@6-2-2022@KA9601YM@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:37"}
+--------------------------------------------------
+Video: H0003@6-2-2022@KA9601YN@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:28"}
+--------------------------------------------------
+Video: I0003@12-15-2020@DA0015L9@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: I0004@11-18-2019@UA669194@sz_v6_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:37"}
+--------------------------------------------------
+Video: L0005@3-10-2015@TA7641JJ@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: N0011@4-1-2021@DA00161K@sz_v5_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:22"}
+--------------------------------------------------
+Video: N0012@10-10-2019@DA0013M6@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:22"}
+--------------------------------------------------
+Video: N0013@9-2-2014@VA7631G3@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:42"}
+--------------------------------------------------
+Video: N0013@9-2-2014@VA7631G3@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:28"}
+--------------------------------------------------
+Video: N0013@9-2-2014@VA7631G3@sz_v4_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:32"}
+--------------------------------------------------
+Video: N0013@9-2-2014@VA7631G5@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:48"}
+--------------------------------------------------
+Video: N0017@12-4-2018@DA7021YP@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:41"}
+--------------------------------------------------
+Video: N0017@9-11-2018@DA7021H5@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:27"}
+--------------------------------------------------
+Video: O0001@10-12-2023@DA9601YM@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: O0001@10-12-2023@DA9601YN@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:30"}
+--------------------------------------------------
+Video: O0001@10-12-2023@DA9601YN@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:32"}
+--------------------------------------------------
+Video: O0001@10-12-2023@DA9601YQ@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:38"}
+--------------------------------------------------
+Video: O0003@6-6-2020@DA0014P5@nes_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:54"}
+--------------------------------------------------
+Video: O0003@6-6-2020@UA66924A@nes_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: O0003@6-6-2020@UA66924A@nes_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:22"}
+--------------------------------------------------
+Video: O0007@1-5-2016@CA44446U@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:55"}
+--------------------------------------------------
+Video: O0010@6-11-2020@DA0014PO@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:08"}
+--------------------------------------------------
+Video: R0001@10-17-2023@DA1324JS@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:46"}
+--------------------------------------------------
+Video: R0015@3-17-2022@KA9601DC@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:31"}
+--------------------------------------------------
+Video: R0016@3-29-2021@DA0015ZD@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:33"}
+--------------------------------------------------
+Video: S0004@10-4-2021@KA9600G3@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:36"}
+--------------------------------------------------
+Video: S0005@3-18-2014@VA7610MM@nes_v1_2_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:25"}
+--------------------------------------------------
+Video: S0012@7-18-2019@DA00136V@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:36"}
+--------------------------------------------------
+Video: S0014@11-10-2017@DA3332GP@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:47"}
+--------------------------------------------------
+Video: T0003@4-26-2022@KA9601P2@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: W0001@2-3-2020@DA00145Y@nes_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:41"}
+--------------------------------------------------
+Video: W0001@2-3-2020@DA001469@nes_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:48"}
+--------------------------------------------------
+Video: Y0001@8-15-2022@DA1322DU@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:47"}
+--------------------------------------------------
+Video: Y0001@8-15-2022@DA1322DU@sz_v3_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:31"}
+--------------------------------------------------
+Video: Y0001@8-15-2022@DA1322DV@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00:15"}
+--------------------------------------------------
+Video: Y0004@11-19-2018@DA7021VW@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00:30"}
+--------------------------------------------------
+Video: Y0004@11-19-2018@DA7021VW@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:33"}
+--------------------------------------------------
+Video: Y0005@3-17-2022@DA1321FC@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:37"}
+--------------------------------------------------
+Video: Z0005@1-20-2016@KA333KW5@sz_v1_2_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00:00"}
+--------------------------------------------------
+Video: Z0005@1-20-2016@KA333KW5@sz_v2_2_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: Z0005@1-20-2016@KA333KW5@sz_v2_3_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: Z0007@5-6-2014@VA7610WE@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:46"}
+--------------------------------------------------
+Video: Z0008@7-21-2021@DA13202N@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:27"}
+--------------------------------------------------
+Video: Z0008@7-21-2021@DA13202N@sz_v2_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:30"}
+--------------------------------------------------
+Video: Z0010@2-29-2016@LA222224@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:00"}
+--------------------------------------------------
+Video: Z0014@3-26-2020@DA0014FA@sz_v1_1_face_pulling.mp4
+Prompt Used: 
+        This video shows when a patient patient exhibit unilateral sustained face-pulling movements.
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Return only the JSON format: {"timestamp": "MM:SS"}
+        
+Raw Response: {"timestamp": "00:30"}
+--------------------------------------------------

@@ -60,8 +60,7 @@ gpu_str = "".join(str(args.gpu).split(','))
 
 # Set GPU environment variable
 #os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu 
-print("gpu : ", args.gpu , "1" if (str(args.gpu) == '5') else "2")
-os.environ['CUDA_VISIBLE_DEVICES'] = "1" if (str(args.gpu) == '5') else "2"
+os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 
 # Set the directories/paths from arguments
 ################################################################################################

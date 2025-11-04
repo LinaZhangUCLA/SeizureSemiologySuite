@@ -271,6 +271,16 @@ if __name__ == "__main__":
     # subtask = 'Task5'
     # mergecsv(task_name, model,subtask)
 
+   
+    ##task12
+    #for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
+    for model in ['Qwen3-VL-8B-Instruct']: 
+        if model in ["Lingshu-32B",'InternVL3_5-38B']:
+            continue
+        task_name = 'Task1'
+        mergecsv(task_name, model,subtask=task_name) 
+
+
     # #task3
     # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct']:
     #     output_modle_dir = os.path.join(output_dir, model)
@@ -327,8 +337,8 @@ if __name__ == "__main__":
 
 
     ##task7
-    for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
-        if model in ["Lingshu-32B",'InternVL3_5-38B']:
-            continue
-        task_name = 'Task7'
-        mergecsv(task_name, model,subtask=task_name) 
+    # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
+    #     if model in ["Lingshu-32B",'InternVL3_5-38B']:
+    #         continue
+    #     task_name = 'Task7'
+    #     mergecsv(task_name, model,subtask=task_name) 

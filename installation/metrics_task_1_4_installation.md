@@ -17,6 +17,10 @@ pip install pandas>=2.0.0 scikit-learn>=1.3.0 numpy>=1.24.0
 - scikit-learn >= 1.3.0
 - numpy >= 1.24.0
 
+pip install sacrebleu
+pip install rouge-score
+pip install bert-score
+
 ### Usage
 After installation, activate the environment before running any metrics calculation scripts:
 ```bash

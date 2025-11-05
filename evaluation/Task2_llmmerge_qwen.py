@@ -24,7 +24,7 @@ MODELS = [
     # "Lingshu-32B",
     # "Qwen2.5-Omni-7B",
     'Qwen3-VL-8B-Instruct',
-    'Qwen3-VL-32B-Instruct'
+    #'Qwen3-VL-32B-Instruct'
 ]
 
 # Processing settings
@@ -172,6 +172,10 @@ async def process_one_model(model_name: str, session):
     model_dir = os.path.join(BASE_DIR, model_name)
     csv_in = os.path.join(model_dir, f"Task12_{model_name}_all_merged.csv")
     csv_out = os.path.join(model_dir, f"Task12_{model_name}_all_merged_llmmerge.csv")
+
+    csv_in = os.path.join(model_dir, f"Task12_{model_name}_diff.csv")
+    csv_out = os.path.join(model_dir, f"Task12_{model_name}_all_merged_llmmerge2.csv")
+
 
     if not os.path.exists(csv_in):
         print(f"[{model_name}] [SKIP] Input file not found: {csv_in}")

@@ -50,7 +50,7 @@ def get_model_metrics(model_name, model_path_name):
         
         # Process head turning feature
         try:
-            pred_path = f'result/vlm_inference/{model_path_name}/Task3_HT_{model_path_name}_1-129.csv'
+            pred_path = f'result/vlm_inference/{model_path_name}/Task3_HT_{model_path_name}.csv'
             df_pred = pd.read_csv(pred_path, encoding='latin-1')
             
             # Merge ground truth and predictions
@@ -91,7 +91,7 @@ def get_model_metrics(model_name, model_path_name):
             
         # Process arm movement feature
         try:
-            pred_path = f'result/vlm_inference/{model_path_name}/Task3_AM_{model_path_name}_1-112.csv'
+            pred_path = f'result/vlm_inference/{model_path_name}/Task3_AM_{model_path_name}.csv'
             df_pred = pd.read_csv(pred_path, encoding='latin-1')
             
             # Merge ground truth and predictions
@@ -132,7 +132,7 @@ def get_model_metrics(model_name, model_path_name):
             
         # Process body region onset feature
         try:
-            pred_path = f'result/vlm_inference/{model_path_name}/Task3_bodypart_{model_path_name}_all.csv'
+            pred_path = f'result/vlm_inference/{model_path_name}/Task3_L_{model_path_name}.csv'
             df_pred = pd.read_csv(pred_path, encoding='latin-1')
             
             # Process predictions - take first prediction for each video

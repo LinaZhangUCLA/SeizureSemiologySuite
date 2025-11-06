@@ -227,12 +227,27 @@ def main():
     model_list = [
         'Qwen2.5-VL-7B',
         'InternVL3.5-8B',
+        'Qwen3-VL-8B-Instruct',
         'Qwen2.5-VL-32B',
         'InternVL3.5-38B',
+        'Qwen3-VL-32B-Instruct',
         'Qwen2.5-VL-72B',
         'Audio-flamingo-3',
         'Qwen2.5-Omni-7B',
+        "Qwen3-Omni-30B-A3B-Instruct",
         'Lingshu-32B'
+
+        # "InternVL3_5-8B",
+        # "Qwen2.5-VL-7B-Instruct",
+        # 'Qwen3-VL-8B-Instruct',
+        # #"InternVL3_5-38B",
+        # "Qwen2.5-VL-32B-Instruct",
+        # 'Qwen3-VL-32B-Instruct',
+        # "Qwen2.5-VL-72B-Instruct",
+        
+        # "Qwen2.5-Omni-7B",
+        # "Qwen3-Omni-30B-A3B-Instruct",
+        # 'Lingshu-32B'
     ]
     
     # Mapping from display model names to actual file path names

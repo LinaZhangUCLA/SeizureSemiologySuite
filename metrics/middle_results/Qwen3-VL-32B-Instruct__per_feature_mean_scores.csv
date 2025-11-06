@@ -1,0 +1,3 @@
+,occur_during_sleep,head_turning,blank_stare,close_eyes,eye_blinking,face_pulling,face_twitching,tonic,clonic,arm_flexion,arm_straightening,figure4,oral_automatisms,limb_automatisms,pelvic_thrusting,full_body_shaking,asynchronous_movement,arms_move_simultaneously
+,occur_during_sleep,head_turning,blank_stare,close_eyes,eye_blinking,face_pulling,face_twitching,tonic,clonic,arm_flexion,arm_straightening,figure4,oral_automatisms,limb_automatisms,pelvic_thrusting,full_body_shaking,asynchronous_movement,arms_move_simultaneously
+Qwen3-VL-32B-Instruct,0.71,0.69,0.3,0.45,0.84,0.69,0.15,0.61,0.72,0.55,0.53,0.79,0.6,0.36,0.79,0.58,0.52,0.37

@@ -138,18 +138,18 @@ def get_model_metrics(model_name, model_path_name):
             # Process predictions - take first prediction for each video
             print(f"Original predictions shape: {df_pred.shape}")
             # Filter to keep only segment_0 predictions
-            df_pred = df_pred[df_pred['file_name'].str.contains('_segment_0.mp4')]
-            # Extract base name by removing segment suffix
-            df_pred['base_name'] = df_pred['file_name'].apply(lambda x: x.split('_segment_')[0] + '.mp4')
-            print(f"After grouping shape: {df_pred.shape}")
-            print("Sample of predictions:")
-            print(df_pred.head())
+            # df_pred = df_pred[df_pred['file_name'].str.contains('_segment_0.mp4')]
+            # # Extract base name by removing segment suffix
+            # df_pred['base_name'] = df_pred['file_name'].apply(lambda x: x.split('_segment_')[0] + '.mp4')
+            # print(f"After grouping shape: {df_pred.shape}")
+            # print("Sample of predictions:")
+            # print(df_pred.head())
             
             # Merge ground truth and predictions
-            merged_df = pd.merge(df_gt, df_pred, left_on='file_name', right_on='base_name', how='inner')
+            merged_df = pd.merge(df_gt, df_pred, left_on='file_name', right_on='file_name', how='inner')
             print(f"After merge shape: {merged_df.shape}")
             print("Sample of merged data:")
-            print(merged_df[['base_name', 'body_region_onset', 'onset_body_part']].head())
+            print(merged_df[['file_name', 'body_region_onset', 'onset_body_part']].head())
             
             # Get valid labels from ground truth
             valid_labels = df_gt[df_gt['body_region_onset'].notna()]['body_region_onset'].unique()
@@ -254,7 +254,7 @@ def main():
         'Qwen2.5-VL-32B',
         'InternVL3.5-38B',
         'Qwen2.5-VL-72B',
-        'Audio-flamingo-3',
+        #'Audio-flamingo-3',
         'Qwen2.5-Omni-7B',
         'Lingshu-32B',
         'Qwen3-VL-8B',

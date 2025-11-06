@@ -14,18 +14,32 @@ def calculate_metrics(y_true, y_pred, feature_name=None):
     # Convert to lowercase and strip whitespace
     y_true = y_true.str.strip().str.lower()
     y_pred = y_pred.str.strip().str.lower()
+    # print("*******")
+    # print(y_true.to_string())
+    # print(y_pred.to_string())
+
+
     
+    if feature_name != 'verbal_responsiveness':
     # Filter out any non-standard values
-    valid_values = ['yes', 'no']  # All features use binary yes/no values
-    
-    valid_mask = y_true.isin(valid_values) & y_pred.isin(valid_values)
-    y_true = y_true[valid_mask]
-    y_pred = y_pred[valid_mask]
+        valid_values = ['yes', 'no']  # All features use binary yes/no values
+        valid_mask = y_true.isin(valid_values) & y_pred.isin(valid_values)
+        y_true = y_true[valid_mask]
+        y_pred = y_pred[valid_mask]
+    else:
+        y_pred = y_pred.fillna('na')
+        y_pred = y_pred.replace('NaN', 'na')  
+        valid_values = ['yes', 'no','na']  # All features use binary yes/no values
+        valid_mask = y_true.isin(valid_values) & y_pred.isin(valid_values)
+        y_true = y_true[valid_mask]
+        y_pred = y_pred[valid_mask]  
     
     if len(y_true) == 0 or len(y_pred) == 0:
         return '', '', '', ''
     
     if feature_name == 'verbal_responsiveness':
+        # print(y_true.to_string())
+        # print(y_pred.to_string())
         # Multi-class classification metrics
         accuracy = accuracy_score(y_true, y_pred)
         precision = precision_score(y_true, y_pred, average='macro', zero_division=0)
@@ -57,7 +71,7 @@ def get_model_metrics(model_name, features, model_path_mapping):
     
     # Special case for audio-flamingo-3
     if model_name.lower() == 'audio-flamingo-3':
-        pred_path = f'result/vlm_inference/{actual_model_name}/Task1_AF3_Full_Results.csv'
+        pred_path = f'result/vlm_inference/{actual_model_name}/Task12_AF3_features_all.csv'
     else:
         pred_path = f'result/vlm_inference/{actual_model_name}/Task12_{actual_model_name}_all_merged.csv'
     
@@ -195,41 +209,57 @@ def main():
     ]
     
     # Model names
-    model_names = [
-        'Qwen2.5-VL-7B',
-        'InternVL3.5-8B',
-        'Qwen2.5-VL-32B',
-        'InternVL3.5-38B',
-        'Qwen2.5-VL-72B',
-        'Audio-flamingo-3',
-        'Qwen2.5-Omni-7B',
-        'Lingshu-32B',
-        'Qwen3-VL-8B',
-        'Qwen3-VL-32B'
-    ]
+    # model_names = [
+    #     #'Qwen2.5-VL-7B',
+    #     # 'InternVL3.5-8B',
+    #     # 'Qwen2.5-VL-32B',
+    #     # 'InternVL3.5-38B',
+    #     # 'Qwen2.5-VL-72B',
+    #     'Audio-flamingo-3',
+    #     # 'Qwen2.5-Omni-7B',
+    #     # 'Lingshu-32B',
+    #     # 'Qwen3-VL-8B',
+    #     # 'Qwen3-VL-32B'
+    # ]
+
+
+    MODELS = [
+        "InternVL3_5-8B",
+        "Qwen2.5-VL-7B-Instruct",
+        'Qwen3-VL-8B-Instruct',
+        #"InternVL3_5-38B",
+        "Qwen2.5-VL-32B-Instruct",
+        'Qwen3-VL-32B-Instruct',
+        "Qwen2.5-VL-72B-Instruct",
+        'audio-flamingo-3',
+        "Qwen2.5-Omni-7B",
+        "Qwen3-Omni-30B-A3B-Instruct"
+
+        #"Lingshu-32B",
+    ]  
     
     # Mapping from display model names to actual file path names
-    model_path_mapping = {
-        'Qwen2.5-VL-7B': 'Qwen2.5-VL-7B-Instruct',
-        'InternVL3.5-8B': 'InternVL3_5-8B',
-        'Qwen2.5-VL-32B': 'Qwen2.5-VL-32B-Instruct',
-        'InternVL3.5-38B': 'InternVL3_5-38B',
-        'Qwen2.5-VL-72B': 'Qwen2.5-VL-72B-Instruct',
-        'Audio-flamingo-3': 'audio-flamingo-3',
-        'Qwen3-VL-8B': 'Qwen3-VL-8B-Instruct',
-        'Qwen3-VL-32B': 'Qwen3-VL-32B-Instruct'
-    }
+    model_path_mapping = {}
+    #     'Qwen2.5-VL-7B': 'Qwen2.5-VL-7B-Instruct',
+    #     'InternVL3.5-8B': 'InternVL3_5-8B',
+    #     'Qwen2.5-VL-32B': 'Qwen2.5-VL-32B-Instruct',
+    #     'InternVL3.5-38B': 'InternVL3_5-38B',
+    #     'Qwen2.5-VL-72B': 'Qwen2.5-VL-72B-Instruct',
+    #     'Audio-flamingo-3': 'audio-flamingo-3',
+    #     'Qwen3-VL-8B': 'Qwen3-VL-8B-Instruct',
+    #     'Qwen3-VL-32B': 'Qwen3-VL-32B-Instruct'
+    # }
     
     output_path = 'metrics/Task1_precision_recall_f1_accuracy.csv'
     
     # Calculate metrics for each model
     results_dict = {}
-    for model in model_names:
+    for model in MODELS:
         print(f"\nProcessing model: {model}")
         results_dict[model] = get_model_metrics(model, features, model_path_mapping)
     
     # Write results to file
-    write_metrics_file(model_names, features, results_dict, output_path)
+    write_metrics_file(MODELS, features, results_dict, output_path)
 
 if __name__ == "__main__":
     main()

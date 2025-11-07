@@ -10,6 +10,7 @@ import shutil
 # Get the script directory and project root
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+print(PROJECT_ROOT)
 BASE_DIR = PROJECT_ROOT
 DEDUP_ON_COLUMN = 'file_name' 
 origin_dir = os.path.join(BASE_DIR, "inference_result")
@@ -224,59 +225,12 @@ if __name__ == "__main__":
     #     subtask = 'Task6'
     #     mergecsv(task_name, model,subtask)
  
-    #     task_name = 'Task4L_5'
-    #     subtask = 'Task4L'
-    #     mergecsv(task_name, model,subtask)
-    #     subtask = 'Task5'
-    #     mergecsv(task_name, model,subtask)
-        
-    #     # Task7 processing
-    #     try:
-    #         task_name = 'Task7'
-    #         subtask = 'Task7'
-    #         mergecsv(task_name, model, subtask)
-    #     except FileNotFoundError as e:
-    #         print(f"Skipping Task7 for {model}: {e}")
-
-    # model = 'InternVL3_5-8B'
-    # task_name = 'Task1'
-    # mergecsv(task_name, model)      
-    # task_name = 'Task3_6'
-    # subtask = 'Task3'
-    # mergecsv(task_name, model,subtask)
-    # subtask = 'Task6'
-    # mergecsv(task_name, model,subtask)
-    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv", BASE_DIR + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
-    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv", BASE_DIR + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
-    # task_name = 'Task4L_5'
-    # subtask = 'Task4L'
-    # mergecsv(task_name, model,subtask)
-    # subtask = 'Task5'
-    # mergecsv(task_name, model,subtask)
-
-
-    # model = 'Qwen2.5-VL-32B-Instruct'
-    # task_name = 'Task1'
-    # mergecsv(task_name, model)      
-    # task_name = 'Task3_6'
-    # subtask = 'Task3'
-    # mergecsv(task_name, model,subtask)
-    # subtask = 'Task6'
-    # mergecsv(task_name, model,subtask)
-    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv", BASE_DIR + model + "/Task4_AM_Qwen2.5-VL-7B-Instruct_1-112.csv")
-    # shutil.copy(BASE_DIR + "vlm/" + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv", BASE_DIR + model + "/Task4_HT_Qwen2.5-VL-7B-Instruct_1-129.csv")
-    # task_name = 'Task4L_5'
-    # subtask = 'Task4L'
-    # mergecsv(task_name, model,subtask)
-    # subtask = 'Task5'
-    # mergecsv(task_name, model,subtask)
+ 
 
    
     ##task12
     #for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
-    # for model in ['Qwen3-VL-8B-Instruct']: 
-    #     if model in ["Lingshu-32B",'InternVL3_5-38B']:
-    #         continue
+    # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct']: 
     #     task_name = 'Task1'
     #     mergecsv(task_name, model,subtask=task_name) 
 
@@ -315,8 +269,6 @@ if __name__ == "__main__":
     # #task4     
     #for model in ['Qwen3-VL-8B-Instruct']:
     # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
-    #     if model in ["Lingshu-32B",'InternVL3_5-38B']:
-    #         continue
     #     task_name = 'Task4'
     #     mergecsv(task_name, model,subtask=task_name)   
 
@@ -324,22 +276,21 @@ if __name__ == "__main__":
     # #task5
 
     #for model in ['Qwen3-VL-8B-Instruct']:
-    # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] : 
+    # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
     #     task_name = 'Task5'
     #     mergecsv(task_name, model,subtask=task_name)   
 
     ##task6
     #for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
-    for model in ['InternVL3_5-8B']:
-        if model in ["Lingshu-32B",'InternVL3_5-38B']:
-            continue
-        task_name = 'Task6'
-        mergecsv(task_name, model,subtask=task_name) 
+    # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
+    #     task_name = 'Task6'
+    #     mergecsv(task_name, model,subtask=task_name) 
 
 
     ##task7
     # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
     #     if model in ["Lingshu-32B",'InternVL3_5-38B']:
     #         continue
-    #     task_name = 'Task7'
-    #     mergecsv(task_name, model,subtask=task_name) 
+    for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']:  
+        task_name = 'Task7'
+        mergecsv(task_name, model,subtask=task_name) 

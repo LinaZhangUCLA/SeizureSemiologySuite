@@ -17,6 +17,8 @@ BASE_DIR = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference"
 
 MODELS = [
     "Qwen3-VL-8B-Instruct",
+    "Qwen3-VL-32B-Instruct",
+    
 ]
 # ====================================
 

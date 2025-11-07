@@ -225,39 +225,23 @@ def write_metrics_file(model_names, results_dict, output_path):
 def main():
     # Model names to evaluate (same order as Task1)
     model_list = [
-        'Qwen2.5-VL-7B',
-        'InternVL3.5-8B',
+        "InternVL3_5-8B",
+        "Qwen2.5-VL-7B-Instruct",
         'Qwen3-VL-8B-Instruct',
-        'Qwen2.5-VL-32B',
-        'InternVL3.5-38B',
+        "InternVL3_5-38B",
+        "Qwen2.5-VL-32B-Instruct",
         'Qwen3-VL-32B-Instruct',
-        'Qwen2.5-VL-72B',
-        'Audio-flamingo-3',
-        'Qwen2.5-Omni-7B',
-        "Qwen3-Omni-30B-A3B-Instruct",
-        'Lingshu-32B'
-
-        # "InternVL3_5-8B",
-        # "Qwen2.5-VL-7B-Instruct",
-        # 'Qwen3-VL-8B-Instruct',
-        # #"InternVL3_5-38B",
-        # "Qwen2.5-VL-32B-Instruct",
-        # 'Qwen3-VL-32B-Instruct',
-        # "Qwen2.5-VL-72B-Instruct",
+        "Qwen2.5-VL-72B-Instruct",
         
-        # "Qwen2.5-Omni-7B",
-        # "Qwen3-Omni-30B-A3B-Instruct",
-        # 'Lingshu-32B'
+        "Qwen2.5-Omni-7B",
+        "Qwen3-Omni-30B-A3B-Instruct",
+        "Lingshu-32B",
+
     ]
     
     # Mapping from display model names to actual file path names
     model_path_mapping = {
-        'Qwen2.5-VL-7B': 'Qwen2.5-VL-7B-Instruct',
-        'InternVL3.5-8B': 'InternVL3_5-8B',
-        'Qwen2.5-VL-32B': 'Qwen2.5-VL-32B-Instruct',
-        'InternVL3.5-38B': 'InternVL3_5-38B',
-        'Qwen2.5-VL-72B': 'Qwen2.5-VL-72B-Instruct',
-        'Audio-flamingo-3': 'audio-flamingo-3'
+ 
     }
     
     output_path = 'metrics/Task7_precision_recall_f1_accuracy.csv'

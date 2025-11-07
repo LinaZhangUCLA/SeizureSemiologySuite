@@ -1,0 +1,80 @@
+file_name,pred_tokens,gt_tokens,edit_distance,temporal_f1,lcs_ratio_gt,pred_len,gt_len
+A0003@10-20-2020@DA0015B9@sz_v1_1.mp4,"['arm_straightening', 'arm_flexion']","['face_pulling', 'tonic', 'arm_straightening', 'arm_flexion', 'head_turning', 'figure4', 'face_twitching', 'ictal_vocalization', 'clonic']",7,0.2222222222222222,1.0,2,9
+A0003@10-20-2020@DA0015B9@sz_v2_1.mp4,['arm_straightening'],"['ictal_vocalization', 'limb_automatisms', 'face_pulling', 'arm_straightening', 'tonic', 'arm_flexion', 'figure4', 'face_twitching']",7,0.125,1.0,1,8
+A0003@10-20-2020@DA0015BA@sz_v3_1.mp4,['clonic'],"['face_pulling', 'tonic', 'arm_straightening', 'limb_automatisms', 'ictal_vocalization', 'arm_flexion', 'face_twitching', 'eye_blinking']",8,0.0,0.0,1,8
+A0003@10-20-2020@DA0015BA@sz_v4_1.mp4,['full_body_shaking'],"['face_pulling', 'tonic', 'ictal_vocalization', 'arm_straightening', 'arm_flexion', 'eye_blinking', 'face_twitching']",7,0.0,0.0,1,7
+A0003@10-20-2020@UA6692PZ@sz_v1_1.mp4,['face_twitching'],"['face_pulling', 'arm_straightening', 'face_twitching', 'tonic', 'ictal_vocalization', 'eye_blinking', 'arm_flexion', 'figure4']",7,0.125,1.0,1,8
+A0003@10-20-2020@UA6692Q0@sz_v1_1.mp4,['face_twitching'],"['face_pulling', 'ictal_vocalization', 'face_twitching', 'limb_automatisms', 'eye_blinking']",4,0.2,1.0,1,5
+A0003@10-20-2020@UA6692Q0@sz_v3_1.mp4,['full_body_shaking'],"['face_pulling', 'limb_automatisms', 'ictal_vocalization']",3,0.0,0.0,1,3
+A0003@10-20-2020@UA6692Q0@sz_v4_1.mp4,['tonic'],"['limb_automatisms', 'face_pulling', 'tonic', 'ictal_vocalization', 'eye_blinking', 'face_twitching']",5,0.16666666666666666,1.0,1,6
+A0003@10-20-2020@UA6692Q1@sz_v1_1.mp4,['face_twitching'],"['ictal_vocalization', 'limb_automatisms']",2,0.0,0.0,1,2
+A0003@10-20-2020@UA6692Q1@sz_v2_1.mp4,['full_body_shaking'],"['face_pulling', 'tonic', 'limb_automatisms', 'blank_stare', 'arm_straightening', 'ictal_vocalization', 'face_twitching', 'arm_flexion', 'eye_blinking']",9,0.0,0.0,1,9
+D0003@8-20-2018@DA0011FY@sz_v1_1.mp4,"['face_twitching', 'tonic', 'clonic']","['head_turning', 'face_pulling', 'tonic', 'ictal_vocalization', 'arm_straightening', 'eye_blinking', 'clonic', 'face_twitching']",6,0.25,0.6666666666666666,3,8
+D0003@8-20-2018@DA7021DY@sz_v1_1.mp4,"['tonic', 'clonic', 'full_body_shaking']","['arm_flexion', 'tonic', 'ictal_vocalization', 'full_body_shaking', 'arms_move_simultaneously', 'arm_straightening', 'clonic']",5,0.2857142857142857,0.6666666666666666,3,7
+E0009@11-23-2020@DA0015I7@sz_v1_1.mp4,"['tonic', 'clonic', 'face_twitching']","['head_turning', 'arms_move_simultaneously', 'arm_flexion', 'ictal_vocalization', 'clonic', 'oral_automatisms', 'arm_straightening', 'figure4', 'tonic']",8,0.1111111111111111,0.3333333333333333,3,9
+E0009@11-23-2020@DA0015I8@sz_v1_1.mp4,"['full_body_shaking', 'face_twitching']","['head_turning', 'tonic', 'arm_flexion', 'face_pulling', 'ictal_vocalization', 'full_body_shaking', 'arms_move_simultaneously', 'clonic', 'eye_blinking', 'arm_straightening', 'figure4']",10,0.09090909090909091,0.5,2,11
+E0009@11-23-2020@DA0015II@sz_v1_1.mp4,"['tonic', 'clonic', 'face_twitching']","['head_turning', 'arms_move_simultaneously', 'arm_flexion', 'ictal_vocalization', 'tonic', 'face_pulling', 'arm_straightening', 'figure4', 'eye_blinking', 'clonic', 'oral_automatisms']",9,0.18181818181818182,0.6666666666666666,3,11
+G0001@6-20-2019@DA0012ZY@sz_v1_1.mp4,"['face_twitching', 'tonic', 'clonic', 'face_twitching']","['limb_automatisms', 'ictal_vocalization', 'head_turning', 'arm_flexion', 'tonic', 'arm_straightening', 'figure4', 'oral_automatisms', 'clonic']",8,0.3,0.5,4,9
+G0001@6-20-2019@DA0012ZY@sz_v2_1.mp4,"['face_twitching', 'full_body_shaking']","['oral_automatisms', 'head_turning', 'ictal_vocalization', 'face_pulling', 'full_body_shaking', 'arm_straightening', 'clonic', 'arm_flexion']",7,0.125,0.5,2,8
+I0001@8-25-2022@KA96029R@sz_v1_1.mp4,['face_twitching'],"['tonic', 'arm_flexion', 'head_turning', 'ictal_vocalization']",4,0.0,0.0,1,4
+I0004@11-18-2019@UA669194@sz_v6_1.mp4,"['tonic', 'clonic', 'face_twitching']","['blank_stare', 'head_turning', 'face_pulling', 'face_twitching', 'oral_automatisms', 'arm_flexion', 'tonic', 'clonic', 'arm_straightening']",7,0.2222222222222222,0.6666666666666666,3,9
+L0005@3-10-2015@TA7641JJ@sz_v1_1.mp4,['face_twitching'],"['limb_automatisms', 'face_pulling', 'ictal_vocalization', 'head_turning', 'blank_stare', 'tonic', 'arm_straightening', 'arm_flexion', 'clonic']",9,0.0,0.0,1,9
+N0011@4-1-2021@DA001614@sz_v1_1.mp4,"['tonic', 'clonic', 'face_twitching', 'full_body_shaking', 'arm_straightening']","['arm_flexion', 'blank_stare', 'tonic', 'arm_straightening', 'figure4', 'ictal_vocalization', 'clonic', 'head_turning']",7,0.125,0.4,5,8
+N0011@4-1-2021@DA00161F@sz_v1_1.mp4,"['tonic', 'full_body_shaking', 'face_twitching']","['arm_flexion', 'blank_stare', 'tonic', 'arm_straightening', 'head_turning', 'ictal_vocalization', 'clonic']",6,0.14285714285714285,0.3333333333333333,3,7
+N0011@4-1-2021@DA00161G@sz_v1_1.mp4,"['tonic', 'clonic', 'full_body_shaking', 'face_twitching']","['tonic', 'blank_stare', 'arm_straightening', 'head_turning', 'figure4', 'arm_flexion', 'ictal_vocalization', 'clonic']",7,0.125,0.5,4,8
+N0011@4-1-2021@DA00161G@sz_v2_1.mp4,"['face_twitching', 'full_body_shaking', 'face_twitching']","['head_turning', 'arms_move_simultaneously', 'tonic', 'arm_straightening', 'blank_stare', 'arm_flexion', 'figure4', 'ictal_vocalization', 'clonic']",9,0.0,0.0,3,9
+N0011@4-1-2021@DA00161G@sz_v3_1.mp4,"['arm_straightening', 'arm_flexion', 'full_body_shaking']","['blank_stare', 'tonic', 'arm_straightening', 'arms_move_simultaneously', 'head_turning', 'ictal_vocalization', 'arm_flexion', 'close_eyes', 'clonic']",7,0.2222222222222222,0.6666666666666666,3,9
+N0011@4-1-2021@DA00161I@sz_v1_1.mp4,"['arm_flexion', 'arm_straightening', 'face_twitching', 'full_body_shaking']","['tonic', 'arm_flexion', 'blank_stare', 'clonic', 'limb_automatisms']",4,0.2,0.25,4,5
+N0011@4-1-2021@DA00161I@sz_v2_1.mp4,"['face_twitching', 'arm_flexion']","['head_turning', 'blank_stare', 'arm_flexion', 'tonic', 'arm_straightening', 'figure4', 'eye_blinking', 'limb_automatisms']",7,0.125,0.5,2,8
+N0011@4-1-2021@DA00161J@sz_v1_1.mp4,"['tonic', 'clonic', 'arm_flexion']","['eye_blinking', 'blank_stare', 'arm_flexion']",2,0.3333333333333333,0.3333333333333333,3,3
+N0011@4-1-2021@DA00161K@sz_v1_1.mp4,['arm_straightening'],"['tonic', 'arm_straightening', 'arm_flexion', 'ictal_vocalization']",3,0.25,1.0,1,4
+N0011@4-1-2021@DA00161K@sz_v2_1.mp4,"['face_twitching', 'full_body_shaking']","['tonic', 'arm_straightening', 'arm_flexion', 'blank_stare', 'head_turning']",5,0.0,0.0,2,5
+N0011@4-1-2021@DA00161K@sz_v3_1.mp4,"['face_twitching', 'arm_straightening']",['tonic'],2,0.5,0.0,2,1
+N0011@4-1-2021@DA00161K@sz_v4_1.mp4,"['arm_straightening', 'arm_flexion']","['blank_stare', 'arm_straightening', 'tonic', 'arm_flexion', 'eye_blinking']",3,0.4,1.0,2,5
+N0011@4-1-2021@DA00161K@sz_v5_1.mp4,"['arm_straightening', 'arm_flexion']","['blank_stare', 'arm_flexion', 'tonic', 'clonic', 'face_pulling', 'face_twitching', 'limb_automatisms']",6,0.14285714285714285,0.5,2,7
+N0011@4-1-2021@UA6693F9@sz_v1_1.mp4,['full_body_shaking'],"['blank_stare', 'arm_straightening', 'arm_flexion', 'tonic', 'ictal_vocalization']",5,0.0,0.0,1,5
+N0011@4-1-2021@UA6693FA@sz_v1_1.mp4,"['arm_straightening', 'arm_flexion', 'full_body_shaking']","['arm_straightening', 'arms_move_simultaneously', 'tonic', 'arm_flexion', 'oral_automatisms', 'blank_stare']",4,0.3333333333333333,0.6666666666666666,3,6
+N0013@9-2-2014@VA7631G3@sz_v1_1.mp4,['clonic'],"['close_eyes', 'face_twitching', 'face_pulling', 'tonic', 'arm_straightening', 'verbal_responsiveness']",6,0.0,0.0,1,6
+N0013@9-2-2014@VA7631G3@sz_v3_1.mp4,"['clonic', 'close_eyes']","['close_eyes', 'face_pulling']",2,0.0,0.5,2,2
+N0013@9-2-2014@VA7631G3@sz_v4_1.mp4,"['face_twitching', 'close_eyes']","['close_eyes', 'face_pulling', 'eye_blinking']",3,0.0,0.5,2,3
+N0013@9-2-2014@VA7631G5@sz_v2_1.mp4,['face_twitching'],"['close_eyes', 'face_pulling']",2,0.0,0.0,1,2
+N0013@9-2-2014@VA7631GK@sz_v3_1.mp4,"['arm_straightening', 'eye_blinking']","['close_eyes', 'face_twitching', 'tonic', 'arm_flexion', 'ictal_vocalization']",5,0.0,0.0,2,5
+N0013@9-2-2014@VA7631GK@sz_v4_1.mp4,"['arm_flexion', 'arm_straightening']","['close_eyes', 'arm_flexion']",2,0.6666666666666666,0.5,2,2
+O0008@6-21-2022@GA5980K2@sz_v1_1.mp4,"['tonic', 'clonic', 'full_body_shaking']","['arms_move_simultaneously', 'ictal_vocalization', 'tonic', 'arm_straightening', 'face_twitching', 'clonic']",5,0.42857142857142855,0.6666666666666666,3,6
+O0008@6-21-2022@KA96022J@sz_v1_1.mp4,"['tonic', 'clonic', 'full_body_shaking']","['blank_stare', 'tonic', 'arms_move_simultaneously', 'ictal_vocalization', 'figure4', 'arm_straightening', 'eye_blinking', 'clonic']",7,0.3333333333333333,0.6666666666666666,3,8
+O0011@2-27-2019@DA7022D0@sz_v1_1.mp4,"['arm_straightening', 'arm_flexion']","['arms_move_simultaneously', 'tonic', 'arm_straightening', 'eye_blinking']",3,0.25,0.5,2,4
+R0014@5-4-2022@DA1321Q8@sz_v1_1.mp4,['full_body_shaking'],"['blank_stare', 'head_turning']",2,0.0,0.0,1,2
+S0003@5-4-2022@KA9601UH@nes_v1.1_0.mp4,['face_twitching'],['close_eyes'],1,0.0,0.0,1,1
+S0003@5-4-2022@KA9601UU@nes_v1_1.mp4,"['close_eyes', 'face_twitching', 'close_eyes']","['eye_blinking', 'close_eyes']",2,0.3333333333333333,0.3333333333333333,3,2
+S0005@3-18-2014@VA7610MM@nes_v1_1.mp4,['full_body_shaking'],"['asynchronous_movement', 'full_body_shaking', 'arm_flexion', 'arms_move_simultaneously']",3,0.25,1.0,1,4
+S0005@3-18-2014@VA7610MM@nes_v1_2.mp4,['full_body_shaking'],"['asynchronous_movement', 'arms_move_simultaneously', 'full_body_shaking', 'face_pulling']",3,0.25,1.0,1,4
+S0005@3-18-2014@VA7610MM@nes_v2_1.mp4,['full_body_shaking'],"['asynchronous_movement', 'full_body_shaking', 'arm_flexion', 'arms_move_simultaneously']",3,0.25,1.0,1,4
+S0005@3-18-2014@VA7610MM@nes_v4_1.mp4,['full_body_shaking'],"['arm_flexion', 'asynchronous_movement', 'full_body_shaking']",2,0.3333333333333333,1.0,1,3
+S0005@3-18-2014@VA7610MM@nes_v5_1.mp4,"['tonic', 'clonic']","['limb_automatisms', 'arm_straightening', 'arm_flexion', 'full_body_shaking', 'asynchronous_movement', 'arms_move_simultaneously']",6,0.0,0.0,2,6
+S0005@3-18-2014@VA7610MM@nes_v6_1.mp4,['full_body_shaking'],"['asynchronous_movement', 'full_body_shaking', 'arms_move_simultaneously', 'arm_straightening', 'arm_flexion']",4,0.2,1.0,1,5
+S0005@3-18-2014@VA7610MN@nes_v1_1.mp4,['full_body_shaking'],"['full_body_shaking', 'asynchronous_movement', 'arm_straightening', 'arm_flexion']",3,0.25,1.0,1,4
+S0005@3-18-2014@VA7610MN@nes_v2_1.mp4,"['tonic', 'clonic']","['arms_move_simultaneously', 'asynchronous_movement', 'full_body_shaking', 'ictal_vocalization', 'arm_flexion']",5,0.0,0.0,2,5
+S0005@3-18-2014@VA7610MO@nes_v1_1.mp4,"['tonic', 'clonic', 'arm_straightening']","['arms_move_simultaneously', 'asynchronous_movement', 'full_body_shaking', 'arm_straightening', 'ictal_vocalization', 'arm_flexion']",5,0.16666666666666666,0.3333333333333333,3,6
+S0005@3-18-2014@VA7610MO@nes_v2_1.mp4,"['arm_straightening', 'full_body_shaking']","['full_body_shaking', 'arms_move_simultaneously', 'ictal_vocalization', 'arm_straightening', 'asynchronous_movement']",4,0.2,0.5,2,5
+S0005@3-18-2014@VA7610MO@nes_v3_1.mp4,['arm_straightening'],"['full_body_shaking', 'arms_move_simultaneously', 'ictal_vocalization', 'asynchronous_movement']",4,0.0,0.0,1,4
+S0005@3-18-2014@VA7610MP@nes_v1_1.mp4,['full_body_shaking'],"['full_body_shaking', 'ictal_vocalization', 'asynchronous_movement', 'arm_flexion']",3,0.25,1.0,1,4
+S0012@7-18-2019@DA00136N@sz_v1_1.mp4,['full_body_shaking'],"['head_turning', 'arm_flexion', 'tonic', 'full_body_shaking', 'arm_straightening', 'figure4', 'clonic']",6,0.14285714285714285,1.0,1,7
+S0012@7-18-2019@DA00136O@sz_v2_1.mp4,"['tonic', 'clonic', 'full_body_shaking']","['tonic', 'arm_flexion', 'ictal_vocalization', 'arm_straightening', 'figure4', 'clonic']",5,0.42857142857142855,0.6666666666666666,3,6
+S0012@7-18-2019@DA00136V@sz_v1_1.mp4,"['tonic', 'clonic', 'full_body_shaking']","['head_turning', 'face_pulling', 'close_eyes', 'ictal_vocalization', 'arm_flexion', 'arm_straightening', 'figure4', 'tonic', 'clonic']",8,0.3,0.6666666666666666,3,9
+S0013@3-8-2018@DA0010H7@sz_v1_1.mp4,"['full_body_shaking', 'face_twitching']","['head_turning', 'tonic', 'full_body_shaking', 'arm_straightening', 'ictal_vocalization', 'arm_flexion', 'clonic']",6,0.14285714285714285,0.5,2,7
+T0001@3-21-2022@KA9601DO@nes_v1_1.mp4,"['face_twitching', 'tonic', 'clonic', 'face_twitching', 'full_body_shaking']","['arms_move_simultaneously', 'ictal_vocalization', 'verbal_responsiveness', 'full_body_shaking', 'asynchronous_movement']",5,0.0,0.2,5,5
+T0001@3-21-2022@KA9601DP@nes_v1_1.mp4,"['tonic', 'clonic', 'full_body_shaking', 'arm_straightening', 'arm_flexion', 'arm_straightening', 'tonic', 'clonic', 'full_body_shaking']","['head_turning', 'asynchronous_movement', 'close_eyes', 'arm_flexion', 'verbal_responsiveness']",8,0.4444444444444444,0.1111111111111111,9,5
+T0001@3-21-2022@KA9601DQ@nes_v1_1.mp4,"['full_body_shaking', 'clonic', 'full_body_shaking']","['close_eyes', 'asynchronous_movement', 'pelvic_thrusting', 'eye_blinking']",4,0.0,0.0,3,4
+W0001@2-3-2020@DA00145Y@nes_v1_1.mp4,"['face_twitching', 'full_body_shaking', 'face_twitching']","['arm_flexion', 'head_turning', 'face_pulling', 'asynchronous_movement', 'tonic', 'ictal_vocalization', 'verbal_responsiveness', 'blank_stare']",8,0.0,0.0,3,8
+W0001@2-3-2020@DA00145Y@nes_v1_2.mp4,['full_body_shaking'],"['verbal_responsiveness', 'arm_straightening']",2,0.0,0.0,1,2
+W0001@2-3-2020@DA001469@nes_v2_1.mp4,['full_body_shaking'],"['face_pulling', 'tonic', 'arm_straightening', 'verbal_responsiveness']",4,0.0,0.0,1,4
+W0001@2-3-2020@DA001469@nes_v3_1.mp4,"['face_twitching', 'full_body_shaking', 'face_twitching', 'full_body_shaking']","['arm_flexion', 'asynchronous_movement', 'full_body_shaking']",3,0.25,0.25,4,3
+W0001@2-3-2020@DA00146S@nes_v1_1.mp4,"['head_turning', 'clonic', 'full_body_shaking']",['arm_flexion'],3,0.6666666666666666,0.0,3,1
+W0001@2-3-2020@DA00146S@nes_v2_1.mp4,"['clonic', 'head_turning', 'face_twitching', 'arm_straightening', 'arm_flexion', 'clonic', 'tonic', 'face_twitching', 'clonic']","['arm_straightening', 'asynchronous_movement', 'verbal_responsiveness']",8,0.4444444444444444,0.1111111111111111,9,3
+Y0005@3-17-2022@DA1321FC@sz_v1_1.mp4,"['tonic', 'clonic', 'full_body_shaking']","['oral_automatisms', 'tonic', 'ictal_vocalization', 'full_body_shaking', 'head_turning', 'arm_flexion', 'eye_blinking', 'arm_straightening', 'figure4', 'clonic']",8,0.2,0.6666666666666666,3,10
+Y0005@3-17-2022@DA1321FC@sz_v2_1.mp4,"['tonic', 'clonic', 'full_body_shaking']","['oral_automatisms', 'ictal_vocalization', 'head_turning', 'face_pulling', 'face_twitching', 'arm_flexion', 'tonic', 'arm_straightening', 'figure4', 'clonic', 'full_body_shaking']",8,0.2727272727272727,1.0,3,11
+Y0008@1-26-2021@DA0015OO@nes_v1_1.mp4,"['face_twitching', 'full_body_shaking', 'face_twitching']","['close_eyes', 'asynchronous_movement', 'full_body_shaking']",3,0.5,0.3333333333333333,3,3
+Y0009@8-13-2020@UA6692CY@nes_v1_1.mp4,"['face_twitching', 'clonic', 'face_twitching', 'full_body_shaking']",['close_eyes'],4,0.75,0.0,4,1
+Z0013@11-12-2020@UA6692V7@sz_v1_1.mp4,['face_twitching'],"['oral_automatisms', 'arm_flexion', 'blank_stare', 'eye_blinking', 'head_turning']",5,0.0,0.0,1,5
+Z0013@11-12-2020@UA6692V8@sz_v1_1.mp4,"['face_twitching', 'close_eyes']","['limb_automatisms', 'oral_automatisms', 'eye_blinking', 'head_turning', 'blank_stare', 'tonic', 'arm_flexion']",7,0.0,0.0,2,7
+Z0014@3-26-2020@DA0014FA@sz_v1_1.mp4,"['full_body_shaking', 'face_twitching']","['head_turning', 'arm_flexion', 'tonic', 'face_pulling', 'full_body_shaking', 'ictal_vocalization', 'arm_straightening', 'face_twitching', 'clonic', 'eye_blinking']",8,0.2,1.0,2,10

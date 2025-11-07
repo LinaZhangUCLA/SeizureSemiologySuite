@@ -4,7 +4,7 @@ import re
 from collections import OrderedDict
 
 # ====================================
-BASE_DIR = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference_test"
+BASE_DIR = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference"
 # MODELS = [
 #     "InternVL3_5-8B",
 #     "InternVL3_5-38B",
@@ -16,7 +16,9 @@ BASE_DIR = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference_test"
 # ]
 
 MODELS = [
-    "seizure_omni_sft",
+    "Qwen3-VL-8B-Instruct",
+    "Qwen3-VL-32B-Instruct",
+    
 ]
 # ====================================
 

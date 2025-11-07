@@ -104,32 +104,32 @@ def main(pred_path: str, gt_path: str, out_path: str):
 if __name__ == "__main__":
 
     model_names = [
-        'Qwen2.5-VL-7B-Instruct',
         'InternVL3_5-8B',
-        'Qwen2.5-VL-32B-Instruct',
-        'InternVL3_5-38B',
-        'Qwen2.5-VL-72B-Instruct',
-        'audio-flamingo-3',
-        'Qwen2.5-Omni-7B',
-        'Lingshu-32B',
+        'Qwen2.5-VL-7B-Instruct',
         'Qwen3-VL-8B-Instruct',
+        'InternVL3_5-38B',
+        'Qwen2.5-VL-32B-Instruct',
         'Qwen3-VL-32B-Instruct',
+        'Qwen2.5-VL-72B-Instruct',
+        'Qwen2.5-Omni-7B',
+        "Qwen3-Omni-30B-A3B-Instruct",
+        'Lingshu-32B',   
     ]
     base_dir = '/home/lina/ssb/SeizureSemiologyBench/'
     metric_rows = []
     for model in model_names:
-        pred_csv = f"{base_dir}result/vlm_inference/{model}/Task5_{model}_all_merge.csv"
+        pred_csv = f"{base_dir}result/vlm_inference_test/{model}/Task5_{model}_all_merge.csv"
         if os.path.isfile(pred_csv):
             gt_csv = f"{base_dir}result/ground_truth/task5_sequence_annotation_vlm.csv"
             if("omni" in model.lower()):
                 gt_csv = f"{base_dir}result/ground_truth/task5_sequence_annotation.csv"
-            out_csv = f"{base_dir}metrics/task5/task5_sequence_3_metrics_{model}.csv"
+            out_csv = f"{base_dir}metrics_test/task5/task5_sequence_3_metrics_{model}.csv"
             model_metrics = main(pred_csv,gt_csv, out_csv)
             model_metrics["model"] = model
             metric_rows.append(model_metrics)
 
     out_df = pd.DataFrame(metric_rows, columns=["model","edit_distance", "temporal_f1","lcs_ratio"])
-    out_path = f"{base_dir}metrics/task5_sequence_3_metrics.csv"
+    out_path = f"{base_dir}metrics_test/task5_sequence_3_metrics.csv"
     out_df.to_csv(out_path, index=False, encoding="utf-8")
 
 

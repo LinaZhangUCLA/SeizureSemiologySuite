@@ -68,18 +68,18 @@ if __name__ == "__main__":
     # out_file = process_csv(input_csv)
     # print(f"已生成: {out_file}") 
     # Model names
-    base_dir = '/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference_test/'
+    base_dir = '/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference/'
     model_names = [
-        'InternVL3_5-8B',
         'Qwen2.5-VL-7B-Instruct',
-        'Qwen3-VL-8B-Instruct',
-        'InternVL3_5-38B',
+        'InternVL3_5-8B',
         'Qwen2.5-VL-32B-Instruct',
-        'Qwen3-VL-32B-Instruct',
+        'InternVL3_5-38B',
         'Qwen2.5-VL-72B-Instruct',
+        'audio-flamingo-3',
         'Qwen2.5-Omni-7B',
-        "Qwen3-Omni-30B-A3B-Instruct",
-        'Lingshu-32B',     
+        #'Lingshu-32B',
+        'Qwen3-VL-8B-Instruct',
+        'Qwen3-VL-32B-Instruct',
     ]
     metric_rows = []
     for model in model_names:
@@ -91,7 +91,7 @@ if __name__ == "__main__":
             metric_rows.append(mae_dict)
     
     out_df = pd.DataFrame(metric_rows, columns= (["model"] + features))
-    out_path = f"/home/lina/ssb/SeizureSemiologyBench/metrics_test/Task4_time_mae_metrics.csv"
+    out_path = f"/home/lina/ssb/SeizureSemiologyBench/metrics/task4_time_mae_metrics.csv"
     out_df.to_csv(out_path, index=False, encoding="utf-8")
     print("save to ", out_path)
 

@@ -135,14 +135,15 @@ if __name__ == "__main__":
         "InternVL3_5-8B",
         "Qwen2.5-VL-7B-Instruct",
         'Qwen3-VL-8B-Instruct',
-        "InternVL3_5-38B",
+        #"InternVL3_5-38B",
         "Qwen2.5-VL-32B-Instruct",
         'Qwen3-VL-32B-Instruct',
         "Qwen2.5-VL-72B-Instruct",
         
         "Qwen2.5-Omni-7B",
-        "Qwen3-Omni-30B-A3B-Instruct",
-        "Lingshu-32B",
+        "Qwen3-Omni-30B-A3B-Instruct"
+
+        #"Lingshu-32B",
     ]    
 
 
@@ -151,14 +152,14 @@ if __name__ == "__main__":
 
     metric_rows = []
     for model in MODELS:
-        input_csv = f"{base_dir}/result/vlm_inference_test/{model}/Task6_{model}_all_merged.csv"
+        input_csv = f"{base_dir}/result/vlm_inference/{model}/Task6_{model}_all_merged.csv"
         model_metrics = calculate_metrics(input_csv)
 
         model_metrics["model"] = model
         metric_rows.append(model_metrics)
 
     out_df = pd.DataFrame(metric_rows, columns=["model","bleu_corpus", "rouge1_f1","rougeL_f1","berts_f1"])
-    out_path = f"{base_dir}metrics_test/task6_report_nlp_metrics.csv"
+    out_path = f"{base_dir}metrics/task6_report_nlp_metrics.csv"
     out_df.to_csv(out_path, index=False, encoding="utf-8")
     print("save to ", out_path)
 

@@ -50,7 +50,7 @@ def get_model_metrics(model_name, model_path_name):
         
         # Process head turning feature
         try:
-            pred_path = f'result/vlm_inference_test/{model_path_name}/Task3_HT_{model_path_name}.csv'
+            pred_path = f'result/vlm_inference/{model_path_name}/Task3_HT_{model_path_name}.csv'
             df_pred = pd.read_csv(pred_path, encoding='latin-1')
             
             # Merge ground truth and predictions
@@ -91,7 +91,7 @@ def get_model_metrics(model_name, model_path_name):
             
         # Process arm movement feature
         try:
-            pred_path = f'result/vlm_inference_test/{model_path_name}/Task3_AM_{model_path_name}.csv'
+            pred_path = f'result/vlm_inference/{model_path_name}/Task3_AM_{model_path_name}.csv'
             df_pred = pd.read_csv(pred_path, encoding='latin-1')
             
             # Merge ground truth and predictions
@@ -132,7 +132,7 @@ def get_model_metrics(model_name, model_path_name):
             
         # Process body region onset feature
         try:
-            pred_path = f'result/vlm_inference_test/{model_path_name}/Task3_L_{model_path_name}.csv'
+            pred_path = f'result/vlm_inference/{model_path_name}/Task3_L_{model_path_name}.csv'
             df_pred = pd.read_csv(pred_path, encoding='latin-1')
             
             # Process predictions - take first prediction for each video
@@ -249,19 +249,16 @@ def write_metrics_file(model_names, results_dict, output_path):
 def main():
     # Model names
     model_names = [
-        
-        'InternVL3.5-8B',
         'Qwen2.5-VL-7B',
-        'Qwen3-VL-8B',  
-        'InternVL3.5-38B',
+        'InternVL3.5-8B',
         'Qwen2.5-VL-32B',
-        'Qwen3-VL-32B',
+        'InternVL3.5-38B',
         'Qwen2.5-VL-72B',
         #'Audio-flamingo-3',
         'Qwen2.5-Omni-7B',
-        'Qwen3-Omni-30B',
-        'Lingshu-32B' ,     
-        
+        'Lingshu-32B',
+        'Qwen3-VL-8B',
+        'Qwen3-VL-32B'
     ]
 
     # Mapping from display model names to actual file path names
@@ -273,15 +270,12 @@ def main():
         'Qwen2.5-VL-72B': 'Qwen2.5-VL-72B-Instruct',
         'Audio-flamingo-3': 'audio-flamingo-3',
         'Qwen2.5-Omni-7B': 'Qwen2.5-Omni-7B',
-
-        'Qwen3-VL-8B': 'Qwen3-VL-8B-Instruct',
-        'Qwen3-VL-32B': 'Qwen3-VL-32B-Instruct',
-        'Qwen3-Omni-30B': "Qwen3-Omni-30B-A3B-Instruct",
-
         'Lingshu-32B': 'Lingshu-32B',
+        'Qwen3-VL-8B': 'Qwen3-VL-8B-Instruct',
+        'Qwen3-VL-32B': 'Qwen3-VL-32B-Instruct'
     }
     
-    output_path = 'metrics_test/Task3_spatial_metrics.csv'
+    output_path = 'metrics/Task3_spatial_metrics.csv'
     
     # Calculate metrics for each model
     results_dict = {}

@@ -10,8 +10,8 @@ from typing import List, Dict, Tuple
 import pandas as pd
 
 API_BASE = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-API_KEY = "sk-853145a6309e48ad83e2d0cd01a155a1"
-MODEL = "qwen-plus-latest"
+API_KEY = "sk-67abd783fc3b48c28e8c97e88f21cb91"
+MODEL = "qwen-plus"
 
 
 BASE_DIR = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference/"
@@ -155,7 +155,6 @@ async def main_async(INPUT_CSV,OUTPUT_CSV):
         results = await asyncio.gather(*tasks)
 
     out_df = pd.DataFrame(results, columns=["original_file_name", "report"])
-    out_df = out_df.rename(columns={"original_file_name": "file_name"})
     out_df.to_csv(OUTPUT_CSV, index=False, encoding="utf-8")
     print(f"[DONE] wrote: {OUTPUT_CSV}")
 
@@ -166,15 +165,15 @@ if __name__ == "__main__":
 
     MODELS = [
         #"InternVL3_5-8B",
-        "InternVL3_5-38B",
-        # "Qwen2.5-VL-7B-Instruct",
-        # "Qwen2.5-VL-32B-Instruct",
-        # "Qwen2.5-VL-72B-Instruct",
-        "Lingshu-32B",
-        # "Qwen2.5-Omni-7B",
-        # 'Qwen3-VL-8B-Instruct',
-        # 'Qwen3-VL-32B-Instruct',
-        "Qwen3-Omni-30B-A3B-Instruct",
+        #"InternVL3_5-38B",
+        "Qwen2.5-VL-7B-Instruct",
+        "Qwen2.5-VL-32B-Instruct",
+        "Qwen2.5-VL-72B-Instruct",
+        #"Lingshu-32B",
+        "Qwen2.5-Omni-7B",
+        'Qwen3-VL-8B-Instruct',
+        'Qwen3-VL-32B-Instruct',
+        "Qwen3-Omni-30B-A3B-Instruct"
     ]    
     for model in MODELS:
         INPUT_CSV = f"{BASE_DIR}/{model}/Task6_{model}_all.csv"

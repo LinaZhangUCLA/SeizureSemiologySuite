@@ -1,4 +1,36 @@
 file_name,event_sequence
+A0003@10-20-2020@DA0015B9@sz_v1_1_segment_1.mp4,"arm_straightening, arm_flexion"
+A0003@10-20-2020@DA0015B9@sz_v2_1_segment_1.mp4,arm_straightening
+A0003@10-20-2020@DA0015BA@sz_v3_1_segment_1.mp4,clonic
+A0003@10-20-2020@DA0015BA@sz_v4_1_segment_1.mp4,full_body_shaking
+A0003@10-20-2020@UA6692PZ@sz_v1_1_segment_1.mp4,face_twitching
+A0003@10-20-2020@UA6692Q0@sz_v1_1_segment_1.mp4,face_twitching
+A0003@10-20-2020@UA6692Q0@sz_v3_1_segment_1.mp4,full_body_shaking
+A0003@10-20-2020@UA6692Q0@sz_v4_1_segment_1.mp4,tonic
+A0003@10-20-2020@UA6692Q1@sz_v1_1_segment_1.mp4,face_twitching
+A0003@10-20-2020@UA6692Q1@sz_v2_1_segment_1.mp4,full_body_shaking
+D0003@8-20-2018@DA0011FY@sz_v1_1_segment_1.mp4,face_twitching
+D0003@8-20-2018@DA0011FY@sz_v1_1_segment_2.mp4,"tonic, clonic"
+D0003@8-20-2018@DA7021DY@sz_v1_1_segment_1.mp4,"tonic, clonic"
+D0003@8-20-2018@DA7021DY@sz_v1_1_segment_2.mp4,full_body_shaking
+E0009@11-23-2020@DA0015I7@sz_v1_1_segment_1.mp4,"tonic, clonic"
+E0009@11-23-2020@DA0015I7@sz_v1_1_segment_2.mp4,face_twitching
+E0009@11-23-2020@DA0015I8@sz_v1_1_segment_1.mp4,full_body_shaking
+E0009@11-23-2020@DA0015I8@sz_v1_1_segment_2.mp4,face_twitching
+E0009@11-23-2020@DA0015II@sz_v1_1_segment_1.mp4,"tonic, clonic"
+E0009@11-23-2020@DA0015II@sz_v1_1_segment_2.mp4,face_twitching
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_1.mp4,face_twitching
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_2.mp4,"tonic, clonic"
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_3.mp4,face_twitching
+G0001@6-20-2019@DA0012ZY@sz_v2_1_segment_1.mp4,face_twitching
+G0001@6-20-2019@DA0012ZY@sz_v2_1_segment_2.mp4,full_body_shaking
+G0001@6-20-2019@DA0012ZY@sz_v2_1_segment_3.mp4,full_body_shaking
+I0001@8-25-2022@KA96029R@sz_v1_1_segment_1.mp4,face_twitching
+I0004@11-18-2019@UA669194@sz_v6_1_segment_1.mp4,"tonic, clonic"
+I0004@11-18-2019@UA669194@sz_v6_1_segment_2.mp4,face_twitching
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_1.mp4,face_twitching
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_2.mp4,face_twitching
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_3.mp4,face_twitching
 N0011@4-1-2021@DA001614@sz_v1_1_segment_1.mp4,"tonic, clonic"
 N0011@4-1-2021@DA001614@sz_v1_1_segment_2.mp4,"face_twitching, full_body_shaking"
 N0011@4-1-2021@DA001614@sz_v1_1_segment_3.mp4,arm_straightening

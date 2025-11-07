@@ -70,16 +70,16 @@ if __name__ == "__main__":
     # Model names
     base_dir = '/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference/'
     model_names = [
-        'Qwen2.5-VL-7B-Instruct',
         'InternVL3_5-8B',
-        'Qwen2.5-VL-32B-Instruct',
-        'InternVL3_5-38B',
-        'Qwen2.5-VL-72B-Instruct',
-        'audio-flamingo-3',
-        'Qwen2.5-Omni-7B',
-        #'Lingshu-32B',
+        'Qwen2.5-VL-7B-Instruct',
         'Qwen3-VL-8B-Instruct',
+        'InternVL3_5-38B',
+        'Qwen2.5-VL-32B-Instruct',
         'Qwen3-VL-32B-Instruct',
+        'Qwen2.5-VL-72B-Instruct',
+        'Qwen2.5-Omni-7B',
+        "Qwen3-Omni-30B-A3B-Instruct",
+        'Lingshu-32B',     
     ]
     metric_rows = []
     for model in model_names:

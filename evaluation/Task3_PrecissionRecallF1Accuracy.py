@@ -249,16 +249,19 @@ def write_metrics_file(model_names, results_dict, output_path):
 def main():
     # Model names
     model_names = [
-        'Qwen2.5-VL-7B',
+        
         'InternVL3.5-8B',
-        'Qwen2.5-VL-32B',
+        'Qwen2.5-VL-7B',
+        'Qwen3-VL-8B',  
         'InternVL3.5-38B',
+        'Qwen2.5-VL-32B',
+        'Qwen3-VL-32B',
         'Qwen2.5-VL-72B',
         #'Audio-flamingo-3',
         'Qwen2.5-Omni-7B',
-        'Lingshu-32B',
-        'Qwen3-VL-8B',
-        'Qwen3-VL-32B'
+        'Qwen3-Omni-30B',
+        'Lingshu-32B' ,     
+        
     ]
 
     # Mapping from display model names to actual file path names
@@ -270,9 +273,12 @@ def main():
         'Qwen2.5-VL-72B': 'Qwen2.5-VL-72B-Instruct',
         'Audio-flamingo-3': 'audio-flamingo-3',
         'Qwen2.5-Omni-7B': 'Qwen2.5-Omni-7B',
-        'Lingshu-32B': 'Lingshu-32B',
+
         'Qwen3-VL-8B': 'Qwen3-VL-8B-Instruct',
-        'Qwen3-VL-32B': 'Qwen3-VL-32B-Instruct'
+        'Qwen3-VL-32B': 'Qwen3-VL-32B-Instruct',
+        'Qwen3-Omni-30B': "Qwen3-Omni-30B-A3B-Instruct",
+
+        'Lingshu-32B': 'Lingshu-32B',
     }
     
     output_path = 'metrics/Task3_spatial_metrics.csv'

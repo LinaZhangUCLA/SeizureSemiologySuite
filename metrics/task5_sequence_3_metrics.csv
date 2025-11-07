@@ -1,8 +1,11 @@
 model,edit_distance,temporal_f1,lcs_ratio
-Qwen2.5-VL-7B-Instruct,39.83,0.54,0.1
 InternVL3_5-8B,867.79,0.61,0.04
-Qwen2.5-VL-32B-Instruct,543.53,0.55,0.05
+Qwen2.5-VL-7B-Instruct,39.83,0.54,0.1
+Qwen3-VL-8B-Instruct,19.44,0.52,0.14
 InternVL3_5-38B,13.91,0.51,0.16
+Qwen2.5-VL-32B-Instruct,543.53,0.55,0.05
+Qwen3-VL-32B-Instruct,17.51,0.51,0.15
 Qwen2.5-VL-72B-Instruct,17.36,0.5,0.16
 Qwen2.5-Omni-7B,43.3,0.54,0.09
+Qwen3-Omni-30B-A3B-Instruct,4.21,0.13,0.24
 Lingshu-32B,36.84,0.52,0.1

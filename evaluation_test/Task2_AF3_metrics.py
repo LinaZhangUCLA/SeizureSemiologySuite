@@ -6,14 +6,15 @@ from rouge_score import rouge_scorer
 import torch
 from transformers import AutoTokenizer, AutoModel
 
-os.environ["TRANSFORMERS_CACHE"] = "/mnt/SSD3/xinyi/hf_cache"
+os.environ["TRANSFORMERS_CACHE"] = "/mnt/SSD3/lina/hf_cache"
 
-PRED_CSV = "result/vlm_inference/audio-flamingo-3/Task12_AF3_features_all.csv"  
-GT_CSV   = "result/ground_truth/task12_annotation.csv"
-OUT_DIR  = "metrics/Task2_feature_metrics"
+PRED_CSV = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference_test/audio-flamingo-3/Task12_AF3_features_all.csv"  
+GT_CSV   = "/home/lina/ssb/SeizureSemiologyBench/result/ground_truth/task12_annotation.csv"
+OUT_DIR  = "/home/lina/ssb/SeizureSemiologyBench/metrics_test/Task2_feature_metrics"
 ID_COL   = "file_name"
 
-LOCAL_MODEL_PATH = '/Users/eehan/Desktop/deberta-xlarge-mnli'
+#LOCAL_MODEL_PATH = '/Users/eehan/Desktop/deberta-xlarge-mnli'
+LOCAL_MODEL_PATH = "/mnt/SSD3/lina/bertmodel"
 
 LOWERCASE = True
 LANG = "en"                                 
@@ -141,7 +142,8 @@ if merged.empty:
 
 # Load local model and tokenizer for BERTScore
 print(f"Loading local model from {LOCAL_MODEL_PATH}...")
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+#device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
 tokenizer = AutoTokenizer.from_pretrained(LOCAL_MODEL_PATH)
 model = AutoModel.from_pretrained(LOCAL_MODEL_PATH).to(device)
 model.eval()
@@ -196,7 +198,7 @@ for col in numeric_cols[1:]:
 
 feat_sum = pd.concat([feat_sum, pd.DataFrame([avg_row])], ignore_index=True)
 
-out_path = os.path.join(OUT_DIR, "Task1_AF3_llmmerge_feature_summary.csv")
+out_path = os.path.join(OUT_DIR, "AF3_feature_summary.csv")
 feat_sum.to_csv(out_path, index=False)
 print(f"Saved -> {out_path}")
 

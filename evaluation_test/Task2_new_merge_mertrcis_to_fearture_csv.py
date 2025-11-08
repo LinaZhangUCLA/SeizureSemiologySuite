@@ -3,9 +3,9 @@ import glob
 import os
 
 # --- Configuration ---
-INPUT_FOLDER_PATH = "metrics/Task2_feature_metrics" 
+INPUT_FOLDER_PATH = "/home/lina/ssb/SeizureSemiologyBench/metrics_test/Task2_feature_metrics" 
 FILE_PATTERN = "*_feature_summary.csv"
-OUTPUT_FILENAME = "metrics/task2_feature_metrics.csv"
+OUTPUT_FILENAME = "/home/lina/ssb/SeizureSemiologyBench/metrics_test/task2_feature_metrics.csv"
 
 # Define the desired feature order
 FEATURE_ORDER = [
@@ -34,15 +34,16 @@ FEATURE_ORDER = [
 # Define model display names order
 MODEL_NAMES = [
     'Qwen2.5-VL-7B',
-    'InternVL3.5-8B',
+    'InternVL3_5-8B',
     'Qwen2.5-VL-32B',
-    'InternVL3.5-38B',
+    'InternVL3_5-38B',
     'Qwen2.5-VL-72B',
     'Audio-flamingo-3',
     'Qwen2.5-Omni-7B',
     'Lingshu-32B',
     'Qwen3-VL-8B',
     'Qwen3-VL-32B'
+
 ]
 
 # Mapping from display model names to actual file path names

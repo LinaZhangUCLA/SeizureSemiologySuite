@@ -1,9 +1,12 @@
 model,RQI
 InternVL3_5-8B,40.166
 Qwen2.5-VL-7B-Instruct,40.082
-Qwen2.5-VL-32B-Instruct,28.611
-Qwen2.5-VL-72B-Instruct,38.166
-Qwen2.5-Omni-7B,43.199
 Qwen3-VL-8B-Instruct,43.31
+InternVL3_5-38B,
+Qwen2.5-VL-32B-Instruct,28.611
 Qwen3-VL-32B-Instruct,35.516
+Qwen2.5-VL-72B-Instruct,38.166
+
+Qwen2.5-Omni-7B,43.199
 Qwen3-Omni-30B-A3B-Instruct,
+Lingshu-32B”,

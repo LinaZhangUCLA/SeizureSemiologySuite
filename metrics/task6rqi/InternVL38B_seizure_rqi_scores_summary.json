@@ -1,0 +1,14 @@
+{
+  "mean_seizure_rqi": 30.597625468364008,
+  "std_seizure_rqi": 19.60702005977262,
+  "min_seizure_rqi": 0.0,
+  "max_seizure_rqi": 87.75,
+  "mean_structural": 75.1841620626151,
+  "mean_coverage": 31.306304959619872,
+  "mean_temporal_f1": 30.388245750205456,
+  "mean_localizing": 20.073664825046038,
+  "total_hallucinations": 974,
+  "reports_with_safety_issues": 0,
+  "reports_with_non_seizure": 47,
+  "total_reports": 362
+}

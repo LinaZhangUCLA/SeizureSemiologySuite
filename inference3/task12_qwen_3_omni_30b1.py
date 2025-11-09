@@ -34,7 +34,7 @@ def parse_arguments():
 
     # Data settings
     parser.add_argument('--dataset_dir', type=str,
-                       default='/home/siyuan/projects/ucla_cvpr/30_sec.mp4',
+                       default='./datas/task12',
                        help='Directory containing seizure video files')
     # cache directory
     parser.add_argument('--cache_dir', type=str, default=default_model_cache_dir,
@@ -203,10 +203,9 @@ from qwen_omni_utils import process_mm_info
 # Load base model first (Omni: audio+video capable)
 model = Qwen3OmniMoeForConditionalGeneration.from_pretrained(
     model_name,
-    torch_dtype=torch.bfloat16,
+    dtype="auto",
+    device_map="auto",
     attn_implementation="sdpa",
-    #attn_implementation="flash_attention_2",
-    device_map="auto"
 )
 # 明确只输出文本（若方法存在）
 if hasattr(model, "disable_talker"):
@@ -251,26 +250,8 @@ def get_video_frames(video_file_path, num_frames=128, cache_dir=video_cache_dir)
 
     # Read video using torchvision
     video_tensor, audio_tensor, video_info = read_video(video_file_path, pts_unit='sec')
-    # pts_list, fps = read_video_timestamps(video_file_path)  # 这是“帧的PTS序列”
-    # print(len(pts_list), fps)
-    # if len(pts_list) > 0:
-    #     start_pts = pts_list[0]
-    #     end_pts = pts_list[-1] + 1  # 读到最后一帧
-    #     video, audio, info = read_video(
-    #         path,
-    #         start_pts=start_pts,
-    #         end_pts=end_pts,
-    #         pts_unit='pts',           # 这里的单位与 pts_list 对齐
-    #         output_format="THWC"      # 可选：改输出格式
-    #     )
-    #     print(video.shape, info)
-    # else:
-    #     print("PTS 为空 → 解码器/视频有问题")
     total_frames = video_tensor.shape[0]
-    fps = 30
-    if isinstance(video_info, dict):
-        fps = video_info.get('video_fps', 30)
-    #fps = video_info['video_fps']
+    fps = video_info['video_fps']
     # print("total_frames : ", total_frames)
 
     indices = np.linspace(0, total_frames - 1, num=num_frames, dtype=int)
@@ -323,52 +304,44 @@ def _extract_audio_to_wav(video_path: str) -> str:
         return ""
 
 
-def inference(video_path, prompt, max_new_tokens=None, max_pixels=602112, min_pixels=16 * 28 * 28):
-    """
-    使用 Qwen3-Omni：同时提供 video + 显式抽取的 audio（若可用），只输出文本。
-    """
+def inference(video_path, query_prompt, max_new_tokens=None):
     if max_new_tokens is None:
         max_new_tokens = MAX_NEW_TOKENS
 
-    # 优先显式提供音频轨，避免“在视频里找不到音频”的情况
-    audio_path = _extract_audio_to_wav(video_path)
-    use_audio_in_video = False if audio_path else True
-
     messages = [
-        {"role": "user", "content": [
+    {
+        "role": "user",
+        "content": [
             {"type": "video", "video": video_path},
-            *([{"type": "audio", "audio": audio_path}] if audio_path else []),
-            {"type": "text", "text": prompt},
-        ]}
+            {"type": "text", "text": query_prompt}
+        ],
+    },
     ]
-
-    # 组织多模态输入
-    text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    use_audio_in_video = True
+    text = processor.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)
     audios, images, videos = process_mm_info(messages, use_audio_in_video=use_audio_in_video)
-    print(audios)
-    print(type(audios))
-    inputs = processor(
-        text=[text],
-        audio=audios, images=images, videos=videos,
-        padding=True, return_tensors="pt",
-        use_audio_in_video=use_audio_in_video
-    )
-    # 放到模型设备/精度
+    inputs = processor(text=text, 
+                    audio=audios, 
+                    images=images, 
+                    videos=videos, 
+                    return_tensors="pt", 
+                    padding=True, 
+                    use_audio_in_video=use_audio_in_video)
     inputs = inputs.to(model.device).to(model.dtype)
 
-    # 仅文本生成（不返回/不保存音频）
-    raw_out = None
-    try:
-        raw_out = model.generate(**inputs, max_new_tokens=max_new_tokens, use_audio_in_video=use_audio_in_video, return_audio=False)
-        output_ids = raw_out[0] if isinstance(raw_out, (tuple, list)) else raw_out
-    except TypeError:
-        raw_out = model.generate(**inputs, max_new_tokens=max_new_tokens, use_audio_in_video=use_audio_in_video)
-        output_ids = raw_out[0] if isinstance(raw_out, (tuple, list)) else raw_out
+    # Inference: Generation of the output text only
+    with torch.no_grad():
+        text_ids, audio = model.generate(**inputs, 
+                                        use_audio_in_video=use_audio_in_video,
+                                        max_new_tokens=max_new_tokens,
+                                        return_audio=False,
+                                        do_sample=False,
+                                        temperature=0.0)
 
-    # 解码
-    generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]
-    output_text = processor.batch_decode(generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True)
-    return output_text[0]
+    text = processor.batch_decode(text_ids[:, inputs["input_ids"].shape[1] :],
+                                skip_special_tokens=True,
+                                clean_up_tokenization_spaces=False)
+    return text[0]
 
 # ================== Paths and file names ==================
 
@@ -505,7 +478,7 @@ def format_time(orig_time_str):
     return "N/A"
 
 
-def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_dict, json_error_log):
+def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_dict):
     """
     Extract features from the video by the VLM for each prompt in prompt_list,
     Return a list of extracted features in the same order as prompt_list.
@@ -530,29 +503,11 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                 # Try direct JSON parsing first
                 try:
                     answer_json = json.loads(raw_answer)
-                except json.JSONDecodeError as json_err:
-                    # Log JSON parsing error to file
-                    json_error_log.write(f"Video: {file_name}\n")
-                    json_error_log.write(f"Feature: {feature}\n")
-                    json_error_log.write(f"Attempt: {retry_count + 1}\n")
-                    json_error_log.write(f"Direct Parsing Failed: {str(json_err)}\n")
-                    json_error_log.write(f"Attempting to clean response.")
-                    json_error_log.write(f"Raw response: {raw_answer}\n")
-                    json_error_log.write("-" * 50 + "\n\n")
-                    json_error_log.flush()  # Ensure it's written immediately
-                    
+                except json.JSONDecodeError:
                     # If direct parsing fails, try cleaning the response
                     print(f"Direct JSON parsing failed, attempting to clean response...")
                     answer_json = clean_json_response(raw_answer)
                     if answer_json is None:
-                        # Log the cleaning failure too
-                        json_error_log.write(f"Video: {file_name}\n")
-                        json_error_log.write(f"Feature: {feature}\n")
-                        json_error_log.write(f"Attempt: {retry_count + 1}\n")
-                        json_error_log.write(f"Error: Failed to parse JSON even after cleaning\n")
-                        json_error_log.write(f"Raw response: {raw_answer}\n")
-                        json_error_log.write("-" * 50 + "\n\n")
-                        json_error_log.flush()
                         raise ValueError("Failed to parse JSON even after cleaning")
 
                 answer = answer_json['answer']
@@ -610,18 +565,6 @@ def main():
         output_header.append(feature)
         output_header.append(f'justification_for_{feature}')
 
-    # Create or append to JSON parsing error log file
-    json_error_log_path = os.path.join(inference_dir, f"qwen3_omni_30b_task12_{args.gpu}.log")
-    
-    # Check if file exists and is not empty
-    file_exists_and_has_content = os.path.exists(json_error_log_path) and os.path.getsize(json_error_log_path) > 0
-    
-    json_error_log = open(json_error_log_path, 'a', encoding='utf-8')
-    
-    # Only write header if file is new (doesn't exist or is empty)
-    if not file_exists_and_has_content:
-        json_error_log.write("JSON Parsing Error Log\n")
-        json_error_log.write("=" * 50 + "\n\n")
 
     # List all files in the directory to check existence quickly
     input_videos_files = os.listdir(dataset_dir)
@@ -662,14 +605,6 @@ def main():
     for video_idx, file_name in enumerate(video_list):
 
         log_file = None
-        # if not args.disable_logs:
-        #     log_file = inference_log_dir + f'/{file_name}---log.csv'
-        #     # Create log CSV with header if it doesn't exist
-        #     # log_header = ["file_name", "prompt", "answer", "justification", "start_time"]
-        #     log_header = ["file_name", "prompt", "answer", "justification"]
-        #     with open(log_file, 'w', newline='', encoding='utf-8') as f:
-        #         writer = csv.writer(f)
-        #         writer.writerow(log_header)
 
         video_path = os.path.join(dataset_dir, file_name)
         row_to_write = [file_name]
@@ -683,7 +618,7 @@ def main():
             #video_path = os.path.join(directory, file_name)
             print(f"Processing: {video_path}")
             try:
-                answer_dict = ExtractFeatureByVLM(video_path, file_name, (video_idx + 1, len(video_list)), log_file, prompt_dict, json_error_log)
+                answer_dict = ExtractFeatureByVLM(video_path, file_name, (video_idx + 1, len(video_list)), log_file, prompt_dict)
                 # Build row with proper structure: feature, justification, start_time for each feature
                 for feature in prompt_dict.keys():
                     if feature in answer_dict:
@@ -714,9 +649,8 @@ def main():
         # Append to the output CSV (no header since it's already written)
         append_to_csv(inf_result_csv_fp, row_to_write)
 
-    # Close the JSON error log file
-    json_error_log.close()
-    print(f"Processing is complete. Results are in '{inf_result_csv_fp}', JSON parsing errors logged in '{json_error_log_path}'.")
+
+        print(f"Processing is complete. Results are in '{inf_result_csv_fp}', logs in '{log_file}'.")
 
 if __name__ == "__main__":
     print(f"Starting seizure video feature extraction...")
@@ -732,26 +666,3 @@ if __name__ == "__main__":
 
     main()
 
-    # print("\n" + "="*50)
-    # print("USAGE EXAMPLES:")
-    # print("="*50)
-    # print("# Use default settings:")
-    # print("python ExtractFeature_qwen-2.5-vl-new.py")
-    # print()
-    # print("# Use different GPU:")
-    # print("python ExtractFeature_qwen-2.5-vl-new.py --gpu 0")
-    # print()
-    # print("# Process more videos:")
-    # print("python ExtractFeature_qwen-2.5-vl-new.py --max_videos 20")
-    # print()
-    # print("# Use different dataset:")
-    # print("python ExtractFeature_qwen-2.5-vl-new.py --dataset_dir /path/to/videos")
-    # print()
-    # print("# Use different model:")
-    # print("python ExtractFeature_qwen-2.5-vl-new.py --model_name Qwen/Qwen2.5-VL-14B-Instruct")
-    # print()
-    # print("# Enable individual log files for each video:")
-    # print("python ExtractFeature_qwen-2.5-vl-new.py --disable_logs false")
-    # print()
-    # print("# See all options:")
-    # print("python ExtractFeature_qwen-2.5-vl-new.py --help")

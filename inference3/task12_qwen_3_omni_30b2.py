@@ -205,6 +205,7 @@ model = Qwen3OmniMoeForConditionalGeneration.from_pretrained(
     model_name,
     torch_dtype=torch.bfloat16,
     attn_implementation="sdpa",
+    #attn_implementation="flash_attention_2",
     device_map="auto"
 )
 # 明确只输出文本（若方法存在）
@@ -266,7 +267,10 @@ def get_video_frames(video_file_path, num_frames=128, cache_dir=video_cache_dir)
     # else:
     #     print("PTS 为空 → 解码器/视频有问题")
     total_frames = video_tensor.shape[0]
-    fps = video_info['video_fps']
+    fps = 30
+    if isinstance(video_info, dict):
+        fps = video_info.get('video_fps', 30)
+    #fps = video_info['video_fps']
     # print("total_frames : ", total_frames)
 
     indices = np.linspace(0, total_frames - 1, num=num_frames, dtype=int)

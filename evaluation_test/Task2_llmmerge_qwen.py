@@ -14,7 +14,7 @@ API_KEY = 'sk-03164559b7d548da873c5d7a934a9059'   # <-- Put your DashScope API k
 MODEL = "qwen-plus"
 
 # File paths
-BASE_DIR = "result/vlm_inference"
+BASE_DIR = "result/vlm_inference_test"
 MODELS = [
     # "InternVL3_5-8B",
     # "InternVL3_5-38B",
@@ -23,8 +23,9 @@ MODELS = [
     # "Qwen2.5-VL-72B-Instruct",
     # "Lingshu-32B",
     # "Qwen2.5-Omni-7B",
-    'Qwen3-VL-8B-Instruct',
+    #'Qwen3-VL-8B-Instruct',
     #'Qwen3-VL-32B-Instruct'
+    'seizure_omni_sft'
 ]
 
 # Processing settings
@@ -173,8 +174,8 @@ async def process_one_model(model_name: str, session):
     csv_in = os.path.join(model_dir, f"Task12_{model_name}_all_merged.csv")
     csv_out = os.path.join(model_dir, f"Task12_{model_name}_all_merged_llmmerge.csv")
 
-    csv_in = os.path.join(model_dir, f"Task12_{model_name}_diff.csv")
-    csv_out = os.path.join(model_dir, f"Task12_{model_name}_all_merged_llmmerge2.csv")
+    # csv_in = os.path.join(model_dir, f"Task12_{model_name}_diff.csv")
+    # csv_out = os.path.join(model_dir, f"Task12_{model_name}_all_merged_llmmerge2.csv")
 
 
     if not os.path.exists(csv_in):

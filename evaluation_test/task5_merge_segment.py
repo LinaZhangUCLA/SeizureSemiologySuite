@@ -109,21 +109,23 @@ if __name__ == "__main__":
     # print(f"已生成: {out_file}") 
     # Model names
     model_names = [
-        'InternVL3_5-8B',
-        'Qwen2.5-VL-7B-Instruct',
-        'Qwen3-VL-8B-Instruct',
-        'InternVL3_5-38B',
-        'Qwen2.5-VL-32B-Instruct',
-        'Qwen3-VL-32B-Instruct',
-        'Qwen2.5-VL-72B-Instruct',
-        'Qwen2.5-Omni-7B',
-        "Qwen3-Omni-30B-A3B-Instruct",
-        'Lingshu-32B',     
+        # 'InternVL3_5-8B',
+        # 'Qwen2.5-VL-7B-Instruct',
+        # 'Qwen3-VL-8B-Instruct',
+        # 'InternVL3_5-38B',
+        # 'Qwen2.5-VL-32B-Instruct',
+        # 'Qwen3-VL-32B-Instruct',
+        # 'Qwen2.5-VL-72B-Instruct',
+        # 'Qwen2.5-Omni-7B',
+        # "Qwen3-Omni-30B-A3B-Instruct",
+        # 'Lingshu-32B',    
+        'seizure_omni_sft' ,
+        'seizure_omni_grpo'   
     ]
     
     for model in model_names:
         print(model)
-        base_dir = '/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference/'
+        base_dir = '/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference_test/'
         input_csv = f"{base_dir}{model}/Task5_{model}_all.csv"
         if os.path.isfile(input_csv):
             out_file = process_csv(input_csv)

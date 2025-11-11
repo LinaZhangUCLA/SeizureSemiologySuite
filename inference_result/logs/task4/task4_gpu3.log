@@ -2318,3 +2318,12 @@ Prompt Used:
         
 Raw Response: {"timestamp": "00:30"}
 --------------------------------------------------
+Video: N0011@4-1-2021@DA00161G@sz_v1_1_ictal_vocalization.mp4
+Prompt Used: 
+        This video shows when a patient patient make any groaning, moaning, guttural sounds or utter stereotyped repetitive phrases 
+        Tell me the exact timestamp (MM:SS) when this symptom first appears.
+        Output EXACTLY one timestamp in MM:SS format. No text, no JSON, no code fences.
+        Do NOT output 00:00 unless the symptom is clearly begins within the first 0.0–0.9 seconds of the clip..
+        
+Raw Response: 00:00
+--------------------------------------------------

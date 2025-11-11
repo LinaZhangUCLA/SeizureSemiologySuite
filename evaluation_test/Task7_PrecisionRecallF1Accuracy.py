@@ -237,6 +237,9 @@ def main():
         "Qwen3-Omni-30B-A3B-Instruct",
         "Lingshu-32B",
 
+        'seizure_omni_sft' ,
+        'seizure_omni_grpo',   
+
     ]
     
     # Mapping from display model names to actual file path names

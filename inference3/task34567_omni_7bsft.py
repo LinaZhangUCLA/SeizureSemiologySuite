@@ -4,6 +4,7 @@
 # from torchvision.io import read_video    # pip install torchvision
 # === [Injected] Audio imports from task3456 ===
 import subprocess, os
+import traceback
 
 import os
 import json
@@ -61,7 +62,7 @@ args = parse_arguments()
 gpu_str = "".join(str(args.gpu).split(',')) 
 
 # Set GPU environment variable
-os.environ['CUDA_VISIBLE_DEVICES'] = "1" if (str(args.gpu) == '0') else "2"
+os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 
 # Set the directories/paths from arguments
 ################################################################################################
@@ -192,7 +193,7 @@ from peft import PeftModel
 # Load base model first
 model = Qwen2_5OmniForConditionalGeneration.from_pretrained(
     model_name,
-    torch_dtype=torch.float16,
+    torch_dtype=torch.bfloat16,
     attn_implementation="sdpa",
     device_map="auto",
 )
@@ -742,6 +743,7 @@ def main():
                     with open(task3_HT_result_csv_fp, 'a') as f:
                         f.write(f"{video_name},{HT_ans}\n")
                 except Exception as e:
+                    traceback.print_exc()
                     print(f"Error processing video {video_name} for head turning: {e}")
                     with open(task3_HT_result_csv_fp, 'a') as f:
                         f.write(f"{video_name},N/A\n")
@@ -812,13 +814,13 @@ def main():
 
         gpu_indices = [int(x) for x in str(args.gpu).split(',')]
         feature_folders = []
-        for idx in gpu_indices:
-            if idx < 0 or idx >= len(feature_folders_split):
-                raise ValueError(f"Invalid GPU index {idx}, valid range: 0-{len(feature_folders_split)-1}")
-            feature_folders.extend(feature_folders_split[idx])
-        print(f"Selected features from GPUs {args.gpu}: {feature_folders}")
+        # for idx in gpu_indices:
+        #     if idx < 0 or idx >= len(feature_folders_split):
+        #         raise ValueError(f"Invalid GPU index {idx}, valid range: 0-{len(feature_folders_split)-1}")
+        #     feature_folders.extend(feature_folders_split[idx])
+        # print(f"Selected features from GPUs {args.gpu}: {feature_folders}")
 
-        
+        feature_folders = [item for group in feature_folders_split for item in group]
 
         processed = set()
         with open(task4_result_csv_fp, 'r') as f:
@@ -873,7 +875,7 @@ def main():
     except Exception as e:
         print(f"Error in Task 4 processing: {e}")
         traceback.print_exc()
-    =============================================== task5  =============================================================== #
+    #=============================================== task5  =============================================================== #
     try:
 
         def init_csv(file_path, header):
@@ -897,7 +899,8 @@ def main():
                             
                     if video_clip_name in task5_processed:
                         print(f"Video {video_clip_name} already processed for both tasks. Skipping.")
-                        continue           
+                        continue   
+
                     try: 
                             raw_output5 = inference(model, video_clip_fp, get_task5_prompt())
                             event_sequence = '\"' + raw_output5 + '\"'              
@@ -916,36 +919,36 @@ def main():
         traceback.print_exc()    
 
     # =============================================== task6 =============================================================== #
-    # 
-    #     try:
 
-    #     init_csv(task6_result_csv_fp, "video_name,report")
-    #     task6_processed = load_processed_videos(task6_result_csv_fp)        
-    #     os.makedirs(task6_log_dir, exist_ok=True)
-    #     aggregate_log_fp = os.path.join(task6_log_dir, "task6.log")
-    #     task5_videos_range = validate_videos_range(task5_clip_fps, task5_6_videos_range)
-    #     with open(task6_result_csv_fp, 'a', encoding='utf-8', newline='') as csv_f, open(aggregate_log_fp, 'a', encoding='utf-8') as log_f:    
-    #         for video_clip_fp in tqdm(task5_clip_fps[task5_videos_range[0]-1 : task5_videos_range[1]], desc="Processing Task 6"):
-    #             video_clip_name = video_clip_fp.split('/')[-1]
-    #             if video_clip_name in task6_processed:
-    #                 print(f"Video {video_clip_name} already processed for both tasks. Skipping.")
-    #                 continue     
+    try:
+
+        init_csv(task6_result_csv_fp, "video_name,report")
+        task6_processed = load_processed_videos(task6_result_csv_fp)        
+        os.makedirs(task6_log_dir, exist_ok=True)
+        aggregate_log_fp = os.path.join(task6_log_dir, "task6.log")
+        task5_videos_range = validate_videos_range(task5_clip_fps, task5_6_videos_range)
+        with open(task6_result_csv_fp, 'a', encoding='utf-8', newline='') as csv_f, open(aggregate_log_fp, 'a', encoding='utf-8') as log_f:    
+            for video_clip_fp in tqdm(task5_clip_fps[task5_videos_range[0]-1 : task5_videos_range[1]], desc="Processing Task 6"):
+                video_clip_name = video_clip_fp.split('/')[-1]
+                if video_clip_name in task6_processed:
+                    print(f"Video {video_clip_name} already processed for both tasks. Skipping.")
+                    continue     
                     
-    #             try:               
-    #                     raw_output6 = inference(model, video_clip_fp, get_task6_prompt())
-    #                     report = '\"' + raw_output6 + '\"'     
-    #                     csv_f.write(f"{video_clip_name},{report}\n")
-    #                     csv_f.flush()  
-    #                     task6_processed.add(video_clip_name)                       
-    #             except Exception as e:
-    #                 print(f"Error processing video {video_clip_fp}: {e}")
-    #                 log_f.write(f"Error processing video {video_clip_name}: {e}\n")
-    #                 csv_f.write(f"{video_clip_name},\"fail\"\n")
-    #             #break
-    #     print(f"Task 6 results are in: {task6_result_csv_fp}")
-    # except Exception as e:
-    #     print(f"Error in Task 6 processing: {e}")
-    #     traceback.print_exc()    
+                try:               
+                        raw_output6 = inference(model, video_clip_fp, get_task6_prompt())
+                        report = '\"' + raw_output6 + '\"'     
+                        csv_f.write(f"{video_clip_name},{report}\n")
+                        csv_f.flush()  
+                        task6_processed.add(video_clip_name)                       
+                except Exception as e:
+                    print(f"Error processing video {video_clip_fp}: {e}")
+                    log_f.write(f"Error processing video {video_clip_name}: {e}\n")
+                    csv_f.write(f"{video_clip_name},\"fail\"\n")
+                #break
+        print(f"Task 6 results are in: {task6_result_csv_fp}")
+    except Exception as e:
+        print(f"Error in Task 6 processing: {e}")
+        traceback.print_exc()    
 
 
     # =============================================== task7 =============================================================== #
@@ -972,7 +975,8 @@ def main():
         task7_processed = load_processed_videos(task7_result_csv_fp)        
         os.makedirs(task7_log_dir, exist_ok=True)
         aggregate_log_fp = os.path.join(task7_log_dir, f"task7_{gpu_str}.log")
-        gpu_indices = [int(x) for x in str(args.gpu).split(',')]
+        #gpu_indices = [int(x) for x in str(args.gpu).split(',')]
+        gpu_indices =[0,1,2,3,4,5,6,7] 
         task7_clip_fps_selected = split_list_by_gpus(task7_clip_fps, gpu_indices)
 
         with open(task7_result_csv_fp, 'a', encoding='utf-8', newline='') as csv_f, open(aggregate_log_fp, 'a', encoding='utf-8') as log_f:    

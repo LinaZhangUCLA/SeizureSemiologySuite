@@ -114,6 +114,8 @@ if __name__ == "__main__":
         'Qwen2.5-Omni-7B',
         "Qwen3-Omni-30B-A3B-Instruct",
         'Lingshu-32B',   
+        'seizure_omni_sft' ,
+        'seizure_omni_grpo'   
     ]
     base_dir = '/home/lina/ssb/SeizureSemiologyBench/'
     metric_rows = []

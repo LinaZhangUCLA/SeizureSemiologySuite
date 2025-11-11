@@ -233,9 +233,10 @@ def main():
         "Qwen2.5-VL-72B-Instruct",
         'audio-flamingo-3',
         "Qwen2.5-Omni-7B",
-       # "Qwen3-Omni-30B-A3B-Instruct",
+        "Qwen3-Omni-30B-A3B-Instruct",
         "Lingshu-32B",
         "seizure_omni_sft",
+        "seizure_omni_grpo"
         
     ]  
     

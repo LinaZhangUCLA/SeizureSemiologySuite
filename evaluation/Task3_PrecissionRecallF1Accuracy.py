@@ -257,7 +257,7 @@ def main():
         'Qwen2.5-VL-32B',
         'Qwen3-VL-32B',
         'Qwen2.5-VL-72B',
-        #'Audio-flamingo-3',
+        'audio-flamingo-3',
         'Qwen2.5-Omni-7B',
         'Qwen3-Omni-30B',
         'Lingshu-32B' ,     
@@ -271,7 +271,7 @@ def main():
         'Qwen2.5-VL-32B': 'Qwen2.5-VL-32B-Instruct',
         'InternVL3.5-38B': 'InternVL3_5-38B',
         'Qwen2.5-VL-72B': 'Qwen2.5-VL-72B-Instruct',
-        'Audio-flamingo-3': 'audio-flamingo-3',
+        'audio-flamingo-3': 'audio-flamingo-3',
         'Qwen2.5-Omni-7B': 'Qwen2.5-Omni-7B',
 
         'Qwen3-VL-8B': 'Qwen3-VL-8B-Instruct',

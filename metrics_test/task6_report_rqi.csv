@@ -9,3 +9,5 @@ Qwen2.5-VL-72B-Instruct,37.373
 Qwen2.5-Omni-7B,35.911
 Qwen3-Omni-30B-A3B-Instruct,37.524
 Lingshu-32B,39.803
+seizure_omni_sft,31.687
+seizure_omni_grpo,36.439

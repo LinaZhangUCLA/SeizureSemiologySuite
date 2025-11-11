@@ -14,7 +14,7 @@ API_KEY = "sk-853145a6309e48ad83e2d0cd01a155a1"
 MODEL = "qwen-plus-latest"
 
 
-BASE_DIR = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference/"
+BASE_DIR = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference_test/"
 
 
 TEMPERATURE = 0
@@ -166,15 +166,18 @@ if __name__ == "__main__":
 
     MODELS = [
         #"InternVL3_5-8B",
-        "InternVL3_5-38B",
-        # "Qwen2.5-VL-7B-Instruct",
-        # "Qwen2.5-VL-32B-Instruct",
-        # "Qwen2.5-VL-72B-Instruct",
-        "Lingshu-32B",
-        # "Qwen2.5-Omni-7B",
-        # 'Qwen3-VL-8B-Instruct',
-        # 'Qwen3-VL-32B-Instruct',
-        "Qwen3-Omni-30B-A3B-Instruct",
+        # "InternVL3_5-38B",
+        # # "Qwen2.5-VL-7B-Instruct",
+        # # "Qwen2.5-VL-32B-Instruct",
+        # # "Qwen2.5-VL-72B-Instruct",
+        # "Lingshu-32B",
+        # # "Qwen2.5-Omni-7B",
+        # # 'Qwen3-VL-8B-Instruct',
+        # # 'Qwen3-VL-32B-Instruct',
+        # "Qwen3-Omni-30B-A3B-Instruct",
+
+        'seizure_omni_sft' ,
+        'seizure_omni_grpo'   
     ]    
     for model in MODELS:
         INPUT_CSV = f"{BASE_DIR}/{model}/Task6_{model}_all.csv"

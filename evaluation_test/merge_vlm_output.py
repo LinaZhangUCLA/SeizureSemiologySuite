@@ -14,7 +14,7 @@ print(PROJECT_ROOT)
 BASE_DIR = PROJECT_ROOT
 DEDUP_ON_COLUMN = 'file_name' 
 origin_dir = os.path.join(BASE_DIR, "inference_result")
-output_dir = os.path.join(BASE_DIR, "result", "vlm_inference")
+output_dir = os.path.join(BASE_DIR, "result", "vlm_inference_test")
 # ============================================
 
 # def read_csv_file(input_file: str) -> pd.DataFrame:
@@ -230,13 +230,16 @@ if __name__ == "__main__":
    
     ##task12
     #for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
-    # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct']: 
+    #for model in ['seizure_omni_sft','seizure_omni_grpo']: 
+    # for model in ['seizure_omni_grpo']:
+    # #for model in ['Qwen3-Omni-30B-A3B-Instruct']: 
     #     task_name = 'Task1'
     #     mergecsv(task_name, model,subtask=task_name) 
 
 
     # #task3
     # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct']:
+    # for model in ['seizure_omni_sft','seizure_omni_grpo']: 
     #     output_modle_dir = os.path.join(output_dir, model)
     #     os.makedirs(output_modle_dir, exist_ok=True)
     #     shutil.copy(os.path.join(origin_dir, f"Task3_AM_{model}_1-112.csv"), os.path.join(output_dir, model, f"Task3_AM_{model}.csv"))
@@ -269,6 +272,7 @@ if __name__ == "__main__":
     # #task4     
     #for model in ['Qwen3-VL-8B-Instruct']:
     # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
+    # for model in ['seizure_omni_sft','seizure_omni_grpo']: 
     #     task_name = 'Task4'
     #     mergecsv(task_name, model,subtask=task_name)   
 
@@ -277,12 +281,14 @@ if __name__ == "__main__":
 
     #for model in ['Qwen3-VL-8B-Instruct']:
     # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
+    # for model in ['seizure_omni_sft','seizure_omni_grpo']:
     #     task_name = 'Task5'
     #     mergecsv(task_name, model,subtask=task_name)   
 
     ##task6
     #for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
     # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
+    # for model in ['seizure_omni_sft','seizure_omni_grpo']:
     #     task_name = 'Task6'
     #     mergecsv(task_name, model,subtask=task_name) 
 
@@ -291,6 +297,7 @@ if __name__ == "__main__":
     # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']: 
     #     if model in ["Lingshu-32B",'InternVL3_5-38B']:
     #         continue
-    for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']:  
+    # for model in ['Qwen3-VL-8B-Instruct','Qwen3-VL-32B-Instruct','Qwen3-Omni-30B-A3B-Instruct'] + ['InternVL3_5-8B','InternVL3_5-38B','Qwen2.5-VL-7B-Instruct','Qwen2.5-VL-32B-Instruct','Qwen2.5-VL-72B-Instruct', 'Lingshu-32B','Qwen2.5-Omni-7B']:  
+    for model in ['seizure_omni_sft','seizure_omni_grpo']:
         task_name = 'Task7'
         mergecsv(task_name, model,subtask=task_name) 

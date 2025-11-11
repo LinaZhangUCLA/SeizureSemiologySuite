@@ -31,34 +31,67 @@ FEATURE_ORDER = [
     'ictal_vocalization'
 ]
 
-# Define model display names order
 MODEL_NAMES = [
+    'InternVL3.5-8B',
     'Qwen2.5-VL-7B',
-    'InternVL3_5-8B',
+     'Qwen3-VL-8B',
+    'InternVL3.5-38B',
     'Qwen2.5-VL-32B',
-    'InternVL3_5-38B',
+    'Qwen3-VL-32B',
     'Qwen2.5-VL-72B',
-    'Audio-flamingo-3',
-    'Qwen2.5-Omni-7B',
-    'Lingshu-32B',
-    'Qwen3-VL-8B',
-    'Qwen3-VL-32B'
+    'audio-flamingo-3',
+    'Qwen2.5-Omni-7B', 
+    "Qwen3-Omni-30B",
+     'Lingshu-32B',
+    'seizure_omni_sft',
+    'seizure_omni_grpo'
 
 ]
 
 # Mapping from display model names to actual file path names
 MODEL_PATH_MAPPING = {
-    'Qwen2.5-VL-7B': 'qwen2_5_vl_7B',
-    'InternVL3.5-8B': 'internvl3_5_8B', 
-    'Qwen2.5-VL-32B': 'qwen2_5_vl_32B',
-    'InternVL3.5-38B': 'internvl3_5_38B',
-    'Qwen2.5-VL-72B': 'qwen2_5_vl_72B',
-    'Audio-flamingo-3': 'AF3',
-    'Qwen2.5-Omni-7B': 'qwen2_5_omni_7B',
-    'Lingshu-32B': 'lingshu_32B',
-    'Qwen3-VL-8B': 'Qwen3-VL-8B',
-    'Qwen3-VL-32B': 'Qwen3-VL-32B'
+    #'Qwen2.5-VL-7B': 'qwen2_5_vl_7B',
+    'InternVL3.5-8B': 'InternVL3_5-8B', 
+    #'Qwen2.5-VL-32B': 'qwen2_5_vl_32B',
+    'InternVL3.5-38B': 'InternVL3_5-38B',
+    #'Qwen2.5-VL-72B': 'qwen2_5_vl_72B',
+    'audio-flamingo-3': 'AF3',
+    # 'Qwen2.5-Omni-7B': 'qwen2_5_omni_7B',
+    # 'Lingshu-32B': 'lingshu_32B',
+    # 'Qwen3-VL-8B': 'Qwen3-VL-8B',
+    # 'Qwen3-VL-32B': 'Qwen3-VL-32B',
+    "Qwen3-Omni-30B": "Qwen3-Omni-30B-A3B",
 }
+
+
+# Define model display names order
+# MODEL_NAMES = [
+#     'Qwen2.5-VL-7B',
+#     'InternVL3_5-8B',
+#     'Qwen2.5-VL-32B',
+#     'InternVL3_5-38B',
+#     'Qwen2.5-VL-72B',
+#     'Audio-flamingo-3',
+#     'Qwen2.5-Omni-7B',
+#     'Lingshu-32B',
+#     'Qwen3-VL-8B',
+#     'Qwen3-VL-32B'
+
+# ]
+
+# # Mapping from display model names to actual file path names
+# MODEL_PATH_MAPPING = {
+#     'Qwen2.5-VL-7B': 'qwen2_5_vl_7B',
+#     'InternVL3.5-8B': 'internvl3_5_8B', 
+#     'Qwen2.5-VL-32B': 'qwen2_5_vl_32B',
+#     'InternVL3.5-38B': 'internvl3_5_38B',
+#     'Qwen2.5-VL-72B': 'qwen2_5_vl_72B',
+#     'Audio-flamingo-3': 'AF3',
+#     'Qwen2.5-Omni-7B': 'qwen2_5_omni_7B',
+#     'Lingshu-32B': 'lingshu_32B',
+#     'Qwen3-VL-8B': 'Qwen3-VL-8B',
+#     'Qwen3-VL-32B': 'Qwen3-VL-32B'
+# }
 
 # Create reverse mapping (file path name to display name)
 PATH_TO_DISPLAY_MAPPING = {v: k for k, v in MODEL_PATH_MAPPING.items()}

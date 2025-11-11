@@ -156,7 +156,7 @@ inf_result_csv_fp = inference_dir + f'/Task1_{model_name.split("/")[-1]}_{videos
 MAX_FRAMES = 60
 FPS = 2
 MAX_NEW_TOKENS = 2048
-MAX_RETRIES = 10
+MAX_RETRIES = 2
 
 import time
 import traceback

@@ -1,0 +1,3783 @@
+JSON Parsing Error Log
+==================================================
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are open and he is looking forward, indicating he is awake."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are open, but his gaze is unfocused and directed forward without any apparent reaction to his surroundings, which is characteristic of a blank stare."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are open for most of the video, only closing briefly when he is being attended to by the medical staff."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are open and he is looking forward for most of the video. There is no visible rapid blinking."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits a sudden onset of sustained stiffness, with all limbs held in a fixed posture, which is characteristic of the tonic phase."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits a series of rapid, rhythmic, and jerking movements involving his arms, hands, and head. These movements are characteristic of clonic phase seizures, which are defined by such stereotyped, repetitive contractions and relaxations of the muscles."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient raises both arms and flexes them at the elbows in a repeated motion, which is visible for several frames."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient extends his arms forward and upward, moving them away from his body, which involves straightening or extending the arms at the elbows."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits a Figure 4 posture, where one arm is flexed while the other is extended at the same time."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's mouth is closed and there are no visible repetitive movements of the tongue or lips. The patient appears to be calmly sitting with a neutral expression."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits repetitive limb movements, including fumbling with his hands, picking at his clothing, and rubbing his arms, which are characteristic of stereotyped behaviors."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits unilateral sustained face-pulling movements, specifically on the right side of his face, which is a characteristic symptom of tardive dyskinesia."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's facial muscles exhibit small, involuntary movements, particularly around the eyes and mouth, which are consistent with muscle twitches."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's head movements are slow and deliberate, not forced or stiff. They appear to be making a conscious effort to look around, but there is no indication of any involuntary or rigid motion."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms and hands exhibit noticeable and irregular shaking, with varying intensity and frequency, particularly when he attempts to hold objects or interact with his surroundings."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's body, particularly his torso and hips, is seen moving in a distinct forward-and-backward rocking motion, which is a repetitive, anteroposterior movement."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms begin to move simultaneously at approximately 00:58, as he raises both arms in a flailing motion."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are flailing, and his head and torso are moving erratically, indicating a full-body shaking episode."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient makes a series of groaning and guttural sounds, particularly between 1:15 and 1:20, as he is being moved and adjusted in the chair."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_1.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient does not respond verbally to any person in the video. Instead, they react with physical movements and facial expressions, such as raising their hands and leaning back, indicating a non-verbal response."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is awake and actively moving his arms, indicating he is not asleep."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is actively moving his arms and appears to be engaged in the situation, indicating he is not exhibiting a blank stare."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are open for the majority of the video, particularly when he is actively moving his arms. They are only closed for a brief moment around the 0:58 mark."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are not visible in the video, so it is not possible to determine if they are blinking rapidly."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient exhibits sustained stiffness in the arms and body, consistent with tonic phase characteristics, as observed during the episode."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient exhibits rhythmic, jerking muscle contractions involving the limbs and trunk, consistent with clonic movements. These jerks are regular and stereotyped, gradually slowing before ceasing, which aligns with the description of clonic phase."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient is seen repeatedly bending and straightening their arms at the elbows, which is a flexing motion."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient repeatedly extends and straightens their arms and elbows throughout the video, particularly during the physical therapy exercises."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms are not in a flexed and extended posture simultaneously; both arms are flexed at the elbows and held close to the body."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's mouth is open, but there are no visible repetitive or stereotyped movements such as chewing, lip-smacking, or swallowing. The patient appears to be in distress or discomfort, but the movements are not consistent with stereotyped oral behaviors."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient repeatedly rubs his hands together and pats his lap in a rhythmic, non-goal-directed manner, which is characteristic of stereotyped limb movements."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's face is contorted, and he is making sustained pulling movements with his mouth and jaw, which is consistent with unilateral sustained face-pulling movements."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's facial muscles exhibit small, involuntary movements, particularly around the mouth and jaw area, which are consistent with muscle twitches."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient does not forcibly or stiffly rotate their head to one side in the video. They remain relatively still, with only slight movements of the head and arms, and there is no indication of any forced or stiff head rotation."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's limbs exhibit shaking with varying frequency and amplitude, particularly noticeable in the arms and hands, which move erratically and inconsistently throughout the video."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is seated in a chair and is not performing any hip movements. The visible motion is confined to the patient's arms and hands."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's arms begin moving at the same time, as both arms are seen moving simultaneously from the start of the video."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's arms are visibly shaking, and their body is moving in a way that suggests whole-body shaking, including the torso. The legs are not clearly visible, but the overall movement indicates a shaking motion throughout the body."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient is audibly groaning and making guttural sounds of distress throughout the video, particularly when the restraint is being applied and adjusted."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TB@sz_v1_1_segment_2.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient does not respond verbally to the person speaking to them. They remain silent and do not provide any verbal feedback."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is awake and actively eating food from a plate placed on the tray table in front of them."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is looking down at the plate and appears to be eating, indicating engagement with the meal rather than a blank stare."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are open for the majority of the video, looking down at their food or forward, not consistently or mostly closed."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are not visible in the video, so it is not possible to determine if they are blinking rapidly."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is sitting upright in a chair and eating, which indicates normal muscle tone and voluntary control, not the sustained stiffness characteristic of a tonic phase."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is sitting upright and eating, showing no signs of rhythmic, jerking muscle contractions in the limbs, face, or trunk. The movements observed are voluntary and controlled, consistent with normal eating behavior rather than clonic phase activity."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms remain relatively still throughout the video, with no visible flexing at the elbows."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient extends their right arm forward to receive the item from the woman, maintaining this extended position for several frames."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is sitting upright in a chair with both arms resting on the table, not exhibiting a posture where one arm is flexed and the other extended."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient is seen eating food from a plate, which involves repetitive chewing and swallowing movements."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is seen holding a piece of food and using a utensil to eat, which are purposeful actions rather than repetitive, stereotyped movements like fumbling, picking, rubbing, or patting."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient does not exhibit any unilateral sustained face-pulling movements. Their facial expression remains relatively neutral and consistent throughout the video, with no visible signs of muscle spasms or asymmetrical movements."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's facial expression appears relatively still and calm throughout the video, with no visible signs of small muscle twitches."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's head movement is not visible in the video, so it cannot be determined if they forcibly or stiffly rotate their head to one side."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's limbs do not exhibit any visible shaking or tremors in the video. The patient appears to be sitting still, with only minor movements related to eating, and there is no observable difference in frequency or amplitude between the limbs."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is sitting in a chair and does not exhibit any visible rhythmic movements of the hips."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's arms are seen moving simultaneously as they are eating, indicating coordinated movement."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is sitting upright in a chair and appears to be eating a meal. There is no visible shaking of the arms, legs, or torso. The patient's movements are limited to those required for eating, and there is no indication of involuntary tremors or shaking."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient does not make any groaning, moaning, guttural sounds, or utter stereotyped repetitive phrases. They are seen eating and interacting with the woman, but no such sounds are audible."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v1_1_segment_1.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient does not respond verbally to the person speaking to them."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is awake and looking down at the beginning of the video."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient is looking down with a fixed, unresponsive expression, lacking any visible signs of engagement or awareness of the surroundings."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed for the entire duration of the video, as seen in the initial frame and confirmed by their closed state in all subsequent frames."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are not visible in the video, so it is not possible to determine if they are blinking rapidly."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying in a hospital bed with a blanket covering them, and there is no visible sign of sustained stiffness or rigidity in their limbs or body. The patient appears to be in a relaxed state, with no indication of tonic phase activity."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient does not exhibit rhythmic, jerking muscle contractions in the limbs, face, or trunk, which are characteristic of clonic movements. Instead, the patient appears to be in a resting or semi-reclined position without visible involuntary movements."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient remains in a reclined position throughout the video, with their arms resting by their sides and no visible flexing or movement at the elbows."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient remains in a reclined position throughout the video, with their arms resting on their lap or the bed, showing no extension or straightening at the elbow."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying in a hospital bed with both arms resting on the blanket, not exhibiting a posture where one arm is flexed and the other extended simultaneously."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying in bed with a blanket over them, and their mouth is not visible. There are no observable repetitive, stereotyped mouth or tongue movements such as chewing, lip-smacking, or swallowing."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying in bed with a blanket covering them, and their hands are not visible. There is no indication of repetitive limb movements such as fumbling, picking, rubbing, or patting."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying down with their head covered by a blanket and does not exhibit any visible face-pulling movements."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's face is partially obscured by a blanket, and there are no visible muscle twitches observed in the provided frames."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's head movement is not visible in the video, so it cannot be determined if they forcibly or stiffly rotated their head to one side."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's limbs do not exhibit any visible shaking or tremors in the video. The patient remains relatively still, with no noticeable movement or variation in frequency or amplitude of limb motion."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying in a hospital bed with their head elevated and remains relatively still throughout the video. There are no visible repetitive, rhythmic, anteroposterior movements of the hips."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms do not start moving at the same time. The left arm begins to move first, followed by the right arm a moment later."
+}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying in bed with a blanket covering them, and there is no visible shaking of the entire body including arms, legs, and torso. The patient appears to be still."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient does not make any groaning, moaning, guttural sounds, or utter stereotyped repetitive phrases. They remain relatively still and silent throughout the video."}
+```
+--------------------------------------------------
+
+Video: R0002@6-17-2021@UA6693TC@sz_v2_1_segment_1.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient does not respond verbally to any person in the video."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is awake and looking forward at the beginning of the video."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's eyes are open and directed forward, but there is no discernible focus or reaction to the surroundings, indicating a blank stare."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed for the entire duration of the video, indicating they remain consistently closed."
+}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are mostly closed or looking downward, and there is no visible rapid blinking observed in the video."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is sitting calmly in a chair with no signs of sustained muscle stiffness or rigidity. There is no indication of generalized or focal tonic phase symptoms such as fixed extension or flexion postures, or stiffening of the head and axial body."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is sitting calmly in a chair with no visible signs of rhythmic jerking or muscle contractions. The movements described in the clonic phase are not observed in the patient's behavior."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms remain in a relaxed position on their lap throughout the video, with no visible flexing or movement at the elbows."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms remain in a consistent position throughout the video, with no visible extension or straightening at the elbow."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are not in the specified positions; both arms appear to be resting in a neutral or flexed position, not one flexed and one extended."
+}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is sitting still with their hands clasped in their lap, and there are no visible repetitive mouth or tongue movements such as chewing, lip-smacking, or swallowing in the video."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is sitting still with hands clasped in their lap, showing no signs of repetitive or stereotyped limb movements such as fumbling, picking, rubbing, or patting."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's facial expression remains relatively neutral and stable throughout the video, with no observable sustained pulling or asymmetrical movements on one side of the face."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's facial expression remains relatively still and calm throughout the video, with no visible signs of muscle twitches or spasms."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's head movement is minimal and appears natural, without any signs of force or stiffness."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's limbs do not exhibit any visible shaking or tremors in the video. The patient remains relatively still, with no noticeable movement or variation in frequency or amplitude of limb motion."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is sitting in a chair with a blanket over their lap and their hands resting on their knees. There is no visible forward-and-backward movement of the hips."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms do not start moving at the same time. The left arm begins to move around the 00:08 mark, while the right arm starts moving later, around the 00:15 mark."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is sitting in a chair with a blanket over their lap, and their arms are resting on their lap. There is no visible shaking of the arms, legs, or torso. The patient appears to be still and calm."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient remains silent throughout the video, showing no signs of vocalization such as groaning, moaning, guttural sounds, or repetitive phrases."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128K@sz_v1_1_segment_1.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient does not respond verbally to the other person. The patient remains silent and does not speak in a coherent manner."
+}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's eyes are closed and their body is still, indicating they are asleep."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are closed, indicating they are asleep, not exhibiting a blank stare."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed in the initial frame, and there is no visual evidence of them opening in the subsequent frames."
+}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are closed throughout the video, indicating they are asleep or unconscious, and there is no blinking observed."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying in a hospital bed with a bandaged head, appearing to be in a resting or sedated state. There is no visible sustained stiffness or rigidity in the limbs or body, and the patient's posture is relaxed, indicating the absence of tonic phase symptoms."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still in bed with no visible rhythmic jerking movements of the limbs, face, or trunk. The absence of such movements indicates that clonic activity is not present."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms are not visible in the video frames, so it is not possible to determine if they flex their arms or elbows."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms are not visible in the video frames, so it is not possible to determine if they straighten or extend their arms or elbow."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms are not visible in the image, so it is impossible to determine if they exhibit a Figure 4 posture."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's mouth is closed and there is no visible movement of the jaw, lips, or tongue that would indicate chewing, lip-smacking, or swallowing. The patient appears to be resting with a neutral facial expression."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still in bed with no visible limb movements."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's facial expression is static and relaxed, with no visible signs of sustained or unilateral face-pulling movements."
+}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's facial muscles appear relaxed and still, with no visible twitching or movement observed in the provided frames."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's head remains in a relatively fixed position throughout the video, showing no signs of forced or stiff rotation to one side."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's limbs do not exhibit any visible shaking or movement in the video frames, indicating no observable tremors or spasms."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is lying in a hospital bed and appears to be resting or sleeping. There are no visible repetitive, rhythmic, anteroposterior movements of the hips."
+}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms do not start moving at the same time. The left arm begins to move slightly earlier than the right arm, indicating a sequential rather than simultaneous movement."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still in the bed with no visible movement of the arms, legs, or torso."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The audio does not contain any sounds made by the patient, such as groaning, moaning, guttural sounds, or repetitive phrases. The only sound present is a low-frequency hum, likely from medical equipment or the room's ventilation system."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128L@sz_v1_1_segment_1.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is not addressed verbally by a different person in the video."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's eyes are closed and their body is still, indicating they are asleep."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are closed, indicating they are asleep, not exhibiting a blank stare."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed in the initial frame, and there is no visual evidence of them opening in the subsequent frames."
+}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are closed throughout the video, indicating they are asleep or resting, and there is no blinking observed."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying in a hospital bed with a bandaged head, appearing to be in a resting or unconscious state. There is no visible sustained stiffness or rigidity in the limbs or body, and the patient's posture is relaxed, indicating the absence of tonic phase symptoms."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still in bed with no visible rhythmic or jerking muscle contractions in the limbs, face, or trunk. The absence of such movements indicates that clonic activity is not present."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are covered by the blanket and remain in a fixed position throughout the video frames, showing no visible flexing at the elbows."
+}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms remain under the blanket throughout the video, with no visible movement or extension at the elbow."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms are not visible in the image, so it is impossible to determine if they exhibit a Figure 4 posture."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's mouth is closed and there is no visible movement of the jaw, lips, or tongue that would indicate chewing, lip-smacking, or swallowing. The patient appears to be resting with a neutral facial expression."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still in bed with no visible limb movements."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's facial expression remains relatively neutral and stable throughout the video, with no observable unilateral sustained face-pulling movements."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's facial muscles exhibit subtle, involuntary movements, consistent with small twitches."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's head remains in a fixed position throughout the video, showing no signs of forced or stiff rotation to one side."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's limbs do not exhibit any visible shaking or movement in the video frames, indicating no observable variation in frequency or amplitude."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is lying in a hospital bed with their body mostly still. There are no visible repetitive, rhythmic, anteroposterior movements of the hips."
+}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's arms move simultaneously at the beginning of the video, indicating they start moving at approximately the same time."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still in the bed with no visible movement of the arms, legs, or torso."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The audio contains only a low-frequency hum, with no discernible human vocalizations such as groaning, moaning, guttural sounds, or repetitive phrases from the patient."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v1_1_segment_1.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is not addressed verbally by a different person in the video."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's eyes are closed and their body is still, indicating they are asleep."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are closed, indicating they are asleep or unconscious, not exhibiting a blank stare."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed in the initial frame, and there is no indication of them opening in the subsequent frames."
+}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are closed throughout the video, indicating they are asleep or unconscious, and there is no blinking observed."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying in a hospital bed with a bandaged head, appearing to be in a resting or sedated state. There is no visible sustained stiffness or rigidity in the limbs or body, and the patient's posture is relaxed, indicating the absence of tonic phase symptoms."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still with no visible rhythmic jerking movements in the limbs, face, or trunk, which is characteristic of clonic phase."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms are not visible in the video frames, so it is not possible to determine if they flex their arms or elbows."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms are not visible in the video frames, so it is not possible to determine if they straighten or extend their arms or elbow."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms are not visible in the image, so it is impossible to determine if they exhibit a Figure 4 posture."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still with eyes closed, and there are no visible repetitive mouth or tongue movements such as chewing, lip-smacking, or swallowing in the provided frames."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still in bed with no visible limb movements."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still with a neutral facial expression, showing no signs of unilateral sustained face-pulling movements."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's facial muscles appear relaxed and still, with no visible twitching or movement observed in the provided image."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's head remains in a fixed position throughout the video, showing no signs of forced or stiff rotation to one side."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's limbs do not exhibit any visible shaking or movement in the provided image. The patient appears to be lying still, with no observable tremors or variations in limb position."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still in the hospital bed, with no visible movement of the hips."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms do not start moving at the same time. The left arm begins to move slightly earlier than the right arm, indicating a staggered onset of movement."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying still in the bed with no visible signs of body shaking or movement in the arms, legs, or torso."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The audio does not contain any sounds made by the patient, such as groaning, moaning, guttural sounds, or repetitive phrases. The only sound present is a continuous low-frequency hum, likely from medical equipment or the room's ventilation system."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@AA16128M@sz_v2_1_segment_1.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is not addressed verbally by a different person in the video."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@DA9601MS@sz_v1_1_segment_1.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is awake and actively engaged in conversation with the visitor, as indicated by his head movements and hand gestures."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@DA9601MS@sz_v1_1_segment_1.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is actively engaged in conversation with the visitors, looking at them and responding, which indicates he is not exhibiting a blank stare."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@DA9601MS@sz_v1_1_segment_1.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are open for the majority of the video, looking down at the table or at the man standing next to him. They are only briefly closed around the 00:18 mark."
+}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@DA9601MS@sz_v1_1_segment_1.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are not visible in the video, so it is not possible to determine if they are blinking rapidly."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@DA9601MS@sz_v1_1_segment_1.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient does not exhibit sustained stiffness or rigidity; they are seated and interacting normally with others, showing no signs of tonic phase symptoms."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@DA9601MS@sz_v1_1_segment_1.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient does not exhibit any visible rhythmic, jerking muscle contractions in the limbs, face, or trunk. The observed movements are limited to minor adjustments and interactions with objects, which do not match the description of clonic phase activity."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@DA9601MS@sz_v1_1_segment_1.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms remain relatively still throughout the video, with no visible flexing at the elbows."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@DA9601MS@sz_v1_1_segment_1.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms remain in a relatively consistent position throughout the video, with no visible extension or straightening at the elbows."}
+```
+--------------------------------------------------
+
+Video: R0002@9-3-2023@DA9601MS@sz_v1_1_segment_1.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is seated with both arms resting on the table, not exhibiting a posture where one arm is flexed and the other extended."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed and she appears to be in a relaxed state, indicating she is asleep at the beginning of the video."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed and her facial expression is neutral, indicating a lack of focused attention or response to her surroundings."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are closed for most of the video, but they open briefly around the 00:45 mark when she begins to speak."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are closed for the majority of the video, and there is no visible rapid blinking."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits a sudden onset of sustained stiffness, with her arms held rigidly in a fixed extension posture, which is characteristic of the tonic phase of a seizure."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits rhythmic, jerking muscle contractions involving the limbs and trunk, which are characteristic of the clonic phase of a seizure. These movements are regular and stereotyped, consistent with the provided definition."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient flexes their arms at the elbows for several frames, particularly between 0:45 and 0:50, and again from 1:00 to 1:05."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient extends her left arm at the elbow and raises it slightly off the bed around the 0:50 mark, holding it in that position for several seconds."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are not in the specified positions; both arms are flexed at the elbows and resting on the bed, not one flexed and one extended."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's mouth is open, and she is making a grimacing facial expression, but there are no visible repetitive or stereotyped movements of the mouth, tongue, or jaw such as chewing, lip-smacking, or swallowing."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits repetitive, stereotyped limb movements, specifically fumbling and picking at her arm and the area around the IV site."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits a sustained, unilateral pulling movement of the face, particularly noticeable on the right side, which is consistent with a tonic-clonic seizure."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's facial muscles exhibit small, involuntary movements, particularly around the eyes and mouth, which are consistent with muscle twitches."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's head is gently turned to one side by the nurse, not rotated forcibly or stiffly by the patient themselves."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms and hands exhibit noticeable shaking or twitching, which is not synchronized with the rest of her body. This suggests a variable frequency and amplitude of limb movement."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's body, particularly her torso and hips, exhibits a distinct forward-and-backward rocking motion. This movement is rhythmic and repetitive, consistent with the description of anteroposterior movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms begin to move at the same time, around the 00:45 mark, as she starts to convulse."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are visibly shaking, and her head and torso are also moving in a jerky manner, consistent with a full-body seizure."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient does not make any groaning, moaning, guttural sounds, or utter stereotyped repetitive phrases. She is observed to be lying still with her eyes closed, and her only movements are slight twitches and a brief, involuntary grimace, but no vocalizations are heard."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_3.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient does not respond verbally in a coherent manner. When addressed, they make non-verbal sounds and movements, such as groaning and raising their arms, but do not speak in a way that forms coherent words or sentences."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are open and she is actively interacting with the medical staff, indicating she is awake."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's eyes are open but unfocused, and her facial expression is neutral, suggesting a lack of engagement or awareness of her surroundings."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed for the entire duration of the video."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are mostly closed or looking upwards throughout the video, and there is no visible rapid blinking."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying on a bed with her arms slightly raised and clenched, but there is no visible sustained stiffness or rigidity in her limbs or body. Her posture appears relaxed, and she is not exhibiting the characteristic fixed extension or flexion seen during the tonic phase of a seizure. Additionally, her movements are consistent with normal muscle tone rather than the rigidity associated with the tonic phase."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits rhythmic, jerking muscle contractions involving the limbs and trunk, which are characteristic of the clonic phase of a seizure. These movements are regular and stereotyped, consistent with the description provided."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are bent at the elbows and held close to their body for the entire duration of the video, which is more than a few frames."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms remain bent at the elbows throughout the video, with hands near the chest or abdomen, showing no extension or straightening at the elbow joint."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are not in the specified positions; both arms are flexed at the elbows and held close to the body, not one flexed and one extended."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's mouth is open, and she is breathing, but there are no visible repetitive or stereotyped movements such as chewing, lip-smacking, or swallowing. Her jaw is slightly open, and her tongue is not moving in a repetitive manner."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient repeatedly moves her hands and arms in a fumbling or picking motion, which is consistent with stereotyped limb movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's face is relaxed and her eyes are closed, showing no signs of pulling or asymmetry."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's facial muscles exhibit small, involuntary movements, particularly around the eyes and mouth, which are consistent with muscle twitches."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's head is seen moving slightly, but not in a forced or stiff manner. The movements appear to be natural and relaxed, consistent with normal head movements while lying down."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are shaking with different frequencies and amplitudes. One arm shakes more vigorously and rapidly, while the other arm shakes with a slower, less intense motion."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's body, particularly her hips and pelvis, is shown making distinct, rhythmic, forward-and-backward movements, consistent with the description of anteroposterior movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms begin to move at the same time, as both arms are seen moving simultaneously from the start of the video."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's arms are visibly shaking, and her head and torso are moving in a way that suggests whole-body shaking."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient does not make any groaning, moaning, guttural sounds, or utter stereotyped repetitive phrases. They remain relatively still and silent throughout the video, with no audible vocalizations from them."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_4.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient does not respond verbally in a coherent manner. She is seen making sounds and moving her head, but does not speak in response to the nurses."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are open and she is actively moving her arms and hands, indicating she is awake and responsive."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's eyes are closed and her head is tilted back, indicating a lack of focus or awareness, consistent with a blank stare."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed for the entire duration of the video, from 0:00 to 1:39."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are closed for the entire duration of the video, so rapid blinking cannot be observed."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are held rigidly in a clenched fist position, and her body is stiff, which are characteristic signs of the tonic phase of a seizure."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits rhythmic, jerking muscle contractions involving her arms and upper body, which are characteristic of the clonic phase of a seizure. These movements are regular and stereotyped, consistent with the description of clonic movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are bent at the elbows and raised, with fists clenched, for the entire duration of the video."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms remain bent at the elbows throughout the video, with her hands clenched into fists near her chest. There is no visible extension of the arms or elbows."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are not in the specified positions; both arms are flexed at the elbows and held close to the body, not one flexed and one extended."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's mouth is open, and she is making grimacing facial expressions, but there are no visible repetitive, stereotyped movements of the mouth or tongue, such as chewing, lip-smacking, or swallowing."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are repeatedly moving in a rhythmic, fumbling motion, consistent with stereotyped limb movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's facial expression is one of pain or discomfort, with her eyes closed and mouth open, but there is no visible unilateral pulling or asymmetry of the face."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's facial muscles are visibly contracting and relaxing in a rhythmic pattern, consistent with small twitches."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's head is seen moving slightly, but not in a forced or stiff manner. The movements appear to be natural and consistent with the patient's breathing and responses to the medical team."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are visibly shaking with a noticeable frequency and amplitude, and the shaking appears to be more pronounced in the arms than in the legs, which are not clearly visible but seem less affected."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's body, particularly her hips and pelvis, exhibits a distinct, rhythmic, and repetitive forward-and-backward motion. This movement is consistent with the description of anteroposterior movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms begin to move at the same time, as seen when she starts clenching her fists and moving them slightly at the same moment."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are visibly shaking, and her torso is moving up and down with each breath, indicating shaking of the entire body."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient is audibly groaning and making strained, guttural sounds, consistent with pain or distress, throughout the video."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_5.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is not addressed verbally by any of the medical staff. The staff members are discussing the patient's condition among themselves, but there is no instance where they directly speak to her or ask her a question that would require a verbal response."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying on the bed with her eyes closed and appears to be in distress, indicating she is awake and experiencing discomfort."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are open and she is actively moving her head and arms, indicating she is aware and responsive, not exhibiting a blank stare."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed for the entire duration of the video, from the beginning to the end."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are mostly closed or looking upwards throughout the video, and there is no visible rapid blinking."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is lying on a bed with her arms clenched and her head tilted back, but there is no sustained, generalized stiffness or rigidity in her limbs or body that would indicate a tonic phase. Her movements appear to be more related to pain or distress rather than a fixed, rigid posture."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits rhythmic, jerking muscle contractions, particularly in the arms and upper body, which are characteristic of the clonic phase of a seizure. These movements are regular and stereotyped, consistent with the description provided."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient is seen clenching their fists and tensing their arms, which involves flexing at the elbows, for a significant duration throughout the video."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms remain bent at the elbows throughout the video, with her hands clenched into fists near her chest. There is no visible extension of the arms or elbows."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are not in the described positions; both arms are flexed at the elbows and held close to the body, not one flexed and one extended."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is shown lying on a bed with an oxygen mask on her face. Her mouth is open, and she is breathing heavily, but there are no visible repetitive or stereotyped movements of her mouth, tongue, or lips such as chewing, lip-smacking, or swallowing."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient repeatedly clenches and unclenches her fists, which is a form of repetitive limb movement."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's facial movements are consistent with labored breathing and distress, not a unilateral sustained pull. Her face is contorted, and her eyes are closed, but there is no evidence of a persistent, one-sided facial muscle contraction."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's facial muscles are visibly contracting and moving in a jerky, uncontrolled manner, consistent with muscle twitches."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's head remains relatively still throughout the video, with no noticeable forced or stiff rotation to one side. The movements observed are minor adjustments, likely due to breathing or positioning, rather than a deliberate or forceful rotation."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms and legs exhibit shaking movements that are not synchronized. The frequency and amplitude of the tremors differ between the limbs, with one limb sometimes shaking more vigorously or rapidly than the other."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's body, particularly her hips and pelvis, is seen moving in a rhythmic, forward-and-backward motion, consistent with the pushing phase of labor."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms begin to move at the same time, around the 00:00 mark, as she starts to show signs of distress."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are visibly shaking, and her torso is moving up and down with each breath, indicating shaking of the entire body."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient is audibly groaning and making strained, guttural sounds throughout the video, consistent with the sounds of pain or intense effort."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_6.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is not addressed verbally by any of the other individuals in the video. Instead, she is seen making non-verbal sounds, such as groans and gasps, indicating distress or pain, but does not respond verbally in a coherent manner."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are open and she is actively participating in the procedure, as indicated by her hand movements and interaction with the medical staff."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are open and directed upwards, but her facial expression is neutral and unresponsive, lacking any clear emotional or cognitive engagement with her surroundings."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed for the entire duration of the video, from the beginning to the end."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are closed throughout the video, so there is no blinking observed."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is lying on a bed with her arms and legs in a relaxed position, not showing any sustained stiffness or rigidity. Her body appears to be in a normal, resting state without any signs of tonic phase symptoms."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits rhythmic, jerking muscle contractions, particularly noticeable in the arms and hands, which are characteristic of the clonic phase of a seizure. These movements are regular and stereotyped, consistent with the description provided."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are bent at the elbows and held close to their body for the entire duration of the video, indicating a sustained flexed position."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are extended at the elbows for the entire duration of the video clip."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are not in the specified positions; both arms are flexed at the elbows and held close to the body, not one flexed and one extended."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's mouth is open and she is wearing an oxygen mask, but there are no visible repetitive or stereotyped movements of the mouth, tongue, or lips such as chewing, lip-smacking, or swallowing. Her jaw is mostly still, and her actions are limited to holding the mask and moving her arms."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient repeatedly moves her hands and arms in a fumbling or picking motion, particularly around her chest and arms, which is consistent with stereotyped limb movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's facial expressions are consistent with discomfort or effort, but there is no evidence of a sustained, unilateral pulling movement on one side of the face."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's facial muscles exhibit small, involuntary movements, particularly around the mouth and jaw, which are consistent with muscle twitches."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's head is shown moving slightly, but not in a forced or stiff manner. The movements appear to be natural and not restricted."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms and legs exhibit noticeable, uncontrolled shaking or jerking movements that are not synchronized. The frequency and amplitude of these tremors vary significantly between the limbs, with one limb often shaking more vigorously or rapidly than the other."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's body, particularly the lower torso, exhibits a distinct and continuous forward-and-backward rocking motion, consistent with anteroposterior movements of the hips."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms begin to move at the same time, around the 00:00:35 mark, as she starts to react to the procedure."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are visibly shaking, and her torso is moving up and down with her breathing, indicating shaking of the entire body."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient makes several groaning and guttural sounds, particularly between 0:02 and 0:04, and again around 0:10 and 0:11, indicating discomfort or effort."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_7.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient does not respond verbally in a coherent manner. They make non-verbal sounds like groans and grunts, but do not speak in response to the person addressing them."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying on the bed with her eyes open and appears to be conscious and responsive to the medical staff, indicating she is not asleep."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are open and she is actively moving her arms and reacting to the people around her, indicating she is not in a state of a blank stare."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed for the entire duration of the video, from the beginning to the end."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's eyes are mostly closed or looking upward, and there is no visible rapid blinking observed in the video."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is lying on a bed with an oxygen mask, and her body is not in a rigid, fixed posture. She is moving her arms and appears to be breathing, which is inconsistent with the sustained stiffness characteristic of the tonic phase."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits rhythmic, jerking muscle contractions, particularly in the arms and upper body, which are characteristic of the clonic phase of a seizure. These movements are regular and stereotyped, consistent with the description provided."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are bent at the elbows and held close to their body for the entire duration of the video, indicating a sustained flexed position."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms remain bent at the elbows throughout the video, with hands clenched into fists near the chest. There is no visible extension of the arms or elbows."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are not in the specified positions; both arms are flexed at the elbows and held close to the body, not one flexed and one extended."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's mouth is open and she is actively breathing through an oxygen mask. There are no visible repetitive or stereotyped movements of the mouth, tongue, or lips such as chewing, lip-smacking, or swallowing. Her actions are consistent with the effort of breathing."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are mostly held at her sides or slightly raised, and she does not display any repetitive or stereotyped movements like fumbling, picking, rubbing, or patting. Her movements are limited to slight adjustments of her arms and hands."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's facial expressions are consistent with the effort of breathing, showing no signs of unilateral or sustained face-pulling movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's facial muscles are visibly contracting and moving in a spasmodic manner, consistent with muscle twitches."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's head is shown moving slightly, but not in a forced or stiff manner. The movements appear to be natural and are likely due to the patient's breathing or reactions to the medical procedure, rather than a deliberate, rigid rotation."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms and legs exhibit shaking movements that are not synchronized. The frequency and amplitude of the tremors differ between the limbs, with one limb sometimes shaking more vigorously or rapidly than the other."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's body, particularly her hips and pelvis, is seen moving in a rhythmic, forward-and-backward motion, consistent with the description of anteroposterior movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's arms begin to move at the same time, as seen when she starts clenching her fists and moving them slightly at the same moment."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are visibly shaking, and her torso is moving up and down with her breathing, indicating shaking of the entire body."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient makes several groaning and guttural sounds, particularly from 0:03 to 0:05 and again from 0:10 to 0:12, indicating discomfort or effort."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_8.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient does not respond verbally in a coherent manner. She makes non-verbal sounds like groans and grunts, but does not speak in response to the verbal address."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is lying on the bed with her eyes open and appears to be awake, as she is interacting with the people around her."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is actively engaged in conversation and physical interaction with the medical staff, indicating awareness and responsiveness rather than a blank stare."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed for the entire duration of the video, indicating they remain consistently closed."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are mostly closed or looking upwards, and there is no visible rapid blinking of the eyes in the video."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits a sudden onset of sustained stiffness, with her arms held in a fixed flexed posture and her head thrown back, which is characteristic of the tonic phase of a seizure."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits rhythmic, jerking muscle contractions involving the limbs and trunk, which are characteristic of the clonic phase of a seizure. These movements are regular and stereotyped, consistent with the description provided."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are visibly flexed at the elbows, with fists clenched, for the entire duration of the video clip."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms remain bent at the elbows throughout the video, with her hands clenched into fists near her chest. There is no visible extension of the arms or elbows."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are not in the specified positions; both arms are flexed at the elbows and held close to the body, not one flexed and one extended."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is shown with an oxygen mask on her face, and her mouth is not visible. There are no observable repetitive, stereotyped mouth or tongue movements such as chewing, lip-smacking, or swallowing."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are clenched into fists and held close to her chest, but there is no visible repetitive or stereotyped movement such as fumbling, picking, rubbing, or patting."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's facial movements are consistent with labored breathing and discomfort, not a unilateral sustained face-pulling movement."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's facial muscles are visibly contracting and relaxing in a rhythmic pattern, consistent with small twitches."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's head is seen moving slightly, but not in a forced or stiff manner. The movements appear to be natural and are likely due to the patient's breathing or reactions to the medical procedures being performed."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms and legs exhibit shaking movements that are not synchronized. The frequency and amplitude of the tremors differ between the limbs, with one limb sometimes shaking more vigorously or rapidly than the other."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's body, particularly her torso and hips, exhibits a clear, rhythmic, and repetitive forward-and-backward motion. This movement is consistent with the description of anteroposterior movements of the hips."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms begin to move at the same time, as seen when she starts clenching her fists and moving them slightly at the same moment."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are clenched and shaking, and her torso is visibly heaving and moving up and down with each breath, indicating shaking of the entire body."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient is audibly groaning and making guttural sounds, particularly from 0:00 to 0:03 and again from 0:10 to 0:12, indicating discomfort or pain."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H1@nes_v1_1_segment_9.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is not addressed verbally by any of the other individuals in the video. The woman in the leopard print shirt speaks to the patient, but the patient does not respond verbally in a coherent manner. Instead, the patient makes non-verbal sounds and appears to be in distress."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient is conscious and responsive, as indicated by her ability to talk and interact with others in the room."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed and her head is tilted back, indicating a lack of focus or awareness of her surroundings, which is consistent with a blank stare."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed for the vast majority of the video, with only very brief and partial openings, indicating they are mostly closed."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are frequently seen opening and closing rapidly throughout the video, which is consistent with rapid blinking."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits a sudden onset of sustained stiffness, with her arms held in a fixed, clenched posture, which is characteristic of the tonic phase of a seizure."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits rhythmic, jerking muscle contractions involving her arms and upper body, which are characteristic of the clonic phase of a seizure. These movements are regular and stereotyped, consistent with the description provided."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are visibly flexed at the elbows throughout the entire video clip, with their hands clenched into fists near their chest."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are frequently seen extended or straightened at the elbows, particularly during the convulsive movements of the seizure, which last for several frames."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are in a tonic sustained posture, with one arm flexed and the other extended, which matches the description of a Figure 4 posture."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's mouth is open, and she is making sounds, but there are no visible repetitive, stereotyped movements of the mouth or tongue such as chewing, lip-smacking, or swallowing."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's hands are repeatedly moving in a fumbling or picking motion near her chest and neck area, which is consistent with stereotyped limb movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's face is contorted, and her head is turned to one side, indicating a sustained unilateral facial movement."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's facial muscles are visibly contracting and twitching, particularly around the mouth and jaw, which is consistent with the description of muscle twitches."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's head is mostly still, with only slight movements, and there is no indication of forced or stiff rotation to one side."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms and hands exhibit noticeable shaking or tremors. The frequency and amplitude of these movements are not consistent; they vary in intensity and speed throughout the video, indicating variable frequency and amplitude."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's hips and pelvis are moving in a rhythmic, forward-and-backward motion, consistent with the description of anteroposterior movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms begin moving at the same time, as both arms are seen moving simultaneously from the start of the video."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are visibly shaking and moving in a rhythmic, uncontrolled manner. Her torso also shows significant movement, indicating that the shaking is not isolated to just the arms but involves the entire upper body."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient is audibly groaning and making guttural sounds throughout the video, particularly between 0:00-0:15 and again from 0:30-0:45, indicating distress or pain."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_1.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient does not respond verbally in a coherent manner. She is observed making sounds and moving her body, but does not speak in response to the questions asked by the other person."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are open and she is actively interacting with the people around her, indicating she is awake."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's eyes are closed and her facial expression is relaxed, indicating a lack of focused attention or awareness of her surroundings."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed for the vast majority of the video, with only very brief and partial openings, indicating they remain mostly closed."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are mostly closed or appear to be in a state of rest throughout the video, with no visible rapid blinking."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is lying in a hospital bed, appears to be in a state of rest or sleep, and is not exhibiting any signs of sustained muscle stiffness or rigidity. The movements observed are minor and consistent with normal breathing or slight shifts in position, not the generalized or focal stiffness characteristic of a tonic phase."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: clonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient exhibits rhythmic, jerking muscle contractions, particularly in the arms and hands, which are characteristic of the clonic phase of a seizure. These movements are regular and stereotyped, consistent with the description provided."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: arm_flexion
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are visibly flexed at the elbows throughout the video, with their hands clenched into fists and arms bent upwards towards their chest."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: arm_straightening
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "no", "justification": "The patient's arms remain bent at the elbows throughout the video, with hands clenched in fists. There is no visible extension of the arms or elbows for a sustained period."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: figure4
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's arms are not in the specified positions; both arms are flexed at the elbows and resting on the chest or abdomen, not one flexed and one extended."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: oral_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's mouth is open, and she is making sounds, but there are no visible repetitive chewing, lip-smacking, or swallowing movements."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: limb_automatisms
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient repeatedly moves her hands and arms in a rhythmic, repetitive manner, which can be described as fumbling or picking."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: face_pulling
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's facial expressions are consistent with pain or discomfort, but there is no evidence of a sustained, unilateral pulling movement on one side of the face."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: face_twitching
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's facial muscles exhibit small, involuntary movements, particularly around the mouth and jaw, which are consistent with muscle twitches."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: head_turning
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's head is seen moving slightly, but not in a forced or stiff manner. The movements appear to be natural and relaxed, consistent with someone lying down and possibly adjusting their position."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: asynchronous_movement
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's arms and hands exhibit noticeable shaking or trembling, particularly in the right arm and hand, which is more pronounced than the left. This shaking occurs intermittently and with varying intensity, indicating a difference in frequency and amplitude between the limbs."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: pelvic_thrusting
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's hips and pelvis are seen moving in a rhythmic, forward-and-backward motion, consistent with pushing or bearing down, which is a common action during the second stage of labor."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: arms_move_simultaneously
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms begin to move at the same time, around the 00:00:45 mark, as both arms are seen moving simultaneously."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: full_body_shaking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's arms are visibly shaking, and her torso is moving up and down with each breath, indicating shaking of the entire body."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: ictal_vocalization
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient makes several groaning and moaning sounds throughout the video, particularly between 0:00-0:15 and again from 0:45-1:00, indicating discomfort or pain."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_2.mp4
+Feature: verbal_responsiveness
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient does not respond verbally in a coherent manner. They make sounds and groans, but do not speak in response to the person addressing them."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_3.mp4
+Feature: occur_during_sleep
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{"answer": "yes", "justification": "The patient's eyes are closed and she appears to be in a relaxed state, suggesting she is sleeping or resting deeply."}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_3.mp4
+Feature: blank_stare
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed and her facial expression is neutral, indicating a lack of focus or response to her surroundings, which is consistent with a blank stare."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_3.mp4
+Feature: close_eyes
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "yes",
+  "justification": "The patient's eyes are closed for the entire duration of the video, indicating they remain consistently closed."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_3.mp4
+Feature: eye_blinking
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient's eyes are mostly closed throughout the video, and there is no visible rapid blinking."
+}
+```
+--------------------------------------------------
+
+Video: R0007@3-7-2016@CA4444H2@nes_v1_1_segment_3.mp4
+Feature: tonic
+Attempt: 1
+Direct Parsing Failed: Expecting value: line 1 column 1 (char 0)
+Attempting to clean response.Raw response: ```json
+{
+  "answer": "no",
+  "justification": "The patient is lying in a hospital bed with her eyes closed and appears to be in a state of rest or sedation. There is no visible sustained stiffness, rigidity, or fixed posture in any of her limbs or body parts. Her body remains relaxed and supple, without any signs of the tonic phase of a seizure."
+}
+```
+--------------------------------------------------
+

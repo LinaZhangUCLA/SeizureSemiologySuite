@@ -2,7 +2,7 @@ import pandas as pd
 import os
 from pathlib import Path
 
-copy_from_path = "../vlm_inference/"
+copy_from_path = "../vlm_inference/Qwen3-Omni-30B-A3B-Instruct"
 copy_to_path = "./"
 
 valid_patient_ids = pd.read_csv('../../finetune/datasplit/fold0_val.csv')['patient_id'].astype(str).tolist()

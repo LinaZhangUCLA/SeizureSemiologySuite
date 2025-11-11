@@ -25,7 +25,8 @@ MODELS = [
     # "Qwen2.5-Omni-7B",
     #'Qwen3-VL-8B-Instruct',
     #'Qwen3-VL-32B-Instruct'
-    'seizure_omni_sft'
+    #'seizure_omni_sft',
+    'seizure_omni_grpo'    
 ]
 
 # Processing settings

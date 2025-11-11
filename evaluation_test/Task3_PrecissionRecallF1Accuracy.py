@@ -260,7 +260,9 @@ def main():
         #'Audio-flamingo-3',
         'Qwen2.5-Omni-7B',
         'Qwen3-Omni-30B',
-        'Lingshu-32B' ,     
+        'Lingshu-32B' ,  
+        'seizure_omni_sft' ,
+        'seizure_omni_grpo'  
         
     ]
 
@@ -279,6 +281,8 @@ def main():
         'Qwen3-Omni-30B': "Qwen3-Omni-30B-A3B-Instruct",
 
         'Lingshu-32B': 'Lingshu-32B',
+        'seizure_omni_sft' : 'seizure_omni_sft' ,
+        'seizure_omni_grpo': 'seizure_omni_grpo',  
     }
     
     output_path = 'metrics_test/Task3_spatial_metrics.csv'

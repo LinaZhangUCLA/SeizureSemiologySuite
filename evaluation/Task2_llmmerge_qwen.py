@@ -23,8 +23,9 @@ MODELS = [
     # "Qwen2.5-VL-72B-Instruct",
     # "Lingshu-32B",
     # "Qwen2.5-Omni-7B",
-    'Qwen3-VL-8B-Instruct',
+    #'Qwen3-VL-8B-Instruct',
     #'Qwen3-VL-32B-Instruct'
+     "Qwen3-Omni-30B-A3B-Instruct"
 ]
 
 # Processing settings
@@ -173,8 +174,8 @@ async def process_one_model(model_name: str, session):
     csv_in = os.path.join(model_dir, f"Task12_{model_name}_all_merged.csv")
     csv_out = os.path.join(model_dir, f"Task12_{model_name}_all_merged_llmmerge.csv")
 
-    csv_in = os.path.join(model_dir, f"Task12_{model_name}_diff.csv")
-    csv_out = os.path.join(model_dir, f"Task12_{model_name}_all_merged_llmmerge2.csv")
+    # csv_in = os.path.join(model_dir, f"Task12_{model_name}_diff.csv")
+    # csv_out = os.path.join(model_dir, f"Task12_{model_name}_all_merged_llmmerge2.csv")
 
 
     if not os.path.exists(csv_in):

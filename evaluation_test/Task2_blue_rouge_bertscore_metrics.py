@@ -42,13 +42,15 @@ MODELS = [
     "Qwen2.5-Omni-7B",
     'Qwen3-VL-8B-Instruct',
     'Qwen3-VL-32B-Instruct',
-    #"Qwen3-Omni-30B-A3B-Instruct",
+    "Qwen3-Omni-30B-A3B-Instruct",
+    'seizure_omni_sft',
+    'seizure_omni_grpo'
 ]    
 
 BASE_DIR = '/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference_test'
 pred_csv_files = []
 for model in MODELS:
-    pred_csv_files.append(f"{BASE_DIR}/{model}/Task12_{model}_all_merged.csv")
+    pred_csv_files.append(f"{BASE_DIR}/{model}/Task12_{model}_all_merged_llmmerge.csv")
  
 # 如果没找到，尝试不用递归的方式
 # if not pred_csv_files:

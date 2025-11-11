@@ -1,0 +1,15 @@
+{
+  "mean_seizure_rqi": 37.47594338915864,
+  "std_seizure_rqi": 13.822446636921422,
+  "min_seizure_rqi": 5.358593749999999,
+  "max_seizure_rqi": 68.33333333333333,
+  "mean_structural": 81.97674418604652,
+  "mean_coverage": 36.31136950904392,
+  "mean_temporal_f1": 36.52681298030136,
+  "mean_localizing": 50.58139534883721,
+  "mean_hallucination_multiplier": 0.8458075373995729,
+  "reports_with_safety_issues": 0,
+  "reports_with_non_seizure": 4,
+  "mean_length_multiplier": 0.9627906976744186,
+  "total_reports": 86
+}

@@ -1,0 +1,6 @@
+metric,pearson,spearman,kendall,pairwise_accuracy
+bleu_corpus,0.07,0.1,0.08,0.54
+rouge1_f1,0.09,0.1,0.07,0.52
+rougeL_f1,0.1,0.11,0.08,0.52
+berts_f1,0.07,0.12,0.08,0.52
+rqi,0.57,0.52,0.43,0.74

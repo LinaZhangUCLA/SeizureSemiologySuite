@@ -64,6 +64,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3'
 ################################################################################################
 model_name = args.model_name
 dataset_dir = args.dataset_dir
+
 videos_range = args.videos_range
 
 # inference files
@@ -529,7 +530,11 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                 #print(raw_answer)
                 # Try direct JSON parsing first
                 try:
-                    answer_json = json.loads(raw_answer)
+
+                    match = re.search(r"```(?:json)?\s*(.*?)\s*```", raw_answer, re.S)
+                    if match:
+                        json_str = match.group(1)
+                    answer_json = json.loads(json_str)
                 except json.JSONDecodeError as json_err:
                     # Log JSON parsing error to file
                     json_error_log.write(f"Video: {file_name}\n")

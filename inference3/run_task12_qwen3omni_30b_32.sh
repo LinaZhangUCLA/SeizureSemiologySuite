@@ -30,8 +30,8 @@ echo "Conda environment omni3 activated."
 
 # Run the inference script
 python task12_qwen_3_omni_30b2.py \
-    --gpu 4,5 \
-    --videos_range 640-900 \
+    --gpu 1,2,3 \
+    --videos_range 1-300 \
     --output_dir /home/lina/ssb/SeizureSemiologyBench/inference_result \
     --model_name Qwen/Qwen3-Omni-30B-A3B-Instruct \
     --dataset_dir /mnt/SSD3/lina/ucla2/ssbench/task1256_segment_60s \

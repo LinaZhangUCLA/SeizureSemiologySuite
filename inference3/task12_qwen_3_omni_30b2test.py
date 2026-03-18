@@ -64,7 +64,6 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3'
 ################################################################################################
 model_name = args.model_name
 dataset_dir = args.dataset_dir
-
 videos_range = args.videos_range
 
 # inference files
@@ -197,24 +196,24 @@ os.environ['MODELSCOPE_CACHE'] = modelscope_cache_dir
 import subprocess
 import torch
 # from transformers import Qwen2_5OmniForConditionalGeneration, Qwen2_5OmniProcessor
-from transformers import Qwen3OmniMoeForConditionalGeneration, Qwen3OmniMoeProcessor
-from qwen_omni_utils import process_mm_info
+# from transformers import Qwen3OmniMoeForConditionalGeneration, Qwen3OmniMoeProcessor
+# from qwen_omni_utils import process_mm_info
 # from peft import PeftModel  # not needed for Omni
 
 # Load base model first (Omni: audio+video capable)
-model = Qwen3OmniMoeForConditionalGeneration.from_pretrained(
-    model_name,
-    torch_dtype=torch.bfloat16,
-    attn_implementation="sdpa",
-    #attn_implementation="flash_attention_2",
-    device_map="auto"
-)
-# 明确只输出文本（若方法存在）
-if hasattr(model, "disable_talker"):
-    model.disable_talker()
+# model = Qwen3OmniMoeForConditionalGeneration.from_pretrained(
+#     model_name,
+#     torch_dtype=torch.bfloat16,
+#     attn_implementation="sdpa",
+#     #attn_implementation="flash_attention_2",
+#     device_map="auto"
+# )
+# # 明确只输出文本（若方法存在）
+# if hasattr(model, "disable_talker"):
+#     model.disable_talker()
 
-# Load processor
-processor = Qwen3OmniMoeProcessor.from_pretrained(model_name, cache_dir=hf_cache_dir)
+# # Load processor
+# processor = Qwen3OmniMoeProcessor.from_pretrained(model_name, cache_dir=hf_cache_dir)
 
 
 import os
@@ -527,14 +526,13 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
                 #print(prompt)
 
                 raw_answer = inference(video_path, prompt)
+
+
                 #print(raw_answer)
                 # Try direct JSON parsing first
                 try:
-
-                    match = re.search(r"```(?:json)?\s*(.*?)\s*```", raw_answer, re.S)
-                    if match:
-                        json_str = match.group(1)
-                    answer_json = json.loads(json_str)
+                    answer_json = json.loads(raw_answer)
+         
                 except json.JSONDecodeError as json_err:
                     # Log JSON parsing error to file
                     json_error_log.write(f"Video: {file_name}\n")
@@ -735,7 +733,29 @@ if __name__ == "__main__":
     #print(f"Log files: {'Disabled' if args.disable_logs else 'Enabled'}")
     print("-" * 50)
 
-    main()
+   
+
+
+#     raw_answer = """```json
+# {
+#   "answer": "no",
+#   "justification": "The patient is actively engaged in conversation, making eye contact with the examiner, and responding verbally to questions. His facial expressions are animated, and he is gesturing with his hands, indicating alertness and awareness rather than a blank stare."
+# }
+# ```"""
+
+
+    raw_answer = """```json
+{
+  "answer": "no",
+  "justification": "The patient is actively talking and gesturing with his hands, indicating he is engaged and not in a blank stare."
+}
+```"""
+    match = re.search(r"```(?:json)?\s*(.*?)\s*```", raw_answer, re.S)
+
+    if match:
+        json_str = match.group(1)
+    answer_json = json.loads(json_str)
+    print(answer_json['answer'], answer_json['justification'])
 
     # print("\n" + "="*50)
     # print("USAGE EXAMPLES:")

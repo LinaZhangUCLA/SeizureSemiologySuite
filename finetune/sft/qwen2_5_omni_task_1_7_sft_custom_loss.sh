@@ -8,8 +8,8 @@ LOG_PATH="./run_logs/${VERSION_NAME}.log"
 export TASK_DATASET='./dataset/sft_merge_2026-03-25_swift_train.jsonl'
 
 # 模型缓存目录（避免下载到 /home 的默认路径）
-export MODELSCOPE_CACHE='/mnt/SSD3/lina/SeizureSemiologyBench/cache/modelscope'
-export HF_HOME='/mnt/SSD3/lina/SeizureSemiologyBench/cache/huggingface'
+#export MODELSCOPE_CACHE='/mnt/SSD3/lina/SeizureSemiologyBench/cache/modelscope'
+#export HF_HOME='/mnt/SSD3/lina/SeizureSemiologyBench/cache/huggingface'
 
 export WANDB_API_KEY="***REMOVED***"
 export WANDB_PROJECT="seizurebench"
@@ -49,9 +49,9 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 PYTHONWARNINGS='ignore:PySoundFile failed.*:UserWarning:swift.llm.template.template.qwen,ignore:__audioread_load.*:FutureWarning:librosa.core.audio' \
 PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True' \
-CUDA_VISIBLE_DEVICES=3 \
-NPROC_PER_NODE=1 \
-VIDEO_MAX_PIXELS=$((224*224)) \
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+NPROC_PER_NODE=8 \
+VIDEO_MAX_PIXELS=$((784*448)) \
 FPS_MAX_FRAMES=60 \
 FPS=1 \
 MAX_PIXELS=$((FPS_MAX_FRAMES * VIDEO_MAX_PIXELS)) \

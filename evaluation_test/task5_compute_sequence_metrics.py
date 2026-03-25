@@ -100,10 +100,17 @@ def main(pred_path: str, gt_path: str, out_path: str):
     return dataset_metrics
 
 
-
-if __name__ == "__main__":
-
-    model_names = [
+def parse_args():
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    parser = argparse.ArgumentParser(description="Compute Task 5 sequence metrics.")
+    parser.add_argument("--pred_csv", default=None, help="Merged Task 5 prediction CSV.")
+    parser.add_argument("--gt_csv", default=os.path.join(repo_root, "result", "ground_truth", "task5_sequence_annotation_vlm.csv"),
+                        help="Ground-truth CSV.")
+    parser.add_argument("--out_csv", default=None, help="Per-video metrics CSV output path.")
+    parser.add_argument("--model_name", default=None, help="Model name for single-run summary output.")
+    parser.add_argument("--summary_csv", default=None, help="Optional single-row summary CSV output path.")
+    parser.add_argument("--base_dir", default=repo_root, help="Repo root for batch mode.")
+    parser.add_argument("--models", nargs="*", default=[
         'InternVL3_5-8B',
         'Qwen2.5-VL-7B-Instruct',
         'Qwen3-VL-8B-Instruct',
@@ -113,28 +120,58 @@ if __name__ == "__main__":
         'Qwen2.5-VL-72B-Instruct',
         'Qwen2.5-Omni-7B',
         "Qwen3-Omni-30B-A3B-Instruct",
-        'Lingshu-32B',   
-        'seizure_omni_sft' ,
-        'seizure_omni_grpo'   
-    ]
-    base_dir = '/home/lina/ssb/SeizureSemiologyBench/'
+        'Lingshu-32B',
+        'seizure_omni_sft',
+        'seizure_omni_grpo',
+    ], help="Model names for batch mode.")
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = parse_args()
+
+    if args.pred_csv:
+        out_csv = args.out_csv
+        if out_csv is None:
+            root, ext = os.path.splitext(args.pred_csv)
+            out_csv = f"{root}_metrics{ext}"
+        out_dir = os.path.dirname(out_csv)
+        if out_dir:
+            os.makedirs(out_dir, exist_ok=True)
+        model_metrics = main(args.pred_csv, args.gt_csv, out_csv)
+        model_name = args.model_name or os.path.basename(os.path.dirname(args.pred_csv))
+        if args.summary_csv:
+            summary_dir = os.path.dirname(args.summary_csv)
+            if summary_dir:
+                os.makedirs(summary_dir, exist_ok=True)
+            summary_df = pd.DataFrame([{
+                "model": model_name,
+                "edit_distance": model_metrics["edit_distance"],
+                "temporal_f1": model_metrics["temporal_f1"],
+                "lcs_ratio": model_metrics["lcs_ratio"],
+            }])
+            summary_df.to_csv(args.summary_csv, index=False, encoding="utf-8")
+        else:
+            print({"model": model_name, **model_metrics})
+        raise SystemExit(0)
+
+    model_names = args.models
+    base_dir = args.base_dir
     metric_rows = []
     for model in model_names:
-        pred_csv = f"{base_dir}result/vlm_inference_test/{model}/Task5_{model}_all_merge.csv"
+        pred_csv = os.path.join(base_dir, "result", "vlm_inference_test", model, f"Task5_{model}_all_merge.csv")
         if os.path.isfile(pred_csv):
-            gt_csv = f"{base_dir}result/ground_truth/task5_sequence_annotation_vlm.csv"
+            gt_csv = os.path.join(base_dir, "result", "ground_truth", "task5_sequence_annotation_vlm.csv")
             if("omni" in model.lower()):
-                gt_csv = f"{base_dir}result/ground_truth/task5_sequence_annotation.csv"
-            out_csv = f"{base_dir}metrics_test/task5/task5_sequence_3_metrics_{model}.csv"
+                gt_csv = os.path.join(base_dir, "result", "ground_truth", "task5_sequence_annotation.csv")
+            out_csv = os.path.join(base_dir, "metrics_test", "task5", f"task5_sequence_3_metrics_{model}.csv")
+            os.makedirs(os.path.dirname(out_csv), exist_ok=True)
             model_metrics = main(pred_csv,gt_csv, out_csv)
             model_metrics["model"] = model
             metric_rows.append(model_metrics)
 
     out_df = pd.DataFrame(metric_rows, columns=["model","edit_distance", "temporal_f1","lcs_ratio"])
-    out_path = f"{base_dir}metrics_test/task5_sequence_3_metrics.csv"
+    out_path = os.path.join(base_dir, "metrics_test", "task5_sequence_3_metrics.csv")
     out_df.to_csv(out_path, index=False, encoding="utf-8")
-
-
-
 
 

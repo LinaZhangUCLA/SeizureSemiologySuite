@@ -1,5 +1,6 @@
 import re
 import os
+import argparse
 import pandas as pd
 from typing import List
 
@@ -102,34 +103,29 @@ def process_csv(input_csv_path: str) -> str:
     out_df.to_csv(out_path, index=False, encoding="utf-8-sig")
     return out_path
 
-if __name__ == "__main__":
+def parse_args():
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    parser = argparse.ArgumentParser(description="Merge Task 5 segment-level sequences into video-level sequences.")
+    parser.add_argument("--input_csv", default=None, help="Optional single input CSV to merge.")
+    parser.add_argument("--base_dir", default=os.path.join(repo_root, "result", "vlm_inference_test"),
+                        help="Base directory containing per-model result folders.")
+    parser.add_argument("--models", nargs="*", default=['seizure_omni_sft', 'seizure_omni_grpo'],
+                        help="Model folder names to process under base_dir.")
+    return parser.parse_args()
 
-    # input_csv = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference/Qwen2.5-VL-7B-Instruct/task5.csv"
-    # out_file = process_csv(input_csv)
-    # print(f"已生成: {out_file}") 
-    # Model names
-    model_names = [
-        # 'InternVL3_5-8B',
-        # 'Qwen2.5-VL-7B-Instruct',
-        # 'Qwen3-VL-8B-Instruct',
-        # 'InternVL3_5-38B',
-        # 'Qwen2.5-VL-32B-Instruct',
-        # 'Qwen3-VL-32B-Instruct',
-        # 'Qwen2.5-VL-72B-Instruct',
-        # 'Qwen2.5-Omni-7B',
-        # "Qwen3-Omni-30B-A3B-Instruct",
-        # 'Lingshu-32B',    
-        'seizure_omni_sft' ,
-        'seizure_omni_grpo'   
-    ]
-    
-    for model in model_names:
-        print(model)
-        base_dir = '/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference_test/'
-        input_csv = f"{base_dir}{model}/Task5_{model}_all.csv"
-        if os.path.isfile(input_csv):
-            out_file = process_csv(input_csv)
-            print(f"已生成: {out_file}")
+if __name__ == "__main__":
+    args = parse_args()
+
+    if args.input_csv:
+        out_file = process_csv(args.input_csv)
+        print(f"Generated: {out_file}")
+    else:
+        for model in args.models:
+            print(model)
+            input_csv = os.path.join(args.base_dir, model, f"Task5_{model}_all.csv")
+            if os.path.isfile(input_csv):
+                out_file = process_csv(input_csv)
+                print(f"Generated: {out_file}")
     
 
     

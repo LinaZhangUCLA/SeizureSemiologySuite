@@ -10,11 +10,11 @@ swanlog
 
 # jungang-dev
 git-jungang.sh
-
+.cache/
 output/
 wandb/
 fintune/scripts/debug
-
+*.pyc
 result/vlm_inference2
 
 finetune/ckpts

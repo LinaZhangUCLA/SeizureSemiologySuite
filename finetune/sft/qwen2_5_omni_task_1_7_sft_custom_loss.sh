@@ -8,8 +8,8 @@ LOG_PATH="./run_logs/${VERSION_NAME}.log"
 export TASK_DATASET='./dataset/sft_merge_2026-03-25_swift_train.jsonl'
 
 # 模型缓存目录（避免下载到 /home 的默认路径）
-export MODELSCOPE_CACHE='/mnt/SSD3/lina/SeizureSemiologyBench/cache/modelscope'
-export HF_HOME='/mnt/SSD3/lina/SeizureSemiologyBench/cache/huggingface'
+#export MODELSCOPE_CACHE='/mnt/SSD3/lina/SeizureSemiologyBench/cache/modelscope'
+#export HF_HOME='/mnt/SSD3/lina/SeizureSemiologyBench/cache/huggingface'
 
 export WANDB_API_KEY="***REMOVED***"
 export WANDB_PROJECT="seizurebench"

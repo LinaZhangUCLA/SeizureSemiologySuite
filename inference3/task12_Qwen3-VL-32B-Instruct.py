@@ -49,6 +49,12 @@ def parse_arguments():
     parser.add_argument('--videos_range', type=str, default='1-2314',
                         help='Range of videos to process (e.g., "0,9" for first 10 videos, "10,19" for next 10 videos, etc.)')
 
+    parser.add_argument('--fps', type=float, default=2.0,
+                        help='Video sampling FPS to pass to the model input pipeline (default: 2.0)')
+
+    parser.add_argument('--max_frames', type=int, default=120,
+                        help='Maximum number of frames budgeted for each video clip (default: 120)')
+
     # # Logging settings
     # parser.add_argument('--disable_logs', type=lambda x: x.lower() in ('true', '1', 'yes'), default=True,
     #                    help='Disable individual log files for each video, keep only final result (default: True)')
@@ -162,8 +168,8 @@ inf_result_csv_fp = inference_dir + f'/Task1_{model_name.split("/")[-1]}_{videos
 # 360p:  (640, 360)
 # 240p:  (426, 240)
 ################################################################################################
-MAX_FRAMES = 120
-FPS = 2
+MAX_FRAMES = args.max_frames
+FPS = args.fps
 MAX_NEW_TOKENS = 2048
 MAX_RETRIES = 10
 
@@ -610,11 +616,9 @@ def ExtractFeatureByVLM(video_path, file_name, video_idx_info, log_csv, prompt_d
             print(f"  Attempt {retry_count + 1}/{MAX_RETRIES}")
             raw_answer = None 
             try:
-                print(f"  Getting video frames...")
-                video_path, frames, timestamps = get_video_frames(video_path, num_frames=MAX_FRAMES)
-                print(f"  Video frames shape: {frames.shape}")
-                print(f"  Timestamps shape: {timestamps.shape}")
-
+                # The processor consumes the original video path directly, so pre-decoding
+                # frames here only adds large disk I/O and cache usage without changing the
+                # model input.
                 print(f"  Running inference...")
                 raw_answer = inference(video_path, prompt)
                 print(f"  Raw answer length: {len(raw_answer) if raw_answer else 0}")

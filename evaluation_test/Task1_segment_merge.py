@@ -1,10 +1,12 @@
 import os
+import argparse
 import pandas as pd
 import re
 from collections import OrderedDict
 
 # ====================================
-BASE_DIR = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference_test"
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.join(REPO_ROOT, "result", "vlm_inference_test")
 # MODELS = [
 #     "InternVL3_5-8B",
 #     "InternVL3_5-38B",
@@ -154,10 +156,27 @@ def merge_one_csv(input_csv: str, output_csv: str):
     print("\n[Preview]")
     print(result_df.head(5))
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Merge Task 1/2 segment-level outputs into video-level outputs.")
+    parser.add_argument("--base_dir", default=BASE_DIR, help="Base directory containing per-model result folders.")
+    parser.add_argument("--models", nargs="*", default=MODELS, help="Model folder names to process under base_dir.")
+    parser.add_argument("--input_csv", default=None, help="Optional single input CSV to merge.")
+    parser.add_argument("--output_csv", default=None, help="Optional single output CSV path for --input_csv mode.")
+    return parser.parse_args()
+
 def main():
-    for model in MODELS:
-        in_csv  = os.path.join(BASE_DIR,model, f"Task1_{model}_all.csv")
-        out_csv = os.path.join(BASE_DIR,model, f"Task12_{model}_all_merged.csv")
+    args = parse_args()
+    if args.input_csv:
+        output_csv = args.output_csv
+        if output_csv is None:
+            root, ext = os.path.splitext(args.input_csv)
+            output_csv = f"{root}_merged{ext}"
+        merge_one_csv(args.input_csv, output_csv)
+        return
+
+    for model in args.models:
+        in_csv  = os.path.join(args.base_dir, model, f"Task1_{model}_all.csv")
+        out_csv = os.path.join(args.base_dir, model, f"Task12_{model}_all_merged.csv")
         if not os.path.exists(in_csv):
             print(f"[Skip] Input not found: {in_csv}")
             continue

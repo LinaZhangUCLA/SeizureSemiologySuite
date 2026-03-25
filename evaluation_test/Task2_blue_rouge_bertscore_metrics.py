@@ -1,6 +1,7 @@
 # Download the bertscore model (run in terminal; replace <HF_CACHE_DIR> with your path):
 # huggingface-cli download microsoft/deberta-xlarge-mnli --cache-dir <HF_CACHE_DIR>
 
+import argparse
 import os, re, glob
 import numpy as np
 import pandas as pd
@@ -9,10 +10,10 @@ from rouge_score import rouge_scorer
 import torch
 from transformers import AutoTokenizer, AutoModel
 
-# Configuration
-VLM_INFERENCE_DIR = "result/vlm_inference_test"
-GT_CSV = "/home/lina/ssb/SeizureSemiologyBench/result/ground_truth/task12_annotation.csv"
-OUT_DIR = "/home/lina/ssb/SeizureSemiologyBench/metrics_test/Task2_feature_metrics"
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+VLM_INFERENCE_DIR = os.path.join(REPO_ROOT, "result", "vlm_inference_test")
+GT_CSV = os.path.join(REPO_ROOT, "result", "ground_truth", "task12_annotation.csv")
+OUT_DIR = os.path.join(REPO_ROOT, "metrics_test", "Task2_feature_metrics")
 ID_COL = "file_name"
 LOWERCASE = True
 LANG = "en"
@@ -24,13 +25,6 @@ LOCAL_MODEL_PATH = "/mnt/SSD3/lina/bertmodel"
 NUM_LAYERS = 9
 
 FAIL_REGEX = re.compile(r"^\s*(fail(ed)?|error|n/?a|none|null)?\s*$", re.I)
-
-# Create output directory
-os.makedirs(OUT_DIR, exist_ok=True)
-
-# Find all CSV files matching the pattern
-csv_pattern = os.path.join(VLM_INFERENCE_DIR, "**/*all_merged_llmmerge.csv")
-pred_csv_files = glob.glob(csv_pattern, recursive=True)
 
 MODELS = [
     "InternVL3_5-8B",
@@ -46,62 +40,6 @@ MODELS = [
     'seizure_omni_sft',
     'seizure_omni_grpo'
 ]    
-
-BASE_DIR = '/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference_test'
-pred_csv_files = []
-for model in MODELS:
-    pred_csv_files.append(f"{BASE_DIR}/{model}/Task12_{model}_all_merged_llmmerge.csv")
- 
-# 如果没找到，尝试不用递归的方式
-# if not pred_csv_files:
-#     print(f"Trying alternative search method...")
-#     # 遍历子目录
-#     for root, dirs, files in os.walk(VLM_INFERENCE_DIR):
-#         for file in files:
-#             if file.endswith('all_merged_llmmerge.csv'):
-#                 pred_csv_files.append(os.path.join(root, file))
-
-# if not pred_csv_files:
-#     print(f"No CSV files found matching pattern: {csv_pattern}")
-#     print(f"\nChecking if directory exists: {VLM_INFERENCE_DIR}")
-#     print(f"Directory exists: {os.path.exists(VLM_INFERENCE_DIR)}")
-#     if os.path.exists(VLM_INFERENCE_DIR):
-#         print(f"\nContents of {VLM_INFERENCE_DIR}:")
-#         for item in os.listdir(VLM_INFERENCE_DIR):
-#             item_path = os.path.join(VLM_INFERENCE_DIR, item)
-#             if os.path.isdir(item_path):
-#                 print(f"  [DIR]  {item}")
-#                 # 显示子目录中的CSV文件
-#                 try:
-#                     for subitem in os.listdir(item_path):
-#                         if subitem.endswith('.csv'):
-#                             print(f"    - {subitem}")
-#                 except PermissionError:
-#                     pass
-#             elif item.endswith('.csv'):
-#                 print(f"  [FILE] {item}")
-#     exit(1)
-
-print(f"Found {len(pred_csv_files)} CSV file(s) to process:")
-for f in pred_csv_files:
-    print(f"  - {f}")
-print()
-
-# Load model once (will be reused for all files)
-print(f"Loading model from: {LOCAL_MODEL_PATH}")
-if not os.path.exists(LOCAL_MODEL_PATH):
-    raise FileNotFoundError(f"Model directory not found: {LOCAL_MODEL_PATH}")
-
-tokenizer = AutoTokenizer.from_pretrained(LOCAL_MODEL_PATH)
-model = AutoModel.from_pretrained(LOCAL_MODEL_PATH)
-#device = 'cuda' if torch.cuda.is_available() else 'cpu'
-device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
-model = model.to(device)
-model.eval()
-print(f"Model loaded successfully on {device}!\n")
-
-# Load ground truth once
-gt = pd.read_csv(GT_CSV)
 
 
 def feat_name(col):
@@ -185,7 +123,7 @@ def normalize_model_name(name):
     return name.lower().replace('-', '').replace('_', '').replace('.', '')
 
 
-def process_csv(pred_csv_path, gt, model, tokenizer, device):
+def process_csv(pred_csv_path, gt, model, tokenizer, device, out_dir):
     """Process a single prediction CSV file"""
     pred_filename = os.path.basename(pred_csv_path)
     
@@ -202,7 +140,7 @@ def process_csv(pred_csv_path, gt, model, tokenizer, device):
 
     # 生成输出文件名
     output_filename = f"{model_identifier}_feature_summary.csv"
-    out_file = os.path.join(OUT_DIR, output_filename)
+    out_file = os.path.join(out_dir, output_filename)
 
     print(f"Processing: {pred_csv_path}")
     print(f"  Model identifier: {model_identifier}")
@@ -302,19 +240,62 @@ def process_csv(pred_csv_path, gt, model, tokenizer, device):
     print(f"  ✓ Saved -> {out_file}\n")
 
 
-# Process all CSV files
-print("=" * 60)
-print("Starting batch processing...")
-print("=" * 60 + "\n")
+def parse_args():
+    parser = argparse.ArgumentParser(description="Compute Task 2 NLP metrics.")
+    parser.add_argument("--pred_csv", default=None, help="Optional single Task 2 llm-merged CSV.")
+    parser.add_argument("--base_dir", default=VLM_INFERENCE_DIR, help="Base directory containing per-model result folders.")
+    parser.add_argument("--models", nargs="*", default=MODELS, help="Model folder names for batch mode.")
+    parser.add_argument("--gt_csv", default=GT_CSV, help="Ground-truth Task 1/2 annotation CSV.")
+    parser.add_argument("--out_dir", default=OUT_DIR, help="Output directory for per-feature summary CSVs.")
+    parser.add_argument("--local_model_path", default=LOCAL_MODEL_PATH, help="Local DeBERTa model path for BERTScore.")
+    parser.add_argument("--device", default="cuda:2" if torch.cuda.is_available() else "cpu",
+                        help="Torch device for similarity model, e.g. cuda:0 or cpu.")
+    return parser.parse_args()
 
-for pred_csv in pred_csv_files:
-    try:
-        process_csv(pred_csv, gt, model, tokenizer, device)
-    except Exception as e:
-        print(f"✗ Error processing {pred_csv}: {e}\n")
-        continue
+def main():
+    args = parse_args()
+    os.makedirs(args.out_dir, exist_ok=True)
 
-print("=" * 60)
-print("Batch processing complete!")
-print("=" * 60)
+    if args.pred_csv:
+        pred_csv_files = [args.pred_csv]
+    else:
+        pred_csv_files = [
+            os.path.join(args.base_dir, model, f"Task12_{model}_all_merged_llmmerge.csv")
+            for model in args.models
+        ]
 
+    print(f"Found {len(pred_csv_files)} CSV file(s) to process:")
+    for f in pred_csv_files:
+        print(f"  - {f}")
+    print()
+
+    print(f"Loading model from: {args.local_model_path}")
+    if not os.path.exists(args.local_model_path):
+        raise FileNotFoundError(f"Model directory not found: {args.local_model_path}")
+
+    tokenizer = AutoTokenizer.from_pretrained(args.local_model_path)
+    model = AutoModel.from_pretrained(args.local_model_path)
+    device = torch.device(args.device)
+    model = model.to(device)
+    model.eval()
+    print(f"Model loaded successfully on {device}!\n")
+
+    gt = pd.read_csv(args.gt_csv)
+
+    print("=" * 60)
+    print("Starting batch processing...")
+    print("=" * 60 + "\n")
+
+    for pred_csv in pred_csv_files:
+        try:
+            process_csv(pred_csv, gt, model, tokenizer, device, args.out_dir)
+        except Exception as e:
+            print(f"✗ Error processing {pred_csv}: {e}\n")
+            continue
+
+    print("=" * 60)
+    print("Batch processing complete!")
+    print("=" * 60)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,1651 @@
+%%%%%%%% ICML 2026 EXAMPLE LATEX SUBMISSION FILE %%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{booktabs} % for professional tables
+\usepackage{enumitem}
+\setlist{nosep} 
+
+% hyperref makes hyperlinks in the resulting PDF.
+% If your build breaks (sometimes temporarily if a hyperlink spans a page)
+% please comment out the following usepackage line and replace
+% \usepackage{icml2026} with \usepackage[nohyperref]{icml2026} above.
+\usepackage{hyperref}
+
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+% Use the following line for the initial blind version submitted for review:
+\usepackage{icml2026}
+
+% For preprint, use
+% \usepackage[preprint]{icml2026}
+
+% If accepted, instead use the following line for the camera-ready submission:
+% \usepackage[accepted]{icml2026}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+
+% if you use cleveref..
+\usepackage[capitalize,noabbrev]{cleveref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THEOREMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Todonotes is useful during development; simply uncomment the next line
+%    and comment out the line below the next line to turn off comments
+%\usepackage[disable,textsize=tiny]{todonotes}
+\usepackage[textsize=tiny]{todonotes}
+
+\usepackage{colortbl}
+\usepackage{xcolor}
+\definecolor{Gray}{gray}{0.9} % 定义浅灰色
+\definecolor{LightGreen}{rgb}{0.88, 1, 0.88} % 定义浅绿色 (R,G,B)
+\definecolor{PaleGreen}{HTML}{ddefbf}
+% The \icmltitle you define below is probably too long as a header.
+% Therefore, a short form for the running title is supplied here:
+\icmltitlerunning{Submission and Formatting Instructions for ICML 2026}
+
+\begin{document}
+
+\twocolumn[
+  \icmltitle{Seizure-Semiology-Suite($S^3$): A Clinically Multimodal Dataset, Benchmark, and Models for Seizure Semiology Understanding}
+  
+
+  % It is OKAY to include author information, even for blind submissions: the
+  % style file will automatically remove it for you unless you've provided
+  % the [accepted] option to the icml2026 package.
+
+  % List of affiliations: The first argument should be a (short) identifier you
+  % will use later to specify author affiliations Academic affiliations
+  % should list Department, University, City, Region, Country Industry
+  % affiliations should list Company, City, Region, Country
+
+  % You can specify symbols, otherwise they are numbered in order. Ideally, you
+  % should not use this facility. Affiliations will be numbered in order of
+  % appearance and this is the preferred way.
+  \icmlsetsymbol{equal}{*}
+
+  \begin{icmlauthorlist}
+    \icmlauthor{Firstname1 Lastname1}{equal,yyy}
+    \icmlauthor{Firstname2 Lastname2}{equal,yyy,comp}
+    \icmlauthor{Firstname3 Lastname3}{comp}
+    \icmlauthor{Firstname4 Lastname4}{sch}
+    \icmlauthor{Firstname5 Lastname5}{yyy}
+    \icmlauthor{Firstname6 Lastname6}{sch,yyy,comp}
+    \icmlauthor{Firstname7 Lastname7}{comp}
+    %\icmlauthor{}{sch}
+    \icmlauthor{Firstname8 Lastname8}{sch}
+    \icmlauthor{Firstname8 Lastname8}{yyy,comp}
+    %\icmlauthor{}{sch}
+    %\icmlauthor{}{sch}
+  \end{icmlauthorlist}
+
+  \icmlaffiliation{yyy}{Department of XXX, University of YYY, Location, Country}
+  \icmlaffiliation{comp}{Company Name, Location, Country}
+  \icmlaffiliation{sch}{School of ZZZ, Institute of WWW, Location, Country}
+
+  \icmlcorrespondingauthor{Firstname1 Lastname1}{first1.last1@xxx.edu}
+  \icmlcorrespondingauthor{Firstname2 Lastname2}{first2.last2@www.uk}
+
+  % You may provide any keywords that you find helpful for describing your
+  % paper; these are used to populate the "keywords" metadata in the PDF but
+  % will not be shown in the document
+  \icmlkeywords{Machine Learning, ICML}
+
+  \vskip 0.3in
+]
+
+% this must go after the closing bracket ] following \twocolumn[ ...
+
+% This command actually creates the footnote in the first column listing the
+% affiliations and the copyright notice. The command takes one argument, which
+% is text to display at the start of the footnote. The \icmlEqualContribution
+% command is standard text for equal contribution. Remove it (just {}) if you
+% do not need this facility.
+
+% Use ONE of the following lines. DO NOT remove the command.
+% If you have no special notice, KEEP empty braces:
+\printAffiliationsAndNotice{}  % no special notice (required even if empty)
+% Or, if applicable, use the standard equal contribution text:
+% \printAffiliationsAndNotice{\icmlEqualContribution}
+
+\begin{abstract}
+
+
+
+
+  \iffalse Multimodal Large Language Models (MLLMs) have achieved impressive performance on general video understanding, yet their capabilities in high-stakes, knowledge-intensive domains remain largely untested. For example, existing video benchmarks, which primarily focus on common, goal-oriented activities in everyday scenarios,  fail to represent the dense, involuntary, and spatio-temporally evolving motor phenomena characteristic of seizures, where laterality and temporal progression are diagnostically crucial. We introduce Seizure-Semiology-Bench, the first large-scale, expert-supervised dataset for evaluating MLLMs on clinical seizure understanding. It includes  438 seizure recordings from 116 patients, paired with over 35,000 expert annotations spanning 20 ILAE-defined semiological features and 46 expert-curated prompts. Building on this dataset, we propose a seven-task hierarchical evaluation framework that probes MLLMs' abilities from basic perception to high-level clinical reasoning, and introduce a clinically grounded metric, the Report Quality Index for Seizure Semiology (Seizure-RQI), which measures factual accuracy, temporal coherence, and structural integrity in clinical narratives, beyond superficial text similarity. We evaluate 11 state-of-the-art open-source MLLMs and perform seizure-specialized fine-tuning. Our analysis reveals a pronounced performance gap: general-purpose models recognize salient motor signs but fail at temporal sequencing, fine-grained characterization, laterality judgment, and clinically coherent narrative generation. Seizure-specialized models, however, show consistent gains across all tasks, showing promise of and exposing the need for further work on domain-aware MLLM development. Finally, a two-stage strategy---extracting structured semiological features and applying a lightweight classifier for epilepsy vs non-epilepsy seizures ---significantly surpasses all end-to-end MLLM reasoning baselines. Seizure-Semiology-Bench therefore serves as both a dataset and a benchmarking framework, highlighting the fundamental limits of current MLLMs and guiding the development of clinically reliable, domain-adaptive multimodal intelligence.
+  \fi
+
+  While Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in general video understanding, their capacity to interpret involuntary, and spatio-temporally evolving pathologic motor behaviors such as seizure semiology remains largely untested. To address this gap, we introduce Seizure-Semiology-Suite (S³), a clinically grounded dataset and benchmark for fine-grained, structured seizure semiology understanding. The dataset includes 438 seizure videos annotated with over 35,000 dense labels covering 20 ILAE-defined semiological features. Building on this dataset, we propose a seven-task hierarchical benchmark that systematically evaluates MLLMs from low-level visual perception to temporal sequencing, narrative report generation, and seizure diagnosis. To enable clinically meaningful evaluation of generated reports, we further introduce the Report Quality Index for Seizure Semiology (Seizure-RQI). Extensive baselines across 11 open-weight MLLMs reveal systematic weaknesses in laterality reasoning, temporal localization, symptom sequencing, and clinically faithful reporting. We show that seizure-specific fine-tuning substantially improves performance across tasks, and that a two-stage neuro-symbolic framework achieves an F1 score of 0.96 on epileptic versus non-epileptic seizure classification. Seizure-Semiology-Suite establishes a rigorous benchmark for evaluating multimodal models in safety-critical medical video understanding and guides the development of clinically reliable, domain-adaptive multimodal intelligence.
+
+\end{abstract}
+
+\section{Introduction}
+
+Seizure semiology encapsulates the observable motor, behavioral, and autonomic manifestations of a seizure, and accurately recognizing these signs is essential for epilepsy diagnosis, seizure-type classification, and the localization of the seizure onset zone \cite{mcgonigal2021on, jobst2013seizure}. However, current semiology assessments rely heavily on manual video review by trained experts. This process is subjective and labor-intensive, making it difficult to scale in resource-limited clinical settings \cite{reuber2003psychogenic, devinsky2011diagnosing}. While automated approaches exist, they have traditionally been limited to rigid discriminative tasks \cite{shoeb2004patient}. Such categorical frameworks exhibit limitations in modeling the complex reality of epileptic events, where symptoms are often subtle, concurrent, and characterized by critical spatial laterality and temporal evolution \cite{Loddenkemper2005Lateralizing, blume2001glossary}. Consequently, existing systems lack the descriptive interpretability required for clinical decision-making.
+
+Recent advances in MLLMs enable seizure understanding to move beyond simplistic discriminative tasks, embracing a more generative framework \cite{bai2025Qwen2_5_vl, wang2025internVL3_5, yang2025qwen3}. This shift allows models to describe complex, evolving, and coexisting seizure signs in natural language. However, the current community suffers from a lack of large-scale datasets with intensive, descriptive expert annotations to realize the potential of MLLMs in this domain. Furthermore, there is no comprehensive task suite or evaluation protocol that quantitatively measures MLLMs’ capabilities across clinically meaningful dimensions, such as laterality and temporal evolution.
+
+\iffalse To address these challenges, we aim to advance clinical seizure understanding from two key perspectives: the dataset and the benchmark. We introduce Seizure-Semiology-Suite, the first comprehensive framework for evaluating MLLMs on clinical seizure understanding. Utilizing a large-scale, expert-supervised strategy, we construct a dataset comprising 438 seizure videos from 116 patients, featuring over 35,000 dense expert labels across 20 ILAE-defined semiological features \cite{beniczky2022seizuresemiology}. Finally, we establish a unified benchmark specifically tailored to the structured, clinician-facing output style required for medical reports. We believe this work can enhance the clinical reasoning capabilities of MLLMs and open possibilities for complex semiology modeling. \fi
+
+To address these challenges, we introduce Seizure-Semiology-Suite (S³), a comprehensive dataset and benchmarking framework for fine-grained, structured seizure semiology understanding. Our main contributions:
+\begin{itemize}
+    \item We construct the first large-scale, expert-supervised seizure video dataset with dense feature-level labels to address the data scarcity hindering MLLM application in seizure.
+    \item We build a seven-task hierarchical benchmark with clinically grounded evaluation metrics, including the Report Quality Index for Seizure Semiology (Seizure-RQI), to evaluate MLLMs' performance from perception to clinical reasoning.
+    \item We conduct extensive experiments on 11 open-weight MLLMs to establish current baselines, identifying critical failure modes in temporal sequencing, spatial laterality reasoning and faithful report generation.
+    \item We implement seizure-specialized finetuning and a two-stage classification framework, leading to significant performance improvements in seizure semiology perception and seizure classification.
+
+\end{itemize}
+
+
+
+
+\iffalse
+Multimodal Large Language Models (MLLMs) have recently achieved remarkable progress in general video understanding~\cite{xu2025qwen3_omni,liu2025javisgpt,xun2025rtv}, yet their reliability in high-stakes, knowledge-intensive domains remains largely unexplored. 
+While existing benchmarks such as  ActivityNet-QA \cite{Yu2019ActivityNetQA}, MSRVTT-QA \cite{Jun2016MSRVTT}, and MotionBench \cite{Hong2025MotionBench}, evaluate goal-directed human activities, they do not adequately represent the dense, involuntary, and evolving pathological movements that define clinical phenomena such as seizures.
+
+Seizure semiology, the observable physical manifestations of epileptic and non-epileptic seizures, poses unique challenges to visual understanding. 
+Its motor patterns are involuntary, concurrent, and characterized by fine-grained temporal evolution and spatial laterality. 
+Accurate interpretation requires reasoning over temporal order (“ictal march”), body-part localization, and behavioral context, capabilities that current MLLMs struggle to generalize from naturalistic pretraining data.
+
+Existing medical video datasets (e.g., MedVidQA~\cite{gupta2023medvidqa}, SV-RCNet~\cite{jin2018svrcnet}) address structured, intentional procedures such as surgery or first aid, but lack involuntary pathological motion and dense temporal annotation. 
+Thus, there is no standardized benchmark to test whether MLLMs can capture fine-grained, clinically meaningful visual reasoning.
+
+To address this gap, we introduce Seizure-Semiology-Bench---a large-scale, expert-supervised dataset and a benchmark designed to evaluate MLLMs on seizure understanding under real-world clinical constraints. 
+Our dataset includes 438 seizure videos from 116 patients, annotated with over 35,000 expert labels across 20 ILAE-defined semiological features~\cite{beniczky2022seizuresemiology} and 46 expert-curated prompts. Feature-level annotations and prompts will be made publicly available via HuggingFace, and videos can be requested through a data use agreement (DUA).
+
+Building on this foundation, we propose a seven-task hierarchical evaluation framework spanning perception, spatial and temporal reasoning, and high-level clinical interpretation.
+We further introduce the Report Quality Index for Seizure Semiology (Seizure-RQI), a clinically grounded metric that evaluates narrative fidelity across structural completeness, symptom coverage, laterality accuracy, and temporal coherence—moving beyond surface-level text similarity. We benchmark 11 open-weight MLLMs, and also perform seizure-specialized fine-tuning on the smallest MLLM ($7B$) using both Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO). 
+
+We uncover consistent trends: 
+General-purpose models detect salient signs but fail in temporal sequencing, laterality reasoning, and clinical narrative generation. The smallest fine-tuned models,  Qwen2.5-Omni-7B, show measurable domain adaptation gains when compared to their much larger counterparts. 
+These results highlight the critical need for domain-aware objectives and structured evaluation frameworks to guide future multimodal reasoning systems. In summary, our work provides:
+\begin{itemize}
+    \item A large-scale, clinically annotated video dataset and benchmark for seizure semiology;
+    \item A seven-task hierarchical evaluation framework consisting of the clinically grounded Seizure-RQI metric;
+    \item A systematic analysis of 11 MLLMs revealing core failure modes and the potential gains achievable via seizure-specialized fine-tuning.
+\end{itemize}
+
+Beyond seizures, Seizure-Semiology-Bench offers a blueprint for building and evaluating expert-level multimodal AI systems capable of reasoning about complex, temporally dynamic, and safety-critical real-world phenomena.
+\fi
+
+
+\iffalse
+
+Submission to ICML 2026 will be entirely electronic, via a web site
+(not email). Information about the submission process and \LaTeX\ templates
+are available on the conference web site at:
+\begin{center}
+  \texttt{http://icml.cc/}
+\end{center}
+
+The guidelines below will be enforced for initial submissions and
+camera-ready copies. Here is a brief summary:
+\begin{itemize}
+  \item Submissions must be in PDF\@.
+  \item If your paper has appendices, submit the appendix together with the
+        main body and the references \textbf{as a single file}. Reviewers will not
+        look for appendices as a separate PDF file. So if you submit such an extra
+        file, reviewers will very likely miss it.
+  \item Page limit: The main body of the paper has to be fitted to 8 pages,
+        excluding references and appendices; the space for the latter two is not
+        limited in pages, but the total file size may not exceed 10MB. For the
+        final version of the paper, authors can add one extra page to the main
+        body.
+  \item \textbf{Do not include author information or acknowledgements} in your
+        initial submission.
+  \item Your paper should be in \textbf{10 point Times font}.
+  \item Make sure your PDF file only uses Type-1 fonts.
+  \item Place figure captions \emph{under} the figure (and omit titles from
+        inside the graphic file itself). Place table captions \emph{over} the
+        table.
+  \item References must include page numbers whenever possible and be as
+        complete as possible. Place multiple citations in chronological order.
+  \item Do not alter the style template; in particular, do not compress the
+        paper format by reducing the vertical spaces.
+  \item Keep your abstract brief and self-contained, one paragraph and roughly
+        4--6 sentences. Gross violations will require correction at the
+        camera-ready phase. The title should have content words capitalized.
+\end{itemize}
+
+\subsection{Submitting Papers}
+
+\textbf{Anonymous Submission:} ICML uses double-blind review: no identifying
+author information may appear on the title page or in the paper
+itself. \cref{author info} gives further details.
+
+\medskip
+
+Authors must provide their manuscripts in \textbf{PDF} format.
+Furthermore, please make sure that files contain only embedded Type-1 fonts
+(e.g.,~using the program \texttt{pdffonts} in linux or using
+File/DocumentProperties/Fonts in Acrobat). Other fonts (like Type-3)
+might come from graphics files imported into the document.
+
+Authors using \textbf{Word} must convert their document to PDF\@. Most
+of the latest versions of Word have the facility to do this
+automatically. Submissions will not be accepted in Word format or any
+format other than PDF\@. Really. We're not joking. Don't send Word.
+
+Those who use \textbf{\LaTeX} should avoid including Type-3 fonts.
+Those using \texttt{latex} and \texttt{dvips} may need the following
+two commands:
+
+{\footnotesize
+\begin{verbatim}
+dvips -Ppdf -tletter -G0 -o paper.ps paper.dvi
+ps2pdf paper.ps
+\end{verbatim}}
+It is a zero following the ``-G'', which tells dvips to use
+the config.pdf file. Newer \TeX\ distributions don't always need this
+option.
+
+Using \texttt{pdflatex} rather than \texttt{latex}, often gives better
+results. This program avoids the Type-3 font problem, and supports more
+advanced features in the \texttt{microtype} package.
+
+\textbf{Graphics files} should be a reasonable size, and included from
+an appropriate format. Use vector formats (.eps/.pdf) for plots,
+lossless bitmap formats (.png) for raster graphics with sharp lines, and
+jpeg for photo-like images.
+
+The style file uses the \texttt{hyperref} package to make clickable
+links in documents. If this causes problems for you, add
+\texttt{nohyperref} as one of the options to the \texttt{icml2026}
+usepackage statement.
+
+\subsection{Submitting Final Camera-Ready Copy}
+
+The final versions of papers accepted for publication should follow the
+same format and naming convention as initial submissions, except that
+author information (names and affiliations) should be given. See
+\cref{final author} for formatting instructions.
+
+The footnote, ``Preliminary work. Under review by the International
+Conference on Machine Learning (ICML). Do not distribute.'' must be
+modified to ``\textit{Proceedings of the
+  $\mathit{43}^{rd}$ International Conference on Machine Learning},
+Seoul, South Korea, PMLR 306, 2026.
+Copyright 2026 by the author(s).''
+
+For those using the \textbf{\LaTeX} style file, this change (and others) is
+handled automatically by simply changing
+$\mathtt{\backslash usepackage\{icml2026\}}$ to
+$$\mathtt{\backslash usepackage[accepted]\{icml2026\}}$$
+Authors using \textbf{Word} must edit the
+footnote on the first page of the document themselves.
+
+Camera-ready copies should have the title of the paper as running head
+on each page except the first one. The running title consists of a
+single line centered above a horizontal rule which is $1$~point thick.
+The running head should be centered, bold and in $9$~point type. The
+rule should be $10$~points above the main text. For those using the
+\textbf{\LaTeX} style file, the original title is automatically set as running
+head using the \texttt{fancyhdr} package which is included in the ICML
+2026 style file package. In case that the original title exceeds the
+size restrictions, a shorter form can be supplied by using
+
+\verb|\icmltitlerunning{...}|
+
+just before $\mathtt{\backslash begin\{document\}}$.
+Authors using \textbf{Word} must edit the header of the document themselves.
+
+\fi
+
+\section{Related work}
+% \textbf{2.1 Medical Video Understanding}
+% Video understanding in the medical domain has largely focused on structured, procedure-oriented tasks. Datasets such as MedVidQA \cite{Gupta2023MedVidQA} have been instrumental in advancing medical instructional video classification and question answering. Similarly, SV-RCNet \cite{jin2018svrcnet} addresses workflow recognition in robotic surgical videos, emphasizing the identification of specific, orderly surgical phases. A common limitation of these works is their focus on intentional, goal-directed procedures, such as surgery or first aid, where actions follow a logical, prescriptive sequence. There remains a significant gap in available datasets for analyzing involuntary pathological movements, which are characterized by dense, concurrent, and evolving motor patterns that lack a pre-defined script or intent.
+
+
+% \textbf{2.2 General Motion Recognition}
+% In the broader field of computer vision (CV), benchmarks like ActivityNet-QA \cite{Yu2019ActivityNetQA} and MSRVTT-QA \cite{Jun2016MSRVTT} have set the standard for evaluating models on complex web videos and video descriptions. More recently, MotionBench \cite{Hong2025MotionBench} was introduced to benchmark fine-grained video motion understanding, pushing the boundaries of how models perceive subtle dynamics. However, these benchmarks are predicated on goal-oriented human activities within structured everyday scenarios. They do not adequately represent the unique challenges of clinical seizure analysis, which involves dense, involuntary, and spatio-temporally evolving motor phenomena. Current general-purpose benchmarks fail to test whether models can reason about the specific laterality and temporal progression crucial for medical diagnosis.
+
+
+% \textbf{2.3 Seizure Semiology}
+% CV researchers have developed discriminative models, notably combining Convolutional Neural Networks (CNNs) with optical flow to classify specific seizure types (e.g., tonic-clonic) while preserving privacy \cite{mehta2023privacy}. However, these discriminative frameworks typically function as opaque systems, reducing complex clinical phenomena to rigid class labels without the descriptive granularity or interpretability required for medical decision-making. In contrast to these discriminative systems, our work leverages generative Multimodal Large Language Models (MLLMs) to produce detailed, human-readable reports. To facilitate this shift, we introduce Seizure-Semiology-Bench, the first large-scale benchmark featuring 438 expert-supervised videos across 20 core ILAE-defined features \cite{beniczky2022seizuresemiology}
+
+
+% \textbf{2.4 Clinical AI Evaluation}
+% Evaluating AI in high-stakes clinical domains requires metrics that go beyond surface-level text similarity. General-purpose overlap metrics such as BLEU and ROUGE can fail to reflect clinical factual correctness, motivating clinically grounded evaluation in medical text generation \cite{ostmeier2024green}. Structure-aware resources such as RadGraph \cite{PhysioNet-radgraph-1.0.0} enable evaluation that captures relationships between clinical entities rather than simple n-gram matching. However, these metrics often overlook the narrative flow and temporal logic essential to a seizure report \cite{croxford2025current}. 
+
+\textbf{Medical Video Understanding.} Medical video understanding has primarily targeted structured, procedure-centric settings. MedVidQA \cite{Gupta2023MedVidQA} advances instructional medical video classification and QA, while SV-RCNet \cite{jin2018svrcnet} models workflow recognition in robotic surgery via phase identification. A shared limitation is the assumption of intentional, goal-directed actions with prescriptive temporal structure (e.g., surgery, first aid). In contrast, datasets for involuntary pathological motion remain scarce.
+
+\iffalse
+Medical Video Understanding.  
+Prior work on medical video understanding has primarily focused on structured, procedure-centric scenarios involving intentional and goal-directed actions. Representative benchmarks include MedVidQA, which targets instructional medical videos, and workflow recognition systems such as SV-RCNet for robotic surgery. While effective in controlled settings, these approaches typically assume predefined temporal structure and deliberate motion, limiting their applicability to involuntary, irregular, and pathologic movements. As a result, existing medical video benchmarks provide limited support for evaluating fine-grained, spatiotemporally evolving motor phenomena such as seizure semiology. \fi
+
+\textbf{General Video Motion Understanding.} Large-scale video-language benchmarks, including ActivityNet-QA \cite{Yu2019ActivityNetQA} and MSRVTT-QA \cite{Jun2016MSRVTT}, have driven progress in general video understanding, while recent efforts such as MotionBench \cite{Hong2025MotionBench} emphasize fine-grained motion perception. However, these datasets predominantly feature everyday, goal-oriented activities and lack the clinical specificity required to assess diagnostically meaningful attributes. In particular, they do not capture key challenges central to seizure analysis, such as spatial laterality, concurrent symptoms, and precise temporal progression, which are critical for clinical interpretation.
+
+
+
+
+\iffalse
+
+
+\textbf{General Motion Recognition} General video benchmarks, e.g., ActivityNet-QA \cite{Yu2019ActivityNetQA} and MSRVTT-QA \cite{Jun2016MSRVTT}, evaluate understanding over web-scale videos and descriptions, while MotionBench \cite{Hong2025MotionBench} targets fine-grained motion perception. However, these datasets predominately feature goal-oriented everyday activities, failing to capture the complexity of involuntary, spatiotemporally evolving seizure semiology. Crucially, they lack the granularity required to evaluate diagnostic competencies, such as laterality disambiguation and precise temporal progression reasoning. \fi
+
+
+
+\textbf{Seizure Semiology Analysis.} Existing computational approaches to seizure analysis have largely adopted narrow, task-specific pipelines targeting isolated symptoms or seizure types. Prior studies have explored 3D CNNs for tonic–clonic detection \cite{boyne2025videotonic}, accelerometry-based methods \cite{poh2012eda_accel_seizure}, optical flow segmentation \cite{kalitzin2012opticalflow_clonic_video}, and CNN-based seizure-type classifiers \cite{mehta2023privacy}. Although effective within their respective scopes, these systems typically produce coarse or weakly interpretable outputs and do not scale to comprehensive, feature-level semiology description. In contrast, our work targets structured, generative modeling of seizure semiology across a broad spectrum of clinically relevant features, aligning more closely with expert clinical reasoning.
+
+\iffalse
+\textbf{Seizure Semiology}
+Seizure semiology understanding has largely been approached through narrow, feature- or type-specific pipelines that cover only a handful of manifestations rather than the full spectrum of clinically relevant semiology. Prior work targets isolated symptoms using specialized modules—e.g., 3D CNNs for tonic–clonic detection \cite{boyne2025videotonic}, accelerometry-based classifiers \cite{poh2012eda_accel_seizure}, optical flow segmentation \cite{kalitzin2012opticalflow_clonic_video}, or CNN+optical-flow models for seizure-type classification \cite{mehta2023privacy}. While effective for their intended behaviors, these approaches typically yield coarse, weakly interpretable outputs and do not scale to the descriptive, feature-level granularity required for clinical decision-making. We therefore study generative MLLMs that produce clinician-readable seizure semiology reports spanning 20 core semiological features.
+
+
+Prior CV work has explored discriminative seizure recognition, such as pairing CNNs with optical flow to classify seizure types (e.g., tonic–clonic) \cite{mehta2023privacy}. However, these pipelines typically yield coarse labels with limited interpretability and insufficient descriptive granularity for clinical decision-making. We instead study generative MLLMs for producing clinician-readable semiology reports. To support systematic evaluation, we introduce Seizure-Semiology-Bench: a large-scale benchmark of 438 expert-supervised videos covering 20 core ILAE-defined features \cite{beniczky2022seizuresemiology}.\fi
+
+\textbf{Clinical AI Evaluation.} High-stakes clinical evaluation requires metrics beyond surface-form overlap. N-gram metrics (e.g., BLEU, ROUGE) may correlate weakly with clinical factuality, motivating clinically grounded assessment for medical text generation \cite{ostmeier2024green}. Graph and structure aware resources such as RadGraph \cite{PhysioNet-radgraph-1.0.0} evaluate entities and relations rather than token overlap. Nonetheless, existing schemes can undercapture discourse level coherence, narrative structure, and temporal logic, properties that are central to seizure reporting \cite{croxford2025current}.
+
+\section{Seizure-Semiology-Suite}
+
+\subsection{Seizure-Semiology-Dataset Construction}
+\label{subsec:date_annot}
+
+\textbf{Dataset and Ethical Considerations.} Seizure-Semiology-Dataset is constructed from continuous seizure video recordings from patients who underwent monitoring in a tertiary Epilepsy Monitoring Unit (EMU) between 2019 and 2023. From patients' 24/7 recordings, expert reviewers first identified candidate seizure events. They then screened clips to ensure clear motor activity and unobstructed full-body views. The final dataset comprises 438 videos from 116 adult patients (ages 18–64) with resolutions of 1920×1080 (81.28\%), 1280×720 (18.26\%), and 640×480 (0.46\%), and a diverse duration distribution (see Figure~\ref{seizure info}(a)). Each video is paired with its corresponding clinical semiology report and diagnostic record. All data collection was approved by the IRB, and all recordings were fully de-identified to protect patient privacy. See Appendix Section ~\ref{sec:date_annot_supp} for details.
+
+
+% \begin{figure}[t]
+%   \centering
+%   \includegraphics[width=\linewidth]{figures/assets/seizurestat.png}
+%   \caption{\textbf{Dataset information.}}
+%   \label{seizure info}
+% \end{figure}
+
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/seizurevideo.pdf}
+  \caption{\textbf{Seizure Semiology Dataset Information.} (The patient depicted in this figure is AI-generated.)}
+  \label{seizure info}
+\end{figure*}
+
+\iffalse
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{figures/seizurevideo.pdf}
+  \caption{\textbf{Seizure Semiology Dataset information.}}
+  \label{seizure info}
+\end{figure}
+\fi
+\iffalse Seizures exhibit a wide diversity of symptoms across different patients. To achieve fine-grained evaluation, each seizure video was manually annotated by a large team of epileptologists and trained annotators for 20 clinically relevant semiological features defined by the International League Against Epilepsy (ILAE), e.g., automatisms, tonic, and clonic (see Appendix ~\ref{sec:date_annot_supp}). For each feature, annotators recorded its presence or absence, start and end times, and an explanatory justification, resulting in over 35,000 semiology labels. \fi
+\textbf{Annotation procedure and quality control.} Each seizure video was manually annotated by epileptologists and trained annotators for 20 ILAE-defined semiological features (e.g., automatisms, tonic, clonic; see Appendix 1). For each feature, annotators recorded presence/absence, temporal boundaries (start/end times), and explanatory justifications, yielding over 35,000 semiology labels in total.
+
+We employed a five-stage annotation workflow to ensure clinical correctness. (i) In an initial onboarding phase, epileptologists introduced the 20 ILAE-defined semiological features to the annotation team using representative video examples to calibrate visual understanding. (ii) Epileptologists
+ selected 151 videos ($\sim34\%$) covering a full spectrum of semiological features and performed live annotations with explanations, addressing the annotators' questions promptly. (iii) Trained annotators independently labeled the remaining 287 videos, with challenging cases presented to a panel of three experts in review meetings for consensus; any disagreements were resolved by a majority vote. (iv) Annotator outputs were iteratively verified using an adaptive sampling strategy. Discrepancies were continuously refined until the feature-level distributions from the annotator subset achieved statistical convergence with the expert-labeled subset. This convergence was confirmed across both seizure types, Epileptic Seizures (ES, pearson similarity score of 0.893) and Non-Epileptic Seizures (NES, pearson similarity score of 0.782). See Appendix Table ~\ref{tab:app_similarity} for details. (v) Additional quality control measures were adopted, including using LLMs to correct grammatical errors and semantic inconsistencies in justification texts, and implementing rule-based checks to validate temporal labels.
+
+\subsection{Seizure-Semiology-Bench}
+\label{subsec:tasks_metrics}
+%% fig:2_bench_overall
+\input{figures/2_bench_overall}
+
+
+We designed a seven-task hierarchy to systematically quantify MLLMs' capabilities, progressing from basic perception to integrated clinical reasoning (Figure~\ref{fig:2_bench_overall}).
+
+\subsubsection{Task 1 - Seizure Semiology Recognition}
+\label{subsubsec:tasks1_metrics}
+
+Semiological features provide critical diagnostic cues for seizure classification and for localizing the epileptogenic zone (EZ). Signs such as tonic posturing, clonic jerks, versive head/eye deviation, and figure-4 arm positioning are strong ES markers with prognostic implications \cite{Loddenkemper2005Lateralizing}, including risk of injury and sudden unexpected death in epilepsy (SUDEP) \cite{harden2017sudep}. In contrast, features like pelvic thrusting and asynchronous movements are more indicative of NES \cite{Perez2016NonepilepticSeizures}. This task evaluates whether an MLLM can detect the presence or absence of 20 core semiological features in a seizure video. Each feature is queried using a binary yes/no prompt, written by epileptologists based on ILAE definitions and clinical expertise, then translated into simpler language for use by general-purpose MLLMs. \iffalse For example, figure-4 arm positioning is prompted as: "Is one arm extended while the other is flexed?"\fi Predictions are evaluated using Precision, Recall, F1-Score, and Accuracy. The complete set of prompts is listed in Appendix Section ~\ref{sec:mllm_prompt_supp}.
+
+
+\subsubsection{Task 2 - Feature Justification}
+\label{subsubsec:tasks2_metrics}
+
+Beyond recognition, this task requires MLLMs to generate free-text justifications grounded in visual evidence to support their Task~1 predictions. Evaluation combines standard NLP metrics (BLEU, ROUGE-L, BERTScore) with a clinically grounded Seizure Semiology Interpretation Score, which measures semantic alignment between model explanations and expert annotations using a structured rubric. For each of the 20 symptoms, epileptologists define symptom-specific queries covering both core manifestations and subtle attributes. An external LLM (e.g., Qwen3-Plus~\cite{yang2025qwen3}) extracts structured answers from both model justifications and ground truth reports, which are then scored via a weighted rubric to compute semantic alignment (see Appendix~\ref{sec:mllm_prompt_supp},~\ref{sec:sem_int_score_supp}).
+
+\iffalse
+Beyond recognition, this task requires MLLMs to generate free-text justifications grounded in visual evidence to support their decisions in Task 1. Evaluation combines standard NLP metrics (BLEU, ROUGE-L, BERTScore) with a clinically grounded Seizure Semiology Interpretation Score, which measures semantic alignment between model explanations and expert annotations using a structured rubric. For each of the 20 symptoms, epileptologists formulated symptom-specific queries, from core manifestations to subtle attributes. An external LLM (e.g., Qwen3-Plus~\cite{yang2025qwen3}) extracts structured answers from both the MLLMs' justification and the ground truth. Answers are then scored via a weighted rubric to compute semantic alignment, offering a more rigorous clinical evaluation (see Appendix ~\ref{sec:mllm_prompt_supp},~\ref{sec:sem_int_score_supp}).
+
+
+In this task, the MLLMs are required to generate a free-text explanation to support their decision with relevant visual evidence (e.g., affected body part,  laterality, amplitude), for the presence/absence decision in Task 1. This shifts the challenge from feature recognition to clinical explanation. Evaluation is twofold: (i) Standard NLP metrics (BLEU, ROUGE-L, BERTScore) assess fluency and lexical overlap with expert-written justifications. (ii) We introduce the Seizure Semiology Interpretation Score. For each of the 20 symptoms, epileptologists formulated symptom-specific queries, from core manifestations to subtle attributes (e.g., for tonic features, “Does the patient exhibit sudden muscle stiffness?”, “Which body parts are affected?”, “Which side is involved?”). An external LLM (e.g., Qwen3-Plus~\cite{yang2025qwen3}) extracts structured answers from both the MLLMs' justification and the ground truth. Answers are then scored via a weighted rubric to compute semantic alignment, offering a more rigorous clinical evaluation (see Appendix ~\ref{sec:mllm_prompt_supp},~\ref{sec:sem_int_score_supp}).
+\fi
+
+\subsubsection{Task 3 - Spatial \& Anatomical Analysis}
+\label{subsubsec:tasks3_metrics}
+
+Distinct spatial features, such as head/eye deviation and asymmetric tonic limb posturing, serve as established lateralizing signs in epilepsy diagnosis \cite{kernan1993lateralizing, kotagal2000lateralizing}. Furthermore, the anatomical location of the initial motor manifestation often correlates strongly with the seizure onset zone (SOZ), particularly in focal epilepsy \cite{Chowdhury2021Localisation, bonini2012frontal}. To gauge the model's capacity to discern laterality (left vs. right), we employed precise prompt tuning to mitigate potential viewpoint ambiguity. MLLMs are prompted with forced-choice questions that explicitly anchor directionality to the patient's perspective rather than the camera view, such as "Does the patient's head turn to the patient's left or to the patient's right?" Performance is evaluated using Precision, Recall, F1-Score, and Accuracy.
+
+\subsubsection{Task 4 - Temporal Boundary Detection}
+\label{subsubsec:tasks4_metrics}
+
+Precise timing of ictal motor signs is clinically important for localizing SOZ and understanding propagation dynamics \cite{Blair2012TemporalLobeEpilepsySemiology, Jaafar2024GTC, blume2001glossary}. Models are required to identify the onset times of individual semiological features, as well as the start and end times of the seizure event. Prompts request exact timestamps (MM:SS) for symptom appearance. Temporal accuracy is evaluated using Mean Absolute Error (MAE) in seconds.
+
+\iffalse
+The model is required to identify the onset time of individual semiological features and the start and end times of the overall seizure event within a video clip. For each query, the model is prompted with: “This video shows when a patient \{semiology description\}. Output the exact timestamp (MM:SS) when this symptom first appeared.” Performance is measured using Mean Absolute Error (MAE) in seconds.
+\fi
+
+
+
+
+
+\subsubsection{Task 5 - Semiological Sequence Analysis}
+\label{subsubsec:tasks5_metrics}
+
+The ordered unfolding of ictal signs, or the "ictal march," reflects the spatiotemporal spread of epileptic activity across the brain and can help infer both symptomatogenic and epileptogenic zones \cite{blume2001glossary, jobst2013seizure}. Temporal progression also distinguishes seizure types (e.g., focal vs. generalized) and supports functional mapping of cortical regions \cite{jobst2013seizure}. To assess the model’s ability to capture the temporal evolution of seizure symptoms, we prompt MLLMs to list symptoms in chronological order from a constrained feature set. Specifically, concurrent symptoms are sorted by their onset time. We adopt three complementary sequence metrics: (i) Sequence Edit Distance (Levenshtein) penalizes insertions, deletions, and out-of-order predictions; (ii) Temporal-relation Precision/Recall/F1-Score evaluates pairwise ordering constraints (e.g., “tonic precedes clonic”); (iii) Longest Common Subsequence (LCS) ratio, defined as the LCS length normalized by the model’s output length, measures how much of the correct progression is preserved. Together, these metrics assess both structural correctness and temporal coherence in symptom sequencing.
+
+
+\subsubsection{Task 6 - Narrative Report Generation}
+\label{subsubsec:tasks6_metrics}
+\iffalse
+Seizure semiology reporting is a critical step in epilepsy diagnosis, documenting the observable manifestations during seizure events to support seizure-type classification, SOZ localization, and treatment planning \cite{mcgonigal2021on}. In standard clinical workflow, epileptologists manually review video recordings and synthesize their observations into structured narratives that capture both the temporal evolution and spatial distribution of ictal phenomena. To assess whether MLLMs can automate this expert-intensive process, we developed clinician-guided prompts (Appendix Table~\ref{tab:prompt3567_comb}) for narrative report generation. \fi
+
+Seizure semiology reports summarize observable ictal manifestations to support diagnosis and localization \cite{mcgonigal2021on}. To evaluate whether MLLMs can generate clinically faithful reports from video, we develop clinician-guided prompts for narrative report generation and assess outputs using both standard NLP metrics and a clinically grounded evaluation framework (Appendix Table ~\ref{tab:prompt3567_comb}).
+
+Besides standard NLP metrics, we introduce the \textbf{Report Quality Index for Seizure Semiology (Seizure RQI)}, a clinically grounded metric designed to evaluate narrative report fidelity. Based on guidance from epilepsy specialists regarding clinical priorities, Seizure RQI comprises four weighted components: (i) \textit{Structural Completeness} \textit{S} (15\%): assesses whether the report contains expected sections on onset, propagation, and postictal state;
+(ii) \textit{Symptom Coverage} \textit{C} (35\%): measures how well key semiological features are reported; (iii) \textit{Key Localizing Features} \textit{L} (25\%): checks accuracy of lateralizing elements (e.g., direction of head turn, asymmetric tonic posturing);
+(iv) \textit{Temporal Fidelity} \textit{T} (25\%): quantifies ordering and timing of events. Additional penalties are applied for hallucinated features \( P_{\mathrm{hall}} \), off-topic content \( P_{\mathrm{off}} \)(e.g., nursing interventions), overly verbose outputs \( P_{\mathrm{len}} \), or hazardous clinical statements \( P_{\mathrm{haz}} \). The detailed scoring rubric is mentioned in Appendix Section 4. We also validate whether the Seizure RQI offers superior alignment with human expert judgment compared to NLP metrics.
+{
+\setlength{\abovedisplayskip}{2pt}
+\setlength{\belowdisplayskip}{2pt}
+\begin{equation}
+\begin{aligned}
+\mathrm{RQI}
+  &= (0.15 S + 0.35 C + 0.25 L + 0.25 T)\\[-0.3ex]
+  &\quad \times P_{\text{hall}} \times P_{\text{off}} \times P_{\text{len}} \times P_{\text{haz}}
+\end{aligned}
+\end{equation}
+}
+%Please see Appendix ~\ref{sec:seiz_rqi_supp} for details.
+
+
+\subsubsection{Task 7 - Clinical diagnosis and Reasoning}
+\label{subsubsec:tasks7_metrics}
+
+Semiology-based epilepsy diagnosis encompasses distinguishing ES from NES, classifying seizure types, and localizing the onset zone. Accurate ES vs NES differentiation represents a fundamental clinical challenge \cite{reuber2003psychogenic, devinsky2011diagnosing}, as misdiagnosing NES as ES leads to inappropriate antiepileptic drug therapy, unnecessary surgical interventions, delayed psychiatric treatment, and substantial healthcare costs \cite{reuber2003psychogenic,devinsky2011diagnosing}. We evaluate two MLLMs' diagnostic approaches: (i) Direct MLLMs Diagnosis, where the model observes the video and directly outputs a diagnosis; (ii) Report-Augmented Diagnosis, where the MLLMs have access to both the video and a clinical report to support contextual reasoning. Performance is evaluated using Accuracy, Precision, Recall, and F1-Score.
+
+\subsection{MLLMs Baselines}
+
+\iffalse
+\textbf{Privacy Constraints and Execution Environment.}  
+Given the sensitive nature of seizure recordings, which include identifiable patient data, cloud-based closed-source APIs are strictly excluded. To comply with IRB requirements, we exclusively evaluate open source MLLMs on local GPU servers equipped with NVIDIA A6000 ($4\times$), L40S ($4\times$), or A100 ($8\times$) units.\fi
+
+\subsubsection{Baseline Models}
+
+We benchmark 11 state-of-the-art open-weight models spanning a range of parameter scales, modality coverage, and domain specialization: (i)~\textbf{General-Purpose VLMs:} We evaluate models across three scales—\textit{small} (InternVL3.5-8B~\cite{wang2025internVL3_5}, Qwen2.5-VL-7B-Instruct~\cite{bai2025Qwen2_5_vl}, Qwen3-VL-8B-Instruct~\cite{yang2025qwen3}), \textit{medium} (InternVL3.5-38B~\cite{wang2025internVL3_5}, Qwen2.5-VL-32B-Instruct~\cite{bai2025Qwen2_5_vl}, Qwen3-VL-32B-Instruct~\cite{yang2025qwen3}), and \textit{large} (Qwen2.5-VL-72B-Instruct~\cite{xu2025qwen2_5_omni}). (ii)~\textbf{Audio and Omni-Modality Models:} To capture auditory semiological features (e.g., ictal vocalizations, verbal responsiveness), we include the leading audio-language model Audio-Flamingo-3~\cite{fang2025audioflamingo3}, as well as omni-modality models Qwen2.5-Omni-7B~\cite{xu2025qwen2_5_omni} and Qwen3-Omni-30B-A3B-Instruct~\cite{xu2025qwen3_omni}. (iii)~\textbf{Medical VLMs:} We include Lingshu-32B~\cite{xu2025lingshu} to evaluate the added benefit of domain-specific medical pretraining for seizure semiology understanding. 
+
+\subsubsection{Implementation Details}
+
+To balance MLLMs context limits with seizure videos' high-frequency dynamics (e.g., rapid blinking, twitching), we use task-specific protocols: Uniform Sliding Window (Tasks 1, 2, 5, 6): Videos are segmented into 30s windows (60s for Qwen3 models) with 5s overlap at 2 FPS. Results are aggregated via logical union (Task 1), LLM summarization (Tasks 2, 6), or temporal alignment (Task 5). Event-Centric Clipping (Tasks 3, 4): We extract segments containing lateralizing features (Task 3) or 60s clips centered on symptom onset (Task 4) . Processing occurs at 1 FPS (2 FPS for Qwen3 models).  Full Video Sampling (Task 7): To preserve global context for diagnosis, we apply uniform sparse sampling across the entire video, utilizing 60 frames (120 for Qwen3 models). (More details are provided in Appendix Section ~\ref{sec:baseline_sample}.)
+
+\iffalse
+A key challenge in processing seizure videos with current MLLMs is balancing input context limits with the need for high temporal resolution. Seizure semiology often involves rapid, high-frequency changes, such as eye blinking or subtle facial twitching, which require high resolution and could be easily missed by standard sparse sampling strategies. To mitigate this trade-off, we design task-specific sampling protocols.
+
+\textbf{Uniform Sliding Window Segmentation (Tasks 1, 2, 5, 6).}
+For detection and detailed description tasks, we employ a sliding window approach to maintain sufficient temporal granularity (2 FPS). Videos are segmented into 30-second windows (extended to 60 seconds for Qwen3-VL and Qwen3-Omni models due to enhanced long-context capabilities), with a 5-second overlap between adjacent segments to avoid truncating continuous semiological features at segment boundaries. \iffalse Segment-level inference results are aggregated based on task requirements: Task 1 utilizes a logical 'ANY-of-YES' pooling; Tasks 2 and 6 employ an LLM specifically prompted to merge segment descriptions; Task 5 merges sequential features with overlaps.\fi Segment-level inference results are aggregated according to task demands: Task 1 uses logical ANY-of-YES pooling; Tasks 2 and 6 employ an LLM specifically prompted to merge segment-wise descriptions into unified narratives; Task 5 aligns sequential outputs across overlapping windows to preserve temporal order.
+
+\textbf{Event-Centric Video Clipping (Tasks 3 \& 4).} To facilitate precise localization, we reduce the input space by extracting event-centered video clips. In Task 3 (Lateralization), we specifically extract video segments containing lateralizing features (e.g., head turning, arm movement). In Task 4 (Temporal Localization), each input is clipped to a 60-second window centered around the ground-truth feature onset. All models process clips at 1 FPS (60 frames), except Qwen3-VL and Qwen3-Omni, which operate at 2 FPS (120 frames) to leverage their improved temporal resolution.
+
+\textbf{Full Video Uniform Sampling (Task 7).} Since clinical diagnosis relies on global seizure context, we avoid segmentation and instead sample frames uniformly across the entire video. Most models receive 60 evenly spaced frames, while Qwen3-VL and Qwen3-Omni are given 120 frames to leverage their extended visual context capabilities.
+\fi
+
+\subsection{Improvement Strategies}
+
+\subsubsection{Seizure-Specialized Finetuning}
+\label{subsec:fine_tune}
+Seizure semiology presents distinct, often subtle multimodal patterns that are sparsely represented in general-purpose pretraining corpora. To address this domain gap, we finetune models specifically for seizure understanding. We select Qwen2.5-Omni-7B as the base model due to its inherent capability to jointly process both visual and auditory modalities.
+
+
+\textbf{Training Protocols.} We investigate two training paradigms: (i) Supervised Fine-Tuning (SFT)~\cite{ouyang2022training, zhao2023survey}, where the model is trained using video–prompt–answer triplets; and (ii) Group Relative Policy Optimization (GRPO)~\cite{Shao2024DeepSeekMath}, a reinforcement learning method where the model is optimized using group-normalized rewards from multiple candidate samples.
+For our policy optimization, we designed task-specific reward functions: we used an accuracy-based reward for Tasks 1, 3, and 7; a composite reward derived from BLEU and ROUGE scores for Tasks 2 and 6; a temporal proximity reward function for Task 4; and the Longest Common Subsequence (LCS) ratio for Task 5. Complete details of hyperparameter choices and optimization settings are provided in the Appendix Section ~\ref{sec:finetune_details}.
+
+\subsubsection{Two-stage Seizure Classification }
+\label{subsec:two-stage}
+
+Directly diagnosing seizures from raw video (end-to-end MLLM inference) might be affected by their tendency to hallucinate clinical reasoning over long temporal contexts. To address this, we introduce a two-stage seizure classification strategy that decouples visual perception from diagnostic reasoning.  Structured feature extraction (perception): we utilize the MLLM as a feature extractor. For a given video, the model performs Task 1 to detect the presence or absence of the 20 core ILAE-defined semiological features. This process converts the high-dimensional, unstructured video data into a structured, interpretable binary feature vector $v \in \{0,1\}^{20}$. In the second stage, we feed this feature vector into a Random Forest classifier. \iffalse We selected Random Forest for its robustness on tabular data and its inherent interpretability, allowing clinicians to inspect feature importance (e.g., which symptoms contributed most to an ES vs. NES diagnosis).\fi This neuro-symbolic approach leverages the MLLM's strength in visual recognition while offloading the logical classification to a reliable statistical model, thereby improving both accuracy and clinical trust.
+
+\section{Results and Discussion}
+\label{sec:res_analysis}
+\iffalse The evaluation of our selected baseline models on Seizure-Semiology-Bench reveals a clear consistent pattern: while current state-of-the-art MLLMs possess foundational visual recognition capabilities, they falter significantly when faced with tasks that demand fine-grained clinical interpretation, robust temporal reasoning, and the application of specialized domain knowledge. \fi We provide metrics over the entire 438 videos in Appendix Section ~\ref{sec:mllm_metrics_entire_data_supp} and additional metrics over the test dataset in Appendix Section ~\ref{sec:mllm_metrics_test_data_supp}.
+
+\subsection{Semiology feature understanding }
+
+\iffalse
+For Task 1 (see Fig.~\ref{fig:task1_heatmap}), the performance of models can be summarized as follows: (i) \textbf{Visually prominent and temporally sustained  features:} Models perform well on most such features, including arm straightening, arm flexion, and tonic posturing (F1 $\sim$ 0.6–0.8). (ii) \textbf{Subtle, fast-evolving features:} Performance degrades significantly for features including oral automatisms, rapid eye blinking (F1 often $<$ 0.4), and pelvic thrusting(F1 $\sim$ 0.3), reflecting limitations in fine-grained movement. \textit{The low accuracy of critical semiological features in both categories can be attributed to} their low frequency in the training set originally used to train the MLLMs, preventing them from learning robust representations for these events. (iii) \textbf{Model scaling:}  Scaling alone offers limited benefit: Qwen2.5-VL-7B, Qwen3-VL-32B, and Qwen2.5-VL-72B all yield similar mean F1 scores ($\sim$ 0.42–0.45), highlighting diminishing returns without tailored architectural adaptations. (iv) \textbf{Multimodality fusion}: In contrast, modality fusion provides clear advantages: Qwen3-Omni-30B, which integrates both audio and video, outperforms both Qwen2.5-VL-32B (vision-only model) in mean F1 and Audio-Flamingo-3 (audio-only model) on sound-associated features like ictal vocalization. (v) \textbf{Model architecture}: \textit{Across all scales, the QwenVL family consistently surpasses the InternVL family}, suggesting more effective visual-language grounding and instruction tuning in the Qwen architecture for this domain.
+\fi
+
+
+As shown in Fig.~\ref{fig:task1_heatmap}, Task 1 results reveal:(i) Feature Visibility: Models excel at prominent, sustained features (e.g., tonic posturing, F1 0.6–0.8) but struggle with subtle, fast-evolving movements (e.g., oral automatisms, F1 $<$ 0.4). This disparity stems primarily from the scarcity of fine-grained events in pre-training data.(ii) Scaling Limits: Scaling
+alone offers limited benefit: Qwen variants from 7B to 72B yield similar mean F1 scores ($\sim$0.42–0.45), suggesting that size alone cannot overcome architectural bottlenecks.(iii) Multimodality fusion Advantage: Qwen3-Omni-30B outperforms both the vision-only Qwen2.5-VL-32B and the audio-only Audio-Flamingo-3, particularly on sound-associated features.(iv) Architecture: The QwenVL family consistently surpasses InternVL across all scales, indicating superior visual-language grounding.
+
+For Task 2, MLLMs perform best on questions tied to sustained, unambiguous motor behaviors such as “Which arm shows
+flexion?” or “Is the flexion sustained?”, with top performing models reaching semiology interpretation scores around 0.7 (Fig.~\ref{fig:task2_heatmap}). In contrast, questions requiring temporal reasoning (e.g., “Are the twitches brief and repetitive?”), or subtle motion detection (e.g., “Are there small muscle twitches observed on the patient’s face?”) yield significantly lower performance ($<$ 0.2). \iffalse Among models, Qwen3-Omni-30B consistently outperforms others across auditory and temporal queries, highlighting the benefit of joint audio-visual modeling. Interestingly, larger Qwen-VL models (e.g., 32B, 72B) show marginal gains over smaller versions, but not universally, suggesting scaling alone is insufficient without architectural improvements. When comparing model families, Qwen-VL models again outperform InternVL variants across the majority of semiological feature-related questions (16 out of 18), especially those requiring nuanced reasoning or integration across modalities, reflecting advances in Qwen's encoder fusion and prompt understanding.\fi Across model families, Qwen-VL consistently surpasses InternVL (16/18 features), further highlighting its advantage in grasping nuanced semiological details.
+
+\subsection{Spatial and temporal reasoning}
+% Models perform uniformly poorly on spatial queries (Task 3) involving head-turn direction and onset body part recognition, with mean F1 scores typically below 0.2, underscoring limited spatial reasoning capabilities (Table~\ref{tab:task3-task5}). Crucially, this low performance persists despite our use of explicit prompts distinguishing "patient's left" from "camera's left" (as detailed in Sec 3.2.3). This suggests that the issue cannot be fully mitigated via prompt tuning alone. While larger models like Qwen2.5-VL-72B, Qwen3-VL-32B, and InternVL3.5-38B show modest gains in consistency, overall performance remains low. This shortcoming reflects a broader limitation known as the mirror problem—the inability of vision encoders to consistently disambiguate object-centric laterality from the camera's viewpoint, likely due to the absence of intrinsic 3D coordinate frames and mirrored data augmentation during pretraining. This failure is rooted in positional encoding schemes and compounded by mirrored or inconsistently oriented data during pretraining. Similar challenges appear in related fields~\cite{Hoehing2023LeftRight}. Our findings extend these observations to the clinical video domain, where accurate interpretation of lateralized motor signs is essential for diagnosis yet remains an unsolved challenge for current MLLMs.
+
+
+% Model performance on temporal boundary detection is highly variable and generally inadequate for clinical utility. While Qwen2.5-VL-32B demonstrates the best performance (MAE: 8.19 seconds for seizure onset, 12.72 seconds for offset) (Table~\ref{tab:task3-task5}), this still represents a substantial deviation from the clinical standards required for precise ictal localization \cite{shoeb2004patient}. Domain-specialized models such as Lingshu-32B perform even worse (MAE $>$ 50 s), suggesting that clinical finetuning on narrow or biased corpora can actually degrade temporal reasoning. Two factors likely contribute to this temporal deficiency in MLLMs: (i) the high density and concurrency of seizure symptoms challenge the model’s ability to assign correct timestamps to the overlapping features; and (ii) current VLMs predict temporal boundaries in a single forward pass using frame-wise token sequences, lacking mechanisms for iterative temporal refinement. Unlike human clinicians who can replay, rewind, and triangulate symptom emergence through dynamic inspection, these models operate in a feed-forward manner with no retrospective reasoning or temporal backtracking, fundamentally limiting their precision. This might call for an agentic approach in future models for obtaining finer temporal and spatial resolutions.
+
+% In Task 5, which tests a model's capability to detect temporal sequence of features, despite Qwen3-Omni-30B achieving the lowest Edit Distance (5.15) and highest LCS ratio (0.43), its low Temporal F1 (0.18 vs. InternVL3.5-8B’s 0.57) indicates poor preservation of pairwise symptom order (Table~\ref{tab:task3-task5}). This degradation is not isolated to sequence generation, but reflects a cascading error phenomenon: First, inaccurate semiology recognition from Task 1 distorts the inventory of “what” symptoms are present. Second, temporal misalignment from Task 4 further corrupts the "when" of these symptoms. As both content and timing inputs are noisy, models struggle to produce accurate chronological ordering. This compounding effect makes clinically faithful ictal progression generation extremely difficult, highlighting the need for joint optimization across recognition, localization, and sequencing layers.
+
+Models perform uniformly poorly on spatial queries in Task 3, with mean F1 typically $<0.2$ (Table~\ref{tab:task3-task5}), indicating weak spatial reasoning. Notably, performance remains low even with explicit prompts separating “patient’s left” from “camera’s left” (Sec.~3.2.3), implying prompt tuning alone is insufficient. Larger models (Qwen2.5-VL-72B, InternVL3.5-38B) are slightly more consistent but still inaccurate. \iffalse  This aligns with the mirror problem: vision encoders often fail to disambiguate object-centric laterality from the camera viewpoint, plausibly due to missing intrinsic 3D frames and pretraining on mirrored/inconsistently oriented data. Positional encodings likely exacerbate this sensitivity. \fi Similar effects have been reported elsewhere~\cite{Hoehing2023LeftRight}; we show they persist in clinical video, where lateralized motor signs are diagnostically critical yet remain unresolved for current MLLMs.
+
+Temporal boundary detection is also variable and generally not clinically usable. Qwen2.5-VL-32B is best (MAE: 8.19\,s onset, 12.72\,s offset; Table~\ref{tab:task3-task5}), but still far from the precision needed for ictal localization~\cite{shoeb2004patient}. Lingshu-32B performs worse (MAE $>$ 50\,s), suggesting narrow or biased clinical finetuning can degrade temporal reasoning. Two factors likely drive these errors: (i) dense, concurrent seizure signs make timestamp assignment difficult; and (ii) unlike clinicians who use retrospective reasoning to pinpoint onset, current VLMs rely on a single feed-forward pass. This lack of iterative refinement limits precision, motivating agentic mechanisms for finer resolution.
+\iffalse current VLMs predict boundaries in a single feed-forward pass from frame token sequences, without iterative refinement. Unlike clinicians who replay/rewind to triangulate symptom onset, these models lack retrospective reasoning and temporal backtracking, limiting precision. This motivates more agentic mechanisms for finer temporal (and spatial) resolution. \fi
+
+Task 5 (temporal sequencing) further exposes ordering failures. Although Qwen3-Omni-30B attains the lowest Edit Distance (5.15) and highest LCS ratio (0.43), its Temporal F1 is low (0.18 vs.\ InternVL3.5-8B’s 0.57), indicating poor pairwise order preservation (Table~\ref{tab:task3-task5}). This reflects cascading errors: misrecognition in Task 1 corrupts the “what,” and mislocalization in Task 4 corrupts the “when,” so sequence generation is conditioned on noisy content and timing. Joint optimization across recognition, localization, and sequencing is therefore likely necessary for clinically faithful ictal progression generation.
+
+
+\input{tables/task345_metrics_split}
+
+\subsection{Holistic reporting and diagnosis}
+
+Lingshu-32B achieved the highest RQI (39.80), validating the benefit of medical pretraining; however, the comparable performance of Qwen3-VL (39.13) demonstrates that strong general baselines are equally competitive. \iffalse Lingshu-32B achieved the highest seizure RQI (39.80), suggesting that domain-specific medical video-text corpora pretraining can improve the structural and content fidelity of clinical reports (Table~\ref{tab:task6-task7}). However, general models such as Qwen3-VL-32B (39.13) and Qwen3-VL-8B (38.20) performed similarly, indicating that strong general-purpose pretraining can match specialized models in generating clinically coherent narratives.In contrast, InternVL3.5-38B (36.14) underperformed despite its size, reinforcing that scale alone does not ensure higher reporting quality.\fi As illustrated in Fig.~\ref{fig:rqi}, conventional metrics (BLEU, ROUGE-L, and BERTScore) exhibit negligible correlation with expert judgments (Pearson $r \le 0.10$). In stark contrast, Seizure RQI demonstrates robust alignment, achieving a Pearson correlation of $0.57$ and a pairwise accuracy of $0.74$, significantly outperforming generic baselines (accuracy $\approx 0.54$) and highlighting its effectiveness.
+
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.8\linewidth]{figures/rqi.png}
+  \caption{\textbf{Clinical Alignment of Evaluation Metrics.}}
+  \label{fig:rqi}
+\end{figure}
+
+\iffalse ES vs NES classification (Task 7)  performance  improves markedly when clinical reports are incorporated alongside video inputs.  Across most models, report-augmented inputs yield substantial 21.1\% gains highlighting the value of accurate semiology understanding \fi Report-augmented inputs yield an average F1 improvement of 21.12\%, highlighting the value of accurate semiology understanding (Table~\ref{tab:task6-task7}). However, Lingshu-32B excelled (F1 0.84) in video-only setting but its performance dropped sharply with report augmentation (F1 0.60), suggesting limited language-reasoning capacity despite strong medical related visual priors. Qwen3-Omni-30B consistently surpasses vision-only baselines by effectively integrating audio and visual inputs, demonstrating the benefits of multimodal fusion again. 
+
+
+\input{tables/task67_split}
+
+\subsection{Effect of seizure-specific finetuning}
+
+Seizure-specific finetuning with SFT and GRPO consistently improved model performance across most tasks, demonstrating the effectiveness of domain-adaptive training (Figs.~\ref{fig:task1_heatmap},~\ref{fig:task2_heatmap}, Tables ~\ref{tab:task3-task5},~\ref{tab:task6-task7}). In Task 1, our seizure\_omni\_sft model achieved the highest mean F1 score (0.47), outperforming even larger models like Qwen2.5-VL-72B. This highlights a core limitation of general-purpose MLLMs: their pretraining on everyday common activities leaves them poorly equipped to recognize pathological movements, a gap that targeted finetuning can effectively close. We also observed that improvements in feature recognition (Task 1) were associated with better temporal localization (Task 4), suggesting that accurate symptom detection facilitates temporal grounding. However, GRPO-based tuning exposed a key limitation: reward functions based on BLEU and ROUGE failed to reflect clinical relevance, resulting in repetitive outputs. This underscores the need for domain-specific optimization targets, such as seizure RQI for effective reinforcement learning in medical reporting tasks. \iffalse Two fine-tuned models will be released on HuggingFace. Moreover, these results show that even the smallest omni models when fine tuned can significantly outperform larger MLLMs.  This underscores the primary thesis of this paper: Seizure-Semiology-Bench offers a blueprint for building and evaluating expert-level multimodal AI systems capable of reasoning about complex, temporally dynamic, and safety-critical real-world phenomena. \fi
+
+\subsection{Two-Stage Seizure Classification Performance}
+As evidenced in Table 2, the proposed two-stage seizure classification consistently outperforms direct end-to-end MLLM classification. Quantitatively, this strategy yields a dramatic improvement over direct MLLMs classification (w/o rpt), increasing the average F1 score from 0.70 to 0.86 and yielding an average improvement of +0.16 F1 across models. Notably, even compared to report-augmented MLLMs classification (w/ rpt), the two-Stage strategy still delivers a clear gain, improving the average F1 from 0.79 to 0.86.
+
+Most significantly, when coupled with our fine-tuned foundation model, seizure\_omni\_sft, the two-Stages strategy achieves a F1 score of 0.96. To our knowledge, this is the first pure video-based seizure classification framework to achieve this level of performance on a large-scale dataset, demonstrating accuracy comparable to reported diagnostic benchmarks under controlled experimental settings.
+
+
+
+\section{Conclusion}
+Seizure-Semiology-Suite makes the following contributions: the first large-scale expert-supervised dataset supporting both domain-adaptive model development and future multimodal integration with EEG and MRI for comprehensive pathological analysis; the first clinically grounded hierarchical benchmark establishing quantifiable standards for AI-based seizure interpretation; extensive baseline evaluations exposing fundamental MLLMs limitations: while models recognize salient features, they fail critically at temporal reasoning, spatial localization, and clinical coherence; seizure-specific finetuning and a two-stage neuro-symbolic approach achieving near-clinical diagnostic accuracy, enabling automated assessment to reduce resource-intensive workflows and expand diagnostic access in underserved settings through mobile-captured video screening. Future work will pursue: (1) agentic frameworks allowing models to iteratively refine temporal judgments through tool-assisted video analysis; (2) multimodal fusion of vision, audio, and 3D body pose to resolve left-right ambiguities; (3) extended-context architectures capable of tracking symptom progression throughout seizure events, advancing toward reliable clinical decision support systems. Project resources will be released upon publication. We will host a public project website, provide access to seizure videos under Data Use Agreement, and release annotation datasets, evaluation code, baseline scores, and fine-tuned models via Hugging Face.
+
+\newpage
+
+\section*{Impact Statement}
+
+\iffalse
+Authors are \textbf{required} to include a statement of the potential broader
+impact of their work, including its ethical aspects and future societal
+consequences. This statement should be in an unnumbered section at the end of
+the paper (co-located with Acknowledgements -- the two may appear in either
+order, but both must be before References), and does not count toward the paper
+page limit. In many cases, where the ethical impacts and expected societal
+implications are those that are well established when advancing the field of
+Machine Learning, substantial discussion is not required, and a simple
+statement such as the following will suffice:
+
+``This paper presents work whose goal is to advance the field of Machine
+Learning. There are many potential societal consequences of our work, none
+which we feel must be specifically highlighted here.''\fi
+
+
+This work aims to advance multimodal machine learning methods for structured understanding of seizure semiology from clinical video data. By introducing a carefully annotated dataset, clinically grounded benchmarks, and evaluation metrics aligned with expert reasoning, our goal is to facilitate research toward more interpretable and reliable AI systems that can support epilepsy diagnosis and analysis.
+
+The proposed models and benchmarks are intended strictly as decision-support tools rather than replacements for trained clinicians. Automated interpretation of seizure videos carries inherent risks, including misrecognition of subtle symptoms, incorrect temporal localization, or over-reliance on model outputs in real-world clinical settings. To mitigate these risks, our study emphasizes fine-grained evaluation, explicit failure mode analysis, and clinically motivated metrics that penalize hallucinations, incorrect lateralization, and hazardous statements.
+
+All data used in this work were collected under institutional review board (IRB) approval and fully de-identified to protect patient privacy. Visual examples shown in the paper are AI-generated and do not depict real patients. While our results demonstrate promising performance under controlled experimental conditions, any clinical deployment would require rigorous prospective validation, careful integration into clinical workflows, and oversight by qualified medical professionals.
+
+We believe this work contributes positively by providing a transparent, standardized foundation for evaluating multimodal models in safety-critical medical video understanding, while highlighting the limitations and safeguards necessary for responsible future deployment.
+
+\iffalse
+The above statement can be used verbatim in such cases, but we encourage
+authors to think about whether there is content which does warrant further
+discussion, as this statement will be apparent if the paper is later flagged
+for ethics review.\fi
+
+\iffalse
+Seizure-Semiology-Suite makes several core contributions. We present the first large-scale, expert-supervised dataset that supports domain-adaptive model development and is structured to enable future multimodal integration with EEG and MRI for comprehensive pathological analysis. We also introduce the first clinically grounded hierarchical benchmark for seizure interpretation, establishing quantifiable standards for evaluating AI-based seizure understanding. Through extensive baseline evaluations, we show that current MLLMs fail in key clinical capabilities, particularly temporal reasoning, spatial localization, and overall clinical coherence, despite recognizing salient features. Finally, we demonstrate that seizure-specific fine-tuning together with a two-stage neuro-symbolic approach can achieve near-clinical diagnostic accuracy, enabling automated assessment that may reduce resource intensive workflows and expand diagnostic access in underserved settings through mobile-captured video screening.
+Future work will pursue: (1) agentic frameworks allowing models to iteratively refine temporal judgments through tool-assisted video analysis; (2) multimodal fusion of vision, audio, and 3D body pose to resolve left-right ambiguities; (3) extended-context architectures capable of tracking symptom progression throughout seizure events, advancing toward reliable clinical decision support systems. \fi
+
+\iffalse
+Seizure-Semiology-Suite pushes MLLMs into the high-stakes domain of clinical seizure interpretation. The extensive evaluation on the hierarchical tasks shows that, while current MLLMs show baseline competence in recognizing salient symptoms, they consistently fail at temporal sequencing, spatial localization, and coherent clinical reasoning. These results highlight the need for architectural advances and domain-aligned training strategies.
+
+\textbf{The potential impact is profound}: accurate, automated seizure assessment could reduce reliance on resource-intensive EMU workflows and expand access to diagnostic care in under-resourced settings. For instance, reliable interpretation of mobile phone–captured seizure videos could enable preliminary screening in regions lacking trained specialists. Finally, the methodology is broadly applicable to other domains involving complex visual events. Our approach lays the groundwork for building expert-level multimodal AI across critical real-world applications.
+
+This study is limited by the single-center scope of our dataset and the restricted range of diagnostic modalities available, as well as by a suboptimal fine-tuning design, all of which we plan to address in future work.
+\fi
+
+\iffalse
+
+\subsection{Dimensions}
+
+The text of the paper should be formatted in two columns, with an
+overall width of 6.75~inches, height of 9.0~inches, and 0.25~inches
+between the columns. The left margin should be 0.75~inches and the top
+margin 1.0~inch (2.54~cm). The right and bottom margins will depend on
+whether you print on US letter or A4 paper, but all final versions
+must be produced for US letter size.
+Do not write anything on the margins.
+
+The paper body should be set in 10~point type with a vertical spacing
+of 11~points. Please use Times typeface throughout the text.
+
+\subsection{Title}
+
+The paper title should be set in 14~point bold type and centered
+between two horizontal rules that are 1~point thick, with 1.0~inch
+between the top rule and the top edge of the page. Capitalize the
+first letter of content words and put the rest of the title in lower
+case.
+You can use TeX math in the title (we suggest sparingly),
+but no custom macros, images, or other TeX commands.
+Please make sure that accents, special characters, etc., are entered using
+TeX commands and not using non-English characters.
+
+\subsection{Author Information for Submission}
+\label{author info}
+
+ICML uses double-blind review, so author information must not appear. If
+you are using \LaTeX\/ and the \texttt{icml2026.sty} file, use
+\verb+\icmlauthor{...}+ to specify authors and \verb+\icmlaffiliation{...}+
+to specify affiliations. (Read the TeX code used to produce this document for
+an example usage.) The author information will not be printed unless
+\texttt{accepted} is passed as an argument to the style file. Submissions that
+include the author information will not be reviewed.
+
+\subsubsection{Self-Citations}
+
+If you are citing published papers for which you are an author, refer
+to yourself in the third person. In particular, do not use phrases
+that reveal your identity (e.g., ``in previous work \cite{langley00}, we
+have shown \ldots'').
+
+Do not anonymize citations in the reference section. The only exception are manuscripts that are
+not yet published (e.g., under submission). If you choose to refer to
+such unpublished manuscripts \cite{anonymous}, anonymized copies have
+to be submitted
+as Supplementary Material via OpenReview\@. However, keep in mind that an ICML
+paper should be self contained and should contain sufficient detail
+for the reviewers to evaluate the work. In particular, reviewers are
+not required to look at the Supplementary Material when writing their
+review (they are not required to look at more than the first $8$ pages of the submitted document).
+
+\subsubsection{Camera-Ready Author Information}
+\label{final author}
+
+If a paper is accepted, a final camera-ready copy must be prepared.
+%
+For camera-ready papers, author information should start 0.3~inches below the
+bottom rule surrounding the title. The authors' names should appear in 10~point
+bold type, in a row, separated by white space, and centered. Author names should
+not be broken across lines. Unbolded superscripted numbers, starting 1, should
+be used to refer to affiliations.
+
+Affiliations should be numbered in the order of appearance. A single footnote
+block of text should be used to list all the affiliations. (Academic
+affiliations should list Department, University, City, State/Region, Country.
+Similarly for industrial affiliations.)
+
+Each distinct affiliations should be listed once. If an author has multiple
+affiliations, multiple superscripts should be placed after the name, separated
+by thin spaces. If the authors would like to highlight equal contribution by
+multiple first authors, those authors should have an asterisk placed after their
+name in superscript, and the term ``\textsuperscript{*}Equal contribution"
+should be placed in the footnote block ahead of the list of affiliations. A
+list of corresponding authors and their emails (in the format Full Name
+\textless{}email@domain.com\textgreater{}) can follow the list of affiliations.
+Ideally only one or two names should be listed.
+
+A sample file with author names is included in the ICML2026 style file
+package. Turn on the \texttt{[accepted]} option to the stylefile to
+see the names rendered. All of the guidelines above are implemented
+by the \LaTeX\ style file.
+
+\subsection{Abstract}
+
+The paper abstract should begin in the left column, 0.4~inches below the final
+address. The heading `Abstract' should be centered, bold, and in 11~point type.
+The abstract body should use 10~point type, with a vertical spacing of
+11~points, and should be indented 0.25~inches more than normal on left-hand and
+right-hand margins. Insert 0.4~inches of blank space after the body. Keep your
+abstract brief and self-contained, limiting it to one paragraph and roughly 4--6
+sentences. Gross violations will require correction at the camera-ready phase.
+
+\subsection{Partitioning the Text}
+
+You should organize your paper into sections and paragraphs to help readers
+place a structure on the material and understand its contributions.
+
+\subsubsection{Sections and Subsections}
+
+Section headings should be numbered, flush left, and set in 11~pt bold type
+with the content words capitalized. Leave 0.25~inches of space before the
+heading and 0.15~inches after the heading.
+
+Similarly, subsection headings should be numbered, flush left, and set in 10~pt
+bold type with the content words capitalized. Leave
+0.2~inches of space before the heading and 0.13~inches afterward.
+
+Finally, subsubsection headings should be numbered, flush left, and set in
+10~pt small caps with the content words capitalized. Leave
+0.18~inches of space before the heading and 0.1~inches after the heading.
+
+Please use no more than three levels of headings.
+
+\subsubsection{Paragraphs and Footnotes}
+
+Within each section or subsection, you should further partition the paper into
+paragraphs. Do not indent the first line of a given paragraph, but insert a
+blank line between succeeding ones.
+
+You can use footnotes\footnote{Footnotes should be complete sentences.}
+to provide readers with additional information about a topic without
+interrupting the flow of the paper. Indicate footnotes with a number in the
+text where the point is most relevant. Place the footnote in 9~point type at
+the bottom of the column in which it appears. Precede the first footnote in a
+column with a horizontal rule of 0.8~inches.\footnote{Multiple footnotes can
+  appear in each column, in the same order as they appear in the text,
+  but spread them across columns and pages if possible.}
+
+\begin{figure}[ht]
+  \vskip 0.2in
+  \begin{center}
+    \centerline{\includegraphics[width=\columnwidth]{icml_numpapers}}
+    \caption{
+      Historical locations and number of accepted papers for International
+      Machine Learning Conferences (ICML 1993 -- ICML 2008) and International
+      Workshops on Machine Learning (ML 1988 -- ML 1992). At the time this
+      figure was produced, the number of accepted papers for ICML 2008 was
+      unknown and instead estimated.
+    }
+    \label{icml-historical}
+  \end{center}
+\end{figure}
+
+\subsection{Figures}
+
+You may want to include figures in the paper to illustrate your approach and
+results. Such artwork should be centered, legible, and separated from the text.
+Lines should be dark and at least 0.5~points thick for purposes of
+reproduction, and text should not appear on a gray background.
+
+Label all distinct components of each figure. If the figure takes the form of a
+graph, then give a name for each axis and include a legend that briefly
+describes each curve. Do not include a title inside the figure; instead, the
+caption should serve this function.
+
+Number figures sequentially, placing the figure number and caption \emph{after}
+the graphics, with at least 0.1~inches of space before the caption and
+0.1~inches after it, as in \cref{icml-historical}. The figure caption should be
+set in 9~point type and centered unless it runs two or more lines, in which
+case it should be flush left. You may float figures to the top or bottom of a
+column, and you may set wide figures across both columns (use the environment
+\texttt{figure*} in \LaTeX). Always place two-column figures at the top or
+bottom of the page.
+
+\subsection{Algorithms}
+
+If you are using \LaTeX, please use the ``algorithm'' and ``algorithmic''
+environments to format pseudocode. These require the corresponding stylefiles,
+algorithm.sty and algorithmic.sty, which are supplied with this package.
+\cref{alg:example} shows an example.
+
+\begin{algorithm}[tb]
+  \caption{Bubble Sort}
+  \label{alg:example}
+  \begin{algorithmic}
+    \STATE {\bfseries Input:} data $x_i$, size $m$
+    \REPEAT
+    \STATE Initialize $noChange = true$.
+    \FOR{$i=1$ {\bfseries to} $m-1$}
+    \IF{$x_i > x_{i+1}$}
+    \STATE Swap $x_i$ and $x_{i+1}$
+    \STATE $noChange = false$
+    \ENDIF
+    \ENDFOR
+    \UNTIL{$noChange$ is $true$}
+  \end{algorithmic}
+\end{algorithm}
+
+
+\subsection{Tables}
+
+You may also want to include tables that summarize material. Like figures,
+these should be centered, legible, and numbered consecutively. However, place
+the title \emph{above} the table with at least 0.1~inches of space before the
+title and the same after it, as in \cref{sample-table}. The table title should
+be set in 9~point type and centered unless it runs two or more lines, in which
+case it should be flush left.
+
+% Note use of \abovespace and \belowspace to get reasonable spacing
+% above and below tabular lines.
+
+\begin{table}[t]
+  \caption{Classification accuracies for naive Bayes and flexible
+    Bayes on various data sets.}
+  \label{sample-table}
+  \begin{center}
+    \begin{small}
+      \begin{sc}
+        \begin{tabular}{lcccr}
+          \toprule
+          Data set  & Naive         & Flexible      & Better?  \\
+          \midrule
+          Breast    & 95.9$\pm$ 0.2 & 96.7$\pm$ 0.2 & $\surd$  \\
+          Cleveland & 83.3$\pm$ 0.6 & 80.0$\pm$ 0.6 & $\times$ \\
+          Glass2    & 61.9$\pm$ 1.4 & 83.8$\pm$ 0.7 & $\surd$  \\
+          Credit    & 74.8$\pm$ 0.5 & 78.3$\pm$ 0.6 &          \\
+          Horse     & 73.3$\pm$ 0.9 & 69.7$\pm$ 1.0 & $\times$ \\
+          Meta      & 67.1$\pm$ 0.6 & 76.5$\pm$ 0.5 & $\surd$  \\
+          Pima      & 75.1$\pm$ 0.6 & 73.9$\pm$ 0.5 &          \\
+          Vehicle   & 44.9$\pm$ 0.6 & 61.5$\pm$ 0.4 & $\surd$  \\
+          \bottomrule
+        \end{tabular}
+      \end{sc}
+    \end{small}
+  \end{center}
+  \vskip -0.1in
+\end{table}
+
+Tables contain textual material, whereas figures contain graphical material.
+Specify the contents of each row and column in the table's topmost row. Again,
+you may float tables to a column's top or bottom, and set wide tables across
+both columns. Place two-column tables at the top or bottom of the page.
+
+\subsection{Theorems and Such}
+The preferred way is to number definitions, propositions, lemmas, etc.
+consecutively, within sections, as shown below.
+\begin{definition}
+  \label{def:inj}
+  A function $f:X \to Y$ is injective if for any $x,y\in X$ different, $f(x)\ne
+    f(y)$.
+\end{definition}
+Using \cref{def:inj} we immediate get the following result:
+\begin{proposition}
+  If $f$ is injective mapping a set $X$ to another set $Y$,
+  the cardinality of $Y$ is at least as large as that of $X$
+\end{proposition}
+\begin{proof}
+  Left as an exercise to the reader.
+\end{proof}
+\cref{lem:usefullemma} stated next will prove to be useful.
+\begin{lemma}
+  \label{lem:usefullemma}
+  For any $f:X \to Y$ and $g:Y\to Z$ injective functions, $f \circ g$ is
+  injective.
+\end{lemma}
+\begin{theorem}
+  \label{thm:bigtheorem}
+  If $f:X\to Y$ is bijective, the cardinality of $X$ and $Y$ are the same.
+\end{theorem}
+An easy corollary of \cref{thm:bigtheorem} is the following:
+\begin{corollary}
+  If $f:X\to Y$ is bijective,
+  the cardinality of $X$ is at least as large as that of $Y$.
+\end{corollary}
+\begin{assumption}
+  The set $X$ is finite.
+  \label{ass:xfinite}
+\end{assumption}
+\begin{remark}
+  According to some, it is only the finite case (cf. \cref{ass:xfinite}) that
+  is interesting.
+\end{remark}
+%restatable
+
+\subsection{Citations and References}
+
+Please use APA reference format regardless of your formatter or word processor.
+If you rely on the \LaTeX\/ bibliographic facility, use \texttt{natbib.sty} and
+\texttt{icml2026.bst} included in the style-file package to obtain this format.
+
+Citations within the text should include the authors' last names and year. If
+the authors' names are included in the sentence, place only the year in
+parentheses, for example when referencing Arthur Samuel's pioneering work
+\yrcite{Samuel59}. Otherwise place the entire reference in parentheses with the
+authors and year separated by a comma \cite{Samuel59}. List multiple references
+separated by semicolons \cite{kearns89,Samuel59,mitchell80}. Use the `et~al.'
+construct only for citations with three or more authors or after listing all
+authors to a publication in an earlier reference \cite{MachineLearningI}.
+
+Authors should cite their own work in the third person in the initial version
+of their paper submitted for blind review. Please refer to \cref{author info}
+for detailed instructions on how to cite your own papers.
+
+Use an unnumbered first-level section heading for the references, and use a
+hanging indent style, with the first line of the reference flush against the
+left margin and subsequent lines indented by 10 points. The references at the
+end of this document give examples for journal articles \cite{Samuel59},
+conference publications \cite{langley00}, book chapters \cite{Newell81}, books
+\cite{DudaHart2nd}, edited volumes \cite{MachineLearningI}, technical reports
+\cite{mitchell80}, and dissertations \cite{kearns89}.
+
+Alphabetize references by the surnames of the first authors, with single author
+entries preceding multiple author entries. Order references for the same
+authors by year of publication, with the earliest first. Make sure that each
+reference includes all relevant information (e.g., page numbers).
+
+Please put some effort into making references complete, presentable, and
+consistent, e.g. use the actual current name of authors. If using bibtex,
+please protect capital letters of names and abbreviations in titles, for
+example, use \{B\}ayesian or \{L\}ipschitz in your .bib file.
+
+\section*{Accessibility}
+
+Authors are kindly asked to make their submissions as accessible as possible
+for everyone including people with disabilities and sensory or neurological
+differences. Tips of how to achieve this and what to pay attention to will be
+provided on the conference website \url{http://icml.cc/}.
+
+\section*{Software and Data}
+
+If a paper is accepted, we strongly encourage the publication of software and
+data with the camera-ready version of the paper whenever appropriate. This can
+be done by including a URL in the camera-ready copy. However, \textbf{do not}
+include URLs that reveal your institution or identity in your submission for
+review. Instead, provide an anonymous URL or upload the material as
+``Supplementary Material'' into the OpenReview reviewing system. Note that
+reviewers are not required to look at this material when writing their review.
+
+% Acknowledgements should only appear in the accepted version.
+\section*{Acknowledgements}
+
+\textbf{Do not} include acknowledgements in the initial version of the paper
+submitted for blind review.
+
+If a paper is accepted, the final camera-ready version can (and usually should)
+include acknowledgements.  Such acknowledgements should be placed at the end of
+the section, in an unnumbered section that does not count towards the paper
+page limit. Typically, this will include thanks to reviewers who gave useful
+comments, to colleagues who contributed to the ideas, and to funding agencies
+and corporate sponsors that provided financial support.
+
+\section*{Impact Statement}
+
+Authors are \textbf{required} to include a statement of the potential broader
+impact of their work, including its ethical aspects and future societal
+consequences. This statement should be in an unnumbered section at the end of
+the paper (co-located with Acknowledgements -- the two may appear in either
+order, but both must be before References), and does not count toward the paper
+page limit. In many cases, where the ethical impacts and expected societal
+implications are those that are well established when advancing the field of
+Machine Learning, substantial discussion is not required, and a simple
+statement such as the following will suffice:
+
+``This paper presents work whose goal is to advance the field of Machine
+Learning. There are many potential societal consequences of our work, none
+which we feel must be specifically highlighted here.''
+
+The above statement can be used verbatim in such cases, but we encourage
+authors to think about whether there is content which does warrant further
+discussion, as this statement will be apparent if the paper is later flagged
+for ethics review.
+
+% In the unusual situation where you want a paper to appear in the
+% references without citing it in the main text, use \nocite
+\nocite{langley00}
+
+\bibliography{example_paper}
+\bibliographystyle{icml2026}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APPENDIX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\appendix
+\onecolumn
+\section{You \emph{can} have an appendix here.}
+
+You can have as much text here as you want. The main body must be at most $8$
+pages long. For the final version, one more page can be added. If you want, you
+can use an appendix like this one.
+
+The $\mathtt{\backslash onecolumn}$ command above can be kept in place if you
+prefer a one-column appendix, or can be removed if you prefer a two-column
+appendix.  Apart from this possible change, the style (font size, spacing,
+margins, page numbering, etc.) should be kept the same as the main body.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fi
+\bibliography{example_paper}
+\bibliographystyle{icml2026}
+
+
+\clearpage
+\setcounter{page}{1}
+\maketitlesupplementary
+
+\iffalse
+\section{Rationale}
+\label{sec:rationale}
+% 
+Having the supplementary compiled together with the main paper means that:
+% 
+\begin{itemize}
+\item The supplementary can back-reference sections of the main paper, for example, we can refer to \cref{sec:intro};
+\item The main paper can forward reference sub-sections within the supplementary explicitly (e.g. referring to a particular experiment); 
+\item When submitted to arXiv, the supplementary will already included at the end of the paper.
+\end{itemize}
+% 
+To split the supplementary pages from the main paper, you can use \href{https://support.apple.com/en-ca/guide/preview/prvw11793/mac#:~:text=Delete%20a%20page%20from%20a,or%20choose%20Edit%20%3E%20Delete).}{Preview (on macOS)}, \href{https://www.adobe.com/acrobat/how-to/delete-pages-from-pdf.html#:~:text=Choose%20%E2%80%9CTools%E2%80%9D%20%3E%20%E2%80%9COrganize,or%20pages%20from%20the%20file.}{Adobe Acrobat} (on all OSs), as well as \href{https://superuser.com/questions/517986/is-it-possible-to-delete-some-pages-of-a-pdf-document}{command line tools}.
+\fi
+\setcounter{section}{0}  
+\section{Dataset and Annotation}
+\label{sec:date_annot_supp}
+
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/assets/Annotation.png}
+  \caption{\textbf{Dataset Construction Pipeline}}
+  \label{fig:dataset construction}
+\end{figure}
+
+\iffalse This supplementary section is in support of Main Paper Section 2.1 ~\ref{subsec:date_annot}.\fi The overall dataset construction pipeline is shown in Figure ~\ref{fig:dataset construction}.
+
+
+
+
+\subsection{Demographics}
+\label{subsec:demographics}
+
+The study included 116 patients, comprising 84 individuals with epileptic seizures (ES) and 32 with nonepileptic seizures (NES). A total of 438 seizure videos were analyzed (300 ES, 138 NES). The ES group had a balanced sex distribution, whereas the NES group showed a higher proportion of female patients. Across racial and ethnic categories, White/Caucasian participants were the largest group ($55\%$), followed by Hispanic/Latino ($18\%$), Asian ($8\%$), Black/African American ($5\%$), and smaller proportions of American Indian/Alaska Native and multiracial individuals. NES patients tended to have a later age of onset and a higher prevalence of psychiatric comorbidities such as depression, anxiety, and PTSD compared with the ES group. Please see Table ~\ref{tab:demo} for demographics details.
+
+\input{tables/demo}
+
+\subsection{Concordance Between Epileptologists and Trained Annotators labeling distributions}
+\label{subsec:annot_conv}
+
+To quantitatively assess how closely trained annotators replicate expert-level semiology labeling, we computed three complementary similarity metrics across epileptologists and annotators: (i) Pearson correlation, (ii) Cosine similarity, and (iii) Earth Mover's Distance (EMD). These metrics capture linear correspondence, angular similarity in high-dimensional space, and distributional distance, respectively, providing a multi-faceted evaluation of agreement between the two groups.
+
+\vspace{0.3em}
+\paragraph{Pearson Correlation.}
+Pearson's $r$ measures the linear association between two real-valued distributions. Given expert feature frequencies 
+$\mathbf{x} = (x_1,\ldots,x_d)$ and annotator frequencies $\mathbf{y} = (y_1,\ldots,y_d)$ for $d$ semiology features, Pearson correlation is computed as:
+\[
+    r = 
+    \frac{\sum_{i=1}^{d} (x_i - \bar{x})(y_i - \bar{y})}
+         {\sqrt{\sum_{i=1}^{d} (x_i - \bar{x})^2}
+          \sqrt{\sum_{i=1}^{d} (y_i - \bar{y})^2}},
+\]
+where $\bar{x}$ and $\bar{y}$ denote the means. This metric captures how well variations in one distribution predict variations in the other.
+
+For ES videos, we obtained a very strong correlation
+\[
+    r_{\text{ES}} = 0.893,\qquad p = 1.16 \times 10^{-7},
+\]
+and for NES videos,
+\[
+    r_{\text{NES}} = 0.782,\qquad p = 4.70 \times 10^{-5}.
+\]
+When concatenating ES and NES vectors into a unified 40-dimensional distribution, the correlation remained high:
+\[
+    r_{\text{combined}} = 0.836,\qquad p = 1.99 \times 10^{-11}.
+\]
+
+\vspace{0.3em}
+\paragraph{Cosine Similarity.}
+Cosine similarity evaluates the angular closeness between the expert and annotator frequency vectors:
+\[
+    \mathrm{cos}(\mathbf{x}, \mathbf{y}) = 
+    \frac{\mathbf{x} \cdot \mathbf{y}}
+         {\|\mathbf{x}\|_2 \, \|\mathbf{y}\|_2}.
+\]
+This metric is scale-invariant and frequently used in machine learning and computer vision to compare high-dimensional descriptors. We observed high cosine similarities: (i) $\mathrm{cos}_{\text{ES}} = 0.966$ (ii) $\mathrm{cos}_{\text{NES}} = 0.883$ (iii) $\mathrm{cos}_{\text{combined}} = 0.931$.
+\vspace{0.3em}
+\paragraph{Earth Mover's Distance (EMD).}
+To measure distributional dissimilarity, we computed the 1-Wasserstein distance between normalized feature frequencies:
+\[
+    \mathrm{EMD}(\mathbf{p},\mathbf{q})
+    = \inf_{\gamma \in \Gamma(\mathbf{p},\mathbf{q})}
+      \int |u-v| \, d\gamma(u,v),
+\]
+where $\mathbf{p}$ and $\mathbf{q}$ are probability-normalized versions of expert and annotator distributions, and $\Gamma(\mathbf{p},\mathbf{q})$ denotes all valid joint couplings. EMD quantifies the “cost” of transforming one distribution into the other and is sensitive to global structure. Results show very small distances: (i) $\mathrm{EMD}_{\text{ES}} = 0.00864$ (ii) $\mathrm{EMD}_{\text{NES}} = 0.00752$ (iii) $\mathrm{EMD}_{\text{combined}} = 0.00288$.
+\vspace{0.3em}
+\paragraph{Computation Details.}
+All similarity metrics were computed directly from the raw feature frequency vectors derived from the annotated dataset. For each of the $d=20$ semiology features, we computed the empirical percentage frequency of occurrence for epileptologists and trained annotators separately for ES and NES subsets. Vectors were normalized to probability distributions prior to EMD computation. Concatenated ES+NES distributions (40-dimensional) were evaluated identically.
+
+\vspace{0.5em}
+\paragraph{Interpretation.}
+Across all three metrics, trained annotators showed strong to extremely strong agreement with expert epileptologists. The ES distribution demonstrated near-identical shape across groups, and NES distributions, despite being more behaviorally diverse, still exhibited high similarity across all metrics. The very small EMD values indicate that only negligible global mass transfer is required to match annotator distributions to expert distributions. High cosine similarity across the ES, NES, and combined conditions further demonstrate that annotator-derived feature vectors preserve the geometric structure of expert feature profiles.
+
+\vspace{0.5em}
+\noindent
+Overall, these results show that trained annotators reproduce expert-level seizure semiology patterns with exceptional fidelity across both epileptic and nonepileptic events. Their feature distributions are statistically and geometrically aligned with those of epileptologists, validating their use in scalable, high-throughput annotation pipelines for clinical seizure video datasets. Please see Figure ~\ref{fig:panel-2x2} and Table ~\ref{tab:app_similarity} for group level annotation and statistical significance details.
+
+\input{tables/label_sim}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/assets/CVPR_adaptive_sampling.png}
+    \caption{\textbf{Comparison of epileptologist and trained-annotator seizure semiology distributions across epileptic (ES) and nonepileptic (NES) events.}
+\textbf{(a)} Sorted bar plot of ES semiology feature frequencies annotated by epileptologists and trained annotators. Features are ordered by relative difference between groups, highlighting minimal divergence for high-frequency ES behaviors such as tonic, clonic, and ictal vocalization.
+\textbf{(b)} Analogous NES feature comparison showing similarly small discrepancies.
+\textbf{(c)} Radar plot (polar) illustrating the full 20-dimensional ES semiology profiles for experts and annotators. The strong overlap reflects high multivariate alignment, consistent with the quantitative similarity metrics (\emph{r} = 0.893, cosine similarity = 0.966, EMD = 0.0086).
+\textbf{(d)} Radar plot for NES features, again showing substantial overlap between groups despite the greater behavioral heterogeneity of NES events (NES: \emph{r} = 0.782, cosine = 0.883, EMD = 0.0075).
+\textbf{(e)} Pie chart summarizing the proportion of ES vs.\ NES videos labeled by epileptologists. 
+\textbf{(f)} Corresponding ES/NES distribution for trained annotators. 
+The nearly identical global composition in (e)--(f) confirms that agreement analyses are not confounded by differences in event prevalence.
+Together, panels (a)--(f) demonstrate that trained annotators reproduce expert-level seizure semiology distributions with high fidelity across both epileptic and nonepileptic events.}
+    \label{fig:panel-2x2}
+\end{figure*}
+
+
+\section{MLLM prompts for 7 hierarchichal tasks}
+\label{sec:mllm_prompt_supp}
+
+\iffalse This supplementary section is in support of Main Paper Section 2.2 ~\ref{subsec:tasks_metrics}.\fi
+
+\subsection{Task 1 MLLM Prompt and Task 2 Question list}
+\label{subsec:mllm_prompt_task12_supp}
+
+\iffalse This supplementary subsection is in support of Main Paper Sections 2.2.1,2.2.2 ~\ref{subsubsec:tasks1_metrics},~\ref{subsubsec:tasks2_metrics}.\fi Please see Tables ~\ref{tab:prompt12_p1},~\ref{tab:prompt12_p2},~\ref{tab:prompt12_p3} for the list of MLLM prompts for Task 1, Question list for Task 2, clinical relevance of the semiological features and the associated PubMed citations.
+
+%\input{tables/task12promptall}
+
+% \input{tables/task12prompt_format}
+
+\input{tables/prompt12_first}
+\input{tables/prompt12_second}
+\input{tables/prompt12_third}
+
+\subsection{MLLM Prompts for Tasks 3,4,5,6,and 7}
+\label{subsec:mllm_prompt_task3_supp}
+
+\iffalse This supplementary subsection is in support of Main Paper
+Sections 2.2.3,2.2.4,2.2.5,2.2.6,2.2.7 ~\ref{subsubsec:tasks3_metrics},~\ref{subsubsec:tasks4_metrics},~\ref{subsubsec:tasks5_metrics},~\ref{subsubsec:tasks6_metrics},~\ref{subsubsec:tasks7_metrics}.\fi Prompts are in Table ~\ref{tab:prompt3567_comb}.
+
+% \begin{itemize}
+%     \item \textbf{Task 3 (supporting Main Paper Section ~\ref{subsubsec:tasks3_metrics}):} Please see Table ~\ref{tab:prompt3} for the list of MLLM prompts for Task 3
+
+%     \item \textbf{Task 4 (supporting Main Paper Section ~\ref{subsubsec:tasks4_metrics}):} Please see Table ~\ref{tab:prompt3} for the list of MLLM prompts for Task 4
+
+%     \item \textbf{Task 5 (supporting Main Paper Section ~\ref{subsubsec:tasks5_metrics}):} Please see Table ~\ref{tab:prompt5} for the list of MLLM prompts for Task 5
+
+%     \item \textbf{Task 6 (supporting Main Paper Section ~\ref{subsubsec:tasks6_metrics}):} Please see Table ~\ref{tab:prompt6} for the list of MLLM prompts for Task 6
+
+%     \item \textbf{Task 7 (supporting Main Paper Section ~\ref{subsubsec:tasks7_metrics}):} Please see Table ~\ref{tab:prompt7} for the list of MLLM prompts for Task 7.
+% \end{itemize}
+
+%\input{tables/prompt3}
+%\input{tables/prompt5}
+%\input{tables/prompt6}
+%\input{tables/prompt7}
+\input{tables/prompt3567_combined}
+
+
+\section{Semiology Interpretation Score}
+\label{sec:sem_int_score_supp}
+
+\iffalse This supplementary section is in support of Main Paper Section 2.2.2 ~\ref{subsubsec:tasks2_metrics}.\fi For each seizure semiological feature, the epileptologist provides a chained list of questions (see Tables ~\ref{tab:prompt12_p1},~\ref{tab:prompt12_p2},~\ref{tab:prompt12_p3} for the question list) moving from the core manifestation of the symptom to its subtle attributes. The Seizure Semiology Interpretation Score is also calculated according to this primary–secondary order. For each justification generated by the MLLM, we first check whether the MLLM’s answer matches the ground truth; if it does not match, we immediately stop and assign a score of 0. Then we compare the core manifestation of the first symptom feature in the question list: if it matches, 70\% of the score is awarded; if it does not match, we again directly assign 0. Finally, we compare the secondary attributes of the feature: if all details match, the score is 100\%. If there are m secondary details and the MLLM correctly answers n of them, then the detail score is calculated as 30\% × (n/m).
+
+\section{Seizure RQI}
+\label{sec:seiz_rqi_supp}
+
+\iffalse This supplementary section is in support of Main Paper Section 2.2.6 ~\ref{subsubsec:tasks6_metrics}.\fi
+
+\subsection{Seizure RQI Calculation}
+\label{subsec:seiz_rqi_calc_supp}
+Standard NLP metrics are fundamentally misaligned with the requirements of clinical documentation, as they cannot penalize factually incorrect but linguistically plausible statements. To address this, we propose the Report Quality Index for Seizure Semiology (Seizure RQI), a comprehensive, multi-dimensional index designed to measure the gap between a generated report and a clinical gold standard.
+
+The base score comprises four components—Structural Completeness, Symptom Coverage, Key Localizing Features, and Temporal \& Quantitative Fidelity weighted 15\%, 35\%, 25\%, and 25\%, respectively. We briefly describe each of the component.
+\\
+\textbf{Structural Completeness (S):} We compare the model-generated report with the ground-truth narrative across three sections:
+(i) Onset: concrete visible signs at the beginning (e.g., blank stare, lip smacking, versive head turn, unilateral arm flexion/extension).
+(ii) Propagation: how the seizure symptom evolves/spreads and laterality (e.g., fencer posturing with L flexion/R extension, transition to bilateral tonic–clonic).
+(iii) Postictal: the immediate state after movements stop (e.g., confusion, unresponsiveness, amnesia, drowsiness).
+\\
+\textbf{Symptom Coverage (C):} The ratio of correctly LLM-extracted features from the MLLM generated report over all LLM-extracted features from the ground-truth report.
+\\
+\textbf{Key Localizing Features (L):} Extracting specific values for: direction of head turning, laterality of the first motor sign, type of asymmetric tonic arm posturing, and Figure-4 arm extension side. Example output: ($left$, $right$ or $none$ if not mentioned) and compare them to the ground-truth references for exact-match evaluation.
+\\
+\textbf{Temporal Fidelity (T):} Given a chronologically ordered list of seizure features, calculate Temporal-relation F1-Score.
+\\
+Combining the 4 components, we get the base score as:
+\begin{equation}
+\begin{aligned}
+\text{Base} \;=\; 0.15\,S + 0.35\,C + 0.25\,L + 0.25\,T
+\end{aligned}
+\end{equation}
+Besides the weighted base score, the penalty is composed of four parts: (i) Hallucination penalties: a multiplicative penalty based on features not present. For \(n\) features in the MLLM generated report that are absent from the ground truth, multiply the weighted score by \(0.95^{n}\),
+\begin{align}
+    P_{\mathrm{hall}}=0.95^{\,n}.
+\end{align} (ii) Off-topic content or non-seizure disturbances (contrast/interference): nursing interventions, patient repositioning, camera obstruction, and device alarms must be excluded. If such content appears in the LLM-generated report, the final score is penalized by 20\%,
+\begin{align}
+    P_{\mathrm{off}}=0.8.
+\end{align} (iii) Length penalty: for any MLLM-generated report, every 50 words beyond 100 words length (W) reduces the final score by $20\%$, 
+\begin{align}
+    P_{\mathrm{len}}=0.8^{\,\max\!\bigl(0,\ \lfloor (W-100)/50 \rfloor\bigr)}.
+\end{align} (iv) Safety gate: if the report contains hazardous recommendations (e.g., incorrect medication dosage), the maximum achievable score is 50 points (i.e., the score is capped at 50).
+\begin{align}
+P_{\text{haz}} =
+\begin{cases}
+1, & \text{if no hazardous clinical statements are present}, \\[4pt]
+0, & \text{otherwise}.
+\end{cases}
+\end{align}
+Combining the base scores and the weighted penalties, the final RQI is then given by,
+{
+\setlength{\abovedisplayskip}{2pt}
+\setlength{\belowdisplayskip}{2pt}
+\begin{equation}
+\begin{aligned}
+\mathrm{RQI}
+  &= (0.15 S + 0.35 C + 0.25 L + 0.25 T)\\[-0.3ex]
+  &\quad \times P_{\text{hall}} \times P_{\text{off}} \times P_{\text{len}} \times P_{\text{haz}}
+\end{aligned}
+\end{equation}
+}
+
+
+
+
+
+
+
+\iffalse
+Besides the weighted base score, the penalty is composed of four parts: 
+
+(i) Hallucination penalties: a multiplicative penalty based on features not present. For \(n\) features in the MLLM generated report that are absent from the ground truth, multiply the weighted score by \(0.95^{n}\), 
+
+\begin{equation}
+\begin{aligned}
+P_{\mathrm{hall}}=0.95^{\,n}
+\end{aligned}
+\end{equation}
+
+(ii) Off-topic content or non-seizure disturbances (contrast/interference): nursing interventions, patient repositioning, camera obstruction, and device alarms must be excluded. If such content appears in the LLM-generated report, the final score is penalized by 20\%.
+\begin{equation}
+\begin{aligned}
+P_{\mathrm{off}}=0.8\
+\end{aligned}
+\end{equation}
+
+(iii) Length penalty: for any MLLM-generated report, every 50 words beyond 100 words length (W) reduces the final score by \(20\%\).
+
+\begin{equation}
+\begin{aligned}
+P_{\mathrm{len}}=0.8^{\,\max\!\bigl(0,\ \lfloor (W-100)/50 \rfloor\bigr)}
+\end{aligned}
+\end{equation}
+
+(iv) Safety gate: if the report contains hazardous recommendations (e.g., incorrect medication dosage), the maximum achievable score is 50 points (i.e., the score is capped at 50).
+
+\begin{equation}
+P_{\text{haz}} =
+\begin{cases}
+1, & \text{if no hazardous clinical statements are present}, \\[4pt]
+0, & \text{otherwise}.
+\end{cases}
+\end{equation}
+
+The total Seizure RQI:
+
+{
+\setlength{\abovedisplayskip}{2pt}
+\setlength{\belowdisplayskip}{2pt}
+\begin{equation}
+\begin{aligned}
+\mathrm{RQI}
+  &= (0.15 S + 0.35 C + 0.25 L + 0.25 T)\\[-0.3ex]
+  &\quad \times P_{\text{hall}} \times P_{\text{off}} \times P_{\text{len}} \times P_{\text{haz}}
+\end{aligned}
+\end{equation}
+}\fi
+
+\subsection{Comparison of Task 6 Report Metrics with Expert Ratings}
+\label{subsec:seiz_rqi_comp_supp}
+
+To compare the effectiveness of different report metrics in Task 6, we randomly selected 20 patients and three epileptologist manually scored 60 reports generated by three MLLMs based on the following criteria: 5 (Excellent): The MLLM-generated report accurately captures all critical semiological features mentioned in the ground truth. It is factually consistent and contains no hallucinations; 4 (Good): The MLLM-generated report captures the majority of the key semiological features but may miss minor details or use less precise clinical terminology; 3 (Moderate): The MLLM-generated report identifies some correct semiological features but misses significant ones or contains minor factual inaccuracies; 2 (Poor): The MLLM-generated report only describes general, non-specific events and fails to identify most of the crucial clinical signs mentioned in the ground truth; 1 (Failure): The MLLM-generated report is completely irrelevant, factually incorrect, or hallucinates information not supported by the ground truth. The details of each metric and the expert ratings are shown in Table~\ref{tab:task6_metrics_human_rating}. 
+
+
+\input{tables/task6_rqi_comp}
+
+% To compare the effectiveness of different report metrics in Task 6, we randomly selected 20 patients and three epileptologist manually scored 60 reports generated by three MLLMs. The details of each metric and the expert ratings are shown in Table~\ref{tab:task6_metrics_human_rating}. 
+
+
+
+
+
+ \begin{table*}[t]
+    \centering
+    \small                          % CVPR 常用小号字体
+    \setlength{\tabcolsep}{6pt}     % 列间距，默认 6pt，数值越大列越宽
+    \renewcommand{\arraystretch}{1.1} % 行距，>1 会加大行高
+% \caption{Report metrics and epileptologist ratings 60 MLLMs generated report on Task~6.}
+
+\caption{Automatic report metrics and epileptologist ratings for 60 MLLM-generated reports on Task~6.}
+
+\label{tab:task6_metrics_human_rating}
+%\resizebox{\textwidth}{!}{%
+\resizebox{!}{0.5\textheight}{
+\begin{tabular}{llrrrrrr}
+
+
+\hline
+model & video\_id & bleu\_corpus & rouge1\_f1 & rougeL\_f1 & berts\_f1 & RQI &  expert\\
+\hline
+InternVL3\_5-38B & 1 & 3.52 & 0.32 & 0.24 & 0.60 & 47.57 & 2.00 \\
+InternVL3\_5-38B & 2 & 0.77 & 0.25 & 0.17 & 0.58 & 30.54 & 1.00 \\
+InternVL3\_5-38B & 3 & 0.57 & 0.09 & 0.05 & 0.54 & 51.92 & 2.50 \\
+InternVL3\_5-38B & 4 & 3.30 & 0.25 & 0.15 & 0.60 & 25.00 & 1.50 \\
+InternVL3\_5-38B & 5 & 0.86 & 0.18 & 0.13 & 0.55 & 32.00 & 2.00 \\
+InternVL3\_5-38B & 6 & 1.81 & 0.31 & 0.16 & 0.59 & 30.54 & 1.50 \\
+InternVL3\_5-38B & 7 & 4.56 & 0.34 & 0.18 & 0.61 & 34.81 & 1.50 \\
+InternVL3\_5-38B & 8 & 3.54 & 0.24 & 0.24 & 0.57 & 45.00 & 2.50 \\
+InternVL3\_5-38B & 9 & 1.48 & 0.17 & 0.11 & 0.58 & 38.58 & 2.00 \\
+InternVL3\_5-38B & 10 & 0.87 & 0.14 & 0.13 & 0.53 & 18.83 & 1.00 \\
+InternVL3\_5-38B & 11 & 1.01 & 0.21 & 0.11 & 0.52 & 30.54 & 1.00 \\
+InternVL3\_5-38B & 12 & 0.73 & 0.05 & 0.05 & 0.46 & 25.00 & 1.00 \\
+InternVL3\_5-38B & 13 & 0.70 & 0.12 & 0.09 & 0.55 & 42.97 & 2.00 \\
+InternVL3\_5-38B & 14 & 0.98 & 0.15 & 0.11 & 0.51 & 33.12 & 1.50 \\
+InternVL3\_5-38B & 15 & 1.53 & 0.21 & 0.18 & 0.64 & 48.73 & 1.50 \\
+InternVL3\_5-38B & 16 & 1.56 & 0.15 & 0.13 & 0.57 & 31.59 & 1.00 \\
+InternVL3\_5-38B & 17 & 1.32 & 0.13 & 0.11 & 0.50 & 19.73 & 3.00 \\
+InternVL3\_5-38B & 18 & 0.73 & 0.02 & 0.02 & 0.46 & 29.33 & 1.50 \\
+InternVL3\_5-38B & 19 & 1.08 & 0.21 & 0.12 & 0.52 & 49.58 & 1.00 \\
+InternVL3\_5-38B & 20 & 2.69 & 0.21 & 0.13 & 0.54 & 22.40 & 2.00 \\
+Qwen2.5-VL-72B & 1 & 3.07 & 0.37 & 0.19 & 0.61 & 38.92 & 2.00 \\
+Qwen2.5-VL-72B & 2 & 1.82 & 0.28 & 0.20 & 0.57 & 33.85 & 1.50 \\
+Qwen2.5-VL-72B & 3 & 2.08 & 0.16 & 0.13 & 0.61 & 44.52 & 2.00 \\
+Qwen2.5-VL-72B & 4 & 2.24 & 0.26 & 0.16 & 0.55 & 28.18 & 1.50 \\
+Qwen2.5-VL-72B & 5 & 1.08 & 0.14 & 0.07 & 0.52 & 47.50 & 2.50 \\
+Qwen2.5-VL-72B & 6 & 1.99 & 0.24 & 0.12 & 0.59 & 41.74 & 2.00 \\
+Qwen2.5-VL-72B & 7 & 2.38 & 0.31 & 0.12 & 0.62 & 55.28 & 2.50 \\
+Qwen2.5-VL-72B & 8 & 1.24 & 0.10 & 0.07 & 0.54 & 45.37 & 2.50 \\
+Qwen2.5-VL-72B & 9 & 1.48 & 0.15 & 0.15 & 0.58 & 58.94 & 3.00 \\
+Qwen2.5-VL-72B & 10 & 0.66 & 0.17 & 0.09 & 0.49 & 23.23 & 1.00 \\
+Qwen2.5-VL-72B & 11 & 0.26 & 0.13 & 0.08 & 0.49 & 60.02 & 3.00 \\
+Qwen2.5-VL-72B & 12 & 1.83 & 0.10 & 0.10 & 0.50 & 43.94 & 1.00 \\
+Qwen2.5-VL-72B & 13 & 0.89 & 0.16 & 0.08 & 0.56 & 33.35 & 1.50 \\
+Qwen2.5-VL-72B & 14 & 2.21 & 0.20 & 0.12 & 0.55 & 39.30 & 2.00 \\
+Qwen2.5-VL-72B & 15 & 1.94 & 0.16 & 0.05 & 0.60 & 39.87 & 1.00 \\
+Qwen2.5-VL-72B & 16 & 0.65 & 0.11 & 0.06 & 0.56 & 48.23 & 3.00 \\
+Qwen2.5-VL-72B & 17 & 3.22 & 0.18 & 0.11 & 0.52 & 22.73 & 2.50 \\
+Qwen2.5-VL-72B & 18 & 0.46 & 0.04 & 0.04 & 0.42 & 45.90 & 2.50 \\
+Qwen2.5-VL-72B & 19 & 0.96 & 0.19 & 0.11 & 0.47 & 43.81 & 1.50 \\
+Qwen2.5-VL-72B & 20 & 1.41 & 0.17 & 0.07 & 0.55 & 28.69 & 2.00 \\
+Qwen2.5-Omni-7B & 1 & 1.74 & 0.30 & 0.19 & 0.63 & 69.94 & 3.00 \\
+Qwen2.5-Omni-7B & 2 & 0.44 & 0.17 & 0.10 & 0.58 & 22.97 & 1.00 \\
+Qwen2.5-Omni-7B & 3 & 2.16 & 0.11 & 0.11 & 0.68 & 34.62 & 1.50 \\
+Qwen2.5-Omni-7B & 4 & 1.23 & 0.08 & 0.08 & 0.57 & 21.75 & 1.00 \\
+Qwen2.5-Omni-7B & 5 & 0.25 & 0.08 & 0.08 & 0.57 & 48.75 & 2.50 \\
+Qwen2.5-Omni-7B & 6 & 0.78 & 0.16 & 0.11 & 0.59 & 54.98 & 2.50 \\
+Qwen2.5-Omni-7B & 7 & 1.30 & 0.24 & 0.15 & 0.63 & 51.89 & 2.50 \\
+Qwen2.5-Omni-7B & 8 & 1.89 & 0.09 & 0.09 & 0.55 & 30.20 & 1.50 \\
+Qwen2.5-Omni-7B & 9 & 1.66 & 0.13 & 0.09 & 0.56 & 41.27 & 2.00 \\
+Qwen2.5-Omni-7B & 10 & 1.28 & 0.07 & 0.07 & 0.52 & 23.54 & 1.00 \\
+Qwen2.5-Omni-7B & 11 & 0.21 & 0.09 & 0.09 & 0.51 & 22.40 & 1.00 \\
+Qwen2.5-Omni-7B & 12 & 1.96 & 0.10 & 0.05 & 0.50 & 45.46 & 1.00 \\
+Qwen2.5-Omni-7B & 13 & 1.62 & 0.14 & 0.07 & 0.62 & 40.82 & 1.00 \\
+Qwen2.5-Omni-7B & 14 & 0.21 & 0.05 & 0.02 & 0.55 & 27.31 & 1.50 \\
+Qwen2.5-Omni-7B & 15 & 2.18 & 0.29 & 0.23 & 0.66 & 42.47 & 1.50 \\
+Qwen2.5-Omni-7B & 16 & 0.50 & 0.06 & 0.06 & 0.54 & 31.92 & 1.00 \\
+Qwen2.5-Omni-7B & 17 & 2.27 & 0.15 & 0.15 & 0.55 & 23.08 & 2.00 \\
+Qwen2.5-Omni-7B & 18 & 1.48 & 0.05 & 0.05 & 0.51 & 38.37 & 2.00 \\
+Qwen2.5-Omni-7B & 19 & 2.14 & 0.24 & 0.15 & 0.59 & 31.67 & 1.50 \\
+Qwen2.5-Omni-7B & 20 & 1.14 & 0.13 & 0.10 & 0.55 & 28.69 & 1.00 \\
+\hline
+\end{tabular}
+}
+\end{table*}
+
+\vspace{1em}   % 大约一行字高
+
+
+
+We then computed the Pearson, Spearman, and Kendall correlation coefficients and the pairwise accuracy reflecting ranking consistency between five metrics and the expert scores. The results show that Seizure RQI is the metric most closely aligned with the expert ratings  (Table~\ref{tab:task6_corr}).
+
+
+
+
+
+
+\iffalse
+ \begin{table}[t]
+    \centering
+    \small                          % CVPR 常用小号字体
+    \setlength{\tabcolsep}{8pt}     % 列间距，默认 6pt，数值越大列越宽
+    \renewcommand{\arraystretch}{1.1} % 行距，>1 会加大行高
+
+    \caption{Comparation between report metrics and epileptologist ratings on Task~6.}
+    \label{tab:task6_corr}
+
+    \begin{tabular}{lrrrr}
+    \hline
+    metric & pearson & spearman & kendall & pairwise\_accuracy \\
+    \hline
+    bleu\_corpus & 0.07 & 0.10 & 0.08 & 0.54 \\
+    rouge1\_f1   & 0.09 & 0.10 & 0.07 & 0.52 \\
+    rougeL\_f1   & 0.10 & 0.11 & 0.08 & 0.52 \\
+    berts\_f1    & 0.07 & 0.12 & 0.08 & 0.52 \\
+    seizure rqi          & \textbf{0.57} & \textbf{0.52} &
+                    \textbf{0.43} & \textbf{0.74} \\
+    \hline
+    \end{tabular}
+\end{table}\fi
+
+
+
+\section{Finetune Details}
+\label{sec:finetune_details}
+
+\textbf{Finetuning dataset preparation.} To prevent data leakage and ensure generalization, we perform a strict patient-level split of the full video corpus, dividing samples into training and testing sets in a 4:1 ratio, grouped by patient ID. Stratified sampling maintains consistent ES to NES ratios across splits. Task-specific training samples are constructed as follows: (i) For Tasks 1–3, videos are trimmed to manually annotated start and end boundaries; (ii) For Task 4, 60-second clips are constructed such that the true semiological feature onset is randomly located within the window to avoid positional bias (e.g., center-frame shortcuts); (iii) For Tasks 5 and 6, both video inputs and corresponding answers are truncated at the 30-second level to preserve temporal alignment; (iv) For Task 7, we apply uniform sparse frame sampling across the full video to retain global context. The finetuning dataset consists of prompt–answer pairs and will be released publicly via Hugging Face to support transparent evaluation and community benchmarking.
+
+\iffalse This supplementary section is in support of Main Paper Section 3.3 ~\ref{subsec:fine_tune}.\fi
+
+SFT command:
+\small
+\begin{verbatim}
+export SAMPLING_RATE=16000
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+NPROC_PER_NODE=8 \
+VIDEO_MAX_PIXELS=$((784*448)) \
+FPS_MAX_FRAMES=60 \
+FPS=1 \
+MAX_PIXELS=$((784*448*60)) \
+swift sft \
+    --model "Qwen/Qwen2.5-Omni-7B"\
+    --model_kwargs \
+    '{"use_audio_in_video": true}' \
+    --dataset $TASK_DATASET  \
+    --load_from_cache_file true \
+    --split_dataset_ratio 0.05 \
+    --train_type lora \
+    --torch_dtype bfloat16 \
+    --attn_impl sdpa \
+    --gradient_checkpointing true \
+    --num_train_epochs 3 \
+    --per_device_train_batch_size 1 \
+    --per_device_eval_batch_size 1 \
+    --learning_rate 5e-5 \
+    --lora_rank 8 \
+    --lora_alpha 32 \
+    --target_modules all-linear \
+    --freeze_vit true \
+    --freeze_aligner true \
+    --gradient_accumulation_steps 4 \
+    --eval_strategy steps \
+    --eval_steps 100 \
+    --save_strategy steps \
+    --save_steps 100 \
+    --save_total_limit 3 \
+    --logging_steps 20 \
+    --max_length 32768 \
+    --warmup_ratio 0.05 \
+    --dataloader_num_workers 8 \
+    --dataset_num_proc 1 \
+    --load_best_model_at_end true \
+    --metric_for_best_model eval_loss \
+    --greater_is_better false \
+    --deepspeed zero2 \
+    --report_to 'wandb' \
+    --run_name "$VERSION_NAME" \
+    --enable_channel_loss 'True' \
+    --output_dir $MODEL_SAVE_PATH  
+
+\end{verbatim}
+\normalsize
+
+GRPO command:
+
+\small
+\begin{verbatim}
+export ENABLE_AUDIO_OUTPUT=False
+VIDEO_MAX_PIXELS=$((784*448)) \
+FPS_MAX_FRAMES=60 \
+MAX_PIXELS=$((784*448*60)) \
+NPROC_PER_NODE=8 \
+ENABLE_AUDIO_OUTPUT=False \
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+FPS=1 \
+swift rlhf \
+    --rlhf_type grpo \
+    --model $BASE_MODEL \
+    --model_kwargs \
+    '{"use_audio_in_video": true}' \
+    --reward_funcs seizure \
+    --reward_weights 1.0 \
+    --train_type lora \
+    --lora_rank 8 \
+    --lora_alpha 32 \
+    --target_modules all-linear \
+    --torch_dtype bfloat16 \
+    --dataset $TASK_DATASET  \
+    --load_from_cache_file true \
+    --external_plugins './plugin.py'\
+    --max_steps 6000 \
+    --per_device_train_batch_size 2 \
+    --per_device_eval_batch_size 2 \
+    --learning_rate 1e-6 \
+    --gradient_accumulation_steps 1 \
+    --eval_steps 300 \
+    --save_steps 100 \
+    --save_total_limit 10 \
+    --logging_steps 5 \
+    --max_new_tokens 1024 \
+    --max_length 32768 \
+    --warmup_ratio 0.05 \
+    --dataloader_num_workers 8 \
+    --dataset_num_proc 8 \
+    --num_generations 6 \
+    --temperature 0.8 \
+    --top_p 0.95 \
+    --top_k 50 \
+    --system './rlhf/prompt.txt'\
+    --deepspeed zero2 \
+    --log_completions true \
+    --report_to 'wandb' \
+    --run_name "$VERSION_NAME" \
+    --enable_channel_loss 'True' \
+    --output_dir $MODEL_SAVE_PATH  
+\end{verbatim}
+\normalsize
+\section{MLLM Metrics on Entire Dataset}
+\label{sec:mllm_metrics_entire_data_supp}
+
+The dataset is partitioned at the patient level to prevent data leakage, utilizing stratified sampling based on the ES:NES ratio. In addition to a standard fixed train-test split, our framework also supports 5-fold cross-validation. To facilitate future research, the dataset, along with the inference results of 11 MLLMs across the entire dataset, will be publicly released.
+
+\iffalse This section supports Section 4  ~\ref{sec:res_analysis} of the main paper.\fi Detailed metrics for each task are provided in the following tables: Table ~\ref{tab:task1_whole_dataset} for task 1; Table ~\ref{tab:task2_whole_dataset} for task 2;
+Table ~\ref{tab:task3-whole} for task 3;
+Table ~\ref{tab:task4_whole_dataset} for task 4;
+Table ~\ref{tab:task5-whole-dataset} for task 5;
+Table ~\ref{tab:task6-nlp-whole-dataset} for task 6.
+
+
+
+
+
+% \input{tables/task1_whole}
+
+\input{tables/task1_metrics_wholedataset}
+\input{tables/task2_metrics_wholedataset}
+
+\input{tables/task3_whole}
+
+\input{tables/task4_whole}
+
+\input{tables/task5_whole}
+
+\input{tables/task6_whole}
+
+% \input{tables/task1_wholedataset_metrics}
+
+%\input{tables/task2_whole}
+
+
+
+
+\section{MLLM Metrics on Test Dataset}
+\label{sec:mllm_metrics_test_data_supp}
+
+
+
+% This supplementary section is in support of Main Paper Section ~\ref{sec:res_analysis}. Task 1 metrics see Table ~\ref{tab:task1_test_datset}, task 2 metrics see Table ~\ref{tab:task2_test_dataset};
+% task 3 metrics see Table ~\ref{tab:task3-spatial-test};
+% task 4 metrics see Table ~\ref{tab:task4-metrics-test};
+% task 5 metrics see Table ~\ref{tab:task5-test-dataset};
+% task 6 metrics see Table ~\ref{tab:task6-nlp-test}.
+
+\iffalse This section supplements Section 4  ~\ref{sec:res_analysis} of the main paper by providing performance metrics on the Test Dataset. \fi Detailed results for Tasks 1 through 6 are presented in Tables ~\ref{tab:task1_test_datset},~\ref{tab:task2_test_dataset}, ~\ref{tab:task3-spatial-test},~\ref{tab:task4-metrics-test},~\ref{tab:task5-test-dataset}, ~\ref{tab:task6-nlp-test}, respectively.
+
+
+\input{tables/task1_metrics_testdataset}
+
+\input{tables/task2_metrics_testdataset}
+
+\input{tables/task3_test}
+
+\input{tables/task4_test}
+
+\input{tables/task5_test}
+
+\input{tables/task6_test}
+
+\section{MLLMs Baselines Implementation Details}
+\label{sec:baseline_sample}
+
+A key challenge in processing seizure videos with current MLLMs is balancing input context limits with the need for high temporal resolution. Seizure semiology often involves rapid, high-frequency changes, such as eye blinking or subtle facial twitching, which require high resolution and could be easily missed by standard sparse sampling strategies. To mitigate this trade-off, we design task-specific sampling protocols.
+
+\textbf{Uniform Sliding Window Segmentation (Tasks 1, 2, 5, 6).}
+For detection and detailed description tasks, we employ a sliding window approach to maintain sufficient temporal granularity (2 FPS). Videos are segmented into 30-second windows (extended to 60 seconds for Qwen3-VL and Qwen3-Omni models due to enhanced long-context capabilities), with a 5-second overlap between adjacent segments to avoid truncating continuous semiological features at segment boundaries. \iffalse Segment-level inference results are aggregated based on task requirements: Task 1 utilizes a logical 'ANY-of-YES' pooling; Tasks 2 and 6 employ an LLM specifically prompted to merge segment descriptions; Task 5 merges sequential features with overlaps.\fi Segment-level inference results are aggregated according to task demands: Task 1 uses logical ANY-of-YES pooling; Tasks 2 and 6 employ an LLM specifically prompted to merge segment-wise descriptions into unified narratives; Task 5 aligns sequential outputs across overlapping windows to preserve temporal order.
+
+\textbf{Event-Centric Video Clipping (Tasks 3 \& 4).} To facilitate precise localization, we reduce the input space by extracting event-centered video clips. In Task 3 (Lateralization), we specifically extract video segments containing lateralizing features (e.g., head turning, arm movement). In Task 4 (Temporal Localization), each input is clipped to a 60-second window centered around the ground-truth feature onset. All models process clips at 1 FPS (60 frames), except Qwen3-VL and Qwen3-Omni, which operate at 2 FPS (120 frames) to leverage their improved temporal resolution.
+
+\textbf{Full Video Uniform Sampling (Task 7).} Since clinical diagnosis relies on global seizure context, we avoid segmentation and instead sample frames uniformly across the entire video. Most models receive 60 evenly spaced frames, while Qwen3-VL and Qwen3-Omni are given 120 frames to leverage their extended visual context capabilities.
+
+All models are run with deterministic generation (temperature = 0) to ensure reproducibility across all evaluations.
+
+\end{document}
+
+% This document was modified from the file originally made available by
+% Pat Langley and Andrea Danyluk for ICML-2K. This version was created
+% by Iain Murray in 2018, and modified by Alexandre Bouchard in
+% 2019 and 2021 and by Csaba Szepesvari, Gang Niu and Sivan Sabato in 2022.
+% Modified again in 2023 and 2024 by Sivan Sabato and Jonathan Scarlett.
+% Previous contributors include Dan Roy, Lise Getoor and Tobias
+% Scheffer, which was slightly modified from the 2010 version by
+% Thorsten Joachims & Johannes Fuernkranz, slightly modified from the
+% 2009 version by Kiri Wagstaff and Sam Roweis's 2008 version, which is
+% slightly modified from Prasad Tadepalli's 2007 version which is a
+% lightly changed version of the previous year's version by Andrew
+% Moore, which was in turn edited from those of Kristian Kersting and
+% Codrina Lauth. Alex Smola contributed to the algorithmic style files.
+
+
+
+

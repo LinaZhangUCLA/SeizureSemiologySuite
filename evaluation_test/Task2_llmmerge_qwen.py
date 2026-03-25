@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import argparse
 import asyncio
 import aiohttp
 from typing import List
@@ -14,7 +15,8 @@ API_KEY = 'sk-03164559b7d548da873c5d7a934a9059'   # <-- Put your DashScope API k
 MODEL = "qwen-plus"
 
 # File paths
-BASE_DIR = "result/vlm_inference_test"
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.join(REPO_ROOT, "result", "vlm_inference_test")
 MODELS = [
     # "InternVL3_5-8B",
     # "InternVL3_5-38B",
@@ -265,9 +267,73 @@ async def main_async():
     print("All models processed!")
     print("=" * 60)
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Merge Task 2 justifications across segments with DashScope/Qwen.")
+    parser.add_argument("--input_csv", default=None, help="Optional single merged Task12 CSV to process.")
+    parser.add_argument("--output_csv", default=None, help="Optional output CSV path for --input_csv mode.")
+    parser.add_argument("--base_dir", default=BASE_DIR, help="Base directory containing per-model result folders.")
+    parser.add_argument("--models", nargs="*", default=MODELS, help="Model folder names to process under base_dir.")
+    parser.add_argument("--api_key", default=os.getenv("DASHSCOPE_API_KEY", API_KEY),
+                        help="DashScope API key. Defaults to DASHSCOPE_API_KEY if set.")
+    parser.add_argument("--model", default=MODEL, help="DashScope chat model.")
+    return parser.parse_args()
+
 
 if __name__ == "__main__":
-    asyncio.run(main_async())
+    args = parse_args()
+    API_KEY = args.api_key
+    MODEL = args.model
+    BASE_DIR = args.base_dir
+    MODELS = args.models
+
+    if args.input_csv:
+        async def run_single():
+            if not API_KEY:
+                raise SystemExit("Please provide --api_key or set DASHSCOPE_API_KEY.")
+            csv_out = args.output_csv
+            if csv_out is None:
+                root, ext = os.path.splitext(args.input_csv)
+                csv_out = f"{root}_llmmerge{ext}"
+            out_dir = os.path.dirname(csv_out)
+            if out_dir:
+                os.makedirs(out_dir, exist_ok=True)
+
+            model_name = os.path.basename(os.path.dirname(args.input_csv)) or "single_run"
+            print(f"[{model_name}] Processing: {args.input_csv}")
+            df = pd.read_csv(args.input_csv, encoding='utf-8')
+            df_out = df.copy()
+
+            rx = re.compile(COL_PATTERN)
+            target_cols = [c for c in df.columns if rx.search(c)]
+            tasks = []
+            for col in target_cols:
+                for i in range(len(df)):
+                    raw_val = df.at[i, col]
+                    if raw_val and str(raw_val).strip():
+                        tasks.append((i, col, df.iloc[i]))
+
+            total_tasks = len(tasks)
+            async with aiohttp.ClientSession() as session:
+                sem = asyncio.Semaphore(CONCURRENCY)
+
+                async def limited_process(task_index, row_index, col, row):
+                    async with sem:
+                        return await process_cell_async(task_index, total_tasks, row_index, col, row, session, model_name)
+
+                results = await asyncio.gather(*[
+                    limited_process(i, row_index, col, row)
+                    for i, (row_index, col, row) in enumerate(tasks)
+                ])
+
+            for row_index, col, merged_text in results:
+                df_out.at[row_index, col] = merged_text
+
+            df_out.to_csv(csv_out, index=False, encoding='utf-8')
+            print(f"[{model_name}] [Done] Wrote: {csv_out}")
+
+        asyncio.run(run_single())
+    else:
+        asyncio.run(main_async())
 
 
 

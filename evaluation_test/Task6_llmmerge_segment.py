@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import re
+import os
+import argparse
 import asyncio
 import aiohttp
 from collections import defaultdict
@@ -14,7 +16,8 @@ API_KEY = "sk-853145a6309e48ad83e2d0cd01a155a1"
 MODEL = "qwen-plus-latest"
 
 
-BASE_DIR = "/home/lina/ssb/SeizureSemiologyBench/result/vlm_inference_test/"
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.join(REPO_ROOT, "result", "vlm_inference_test")
 
 
 TEMPERATURE = 0
@@ -161,25 +164,33 @@ async def main_async(INPUT_CSV,OUTPUT_CSV):
 
 
 if __name__ == "__main__":
-    if API_KEY == "YOUR_DASHSCOPE_API_KEY":
+    parser = argparse.ArgumentParser(description="Merge Task 6 segment reports with DashScope/Qwen.")
+    parser.add_argument("--input_csv", default=None, help="Optional single Task 6 CSV to merge.")
+    parser.add_argument("--output_csv", default=None, help="Optional output CSV path for --input_csv mode.")
+    parser.add_argument("--base_dir", default=BASE_DIR, help="Base directory containing per-model result folders.")
+    parser.add_argument("--models", nargs="*", default=['seizure_omni_sft', 'seizure_omni_grpo'],
+                        help="Model folder names to process under base_dir.")
+    parser.add_argument("--api_key", default=os.getenv("DASHSCOPE_API_KEY", API_KEY),
+                        help="DashScope API key. Defaults to DASHSCOPE_API_KEY if set.")
+    parser.add_argument("--model", default=MODEL, help="DashScope chat model.")
+    args = parser.parse_args()
+
+    API_KEY = args.api_key
+    MODEL = args.model
+    if not API_KEY or API_KEY == "YOUR_DASHSCOPE_API_KEY":
         raise SystemExit("Please set API_KEY first.")
 
-    MODELS = [
-        #"InternVL3_5-8B",
-        # "InternVL3_5-38B",
-        # # "Qwen2.5-VL-7B-Instruct",
-        # # "Qwen2.5-VL-32B-Instruct",
-        # # "Qwen2.5-VL-72B-Instruct",
-        # "Lingshu-32B",
-        # # "Qwen2.5-Omni-7B",
-        # # 'Qwen3-VL-8B-Instruct',
-        # # 'Qwen3-VL-32B-Instruct',
-        # "Qwen3-Omni-30B-A3B-Instruct",
-
-        'seizure_omni_sft' ,
-        'seizure_omni_grpo'   
-    ]    
-    for model in MODELS:
-        INPUT_CSV = f"{BASE_DIR}/{model}/Task6_{model}_all.csv"
-        OUTPUT_CSV = f"{BASE_DIR}/{model}/Task6_{model}_all_merged.csv"    
-        asyncio.run(main_async(INPUT_CSV,OUTPUT_CSV))
+    if args.input_csv:
+        output_csv = args.output_csv
+        if output_csv is None:
+            root, ext = os.path.splitext(args.input_csv)
+            output_csv = f"{root}_merged{ext}"
+        out_dir = os.path.dirname(output_csv)
+        if out_dir:
+            os.makedirs(out_dir, exist_ok=True)
+        asyncio.run(main_async(args.input_csv, output_csv))
+    else:
+        for model in args.models:
+            input_csv = os.path.join(args.base_dir, model, f"Task6_{model}_all.csv")
+            output_csv = os.path.join(args.base_dir, model, f"Task6_{model}_all_merged.csv")
+            asyncio.run(main_async(input_csv, output_csv))

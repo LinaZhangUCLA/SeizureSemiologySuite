@@ -48,6 +48,8 @@ def parse_arguments():
     parser.add_argument('--dataset_dir', type=str, 
                        default='./datas',
                        help='Directory containing seizure video files')
+    parser.add_argument('--task56_segment_subdir', type=str, default='task1256_segment_60s',
+                       help='Subdirectory under --dataset_dir containing Task 5/6 segment clips (default: task1256_segment_60s)')
     # cache directory
     parser.add_argument('--cache_dir', type=str, default=default_model_cache_dir,
                        help='Directory for model cache (default: ' + default_model_cache_dir + ')')
@@ -101,8 +103,8 @@ task3_HT_dataset_dir = os.path.join(args.dataset_dir, "task3_head_turning")
 task3_AM_dataset_dir = os.path.join(args.dataset_dir, "task3_arm_movement")
 task3_L_dataset_dir = os.path.join(args.dataset_dir, "task3_onset_body_part")
 task4_dataset_dir = os.path.join(args.dataset_dir, "task4_feature_segments") 
-task5_dataset_dir = os.path.join(args.dataset_dir, "task1256_segment_30s")
-task6_dataset_dir = os.path.join(args.dataset_dir, "task1256_segment_30s")
+task5_dataset_dir = os.path.join(args.dataset_dir, args.task56_segment_subdir)
+task6_dataset_dir = os.path.join(args.dataset_dir, args.task56_segment_subdir)
 task7_dataset_dir = os.path.join(args.dataset_dir, "task7_seizurevideos")
 
 # Feature definitions dictionary
@@ -916,13 +918,13 @@ def main():
     # =============================================== task6 =============================================================== #
     if '6' in RUN_TASKS:
         try:
-            task5_videos_range = validate_videos_range(task5_clip_fps, videos_range)   #task6 uses the same video set as task5
+            task6_videos_range = validate_videos_range(task6_clip_fps, videos_range)
             init_csv(task6_result_csv_fp, "video_name,report")
             task6_processed = load_processed_videos(task6_result_csv_fp)        
             os.makedirs(task6_log_dir, exist_ok=True)
             aggregate_log_fp = os.path.join(task6_log_dir, "task6.log")
             with open(task6_result_csv_fp, 'a', encoding='utf-8', newline='') as csv_f, open(aggregate_log_fp, 'a', encoding='utf-8') as log_f:    
-                for video_clip_fp in tqdm(task5_clip_fps[task5_videos_range[0]-1 : task5_videos_range[1]], desc="Processing Task 6"):
+                for video_clip_fp in tqdm(task6_clip_fps[task6_videos_range[0]-1 : task6_videos_range[1]], desc="Processing Task 6"):
                     video_clip_name = video_clip_fp.split('/')[-1]
                     if video_clip_name in task6_processed:
                         print(f"Video {video_clip_name} already processed for both tasks. Skipping.")
@@ -1010,6 +1012,7 @@ if __name__ == "__main__":
     print(f"Output: {inference_dir}")
     print(f"Max frames: {MAX_FRAMES}")
     print(f"FPS: {FPS}")
+    print(f"Task 5/6 segment dir: {args.task56_segment_subdir}")
     print(f"Run tasks: {sorted(RUN_TASKS)}")
     print("-" * 50)
     

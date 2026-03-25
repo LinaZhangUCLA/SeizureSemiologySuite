@@ -6,16 +6,19 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 CONDA_ENV="${CONDA_ENV:-/mnt/SSD3/lina/my_conda_env/qwen3vl_moe}"
-MODEL_NAME="${MODEL_NAME:-Qwen/Qwen3-VL-32B-Instruct}"
+MODEL_NAME="${MODEL_NAME:-Qwen/Qwen3-VL-8B-Instruct}"
 CACHE_DIR="${CACHE_DIR:-/mnt/SSD3/lina/SeizureSemiologyBench/cache}"
 CACHE_FALLBACK_DIR="${CACHE_FALLBACK_DIR:-${REPO_ROOT}/.cache/qwen3vl}"
 TASK12_DATASET="${TASK12_DATASET:-/mnt/SSD3/lina/ucla2/ssbench/task1256_segment_60s}"
 TASK56_DATASET_ROOT="${TASK56_DATASET_ROOT:-/mnt/SSD3/lina/ucla2/ssbench}"
-OUTPUT_ROOT="${OUTPUT_ROOT:-${REPO_ROOT}/result/fps_ablation/qwen3_vl_32b}"
-VIDEO_RANGE="${VIDEO_RANGE:-1-300}"
+TASK56_SEGMENT_SUBDIR="${TASK56_SEGMENT_SUBDIR:-task1256_segment_60s}"
+OUTPUT_ROOT="${OUTPUT_ROOT:-${REPO_ROOT}/result/fps_ablation/qwen3_vl_8b}"
+VIDEO_RANGE="${VIDEO_RANGE:-}"
+TASK12_VIDEO_RANGE="${TASK12_VIDEO_RANGE:-}"
+TASK56_VIDEO_RANGE="${TASK56_VIDEO_RANGE:-}"
 FPS_LIST_STRING="${FPS_LIST:-1 4}"
-GPU12="${GPU12:-0,1}"
-GPU56="${GPU56:-0,1}"
+GPU12="${GPU12:-0}"
+GPU56="${GPU56:-0}"
 
 # Keep the original 120-frame budget by default.
 # If you want full 60 s coverage for Task 1/2 at 4 FPS, set TASK12_MAX_FRAMES_FPS4=240.
@@ -44,7 +47,42 @@ fi
 
 mkdir -p "${CACHE_DIR}"
 mkdir -p "${OUTPUT_ROOT}"
+
+count_mp4_files() {
+    local dir="$1"
+    find "${dir}" -maxdepth 1 -type f -name '*.mp4' | wc -l
+}
+
+TASK56_DATASET="${TASK56_DATASET_ROOT}/${TASK56_SEGMENT_SUBDIR}"
+
+if [[ -z "${TASK12_VIDEO_RANGE}" ]]; then
+    task12_count="$(count_mp4_files "${TASK12_DATASET}")"
+    if [[ "${task12_count}" -eq 0 ]]; then
+        echo "No .mp4 files found for Task 1/2 dataset: ${TASK12_DATASET}" >&2
+        exit 1
+    fi
+    TASK12_VIDEO_RANGE="1-${task12_count}"
+fi
+
+if [[ -z "${TASK56_VIDEO_RANGE}" ]]; then
+    task56_count="$(count_mp4_files "${TASK56_DATASET}")"
+    if [[ "${task56_count}" -eq 0 ]]; then
+        echo "No .mp4 files found for Task 5/6 dataset: ${TASK56_DATASET}" >&2
+        exit 1
+    fi
+    TASK56_VIDEO_RANGE="1-${task56_count}"
+fi
+
+if [[ -n "${VIDEO_RANGE}" ]]; then
+    TASK12_VIDEO_RANGE="${VIDEO_RANGE}"
+    TASK56_VIDEO_RANGE="${VIDEO_RANGE}"
+fi
+
 echo "Using cache dir: ${CACHE_DIR}"
+echo "Task 1/2 dataset: ${TASK12_DATASET}"
+echo "Task 1/2 video range: ${TASK12_VIDEO_RANGE}"
+echo "Task 5/6 dataset: ${TASK56_DATASET}"
+echo "Task 5/6 video range: ${TASK56_VIDEO_RANGE}"
 
 read -r -a FPS_VALUES <<< "${FPS_LIST_STRING}"
 
@@ -67,7 +105,7 @@ for fps in "${FPS_VALUES[@]}"; do
         --dataset_dir "${TASK12_DATASET}" \
         --cache_dir "${CACHE_DIR}" \
         --output_dir "${task12_out}" \
-        --videos_range "${VIDEO_RANGE}" \
+        --videos_range "${TASK12_VIDEO_RANGE}" \
         --fps "${fps}" \
         --max_frames "${task12_frames}"
 
@@ -78,8 +116,9 @@ for fps in "${FPS_VALUES[@]}"; do
         --dataset_dir "${TASK56_DATASET_ROOT}" \
         --cache_dir "${CACHE_DIR}" \
         --output_dir "${task56_out}" \
-        --videos_range "${VIDEO_RANGE}" \
+        --videos_range "${TASK56_VIDEO_RANGE}" \
         --run_tasks 5,6 \
+        --task56_segment_subdir "${TASK56_SEGMENT_SUBDIR}" \
         --fps "${fps}" \
         --max_frames "${TASK56_MAX_FRAMES}"
 done

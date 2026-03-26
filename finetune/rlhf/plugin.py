@@ -53,9 +53,47 @@ class SeizureORM(ORM):
         self._rqi_scorer = None
         self._rqi_init_error = None
         self._rqi_gt_cache = {}
+        self._rqi_gt_cache_loaded = False
         self._rqi_batch_size = max(1, int(os.getenv("SEIZURE_RQI_BATCH_SIZE", "8")))
         self._rqi_batch_delay = float(os.getenv("SEIZURE_RQI_BATCH_DELAY", "0"))
         self._rqi_model = os.getenv("SEIZURE_RQI_MODEL", "qwen-plus-latest")
+        self._rqi_gt_cache_path = os.getenv(
+            "SEIZURE_RQI_GT_CACHE_PATH",
+            os.path.normpath(os.path.join(os.path.dirname(__file__), "../../result/ground_truth/task6_report_modified.csv")),
+        )
+
+    def _load_rqi_gt_cache(self) -> None:
+        if self._rqi_gt_cache_loaded:
+            return
+
+        try:
+            gt_df = pd.read_csv(self._rqi_gt_cache_path)
+            required_cols = {
+                "file_name",
+                "structural_completeness",
+                "event_sequence",
+                "localizing_features",
+                "content_analysis",
+                "report_length",
+            }
+            missing_cols = required_cols - set(gt_df.columns)
+            if missing_cols:
+                raise ValueError(f"missing columns in GT cache: {sorted(missing_cols)}")
+
+            for _, row in gt_df.iterrows():
+                file_name = str(row["file_name"]).strip()
+                cache_row = {
+                    "file_name": file_name,
+                    "structural_completeness": row.get("structural_completeness"),
+                    "event_sequence": row.get("event_sequence"),
+                    "localizing_features": row.get("localizing_features"),
+                    "content_analysis": row.get("content_analysis"),
+                    "report_length": row.get("report_length", 0),
+                }
+                self._rqi_gt_cache[file_name] = cache_row
+            self._rqi_gt_cache_loaded = True
+        except Exception as e:
+            raise RuntimeError(f"failed to load GT RQI cache from {self._rqi_gt_cache_path}: {e}") from e
 
     def _ensure_rqi_pipeline(self) -> bool:
         if self._rqi_analyzer is not None and self._rqi_scorer is not None:
@@ -74,6 +112,7 @@ class SeizureORM(ORM):
             )
             self._rqi_analyzer = SeizureReportAnalyzer(api_key=api_key, model=self._rqi_model)
             self._rqi_scorer = SeizureRQIScorer()
+            self._load_rqi_gt_cache()
             return True
         except Exception as e:
             self._rqi_init_error = str(e)
@@ -117,7 +156,16 @@ class SeizureORM(ORM):
     def _fallback_task6_scores(self, cands: List[str], refs: List[str]) -> List[float]:
         return [self.computing_bleu_rouge_score(cand=cand, ref=ref) for cand, ref in zip(cands, refs)]
 
-    def computing_rqi_scores(self, cands: List[str], refs: List[str]) -> List[float]:
+    def _extract_sample_id(self, video_item: Union[str, List[str], None]) -> str:
+        if isinstance(video_item, list):
+            if not video_item:
+                return ""
+            video_item = video_item[0]
+        if video_item is None:
+            return ""
+        return os.path.basename(str(video_item).strip())
+
+    def computing_rqi_scores(self, cands: List[str], sample_ids: List[str], refs: List[str]) -> List[float]:
         if not cands:
             return []
 
@@ -134,33 +182,15 @@ class SeizureORM(ORM):
                 )
             )
 
-            gt_rows = [None] * len(refs)
-            uncached_refs = []
-            uncached_positions = []
-
-            for idx, ref in enumerate(refs):
-                cached_row = self._rqi_gt_cache.get(ref)
-                if cached_row is None:
-                    uncached_refs.append(ref)
-                    uncached_positions.append(idx)
-                else:
-                    gt_rows[idx] = cached_row
-
-            if uncached_refs:
-                analyzed_refs = self._run_async(
-                    self._rqi_analyzer.analyze_reports(
-                        reports=uncached_refs,
-                        file_names=[f"gt_{idx}" for idx in uncached_positions],
-                        batch_size=self._rqi_batch_size,
-                        batch_delay=self._rqi_batch_delay,
-                    )
-                )
-                for pos, ref, row in zip(uncached_positions, uncached_refs, analyzed_refs):
-                    self._rqi_gt_cache[ref] = row
-                    gt_rows[pos] = row
-
             scores = []
-            for pred_row, gt_row in zip(pred_rows, gt_rows):
+            for pred_row, cand, sample_id, ref in zip(pred_rows, cands, sample_ids, refs):
+                gt_row = self._rqi_gt_cache.get(sample_id)
+                if gt_row is None:
+                    logger.warning(
+                        f"Missing GT RQI cache entry for sample_id={sample_id!r}, falling back to BLEU/ROUGE for this sample."
+                    )
+                    scores.append(self.computing_bleu_rouge_score(cand=cand, ref=ref))
+                    continue
                 rqi_result = self._rqi_scorer.score_single_report(pred_row, gt_row)
                 scores.append(rqi_result["seizure_rqi"] / 100.0)
             return scores
@@ -189,6 +219,7 @@ class SeizureORM(ORM):
         # messages = kwargs["messages"]   # 拿messages标签中的gt
         tasks = kwargs["task"]   # task区分不同任务
         solutions = kwargs["solution"]
+        videos = kwargs.get("videos", [None] * len(completions))
 
         #print("completions: ",completions)
         #print("kwargs ", kwargs)
@@ -196,7 +227,7 @@ class SeizureORM(ORM):
 
         rewards = []
         task6_pending = []
-        for content, solution, task in zip(completions, solutions, tasks):
+        for content, solution, task, video_item in zip(completions, solutions, tasks, videos):
             # TODO: 参考deepseek-r1，奖励=format奖励+任务奖励
             reward = 0.0
             # TODO: step 1 计算format奖励
@@ -302,13 +333,16 @@ class SeizureORM(ORM):
                 # TODO: 病人诊断报告。通过LLM结构化分析 + SeizureRQI打分
                 # ground-truth example: The patient is sleeping in bed. He lets out a loud...
                 try:
+                    reward_idx = len(rewards)
+                    # Keep the format reward now, then add the batched RQI score below.
                     rewards.append(reward)
                     task6_pending.append(
-                        (
-                            len(rewards) - 1,
-                            self._stringify_report(llm_answer),
-                            self._stringify_report(gt_answer),
-                        )
+                        {
+                            "reward_idx": reward_idx,
+                            "sample_id": self._extract_sample_id(video_item),
+                            "cand_report": self._stringify_report(llm_answer),
+                            "gt_report": self._stringify_report(gt_answer),
+                        }
                     )
                     continue
                 except Exception as e:
@@ -346,10 +380,12 @@ class SeizureORM(ORM):
 
             #print(f"task is {task}, reward is {reward}")
         if task6_pending:
-            pending_indices = [item[0] for item in task6_pending]
-            cand_reports = [item[1] for item in task6_pending]
-            gt_reports = [item[2] for item in task6_pending]
-            task6_scores = self.computing_rqi_scores(cands=cand_reports, refs=gt_reports)
+            # Task-6 uses batched analyzer calls, so the RQI component is written back after the loop.
+            pending_indices = [item["reward_idx"] for item in task6_pending]
+            sample_ids = [item["sample_id"] for item in task6_pending]
+            cand_reports = [item["cand_report"] for item in task6_pending]
+            gt_reports = [item["gt_report"] for item in task6_pending]
+            task6_scores = self.computing_rqi_scores(cands=cand_reports, sample_ids=sample_ids, refs=gt_reports)
             for reward_idx, task6_score in zip(pending_indices, task6_scores):
                 rewards[reward_idx] += task6_score
         #print(rewards)

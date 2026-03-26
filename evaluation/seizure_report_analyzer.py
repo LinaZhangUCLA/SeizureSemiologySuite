@@ -104,6 +104,43 @@ Return your analysis in this JSON format:
         except Exception as e:
             print(f"Error parsing LLM response: {e}")
             return None
+
+    def empty_analysis_result(self, report: str, file_name: str) -> Dict:
+        """Return an empty structured result when analysis fails."""
+        return {
+            'file_name': file_name,
+            'structural_completeness': '[]',
+            'event_sequence': '[]',
+            'localizing_features': '{}',
+            'content_analysis': '{}',
+            'report_length': len(str(report))
+        }
+
+    def build_analysis_result(self, analysis: Dict, report: str, file_name: str) -> Dict:
+        """Normalize parsed analysis into the scorer's row format."""
+        if analysis is None:
+            return self.empty_analysis_result(report=report, file_name=file_name)
+
+        struct_list = analysis.get('structural_completeness', [])
+        struct_list_str = json.dumps(struct_list, ensure_ascii=False)
+
+        event_seq = analysis.get('event_sequence', [])
+        event_seq_str = json.dumps(event_seq, ensure_ascii=False)
+
+        loc_features = analysis.get('key_localizing_features', analysis.get('localizing_features', {}))
+        loc_features_str = json.dumps(loc_features, ensure_ascii=False)
+
+        content = analysis.get('content_analysis', {})
+        content_str = json.dumps(content, ensure_ascii=False)
+
+        return {
+            'file_name': file_name,
+            'structural_completeness': struct_list_str,
+            'event_sequence': event_seq_str,
+            'localizing_features': loc_features_str,
+            'content_analysis': content_str,
+            'report_length': len(str(report))
+        }
     
     async def analyze_single_report(self, report: str, file_name: str) -> Dict:
         """Analyze a single seizure report asynchronously"""
@@ -121,56 +158,45 @@ Return your analysis in this JSON format:
             
             llm_response = response.choices[0].message.content
             analysis = self.parse_llm_response(llm_response)
-            
-            if analysis is not None:
-                # Structural completeness as a list
-                struct_list = analysis.get('structural_completeness', [])
-                struct_list_str = json.dumps(struct_list, ensure_ascii=False)
-
-                # Event sequence
-                event_seq = analysis.get('event_sequence', [])
-                event_seq_str = json.dumps(event_seq, ensure_ascii=False)
-
-                # Localizing features - combine into one JSON string
-                loc_features = analysis.get('key_localizing_features', {})
-                loc_features_str = json.dumps(loc_features, ensure_ascii=False)
-
-                # Content analysis - combine into one JSON string
-                content = analysis.get('content_analysis', {})
-                content_str = json.dumps(content, ensure_ascii=False)
-
-                # Report length - calculate directly from report
-                report_length = len(str(report))
-
-                result = {
-                    'file_name': file_name,
-                    'structural_completeness': struct_list_str,
-                    'event_sequence': event_seq_str,
-                    'localizing_features': loc_features_str,
-                    'content_analysis': content_str,
-                    'report_length': report_length
-                }
-                return result
-            else:
-                # If analysis fails, add empty result
-                return {
-                    'file_name': file_name,
-                    'structural_completeness': '[]',
-                    'event_sequence': '[]',
-                    'localizing_features': '{}',
-                    'content_analysis': '{}',
-                    'report_length': len(str(report))
-                }
+            return self.build_analysis_result(analysis=analysis, report=report, file_name=file_name)
         except Exception as e:
             tqdm.write(f"❌ Error {file_name}: {str(e)[:50]}")
-            return {
-                'file_name': file_name,
-                'structural_completeness': '[]',
-                'event_sequence': '[]',
-                'localizing_features': '{}',
-                'content_analysis': '{}',
-                'report_length': len(str(report))
-            }
+            return self.empty_analysis_result(report=report, file_name=file_name)
+
+    async def analyze_reports(
+        self,
+        reports: List[str],
+        file_names: List[str] = None,
+        batch_size: int = 20,
+        batch_delay: float = 0.0,
+    ) -> List[Dict]:
+        """Analyze an in-memory batch of reports and return scorer-ready rows."""
+        if not reports:
+            return []
+
+        if file_names is None:
+            file_names = [f'report_{idx}' for idx in range(len(reports))]
+
+        if len(file_names) != len(reports):
+            raise ValueError("file_names must have the same length as reports")
+
+        batch_size = max(1, int(batch_size))
+        results = []
+
+        for start in range(0, len(reports), batch_size):
+            batch_reports = reports[start:start + batch_size]
+            batch_names = file_names[start:start + batch_size]
+            tasks = [
+                self.analyze_single_report(report=report, file_name=file_name)
+                for report, file_name in zip(batch_reports, batch_names)
+            ]
+            batch_results = await asyncio.gather(*tasks)
+            results.extend(batch_results)
+
+            if batch_delay > 0 and start + batch_size < len(reports):
+                await asyncio.sleep(batch_delay)
+
+        return results
     
     async def analyze_dataset(self, csv_path: str, output_path: str = None, batch_size: int = 20) -> pd.DataFrame:
         """Analyze all reports in CSV with async batch processing and incremental saving"""

@@ -47,6 +47,127 @@ class SeizureORM(ORM):
     Computes an LLM-judged quality score (SeizureRQI) between model outputs and ground truth.
     """
 
+    def __init__(self):
+        super().__init__()
+        self._rqi_analyzer = None
+        self._rqi_scorer = None
+        self._rqi_init_error = None
+        self._rqi_gt_cache = {}
+        self._rqi_batch_size = max(1, int(os.getenv("SEIZURE_RQI_BATCH_SIZE", "8")))
+        self._rqi_batch_delay = float(os.getenv("SEIZURE_RQI_BATCH_DELAY", "0"))
+        self._rqi_model = os.getenv("SEIZURE_RQI_MODEL", "qwen-plus-latest")
+
+    def _ensure_rqi_pipeline(self) -> bool:
+        if self._rqi_analyzer is not None and self._rqi_scorer is not None:
+            return True
+        if self._rqi_init_error is not None:
+            return False
+
+        try:
+            from evaluation.seizure_report_analyzer import SeizureReportAnalyzer
+            from evaluation.seizure_rqi_scorer import SeizureRQIScorer
+
+            api_key = (
+                os.getenv("SEIZURE_RQI_API_KEY")
+                or os.getenv("QWEN_API_KEY")
+                or os.getenv("DASHSCOPE_API_KEY")
+            )
+            self._rqi_analyzer = SeizureReportAnalyzer(api_key=api_key, model=self._rqi_model)
+            self._rqi_scorer = SeizureRQIScorer()
+            return True
+        except Exception as e:
+            self._rqi_init_error = str(e)
+            logger.warning(f"Failed to initialize RQI pipeline, falling back to BLEU/ROUGE: {e}")
+            return False
+
+    def _run_async(self, coro):
+        try:
+            asyncio.get_running_loop()
+        except RuntimeError:
+            return asyncio.run(coro)
+
+        import threading
+
+        result_holder = {}
+        error_holder = {}
+
+        def _runner():
+            loop = asyncio.new_event_loop()
+            try:
+                asyncio.set_event_loop(loop)
+                result_holder["value"] = loop.run_until_complete(coro)
+            except Exception as e:
+                error_holder["error"] = e
+            finally:
+                loop.close()
+
+        thread = threading.Thread(target=_runner, daemon=True)
+        thread.start()
+        thread.join()
+
+        if "error" in error_holder:
+            raise error_holder["error"]
+        return result_holder.get("value")
+
+    def _stringify_report(self, report: Union[str, Dict, List]) -> str:
+        if isinstance(report, (dict, list)):
+            return json.dumps(report, ensure_ascii=False)
+        return str(report)
+
+    def _fallback_task6_scores(self, cands: List[str], refs: List[str]) -> List[float]:
+        return [self.computing_bleu_rouge_score(cand=cand, ref=ref) for cand, ref in zip(cands, refs)]
+
+    def computing_rqi_scores(self, cands: List[str], refs: List[str]) -> List[float]:
+        if not cands:
+            return []
+
+        if not self._ensure_rqi_pipeline():
+            return self._fallback_task6_scores(cands=cands, refs=refs)
+
+        try:
+            pred_rows = self._run_async(
+                self._rqi_analyzer.analyze_reports(
+                    reports=cands,
+                    file_names=[f"pred_{idx}" for idx in range(len(cands))],
+                    batch_size=self._rqi_batch_size,
+                    batch_delay=self._rqi_batch_delay,
+                )
+            )
+
+            gt_rows = [None] * len(refs)
+            uncached_refs = []
+            uncached_positions = []
+
+            for idx, ref in enumerate(refs):
+                cached_row = self._rqi_gt_cache.get(ref)
+                if cached_row is None:
+                    uncached_refs.append(ref)
+                    uncached_positions.append(idx)
+                else:
+                    gt_rows[idx] = cached_row
+
+            if uncached_refs:
+                analyzed_refs = self._run_async(
+                    self._rqi_analyzer.analyze_reports(
+                        reports=uncached_refs,
+                        file_names=[f"gt_{idx}" for idx in uncached_positions],
+                        batch_size=self._rqi_batch_size,
+                        batch_delay=self._rqi_batch_delay,
+                    )
+                )
+                for pos, ref, row in zip(uncached_positions, uncached_refs, analyzed_refs):
+                    self._rqi_gt_cache[ref] = row
+                    gt_rows[pos] = row
+
+            scores = []
+            for pred_row, gt_row in zip(pred_rows, gt_rows):
+                rqi_result = self._rqi_scorer.score_single_report(pred_row, gt_row)
+                scores.append(rqi_result["seizure_rqi"] / 100.0)
+            return scores
+        except Exception as e:
+            logger.warning(f"RQI reward computation failed, falling back to BLEU/ROUGE: {e}")
+            return self._fallback_task6_scores(cands=cands, refs=refs)
+
 
 
     # TODO: 自定义的ORM需要包含一个位置参数completions，其他为关键词参数，由数据集额外字段透传
@@ -74,6 +195,7 @@ class SeizureORM(ORM):
         # TODO: llm回答的思维链为<think> reasoning process here </think><answer> answer here </answer>
 
         rewards = []
+        task6_pending = []
         for content, solution, task in zip(completions, solutions, tasks):
             # TODO: 参考deepseek-r1，奖励=format奖励+任务奖励
             reward = 0.0
@@ -177,12 +299,18 @@ class SeizureORM(ORM):
 
 
             elif task == "task-6":
-                # TODO: 病人诊断报告。open-ended问题, 计算bleu+rouge
+                # TODO: 病人诊断报告。通过LLM结构化分析 + SeizureRQI打分
                 # ground-truth example: The patient is sleeping in bed. He lets out a loud...
                 try:
-                    #print(f"debug task 6: llm answer {llm_answer}, gt answer {gt_answer}")
-                    # TODO: task 6用bleu和rouge来计算相似度作为一个baseline
-                    reward += self.computing_bleu_rouge_score(cand=llm_answer, ref=gt_answer)
+                    rewards.append(reward)
+                    task6_pending.append(
+                        (
+                            len(rewards) - 1,
+                            self._stringify_report(llm_answer),
+                            self._stringify_report(gt_answer),
+                        )
+                    )
+                    continue
                 except Exception as e:
                     print(f"[SeizureORM] Evaluation failed: {e}")
                 rewards.append(reward)
@@ -217,6 +345,13 @@ class SeizureORM(ORM):
                 rewards.append(reward)
 
             #print(f"task is {task}, reward is {reward}")
+        if task6_pending:
+            pending_indices = [item[0] for item in task6_pending]
+            cand_reports = [item[1] for item in task6_pending]
+            gt_reports = [item[2] for item in task6_pending]
+            task6_scores = self.computing_rqi_scores(cands=cand_reports, refs=gt_reports)
+            for reward_idx, task6_score in zip(pending_indices, task6_scores):
+                rewards[reward_idx] += task6_score
         #print(rewards)
         return rewards
 

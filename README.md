@@ -2,13 +2,11 @@
 
 **A Clinically Multimodal Dataset, Benchmark, and Models for Seizure Semiology Understanding**
 
-> Paper under review at ICML 2026. Dataset, evaluation code, baseline scores, and fine-tuned models will be released upon publication via Hugging Face. Video data is available under a Data Use Agreement.
+> ICML 2026 Spotlight. Dataset, evaluation code, baseline scores, and fine-tuned models will be released upon publication via Hugging Face. Video data is available under a Data Use Agreement.
 
 ---
 
 ## Overview
-
-Seizure semiology—the observable motor, behavioral, and autonomic signs of a seizure—is essential for epilepsy diagnosis and seizure-onset zone localization. Current assessment relies on labor-intensive manual video review by trained experts. **S³** provides the infrastructure to systematically evaluate and improve Multimodal Large Language Models (MLLMs) on this safety-critical task.
 
 **S³ comprises three components:**
 
@@ -18,7 +16,7 @@ Seizure semiology—the observable motor, behavioral, and autonomic signs of a s
 
 ![Dataset example: seizure video with semiological annotations, timeline, clinical report, and dataset statistics](assets/seizurevideo.png)
 
-![Benchmark overview: seven-task hierarchy with example prompts, answers, and evaluation metrics](assets/metrics.png)
+
 
 ---
 
@@ -38,63 +36,10 @@ Seizure semiology—the observable motor, behavioral, and autonomic signs of a s
 
 Each feature is annotated with **presence/absence**, **temporal boundaries** (MM:SS), and **free-text justification**.
 
-### Annotation Quality
-
-A five-stage workflow (epileptologist onboarding → expert live annotation → independent annotator labeling → adaptive sampling QC → LLM grammar check) yielded high inter-annotator agreement:
-
-| Subset | Pearson r | Cosine Similarity | EMD |
-|---|---|---|---|
-| ES | 0.893 | 0.966 | 0.00864 |
-| NES | 0.782 | 0.883 | 0.00752 |
-| Combined | 0.836 | 0.931 | 0.00288 |
-
----
-
 ## Benchmark: Seven-Task Hierarchy
 
-```
-Task 1 & 2  ──►  Task 3  ──►  Task 4  ──►  Task 5  ──►  Task 6  ──►  Task 7
-Recognition     Spatial       Temporal      Sequence      Narrative     Clinical
-& Justif.       Analysis      Boundary      Analysis      Report        Diagnosis
-```
+![Benchmark overview: seven-task hierarchy with example prompts, answers, and evaluation metrics](assets/metrics.png)
 
-### Task 1 — Seizure Semiology Recognition
-Binary yes/no detection of each of the 20 semiological features. Evaluated with **Precision, Recall, F1, Accuracy**.
-
-### Task 2 — Feature Justification
-Free-text justifications for Task 1 predictions. Evaluated with **BLEU, ROUGE-L, BERTScore**, and the **Seizure Semiology Interpretation Score** (70% core manifestation + 30% subtle attributes).
-
-### Task 3 — Spatial & Anatomical Analysis
-Forced-choice laterality questions anchored to the patient's perspective (e.g., "Does the patient's head turn to the patient's left or right?"). Evaluated with **Precision, Recall, F1, Accuracy**.
-
-### Task 4 — Temporal Boundary Detection
-Predicting exact MM:SS onset/offset timestamps for individual features and the overall seizure event. Evaluated with **Mean Absolute Error (MAE)** in seconds.
-
-### Task 5 — Semiological Sequence Analysis
-Predicting the chronological order of seizure symptoms. Evaluated with Sequence Edit Distance, Temporal-relation F1, and LCS ratio.
-
-### Task 6 — Narrative Report Generation
-Generating a concise clinical seizure semiology report. Evaluated with BLEU/ROUGE-L/BERTScore and the clinically grounded **Seizure-RQI**:
-
-```
-RQI = (0.15·S + 0.35·C + 0.25·L + 0.25·T) × P_hall × P_off × P_len × P_haz
-```
-
-| Component | Weight | Description |
-|---|---|---|
-| Structural Completeness (S) | 15% | Onset, propagation, postictal sections present |
-| Symptom Coverage (C) | 35% | Fraction of ground-truth features mentioned |
-| Key Localizing Features (L) | 25% | Accuracy of lateralizing signs |
-| Temporal Fidelity (T) | 25% | Temporal-relation F1 of event ordering |
-| Hallucination penalty (P_hall) | ×0.95ⁿ | Per hallucinated feature |
-| Off-topic penalty (P_off) | ×0.80 | Nursing/non-seizure content |
-| Length penalty (P_len) | ×0.80ᵏ | Per 50 words beyond 100-word limit |
-| Hazardous statement penalty (P_haz) | — | Clinically dangerous statements |
-
-Seizure-RQI achieves **Pearson r = 0.57** with expert judgments, vs. r ≤ 0.10 for BLEU/ROUGE/BERTScore.
-
-### Task 7 — Clinical Diagnosis and Reasoning
-ES vs. NES classification from (i) video only, or (ii) video + clinical report. Evaluated with **Precision, Recall, F1, Accuracy**.
 
 ---
 
@@ -280,11 +225,6 @@ Seizure videos are available under a **Data Use Agreement**. Annotation CSVs, ev
 
 To request dataset access, please visit the project website (link provided upon publication).
 
----
-
-## Ethics Statement
-
-All data were collected under IRB approval and fully de-identified. The proposed models and benchmarks are intended strictly as **decision-support tools**, not replacements for trained clinicians. Any clinical deployment requires rigorous prospective validation and oversight by qualified medical professionals.
 
 ---
 

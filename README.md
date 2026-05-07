@@ -16,6 +16,10 @@ Seizure semiology—the observable motor, behavioral, and autonomic signs of a s
 - **Seizure-Semiology-Bench**: A seven-task hierarchical benchmark progressing from low-level feature perception to clinical report generation and diagnosis.
 - **Seizure-Semiology-Models**: Seizure-specialized fine-tuned models (SFT and GRPO) and a two-stage neuro-symbolic classification framework achieving F1 = 0.96 on epileptic vs. non-epileptic seizure (ES/NES) classification.
 
+![Dataset example: seizure video with semiological annotations, timeline, clinical report, and dataset statistics](assets/seizurevideo.png)
+
+![Benchmark overview: seven-task hierarchy with example prompts, answers, and evaluation metrics](assets/metrics.png)
+
 ---
 
 ## Dataset

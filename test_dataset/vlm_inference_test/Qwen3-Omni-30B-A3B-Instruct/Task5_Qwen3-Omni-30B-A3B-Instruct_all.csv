@@ -1,0 +1,191 @@
+file_name,event_sequence
+A0003@10-20-2020@DA0015B9@sz_v1_1_segment_1.mp4,"arm_straightening, arm_flexion"
+A0003@10-20-2020@DA0015B9@sz_v2_1_segment_1.mp4,arm_straightening
+A0003@10-20-2020@DA0015BA@sz_v3_1_segment_1.mp4,clonic
+A0003@10-20-2020@DA0015BA@sz_v4_1_segment_1.mp4,full_body_shaking
+A0003@10-20-2020@UA6692PZ@sz_v1_1_segment_1.mp4,face_twitching
+A0003@10-20-2020@UA6692Q0@sz_v1_1_segment_1.mp4,face_twitching
+A0003@10-20-2020@UA6692Q0@sz_v3_1_segment_1.mp4,full_body_shaking
+A0003@10-20-2020@UA6692Q0@sz_v4_1_segment_1.mp4,tonic
+A0003@10-20-2020@UA6692Q1@sz_v1_1_segment_1.mp4,face_twitching
+A0003@10-20-2020@UA6692Q1@sz_v2_1_segment_1.mp4,full_body_shaking
+D0003@8-20-2018@DA0011FY@sz_v1_1_segment_1.mp4,face_twitching
+D0003@8-20-2018@DA0011FY@sz_v1_1_segment_2.mp4,"tonic, clonic"
+D0003@8-20-2018@DA7021DY@sz_v1_1_segment_1.mp4,"tonic, clonic"
+D0003@8-20-2018@DA7021DY@sz_v1_1_segment_2.mp4,full_body_shaking
+E0009@11-23-2020@DA0015I7@sz_v1_1_segment_1.mp4,"tonic, clonic"
+E0009@11-23-2020@DA0015I7@sz_v1_1_segment_2.mp4,face_twitching
+E0009@11-23-2020@DA0015I8@sz_v1_1_segment_1.mp4,full_body_shaking
+E0009@11-23-2020@DA0015I8@sz_v1_1_segment_2.mp4,face_twitching
+E0009@11-23-2020@DA0015II@sz_v1_1_segment_1.mp4,"tonic, clonic"
+E0009@11-23-2020@DA0015II@sz_v1_1_segment_2.mp4,face_twitching
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_1.mp4,face_twitching
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_2.mp4,"tonic, clonic"
+G0001@6-20-2019@DA0012ZY@sz_v1_1_segment_3.mp4,face_twitching
+G0001@6-20-2019@DA0012ZY@sz_v2_1_segment_1.mp4,face_twitching
+G0001@6-20-2019@DA0012ZY@sz_v2_1_segment_2.mp4,full_body_shaking
+G0001@6-20-2019@DA0012ZY@sz_v2_1_segment_3.mp4,full_body_shaking
+I0001@8-25-2022@KA96029R@sz_v1_1_segment_1.mp4,face_twitching
+I0004@11-18-2019@UA669194@sz_v6_1_segment_1.mp4,"tonic, clonic"
+I0004@11-18-2019@UA669194@sz_v6_1_segment_2.mp4,face_twitching
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_1.mp4,face_twitching
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_2.mp4,face_twitching
+L0005@3-10-2015@TA7641JJ@sz_v1_1_segment_3.mp4,face_twitching
+N0011@4-1-2021@DA001614@sz_v1_1_segment_1.mp4,"tonic, clonic"
+N0011@4-1-2021@DA001614@sz_v1_1_segment_2.mp4,"face_twitching, full_body_shaking"
+N0011@4-1-2021@DA001614@sz_v1_1_segment_3.mp4,arm_straightening
+N0011@4-1-2021@DA00161F@sz_v1_1_segment_1.mp4,tonic
+N0011@4-1-2021@DA00161F@sz_v1_1_segment_2.mp4,full_body_shaking
+N0011@4-1-2021@DA00161F@sz_v1_1_segment_3.mp4,face_twitching
+N0011@4-1-2021@DA00161G@sz_v1_1_segment_1.mp4,"tonic, clonic"
+N0011@4-1-2021@DA00161G@sz_v1_1_segment_2.mp4,full_body_shaking
+N0011@4-1-2021@DA00161G@sz_v1_1_segment_3.mp4,face_twitching
+N0011@4-1-2021@DA00161G@sz_v2_1_segment_1.mp4,"face_twitching, full_body_shaking"
+N0011@4-1-2021@DA00161G@sz_v2_1_segment_2.mp4,full_body_shaking
+N0011@4-1-2021@DA00161G@sz_v2_1_segment_3.mp4,face_twitching
+N0011@4-1-2021@DA00161G@sz_v3_1_segment_1.mp4,"arm_straightening, arm_flexion"
+N0011@4-1-2021@DA00161G@sz_v3_1_segment_2.mp4,full_body_shaking
+N0011@4-1-2021@DA00161I@sz_v1_1_segment_1.mp4,"arm_flexion, arm_straightening, face_twitching, full_body_shaking"
+N0011@4-1-2021@DA00161I@sz_v1_1_segment_2.mp4,full_body_shaking
+N0011@4-1-2021@DA00161I@sz_v2_1_segment_1.mp4,face_twitching
+N0011@4-1-2021@DA00161I@sz_v2_1_segment_2.mp4,arm_flexion
+N0011@4-1-2021@DA00161J@sz_v1_1_segment_1.mp4,"tonic, clonic"
+N0011@4-1-2021@DA00161J@sz_v1_1_segment_2.mp4,arm_flexion
+N0011@4-1-2021@DA00161K@sz_v1_1_segment_1.mp4,arm_straightening
+N0011@4-1-2021@DA00161K@sz_v2_1_segment_1.mp4,"face_twitching, full_body_shaking"
+N0011@4-1-2021@DA00161K@sz_v3_1_segment_1.mp4,face_twitching
+N0011@4-1-2021@DA00161K@sz_v3_1_segment_2.mp4,arm_straightening
+N0011@4-1-2021@DA00161K@sz_v4_1_segment_1.mp4,"arm_straightening, arm_flexion"
+N0011@4-1-2021@DA00161K@sz_v5_1_segment_1.mp4,"arm_straightening, arm_flexion"
+N0011@4-1-2021@UA6693F9@sz_v1_1_segment_1.mp4,full_body_shaking
+N0011@4-1-2021@UA6693F9@sz_v1_1_segment_2.mp4,full_body_shaking
+N0011@4-1-2021@UA6693FA@sz_v1_1_segment_1.mp4,"arm_straightening, arm_flexion, full_body_shaking"
+N0013@9-2-2014@VA7631G3@sz_v1_1_segment_1.mp4,clonic
+N0013@9-2-2014@VA7631G3@sz_v1_1_segment_2.mp4,clonic
+N0013@9-2-2014@VA7631G3@sz_v3_1_segment_1.mp4,clonic
+N0013@9-2-2014@VA7631G3@sz_v3_1_segment_2.mp4,close_eyes
+N0013@9-2-2014@VA7631G3@sz_v4_1_segment_1.mp4,face_twitching
+N0013@9-2-2014@VA7631G3@sz_v4_1_segment_2.mp4,close_eyes
+N0013@9-2-2014@VA7631G5@sz_v2_1_segment_1.mp4,face_twitching
+N0013@9-2-2014@VA7631G5@sz_v2_1_segment_2.mp4,face_twitching
+N0013@9-2-2014@VA7631GK@sz_v3_1_segment_1.mp4,arm_straightening
+N0013@9-2-2014@VA7631GK@sz_v3_1_segment_2.mp4,eye_blinking
+N0013@9-2-2014@VA7631GK@sz_v4_1_segment_1.mp4,"arm_flexion, arm_straightening"
+O0008@6-21-2022@GA5980K2@sz_v1_1_segment_1.mp4,"tonic, clonic"
+O0008@6-21-2022@GA5980K2@sz_v1_1_segment_2.mp4,full_body_shaking
+O0008@6-21-2022@KA96022J@sz_v1_1_segment_1.mp4,"tonic, clonic"
+O0008@6-21-2022@KA96022J@sz_v1_1_segment_2.mp4,full_body_shaking
+O0011@2-27-2019@DA7022D0@sz_v1_1_segment_1.mp4,"arm_straightening, arm_flexion"
+R0014@5-4-2022@DA1321Q8@sz_v1_1_segment_1.mp4,full_body_shaking
+S0001@3-7-2022@DA1321CA@sz_v2_1_segment_1.mp4,face_twitching
+S0001@3-7-2022@DA1321CB@sz_v1.1_0_segment_1.mp4,face_twitching
+S0001@3-7-2022@DA1321CB@sz_v1.2_0_segment_1.mp4,face_twitching
+S0001@3-7-2022@DA1321CB@sz_v1_1_segment_1.mp4,face_twitching
+S0001@3-7-2022@KA9601AP@nes_v1_1_segment_1.mp4,arm_straightening
+S0003@5-4-2022@KA9601UH@nes_v1.1_0_segment_1.mp4,face_twitching
+S0003@5-4-2022@KA9601UU@nes_v1_1_segment_1.mp4,close_eyes
+S0003@5-4-2022@KA9601UU@nes_v1_1_segment_2.mp4,face_twitching
+S0003@5-4-2022@KA9601UU@nes_v1_1_segment_3.mp4,close_eyes
+S0003@5-4-2022@KA9601UV@nes_v1.1_0_segment_1.mp4,arm_straightening
+S0003@5-4-2022@KA9601UV@nes_v1.2_0_segment_1.mp4,arm_straightening
+S0005@3-18-2014@VA7610MM@nes_v1_1_segment_1.mp4,full_body_shaking
+S0005@3-18-2014@VA7610MM@nes_v1_1_segment_2.mp4,full_body_shaking
+S0005@3-18-2014@VA7610MM@nes_v1_2_segment_1.mp4,full_body_shaking
+S0005@3-18-2014@VA7610MM@nes_v2_1_segment_1.mp4,full_body_shaking
+S0005@3-18-2014@VA7610MM@nes_v4_1_segment_1.mp4,full_body_shaking
+S0005@3-18-2014@VA7610MM@nes_v5_1_segment_1.mp4,"tonic, clonic"
+S0005@3-18-2014@VA7610MM@nes_v6_1_segment_1.mp4,full_body_shaking
+S0005@3-18-2014@VA7610MN@nes_v1_1_segment_1.mp4,full_body_shaking
+S0005@3-18-2014@VA7610MN@nes_v2_1_segment_1.mp4,"tonic, clonic"
+S0005@3-18-2014@VA7610MO@nes_v1_1_segment_1.mp4,"tonic, clonic"
+S0005@3-18-2014@VA7610MO@nes_v1_1_segment_2.mp4,arm_straightening
+S0005@3-18-2014@VA7610MO@nes_v2_1_segment_1.mp4,"arm_straightening, full_body_shaking"
+S0005@3-18-2014@VA7610MO@nes_v3_1_segment_1.mp4,arm_straightening
+S0005@3-18-2014@VA7610MP@nes_v1_1_segment_1.mp4,full_body_shaking
+S0012@7-18-2019@DA00136N@sz_v1_1_segment_1.mp4,full_body_shaking
+S0012@7-18-2019@DA00136N@sz_v1_1_segment_2.mp4,full_body_shaking
+S0012@7-18-2019@DA00136O@sz_v2_1_segment_1.mp4,"tonic, clonic"
+S0012@7-18-2019@DA00136O@sz_v2_1_segment_2.mp4,full_body_shaking
+S0012@7-18-2019@DA00136V@sz_v1_1_segment_1.mp4,"tonic, clonic"
+S0012@7-18-2019@DA00136V@sz_v1_1_segment_2.mp4,full_body_shaking
+S0013@3-8-2018@DA0010H7@sz_v1_1_segment_1.mp4,full_body_shaking
+S0013@3-8-2018@DA0010H7@sz_v1_1_segment_2.mp4,face_twitching
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_1.mp4,face_twitching
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_2.mp4,face_twitching
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_3.mp4,"tonic, clonic"
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_4.mp4,face_twitching
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_5.mp4,full_body_shaking
+T0001@3-21-2022@KA9601DO@nes_v1_1_segment_6.mp4,full_body_shaking
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_1.mp4,"tonic, clonic"
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_2.mp4,full_body_shaking
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_3.mp4,"arm_straightening, arm_flexion"
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_4.mp4,"arm_straightening, arm_flexion"
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_5.mp4,arm_straightening
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_6.mp4,"tonic, clonic"
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_7.mp4,clonic
+T0001@3-21-2022@KA9601DP@nes_v1_1_segment_8.mp4,full_body_shaking
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_1.mp4,full_body_shaking
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_2.mp4,clonic
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_3.mp4,clonic
+T0001@3-21-2022@KA9601DQ@nes_v1_1_segment_4.mp4,full_body_shaking
+W0001@2-3-2020@DA00145Y@nes_v1_1_segment_1.mp4,"face_twitching, full_body_shaking"
+W0001@2-3-2020@DA00145Y@nes_v1_1_segment_2.mp4,face_twitching
+W0001@2-3-2020@DA00145Y@nes_v1_1_segment_3.mp4,face_twitching
+W0001@2-3-2020@DA00145Y@nes_v1_2_segment_1.mp4,full_body_shaking
+W0001@2-3-2020@DA00145Y@nes_v1_2_segment_2.mp4,full_body_shaking
+W0001@2-3-2020@DA001469@nes_v2_1_segment_1.mp4,full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_1.mp4,"face_twitching, full_body_shaking"
+W0001@2-3-2020@DA001469@nes_v3_1_segment_10.mp4,full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_11.mp4,full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_2.mp4,full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_3.mp4,full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_4.mp4,full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_5.mp4,full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_6.mp4,full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_7.mp4,full_body_shaking
+W0001@2-3-2020@DA001469@nes_v3_1_segment_8.mp4,face_twitching
+W0001@2-3-2020@DA001469@nes_v3_1_segment_9.mp4,face_twitching
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_1.mp4,head_turning
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_2.mp4,clonic
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_3.mp4,clonic
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_4.mp4,clonic
+W0001@2-3-2020@DA00146S@nes_v1_1_segment_5.mp4,full_body_shaking
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_1.mp4,clonic
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_10.mp4,clonic
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_11.mp4,tonic
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_12.mp4,face_twitching
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_13.mp4,face_twitching
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_14.mp4,clonic
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_2.mp4,head_turning
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_3.mp4,face_twitching
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_4.mp4,"arm_straightening, arm_flexion"
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_5.mp4,clonic
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_6.mp4,clonic
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_7.mp4,clonic
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_8.mp4,clonic
+W0001@2-3-2020@DA00146S@nes_v2_1_segment_9.mp4,clonic
+Y0005@3-17-2022@DA1321FC@sz_v1_1_segment_1.mp4,"tonic, clonic"
+Y0005@3-17-2022@DA1321FC@sz_v1_1_segment_2.mp4,clonic
+Y0005@3-17-2022@DA1321FC@sz_v1_1_segment_3.mp4,full_body_shaking
+Y0005@3-17-2022@DA1321FC@sz_v2_1_segment_1.mp4,"tonic, clonic"
+Y0005@3-17-2022@DA1321FC@sz_v2_1_segment_2.mp4,full_body_shaking
+Y0005@3-17-2022@DA1321FC@sz_v2_1_segment_3.mp4,full_body_shaking
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_1.mp4,face_twitching
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_2.mp4,face_twitching
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_3.mp4,face_twitching
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_4.mp4,full_body_shaking
+Y0008@1-26-2021@DA0015OO@nes_v1_1_segment_5.mp4,face_twitching
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_1.mp4,face_twitching
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_2.mp4,clonic
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_3.mp4,face_twitching
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_4.mp4,face_twitching
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_5.mp4,face_twitching
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_6.mp4,face_twitching
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_7.mp4,face_twitching
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_8.mp4,face_twitching
+Y0009@8-13-2020@UA6692CY@nes_v1_1_segment_9.mp4,full_body_shaking
+Z0013@11-12-2020@UA6692V7@sz_v1_1_segment_1.mp4,face_twitching
+Z0013@11-12-2020@UA6692V8@sz_v1_1_segment_1.mp4,face_twitching
+Z0013@11-12-2020@UA6692V8@sz_v1_1_segment_2.mp4,close_eyes
+Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_1.mp4,full_body_shaking
+Z0014@3-26-2020@DA0014FA@sz_v1_1_segment_2.mp4,face_twitching

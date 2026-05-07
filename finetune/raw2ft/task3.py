@@ -119,6 +119,7 @@ def main():
 
     samples = process_csv(args.input_dir, args.video_base_path)
     all_samples.extend(samples)
+    all_samples.extend(samples)
     print("total sample num: ", len(all_samples))
     out_path = os.path.join(args.output_dir, f"ft_task_3_{args.date}.json")
     with open(out_path, "w", encoding="utf-8") as f:

@@ -1,4 +1,6 @@
-# Seizure-Semiology-Suite (S³) --- ICML 2026 Spotlight.
+# Seizure-Semiology-Suite (S³)
+
+**ICML 2026 Spotlight** | [Paper](#) | [Dataset](#) | [Models](#)
 
 **A Clinically Multimodal Dataset, Benchmark, and Models for Seizure Semiology Understanding**
 

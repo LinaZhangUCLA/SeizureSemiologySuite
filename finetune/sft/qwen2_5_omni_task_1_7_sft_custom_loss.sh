@@ -5,7 +5,7 @@ TIMESTAMP="$(date +%Y%m%d%H%M%S)"
 VERSION_NAME="${VERSION_PREFIX}_${TIMESTAMP}"
 LOG_PATH="./run_logs/${VERSION_NAME}.log"
 
-export TASK_DATASET='./dataset/sft_merge_2026-03-25_swift_train.jsonl'
+export TASK_DATASET='./dataset/sft_merge_2026-03-26_swift_train.jsonl'
 
 # 模型缓存目录（避免下载到 /home 的默认路径）
 #export MODELSCOPE_CACHE='/mnt/SSD3/lina/SeizureSemiologyBench/cache/modelscope'
@@ -57,6 +57,7 @@ FPS=1 \
 MAX_PIXELS=$((FPS_MAX_FRAMES * VIDEO_MAX_PIXELS)) \
 swift sft \
     --model "Qwen/Qwen2.5-Omni-7B"\
+    --use_hf true \
     --model_kwargs '{"use_audio_in_video": true}' \
     --dataset $TASK_DATASET  \
     --load_from_cache_file true \

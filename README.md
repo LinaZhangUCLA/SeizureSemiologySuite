@@ -32,7 +32,7 @@
 | Annotated features | 20 ILAE-defined semiological features |
 | Resolutions | 1920×1080 (81%), 1280×720 (18%), 640×480 (1%) |
 
-**20 semiological features:** Blank stare, lip smacking, versive head turn, unilateral arm movement, bilateral tonic-clonic, automatisms, eye deviation, facial pulling, dystonic posturing, figure-four sign, ictal cry, oral automatisms, manual automatisms, leg automatisms, consciousness alteration, postictal confusion, postictal amnesia, respiratory changes, vocalization, asymmetric movements.
+**20 semiological features:** Occur during sleep, head turning, blank stare, close eyes, eye blinking, face pulling, face twitching, tonic, clonic, arm straightening, arm flexion, figure-4, oral automatisms, limb automatisms, asynchronous movement, pelvic thrusting, full body shaking, arms move simultaneously, verbal responsiveness, ictal vocalization.
 
 Each feature is annotated with **presence/absence**, **temporal boundaries** (MM:SS), and **free-text justification**.
 

@@ -22,7 +22,7 @@ mkdir -p './ckpts/trained_models/'
 #VIDEO_MAX_PIXELS=$((392*448)) \
 # --dataloader_num_workers 4 \
 
-export WANDB_API_KEY="***REMOVED***"   # 或提前 wandb login
+export WANDB_API_KEY="$WANDB_API_KEY"   # 或提前 wandb login
 export WANDB_PROJECT="seizurebench_grpo"
 export WANDB_ENTITY="linazhang-ucla"
 

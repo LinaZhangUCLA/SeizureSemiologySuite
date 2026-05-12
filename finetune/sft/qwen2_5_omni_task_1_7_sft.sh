@@ -11,7 +11,7 @@ LOG_PATH="./run_logs/${VERSION_NAME}.log"
 # todo: data_path
 export TASK_DATASET='./dataset/sft_merge_2025-11-01_swift_train.jsonl'
 
-export WANDB_API_KEY="***REMOVED***"   # 或提前 wandb login
+export WANDB_API_KEY="$WANDB_API_KEY"   # 或提前 wandb login
 export WANDB_PROJECT="seizurebench"
 export WANDB_ENTITY="linazhang-ucla"
 

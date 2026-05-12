@@ -11,7 +11,7 @@ export TASK_DATASET='./dataset/sft_merge_2026-03-26_swift_train.jsonl'
 #export MODELSCOPE_CACHE='/mnt/SSD3/lina/SeizureSemiologyBench/cache/modelscope'
 #export HF_HOME='/mnt/SSD3/lina/SeizureSemiologyBench/cache/huggingface'
 
-export WANDB_API_KEY="***REMOVED***"
+export WANDB_API_KEY="$WANDB_API_KEY"
 export WANDB_PROJECT="seizurebench"
 export WANDB_ENTITY="linazhang-ucla"
 

@@ -19,7 +19,7 @@ swift export \
 hf upload \
   CedrusLNZ/seizure_omni_sft \
   ./sft/seizure_omni_sft \
-  --token ***REMOVED*** \
+  --token $HF_TOKEN \
   --repo-type model
 ```
 
@@ -43,6 +43,6 @@ swift export \
 hf upload \
   CedrusLNZ/seizure_omni_grpo \
   ./rlhf/seizure_omni_grpo \
-  --token ***REMOVED*** \
+  --token $HF_TOKEN \
   --repo-type model
 ```

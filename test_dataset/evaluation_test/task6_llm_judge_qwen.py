@@ -10,7 +10,7 @@ from tqdm import tqdm
 
 # ===================== Qwen API settings =====================
 API_BASE = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-API_KEY  = "***REMOVED***"   # <-- Put your DashScope API key here
+API_KEY  = os.environ.get("DASHSCOPE_API_KEY", "").strip()
 MODEL    = "qwen-plus"
 
 # ===================== File paths =====================

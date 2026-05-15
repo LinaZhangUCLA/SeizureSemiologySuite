@@ -19,8 +19,9 @@ class SeizureReportAnalyzer:
     
     def __init__(self, api_key: str = None, model: str = "qwen-plus-latest"):
         """Initialize the analyzer with dashscope API (Qwen) - Async version"""
-        # Use provided API key, or environment variable, or hardcoded default
-        self.api_key = api_key or os.getenv("QWEN_API_KEY") or os.getenv("DASHSCOPE_API_KEY") or "sk-f9127e15c2184941a53ebe1299ff0c4b"
+        self.api_key = api_key or os.getenv("QWEN_API_KEY") or os.getenv("DASHSCOPE_API_KEY")
+        if not self.api_key:
+            raise ValueError("Missing API key. Pass --api_key or set QWEN_API_KEY/DASHSCOPE_API_KEY.")
         self.model = model
         self.features = [
             'blank_stare', 'close_eyes', 'eye_blinking',

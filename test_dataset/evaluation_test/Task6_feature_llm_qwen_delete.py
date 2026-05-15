@@ -9,7 +9,7 @@ import pandas as pd
 
 # ===================== USER CONFIG =====================
 API_BASE = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-API_KEY = "sk-03164559b7d548da873c5d7a934a9059" 
+API_KEY = os.environ.get("DASHSCOPE_API_KEY", "").strip()
 MODEL = "qwen-plus"
 
 INFERENCE_FILE = "result/vlm_inference/Qwen2.5-VL-7B-Instruct/Task6_Qwen2.5-VL-72B-Instruct_all_merged_llmmerge.csv"
@@ -125,7 +125,7 @@ async def judge_one_feature_task(
 
 async def main_async():
     if not API_KEY:
-        raise SystemExit("API_KEY is empty. Please set it in the script.")
+        raise SystemExit("DASHSCOPE_API_KEY is empty. Please set it in the environment.")
 
     try:
         df = pd.read_csv(INFERENCE_FILE)
@@ -186,7 +186,7 @@ if __name__ == "__main__":
 
 # # ===================== USER CONFIG =====================
 # API_BASE = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-# API_KEY = "sk-03164559b7d548da873c5d7a934a9059" 
+# API_KEY = os.environ.get("DASHSCOPE_API_KEY", "").strip()
 # MODEL = "qwen-plus"
 # # API_KEY = os.environ.get("DASHSCOPE_API_KEY", "").strip()
 
@@ -346,4 +346,3 @@ if __name__ == "__main__":
 
 # if __name__ == "__main__":
 #     asyncio.run(main_async())
-

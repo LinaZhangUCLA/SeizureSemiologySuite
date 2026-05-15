@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import re
+import os
 import asyncio
 import aiohttp
 from collections import defaultdict
@@ -10,7 +11,7 @@ from typing import List, Dict, Tuple
 import pandas as pd
 
 API_BASE = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-API_KEY = "sk-853145a6309e48ad83e2d0cd01a155a1"
+API_KEY = os.environ.get("DASHSCOPE_API_KEY", "")
 MODEL = "qwen-plus-latest"
 
 
@@ -161,8 +162,8 @@ async def main_async(INPUT_CSV,OUTPUT_CSV):
 
 
 if __name__ == "__main__":
-    if API_KEY == "YOUR_DASHSCOPE_API_KEY":
-        raise SystemExit("Please set API_KEY first.")
+    if not API_KEY:
+        raise SystemExit("Please set DASHSCOPE_API_KEY in the environment.")
 
     MODELS = [
         #"InternVL3_5-8B",

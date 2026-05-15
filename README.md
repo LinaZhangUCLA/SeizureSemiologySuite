@@ -68,13 +68,13 @@ Each feature is annotated with **presence/absence**, **temporal boundaries** (MM
 
 ### Tasks 3–5 — Spatial, Temporal, and Sequence Understanding
 
-![Tasks 3-5 Results](assets/task345.png)
+![Tasks 3-5 Results](assets/task67.png)
 
 All models score F1 < 0.2 on spatial laterality (Task 3), exposing a fundamental failure mode. Temporal boundary detection (Task 4) best performer is Qwen2.5-VL-32B (onset MAE 8.19 s). Sequence analysis (Task 5) remains challenging across all models.
 
 ### Tasks 6–7 — Report Generation and Clinical Diagnosis
 
-![Tasks 6-7 Results](assets/task67.png)
+![Tasks 6-7 Results](assets/task345.png)
 
 Lingshu-32B achieves the highest RQI (39.80) among baselines. For Task 7, the two-stage classification + seizure-omni-sft achieves **F1 = 0.96**, a +0.16 improvement over direct MLLM classification.
 

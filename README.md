@@ -216,16 +216,6 @@ python evaluation/seizure_rqi_evaluation.py \
     --model_name Qwen3-VL-32B-Instruct \
     --output_dir ./result/vlm_inference
 ```
-
----
-
-## Data Access
-
-Seizure videos are available under a **Data Use Agreement**. Annotation CSVs, evaluation code, baseline scores, and fine-tuned model weights will be released via Hugging Face upon publication.
-
-To request dataset access, please visit the project website (link provided upon publication).
-
-
 ---
 
 ## Citation
